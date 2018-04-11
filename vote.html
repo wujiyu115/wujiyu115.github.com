@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		var count =0
+		var voteBaseUrl = 'http://event.91.com/2015zghsy/';
+		function startVote(aid, id, v) {
+		                   var base_url =  voteBaseUrl + 'vote_ajax.php?aid=' + aid + '&id=' + id + '&r=' + new Date().getTime()
+		                   console.log(base_url)
+			$.ajax({
+				url:base_url,
+				dataType: 'jsonp',
+				data: '',
+				jsonp: 'jsoncallback',
+				success: function(result) {
+					count++
+					console.log(count)
+					if (result.errno == '00') {
+						if (count<10){
+							startVote(100, 4, 149)
+						}else{
+							alert("投票十次成功,当前票数"+result.error)
+						}
+					} else {
+						alert(result.error);
+					}
+				}
+			});
+		}
+		startVote(100, 4, 149)
+	</script>
+</head>
+<body>
+</body>
+
+</html>
