@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="a* 初探"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/a星初探/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> a* 初探 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          a* 初探
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2013-08-16
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/算法/">算法</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        <p>以前面试被问到过一次，后来没去做这一块的东西就没去理会了。准备辞职找下一个工作，捡起来看了下。<br>   A*算法是一种在多节点网络上寻求最短路径的方法.属于启发式搜索的一种。</p>
+<p><strong>先描述一下a星的几个基本概念.</strong></p>
+<ul>
+<li>节点:A星寻路中会将搜索区域划分为一个个小单元。每个单元即一个节点，一般为方格.</li>
+<li>开启列表:还未展开的节点列表</li>
+<li>关闭列表:已经遍历过的节点列表</li>
+</ul>
+<a id="more"></a>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/08/image5.png" alt="image">   </p>
+<ul>
+<li><strong>A*算法的公式为：f(n)=g(n)+h(n)</strong>   </li>
+<li><strong>G </strong>表示从起点 A 移动到网格上指定方格的移动耗费 (可沿斜方向移动). 一般将普通移动耗费设为值10,斜角移动耗费为14    </li>
+<li><strong>H </strong>表示从指定的方格移动到终点 B 的预计耗费 (H 有很多计算方法, 这里我们设定只可以上下左右移动).<br><code>曼哈顿式为h(n) =dx(到终点的水平距离) + dy(到终点的竖直距离)</code> ,本文使用为此计算方法.<br><code>欧几里得式:h(n) = sqrt(dx^2 + dy^2)</code></li>
+</ul>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/08/image6.png" alt="image"> <img src="http://farwmarth.bestnewbee.com/images/uploads/2013/08/image7.png" alt="image"></p>
+<p>欧几里得式在对角线上有更低的启发值，产生的路径更符合人的习惯，但曼哈顿式数学运算功率更低。所以一般采用曼哈顿式</p>
+<p><strong>寻路步骤</strong><br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">把起始节点加进open list</span><br><span class="line"><span class="keyword">while</span> (open list 不空) &#123;</span><br><span class="line">	 当前节点 = open list中F值最低的节点</span><br><span class="line">	<span class="keyword">if</span> (当前节点 == 目标节点) &#123;</span><br><span class="line">	       路径完成</span><br><span class="line">	       从目标节点开始寻找其母节点，直到母节点是起始节点位置，得到路径</span><br><span class="line">	&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">		把当前节点移入到close list</span><br><span class="line">	      	检视当前节点的每个相邻节点</span><br><span class="line">	       	<span class="keyword">for</span> (每个相邻节点)&#123;</span><br><span class="line">	         		<span class="keyword">if</span> (该节点不在closed list中 and 该节点不是障碍物)&#123;</span><br><span class="line">			                   <span class="keyword">if</span> (该节点不在open list中  )&#123;</span><br><span class="line">				                  把该节点移进open list</span><br><span class="line">				                  计算其F值</span><br><span class="line">				                  记录该节点的母节点为当前节点</span><br><span class="line">			                   &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">				               <span class="keyword">if</span>(G值更低)&#123;</span><br><span class="line">				                   该节点的父节点改成当前节点并且重新计算该节点的G和F值</span><br><span class="line">				              &#125;</span><br><span class="line">			                  &#125;</span><br><span class="line">			 &#125;</span><br><span class="line">	 	&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (还没有找到路径) &#123;</span><br><span class="line">  无法从起始点到达目的地</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/08/image8.png" alt="image"></p>
+<p><strong>actionscript实现</strong>:<br><figure class="highlight as"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">package</span> <span class="title">astar</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="meta"><span class="meta-keyword">import</span> flash.display.Sprite;</span></span><br><span class="line">	<span class="meta"><span class="meta-keyword">import</span> flash.events.Event;</span></span><br><span class="line">	<span class="meta"><span class="meta-keyword">import</span> flash.events.MouseEvent;</span></span><br><span class="line"></span><br><span class="line">	<span class="class"><span class="keyword">class</span> <span class="title">AStarTest</span> <span class="keyword">extends</span> <span class="title">Sprite</span></span></span><br><span class="line"><span class="class">	</span>&#123;</span><br><span class="line">		<span class="keyword">private</span> <span class="keyword">const</span> SIZE:int = <span class="number">40</span>;</span><br><span class="line">		<span class="keyword">private</span> <span class="keyword">const</span> DIAGONAL:int = <span class="number">14</span>; <span class="comment">//对角线</span></span><br><span class="line">		<span class="keyword">private</span> <span class="keyword">const</span> PARALLEL:int = <span class="number">10</span>; <span class="comment">//非对角线</span></span><br><span class="line"></span><br><span class="line">		<span class="keyword">private</span> <span class="keyword">var</span> _map:Array = [[<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>], [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>]];</span><br><span class="line">		<span class="keyword">private</span> <span class="keyword">var</span> _nodeSprite:Array = [];</span><br><span class="line">		<span class="keyword">private</span> <span class="keyword">var</span> _clickCout:int;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">private</span> <span class="keyword">var</span> _fristNodeSp:Rect;</span><br><span class="line">		<span class="keyword">private</span> <span class="keyword">var</span> _secondNodeSp:Rect;</span><br><span class="line">		<span class="keyword">private</span> <span class="keyword">var</span> _firstPoint:Point = <span class="keyword">new</span> Point();</span><br><span class="line">		<span class="keyword">private</span> <span class="keyword">var</span> _sencondPoint:Point = <span class="keyword">new</span> Point();</span><br><span class="line"></span><br><span class="line">		<span class="keyword">private</span> <span class="keyword">var</span> _openList:Array = [];</span><br><span class="line">		<span class="keyword">private</span> <span class="keyword">var</span> _closeList:Array = [];</span><br><span class="line">		<span class="keyword">private</span> <span class="keyword">var</span> _path:Array = [];</span><br><span class="line"></span><br><span class="line">		<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">AStarTest</span><span class="params">()</span></span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (stage)</span><br><span class="line">				init(<span class="literal">null</span>);</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				addEventListener(Event.ADDED_TO_STAGE, init);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">init</span><span class="params">(e:Event)</span>:void</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			removeEventListener(Event.ADDED_TO_STAGE, init);</span><br><span class="line">			initMap();</span><br><span class="line">			initEventListener();</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">initEventListener</span><span class="params">()</span>:void</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			stage.addEventListener(MouseEvent.CLICK, clickHandler);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">clickHandler</span><span class="params">(e:MouseEvent)</span>:void</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (_clickCout &amp;gt;= <span class="number">2</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				_clickCout = <span class="number">0</span>;</span><br><span class="line">				clear();</span><br><span class="line">			&#125;</span><br><span class="line">			turnNode(e.stageX, e.stageY, _clickCout);</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">clear</span><span class="params">()</span>:void</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (_fristNodeSp)</span><br><span class="line">				_fristNodeSp.create();</span><br><span class="line">			<span class="keyword">if</span> (_secondNodeSp)</span><br><span class="line">				_secondNodeSp.create();</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">var</span> i:int = <span class="number">0</span>; i &lt; _path.length; i++)</span><br><span class="line">			&#123;</span><br><span class="line">				_nodeSprite[_path[i].x][_path[i].y].create();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">initMap</span><span class="params">()</span>:void</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">var</span> i:int = <span class="number">0</span>; i &lt; _map.length; i++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">var</span> rol:Array = _map[i];</span><br><span class="line">				<span class="keyword">var</span> node:Array = [];</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">var</span> j:int = <span class="number">0</span>; j &lt; rol.length; j++)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">var</span> rect:Rect = <span class="keyword">new</span> Rect(rol[j]);</span><br><span class="line">					rect.x = j * SIZE;</span><br><span class="line">					rect.y = i * SIZE;</span><br><span class="line">					addChild(rect);</span><br><span class="line">					node.push(rect);</span><br><span class="line">				&#125;</span><br><span class="line">				_nodeSprite.push(node);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">turnNode</span><span class="params">(x:Number, y:Number, nodeSite:int)</span>:void</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">var</span> col:int = x / SIZE;</span><br><span class="line">			<span class="keyword">var</span> row:int = y / SIZE;</span><br><span class="line">			<span class="keyword">var</span> len:int = (col + <span class="number">1</span>) * (row + <span class="number">1</span>);</span><br><span class="line">			<span class="keyword">if</span> (_nodeSprite[row] &amp;&amp; _nodeSprite[row][col])</span><br><span class="line">			&#123;</span><br><span class="line">				_clickCout++;</span><br><span class="line">				<span class="keyword">var</span> rect:Rect = _nodeSprite[row][col];</span><br><span class="line"></span><br><span class="line">				<span class="keyword">if</span> (nodeSite == <span class="number">0</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					_firstPoint.x = row;</span><br><span class="line">					_firstPoint.y = col;</span><br><span class="line">					_fristNodeSp = rect;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">if</span> (nodeSite == <span class="number">1</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					_sencondPoint.x = row;</span><br><span class="line">					_sencondPoint.y = col;</span><br><span class="line">					_secondNodeSp = rect;</span><br><span class="line">					<span class="keyword">var</span> endPoint:Point = findPath(_firstPoint, _sencondPoint);</span><br><span class="line">					<span class="keyword">if</span> (endPoint != <span class="literal">null</span>)</span><br><span class="line">					&#123;</span><br><span class="line">						<span class="keyword">while</span> (endPoint != <span class="literal">null</span>)</span><br><span class="line">						&#123;</span><br><span class="line">							_path.unshift(endPoint);</span><br><span class="line">							endPoint = endPoint.parent;</span><br><span class="line">						&#125;</span><br><span class="line">						<span class="keyword">for</span> (<span class="keyword">var</span> i:int = <span class="number">0</span>; i &lt; _path.length; i++)</span><br><span class="line">						&#123;</span><br><span class="line">							<span class="keyword">var</span> po:Point = _path[i];</span><br><span class="line">							<span class="keyword">var</span> poNode:Rect = _nodeSprite[po.x][po.y];</span><br><span class="line">							poNode.turn();</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line"></span><br><span class="line">				&#125;</span><br><span class="line">				rect.turn();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">findPath</span><span class="params">(first:Point, second:Point)</span>:Point</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			_openList = [];</span><br><span class="line">			_closeList = [];</span><br><span class="line">			_path = [];</span><br><span class="line">			trace();</span><br><span class="line">			trace(first, second);</span><br><span class="line"></span><br><span class="line">			_openList.push(first);</span><br><span class="line">			<span class="keyword">while</span> (_openList.length != <span class="number">0</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">var</span> po:Point = inList(_openList, second);</span><br><span class="line">				<span class="keyword">if</span> (po)</span><br><span class="line">					<span class="keyword">return</span> po;</span><br><span class="line">				_openList.sortOn([<span class="string">"f"</span>]);</span><br><span class="line">				<span class="keyword">var</span> curr:Point = _openList.shift();</span><br><span class="line">				_closeList.push(curr);</span><br><span class="line">				<span class="comment">//得到邻近的点</span></span><br><span class="line">				<span class="keyword">var</span> sorround:Array = getSorround(curr);</span><br><span class="line">				trace(curr);</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">var</span> i:int = <span class="number">0</span>; i &lt; sorround.length; i++)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">var</span> sorroundPoint:Point = sorround[i];</span><br><span class="line">					<span class="keyword">if</span> (inList(_openList, sorroundPoint))</span><br><span class="line">					&#123;</span><br><span class="line">						FoundPoint(curr, sorroundPoint);</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">else</span></span><br><span class="line">					&#123;</span><br><span class="line">						NotFoundPoint(curr, second, sorroundPoint);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">NotFoundPoint</span><span class="params">(curr:Point, second:Point, point:Point)</span>:void</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			point.parent = curr;</span><br><span class="line">			point.g = cacG(curr, point);</span><br><span class="line">			point.h = cacH(second, point);</span><br><span class="line">			point.cacF();</span><br><span class="line">			_openList.push(point);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">//计算G值, 如果比原来的大, 就什么都不做, 否则设置它的父节点为当前点,并更新G和F</span></span><br><span class="line">		<span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">FoundPoint</span><span class="params">(curr:Point, point:Point)</span>:void</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">var</span> g:int = cacG(curr, point);</span><br><span class="line">			<span class="keyword">if</span> (g &lt; point.g)</span><br><span class="line">			&#123;</span><br><span class="line">				point.parent = curr;</span><br><span class="line">				point.g = g;</span><br><span class="line">				point.cacF();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">cacG</span><span class="params">(curr:Point, point:Point)</span>:int</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">var</span> diff:int = Math.abs(curr.x - point.x) + Math.abs(curr.y - point.y);</span><br><span class="line">			<span class="keyword">var</span> g:int = (diff == <span class="number">2</span>) ? DIAGONAL : PARALLEL;</span><br><span class="line">			<span class="keyword">var</span> parentG:int = (curr.parent != <span class="literal">null</span>) ? curr.parent.g : <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">return</span> g + parentG;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">//H值不计算折点</span></span><br><span class="line">		<span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">cacH</span><span class="params">(second:Point, point:Point)</span>:int</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">var</span> step:int = Math.abs(second.x - point.x) + Math.abs(second.y - point.y);</span><br><span class="line">			<span class="keyword">return</span> step * PARALLEL;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">getSorround</span><span class="params">(curr:Point)</span>:Array</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">var</span> surroundPoints:Array = [];</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">var</span> i:int = curr.x - <span class="number">1</span>; i &lt;= curr.x + <span class="number">1</span>; i++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">var</span> j:int = curr.y - <span class="number">1</span>; j &lt;= curr.y + <span class="number">1</span>; j++)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">var</span> point:Point = <span class="keyword">new</span> Point();</span><br><span class="line">					point.x = i;</span><br><span class="line">					point.y = j;</span><br><span class="line">					<span class="keyword">if</span> (canReach(curr, point))</span><br><span class="line">					&#123;</span><br><span class="line">						surroundPoints.push(point);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> surroundPoints;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">canReach</span><span class="params">(curr:Point, point:Point)</span>:Boolean</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (!inMap(point.x, point.y) || inList(_closeList, point))</span><br><span class="line">				<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">inMap</span><span class="params">(x:int, y:int)</span>:Boolean</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (_map[x] &amp;&amp; _map[x][y] &amp;&amp; _map[x][y] == <span class="number">1</span>)</span><br><span class="line">				<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">inList</span><span class="params">(_list:Array, point:Point)</span>:Point</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (!_list || _list.length == <span class="number">0</span>)</span><br><span class="line">				<span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">var</span> i:int = <span class="number">0</span>; i &lt; _list.length; i++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">var</span> po:Point = _list[i];</span><br><span class="line">				<span class="keyword">if</span> (po.x == point.x &amp;&amp; po.y == point.y)</span><br><span class="line">					<span class="keyword">return</span> po;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="meta"><span class="meta-keyword">import</span> flash.display.Sprite;</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Rect</span> <span class="keyword">extends</span> <span class="title">Sprite</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">var</span> _enable:int;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">Rect</span><span class="params">(enable:int)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">this</span>._enable = enable;</span><br><span class="line">		create();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">create</span><span class="params">()</span>:void</span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.graphics.clear();</span><br><span class="line">		<span class="keyword">if</span> (_enable)</span><br><span class="line">			<span class="keyword">this</span>.graphics.lineStyle(<span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			<span class="keyword">this</span>.graphics.beginFill(<span class="number">0</span>, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">this</span>.graphics.drawRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">40</span>, <span class="number">40</span>);</span><br><span class="line">		<span class="keyword">this</span>.graphics.endFill();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">turn</span><span class="params">()</span>:void</span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.graphics.clear();</span><br><span class="line">		<span class="keyword">this</span>.graphics.beginFill(<span class="number">0x00ff00</span>, <span class="number">1</span>);</span><br><span class="line">		<span class="keyword">this</span>.graphics.drawRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">40</span>, <span class="number">40</span>);</span><br><span class="line">		<span class="keyword">this</span>.graphics.endFill();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">var</span> _x:int;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">var</span> _y:int;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">var</span> _g:int;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">var</span> _h:int;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">var</span> _f:int;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">var</span> _parent:Point;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">get</span> <span class="title">x</span><span class="params">()</span>:int</span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> _x;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">set</span> <span class="title">x</span><span class="params">(value:int)</span>:void</span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		_x = value;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">get</span> <span class="title">y</span><span class="params">()</span>:int</span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> _y;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">set</span> <span class="title">y</span><span class="params">(value:int)</span>:void</span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		_y = value;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">get</span> <span class="title">g</span><span class="params">()</span>:int</span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> _g;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">set</span> <span class="title">g</span><span class="params">(value:int)</span>:void</span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		_g = value;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">get</span> <span class="title">h</span><span class="params">()</span>:int</span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> _h;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">set</span> <span class="title">h</span><span class="params">(value:int)</span>:void</span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		_h = value;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">get</span> <span class="title">f</span><span class="params">()</span>:int</span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> _f;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">set</span> <span class="title">f</span><span class="params">(f:int)</span>:void</span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">this</span>._f = f;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">get</span> <span class="title">parent</span><span class="params">()</span>:Point</span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> _parent;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">set</span> <span class="title">parent</span><span class="params">(value:Point)</span>:void</span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		_parent = value;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">cacF</span><span class="params">()</span>:void</span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		_f = _g + _h;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">toString</span><span class="params">()</span>:String </span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">"[Point x="</span> + x + <span class="string">" y="</span> + y + <span class="string">" g="</span> + g + <span class="string">" h="</span> + h + <span class="string">" f="</span> + f + <span class="string">"]"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>参考 :</p>
+<p><a href="http://www.lihuasoft.net/article/show.php?id=3523" target="_blank" rel="noopener">http://www.lihuasoft.net/article/show.php?id=3523</a></p>
+<p><a href="http://www.cnblogs.com/technology/archive/2011/05/26/2058842.html" target="_blank" rel="noopener">http://www.cnblogs.com/technology/archive/2011/05/26/2058842.html</a></p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/抓抓包/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">抓抓包</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/一次失败的逆向工程/">
+        <span class="next-text nav-default">一次失败的逆向工程</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

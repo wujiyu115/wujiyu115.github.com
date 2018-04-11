@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="给shadowsocks插上tcptun,bbr这对翅膀"/>
+
+
+
+
+  <meta name="keywords" content="vultr, shadowsocks, tcptun, bbr, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/vultr/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> 给shadowsocks插上tcptun,bbr这对翅膀 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          给shadowsocks插上tcptun,bbr这对翅膀
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017-03-10
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#速度测试"><span class="toc-text">速度测试</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Shadowsocks安装"><span class="toc-text">Shadowsocks安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Shadowsocks-go"><span class="toc-text">安装Shadowsocks-go</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装后脚本提示："><span class="toc-text">安装后脚本提示：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多用户多端口配置文件示例："><span class="toc-text">多用户多端口配置文件示例：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#BBR"><span class="toc-text">BBR</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#介绍"><span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#kctrun"><span class="toc-text">kctrun</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Kcptun介绍"><span class="toc-text">Kcptun介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简易原理"><span class="toc-text">简易原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装-1"><span class="toc-text">安装</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Mac上kcptun和ss配置"><span class="toc-text">Mac上kcptun和ss配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#shell"><span class="toc-text">shell</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gui"><span class="toc-text">gui</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#supervisord"><span class="toc-text">supervisord</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置参考"><span class="toc-text">配置参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#算法参考"><span class="toc-text">算法参考</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <p>最近<a href="https://www.vultr.com/" target="_blank" rel="noopener">vultr</a> 搞活动充五刀送五刀.之前用的服务商速度有点不给力.想着撸个ss玩玩,晚上折腾到一点多, 易票联的<code>全球付</code>卡在vultr一直刷不了.又不想用<code>paypal</code>绑银行卡.试着把<code>全球付</code>的卡绑到<code>paypal</code>上。然后用<code>paypal</code>一刷居然成功了.</p>
+<p><code>vultr</code>比<code>linode</code>同等配置价格更便宜.<code>500G</code>的流量绝对够用了.知乎上看了一下好像日本的线路速度比较快.自己也测试了一下.然后开了个实例准备试用几个月看效果如何.</p>
+<h2 id="速度测试"><a href="#速度测试" class="headerlink" title="速度测试"></a>速度测试</h2><ul>
+<li><p>国内线路测试vps速度ping<br><a href="http://ping.chinaz.com/45.76.185.184" target="_blank" rel="noopener">http://ping.chinaz.com/45.76.185.184</a></p>
+</li>
+<li><p>speedtest测试带宽</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py</span><br><span class="line">python speedtest.py</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="Shadowsocks安装"><a href="#Shadowsocks安装" class="headerlink" title="Shadowsocks安装"></a>Shadowsocks安装</h1><h2 id="安装Shadowsocks-go"><a href="#安装Shadowsocks-go" class="headerlink" title="安装Shadowsocks-go"></a>安装Shadowsocks-go</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>安装</span><br><span class="line">wget --no-check-certificate -O shadowsocks-go.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-go.sh</span><br><span class="line">chmod +x shadowsocks-go.sh</span><br><span class="line">./shadowsocks-go.sh 2&gt;&amp;1 | tee shadowsocks-go.log</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>默认配置文件在</span><br><span class="line">/etc/shadowsocks/config.json</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="安装后脚本提示："><a href="#安装后脚本提示：" class="headerlink" title="安装后脚本提示："></a>安装后脚本提示：</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Congratulations, Shadowsocks-go install completed!</span><br><span class="line">Your Server IP:your_server_ip</span><br><span class="line">Your Server Port:your_server_port</span><br><span class="line">Your Password:your_password</span><br><span class="line">Your Local Port:1080</span><br><span class="line">Your Encryption Method:aes-256-cfb</span><br><span class="line"></span><br><span class="line">安装完成后即已后台启动`Shadowsocks-go`运行：</span><br><span class="line"><span class="meta">#</span>启动：</span><br><span class="line">/etc/init.d/shadowsocks start</span><br><span class="line"><span class="meta">#</span>停止：</span><br><span class="line">/etc/init.d/shadowsocks stop</span><br><span class="line"><span class="meta">#</span>重启：</span><br><span class="line">/etc/init.d/shadowsocks restart</span><br><span class="line"><span class="meta">#</span>状态：</span><br><span class="line">/etc/init.d/shadowsocks status</span><br></pre></td></tr></table></figure>
+<h3 id="多用户多端口配置文件示例："><a href="#多用户多端口配置文件示例：" class="headerlink" title="多用户多端口配置文件示例："></a>多用户多端口配置文件示例：</h3><p>配置文件路径：<code>/etc/shadowsocks/config.json</code><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;port_password&quot;:&#123;</span><br><span class="line">         &quot;8989&quot;:&quot;password0&quot;,</span><br><span class="line">         &quot;9001&quot;:&quot;password1&quot;,</span><br><span class="line">         &quot;9002&quot;:&quot;password2&quot;,</span><br><span class="line">         &quot;9003&quot;:&quot;password3&quot;,</span><br><span class="line">         &quot;9004&quot;:&quot;password4&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</span><br><span class="line">    &quot;timeout&quot;:600</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="BBR"><a href="#BBR" class="headerlink" title="BBR"></a>BBR</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>BBR是google开源的一个TCP BBR拥塞控制算法,可以进行单边加速</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>手动安装要更新内核,用这个一键安装</span><br><span class="line"><span class="meta">#</span>https://blog.kuoruan.com/115.html</span><br><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh</span><br><span class="line">chmod +x bbr.sh</span><br><span class="line">./bbr.sh</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>验证是否成功</span><br><span class="line">sysctl -a|grep tcp_congestion_control</span><br><span class="line"><span class="meta">#</span>net.ipv4.tcp_congestion_control = bbr</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>验证2</span><br><span class="line">lsmod | grep bbr</span><br><span class="line"><span class="meta">#</span>tcp_bbr                16384  5</span><br></pre></td></tr></table></figure>
+<h1 id="kctrun"><a href="#kctrun" class="headerlink" title="kctrun"></a>kctrun</h1><h2 id="Kcptun介绍"><a href="#Kcptun介绍" class="headerlink" title="Kcptun介绍"></a>Kcptun介绍</h2><p>Kcptun 是一个非常简单和快速的，基于 KCP 协议的 UDP 隧道，它可以将 TCP 流转换为KCP+UDP 流。而 KCP 是一个快速可靠协议，能以比 TCP浪费10%-20%的带宽的代价，换取平均延迟降低30%-40%，且最大延迟降低三倍的传输效果。</p>
+<p>Kcptun 是 KCP 协议的一个简单应用，可以用于任意 TCP 网络程序的传输承载，以提高网络流畅度，降低掉线情况。由于 Kcptun 使用 Go 语言编写，内存占用低（经测试，在64M内存服务器上稳定运行），而且适用于所有平台，甚至 Arm 平台。</p>
+<h2 id="简易原理"><a href="#简易原理" class="headerlink" title="简易原理"></a>简易原理</h2><p><img src="http://farwmarth.bestnewbee.com/images/kcp.jpg" alt="kcp"></p>
+<h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">https://raw.githubusercontent.com/kuoruan/kcptun_installer/master/kcptun.sh</span><br><span class="line">chmod +x ./kcptun.sh</span><br><span class="line">/kcptun.sh</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>查看kcptun日志</span><br><span class="line">./kcptun.sh log</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>配置文件</span><br><span class="line">/usr/share/kcptun/server-config.json</span><br><span class="line"><span class="meta">#</span>kcptun服务器</span><br><span class="line">/usr/share/kcptun/server_linux_amd64</span><br><span class="line"><span class="meta">#</span>Kcptun 日志文件目录:</span><br><span class="line">/var/log/kcptun/</span><br><span class="line"><span class="meta">#</span>开关kcptun</span><br><span class="line"><span class="meta">#</span>Supervisor 命令:</span><br><span class="line">    service supervisord &#123;start|stop|restart|status&#125;</span><br><span class="line">                        &#123;启动|关闭|重启|查看状态&#125;</span><br><span class="line"><span class="meta">#</span>Kcptun 相关命令:</span><br><span class="line">    supervisorctl &#123;start|stop|restart|status&#125; kcptun&lt;id&gt;</span><br><span class="line">                  &#123;启动|关闭|重启|查看状态&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Mac上kcptun和ss配置"><a href="#Mac上kcptun和ss配置" class="headerlink" title="Mac上kcptun和ss配置"></a>Mac上kcptun和ss配置</h1><p><a href="https://github.com/xtaci/kcptun/releases" target="_blank" rel="noopener">https://github.com/xtaci/kcptun/releases</a><br>下载 kcptun-darwin-amd64-20170308.tar.gz</p>
+<h2 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">sudo ./client_darwin_amd64 -l ":kcptun加速端口" -mode fast -r "vps的ip:kcptun对外端口" --crypt "加密方式(aes)" --key "kcptun密码"</span><br></pre></td></tr></table></figure>
+<p><img src="http://farwmarth.bestnewbee.com/images/kcptun.jpg" alt="kcptun"></p>
+<h2 id="gui"><a href="#gui" class="headerlink" title="gui"></a>gui</h2><p>win: <a href="https://github.com/dfdragon/kcptun_gclient" target="_blank" rel="noopener">https://github.com/dfdragon/kcptun_gclient</a><br>mac: <a href="https://github.com/dfdragon/kcptun_xclient" target="_blank" rel="noopener">https://github.com/dfdragon/kcptun_xclient</a><br>截图是windows的ui,mac配置差不多<br><img src="http://farwmarth.bestnewbee.com/images/Kcptun_GUI_config.png" alt="kcptun_gui"></p>
+<h1 id="supervisord"><a href="#supervisord" class="headerlink" title="supervisord"></a>supervisord</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/etc/supervisor/supervisord.conf</span><br><span class="line">files = /etc/supervisor/config.d/*.ini</span><br></pre></td></tr></table></figure>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><h2 id="配置参考"><a href="#配置参考" class="headerlink" title="配置参考"></a>配置参考</h2><ul>
+<li><a href="https://teddysun.com/486.html" target="_blank" rel="noopener">https://teddysun.com/486.html</a></li>
+<li><a href="https://blog.kuoruan.com/110.html" target="_blank" rel="noopener">https://blog.kuoruan.com/110.html</a></li>
+<li><a href="http://hohothink.com/fq" target="_blank" rel="noopener">http://hohothink.com/fq</a></li>
+<li><a href="http://xn--rgvu79ah1g.com/ios%E4%B9%8B%E8%B7%AF/speed-up" target="_blank" rel="noopener">http://xn--rgvu79ah1g.com/ios%E4%B9%8B%E8%B7%AF/speed-up</a></li>
+<li><a href="https://miaocode.tk/hello-kcp/" target="_blank" rel="noopener">https://miaocode.tk/hello-kcp/</a></li>
+</ul>
+<h2 id="算法参考"><a href="#算法参考" class="headerlink" title="算法参考"></a>算法参考</h2><ul>
+<li><a href="http://blog.csdn.net/dog250/article/details/52830576" target="_blank" rel="noopener">http://blog.csdn.net/dog250/article/details/52830576</a></li>
+</ul>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/vultr/">vultr</a>
+            
+              <a href="/tags/shadowsocks/">shadowsocks</a>
+            
+              <a href="/tags/tcptun/">tcptun</a>
+            
+              <a href="/tags/bbr/">bbr</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/hexo图片迁移至七牛/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">hexo图片迁移至七牛</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/语音服务器的选型/">
+        <span class="next-text nav-default">语音服务器的选型</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

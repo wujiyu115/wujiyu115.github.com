@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="hexo自动化构建"/>
+
+
+
+
+  <meta name="keywords" content="hexo, github, coding, weghook, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/autohexo/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> hexo自动化构建 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          hexo自动化构建
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017-03-12
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/hexo/">hexo</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安全性总结"><span class="toc-text">安全性总结</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <p>最近发现博客的图片和文章数量增长后,hexo生成和发布的时间越来越长,而且换了电脑后hexo的环境又要倒腾一遍,实在是消耗时间。</p>
+<p>但是又不想换简书这种单纯的写作平台，毕竟博客还是需要一点个性化的元素。</p>
+<p>那能不能我写完markdown然后commit之后就可以自动生成静态页面自动发布呢？当然懒人们有很多种办法。研究了一下一般都是用<code>webhook</code>来实现,目前大概有几种方式:</p>
+<a id="more"></a>
+<p>hexo源文章仓库托管在github上然后编成静态文件分发到github和coding.net的pages服务上。一般用<code>Travis CI</code>来做集成,转一张<a href="http://kchen.cc/2016/11/12/hexo-instructions/#Travis-CI-持续集成" target="_blank" rel="noopener">kcen</a>做的时序图<br><img src="http://farwmarth.bestnewbee.com/images/uploads/2017/03/travis_github.jpg" alt="travis_github.jpg"><br>流程简化就是本地push源文章到github，触发webhook然后traivs帮你自动构建生成静态文件然后推送到page服务上。</p>
+<p>为了追求速度,我把hexo文章仓库托管在coding.net的上,而且coding的私有项目不收费,也提供了webhook的功能.</p>
+<p>在coding上也有像travis一样的国内服务,开始收费的<code>flow.ci</code>不予考虑, 看到<a href="http://janrone.com/2016/05/10/%E5%88%A9%E7%94%A8Daocloud%E6%8C%81%E7%BB%AD%E9%83%A8%E7%BD%B2Hexo/" target="_blank" rel="noopener">这篇</a>博客<a href="https://www.daocloud.io/" target="_blank" rel="noopener">daocloud</a>好像是个不错的选择，但是在部署的时候还是要暴露私钥给第三方平台,也没有选择这种方案。</p>
+<p>正好手上有一台闲置的vps,就选择了云主机上搭建一个hexo的环境,push的时候触发coding的webhook，回调云主机上用nginx反代的node服务，然后执行一个<code>shell</code>脚本拉代码自动编译发布<br><img src="http://farwmarth.bestnewbee.com/images/uploads/2017/03/vps_coding_webhook.png" alt="travis_github.jpg"></p>
+<p>基本流程没有变,只是把第三方的服务换成了自己的vps,把需要的密钥换成了部署公钥。</p>
+<p>coding的部署公钥在此部署<br><img src="http://farwmarth.bestnewbee.com/images/uploads/2017/03/codingkey.png" alt="travis_github.jpg"></p>
+<p>webhook在此配置<br><img src="http://farwmarth.bestnewbee.com/images/uploads/2017/03/webhook.png" alt="travis_github.jpg"></p>
+<p>vps上的项目目录，hexo是clone下来的博客源码，webhook下的是<code>node server</code>,部署公钥放最顶层</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">├── blog_rsa</span><br><span class="line">├── blog_rsa.pub #部署公钥</span><br><span class="line">├── hexo    #博客源码</span><br><span class="line">│   ├── deploy.sh</span><br><span class="line">│   ├── source</span><br><span class="line">└── webhook # node服务</span><br><span class="line">    ├── config.js</span><br><span class="line">    ├── index.js</span><br><span class="line">    ├── logs</span><br></pre></td></tr></table></figure>
+<p>因为部署公钥没有放<code>.ssh</code>目录下所以要在<code>~/.ssh/config</code>下指定一下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Host git.coding.net</span><br><span class="line">User xxx@email.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile    /data/publish/blog_rsa</span><br><span class="line">IdentitiesOnly  yes</span><br><span class="line"></span><br><span class="line">Host github.com</span><br><span class="line">User xxx@email.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile    /data/publish/blog_rsa</span><br><span class="line">IdentitiesOnly  yes</span><br></pre></td></tr></table></figure>
+<p>node服务代码很简单,判定一下coding的hook是不是push请求,友情提示,启动node服务的时候可以用<a href="https://www.npmjs.com/package/forever" target="_blank" rel="noopener">forever</a>模块启动<code>forever start index.js</code><br><code>index.js</code></p>
+ <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"><span class="keyword">var</span> exec = <span class="built_in">require</span>(<span class="string">'child_process'</span>).exec;</span><br><span class="line"><span class="keyword">var</span> config = <span class="built_in">require</span>(<span class="string">'./config.js'</span>);</span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">var</span> util = <span class="built_in">require</span>(<span class="string">'util'</span>);</span><br><span class="line"><span class="keyword">var</span> log4js = <span class="built_in">require</span>(<span class="string">'log4js'</span>);</span><br><span class="line"><span class="keyword">var</span> logger = log4js.getLogger(<span class="string">"hook"</span>);</span><br><span class="line"></span><br><span class="line">log4js.configure(&#123;</span><br><span class="line">    appenders: [&#123;</span><br><span class="line">        type: <span class="string">'console'</span>,</span><br><span class="line">        level: <span class="string">'DEBUG'</span></span><br><span class="line">    &#125;, &#123;</span><br><span class="line">        type: <span class="string">'file'</span>,</span><br><span class="line">        filename: <span class="string">'logs/hook.log'</span>,</span><br><span class="line">        category: <span class="string">'hook'</span>,</span><br><span class="line">        level: <span class="string">'INFO'</span>,</span><br><span class="line">        maxLogSize: <span class="number">20480</span>,</span><br><span class="line">        backups: <span class="number">10</span>,</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">var</span> now = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Date</span>().toLocaleDateString() + <span class="string">" "</span> + nowDate.toLocaleTimeString();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> main = <span class="function"><span class="keyword">function</span>(<span class="params">req, res, data</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (data.commits) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(data.token , config.token);</span><br><span class="line">        <span class="keyword">if</span> (data.token != config.token)&#123;</span><br><span class="line">            logger.error(<span class="string">"error token!!!!!!!"</span>);</span><br><span class="line">            res.end();</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">var</span> project_name = data.repository.name,</span><br><span class="line">            commit_user = data.commits[<span class="number">0</span>].committer.name,</span><br><span class="line">            commit_user_email = data.commits[<span class="number">0</span>].committer.email,</span><br><span class="line">            commit_message = data.commits[<span class="number">0</span>].short_message;</span><br><span class="line">        <span class="keyword">let</span> pro_item = config.projects[project_name];</span><br><span class="line">        <span class="keyword">if</span> (!pro_item) &#123;</span><br><span class="line">            logger.warn(<span class="string">"push project not in config"</span>);</span><br><span class="line">            res.end();</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        logger.info(util.format(<span class="string">"commit_message:%s, project_name:%s, commit_user:%s, commit_user_email:%s"</span>, commit_message, project_name, commit_user, commit_user_email));</span><br><span class="line">        exec(util.format(<span class="string">"sh %s"</span>, config.projects.shell_name), &#123;</span><br><span class="line">            maxBuffer: <span class="number">400</span> * <span class="number">1024</span>,</span><br><span class="line">            cwd: pro_item.path</span><br><span class="line">        &#125;, <span class="function"><span class="keyword">function</span>(<span class="params">err, stdout, stderr</span>) </span>&#123;</span><br><span class="line">            cmd_result = err ? stderr : stdout;</span><br><span class="line">            logger.info(cmd_result);</span><br><span class="line">        &#125;);</span><br><span class="line">        res.end();</span><br><span class="line">        logger.debug(<span class="string">"push trigger end"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (data.zen) &#123;</span><br><span class="line">        <span class="comment">//ping</span></span><br><span class="line">        res.end();</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        res.end();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> server = http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> POST = <span class="string">''</span>;</span><br><span class="line">    req.on(<span class="string">'data'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">chunk</span>) </span>&#123;</span><br><span class="line">        POST += chunk;</span><br><span class="line">    &#125;);</span><br><span class="line">    req.on(<span class="string">'end'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            POST = <span class="built_in">JSON</span>.parse(POST);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (<span class="built_in">Error</span>) &#123;</span><br><span class="line">            POST = &#123;&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        main(req, res, POST);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">server.listen(config.port);</span><br><span class="line">logger.info(<span class="string">"Server runing at port: "</span> + config.port + <span class="string">"."</span>);</span><br></pre></td></tr></table></figure>
+<p>config.js</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">#启动端口</span><br><span class="line"><span class="keyword">var</span> port = xxx;</span><br><span class="line">#与coding的token配置一致</span><br><span class="line"><span class="keyword">var</span> token = <span class="string">'xxx'</span>;</span><br><span class="line"><span class="keyword">var</span> projects = &#123;</span><br><span class="line">    hexo: &#123;</span><br><span class="line">        path: <span class="string">'/data/publish/hexo/'</span>,</span><br><span class="line">        url: <span class="string">'git@git.coding.net:farwmarth/webhook.git'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//push请求要执行的脚本</span></span><br><span class="line">    shell_name: <span class="string">"deploy.sh"</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> hook_log = <span class="string">'hook.log'</span>;</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    projects: projects,</span><br><span class="line">    port: port,</span><br><span class="line">    token: token,</span><br><span class="line">    hook_log: hook_log,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><code>deploy.sh</code></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git pull origin master</span><br><span class="line"><span class="meta">#</span>为了拉主题</span><br><span class="line">git submodule update --recursive --init</span><br><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>部署好服务,配置好webhook后，可以愉快地写完文章直接<code>commit</code>,而不用再等待<code>deploy</code>了.</p>
+<h2 id="安全性总结"><a href="#安全性总结" class="headerlink" title="安全性总结"></a>安全性总结</h2><ul>
+<li>用travis记得将私钥加密</li>
+<li>如果要用密钥最好用项目部署公钥,并控制好读写权限</li>
+<li>webhook最好设置<code>token</code></li>
+</ul>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/hexo/">hexo</a>
+            
+              <a href="/tags/github/">github</a>
+            
+              <a href="/tags/coding/">coding</a>
+            
+              <a href="/tags/weghook/">weghook</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/使用hubot构建运维机器人/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">使用hubot构建运维机器人</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/hexo图片迁移至七牛/">
+        <span class="next-text nav-default">hexo图片迁移至七牛</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

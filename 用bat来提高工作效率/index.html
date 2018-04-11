@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="用bat来提高工作效率"/>
+
+
+
+
+  <meta name="keywords" content="效率之道, bat, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/用bat来提高工作效率/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> 用bat来提高工作效率 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          用bat来提高工作效率
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2012-12-29
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/bat/">bat</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        <p>项目发布流程通常是手工的，需要加密，编译模块，改名，svn提交，生成版本号。上传svn服务器。手工发布效率很低。还容易出错。就写了个bat脚本 。</p>
+<p>本来是打算写ant脚本的。但ant脚本需要环境支持,还是用bat算了。</p>
+<a id="more"></a>
+<p>关键的语法解析:<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">%</span>~d0 定位到bat所在盘符</span><br><span class="line">cd %~dp0 定位到bat目录</span><br><span class="line">find "isDebug" %sysnet%|find "true"&amp;gt;nul 检测as文件开关是否是发布版本</span><br><span class="line">mydailybuild\bin\adl mydailybuild\bin\aidiTestCode-app.xml -- %projectPath%bin-debug\    0   1 给air程序传递参数来加密素材</span><br></pre></td></tr></table></figure></p>
+<p>还有就是遍历模块编译bat,不再详细写出了。代码如下:<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">::aidiTestCode-app.xml</span><br><span class="line">::递归加密目录     目录 ,1,0</span><br><span class="line">::非递归加密目录     目录 ,0,0</span><br><span class="line">::加密单个文件   文件,1,0</span><br><span class="line">::加密主文件     目录 ,0,1</span><br><span class="line">@echo off</span><br><span class="line">::工程路径 ，项目路径改变时请更改</span><br><span class="line"><span class="meta">%</span>~d0</span><br><span class="line">cd %~dp0</span><br><span class="line">cd ..</span><br><span class="line">set projectPath=%cd%\</span><br><span class="line">:: 每个bat生成的编译数</span><br><span class="line">set pageNum=15</span><br><span class="line">::不同版本的素材别称  tw\</span><br><span class="line">::set langType=tw\   ::下面的变量不要配置</span><br><span class="line">set buildPath=%projectPath%bin-build</span><br><span class="line">set versionPath=%projectPath%src\%langType%assets</span><br><span class="line">set modulesPath=%versionPath%\app</span><br><span class="line">set versionFile=%versionPath%\ui\common\filever.xml</span><br><span class="line">set ucommon=%versionPath%\ui\common</span><br><span class="line">set u7kcommon=%versionPath%\ui\7k7k\common</span><br><span class="line">set sysnet=%projectPath%src\etc\net\SysNet.as</span><br><span class="line">find "isDebug" %sysnet%|find "true"&gt;nul</span><br><span class="line">if %errorlevel% equ 0 (      echo 不是发行版本,请修改SysNet.as      pause      exit</span><br><span class="line">)</span><br><span class="line">echo 是发行版本</span><br><span class="line">echo *****</span><br><span class="line">echo 1 大陆版  2台湾版</span><br><span class="line">set  /p langTypeChoice="选择编译版本    "   if  %langTypeChoice% EQU 1 (set langType=)   if  %langTypeChoice% EQU 2 (set langType=tw)</span><br><span class="line"><span class="meta">%</span>~d0</span><br><span class="line">cd %~dp0</span><br><span class="line">echo 开始发布主程序</span><br><span class="line">call "Main.bat"</span><br><span class="line"><span class="meta">%</span>~d0</span><br><span class="line">cd %~dp0</span><br><span class="line">echo 开始生成模块编译文件</span><br><span class="line">mydailybuild\bin\adl  mydailybuild\bin\scriptBuilder-app.xml -- %projectPath%  %pageNum%  %langType%</span><br><span class="line">echo 开始加密主程序</span><br><span class="line">mydailybuild\bin\adl mydailybuild\bin\aidiTestCode-app.xml -- %projectPath%bin-debug\    0   1</span><br><span class="line">move  /y "%projectPath%bin-debug\utils.tempdata"        "%ucommon%"</span><br><span class="line">move /y   "%projectPath%bin-debug\events.tempdata"      "%ucommon%"</span><br><span class="line">mydailybuild\bin\adl mydailybuild\bin\aidiTestCode-app.xml -- %projectPath%bin-debug\7k7k\    1   0</span><br><span class="line">move /y   "%projectPath%bin-debug\7k7k\utils.tempdata"      "%u7kcommon%"</span><br><span class="line">move /y   "%projectPath%bin-debug\7k7k\events.tempdata"      "%u7kcommon%"</span><br><span class="line">echo 移动加密好的主程序成功</span><br><span class="line">:beginCode</span><br><span class="line">setlocal enabledelayedexpansion</span><br><span class="line">echo  ********</span><br><span class="line">echo 请输入选项：</span><br><span class="line">echo -2 直接生成版本号xml</span><br><span class="line">echo -1 编译并加密所有模块</span><br><span class="line">echo 0 退出</span><br><span class="line">for /f "tokens=*" %%i in ('dir  /s/b %buildPath%\modules*.bat') do (       set batPath=!batPath!%%i;       set  /a count=!count!+1       echo !count! %%~ni   )</span><br><span class="line">set /p coi="请输入选项：   "   if  %coi% EQU -2 (goto createVersion)   if  %coi% EQU -1 (goto codeAll)   if  %coi% EQU 0  (exit)</span><br><span class="line">for  %%m in (!batPath!) do (       set  /a counta=!counta!+1            if  %coi%==!counta!  (           for  /f  "tokens=4 delims= " %%x in ('find  "mxmlc" %%m') do (               set tempstr=%%x               set "tempstr=!tempstr:/=!"               set  oneModuleSwfPath=%projectPath%!tempstr:~6!               call %%m              %~d0              cd %~dp0              mydailybuild\bin\adl mydailybuild\bin\aidiTestCode-app.xml -- !oneModuleSwfPath!   1   0              del !oneModuleSwfPath!              echo !oneModuleSwfPath! ok               endlocal               pause           )           goto beginCode            )</span><br><span class="line">)</span><br><span class="line">:codeAll</span><br><span class="line">echo 编译所有模块</span><br><span class="line">for /f "tokens=*" %%j in ('dir  /s/b %buildPath%\all*.bat') do ( call "%%j" )</span><br><span class="line"><span class="meta">%</span>~d0</span><br><span class="line">cd %~dp0</span><br><span class="line">echo 加密模块</span><br><span class="line">mydailybuild\bin\adl mydailybuild\bin\aidiTestCode-app.xml -- %modulesPath%  1  0</span><br><span class="line">echo 加密模块成功,清除swf</span><br><span class="line">for /f "tokens=*" %%k in ('dir  /s/b %modulesPath%*.swf') do ( del "%%k" )</span><br><span class="line">goto beginCode</span><br><span class="line">:createVersion</span><br><span class="line">echo ******</span><br><span class="line">echo 提交模块 (1 提交  0不提交 )</span><br><span class="line">set /p  commitAll="是否提交所有更改:   "</span><br><span class="line">if %commitAll% EQU 0  (goto createXML)</span><br><span class="line">if %commitAll% EQU 1 (</span><br><span class="line">echo 提交所有更改模块</span><br><span class="line">svn commit  -m "commit modules" %modulesPath%</span><br><span class="line">echo 提交7k7k更改</span><br><span class="line">svn commit  -m "commit 7k7kcommon" %u7kcommon%</span><br><span class="line">echo 提交common更改</span><br><span class="line">svn commit  -m "commit normalcommon" %ucommon%</span><br><span class="line">pause</span><br><span class="line">)</span><br><span class="line">:createXML</span><br><span class="line">echo  生成版本号xml</span><br><span class="line">cd %versionPath%</span><br><span class="line">svn status   assets  .  -v --xml&gt;%versionFile%</span><br><span class="line">echo 转换版本号文件</span><br><span class="line"><span class="meta">%</span>~d0</span><br><span class="line">cd %~dp0</span><br><span class="line">mydailybuild\bin\adl mydailybuild\bin\createVersion-app.xml -- %versionFile% </span><br><span class="line">echo 加密版本号文件</span><br><span class="line">mydailybuild\bin\adl mydailybuild\bin\aidiTestCode-app.xml -- %versionFile%  1   0</span><br><span class="line">del %versionFile%</span><br></pre></td></tr></table></figure></p>
+<p>等有时间改成ant脚本试试</p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/效率之道/">效率之道</a>
+            
+              <a href="/tags/bat/">bat</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/gtd/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">GTD</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/初入wordpress/">
+        <span class="next-text nav-default">初入wordpress</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

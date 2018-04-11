@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="windows常用bat命令"/>
+
+
+
+
+  <meta name="keywords" content="bat, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/常用bat命令/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> windows常用bat命令 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          windows常用bat命令
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2013-10-14
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/bat/">bat</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#完整脚本"><span class="toc-text">完整脚本</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#pandoc-rst-to-markdown"><span class="toc-text">pandoc rst to markdown</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#快速删除大量文件"><span class="toc-text">快速删除大量文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#windows查看某个端口号被占用并结束此进程"><span class="toc-text">windows查看某个端口号被占用并结束此进程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#单条命令"><span class="toc-text">单条命令:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#分步过程"><span class="toc-text">分步过程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#右键添加打开MS-DOS-bat"><span class="toc-text">右键添加打开MS-DOS.bat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#批量改名"><span class="toc-text">批量改名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#批量命令带过程"><span class="toc-text">批量命令带过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#清理SVN目录中-SVN"><span class="toc-text">清理SVN目录中.SVN</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#显示自己的IP"><span class="toc-text">显示自己的IP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除-svn-注册表"><span class="toc-text">删除 svn 注册表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bat写法备忘"><span class="toc-text">bat写法备忘</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#删除自身"><span class="toc-text">删除自身</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查找字符串位置"><span class="toc-text">查找字符串位置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bat-批处理－取年、月、日、时、分、秒、毫秒"><span class="toc-text">bat 批处理－取年、月、日、时、分、秒、毫秒</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#余数运算符"><span class="toc-text">余数运算符%</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#去除字符串前面的零"><span class="toc-text">去除字符串前面的零</span></a></li></ol></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h2 id="完整脚本"><a href="#完整脚本" class="headerlink" title="完整脚本"></a>完整脚本</h2><h3 id="pandoc-rst-to-markdown"><a href="#pandoc-rst-to-markdown" class="headerlink" title="pandoc rst to markdown"></a>pandoc rst to markdown</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">set mddir=md</span><br><span class="line">for /f "tokens=*" %%i in ('dir/s/b *.rst') do  pandoc -s -t rst --toc %%i -o %mddir%/%%~ni.md</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="快速删除大量文件"><a href="#快速删除大量文件" class="headerlink" title="快速删除大量文件"></a>快速删除大量文件</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">del /f/s/q dirname&gt; nul</span><br><span class="line">rmdir /s/q dirname</span><br></pre></td></tr></table></figure>
+<h3 id="windows查看某个端口号被占用并结束此进程"><a href="#windows查看某个端口号被占用并结束此进程" class="headerlink" title="windows查看某个端口号被占用并结束此进程"></a>windows查看某个端口号被占用并结束此进程</h3><h4 id="单条命令"><a href="#单条命令" class="headerlink" title="单条命令:"></a>单条命令:</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">FOR /F "tokens=5 delims= " %P IN ('netstat -a -n -o ^|findstr :4000.*LISTENING') DO TaskKill.exe /PID %P /T /F</span><br></pre></td></tr></table></figure>
+<h4 id="分步过程"><a href="#分步过程" class="headerlink" title="分步过程"></a>分步过程</h4><ol>
+<li><code>netstat -ano |findstr 4000</code> :  //查看3306端口是否存在</li>
+<li><code>tasklist |findstr 3036</code>(PID号): //查看pid为3036的是什么程序在用</li>
+<li><code>taskkill /T /F /PID 3036</code> : 杀死pid为3036的所有进程包括子进程(/T参数)</li>
+</ol>
+<h3 id="右键添加打开MS-DOS-bat"><a href="#右键添加打开MS-DOS-bat" class="headerlink" title="右键添加打开MS-DOS.bat"></a>右键添加打开MS-DOS.bat</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">reg add "HKCR\*\shell\ms-dos" /ve /d ms-dos /f</span><br><span class="line">reg add "HKCR\*\shell\ms-dos\command"  /ve /d "cmd.exe /k cd %%1"  /f</span><br><span class="line">reg add "HKCR\Folder\shell\ms-dos" /ve /d ms-dos /f</span><br><span class="line">reg add "HKCR\Folder\shell\ms-dos\command" /ve /d "cmd.exe /k cd %%1" /f</span><br></pre></td></tr></table></figure>
+<h3 id="批量改名"><a href="#批量改名" class="headerlink" title="批量改名"></a>批量改名</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ren *.xml *.txt</span><br></pre></td></tr></table></figure>
+<h3 id="批量命令带过程"><a href="#批量命令带过程" class="headerlink" title="批量命令带过程"></a>批量命令带过程</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set num = 0</span><br><span class="line">For /r  . %%i in (*.RAR) do (</span><br><span class="line">set /a num += 1</span><br><span class="line">echo %%i</span><br><span class="line">call echo 第 %%num%% 个文件处理成功</span><br><span class="line">ren %%i *.mp4)</span><br><span class="line">echo 共%num%个文件被处理成功</span><br><span class="line"><span class="meta">pause&gt;</span>nul</span><br></pre></td></tr></table></figure>
+<h3 id="清理SVN目录中-SVN"><a href="#清理SVN目录中-SVN" class="headerlink" title="清理SVN目录中.SVN"></a>清理SVN目录中.SVN</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">@echo On</span><br><span class="line">@Rem 删除SVN版本控制目录</span><br><span class="line">@PROMPT [Com]</span><br><span class="line">@for /r . %%a in (.) do @if exist "%%a\.svn" rd /s /q "%%a\.svn"</span><br><span class="line">@Rem for /r . %%a in (.) do @if exist "%%a\.svn" @echo "%%a\.svn"</span><br><span class="line">@echo Mission Completed.</span><br><span class="line">@pause</span><br></pre></td></tr></table></figure>
+<h3 id="显示自己的IP"><a href="#显示自己的IP" class="headerlink" title="显示自己的IP"></a>显示自己的IP</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">for /f "tokens=15" %%i in ('ipconfig ^| find /i "ip address"') do set ip=%%i</span><br><span class="line">echo %ip%</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+<h3 id="删除-svn-注册表"><a href="#删除-svn-注册表" class="headerlink" title="删除 svn 注册表"></a>删除 svn 注册表</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN]</span><br><span class="line">@="Delete SVN Folders"</span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN\command]</span><br><span class="line">@="cmd.exe /c \"TITLE Removing SVN Folders in %1 &amp;amp;&amp;amp; COLOR 9A &amp;amp;&amp;amp; FOR /r \"%1\" %%f IN (.svn) DO RD /s /q \"%%f\" \""</span><br></pre></td></tr></table></figure>
+<h2 id="bat写法备忘"><a href="#bat写法备忘" class="headerlink" title="bat写法备忘"></a>bat写法备忘</h2><h3 id="删除自身"><a href="#删除自身" class="headerlink" title="删除自身"></a>删除自身</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">del %0</span><br></pre></td></tr></table></figure>
+<h3 id="查找字符串位置"><a href="#查找字符串位置" class="headerlink" title="查找字符串位置"></a>查找字符串位置</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Setlocal ENABLEDELAYEDEXPANSION</span><br><span class="line"></span><br><span class="line">set str1=This is a test string</span><br><span class="line">set ch1=t</span><br><span class="line">set str=%str1%</span><br><span class="line">:next</span><br><span class="line">if not "%str%"=="" (</span><br><span class="line">set /a num+=1</span><br><span class="line">if "!str:~0,1!"=="%ch1%" goto last</span><br><span class="line">set "str=%str:~1%"</span><br><span class="line">goto next</span><br><span class="line">)</span><br><span class="line">set /a num=0</span><br><span class="line">:last</span><br><span class="line">echo %num%</span><br></pre></td></tr></table></figure>
+<h3 id="bat-批处理－取年、月、日、时、分、秒、毫秒"><a href="#bat-批处理－取年、月、日、时、分、秒、毫秒" class="headerlink" title="bat 批处理－取年、月、日、时、分、秒、毫秒"></a>bat 批处理－取年、月、日、时、分、秒、毫秒</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">取年份：echo %date:~0,4%</span><br><span class="line">取月份：echo %date:~5,2%</span><br><span class="line">取日期：echo %date:~8,2%</span><br><span class="line">取星期：echo %date:~10,6%</span><br><span class="line">取小时：echo %time:~0,2%</span><br><span class="line">取分钟：echo %time:~3,2%</span><br><span class="line">取秒：      echo %time:~6,2%</span><br><span class="line">取毫秒：echo %time:~9,2%</span><br></pre></td></tr></table></figure>
+<h3 id="余数运算符"><a href="#余数运算符" class="headerlink" title="余数运算符%"></a>余数运算符%</h3><p>在批处理程序中必须写成%%</p>
+<h3 id="去除字符串前面的零"><a href="#去除字符串前面的零" class="headerlink" title="去除字符串前面的零"></a>去除字符串前面的零</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">set /a m=%m:*0=%</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/bat/">bat</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/回归/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">回归</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/养了几天喵/">
+        <span class="next-text nav-default">养了几天喵</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

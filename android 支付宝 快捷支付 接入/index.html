@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="android 支付宝 快捷支付 接入"/>
+
+
+
+
+  <meta name="keywords" content="android, 支付宝, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/android 支付宝 快捷支付 接入/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> android 支付宝 快捷支付 接入 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          android 支付宝 快捷支付 接入
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2013-04-26
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/android/">android</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-sdk下载"><span class="toc-text">一 sdk下载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二-状态图"><span class="toc-text">二 状态图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三-分析demo结构如下"><span class="toc-text">三 分析demo结构如下</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <font color="red">update: 2013-4-28 私钥安全性修正</font>
+
+
+<h2 id="一-sdk下载"><a href="#一-sdk下载" class="headerlink" title="一 sdk下载"></a>一 sdk下载</h2><p><a href="https://b.alipay.com/order/techService.htm" target="_blank" rel="noopener">https://b.alipay.com/order/techService.htm</a>.最下面有快捷支付(无线)zip包,包含了教程,开发指南和demo.</p>
+<a id="more"></a>
+<h2 id="二-状态图"><a href="#二-状态图" class="headerlink" title="二 状态图"></a>二 状态图</h2><p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image15.png" alt="image"> </p>
+<p>基本流程: 客户端签名发送订单信息—–支付宝支付—–支付宝主动通知服务器验证数据及加上逻辑,如将充值成功的钱转换成虚拟货币(这个主动通知地址在客户端发送订单时的notice_url指定,可以不指定)—服务器返回success状态—支付宝返回结果给客户端.</p>
+<p>在游戏中的图例</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image23.png" alt="image"> </p>
+<h2 id="三-分析demo结构如下"><a href="#三-分析demo结构如下" class="headerlink" title="三 分析demo结构如下"></a>三 分析demo结构如下</h2><p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image16.png" alt="image"> </p>
+<p>AlixDemo为入口.onItemClick这里为支付调用的api</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onItemClick</span><span class="params">(AdapterView&lt;?&gt; parent, View view, <span class="keyword">int</span> position,</span></span></span><br><span class="line"><span class="function"><span class="params">            <span class="keyword">long</span> id)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">        <span class="comment">// check to see if the MobileSecurePay is already installed.</span></span><br><span class="line">        <span class="comment">// 检测安全支付服务是否安装</span></span><br><span class="line">        MobileSecurePayHelper mspHelper = <span class="keyword">new</span> MobileSecurePayHelper(<span class="keyword">this</span>);</span><br><span class="line">        <span class="keyword">boolean</span> isMobile_spExist = mspHelper.detectMobile_sp();</span><br><span class="line">        <span class="keyword">if</span> (!isMobile_spExist)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// check some info.</span></span><br><span class="line">        <span class="comment">// 检测配置信息</span></span><br><span class="line">        <span class="keyword">if</span> (!checkInfo()) &#123;</span><br><span class="line">            BaseHelper</span><br><span class="line">                    .showDialog(</span><br><span class="line">                            AlixDemo.<span class="keyword">this</span>,</span><br><span class="line">                            <span class="string">"提示"</span>,</span><br><span class="line">                            <span class="string">"缺少partner或者seller，请在src/com/alipay/android/appDemo4/PartnerConfig.java中增加。"</span>,</span><br><span class="line">                            R.drawable.infoicon);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// start pay for this order.</span></span><br><span class="line">        <span class="comment">// 根据订单信息开始进行支付</span></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// prepare the order info.</span></span><br><span class="line">            <span class="comment">// 准备订单信息</span></span><br><span class="line">            String orderInfo = getOrderInfo(position);</span><br><span class="line">            <span class="comment">// 这里根据签名方式对订单信息进行签名</span></span><br><span class="line">            String signType = getSignType();</span><br><span class="line">            String strsign = sign(signType, orderInfo);</span><br><span class="line">            Log.v(<span class="string">"sign:"</span>, strsign);</span><br><span class="line">            <span class="comment">// 对签名进行编码</span></span><br><span class="line">            strsign = URLEncoder.encode(strsign);</span><br><span class="line">            <span class="comment">// 组装好参数</span></span><br><span class="line">            String info = orderInfo + <span class="string">"&amp;sign="</span> + <span class="string">"\""</span> + strsign + <span class="string">"\""</span> + <span class="string">"&amp;"</span></span><br><span class="line">                    + getSignType();</span><br><span class="line">            Log.v(<span class="string">"orderInfo:"</span>, info);</span><br><span class="line">            <span class="comment">// start the pay.</span></span><br><span class="line">            <span class="comment">// 调用pay方法进行支付</span></span><br><span class="line">            MobileSecurePayer msp = <span class="keyword">new</span> MobileSecurePayer();</span><br><span class="line">            <span class="keyword">boolean</span> bRet = msp.pay(info, mHandler, AlixId.RQF_PAY, <span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (bRet) &#123;</span><br><span class="line">                <span class="comment">// show the progress bar to indicate that we have started</span></span><br><span class="line">                <span class="comment">// paying.</span></span><br><span class="line">                <span class="comment">// 显示“正在支付”进度条</span></span><br><span class="line">                closeProgress();</span><br><span class="line">                mProgress = BaseHelper.showProgress(<span class="keyword">this</span>, <span class="keyword">null</span>, <span class="string">"正在支付"</span>, <span class="keyword">false</span>,</span><br><span class="line">                        <span class="keyword">true</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span></span><br><span class="line">                ;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception ex) &#123;</span><br><span class="line">            Toast.makeText(AlixDemo.<span class="keyword">this</span>, R.string.remote_call_failed,</span><br><span class="line">                    Toast.LENGTH_SHORT).show();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>先判断安全支付服务是否安装,如果没有会提示安装.然后对订单数据进行签名<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getOrderInfo</span><span class="params">(<span class="keyword">int</span> position)</span> </span>&#123;</span><br><span class="line">        String strOrderInfo = <span class="string">"partner="</span> + <span class="string">"\""</span> + PartnerConfig.PARTNER + <span class="string">"\""</span>;</span><br><span class="line">        strOrderInfo += <span class="string">"&amp;"</span>;</span><br><span class="line">        strOrderInfo += <span class="string">"seller="</span> + <span class="string">"\""</span> + PartnerConfig.SELLER + <span class="string">"\""</span>;</span><br><span class="line">        strOrderInfo += <span class="string">"&amp;"</span>;</span><br><span class="line">        strOrderInfo += <span class="string">"out_trade_no="</span> + <span class="string">"\""</span> + getOutTradeNo() + <span class="string">"\""</span>;</span><br><span class="line">        strOrderInfo += <span class="string">"&amp;"</span>;</span><br><span class="line">        strOrderInfo += <span class="string">"subject="</span> + <span class="string">"\""</span> + mproductlist.get(position).subject</span><br><span class="line">                + <span class="string">"\""</span>;</span><br><span class="line">        strOrderInfo += <span class="string">"&amp;"</span>;</span><br><span class="line">        strOrderInfo += <span class="string">"body="</span> + <span class="string">"\""</span> + mproductlist.get(position).body + <span class="string">"\""</span>;</span><br><span class="line">        strOrderInfo += <span class="string">"&amp;"</span>;</span><br><span class="line">        strOrderInfo += <span class="string">"total_fee="</span> + <span class="string">"\""</span></span><br><span class="line">                + mproductlist.get(position).price.replace(<span class="string">"一口价:"</span>, <span class="string">""</span>) + <span class="string">"\""</span>;</span><br><span class="line">        strOrderInfo += <span class="string">"&amp;"</span>;</span><br><span class="line">        strOrderInfo += <span class="string">"notify_url="</span> + <span class="string">"\""</span></span><br><span class="line">                + <span class="string">"http://notify.java.jpxx.org/index.jsp"</span> + <span class="string">"\""</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> strOrderInfo;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>要签名的数据为partner(合作者身份ID),seller(商户收款支付宝账号),subject(商品名称),body(商品描述),total_fee(总价),<span style="color: #8b0000">notify_url</span> 支付宝主动通知的服务器url.</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image17.png" alt="image"> </p>
+<p>调用MobileSecurePayer 的pay方法进行支付 <span style="color: #0000ff">boolean</span> bRet = msp.pay(info, mHandler, AlixId.RQF_PAY, <span style="color: #0000ff">this</span>); info为发送的参数,mhandler为回调,AlixId.RQF_PAY为回调消息头.<img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image18.png" alt="image"> </p>
+<p>这里是判断返回状态.交易成功还是失败.集成还是比较容易的.关键还是要注册企业账户,准备资料审核.然后将合作id和key配置好.</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image19.png" alt="image"> </p>
+<p>&nbsp;</p>
+<p>—————————————————–更新———————————————</p>
+<p>之前拿的是博雅的账号,他的原始 商户rsa私钥暴露在客户端.这样是不安全的.所以改进了一下,客户端对订单数据签名过程放在服务器端.</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image24.png" alt="image"> </p>
+<p>更改的代码只有签名部分.</p>
+<p>&nbsp; 4.0上访问网络另开线程.将结果用handler发送.</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image26.png" alt="image"> </p>
+<p>php返回</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image27.png" alt="image"> </p>
+<p> 接收到返回处理签名</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image28.png" alt="image"> </p>
+<p>&nbsp;</p>
+<p>三&nbsp; 服务器注意事项</p>
+<p>&nbsp; 在服务器demo中找到AppBackDemo这个项目的RSANotifyReceiver类.这个就是接收支付宝通知的.</p>
+<p>支付宝以post请求notify_url.数据样例</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image20.png" alt="image"> </p>
+<p>处理</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image21.png" alt="image"> </p>
+<p>验证方法</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image22.png" alt="image"> </p>
+<p>和客户端的验证是一样的.</p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/android/">android</a>
+            
+              <a href="/tags/支付宝/">支付宝</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/斗地主结构分析/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">斗地主结构分析</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/android 反编译和代码解读/">
+        <span class="next-text nav-default">android 反编译和代码解读</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

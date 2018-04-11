@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="wordpress迁移到hexo"/>
+
+
+
+
+  <meta name="keywords" content="hexo, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/wordpress迁移到hexo/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> wordpress迁移到hexo - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          wordpress迁移到hexo
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2016-01-13
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/life/">life</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#引用"><span class="toc-text">引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#依赖"><span class="toc-text">依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-init后目录结构"><span class="toc-text">hexo init后目录结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下载blog中的图片"><span class="toc-text">下载blog中的图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用命令"><span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署步骤"><span class="toc-text">部署步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#config-xml"><span class="toc-text">_config.xml</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装主题"><span class="toc-text">安装主题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#next主题"><span class="toc-text">next主题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo源文章和主题管理"><span class="toc-text">hexo源文章和主题管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#管理主题"><span class="toc-text">管理主题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#hexo仓库更新子项目"><span class="toc-text">hexo仓库更新子项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#删除submodule"><span class="toc-text">删除submodule</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#域名绑定"><span class="toc-text">域名绑定</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#github"><span class="toc-text">github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gitcafe"><span class="toc-text">gitcafe</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#技巧"><span class="toc-text">技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#新建一个不依赖模板的HTML页面"><span class="toc-text">新建一个不依赖模板的HTML页面</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#coding上单项目部署公钥"><span class="toc-text">coding上单项目部署公钥</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题"><span class="toc-text">问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#出现-Cannot-GET"><span class="toc-text">出现 Cannot GET /</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo中source目录的js被渲染"><span class="toc-text">hexo中source目录的js被渲染</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决hexo神烦的DTraceProviderBindings-MODULE-NOT-FOUND"><span class="toc-text">解决hexo神烦的DTraceProviderBindings MODULE_NOT_FOUND</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#提交出现fatal-multiple-stage-entries-for-merged-file的问题"><span class="toc-text">提交出现fatal:multiple stage entries for merged file的问题.</span></a></li></ol></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><ul>
+<li>(<a href="https://hexo.io/zh-cn/docs/setup" target="_blank" rel="noopener">官方帮助</a>)</li>
+</ul>
+<h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>安装hexo</span><br><span class="line">npm install hexo  -g</span><br><span class="line"><span class="meta">#</span>安装hexo命令行模块</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line"><span class="meta">#</span>创建blog目录</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line"><span class="meta">#</span>初始化</span><br><span class="line">npm install</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>安装server插件</span><br><span class="line">npm install hexo-server --save</span><br><span class="line"><span class="meta">#</span>git插件</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line"><span class="meta">#</span>feed</span><br><span class="line">npm install hexo-generator-feed@1.0.2 --save</span><br><span class="line"><span class="meta">#</span>sitemap</span><br><span class="line">npm install hexo-generator-sitemap@1.0.1 --save</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="hexo-init后目录结构"><a href="#hexo-init后目录结构" class="headerlink" title="hexo init后目录结构"></a>hexo init后目录结构</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── db.json  #json格式的静态常量数据库</span><br><span class="line">├── _config.yml #网站配置</span><br><span class="line">├── package.json #插件依赖</span><br><span class="line">├── scaffolds    #文章模板</span><br><span class="line">├── scripts   #脚本文件夹</span><br><span class="line">├── source    #资源文件夹</span><br><span class="line">|   ├── _drafts  #草稿</span><br><span class="line">|   └── _posts   #要发布的源文章</span><br><span class="line">└── themes     #主题</span><br></pre></td></tr></table></figure>
+<h2 id="下载blog中的图片"><a href="#下载blog中的图片" class="headerlink" title="下载blog中的图片"></a>下载blog中的图片</h2><p>写了一个py脚本搞定<br><a href="https://gist.github.com/wujiyu115/707691f95713c69fde01" target="_blank" rel="noopener">https://gist.github.com/wujiyu115/707691f95713c69fde01</a><br>把blog文中的图片下载下来放到source目录中,以wp-content目录为根目录,域名不变的前提下文章中的链接都需要再更新</p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt; --hexo n     #建立新文章，默认在_posts下，layout="draft"时发布的是草稿</span><br><span class="line">hexo publish &lt;filename&gt; --hexo p  #将_drafts下的文件放到_posts下，也就是发布草稿</span><br><span class="line">hexo generate  --hexo g #生成静态文件</span><br><span class="line">hexo clean   --hexo c #清理缓存</span><br><span class="line">hexo server   --hexo s #启动服务器</span><br><span class="line">hexo deploy  --hexo d #部署到远程</span><br></pre></td></tr></table></figure>
+<h2 id="部署步骤"><a href="#部署步骤" class="headerlink" title="部署步骤"></a>部署步骤</h2><ul>
+<li><p>如果是直接写完整篇文章,部署的步骤。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>创建文章</span><br><span class="line">hexo new post &lt;filename&gt;</span><br><span class="line"><span class="meta">#</span>生成文章</span><br><span class="line">hexo generate</span><br><span class="line"><span class="meta">#</span>发布</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果有草稿的话可以这样</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>创建草稿</span><br><span class="line">hexo new draft "new draft"</span><br><span class="line"><span class="meta">#</span>编辑好草稿好后发布草稿</span><br><span class="line">hexo publish &lt;filename&gt;</span><br><span class="line"><span class="meta">#</span>预览草稿</span><br><span class="line">hexo server --drafts</span><br><span class="line"><span class="meta">#</span>发布</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="config-xml"><a href="#config-xml" class="headerlink" title="_config.xml"></a>_config.xml</h2><p>###部署类型设置git<br><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#hexo 3.0 部署类型不再是github，_config.yml 中修改,同时部署到github和gitcafe</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">    - type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">      repo:</span> <span class="attr">https://github.com/wujiyu115/wujiyu115.github.com.git,master</span></span><br><span class="line"><span class="attr">    - type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">      repo:</span> <span class="attr">https://gitcafe.com/wujiyu115/farwmarth.git,gitcafe-pages</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>定位到根目录</span><br><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br><span class="line"><span class="meta">#</span>更改根目录_config.yml</span><br><span class="line">theme: next</span><br><span class="line">language: zh-Hans</span><br></pre></td></tr></table></figure>
+<h3 id="next主题"><a href="#next主题" class="headerlink" title="next主题"></a>next主题</h3><ul>
+<li><a href="https://github.com/iissnan/hexo-theme-next/wiki" target="_blank" rel="noopener">https://github.com/iissnan/hexo-theme-next/wiki</a></li>
+<li><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">http://theme-next.iissnan.com/</a></li>
+</ul>
+<h2 id="hexo源文章和主题管理"><a href="#hexo源文章和主题管理" class="headerlink" title="hexo源文章和主题管理"></a>hexo源文章和主题管理</h2><ul>
+<li><code>github</code>建立主仓库管理文章叫<code>hexo</code></li>
+<li>fork一下<code>next</code>主题新仓库叫<code>next</code></li>
+<li>然后在<code>hexo</code>仓库中<code>themes</code>中添加<code>submodule</code>这样主题和源文章分开管理.<code>hexo</code>仓库只托管源文章.</li>
+</ul>
+<p><img src="http://farwmarth.bestnewbee.com/images/hexo_source.png" width="200px" height="300px"></p>
+<h3 id="管理主题"><a href="#管理主题" class="headerlink" title="管理主题"></a>管理主题</h3><ul>
+<li>自己的<code>next</code>仓库持有两个远程别名,自有的fork的<code>origin</code>,另外一个是官方next主题别名为<code>upstream</code>.</li>
+<li>自己对主题的修改推送到fork的<code>origin</code>仓库中</li>
+<li>要更新官方的新版本时,从upstream中pull下来进行合并。</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git submodule add https://github.com/wujiyu115/hexo-theme-next.git themes/next</span><br><span class="line">cd themes/next</span><br><span class="line">git remote add upstream https://github.com/iissnan/hexo-theme-next.git</span><br></pre></td></tr></table></figure>
+<h4 id="hexo仓库更新子项目"><a href="#hexo仓库更新子项目" class="headerlink" title="hexo仓库更新子项目"></a><code>hexo</code>仓库更新子项目</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/wujiyu115/hexo.git hexo</span><br><span class="line">cd hexo</span><br><span class="line">git submodule update --recursive --init</span><br></pre></td></tr></table></figure>
+<h4 id="删除submodule"><a href="#删除submodule" class="headerlink" title="删除submodule"></a>删除submodule</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git submodule deinit &lt;path_to_submodule-name&gt;</span><br><span class="line">git rm --cached &lt;path_to_submodule&gt;</span><br><span class="line">rm -rf .git/modules/&lt;path_to_submodule&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="域名绑定"><a href="#域名绑定" class="headerlink" title="域名绑定"></a>域名绑定</h2><h3 id="github"><a href="#github" class="headerlink" title="github"></a>github</h3><p><a href="https://help.github.com/articles/tips-for-configuring-an-a-record-with-your-dns-provider/" target="_blank" rel="noopener">https://help.github.com/articles/tips-for-configuring-an-a-record-with-your-dns-provider/</a></p>
+<ul>
+<li>ping wujiyu115.github.io记录下IP地址</li>
+<li>CNAME 在仓库根目录下添加一个CNAM文件，没有后缀名，里面内容为你的域名(如:test.com),不需要添加http/www等前缀</li>
+<li>添加 DNS  Service记录</li>
+<li>清理浏览器缓存<br><code>chrome://net-internals#dns</code> 点击 <code>clear host cache</code></li>
+</ul>
+<h3 id="gitcafe"><a href="#gitcafe" class="headerlink" title="gitcafe"></a>gitcafe</h3><p><a href="https://gitcafe.com/GitCafe/Help/wiki/Pages-%E7%9B%B8%E5%85%B3%E5%B8%AE%E5%8A%A9#wiki" target="_blank" rel="noopener">https://gitcafe.com/GitCafe/Help/wiki/Pages-%E7%9B%B8%E5%85%B3%E5%B8%AE%E5%8A%A9#wiki</a></p>
+<ul>
+<li>将用于 Pages 服务站点的自定义域名使用 CNAME 记录指向 gitcafe.io。</li>
+</ul>
+<p><img src="http://ww2.sinaimg.cn/large/4b5a1116gw1exrhfcx5tuj20m30aaq50.jpg" alt="域名绑定"></p>
+<h2 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h2><h3 id="新建一个不依赖模板的HTML页面"><a href="#新建一个不依赖模板的HTML页面" class="headerlink" title="新建一个不依赖模板的HTML页面"></a>新建一个不依赖模板的HTML页面</h3><p>如果你是不想hexo g时被模板改变你的html的话，可在在文件头加<code>layout: false</code></p>
+<p>例如新建一个404页面</p>
+<pre><code>layout: false
+title: &quot;404&quot;
+date: 2015-02-05 20:03:48
+---
+&lt;html&gt;
+&lt;body&gt;
+&lt;h1&gt;404 Page Not Found&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h1 id="coding上单项目部署公钥"><a href="#coding上单项目部署公钥" class="headerlink" title="coding上单项目部署公钥"></a>coding上单项目部署公钥</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>测试密钥是否部署成功</span><br><span class="line">ssh -i /data/publish/xxx_rsa  -T git@git.coding.net</span><br></pre></td></tr></table></figure>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="出现-Cannot-GET"><a href="#出现-Cannot-GET" class="headerlink" title="出现 Cannot GET /"></a>出现 Cannot GET /</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-server --save</span><br></pre></td></tr></table></figure>
+<ul>
+<li>注意冒号后面都要添加一个半角空格 之后才是设置参数</li>
+</ul>
+<h3 id="hexo中source目录的js被渲染"><a href="#hexo中source目录的js被渲染" class="headerlink" title="hexo中source目录的js被渲染"></a><a href="https://segmentfault.com/q/1010000003957602/a-1020000003957954" target="_blank" rel="noopener">hexo中source目录的js被渲染</a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo会把hexo/source下的文件全部渲染,放在source目录的js也会被渲染出错,</span><br><span class="line">解决办法就是将js文件放到主题的source目录中,如themes/next/source中</span><br></pre></td></tr></table></figure>
+<h3 id="解决hexo神烦的DTraceProviderBindings-MODULE-NOT-FOUND"><a href="#解决hexo神烦的DTraceProviderBindings-MODULE-NOT-FOUND" class="headerlink" title="解决hexo神烦的DTraceProviderBindings MODULE_NOT_FOUND"></a>解决hexo神烦的DTraceProviderBindings MODULE_NOT_FOUND</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo --no-optional</span><br><span class="line">npm uninstall hexo</span><br><span class="line">npm install hexo --no-optional</span><br><span class="line">npm uninstall hexo-cli -g</span><br><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<h3 id="提交出现fatal-multiple-stage-entries-for-merged-file的问题"><a href="#提交出现fatal-multiple-stage-entries-for-merged-file的问题" class="headerlink" title="提交出现fatal:multiple stage entries for merged file的问题."></a>提交出现<code>fatal:multiple stage entries for merged file</code>的问题.</h3><p>在hexo主目录中执行如下操作解决。<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">rm .git/index</span><br><span class="line">git add -A</span><br><span class="line">git commit</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/hexo/">hexo</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/Kindle不完全指南/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">Kindle不完全指南</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/给skynet加上curl模块/">
+        <span class="next-text nav-default">给skynet加上curl模块</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

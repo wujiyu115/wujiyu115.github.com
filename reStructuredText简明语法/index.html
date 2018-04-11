@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="reStructuredText简明语法"/>
+
+
+
+
+  <meta name="keywords" content="reStructuredText rst, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/reStructuredText简明语法/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> reStructuredText简明语法 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          reStructuredText简明语法
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2016-04-21
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#pandoc"><span class="toc-text">pandoc</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#摘录"><span class="toc-text">摘录 </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#段落"><span class="toc-text">段落</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#内联标记"><span class="toc-text">内联标记</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#列表与引用"><span class="toc-text">列表与引用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#源代码"><span class="toc-text">源代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#表格"><span class="toc-text">表格</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#超链接"><span class="toc-text">超链接</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#外部链接"><span class="toc-text">外部链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内部链接"><span class="toc-text">内部链接</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#章节"><span class="toc-text">章节</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#显式标记"><span class="toc-text">显式标记</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#指令"><span class="toc-text">指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#图像"><span class="toc-text">图像</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#尾注"><span class="toc-text">尾注</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#引用"><span class="toc-text">引用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#替换"><span class="toc-text">替换</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#评论"><span class="toc-text">评论</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#源编码"><span class="toc-text">源编码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#常见问题"><span class="toc-text">常见问题</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h1 id="pandoc"><a href="#pandoc" class="headerlink" title="pandoc"></a>pandoc</h1><p>pandoc 转换rst 为markdown<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pandoc  rest.rst  -f rst -t markdown -s -o rest.md</span><br></pre></td></tr></table></figure></p>
+<h1 id="摘录"><a href="#摘录" class="headerlink" title="摘录 "></a>摘录 </h1><p><a href="https://github.com/xunxuny/zh-sphinx-doc/blob/master/rest.rst" target="_blank" rel="noopener">https://github.com/xunxuny/zh-sphinx-doc/blob/master/rest.rst</a></p>
+<p>本章节介绍 reStructuredText (reST)<br>的概念和语法，为文档生成者提供足够的信息. reST<br>被认为是简单，实用的标记语言，因此学习它不会花太多时间.</p>
+<a id="more"></a>
+<h1 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h1><p>段落 (ref &lt;paragraphs&gt;) 是reST 文件的基本模块.<br>段落是由空行分隔的一段文本. 和Python一样, 对齐也是reST的操作符,<br>因此同一段落的行都是左对齐的.</p>
+<h1 id="内联标记"><a href="#内联标记" class="headerlink" title="内联标记"></a>内联标记</h1><p>标准的reST 内联标记相当简单:</p>
+<ul>
+<li>星号: <code>*text*</code> 是强调 (斜体),</li>
+<li>双星号: <code>**text**</code> 重点强调 (加粗),</li>
+<li>反引号: <code>text</code> 代码样式.</li>
+</ul>
+<p>星号及反引号在文本中容易与内联标记符号混淆，可使用反斜杠符号转义.</p>
+<p>标记需注意的一些限制:</p>
+<ul>
+<li>不能相互嵌套,</li>
+<li>内容前后不能由空白: 这样写<code>* text*</code> 是错误的,</li>
+<li>如果内容需要特殊字符分隔. 使用反斜杠转义，如: <code>thisis\ *one*\ word</code>.</li>
+</ul>
+<p>这些限制在未来版本可能会被改善.</p>
+<p>reST 也允许自定义 “文本解释角色”‘, 这意味着可以以特定的方式解释文本.<br>Sphinx以此方式提供语义标记及参考索引，操作符为 <code>:rolename:`content</code>.</p>
+<p>标准reST 提供以下规则:</p>
+<p>* :durole:emphasis` – 写成 <code>*emphasis*</code> * strong – 写成<br><code>**strong**</code> * literal – 写成 <code>literal</code> * subscript – 下标 *<br>superscript – 上标 * title-reference – 书、期刊等材料的标题</p>
+<p>详情请查看 inline-markup .</p>
+<h1 id="列表与引用"><a href="#列表与引用" class="headerlink" title="列表与引用"></a>列表与引用</h1><p>列表标记 (ref &lt;bullet-lists&gt;) 的使用最自然:<br>仅在段落的开头放置一个星号和一个缩进. 编号的列表也可以;也可以使用符号<br><code>#</code> 自动加序号:</p>
+<pre><code>* 这是一个项目符号列表.
+* 它有两项，
+  第二项使用两行.
+
+1. 这是个有序列表.
+2. 也有两项.
+
+#. 是个有序列表.
+#. 也有两项.
+</code></pre><p>列表可以嵌套，但是需跟父列表使用空行分隔 :</p>
+<pre><code>* 这是
+* 一个列表
+
+  * 嵌套列表
+  * 子项
+
+* 父列表继续
+</code></pre><p>定义列表 (ref &lt;definition-lists&gt;) :</p>
+<pre><code>术语 (term 文本开头行)
+   定义术语，必须缩进
+
+   可以有多段组成
+
+下一术语（term）
+   描述.
+</code></pre><p>一行仅能写一个术语.</p>
+<p>引用段落 (ref &lt;block-quotes&gt;) 仅使用缩进（相对于周围段落）创建.</p>
+<p>行模块 (ref &lt;line-blocks&gt;) 可以这样分隔 :</p>
+<pre><code>| 这些行
+| 在源文件里
+| 被分隔的一模一样.
+</code></pre><p>还有其他有用的模块:</p>
+<ul>
+<li>字段列表 (ref &lt;field-lists&gt;)</li>
+<li>选项列表(ref &lt;option-lists&gt;)</li>
+<li>字面引用模块 (ref &lt;quoted-literal-blocks&gt;)</li>
+<li>文档测试模块 (ref &lt;doctest-blocks&gt;)</li>
+</ul>
+<h1 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h1><p>字面代码块 (ref &lt;literal-blocks&gt;) 在段落的后面使用标记 <code>::</code> 引出.<br>代码块必须缩进(同段落，需要与周围文本以空行分隔):</p>
+<pre><code>这是一段正常文本. 下一段是代码文字::
+
+   它不需要特别处理，仅是
+   缩进就可以了.
+
+   它可以有多行.
+
+再是正常的文本段.
+</code></pre><p>这个 <code>::</code> 标记很优雅:</p>
+<ul>
+<li>如果作为独立段落存在,则整段都不会出现在文档里.</li>
+<li>如果前面有空白，则标记被移除.</li>
+<li>如果前面是非空白，则标记被一个冒号取代.</li>
+</ul>
+<p>因此上面的例子第一段文字将变为”下一段是代码文字:”.</p>
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><p>支持两种表格. 一种是 <em>网格表格</em> (ref<br>&lt;grid-tables&gt;), 可以自定义表格的边框. 如下:</p>
+<pre><code>+------------------------+------------+----------+----------+
+| Header row, column 1   | Header 2   | Header 3 | Header 4 |
+| (header rows optional) |            |          |          |
++========================+============+==========+==========+
+| body row 1, column 1   | column 2   | column 3 | column 4 |
++------------------------+------------+----------+----------+
+| body row 2             | ...        | ...      |          |
++------------------------+------------+----------+----------+
+</code></pre><p><em>简单表格</em> (ref &lt;simple-tables&gt;) 书写简单, 但有一些限制:<br>需要有多行，且第一列元素不能分行显示，如下:</p>
+<pre><code>=====  =====  =======
+A      B      A and B
+=====  =====  =======
+False  False  False
+True   False  False
+False  True   False
+True   True   True
+=====  =====  =======
+</code></pre><h1 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h1><h2 id="外部链接"><a href="#外部链接" class="headerlink" title="外部链接"></a>外部链接</h2><p>使用 <code>`链接文本 &lt;http://example.com/&gt;`_</code> 可以插入网页链接.<br>链接文本是网址，则不需要特别标记，分析器会自动发现文本里的链接或邮件地址.</p>
+<p>可以把链接和标签分开 (ref<br>&lt;hyperlink-targets&gt;), 如下:</p>
+<pre><code>段落里包含 `a link`_.
+
+.. _a link: http://example.com/
+</code></pre><h2 id="内部链接"><a href="#内部链接" class="headerlink" title="内部链接"></a>内部链接</h2><p>内部链接是Sphinx特定的reST角色, 查看章节 ref-role.</p>
+<h1 id="章节"><a href="#章节" class="headerlink" title="章节"></a>章节</h1><p>章节的标题 (ref &lt;sections&gt;) 在双上划线符号之间（或为下划线）,<br>并且符号的长度不能小于文本的长度:</p>
+<pre><code>=================
+This is a heading
+=================
+</code></pre><p>通常没有专门的符号表示标题的等级，但是对于Python 文档，可以这样认为:</p>
+<ul>
+<li><code>#</code> 及上划线表示部分</li>
+<li><code>*</code> 及上划线表示章节</li>
+<li><code>=</code>, 小章节</li>
+<li><code>-</code>, 子章节</li>
+<li><code>^</code>, 子章节的子章节</li>
+<li><code>&quot;</code>, 段落</li>
+</ul>
+<p>当然也可以标记（查看 reST 文档),<br>定义章节的层次，但是需要注意输出格式(HTML, LaTeX)所支持的层次深度 .</p>
+<h1 id="显式标记"><a href="#显式标记" class="headerlink" title="显式标记"></a>显式标记</h1><p>显式标记”Explicit markup” (ref &lt;explicit-markup-blocks&gt;)<br>用在那些需做特殊处理的reST结构中, 如尾注，突出段落，评论，通用指令.</p>
+<p>显式标记以 <code>..</code> 开始，后跟空白符，与下面段落的缩进一样.<br>(在显示标记与正常的段落间需有空行，这听起来有些复杂，但是写起来会非常直观.)</p>
+<h1 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h1><p>指令 (ref &lt;directives&gt;) 是显式标记最常用的模块. 也是reST<br>的扩展规则, 在 Sphinx 经常被用到.</p>
+<p>文档工具支持以下指令:</p>
+<ul>
+<li>警告: attention, caution, danger, error, hint, important, note, tip,<br>warning 及通用标记 admonition. (大多数模式仅支持 “note” 及<br>“warning” )</li>
+<li>图像:<ul>
+<li>image (详情可看下面的 图像_ )</li>
+<li>figure (有标题及可选说明的图像)</li>
+</ul>
+</li>
+<li>额外的主体元素:<ul>
+<li>contents &lt;table-of-contents&gt; (本地，仅是当前文件的内容表格)</li>
+<li>container (自定义容器，用来生成HTML的 <code>&lt;div&gt;</code> )</li>
+<li>rubric (和文档章节无关的标题)</li>
+<li>topic, sidebar (高亮显示的主体元素)</li>
+<li>parsed-literal (支持内联标记的斜体模块)</li>
+<li>epigraph (可选属性行的摘要模块)</li>
+<li>highlights, pull-quote (有自己的类属性的摘要模块)</li>
+<li>compound ( 复合段落)</li>
+</ul>
+</li>
+<li>专用表格:<ul>
+<li>table (有标题的表格)</li>
+<li>csv-table (CSV自动生成表格)</li>
+<li>list-table (列表生成的表格)</li>
+</ul>
+</li>
+<li>专用指令:<ul>
+<li>raw (包含原始格式的标记)</li>
+<li>include (包含reStructuredText标记的文件) –<br>在Sphinx中,如果包含绝对文件路径，指令会以源目录地址做为参照</li>
+<li>class (将类属性指派给下一个元素) [^1]</li>
+</ul>
+</li>
+<li>HTML 特性:<ul>
+<li>meta (生成HTML <code>&lt;meta&gt;</code> 标签)</li>
+<li>title (覆盖文档标题)</li>
+</ul>
+</li>
+<li><p>影响标记:</p>
+<ul>
+<li>default-role (设置新的默认角色)</li>
+<li>role (创建新的角色)</li>
+</ul>
+<p>如果仅有一个文件，最好使用 default_role.</p>
+</li>
+</ul>
+<p>设置不使用指令 sectnum, header 及 footer.</p>
+<p>Sphinx 新增指令可查阅 sphinxmarkup.</p>
+<p>指令有名字，参数，选项及内容组成.<br>(记住这些，在下面一小节中自定义指令里会用到).来看一个例子:</p>
+<pre><code>.. function:: foo(x)
+              foo(y, z)
+   :module: some.module.name
+
+   返回用户输入的一行文本.
+</code></pre><p><code>function</code> 是指令名字. 在第一行和第二行给出了两个参数, 及一个选项<br><code>module</code> (如你所见，选项在参数后给出，由冒号引出).<br>选项必须与指令有一样的缩进.</p>
+<p>指令的内容在隔开一个空行后，与指令有一样缩进.</p>
+<h1 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h1><p>reST 支持图像指令 (ref &lt;image&gt;), 如下:</p>
+<pre><code>.. image:: gnu.png
+   (选项)
+</code></pre><p>这里给出的文件名( <code>gnu.png</code>)<br>必须是源文件的相对路径，如果是绝对路径则以源目录为根目录. 例如，在文件<br><code>sketch/spam.rst</code> 引用图像 <code>images/spam.png</code> ，则使用<br><code>..http://farwmarth.bestnewbee.com/images/spam.png</code> 或者 <code>http://farwmarth.bestnewbee.com/images/spam.png</code>.</p>
+<p>Sphinx 会自动将图像文件拷贝到输出目录的子目录里，( 输出HTML时目录为<br><code>_static</code> )</p>
+<p>图像的大小选项 (<code>width</code> 及 <code>height</code>) : 如果没有单位或单位为像素,<br>给定的尺寸信息仅在输出通道支持像素时才有用 ( 如输出LaTeX 没用).<br>其他单位在输出(如 <code>pt</code> )HTML、LaTeX 时被用到.</p>
+<p>Sphinx 延伸了标准的文档化行为，只需在后面加星号:</p>
+<pre><code>.. image:: gnu.*
+</code></pre><p>上面这样写，Sphinx 会搜索所有名字匹配的图像，而不管图像类型.<br>每个生成器则会选择最合适的图像. 一般，在源文件目录里文件名 <code>gnu.*</code><br>会含有两个文件 gnu.pdf 和 gnu.png , LaTeX 生成器会选择前者，而HTML<br>生成器则匹配后者.</p>
+<h1 id="尾注"><a href="#尾注" class="headerlink" title="尾注"></a>尾注</h1><p>尾注 (ref &lt;footnotes&gt;), 使用 <code>[#name]_</code> 标记尾注的位置,<br>尾注的内容则在文档底部红色标题”Footnotes”的后面 , 如下:</p>
+<pre><code>Lorem ipsum [#f1]_ dolor sit amet ... [#f2]_
+
+.. rubric:: Footnotes
+
+.. [#f1] 第一条尾注的文本.
+.. [#f2] 第二条尾注的文本.
+</code></pre><p>你也可以使用数字尾注 (<code>[1]_</code>) 或使用自动排序的(<code>[#]_</code>).</p>
+<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><p>支持标准的reST 引用 (ref &lt;citations&gt;) , 且新增了”global”特性,<br>所有参考文献不受所在文件的限制. 如:</p>
+<pre><code>Lorem ipsum [Ref]_ dolor sit amet.
+
+.. [Ref] 参考文献, 书,URL 等.
+</code></pre><p>引用的使用同尾注很相近，但是它们没有数字标签或以 <code>#</code> 开始.</p>
+<h1 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h1><p>reST 支持替换 “substitutions” (ref &lt;substitution-definitions&gt;),<br>有一小段文本或标记被关联到 <code>|name|</code>.<br>定义与尾注一样需有明确的标记块，如下:</p>
+<pre><code>.. |name| replace:: replacement *text*
+</code></pre><p>或者:</p>
+<pre><code>.. |caution| image:: warning.png
+             :alt: Warning!
+</code></pre><p>详情查看<br>reST reference for substitutions &lt;substitution-definitions&gt; .</p>
+<p>如果想在所有文档中使用这些替换, 需把它们放在 rst_prolog<br>或一个单独文件里， 然后在使用它们的文档文件里包含这个文件，包含指令<br>:rstinclude .<br>(请给出包含文件的扩展名，已区别于其他的源文件，避免Sphinx将其作为独立的文档文件.)</p>
+<p>Sphinx 定义了一些默认的替换, 请查看 default-substitutions.</p>
+<h1 id="评论"><a href="#评论" class="headerlink" title="评论"></a>评论</h1><p>有明确标记块但又不是有效的结构标记的标记 (像上面的尾注）都被视为评论<br>(ref &lt;comments&gt;). 例如:</p>
+<pre><code>.. 这是一个评论.
+</code></pre><p>可以通过缩进产生多行评论:</p>
+<pre><code>..
+   这整个缩进块都是
+   一个评论.
+
+   仍是一个评论.
+</code></pre><h1 id="源编码"><a href="#源编码" class="headerlink" title="源编码"></a>源编码</h1><p>在reST使用Unicode字符可以容易的包含特殊字符如破折号，版权标志. Sphinx<br>默认源文件使用UTF-8 编码; 你可以通过 source_encoding 的配置值改变编码.</p>
+<h1 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><p>具体使用中可能会遇到一些问题:</p>
+<ul>
+<li><strong>内联标记的分离</strong><br>如上面所讲，内联标记需与周围的文本使用空格分隔, 内联标记内部则使用反斜线转义空格.<br>查看详情: <a href="http://docutils.sf.net/docs/ref/rst/restructuredtext.html#inline-markup" target="_blank" rel="noopener">the<br>reference</a> .</li>
+<li><strong>内联标记不能嵌套</strong> 像这样写 <code>*see :func:`foo`*</code> 是不允许的.</li>
+</ul>
+<p><strong>Footnotes</strong></p>
+<p>[^1]: 当默认主域里包含指令 :rstclass , 这个指令将被隐藏 因此, Sphinx使用<br>    :rstrst-class.</p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/reStructuredText-rst/">reStructuredText rst</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/xposed初探/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">xposed初探</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/lua数据序列化的选择/">
+        <span class="next-text nav-default">lua数据序列化的选择</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="游戏SDK接入的一些总结"/>
+
+
+
+
+  <meta name="keywords" content="SDK, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/游戏SDK接入的一些总结/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> 游戏SDK接入的一些总结 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          游戏SDK接入的一些总结
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2014-10-20
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/cocos2d-x/">cocos2d-x</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概念"><span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一般流程"><span class="toc-text">一般流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#登录流程"><span class="toc-text">登录流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#支付流程"><span class="toc-text">支付流程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ysdk"><span class="toc-text">ysdk</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见问题"><span class="toc-text">常见问题</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <font color="red"> update: 2016-04-23     ysdk  </font>
+
+<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>首先来澄清两个概念:</p>
+<ul>
+<li><strong>CP</strong>:Content Provider,中文翻译为内容提供商。通常指制作厂商</li>
+<li><strong>游戏sdk</strong>: SDK是手游渠道提供的、集成了用户登录、充值通道、社区功能、社交分享功能、数据后台统计功能的一个功能模块</li>
+</ul>
+<a id="more"></a>
+<p>游戏SDK作为游戏制作方来说是一个很蛋疼的过程，因为接入的流程过于冗长,首先商务要出去抱渠道大腿,叫大爷多导点量,洽谈完毕后给一个可游戏的游戏版本给渠道方去测评分级,如果评分级别太低的话,你的游戏就over了,评级如果是A及A以上的话渠道就会乐呵呵地给你的产品分配资源.分配标识key,文档,sdk,接着就是商务通知运营建立讨论组，把双方的技术运营拉进来开始接入,接入完成后让运营在渠道后台上传包，渠道QA测试完成如果没问题就给予上线，如果不符合标准就是返工改bug然后继续上传审核的过程。</p>
+<p>SDK接入另一个开销成本就是接入的渠道数量众多，SDK的繁杂程度和文档完美度也参数不齐，有的渠道一天就可以接完调试。有的渠道有花上两三天。所以在刚开始要接大量渠道时也去找过第三方的接入服务.</p>
+<ul>
+<li>anysdk(<a href="http://www.anysdk.com/" title="http://www.anysdk.com/" target="_blank" rel="noopener">http://www.anysdk.com/</a>): 触控旗下的SDK接入服务</li>
+<li>棱镜(<a href="http://www.ljsdk.com/" title="http://www.ljsdk.com/" target="_blank" rel="noopener">http://www.ljsdk.com/</a>):一家从发行转型做第三方SDK接入的平台</li>
+<li>云接入(<a href="http://www.allsdk.com/" title="http://www.allsdk.com/" target="_blank" rel="noopener">http://www.allsdk.com/</a>) :斯凯投资的云接入</li>
+<li><p>易接入(<a href="http://www.1sdk.cn/" title="http://www.1sdk.cn/" target="_blank" rel="noopener">http://www.1sdk.cn/</a>) :雪鲤鱼科技</p>
+<p>这几家第三方的服务共同特点是统一了各渠道的服务接口，但是cp的游戏数据都会记录在第三方服务商的数据库中。这点对于游戏厂商来说是很第敏感的一点，还有一点就是如果采用第三方接入就会依赖于他们的服务，如果第三方接入服务崩溃的话会导致游戏厂商的游戏不能正常运行。这是很大的安全隐患。</p>
+<p>我们游戏总共接入了18个渠道，android上14个，ios上4个。各个渠道通用的接入功能是登录和充值。还有几个渠道需要接入游戏数据提交功能(登录时候将游戏角色,等级，余额，所在区，所在服数据提交到渠道接口).</p>
+</li>
+</ul>
+<h2 id="一般流程"><a href="#一般流程" class="headerlink" title="一般流程"></a>一般流程</h2><h3 id="登录流程"><a href="#登录流程" class="headerlink" title="登录流程"></a>登录流程</h3><p><a href="http://farwmarth.bestnewbee.com/images/uploads/2014/10/2cbebc690d07.jpg" target="_blank" rel="noopener"><img src="http://farwmarth.bestnewbee.com/images/uploads/2014/10/thumb.jpg" alt="游戏客户端登录" title="游戏客户端登录"></a></p>
+<h3 id="支付流程"><a href="#支付流程" class="headerlink" title="支付流程"></a>支付流程</h3><p> <a href="http://farwmarth.bestnewbee.com/images/uploads/2014/10/166491a2b95a.jpg" target="_blank" rel="noopener"><img src="http://farwmarth.bestnewbee.com/images/uploads/2014/10/thumb1.jpg" alt="游戏客户端充值" title="游戏客户端充值"></a></p>
+<p>sdk接入主要工作分为两部分</p>
+<ul>
+<li>在游戏客户端的sdk接入代码<br>游戏客户端启动基本过程为:<code>显示logo画面--&gt;初始化SDK----&gt;检测游戏更新---&gt;显示SDK登录界面----&gt;选服</code>.</li>
+<li>应用服务器的校验过程</li>
+</ul>
+<h2 id="ysdk"><a href="#ysdk" class="headerlink" title="ysdk"></a>ysdk</h2><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p>接入sdk容易出现的问题:</p>
+<ul>
+<li>svn默认不上传so文件，银联支付需要so打包时候导致无法正常银联支付.</li>
+<li>android上登录或者注册过程中按退出键关闭了页面未重新打开</li>
+<li>打开sdk页面时游戏黑屏</li>
+<li>游戏退出时没有调用注销接口</li>
+<li>未接入退出游戏，个人中心，浮标</li>
+<li>角标和logo不符合规则或者带有外链</li>
+<li>充值后没有立即到账</li>
+</ul>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/SDK/">SDK</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/ ubuntu 终端终结者/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">ubuntu 终端终结者</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/代码加密,渠道打包过程/">
+        <span class="next-text nav-default">代码加密,渠道打包过程</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

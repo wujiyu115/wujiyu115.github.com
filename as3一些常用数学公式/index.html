@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="as3一些常用数学公式"/>
+
+
+
+
+  <meta name="keywords" content="as3, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/as3一些常用数学公式/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> as3一些常用数学公式 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          as3一些常用数学公式
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2011-07-21
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/programm/">programm</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本三角函数的计算："><span class="toc-text">基本三角函数的计算：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#角度制与弧度制的相互转换："><span class="toc-text">角度制与弧度制的相互转换：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计算两点间距离："><span class="toc-text">计算两点间距离：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缓动公式"><span class="toc-text">缓动公式:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#弹性公式"><span class="toc-text">弹性公式:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#偏移弹性公式"><span class="toc-text">偏移弹性公式:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#向鼠标旋转-或向某点旋转"><span class="toc-text">向鼠标旋转(或向某点旋转)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#波形运动"><span class="toc-text">波形运动:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#心跳"><span class="toc-text">心跳:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#圆心旋转"><span class="toc-text">圆心旋转:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#椭圆旋转"><span class="toc-text">椭圆旋转:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#颜色运算得到透明值"><span class="toc-text">颜色运算得到透明值:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#转换进制"><span class="toc-text">转换进制:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#颜色提取"><span class="toc-text">颜色提取:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#按位计算得到颜色值"><span class="toc-text">按位计算得到颜色值:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#过控制点的曲线"><span class="toc-text">过控制点的曲线:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#匀速移动到目标点"><span class="toc-text">匀速移动到目标点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#移动到目标点-抖动特效-公式"><span class="toc-text">移动到目标点 抖动特效 公式</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h3 id="基本三角函数的计算："><a href="#基本三角函数的计算：" class="headerlink" title="基本三角函数的计算："></a>基本三角函数的计算：</h3><ul>
+<li>角的正弦值 = 对边 / 斜边</li>
+<li>角的余弦值 = 邻边 / 斜边</li>
+<li>角的正切值 = 对边 / 邻边</li>
+</ul>
+<h3 id="角度制与弧度制的相互转换："><a href="#角度制与弧度制的相互转换：" class="headerlink" title="角度制与弧度制的相互转换："></a>角度制与弧度制的相互转换：</h3><ul>
+<li>弧度 = 角度 * Math.PI / 180</li>
+<li>角度 = 弧度 * 180 / Math.PI</li>
+</ul>
+<a id="more"></a>
+<h3 id="计算两点间距离："><a href="#计算两点间距离：" class="headerlink" title="计算两点间距离："></a>计算两点间距离：</h3><figure class="highlight as"><table><tr><td class="code"><pre><span class="line">dx = x2 &amp;ndash; x1;</span><br><span class="line">dy = y2 &amp;ndash; y1;</span><br><span class="line">dist = Math.sqrt(dx*dx + dy*dy);</span><br></pre></td></tr></table></figure>
+<h3 id="缓动公式"><a href="#缓动公式" class="headerlink" title="缓动公式:"></a>缓动公式:</h3><figure class="highlight as"><table><tr><td class="code"><pre><span class="line">sprite.x += (targetX - sprite.x) * easing;<span class="comment">//easing为缓动系数变量</span></span><br><span class="line">sprite.y += (targetY - sprite.y) * easing;</span><br></pre></td></tr></table></figure>
+<h3 id="弹性公式"><a href="#弹性公式" class="headerlink" title="弹性公式:"></a>弹性公式:</h3><figure class="highlight as"><table><tr><td class="code"><pre><span class="line">vx += (targetX - sprite.x) * spring;<span class="comment">//spring为弹性系数</span></span><br><span class="line">vy += (targetY - sprite.y) * spring;</span><br><span class="line">sprite.x += (vx *= friction);<span class="comment">//friction为摩擦力</span></span><br><span class="line">sprite.y += (vy *= friction);</span><br></pre></td></tr></table></figure>
+<h3 id="偏移弹性公式"><a href="#偏移弹性公式" class="headerlink" title="偏移弹性公式:"></a>偏移弹性公式:</h3><figure class="highlight as"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> dx:Number = sprite.x - fixedX;</span><br><span class="line"><span class="keyword">var</span> dy:Number = sprite.y - fixedY;</span><br><span class="line"><span class="keyword">var</span> angle:Number = Math.atan2(dy, dx);</span><br><span class="line"><span class="keyword">var</span> targetX:Number = fixedX + Math.cos(angle) * springLength;</span><br><span class="line"><span class="keyword">var</span> targetY:Number = fixedX + Math.sin(angle) * springLength;</span><br></pre></td></tr></table></figure>
+<h3 id="向鼠标旋转-或向某点旋转"><a href="#向鼠标旋转-或向某点旋转" class="headerlink" title="向鼠标旋转(或向某点旋转)"></a>向鼠标旋转(或向某点旋转)</h3><figure class="highlight as"><table><tr><td class="code"><pre><span class="line">dx = mouseX - sprite.x;</span><br><span class="line">dy = mouseY - sprite.y;</span><br><span class="line">sprite.rotation = Math.atan2(dy, dx) * <span class="number">180</span> / Math.PI;</span><br></pre></td></tr></table></figure>
+<h3 id="波形运动"><a href="#波形运动" class="headerlink" title="波形运动:"></a>波形运动:</h3><figure class="highlight as"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">onEnterFrame1</span><span class="params">(event:Event)</span>:void </span>&#123;</span><br><span class="line">	ball.y=centerScale+Math.sin(angle)*range</span><br><span class="line">	angle+=speed</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="心跳"><a href="#心跳" class="headerlink" title="心跳:"></a>心跳:</h3><figure class="highlight as"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">onEnterFrame1</span><span class="params">(event:Event)</span>:void </span>&#123;</span><br><span class="line">	ball.scaleX=centerScale+Math.sin(angle)*range;</span><br><span class="line">	ball.scaleY=centerScale+Math.sin(angle)*range;</span><br><span class="line">	angle+=speed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="圆心旋转"><a href="#圆心旋转" class="headerlink" title="圆心旋转:"></a>圆心旋转:</h3><figure class="highlight as"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">onEnterFrame</span><span class="params">(event:Event)</span>:void </span>&#123;</span><br><span class="line">	ball.x=centerX+Math.cos(angle)*radius;</span><br><span class="line">	ball.y=centerY+Math.sin(angle)*radius;</span><br><span class="line">	angle+=speed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="椭圆旋转"><a href="#椭圆旋转" class="headerlink" title="椭圆旋转:"></a>椭圆旋转:</h3><figure class="highlight as"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">onEnterFrame</span><span class="params">(event:Event)</span>:void </span>&#123;</span><br><span class="line">	ball.x=centerX+Math.cos(angle)*radiusX;</span><br><span class="line">	ball.y=centerY+Math.sin(angle)*radiusY;</span><br><span class="line">	angle+=speed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="颜色运算得到透明值"><a href="#颜色运算得到透明值" class="headerlink" title="颜色运算得到透明值:"></a>颜色运算得到透明值:</h3><figure class="highlight as"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> t:uint=<span class="number">0</span>&amp;times;<span class="number">77</span>ff8877</span><br><span class="line"><span class="keyword">var</span> s:uint=<span class="number">0xff000000</span></span><br><span class="line"><span class="keyword">var</span> h:uint=t&amp;amp;s</span><br><span class="line"><span class="keyword">var</span> m:uint=h&amp;gt;&amp;gt;&amp;gt;<span class="number">24</span></span><br><span class="line">trace(m)</span><br></pre></td></tr></table></figure>
+<h3 id="转换进制"><a href="#转换进制" class="headerlink" title="转换进制:"></a>转换进制:</h3><ul>
+<li>转换为十进制<br><code>trace(hexValue);</code></li>
+<li>十进制转换为十六进制:<br><code>decimalValue.toString(16)</code></li>
+</ul>
+<h3 id="颜色提取"><a href="#颜色提取" class="headerlink" title="颜色提取:"></a>颜色提取:</h3><figure class="highlight as"><table><tr><td class="code"><pre><span class="line">red = color24 &amp;gt;&amp;gt; <span class="number">16</span>;</span><br><span class="line">green = color24 &amp;gt;&amp;gt; <span class="number">8</span> &amp;amp; <span class="number">0xFF</span>;</span><br><span class="line">blue = color24 &amp;amp; <span class="number">0xFF</span>;</span><br><span class="line">alpha = color32 &amp;gt;&amp;gt; <span class="number">24</span>;</span><br><span class="line">red = color32 &amp;gt;&amp;gt; <span class="number">16</span> &amp;amp; <span class="number">0xFF</span>;</span><br><span class="line">green = color32 &amp;gt;&amp;gt; <span class="number">8</span> &amp;amp; <span class="number">0xFF</span>;</span><br><span class="line">blue = color232 &amp;amp; <span class="number">0xFF</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="按位计算得到颜色值"><a href="#按位计算得到颜色值" class="headerlink" title="按位计算得到颜色值:"></a>按位计算得到颜色值:</h3><figure class="highlight as"><table><tr><td class="code"><pre><span class="line">color24 = red &amp;lt;&amp;lt; <span class="number">16</span> | green &amp;lt;&amp;lt; <span class="number">8</span> | blue;</span><br><span class="line">color32 = alpha &amp;lt;&amp;lt; <span class="number">24</span> | red &amp;lt;&amp;lt; <span class="number">16</span> | green &amp;lt;&amp;lt; <span class="number">8</span> | blue;</span><br></pre></td></tr></table></figure>
+<h3 id="过控制点的曲线"><a href="#过控制点的曲线" class="headerlink" title="过控制点的曲线:"></a>过控制点的曲线:</h3><figure class="highlight as"><table><tr><td class="code"><pre><span class="line"><span class="comment">// xt, yt是你想要让曲线通过的那一点</span></span><br><span class="line"><span class="comment">// x0, y0 和x2, y2 是曲线的终点</span></span><br><span class="line"><span class="comment">//PS.发现很多人转帖都是直接复制粘贴，也不翻译一下</span></span><br><span class="line">xt * <span class="number">2</span> &amp;ndash; (x0 + x2) / <span class="number">2</span>;</span><br><span class="line">y1 = yt * <span class="number">2</span> &amp;ndash; (y0 + y2) / <span class="number">2</span>;</span><br><span class="line">moveTo(x0, y0);</span><br><span class="line">curveTo(x1, y1, x2, y2);</span><br></pre></td></tr></table></figure>
+<h3 id="匀速移动到目标点"><a href="#匀速移动到目标点" class="headerlink" title="匀速移动到目标点"></a>匀速移动到目标点</h3><figure class="highlight as"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">onEnterFrame</span><span class="params">(event:Event)</span>:void </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> X = targetX - ball.x;</span><br><span class="line">	<span class="keyword">var</span> Y = targetY - ball.y;</span><br><span class="line">	<span class="keyword">var</span> Z = Math.sqrt(X * Y + Y * Y); <span class="comment">//求出距离</span></span><br><span class="line">	<span class="keyword">var</span> t = ball.Speed / Z; <span class="comment">//求出时间ball.Speed 为求的运动速度</span></span><br><span class="line">	<span class="keyword">var</span> Vx = X / t;  <span class="comment">//横向速度</span></span><br><span class="line">	<span class="keyword">var</span> Vy = Y / t;  <span class="comment">//纵向速度</span></span><br><span class="line">	ball.x += Vx;</span><br><span class="line">	ball.y += Vy;</span><br><span class="line">		<span class="keyword">if</span>(Z &amp;lt;= ball.Speed)&#123;</span><br><span class="line">		  ball.x = targetX;</span><br><span class="line">		  ball.y = targetY;</span><br><span class="line">		  <span class="keyword">return</span>;</span><br><span class="line">		&#125;<span class="comment">//判断距离</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="移动到目标点-抖动特效-公式"><a href="#移动到目标点-抖动特效-公式" class="headerlink" title="移动到目标点 抖动特效 公式"></a>移动到目标点 抖动特效 公式</h3><figure class="highlight as"><table><tr><td class="code"><pre><span class="line">functiononEnterFrame () :<span class="keyword">void</span>&#123;</span><br><span class="line">	v = v + easing * (targetX - ball._x);<span class="comment">//easing为缓动系数变量</span></span><br><span class="line">	ball._x = ball._x + v;</span><br><span class="line">	v = spring * v;<span class="comment">//spring为抖动幅度变量</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/as3/">as3</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/三月一夏/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">三月一夏</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/开始记录/">
+        <span class="next-text nav-default">开始记录</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

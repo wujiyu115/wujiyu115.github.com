@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="readthedocs切换到mkdocs"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/mkdocs/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> readthedocs切换到mkdocs - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          readthedocs切换到mkdocs
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2016-09-04
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-text">简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#新建工程"><span class="toc-text">新建工程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动"><span class="toc-text">启动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#所有命令"><span class="toc-text">所有命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置"><span class="toc-text">配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#托管到github"><span class="toc-text">托管到github</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <p>之前把学习笔记用<code>sphinx</code>生成然后托管在<code>github</code>上,然后用<code>readthedocs</code>的<code>webhook</code>自动<code>build</code>文章数量渐多感觉排版拥挤.于是google了一下找了个替代品,那就就是这篇文章的主角<code>mkdocs</code></p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><a href="https://github.com/mkdocs/mkdocs" target="_blank" rel="noopener">mkdocs</a>是一个支持<code>markdown</code>语法的项目文档管理工具，结构很简单,一个<code>yml</code>配置文件管理文档结构和主题信息,<code>docs</code>目录则是项目文档.官方文档(<a href="http://www.mkdocs.org/" target="_blank" rel="noopener">http://www.mkdocs.org/</a>)</p>
+<a id="more"></a>
+<h3 id="新建工程"><a href="#新建工程" class="headerlink" title="新建工程"></a>新建工程</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>安装mkdocs</span><br><span class="line">pip install mkdocs</span><br><span class="line"><span class="meta">#</span>新建工程目录</span><br><span class="line">mkdocs new my-project</span><br><span class="line"><span class="meta">#</span>切换到工程目录</span><br><span class="line">cd my-project</span><br></pre></td></tr></table></figure>
+<p>工程目录如下:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">├── mkdocs.yml</span><br><span class="line">├── docs</span><br><span class="line">│   ├── index.md</span><br></pre></td></tr></table></figure></p>
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>启动服务器,默认端口是8000 Running at: http://127.0.0.1:8000/</span><br><span class="line">mkdocs serve</span><br></pre></td></tr></table></figure>
+<p><img src="http://farwmarth.bestnewbee.com/images/first_mkdocs.png" alt="first_mkdocs"></p>
+<h3 id="所有命令"><a href="#所有命令" class="headerlink" title="所有命令"></a>所有命令</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>生成html</span><br><span class="line">mkdocs build</span><br><span class="line"><span class="meta">#</span>新建工程目录</span><br><span class="line">mkdocs new my-project</span><br><span class="line"><span class="meta">#</span>部署到github的gh-deploy分支</span><br><span class="line">mkdocs gh-deploy -v</span><br><span class="line"><span class="meta">#</span>markdown生成json文件</span><br><span class="line">mkdocs json</span><br><span class="line"><span class="meta">#</span>启动预览</span><br><span class="line">mkdocs serve</span><br></pre></td></tr></table></figure>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>我用的主题是<code>material</code>:<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install mkdocs-material</span><br></pre></td></tr></table></figure></p>
+<p>项目配置大概列了一,大致分为几部分：<code>项目信息</code>，<code>托管信息</code>，<code>版权信息</code>，<code>主题与文档目录</code>，<code>配色信息</code>,<code>额外插件</code>，还有就是<code>项目文档目录结构</code>有些配置与主题相关<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Project information</span><br><span class="line">site_name: farwmarth’s note</span><br><span class="line">site_author: &apos;farwmarth&apos;</span><br><span class="line">site_url: &apos;http://learndocs.farwmarth.com&apos;</span><br><span class="line"></span><br><span class="line"># Repository</span><br><span class="line"># repo_name: &apos;GitHub&apos;</span><br><span class="line"># repo_url: &apos;https://github.com/wujiyu115/learndocs&apos;</span><br><span class="line"></span><br><span class="line"># Copyright</span><br><span class="line">copyright: &apos;Copyright (c) 2016 farwmarth&apos;</span><br><span class="line"></span><br><span class="line"># Documentation and theme</span><br><span class="line">docs_dir: &apos;docs&apos;</span><br><span class="line">theme: &apos;material&apos;</span><br><span class="line"># theme: &apos;cinder&apos;</span><br><span class="line"></span><br><span class="line">extra:</span><br><span class="line">  palette:</span><br><span class="line">    primary: &apos;blue grey&apos;</span><br><span class="line">    accent: &apos;blue grey&apos;</span><br><span class="line">  author:</span><br><span class="line">    github: &apos;wujiyu115&apos;</span><br><span class="line"></span><br><span class="line"># Extensions</span><br><span class="line">markdown_extensions:</span><br><span class="line">  #高亮</span><br><span class="line">  - codehilite(css_class=code)</span><br><span class="line">  - admonition</span><br><span class="line">  - toc:</span><br><span class="line">      permalink: &apos;#&apos;</span><br><span class="line"></span><br><span class="line">pages:</span><br><span class="line">- Home: &apos;index.md&apos;</span><br><span class="line">- 数据结构与算法:</span><br><span class="line">    - &apos;排序算法介绍&apos;: &apos;data_algorithms/algorithms1_intro.md&apos;</span><br><span class="line">- c++基础:</span><br><span class="line">    - &apos;c++环境搭建(Win)&apos;: &apos;cplus/cplus_win.md&apos;</span><br><span class="line">    - &apos;编译过程&apos;: &apos;cplus/cplus4_complier.md&apos;</span><br><span class="line">    - &apos;常量修饰符&apos;: &apos;cplus/cplus5_const.md&apos;</span><br><span class="line">- python:</span><br><span class="line">    - &apos;语言简介&apos;: &apos;python/py1_intro.md&apos;</span><br></pre></td></tr></table></figure></p>
+<h2 id="托管到github"><a href="#托管到github" class="headerlink" title="托管到github"></a>托管到github</h2><p>之前误认为<code>github</code>只能有一个<code>page</code>页,看了 <a href="https://help.github.com/articles/user-organization-and-project-pages/" target="_blank" rel="noopener">官方</a>的介绍之后发现并非如此，有两种方式创建<code>page</code>页，一种是创建一个就<code>{username}.github.com</code>的库项目,另一种则是创建任意库项目可以在<code>setting</code>中<code>Launch automatic page generator</code>生成<code>gh-pages</code>分支，创建方式这里就不细说了,可以根据<a href="https://pages.github.com/" target="_blank" rel="noopener">page官方</a>的引导去操作。</p>
+<p>这个表格是<code>username库项目</code>和<code>任意库项项目</code>对应的域名指向.</p>
+<table>
+<thead>
+<tr>
+<th>Type of GitHub Pages site</th>
+<th>Pages default domain &amp; host location on GitHub</th>
+<th>Location of the source files for building your Pages site</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User Pages site</td>
+<td><code>username.github.io</code></td>
+<td><code>master</code></td>
+</tr>
+<tr>
+<td>Project Pages site owned by a <strong>user account</strong></td>
+<td>、</td>
+<td><code>master</code>, <code>gh-pages</code>, or a <code>/docs</code> folder on <code>master</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>username库项目</code>毫无疑问地址就是<code>username.github.io</code>,<code>任意库项项目</code>生成的工程页则是<code>username.github.io/projectname</code>.<br>我现在的做法是在<code>username库项目</code>下的<code>CNAME</code>指向我的主域名<code>farwmarth.com</code>,<code>learndocs库项项目</code>的<code>CNAME</code>指向我的二级域名<code>learndocs.farwmarth.com</code>.</p>
+<p><code>dnspod</code>配置如下：</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/mkdocscname.png" alt="mkdocscname"></p>
+<p>最后<code>learndocs库项项目</code>源文件托管到<code>master</code>分支,然后<code>mkdocs gh-deploy</code>把生成的<code>html</code>静态页面托管是<code>gh-pages</code>分支。注意<code>master</code>分支把生成的<code>site</code>目录忽略掉<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo "site/" &gt;&gt; .gitignore</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/权重随机算法/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">权重随机算法</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/node/">
+        <span class="next-text nav-default">NodeJs初探</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

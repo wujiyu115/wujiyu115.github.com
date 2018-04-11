@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="一次失败的逆向工程"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/一次失败的逆向工程/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> 一次失败的逆向工程 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          一次失败的逆向工程
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2013-08-07
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/破解/">破解</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        <p>源起是要拿一下一个韩国游戏的图片资源,本以为挺容易的,google了一下, ipa也是压缩包格式,改成zip解压.然后把png图片拿出来，发现有一部分图片在windows上无法解析.继续google.原来是在编译打包到app的过程中，原有的png都被在最后加上了特定都数据段，这样从app里直接取出来图片既不能看，也不能用，所以需要工具来进行还原.网上python脚本一大堆，down下来还原了一下图片，确实可以恢复正常。但是这堆图片里面都是无关紧要的素材，想了想，应该是把图片弄成了自定义格式。在目录下果然发现了一个spr的目录，里面有一堆自定义扩展名叫f3spr的文件，用文本编辑器打开发现是个xml.有一段数据结构如下.</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/08/image.png" alt="image"><br><a id="more"></a></p>
+<p>呃，这段数据像是被加密的png图片，再google还真发现可以将图片压缩成base64字符串。c#代码如下:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">using System;</span><br><span class="line">using System.Collections.Generic;</span><br><span class="line">using System.ComponentModel;</span><br><span class="line">using System.Data;</span><br><span class="line">using System.Drawing;</span><br><span class="line">using System.Linq;</span><br><span class="line">using System.Text;</span><br><span class="line">using System.Threading.Tasks;</span><br><span class="line">using System.Windows.Forms;</span><br><span class="line">using System.IO;</span><br><span class="line">using System.Xml;</span><br><span class="line"></span><br><span class="line">namespace WindowsFormsApplication1</span><br><span class="line">&#123;</span><br><span class="line">    public partial class Form1 : Form</span><br><span class="line">    &#123;</span><br><span class="line">        public Form1()</span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        private void button1_Click(object sender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            try</span><br><span class="line">            &#123;</span><br><span class="line">                int readbyte = 0;</span><br><span class="line">                int bytestoread = 1044;</span><br><span class="line">                XmlTextReader xmltxtrd = new XmlTextReader(&quot;C:/11.xml&quot;);</span><br><span class="line">                FileStream fs = new FileStream(&quot;C:/002.png&quot;, FileMode.Create);</span><br><span class="line">                BinaryWriter bw = new BinaryWriter(fs);</span><br><span class="line">                byte[] base64buffer = new byte[bytestoread];</span><br><span class="line">                while (xmltxtrd.Read())</span><br><span class="line">                &#123;</span><br><span class="line">                    if (xmltxtrd.NodeType == XmlNodeType.Element &amp;&amp; xmltxtrd.Name == &quot;_data_ImageData&quot;)</span><br><span class="line">                    &#123;</span><br><span class="line">                        Console.WriteLine(&quot;_data_ImageData&quot;);</span><br><span class="line">                        do</span><br><span class="line">                        &#123;</span><br><span class="line">                            Console.WriteLine(&quot;cout............&quot;);</span><br><span class="line">                           //readbyte = xmltxtrd.ReadBase64(base64buffer, 0, bytestoread);</span><br><span class="line">                            readbyte = xmltxtrd.ReadElementContentAsBase64(base64buffer, 0, bytestoread);</span><br><span class="line">                            bw.Write(base64buffer, 0, readbyte);</span><br><span class="line">                        &#125;</span><br><span class="line">                        while (bytestoread &amp;lt;= readbyte);</span><br><span class="line">                        break;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">                bw.Flush();</span><br><span class="line">                bw.Close();</span><br><span class="line">                fs.Close();</span><br><span class="line">                xmltxtrd.Close();</span><br><span class="line"></span><br><span class="line">                MessageBox.Show(&quot;读写结束！&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            catch (Exception ex)</span><br><span class="line">            &#123;</span><br><span class="line">                MessageBox.Show(ex.ToString());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        private void button2_Click(object sender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            try</span><br><span class="line">            &#123;</span><br><span class="line">                XmlDocument myxmldoc = new XmlDocument();</span><br><span class="line">                myxmldoc.Load(&quot;C:/11.xml&quot;);</span><br><span class="line">                XmlElement elem = myxmldoc.CreateElement(&quot;_data_ImageData&quot;);</span><br><span class="line">                FileStream fs = new FileStream(&quot;C:/001.png&quot;, FileMode.Open);</span><br><span class="line">                BinaryReader br = new BinaryReader(fs);</span><br><span class="line">                byte[] imagebuffer = new byte[br.BaseStream.Length];</span><br><span class="line">                br.Read(imagebuffer, 0, Convert.ToInt32(br.BaseStream.Length));</span><br><span class="line">                string textstring = System.Convert.ToBase64String(imagebuffer);</span><br><span class="line">                fs.Close();</span><br><span class="line">                br.Close();</span><br><span class="line">                XmlText text = myxmldoc.CreateTextNode(textstring);</span><br><span class="line">                myxmldoc.DocumentElement.AppendChild(elem);</span><br><span class="line">                myxmldoc.DocumentElement.LastChild.AppendChild(text);</span><br><span class="line"></span><br><span class="line">                myxmldoc.Save(&quot;C:/11.xml&quot;);</span><br><span class="line"></span><br><span class="line">                MessageBox.Show(&quot;读写结束！&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            catch (Exception ex)</span><br><span class="line">            &#123;</span><br><span class="line">                MessageBox.Show(ex.ToString());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/08/image1.png" alt="image"> </p>
+<p>加密后数据格式和f3spr的格式近似,本以为可以还原这个图片资源，然后写个批处理就搞定了。结果还原的png无法显示。用winHex看了下。</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/08/winhex.png" alt="winhex"> </p>
+<p>上图依次是png,rar和f3spr还原图片在winhex下的数据.正常图片和压缩文件都要数据段标识.而我还原的png图片却是一堆乱码。未果。在f3spr里看到一个数据段</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/08/image2.png" alt="image"> </p>
+<p>这个看起来有点像texturepacker打包的plist文件。之前的是图片数据是无疑的,可能是在转成base64之前用byte数组错位加密了一下。</p>
+<p>应该有android版本.搜索了一下果然有.又有了一丝希望的小火花。破解apk还是熟悉一些。逆向了一下导成android工程.</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/08/image3.png" alt="image"> </p>
+<p>果然是cocos2dx又一作品。从包结构名可以看出公司域名:<a href="http://www.n2play.co.kr/" target="_blank" rel="noopener">http://www.n2play.co.kr/</a>.一堆韩语看不懂.google了一翻这引擎，在github找了一下看是否源了这类库。还是没有结果。看了下代码结构，</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/08/image4.png" alt="image"> </p>
+<p>发现那f3spr文件解析是用调的c++代码。so文件怎么破啊。。只能反汇编没法还原。。卡住了。功力不够了。</p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/a星初探/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">a* 初探</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/android 删除未引用资源,优化字节码/">
+        <span class="next-text nav-default">android 删除未引用资源,优化字节码</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="lua数据序列化的选择"/>
+
+
+
+
+  <meta name="keywords" content="json  lua, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/lua数据序列化的选择/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> lua数据序列化的选择 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          lua数据序列化的选择
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2016-04-20
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#cjson"><span class="toc-text">cjson</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#cjon-macosx的修改"><span class="toc-text">cjon macosx的修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cjson-基本用例"><span class="toc-text">cjson 基本用例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cjson遇到的问题"><span class="toc-text">cjson遇到的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#稀疏数组的问题"><span class="toc-text">稀疏数组的问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#skynet中使用sharedata后cjson无法序列化"><span class="toc-text">skynet中使用sharedata后cjson无法序列化</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更好的选择bson"><span class="toc-text">更好的选择bson</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <p>在寻找lua的json库时并没有找到太如意的方案.都是年久失修的库.</p>
+<ul>
+<li>DKJSON 2.1 <a href="http://dkolf.de/src/dkjson-lua.fsl/home" target="_blank" rel="noopener">http://dkolf.de/src/dkjson-lua.fsl/home</a></li>
+<li>Lua YAJL 2.0 <a href="https://github.com/brimworks/lua-yajl" target="_blank" rel="noopener">https://github.com/brimworks/lua-yajl</a></li>
+<li>Lua CSJON 2.0.0 <a href="http://www.kyne.com.au/~mark/software/lua-cjson.php" target="_blank" rel="noopener">http://www.kyne.com.au/~mark/software/lua-cjson.php</a></li>
+</ul>
+<p><a href="http://www.kyne.com.au/~mark/software/lua-json-performance.html" target="_blank" rel="noopener">http://www.kyne.com.au/~mark/software/lua-json-performance.html</a><br>最高选择了把cjson整合到项目 中</p>
+<a id="more"></a>
+<h2 id="cjson"><a href="#cjson" class="headerlink" title="cjson"></a>cjson</h2><p>支持UTF-8,支持Lua-5.1–Lua-5.3<br><a href="http://www.kyne.com.au/~mark/software/lua-cjson-manual.html" target="_blank" rel="noopener">http://www.kyne.com.au/~mark/software/lua-cjson-manual.html</a><br>lua5.3的支持可以下载云风的修改<br><a href="https://github.com/cloudwu/lua-cjson" target="_blank" rel="noopener">https://github.com/cloudwu/lua-cjson</a></p>
+<h3 id="cjon-macosx的修改"><a href="#cjon-macosx的修改" class="headerlink" title="cjon macosx的修改"></a>cjon macosx的修改</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#</span>修改!!!!!!!!!!!!</span><br><span class="line">LUA_VERSION =       5.3</span><br><span class="line">TARGET =            cjson.so</span><br><span class="line">PREFIX =            /usr/local</span><br><span class="line"><span class="meta">#</span>CFLAGS =            -g -Wall -pedantic -fno-inline</span><br><span class="line">CFLAGS =            -O3 -Wall -pedantic -DNDEBUG</span><br><span class="line">CJSON_CFLAGS =      -fpic</span><br><span class="line"><span class="meta">#</span>修改!!!!!!!!!!!!</span><br><span class="line">CJSON_LDFLAGS =     -bundle -undefined dynamic_lookup</span><br><span class="line">LUA_INCLUDE_DIR =   $(PREFIX)/include</span><br><span class="line">LUA_CMODULE_DIR =   $(PREFIX)/lib/lua/$(LUA_VERSION)</span><br><span class="line">LUA_MODULE_DIR =    $(PREFIX)/share/lua/$(LUA_VERSION)</span><br><span class="line">LUA_BIN_DIR =       $(PREFIX)/bin</span><br><span class="line">.....</span><br><span class="line">.....</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>#### Number conversion configuration #####</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span># Use Libc support for number conversion (default)</span><br><span class="line"><span class="meta">#</span> FPCONV_OBJS =       fpconv.o</span><br><span class="line"><span class="meta">#</span>修改!!!!!!!!!!!!</span><br><span class="line">FPCONV_OBJS =       g_fmt.o dtoa.o</span><br><span class="line">CJSON_CFLAGS +=     -DUSE_INTERNAL_FPCONV</span><br><span class="line">CJSON_CFLAGS +=     -DIEEE_BIG_ENDIAN</span><br><span class="line">CJSON_CFLAGS +=     -pthread -DMULTIPLE_THREADS</span><br></pre></td></tr></table></figure>
+<h3 id="cjson-基本用例"><a href="#cjson-基本用例" class="headerlink" title="cjson 基本用例"></a>cjson 基本用例</h3><ul>
+<li><strong>new</strong>  <code>local cjson2 = cjson.new()</code> 创建一个cjson模块的独立副本给cjson2,可以拥有各自不同的encoding buffer和默认配置</li>
+<li><p><strong>decode</strong>    字符串转换成table</p>
+<figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="keyword">local</span> test_str = <span class="string">'[true, &#123;"foo":"bar"&#125;]'</span></span><br><span class="line"><span class="keyword">local</span> test= json.decode(test_str)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>encode</strong>   table转换成字符串</p>
+<figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="keyword">local</span> test = &#123;[<span class="number">1</span>]=<span class="number">1</span>,[<span class="number">3</span>]=<span class="number">3</span>&#125;</span><br><span class="line"><span class="keyword">local</span> test_str= json.encode(test)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>encode_sparse_array</strong>      允许稀疏数组</p>
+<figure class="highlight lua"><table><tr><td class="code"><pre><span class="line">json.encode_sparse_array(<span class="literal">true</span>)</span><br><span class="line"><span class="keyword">local</span> test =&#123; [<span class="number">1000</span>] = <span class="string">"excessively sparse"</span> &#125;</span><br><span class="line"><span class="keyword">local</span> test_str= json.encode(test)</span><br><span class="line"><span class="built_in">print</span>(test_str)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>encode_max_depth</strong>    允许的最大深度</p>
+</li>
+<li><strong>encode_invalid_numbers</strong>    编码时是否允许非法数字 infinity,NaN等,有三个选项<code>true</code>: 允许非法数字  <code>false</code> :不允许非法数字 <code>nil</code>:将非法数字转换成nil值</li>
+<li><strong> encode_keep_buffer</strong>  默认为true.true表示JSON encoding buffer会一直被重用，直到JSON模块被垃圾回收为止</li>
+<li><strong>decode_invalid_numbers</strong> 解码是是否允许非法数字</li>
+<li><strong>encode_number_precision</strong> precision为1至14，默认为14用来设置JSON中数字的精度（有效位数）</li>
+<li><strong>decode_max_depth</strong> depth为正整数，默认为1000层.为了防止溢栈，我们可以限制迭代的层数，超过指定的层数，就会报错</li>
+<li><strong>cjson.safe</strong>  在decode时不会立即报错,而是返回nil和一条错误信息</li>
+</ul>
+<h3 id="cjson遇到的问题"><a href="#cjson遇到的问题" class="headerlink" title="cjson遇到的问题"></a>cjson遇到的问题</h3><h4 id="稀疏数组的问题"><a href="#稀疏数组的问题" class="headerlink" title="稀疏数组的问题"></a>稀疏数组的问题</h4><p>当索引不连续时就会造成稀疏数组问题,有两种方案可以解决</p>
+<ul>
+<li>方案一:<br>encode_sparse_array(true),可以解决,但是设置这个选项后会发现转换的值中出现null.<br>比如lua中结构如下<code>local test ={[1]=1,[3]=3}</code>解析成json后就成了<code>[1,null,3]</code> ,在反序列化时得处理这个null值.<figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="keyword">local</span> json = <span class="built_in">require</span> <span class="string">"cjson"</span></span><br><span class="line">json.encode_sparse_array(<span class="literal">true</span>)</span><br><span class="line"><span class="keyword">local</span> test = &#123;[<span class="number">1</span>]=<span class="number">1</span>,[<span class="number">3</span>]=<span class="number">3</span>&#125;</span><br><span class="line"><span class="keyword">local</span> test_str= json.encode(test)</span><br><span class="line"><span class="comment">-- local test_str= bson.encode(test)</span></span><br><span class="line"><span class="built_in">print</span>(test_str)</span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> te1= json.decode(test_str)</span><br><span class="line"><span class="keyword">for</span> k,v <span class="keyword">in</span> <span class="built_in">pairs</span>(te1) <span class="keyword">do</span></span><br><span class="line">    <span class="keyword">if</span> v== json.null <span class="keyword">then</span></span><br><span class="line">        te1[k] = <span class="literal">nil</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> k,v <span class="keyword">in</span> <span class="built_in">pairs</span>(te1) <span class="keyword">do</span></span><br><span class="line">    <span class="built_in">print</span>(k,v)</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>输出:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[1,null,3]</span><br><span class="line">1   1</span><br><span class="line">3   3</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>方案二:<br>在json.encode()前先将稀疏数组的key转换成string,这样就不会出现这个问题了,但是同样的反序列化时要将这个string的key转换成number.<figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="comment">--key tostring,解决稀疏数组问题</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">tableutil.map_key_tostring</span><span class="params">(maps)</span></span></span><br><span class="line">    <span class="keyword">local</span> stable =&#123;&#125;</span><br><span class="line">    <span class="keyword">for</span>  k,v <span class="keyword">in</span> <span class="built_in">pairs</span>(maps <span class="keyword">or</span> &#123;&#125;) <span class="keyword">do</span></span><br><span class="line">        k = <span class="built_in">tostring</span>(k) <span class="keyword">or</span> k</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">type</span>(v) == <span class="string">"table"</span> <span class="keyword">then</span></span><br><span class="line">            stable[k] = tableutil.map_key_tostring(v)</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            stable[k] = v</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> stable</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">tableutil.map_key_tonumber</span><span class="params">(maps)</span></span></span><br><span class="line">    <span class="keyword">local</span> stable = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span>  k,v <span class="keyword">in</span> <span class="built_in">pairs</span>(maps <span class="keyword">or</span> &#123;&#125;) <span class="keyword">do</span></span><br><span class="line">        k = <span class="built_in">tonumber</span>(k) <span class="keyword">or</span> k</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">type</span>(v) == <span class="string">"table"</span> <span class="keyword">then</span></span><br><span class="line">            stable[k] = tableutil.map_key_tonumber(v)</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            stable[k] = v</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">return</span> stable</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="skynet中使用sharedata后cjson无法序列化"><a href="#skynet中使用sharedata后cjson无法序列化" class="headerlink" title="skynet中使用sharedata后cjson无法序列化"></a>skynet中使用sharedata后cjson无法序列化</h4><p>sharedata 的数据cjosn在encode时抛出Cannot serialise userdata: type not supported<br>也是两种解决方案:</p>
+<ul>
+<li><p>方案一: 打个patch,正常的用json_safe序列化,出异常时先深拷贝</p>
+<figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="keyword">local</span> json = <span class="built_in">require</span> <span class="string">"cjson"</span></span><br><span class="line"><span class="keyword">local</span> json_safe = <span class="built_in">require</span> <span class="string">"cjson.safe"</span></span><br><span class="line"><span class="keyword">local</span> old_encode = json.encode</span><br><span class="line"><span class="keyword">local</span> tableutil = <span class="built_in">require</span> <span class="string">"public/util/tableutil"</span></span><br><span class="line"></span><br><span class="line">json.encode = <span class="function"><span class="keyword">function</span> <span class="params">( tab )</span></span></span><br><span class="line">    <span class="keyword">local</span> safe_resuslt = json_safe.encode(tab)</span><br><span class="line">    <span class="keyword">if</span>  safe_resuslt <span class="keyword">then</span></span><br><span class="line">        <span class="keyword">return</span> safe_resuslt</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    <span class="comment">-- print("-------json is null need json_patch----")</span></span><br><span class="line">    <span class="keyword">local</span> other_table = tableutil.deep_copy(tab)</span><br><span class="line">    <span class="keyword">return</span> old_encode(other_table)</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>改写cjson,遍历 table 的时候支持 __pairs 方法</p>
+</li>
+</ul>
+<h2 id="更好的选择bson"><a href="#更好的选择bson" class="headerlink" title="更好的选择bson"></a>更好的选择bson</h2><p><a href="http://bsonspec.org/" target="_blank" rel="noopener">http://bsonspec.org/</a><br>BSON是一种类json的一种二进制形式的存储格式，简称Binary JSON，它和JSON一样，支持内嵌的文档对象和数组对象，但是BSON有JSON没有的一些数据类型，如Date和BinData类型.目前主要用于MongoDB中<br>优点:</p>
+<ul>
+<li>更快的遍历速度 (它会将JSON的每一个元素的长度存在元素的头部，这样你只需要读取到元素长度就能直接seek到指定的点上进行读取了)</li>
+<li>额外的数据类型(增加了“byte array”数据类型。这使得二进制的存储不再需要先base64转换后再存成JSON)</li>
+</ul>
+<p>缺点:</p>
+<ul>
+<li>更占内存空间</li>
+</ul>
+<p>对比了一下cjson和bson的encode,decode效率,bson比cjson快一倍左右.</p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/json-lua/">json  lua</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/reStructuredText简明语法/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">reStructuredText简明语法</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/redis初探/">
+        <span class="next-text nav-default">redis初探</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

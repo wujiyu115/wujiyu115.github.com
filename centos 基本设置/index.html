@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="centos 命令，基本设置"/>
+
+
+
+
+  <meta name="keywords" content="centos, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/centos 基本设置/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> centos 命令，基本设置 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          centos 命令，基本设置
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2013-03-29
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/centos/">centos</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CentOS6-4配置163的yum源"><span class="toc-text">CentOS6.4配置163的yum源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#YUM"><span class="toc-text">YUM**</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二-安装各种包"><span class="toc-text">二 安装各种包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三-常规设置"><span class="toc-text">三　常规设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四-开发环境"><span class="toc-text">四　开发环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#解决-usr-bin-ld-cannot-find-lmysqlclient错误"><span class="toc-text">解决/usr/bin/ld: cannot find -lmysqlclient错误</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#centos7-最小化安装配置"><span class="toc-text">centos7 最小化安装配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本"><span class="toc-text">基本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mysql-安装"><span class="toc-text">mysql 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dns设置"><span class="toc-text">dns设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dns查询"><span class="toc-text">dns查询</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#centos-问题"><span class="toc-text">centos 问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#centos下出现-lib64-libc-so-6-version-GLIBC-2-17’-not-found问题解决方案"><span class="toc-text">centos下出现/lib64/libc.so.6: version `GLIBC_2.17’ not found问题解决方案</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#升级"><span class="toc-text">升级</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#升级git"><span class="toc-text">升级git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#升级node-npm"><span class="toc-text">升级node,npm</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装nmon"><span class="toc-text">安装nmon</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#curl-wget下载github-releases"><span class="toc-text">curl,wget下载github,releases</span></a>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <font color="#ff0000"> update 2016-7-21 13:53</font>
+
+<h2 id="CentOS6-4配置163的yum源"><a href="#CentOS6-4配置163的yum源" class="headerlink" title="CentOS6.4配置163的yum源"></a>CentOS6.4配置163的yum源</h2><p>CentOS系统自带的更新源的速度实在是慢，为了让CentOS6使用速度更快的YUM更新源，可以选择163（网易）的更新源。</p>
+<ul>
+<li>查看版本<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat /etc/redhat-release</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li>查看cpu核数</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span> 总核数 = 物理CPU个数 X 每颗物理CPU的核数</span><br><span class="line"><span class="meta">#</span> 总逻辑CPU数 = 物理CPU个数 X 每颗物理CPU的核数 X 超线程数</span><br><span class="line"><span class="meta">#</span> 查看物理CPU个数</span><br><span class="line">cat /proc/cpuinfo| grep "physical id"| sort| uniq| wc -l</span><br><span class="line"><span class="meta">#</span> 查看每个物理CPU中core的个数(即核数)</span><br><span class="line">cat /proc/cpuinfo| grep "cpu cores"| uniq</span><br><span class="line"><span class="meta">#</span> 查看逻辑CPU的个数</span><br><span class="line">cat /proc/cpuinfo| grep "processor"| wc -l</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>下载repo文件</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget http://mirrors.163.com/.help/CentOS6-Base-163.repo</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>备份并替换系统的repo文件</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@localhost ~]# cd /etc/yum.repos.d/</span><br><span class="line">[root@localhost ~]# mv CentOS-Base.repo CentOS-Base.repo.bak</span><br><span class="line">[root@localhost ~]# mv CentOS6-Base-163.repo CentOS-Base.repo</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行yum源更新</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@localhost ~]# yum clean all</span><br><span class="line">[root@localhost ~]# yum makecache</span><br><span class="line">[root@localhost ~]# yum update</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="YUM"><a href="#YUM" class="headerlink" title="YUM**"></a>YUM**</h2><p>yum: Yellow dog Updater, Modified.<br>主要功能是更方便的添加/删除/更新RPM包.它能自动解决包的倚赖性问题.它能便于管理大量系统的更新问题.</p>
+<p><strong>1. yum的使用:</strong><br> 1)<strong>包的更新</strong><br> 1.1)检查可更新包: yum check-update<br> 1.2)更新所有包: yum update<br> 1.3)更新指定包: yum update package_name<br> 1.4)版本升级: yum upgrade<br> 2)<strong>包安装与删除</strong><br> 2.1)yum install package_name<br> 2.2)yum remove package_name<br> 3)<strong>包搜索</strong><br> 3.1)搜索特定包: yum search package_name<br> 3.2)搜索包含特定文件名的包:yum provides name<br> 4)<strong>包列表</strong><br> 4.1)列出所有安装或更新的包: yum list<br> 4.2)列出指定包:yum list name<br> 4.3)列出可更新包:yum list updates<br> 4.4)列出已安装包:yum list installed<br> 4.5)列出已安装但不包含在资源库中的包:yum list extras</p>
+<p><strong>2. 自动选择最快的源:</strong></p>
+<p>安装yum-fastestmirror插件，它会在下载时自动选择最快的源。<br><code>yum install yum-fastestmirror</code></p>
+<p><strong>3. 使用图形化的yum:</strong><br> <code>yum install yumex</code><br><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/03/image43.png" alt="image"></p>
+<h2 id="二-安装各种包"><a href="#二-安装各种包" class="headerlink" title="二 安装各种包"></a><strong>二 安装各种包</strong></h2><p><strong>安装bin文件</strong><br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">1:  //授予当前用户执行权限</span><br><span class="line">2:  chmod a+x jdk-6u26-linux-i586.bin</span><br><span class="line">3:  //执行安装文件</span><br><span class="line">4:  ./jdk-6u26-linux-i586.bin</span><br><span class="line">5:   卸载：把安装时中选择的安装目录删除就OK</span><br></pre></td></tr></table></figure></p>
+<p>**安装rpm<br><code>rpm -ivh /home/server/bind-9.8.1-6.2.x86_64.rpm</code></p>
+<ol>
+<li>查询软件包<br>rpm -q [选项] [软件包名称]<br>常用选项：<br>-a ：查询所有安装的软件包。<br>-i ：显示软件包的概要信息。<br>-l ：显示软件包中的文件列表。<br>-c ：显示配置文件列表。<br>-d ：显示文档文件列表。<br>-s ：显示软件包中的文件列表和每个文件状态。<br>-f file ：查询属于哪个软件包。<br>-p file ：查询某个RPM包内含有的文件。<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">--import ：导入公钥。</span><br><span class="line"># rpm -qa 查询所有的软件包</span><br><span class="line"># rpm -qi make 查询make软件包的概要。</span><br><span class="line"># rpm -ql apache 查询apache软件包的文件列表。</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>2、安装软件包<br>rpm -i [选项] [软件包名称]<br>常用选项：<br>-h ：显示安装进度。<br>-v ：显示详细信息。<br>–force ：忽略冲突强制安装。<br>–nodeps ：不检查依赖关系。<br><code># rpm -ivh /home/server/bind-9.8.1-6.2.x86_64.rpm</code><br>安装一个bind软件包，并显示安装进度。</p>
+<p>3、升级软件包<br>rpm -U [选项] [软件包名称]<br>常用选项：<br>-h ：显示安装进度。<br>-v ：显示详细信息。<br>–force ：忽略冲突强制安装。<br>–nodeps ：不检查依赖关系。<br><code># rpm -Uvh /home/vim-7.3.338-1.src.rpm</code><br>升级vim软件包，并显示安装进度。</p>
+<p>4、卸载软件包<br>rpm -e [选项] [软件包名称]<br>常用选项：<br>–nodeps ：不检查依赖关系。<br><code># rpm -e vim-common</code> 卸载vim-common软件包。</p><p><br>PS：rpm包的弊端就是它的依赖性。rpm包的依赖性据说是这样的，当要安装软件包A时提示先要安装软件包B，当安装软件包B时又提示先要安装软件包C。当装完软件包C和B后装软件包A又提示C的版本不对。。。所以现在都直接用yum命令了<br><strong>安装tar.gz(bz或bz2等)结尾的源代码包.</strong><br>这种软件包里面都是源程序，没有编译过，需要编译后才能安装，安装方法为:<br>1、用CD 命令进入源代码压缩包所在的目录<br>2、根据压缩包类型解压缩文件(*代表压缩包名称)<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zxvf ****.tar.gz</span><br><span class="line">tar -jxvf ****.tar.bz(或bz2)</span><br></pre></td></tr></table></figure></p>
+<p>3、用CD命令进入解压缩后的目录<br>4、输入编译文件命令：./configure(有的压缩包已经编译过，这一步可以省去)<br>5、然后是命令：make<br>6、再是安装文件命令：make install<br>卸载：make uninstall</p>
+<h2 id="三-常规设置"><a href="#三-常规设置" class="headerlink" title="三　常规设置"></a><strong>三　常规设置</strong></h2><p>1 安装中文输入法: yum install “@Chinese Support”<br>2 修改hosts : /etc/hosts<br>3 切换权限: su root<br>4 让Centos解压RAR:<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">1:  //安装</span><br><span class="line">2:  wget http://www.rarsoft.com/rar/rarlinux-3.9.3.tar.gz</span><br><span class="line">3:  tar -xvf rarlinux-3.9.3.tar.gz</span><br><span class="line">4:  cd rar</span><br><span class="line">5:  make</span><br><span class="line">6:  //用法</span><br><span class="line">7:  rar x vpsyou.rar           //解压 vpsyou.rar 到当前目录</span><br><span class="line">8:  rar vpsyou.rar  ./vpsyou.com/        //将 vpsyou.com 目录打包为 vpsyou.rar</span><br></pre></td></tr></table></figure></p>
+<p>5 安装字体:<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">1:  //创建目录YaHei</span><br><span class="line">2:  mkdir -p /usr/share/fonts/YaHei</span><br><span class="line">3:  cp YaHei.Consolas.1.12.ttf /usr/share/fonts/YaHei/YaHei.Consolas.ttf</span><br><span class="line">4:  //安装字体</span><br><span class="line">5:  cd /usr/share/fonts/YaHei/</span><br><span class="line">6:  mkfontscale</span><br><span class="line">7:  mkfontdir</span><br><span class="line">8:  fc-cache -fv</span><br><span class="line">9:  //最后，到系统－首选项－字体里修改字体</span><br></pre></td></tr></table></figure></p>
+<p> ６centos设置文件夹打开方式：在同一窗口打开文件夹<br>　　编辑 － 首选项 － 行为，勾选“总是在浏览器窗口打开”，点击关闭</p>
+<h2 id="四-开发环境"><a href="#四-开发环境" class="headerlink" title="四　开发环境"></a><strong>四　开发环境</strong></h2><ul>
+<li><strong>安装jdk :</strong><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">1:  //授予当前用户执行权限</span><br><span class="line">2: chmod a+x jdk-6u26-linux-i586.bin</span><br><span class="line">3:  //执行安装文件</span><br><span class="line">4:  ./jdk-6u26-linux-i586.bin</span><br><span class="line">5:</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>配置环境变量:<br><code>gedit /etc/profile</code><br>打开后加入配置:<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">export JAVA_HOME=/usr/java/jdk1.6.0_24</span><br><span class="line">export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span><br><span class="line">export PATH=$PATH:$JAVA_HOME/bin</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>立即生效</span><br><span class="line">. /etc/profile</span><br></pre></td></tr></table></figure>
+<h3 id="解决-usr-bin-ld-cannot-find-lmysqlclient错误"><a href="#解决-usr-bin-ld-cannot-find-lmysqlclient错误" class="headerlink" title="解决/usr/bin/ld: cannot find -lmysqlclient错误"></a>解决/usr/bin/ld: cannot find -lmysqlclient错误</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>mysqlclinet地址</span><br><span class="line">/usr/local/mysql/lib/libmysqlclient.so.18</span><br><span class="line">/usr/lib64/mysql/libmysqlclient.so.16</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>查找libmysqlclient的位置</span><br><span class="line">repoquery --whatprovides *libmysqlclient*</span><br><span class="line"><span class="meta">#</span>mysql-libs-0:5.1.71-1.el6.x86_64</span><br><span class="line"></span><br><span class="line">repoquery -l mysql-libs-0:5.1.71-1.el6.x86_64 | head -9</span><br><span class="line"><span class="meta">#</span>/etc/my.cnf</span><br><span class="line"><span class="meta">#</span>/usr/lib64/mysql</span><br><span class="line"><span class="meta">#</span>/usr/lib64/mysql/libmysqlclient.so.16</span><br><span class="line"><span class="meta">#</span>/usr/lib64/mysql/libmysqlclient.so.16.0.0</span><br></pre></td></tr></table></figure>
+<h2 id="centos7-最小化安装配置"><a href="#centos7-最小化安装配置" class="headerlink" title="centos7 最小化安装配置"></a>centos7 最小化安装配置</h2><h3 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h3><p>+查看版本<br>cat /etc/redhat-release</p>
+<ul>
+<li>ifconfig<br>yum provides ifconfig</li>
+<li>centos7 failed to start lsb<br>网卡地址被删除或者配置错误<br><a href="http://blog.sina.com.cn/s/blog_4bbf963a0102vnk8.html" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_4bbf963a0102vnk8.html</a><br>ip addr 查看网卡地址(liner/ether)，填写到配置 HWADDR</li>
+<li>编辑ip地址</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#static assignment</span><br><span class="line">ONBOOT=yes #开机启动</span><br><span class="line">BOOTPROTO=static #静态IP</span><br><span class="line">IPADDR=192.168.1.151 #本机地址</span><br><span class="line">NETMASK=255.255.255.0 #子网掩码</span><br><span class="line">GATEWAY=192.168.1.1 #默认网关</span><br></pre></td></tr></table></figure>
+<p>/etc/sysconfig/network-scripts<br>或者</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install NetworkManager-tui</span><br><span class="line">nmtui edit enp0s3(网络配置文件名)</span><br><span class="line">systemctl enable NetworkManager-wait-online.service</span><br><span class="line">systemctl status NetworkManager.service</span><br><span class="line">systemctl restart network.service 重启网络</span><br></pre></td></tr></table></figure>
+<p><a href="http://blog.csdn.net/johnnycode/article/details/50184073" target="_blank" rel="noopener">http://blog.csdn.net/johnnycode/article/details/50184073</a><br>虚拟 机网卡记得改为桥接模式</p>
+<h3 id="mysql-安装"><a href="#mysql-安装" class="headerlink" title="mysql 安装"></a>mysql 安装</h3><p><a href="http://www.cnblogs.com/starof/p/4680083.html" target="_blank" rel="noopener">http://www.cnblogs.com/starof/p/4680083.html</a></p>
+<h3 id="dns设置"><a href="#dns设置" class="headerlink" title="dns设置"></a>dns设置</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vi /etc/resolv.conf</span><br></pre></td></tr></table></figure>
+<h3 id="dns查询"><a href="#dns查询" class="headerlink" title="dns查询"></a>dns查询</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nslookup open.huanjia.cc</span><br></pre></td></tr></table></figure>
+<h2 id="centos-问题"><a href="#centos-问题" class="headerlink" title="centos 问题"></a>centos 问题</h2><h3 id="centos下出现-lib64-libc-so-6-version-GLIBC-2-17’-not-found问题解决方案"><a href="#centos下出现-lib64-libc-so-6-version-GLIBC-2-17’-not-found问题解决方案" class="headerlink" title="centos下出现/lib64/libc.so.6: version `GLIBC_2.17’ not found问题解决方案"></a>centos下出现/lib64/libc.so.6: version `GLIBC_2.17’ not found问题解决方案</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>查看glibc版本</span><br><span class="line">strings /lib64/libc.so.6 |grep GLIBC</span><br><span class="line">wget http://ftp.gnu.org/gnu/glibc/glibc-2.14.tar.gz</span><br><span class="line">tar xvf glibc-2.14.tar.gz</span><br><span class="line">cd glibc-2.14</span><br><span class="line">mkdir build</span><br><span class="line">cd ./build</span><br><span class="line"> ../configure --prefix=/opt/glibc-2.14</span><br><span class="line">chmod +r ../configure</span><br><span class="line">make -j4</span><br><span class="line">sudo make install</span><br><span class="line">export LD_LIBRARY_PATH=/opt/glibc-2.14/lib:$LD_LIBRARY_PATH</span><br><span class="line"><span class="meta">#</span>解除环境变量 unset LD_LIBRARY_PATH</span><br></pre></td></tr></table></figure>
+<p>glibc操作</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>查看glibc版本引用</span><br><span class="line">objdump -p  skynet</span><br><span class="line"><span class="meta">#</span>查看指定版本引用的函数</span><br><span class="line">nm skynet |grep GLIBC_2.14</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>查看</span><br><span class="line">strings /lib64/libc.so.6 |grep GLIBC_</span><br><span class="line"><span class="meta">#</span>升级</span><br><span class="line">wget http://ftp.gnu.org/gnu/glibc/glibc-2.14.tar.gz</span><br><span class="line">tar xvf glibc-2.14.tar.gz</span><br><span class="line">cd glibc-2.14</span><br><span class="line">mkdir build</span><br><span class="line">cd ./build</span><br><span class="line">../configure --prefix=/opt/glibc-2.14</span><br><span class="line">make -j4</span><br><span class="line">make install</span><br><span class="line"><span class="meta">#</span>备份</span><br><span class="line">rm -rf /lib64/libc.so.6</span><br><span class="line">ln -s /opt/glibc-2.14/lib/libc-2.14.so /lib64/libc.so.6</span><br><span class="line"><span class="meta">#</span>删除libc.so.6之后可能导致系统命令不可用的情况, 可使用如下方法解决:</span><br><span class="line">LD_PRELOAD=/opt/glibc-2.14/lib/libc-2.14.so  ln -s /opt/glibc-2.14/lib/libc-2.14.so /lib64/libc.so.6</span><br><span class="line"><span class="meta">#</span>如果上述更新失败可使用如下命令还原:</span><br><span class="line">LD_PRELOAD=/lib64/libc-2.12.so ln -s /lib64/libc-2.12.so /lib64/libc.so.6    #libc-2.12.so 此项是系统升级前的版本</span><br></pre></td></tr></table></figure>
+<h1 id="升级"><a href="#升级" class="headerlink" title="升级"></a>升级</h1><h2 id="升级git"><a href="#升级git" class="headerlink" title="升级git"></a>升级git</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>编译环境</span><br><span class="line">yum install crul curl-devel zlib-devel openssl-devel perl cpio expat-devel gettext-devel gcc perl-ExtUtils-MakeMaker</span><br><span class="line"><span class="meta">#</span>下载</span><br><span class="line">wget https://www.kernel.org/pub/software/scm/git/git-1.9.4.tar.gz</span><br><span class="line">tar xzf git-1.9.4.tar.gz</span><br><span class="line"><span class="meta">#</span>编译</span><br><span class="line">cd git-1.9.4</span><br><span class="line">autoconf</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line"><span class="meta">#</span>指定git版本</span><br><span class="line">echo "export PATH=$PATH:/usr/local/bin/git" &gt;&gt; /etc/bashrc</span><br><span class="line">source /etc/bashrc</span><br><span class="line"><span class="meta">#</span>检查</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
+<h2 id="升级node-npm"><a href="#升级node-npm" class="headerlink" title="升级node,npm"></a>升级node,npm</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum install node</span><br><span class="line">yum install npm</span><br><span class="line">npm install -g n</span><br><span class="line">n stable</span><br><span class="line">echo "export PATH=$PATH://usr/local/bin/node" &gt;&gt; /etc/bashrc</span><br><span class="line">source /etc/bashrc</span><br><span class="line"><span class="meta">#</span>延缓npm</span><br><span class="line">npm install npm@latest -g</span><br></pre></td></tr></table></figure>
+<h1 id="安装nmon"><a href="#安装nmon" class="headerlink" title="安装nmon"></a>安装nmon</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /tmp</span><br><span class="line">wget http://sourceforge.net/projects/nmon/files/nmon16e_mpginc.tar.gz</span><br><span class="line"><span class="meta">#</span> Untar archive</span><br><span class="line">tar -xzvf nmon16e_mpginc.tar.gz</span><br><span class="line"><span class="meta">#</span> Copy nmon file</span><br><span class="line">cp nmon_x86_64_centos7 /usr/local/bin/</span><br><span class="line">chmod a+x /usr/local/bin/nmon_x86_64_centos7</span><br><span class="line"><span class="meta">#</span> Create symbolic link</span><br><span class="line">ln -s /usr/local/bin/nmon_x86_64_centos7 /usr/local/bin/nmon</span><br><span class="line"><span class="meta">#</span> tidy up tmp</span><br><span class="line">rm -f nmon_*</span><br></pre></td></tr></table></figure>
+<h1 id="curl-wget下载github-releases"><a href="#curl-wget下载github-releases" class="headerlink" title="curl,wget下载github,releases"></a>curl,wget下载github,releases</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">curl -sL https://github.com/fatedier/frp/releases/download/v0.9.3/frp_0.9.3_linux_amd64.tar.gz | tar xz</span><br><span class="line">wget --no-check-certificate  https://github.com/fatedier/frp/releases/download/v0.9.3/frp_0.9.3_linux_amd64.tar.gz  -O - | tar xz</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/centos/">centos</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/android框架结构/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">android　框架结构</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/windows下蛋疼的cocos2d-x，android配置/">
+        <span class="next-text nav-default">windows下蛋疼的cocos2d-x，android配置。</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

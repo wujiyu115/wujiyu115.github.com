@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="Android 开发调试"/>
+
+
+
+
+  <meta name="keywords" content="android, 调试, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/Android 开发调试/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> Android 开发调试 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Android 开发调试
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2013-05-18
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/android/">android</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#模拟器"><span class="toc-text">模拟器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#wifi-调试"><span class="toc-text">wifi 调试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一些工具"><span class="toc-text">一些工具</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <font color="red">update: 2016-1-14 更新模拟器<strong>夜神模拟器</strong></font><br><font color="red">update: 2013-8-13 更新模拟器<strong>Genymotion</strong></font><br><font color="red">update: 2013-5-19 更新wifi调试工具</font>
+
+<h2 id="模拟器"><a href="#模拟器" class="headerlink" title="模拟器"></a>模拟器</h2><p>android自带模拟器真是龟速,果断放弃</p>
+<ul>
+<li>夜神模拟器</li>
+<li><a href="http://www.bluestacks.net.cn/Download/" target="_blank" rel="noopener">bluestacks</a>: 可以安装软件和调试的模拟器,速度比android的不知道快到哪去了.<br>安装完后,eclipse会把它识别为一台设备 .和真机调试没啥区别.运行界面<br><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/05/image11.png" alt="image"></li>
+<li>Genymotion</li>
+<li>逍遥安卓模拟器</li>
+<li>靠谱助手安卓模拟器</li>
+<li>海马玩模拟器<br>mac下连接: <code>adb connect 192.168.56.101</code></li>
+</ul>
+<a id="more"></a>
+<h2 id="wifi-调试"><a href="#wifi-调试" class="headerlink" title="wifi 调试"></a>wifi 调试</h2><p>今天没带数据线,搜了一下居然可以wifi调试.<br><strong>1. 要求</strong><br>手机必须root过，手机和电脑必须都联网且在同一局域网内。</p>
+<p><strong>2. 步骤</strong></p>
+<ul>
+<li>手机端启动adbd服务<br>在手机端打开终端运行shell命令，终端可使用软件”终端模拟器” 或 “BetterTerminal” ，通过下面命令启动adbd服务<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">setprop service.adb.tcp.port 5555</span><br><span class="line">stop adbd</span><br><span class="line">start adbd</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>上面su命令表示切换到root状态，setprop service.adb.tcp.port 5555表示设置adb tcp连接的端口为5555。stop adbd start adbd表示重启adbd服务<br>这时到手机的<strong>设置-&gt;系统-&gt;网络里查看手机ip地址多少</strong>，如为192.168.1.193</p>
+<ul>
+<li>在PC端打开cmd命令行**，输入<br><code>adb connect 192.168.1.193</code><br>表示adb连接到手机，连接成功会显示connected to 192.168.1.194:5555或already connected to 192.168.1.194:5555。如果adb命令不认识，添加android sdk的tools目录到系统path中。接下来eclipse编译选择相应的AVD即可。要关闭连接可以在pc端输入<br><code>adb disconnect 192.168.1.110</code><br>如果不想在手机中这么麻烦输入命令,可以下现成的工具 adb wireless</li>
+</ul>
+<h2 id="一些工具"><a href="#一些工具" class="headerlink" title="一些工具"></a>一些工具</h2><ul>
+<li>tempMonitor: cpu温度监控</li>
+</ul>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/android/">android</a>
+            
+              <a href="/tags/调试/">调试</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/about-texturepacker/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">About TexturePacker</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/最近迷恋上小霸王游戏,小蜜蜂/">
+        <span class="next-text nav-default">最近迷恋上小霸王游戏:小蜜蜂</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

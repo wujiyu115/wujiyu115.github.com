@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="vsftpd使用"/>
+
+
+
+
+  <meta name="keywords" content="vsftpd, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/vsftpd/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> vsftpd使用 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          vsftpd使用
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2016-05-17
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#命令"><span class="toc-text">命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置"><span class="toc-text">配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置文件"><span class="toc-text">配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更改vsfptd-conf关键配置"><span class="toc-text">更改vsfptd.conf关键配置:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加用户登录"><span class="toc-text">添加用户登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#防火墙"><span class="toc-text">防火墙</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cannot-change-directory-root"><span class="toc-text">cannot change directory:/root</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#linux-vsftpd-550-create-directory-operation-failed"><span class="toc-text">linux vsftpd 550 create directory operation failed</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#如果用root登录"><span class="toc-text">如果用root登录</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配详解"><span class="toc-text">配详解</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>vsftpd意思为“very secure FTP daemon(非常安全的FTP进程)”，是一个基于GPL发布的类UNIX类操作系统上运行的服务器的名字（是一种守护进程），可以运行在诸如Linux、BSD、Solaris、HP-UX以及Irix等系统上面。vsftpd支持很多其他传统的FTP服务器不支持的良好特性</p>
+<h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>安装</span><br><span class="line">yum install vsftpd</span><br><span class="line"><span class="meta">#</span>启动</span><br><span class="line">service vsftpd start</span><br><span class="line"><span class="meta">#</span>重启</span><br><span class="line">service vsfptd restart</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>在<code>/etc/vsftpd</code>目录下的配置文件:</p>
+<ul>
+<li><code>vsfptd.conf</code>:主配置</li>
+<li><code>ftpusers</code>:不允许登录的用户,不受任何配制项的影响</li>
+<li><code>userlist_file</code>:<code>userlist_enable</code>和<code>userlist_deny</code>控制,这两个参数配置不同他可以是白名单也可以是黑名单.创建tom: 在user_list中,jim:不在user_list中测试配置关系<ul>
+<li>Case 1: userlist_enable=YES, userlist_deny=YES<br>tom: 拒绝登入<br>jim: 允许登录</li>
+<li>Case 2: userlist_enable=YES, userlist_deny=NO<br>tom: 允许登录<br>jim:拒绝登录（如user_list文件开头的注释所述，甚至不会提示输入密码，即无登入提示框，直接拒绝连接）</li>
+<li>Case 3: userlist_enable=NO,userlist_deny=NO<br>tom: 允许登录<br>jim: 允许登录</li>
+<li>Case 4: userlist_enable=NO,userlist_deny=YES<br>tom: 允许登录<br>jim: 允许登录</li>
+<li>userlist_enable和userlist_deny两个选项联合起来针对的是：本地全体用户（除去ftpusers中的用户）和出现在user_list文件中的用户以及不在在user_list文件中的用户这三类用户集合进行的设置。</li>
+<li>当且仅当userlist_enable=YES时：userlist_deny项的配置才有效，user_list文件才会被使用；当其为NO时，无论userlist_deny项为何值都是无效的，本地全体用户（除去ftpusers中的用户）都可以登入FTP</li>
+<li>当userlist_enable=YES时，userlist_deny=YES时：user_list是一个黑名单，即：所有出现在名单中的用户都会被拒绝登入；</li>
+<li>当userlist_enable=YES时，userlist_deny=NO时：user_list是一个白名单，即：只有出现在名单中的用户才会被准许登入(user_list之外的用户都被拒绝登入)；另外需要特别提醒的是：使用白名单后，匿名用户将无法登入！除非显式在user_list中加入一行：anonymous</li>
+</ul>
+</li>
+</ul>
+<h3 id="更改vsfptd-conf关键配置"><a href="#更改vsfptd-conf关键配置" class="headerlink" title="更改vsfptd.conf关键配置:"></a>更改vsfptd.conf关键配置:</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>接受匿名用户</span><br><span class="line">anonymous_enable=NO</span><br><span class="line"><span class="meta">#</span>若为YES,则userlist_file中的用户将不能登录,为NO则只有userlist_file的用户可以登录</span><br><span class="line">userlist_deny=NO</span><br><span class="line"><span class="meta">#</span>监听端口</span><br><span class="line">listen_port = 21</span><br><span class="line"><span class="meta">#</span>指定默认用户目录</span><br><span class="line">local_root=/var/www/html</span><br><span class="line"><span class="meta">#</span>指定系统用户只能访问其主目录</span><br><span class="line">chroot_local_user=YES</span><br><span class="line">chroot_list_enable=YES</span><br><span class="line">chroot_list_file=YES</span><br><span class="line"><span class="meta">#</span>匿名用户目录</span><br><span class="line">anon_root=/var/www/html</span><br></pre></td></tr></table></figure>
+<h3 id="添加用户登录"><a href="#添加用户登录" class="headerlink" title="添加用户登录"></a>添加用户登录</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>添加用户update主目录为/home/user_update</span><br><span class="line">useradd -d /home/user_update update -s /bin/bash</span><br><span class="line"><span class="meta">#</span>设置密码</span><br><span class="line">passwd update</span><br><span class="line"><span class="meta">#</span># 更改用户update的主目录为/update</span><br><span class="line">usermod -d /user_update update</span><br><span class="line"><span class="meta">#</span>在 `/etc/vsftpd/userlist_file` 中添加`update`用户</span><br><span class="line"><span class="meta">#</span>更改目录权限给update</span><br><span class="line">chown -R update client_update/</span><br><span class="line">chmod -R 755 目录</span><br></pre></td></tr></table></figure>
+<h3 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iptables -A INPUT -p tcp --dport 21 -j ACCEPT</span><br><span class="line">service iptables save</span><br><span class="line">service iptables status</span><br><span class="line">service iptables restart</span><br></pre></td></tr></table></figure>
+<h3 id="cannot-change-directory-root"><a href="#cannot-change-directory-root" class="headerlink" title="cannot change directory:/root"></a>cannot change directory:/root</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>设置切换目录</span><br><span class="line">setsebool -P ftpd_disable_trans 1</span><br><span class="line"><span class="meta">#</span>设置ftp读写控制</span><br><span class="line">setsebool -P allow_ftpd_full_access 1</span><br><span class="line">service vsftpd restart</span><br></pre></td></tr></table></figure>
+<h3 id="linux-vsftpd-550-create-directory-operation-failed"><a href="#linux-vsftpd-550-create-directory-operation-failed" class="headerlink" title="linux vsftpd 550 create directory operation failed"></a>linux vsftpd 550 create directory operation failed</h3><p>关闭SELinux方法<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>vi /etc/selinux/config</span><br><span class="line">SELINUX=disabled</span><br></pre></td></tr></table></figure></p>
+<h4 id="如果用root登录"><a href="#如果用root登录" class="headerlink" title="如果用root登录"></a>如果用root登录</h4><ul>
+<li>注释 <code>/etc/vsftpd/ftpusers</code> 中<code>root</code>用户</li>
+<li>在 <code>/etc/vsftpd/userlist_file</code> 中添加<code>root</code>用户</li>
+</ul>
+<h2 id="配详解"><a href="#配详解" class="headerlink" title="配详解"></a>配详解</h2><p><a href="http://blog.sina.com.cn/s/blog_56ae1d580100yhel.html" target="_blank" rel="noopener">vsftpd.conf中文详解</a><br><code>/etc/vsftpd/vsftpd.conf</code><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#################用户选项###############</span><br><span class="line">接受匿名用户</span><br><span class="line">anonymous_enable=YES</span><br><span class="line"></span><br><span class="line">#匿名用户login时不询问口令</span><br><span class="line">no_anon_password=YES</span><br><span class="line"></span><br><span class="line">#匿名用户主目录</span><br><span class="line">anon_root=(none)</span><br><span class="line"></span><br><span class="line">#接受本地用户</span><br><span class="line">local_enable=YES</span><br><span class="line"></span><br><span class="line">#本地用户主目录</span><br><span class="line">local_root=(none)</span><br><span class="line"></span><br><span class="line">#如果匿名用户需要密码,那么使用banned_email_file里面的电子邮件地址的用户不能登录</span><br><span class="line">deny_email_enable=YES</span><br><span class="line"></span><br><span class="line">#仅在没有pam验证版本时有用,是否检查用户有一个有效的shell来登录</span><br><span class="line">check_shell=YES</span><br><span class="line"></span><br><span class="line">#若启用此选项,userlist_deny选项才被启动</span><br><span class="line">userlist_enable=YES</span><br><span class="line"></span><br><span class="line">#若为YES,则userlist_file中的用户将不能登录,为NO则只有userlist_file的用户可以登录</span><br><span class="line">userlist_deny=NO</span><br><span class="line"></span><br><span class="line">#如果和chroot_local_user一起开启,那么用户锁定的目录来自/etc/passwd每个用户指定的目录(这个不是很清楚,很哪位熟悉的指点一下)</span><br><span class="line">passwd_chroot_enable=NO</span><br><span class="line"></span><br><span class="line">#定义匿名登入的使用者名称。默认值为ftp。</span><br><span class="line">ftp_username=FTP</span><br><span class="line"></span><br><span class="line">#################用户权限控制###############</span><br><span class="line"></span><br><span class="line">#可以上传(全局控制).</span><br><span class="line">write_enable=YES</span><br><span class="line"></span><br><span class="line">#本地用户上传文件的umask</span><br><span class="line">local_umask=022</span><br><span class="line"></span><br><span class="line">#上传文件的权限配合umask使用</span><br><span class="line">#file_open_mode=0666</span><br><span class="line"></span><br><span class="line">#匿名用户可以上传</span><br><span class="line">anon_upload_enable=NO</span><br><span class="line"></span><br><span class="line">#匿名用户可以建目录</span><br><span class="line">anon_mkdir_write_enable=NO</span><br><span class="line"></span><br><span class="line">匿名用户其它的写权利(更改权限?)</span><br><span class="line">anon_other_write_enable=NO</span><br><span class="line"></span><br><span class="line">如果设为YES，匿名登入者会被允许下载可阅读的档案。默认值为YES。</span><br><span class="line">anon_world_readable_only=YES</span><br><span class="line"></span><br><span class="line">#如果开启,那么所有非匿名登陆的用户名都会被切换成guest_username指定的用户名</span><br><span class="line">#guest_enable=NO</span><br><span class="line"></span><br><span class="line">所有匿名上传的文件的所属用户将会被更改成chown_username</span><br><span class="line">chown_uploads=YES</span><br><span class="line"></span><br><span class="line">匿名上传文件所属用户名</span><br><span class="line">chown_username=lightwiter</span><br><span class="line"></span><br><span class="line">#如果启动这项功能，则所有列在chroot_list_file之中的使用者不能更改根目录</span><br><span class="line">chroot_list_enable=YES</span><br><span class="line"></span><br><span class="line">#允许使用\&quot;async ABOR\&quot;命令,一般不用,容易出问题</span><br><span class="line">async_abor_enable=YES</span><br><span class="line"></span><br><span class="line">管控是否可用ASCII 模式上传。默认值为NO。</span><br><span class="line">ascii_upload_enable=YES</span><br><span class="line"></span><br><span class="line">#管控是否可用ASCII 模式下载。默认值为NO。</span><br><span class="line">ascii_download_enable=YES</span><br><span class="line"></span><br><span class="line">#这个选项必须指定一个空的数据夹且任何登入者都不能有写入的权限，当vsftpd 不需要file system 的权限时，就会将使用者限制在此数据夹中。默认值为/usr/share/empty</span><br><span class="line">secure_chroot_dir=/usr/share/empty</span><br><span class="line"></span><br><span class="line">###################超时设置##################</span><br><span class="line"></span><br><span class="line">#空闲连接超时</span><br><span class="line">idle_session_timeout=600</span><br><span class="line"></span><br><span class="line">#数据传输超时</span><br><span class="line">data_connection_timeout=120</span><br><span class="line"></span><br><span class="line">#PAVS请求超时</span><br><span class="line">ACCEPT_TIMEOUT=60</span><br><span class="line"></span><br><span class="line">#PROT模式连接超时</span><br><span class="line">connect_timeout=60</span><br><span class="line"></span><br><span class="line">################服务器功能选项###############</span><br><span class="line"></span><br><span class="line">#开启日记功能</span><br><span class="line">xferlog_enable=YES</span><br><span class="line"></span><br><span class="line">#使用标准格式</span><br><span class="line">xferlog_std_format=YES</span><br><span class="line"></span><br><span class="line">#当xferlog_std_format关闭且本选项开启时,记录所有ftp请求和回复,当调试比较有用.</span><br><span class="line">#log_ftp_protocol=NO</span><br><span class="line"></span><br><span class="line">#允许使用pasv模式</span><br><span class="line">pasv_enable=YES</span><br><span class="line"></span><br><span class="line">#关闭安全检查,小心呀.</span><br><span class="line">#pasv_promiscuous+NO</span><br><span class="line"></span><br><span class="line">#允许使用port模式</span><br><span class="line">#port_enable=YES</span><br><span class="line"></span><br><span class="line">#关闭安全检查</span><br><span class="line">#prot_promiscuous</span><br><span class="line"></span><br><span class="line">#开启tcp_wrappers支持</span><br><span class="line">tcp_wrappers=YES</span><br><span class="line"></span><br><span class="line">#定义PAM 所使用的名称，预设为vsftpd。</span><br><span class="line">pam_service_name=vsftpd</span><br><span class="line"></span><br><span class="line">#当服务器运行于最底层时使用的用户名</span><br><span class="line">nopriv_user=nobody</span><br><span class="line"></span><br><span class="line">#使vsftpd在pasv命令回复时跳转到指定的IP地址.(服务器联接跳转?)</span><br><span class="line">pasv_address=(none)</span><br><span class="line"></span><br><span class="line">#################服务器性能选项##############</span><br><span class="line"></span><br><span class="line">#是否能使用ls -R命令以防止浪费大量的服务器资源</span><br><span class="line">#ls_recurse_enable=YES</span><br><span class="line"></span><br><span class="line">#是否使用单进程模式</span><br><span class="line">#one_process_model</span><br><span class="line"></span><br><span class="line">#绑定到listen_port指定的端口,既然都绑定了也就是每时都开着的,就是那个什么standalone模式</span><br><span class="line">listen=YES</span><br><span class="line"></span><br><span class="line">#当使用者登入后使用ls -al 之类的指令查询该档案的管理权时，预设会出现拥有者的UID，而不是该档案拥有者的名称。若是希望出现拥有者的名称，则将此功能开启。</span><br><span class="line">text_userdb_names=NO</span><br><span class="line"></span><br><span class="line">#显示目录清单时是用本地时间还是GMT时间,可以通过mdtm命令来达到一样的效果</span><br><span class="line">use_localtime=NO</span><br><span class="line"></span><br><span class="line">#测试平台优化</span><br><span class="line">#use_sendfile=YES</span><br><span class="line"></span><br><span class="line">################信息类设置################</span><br><span class="line"></span><br><span class="line">#login时显示欢迎信息.如果设置了banner_file则此设置无效</span><br><span class="line">ftpd_banner=欢迎来到湖南三辰Fake-Ta FTP 网站.</span><br><span class="line"></span><br><span class="line">#允许为目录配置显示信息,显示每个目录下面的message_file文件的内容</span><br><span class="line">dirmessage_enable=YES</span><br><span class="line"></span><br><span class="line">#显示会话状态信息,关!</span><br><span class="line">#setproctitle_enable=YES</span><br><span class="line"></span><br><span class="line">############## 文件定义 ##################</span><br><span class="line"></span><br><span class="line">#定义不能更改用户主目录的文件</span><br><span class="line">chroot_list_file=/etc/vsftpd/vsftpd.chroot_list</span><br><span class="line"></span><br><span class="line">#定义限制/允许用户登录的文件</span><br><span class="line">userlist_file=/etc/vsftpd/vsftpd.user_list</span><br><span class="line"></span><br><span class="line">#定义登录信息文件的位置</span><br><span class="line">banner_file=/etc/vsftpd/banner</span><br><span class="line"></span><br><span class="line">#禁止使用的匿名用户登陆时作为密码的电子邮件地址</span><br><span class="line">banned_email_file=/etc/vsftpd.banned_emails</span><br><span class="line"></span><br><span class="line">#日志文件位置</span><br><span class="line">xferlog_file=/var/log/vsftpd.log</span><br><span class="line"></span><br><span class="line">#目录信息文件</span><br><span class="line">message_file=.message</span><br><span class="line"></span><br><span class="line">############## 目录定义 #################</span><br><span class="line"></span><br><span class="line">#定义用户配置文件的目录</span><br><span class="line">user_config_dir=/etc/vsftpd/userconf</span><br><span class="line"></span><br><span class="line">#定义本地用户登陆的根目录,注意定义根目录可以是相对路径也可以是绝对路径.相对路径是针对用户家目录来说的.</span><br><span class="line">local_root=webdisk #此项设置每个用户登陆后其根目录为/home/username/webdisk</span><br><span class="line"></span><br><span class="line">#匿名用户登陆后的根目录</span><br><span class="line">anon_root=/var/ftp</span><br><span class="line"></span><br><span class="line">#############用户连接选项#################</span><br><span class="line"></span><br><span class="line">#可接受的最大client数目</span><br><span class="line">max_clients=100</span><br><span class="line"></span><br><span class="line">#每个ip的最大client数目</span><br><span class="line">max_per_ip=5</span><br><span class="line"></span><br><span class="line">#使用标准的20端口来连接ftp</span><br><span class="line">connect_from_port_20=YES</span><br><span class="line"></span><br><span class="line">#绑定到某个IP,其它IP不能访问</span><br><span class="line">listen_address=192.168.0.2</span><br><span class="line"></span><br><span class="line">#绑定到某个端口</span><br><span class="line">#listen_port=2121</span><br><span class="line"></span><br><span class="line">#数据传输端口</span><br><span class="line">#ftp_data_port=2020</span><br><span class="line"></span><br><span class="line">#pasv连接模式时可以使用port 范围的上界，0 表示任意。默认值为0。</span><br><span class="line">pasv_max_port=0</span><br><span class="line"></span><br><span class="line">#pasv连接模式时可以使用port 范围的下界，0 表示任意。默认值为0。</span><br><span class="line">pasv_min_port=0</span><br><span class="line"></span><br><span class="line">##############数据传输选项#################</span><br><span class="line"></span><br><span class="line">#匿名用户的传输比率(b/s)</span><br><span class="line">anon_max_rate=51200</span><br><span class="line"></span><br><span class="line">#本地用户的传输比率(b/s)</span><br><span class="line">local_max_rate=5120000</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://desert3.iteye.com/blog/1685734" target="_blank" rel="noopener">http://desert3.iteye.com/blog/1685734</a></p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/vsftpd/">vsftpd</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/readthedocs/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">read-the-docs托管学习笔记</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/脚本自动化手册/">
+        <span class="next-text nav-default">脚本自动化手册</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

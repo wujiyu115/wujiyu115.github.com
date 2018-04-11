@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="Gradle 打包"/>
+
+
+
+
+  <meta name="keywords" content="gradle, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/gradle/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> Gradle 打包 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Gradle 打包
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2016-03-13
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/programm/">programm</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是Gradle？"><span class="toc-text">什么是Gradle？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Gradle"><span class="toc-text">安装Gradle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目相关文件"><span class="toc-text">项目相关文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tips"><span class="toc-text">tips</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#国内仓库"><span class="toc-text">国内仓库</span></a></li></ol></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h2 id="什么是Gradle？"><a href="#什么是Gradle？" class="headerlink" title="什么是Gradle？"></a>什么是Gradle？</h2><p>Gradle是一种依赖管理工具，基于Groovy语言，面向Java应用为主，它抛弃了基于XML的各种繁琐配置，取而代之的是一种基于Groovy的内部领域特定（DSL）语言</p>
+<h2 id="安装Gradle"><a href="#安装Gradle" class="headerlink" title="安装Gradle"></a>安装Gradle</h2><p>Android Studio 默认下载目录,如果下载太慢可以手动从官网下载放到对应目录</p>
+<ul>
+<li><strong>Mac</strong>: /Users/&lt;用户名&gt;/.gradle/wrapper/dists** 目录</li>
+<li><strong>Win</strong>: C:\Documents and Settings&lt;用户名&gt;.gradle\wrapper\dists 目录</li>
+</ul>
+<a id="more"></a>
+<h2 id="项目相关文件"><a href="#项目相关文件" class="headerlink" title="项目相关文件"></a>项目相关文件</h2><p>gradle配置文件有模块和工程配置,大概结构如下:<br><img src="http://farwmarth.bestnewbee.com/images/gradle_project.png" alt="gradle_project.png"></p>
+<p>local.properties : sdk目录<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sdk.dir=E\:\\tools\\adt-bundle-windows-x86-20140702\\adt-bundle-windows-x86-20140702\\sdk</span><br></pre></td></tr></table></figure></p>
+<p>gradle.properties : 变量<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemProp.http.proxyHost=127.0.0.1</span><br><span class="line">systemProp.http.proxyPort=16823</span><br><span class="line">systemProp.https.proxyHost=127.0.0.1</span><br><span class="line">systemProp.https.proxyPort=16823</span><br></pre></td></tr></table></figure></p>
+<p>settings.gradle<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">--包含要编译的module</span><br><span class="line">include &apos;:libs:StickyHeadersRecyclerView&apos;, &apos;:&apos;</span><br><span class="line">include &apos;:&apos;</span><br></pre></td></tr></table></figure></p>
+<p>build.gradle <a href="http://developer.android.com/intl/zh-cn/tools/building/configuring-gradle.html" target="_blank" rel="noopener">http://developer.android.com/intl/zh-cn/tools/building/configuring-gradle.html</a><br><figure class="highlight gradle"><table><tr><td class="code"><pre><span class="line"><span class="comment">//添加插件:声明为android程序</span></span><br><span class="line">apply plugin: <span class="string">'com.android.application'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//脚本本身依赖的库和配置</span></span><br><span class="line"><span class="keyword">buildscript</span> &#123;</span><br><span class="line">    <span class="comment">//代码库</span></span><br><span class="line">    <span class="keyword">repositories</span> &#123;</span><br><span class="line">        mavenCentral()</span><br><span class="line">        jcenter()</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">dependencies</span> &#123;</span><br><span class="line">        <span class="keyword">classpath</span> <span class="string">'com.android.tools.build:gradle:1.5.0'</span> <span class="comment">//依赖gradle版本</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//所有工程统一配置</span></span><br><span class="line"><span class="keyword">allprojects</span> &#123;</span><br><span class="line">    <span class="keyword">repositories</span> &#123;</span><br><span class="line">        maven &#123; url <span class="string">"https://jitpack.io"</span> &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">repositories</span> &#123;</span><br><span class="line">    mavenCentral()</span><br><span class="line">    jcenter()</span><br><span class="line">    maven &#123; url <span class="string">"https://jitpack.io"</span> &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//android部分配置</span></span><br><span class="line">android &#123;</span><br><span class="line">    <span class="comment">//编译sdk版本</span></span><br><span class="line">    compileSdkVersion <span class="number">23</span></span><br><span class="line">    <span class="comment">//打包工具版本</span></span><br><span class="line">    buildToolsVersion <span class="string">'23.0.2'</span></span><br><span class="line">   <span class="comment">//打包选项</span></span><br><span class="line">    packagingOptions &#123;</span><br><span class="line">        <span class="comment">//排除</span></span><br><span class="line">        <span class="keyword">exclude</span> <span class="string">'proguard-project.txt'</span></span><br><span class="line">        <span class="keyword">exclude</span> <span class="string">'project.properties'</span></span><br><span class="line">    &#125;</span><br><span class="line">   <span class="comment">//默认配置</span></span><br><span class="line">    defaultConfig &#123;</span><br><span class="line">        <span class="comment">//包名</span></span><br><span class="line">        applicationId <span class="string">"com.amaze.filemanager"</span></span><br><span class="line">        <span class="comment">//最低支持sdk版本</span></span><br><span class="line">        minSdkVersion <span class="number">14</span></span><br><span class="line">        <span class="comment">//目标sdk版本</span></span><br><span class="line">        targetSdkVersion <span class="number">23</span></span><br><span class="line">       <span class="comment">//版本号</span></span><br><span class="line">        versionCode <span class="number">36</span></span><br><span class="line">        <span class="comment">//版本字符串</span></span><br><span class="line">        versionName <span class="string">"3.0.2 "</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//签名配置</span></span><br><span class="line">    signingConfigs &#123;</span><br><span class="line">        release&#123;</span><br><span class="line">                storeFile <span class="keyword">file</span>(×.keystore)</span><br><span class="line">                storePassword ×××</span><br><span class="line">                keyAlias ××××</span><br><span class="line">                keyPassword ×××</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//编译类型</span></span><br><span class="line">    buildTypes &#123;</span><br><span class="line">        <span class="comment">//正式版</span></span><br><span class="line">        release &#123;</span><br><span class="line">            signingConfig signingConfigs.release</span><br><span class="line">             --是否混淆</span><br><span class="line">             minifyEnabled <span class="keyword">true</span></span><br><span class="line">             --proguard文件</span><br><span class="line">             proguardFiles getDefaultProguardFile(<span class="string">'proguard-android.txt'</span>), <span class="string">'proguard-rules.pro'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// Java 的版本配置</span></span><br><span class="line">    compileOptions &#123;</span><br><span class="line">            <span class="keyword">sourceCompatibility</span> JavaVersion.VERSION_1_7</span><br><span class="line">            <span class="keyword">targetCompatibility</span> JavaVersion.VERSION_1_7</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//lint检查</span></span><br><span class="line">    lintOptions &#123;</span><br><span class="line">        abortOnError <span class="keyword">false</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//源目录设置</span></span><br><span class="line">    <span class="keyword">sourceSets</span> &#123;</span><br><span class="line">        main &#123;</span><br><span class="line">            assets.srcDirs = [<span class="string">'assets'</span>]</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// Move the tests to tests/java, tests/res, etc...</span></span><br><span class="line">        instrumentTest.setRoot(<span class="string">'tests'</span>)</span><br><span class="line">        debug.setRoot(<span class="string">'build-types/debug'</span>)</span><br><span class="line">        release.setRoot(<span class="string">'build-types/release'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//不同版本打包</span></span><br><span class="line">    productFlavors &#123;</span><br><span class="line">        fdroid &#123;</span><br><span class="line">            buildConfigField <span class="string">"boolean"</span>, <span class="string">"IS_VERSION_FDROID"</span>, <span class="string">"true"</span></span><br><span class="line">             packageName=<span class="string">'com.example.application1'</span></span><br><span class="line">             manifest.srcFile <span class="string">'exampleapk/AndroidManifest1.xml'</span></span><br><span class="line">        &#125;</span><br><span class="line">        play &#123;</span><br><span class="line">            buildConfigField <span class="string">"boolean"</span>, <span class="string">"IS_VERSION_FDROID"</span>, <span class="string">"false"</span></span><br><span class="line">            signingConfig signingConfigs.config</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//包依赖</span></span><br><span class="line"><span class="keyword">dependencies</span> &#123;</span><br><span class="line">     <span class="comment">//依赖其他工程</span></span><br><span class="line">    <span class="keyword">compile</span> <span class="keyword">project</span>(<span class="string">":lib"</span>)</span><br><span class="line">    <span class="comment">// 远程包</span></span><br><span class="line">    <span class="keyword">compile</span> <span class="string">'com.android.support:appcompat-v7:19.0.1'</span></span><br><span class="line">    <span class="comment">//本地jar包</span></span><br><span class="line">    <span class="keyword">compile</span> <span class="keyword">fileTree</span>(dir: <span class="string">'libs'</span>, <span class="keyword">include</span>: [<span class="string">'*.jar'</span>])</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> Properties props = <span class="keyword">new</span> Properties()</span><br><span class="line"><span class="keyword">def</span> propFile = <span class="keyword">new</span> <span class="keyword">File</span>(<span class="string">'signing.properties'</span>)</span><br><span class="line"><span class="keyword">if</span> (propFile.canRead()) &#123;</span><br><span class="line">            props.load(<span class="keyword">new</span> FileInputStream(propFile))</span><br><span class="line">            <span class="keyword">if</span> (props != <span class="keyword">null</span> &amp;&amp;</span><br><span class="line">                    props.containsKey(<span class="string">'STORE_FILE'</span>) &amp;&amp;</span><br><span class="line">                    props.containsKey(<span class="string">'STORE_PASSWORD'</span>) &amp;&amp;</span><br><span class="line">                    props.containsKey(<span class="string">'KEY_ALIAS'</span>) &amp;&amp;</span><br><span class="line">                    props.containsKey(<span class="string">'KEY_PASSWORD'</span>)) &#123;</span><br><span class="line">                    android.signingConfigs.release.storeFile = <span class="keyword">file</span>(props[<span class="string">'STORE_FILE'</span>])</span><br><span class="line">                    android.signingConfigs.release.storePassword = props[<span class="string">'STORE_PASSWORD'</span>]</span><br><span class="line">                    android.signingConfigs.release.keyAlias = props[<span class="string">'KEY_ALIAS'</span>]</span><br><span class="line">                    android.signingConfigs.release.keyPassword = props[<span class="string">'KEY_PASSWORD'</span>]</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">println</span> <span class="string">'signing.properties found but some entries are missing'</span></span><br><span class="line">                    android.buildTypes.release.signingConfig = <span class="keyword">null</span></span><br><span class="line">            &#125;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">println</span> <span class="string">'signing.properties not found'</span></span><br><span class="line">        android.buildTypes.release.signingConfig = <span class="keyword">null</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h2><h3 id="国内仓库"><a href="#国内仓库" class="headerlink" title="国内仓库"></a>国内仓库</h3><p>修改项目根目录下的build.gradle，将jcenter()或者mavenCentral()替换掉即可：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">allprojects &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        maven&#123; url &apos;http://maven.oschina.net/content/groups/public/&apos;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>全局配置:USER_HOME/.gradle/init.gradle<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">allprojects&#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        def REPOSITORY_URL = &apos;http://maven.oschina.net/content/groups/public&apos;</span><br><span class="line">        all &#123; ArtifactRepository repo -&gt;</span><br><span class="line">            if(repo instanceof MavenArtifactRepository)&#123;</span><br><span class="line">                def url = repo.url.toString()</span><br><span class="line">                if (url.startsWith(&apos;https://repo1.maven.org/maven2&apos;) || url.startsWith(&apos;https://jcenter.bintray.com/&apos;)) &#123;</span><br><span class="line">                    project.logger.lifecycle &quot;Repository $&#123;repo.url&#125; replaced by $REPOSITORY_URL.&quot;</span><br><span class="line">                    remove repo</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        maven &#123;</span><br><span class="line">            url REPOSITORY_URL</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/gradle/">gradle</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/服务器的一次调优/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">服务器的一次调优</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/mysql备忘/">
+        <span class="next-text nav-default">mysql 备忘录</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

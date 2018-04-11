@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="初入wordpress"/>
+
+
+
+
+  <meta name="keywords" content="wordpress, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/初入wordpress/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> 初入wordpress - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          初入wordpress
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2012-12-28
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/wordpress/">wordpress</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#申请域名"><span class="toc-text">申请域名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#连接vps"><span class="toc-text">连接vps</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#绑定域名"><span class="toc-text">绑定域名</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ngnix配置"><span class="toc-text">ngnix配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据导入。"><span class="toc-text">数据导入。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#选择写博工具"><span class="toc-text">选择写博工具.</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <p>刚开始玩网站，记录一下。多谢<a href="http://www.litefeel.com" target="_blank" rel="noopener">litefeel</a>的帮忙</p>
+<h2 id="申请域名"><a href="#申请域名" class="headerlink" title="申请域名"></a>申请域名</h2><ul>
+<li>注册: <code>godaddy.com</code> ,注册教程:<a href="http://jingyan.baidu.com/article/414eccf63bb2ea6b421f0a47.html" title="http://jingyan.baidu.com/article/414eccf63bb2ea6b421f0a47.html" target="_blank" rel="noopener">http://jingyan.baidu.com/article/414eccf63bb2ea6b421f0a47.html</a></li>
+</ul>
+<a id="more"></a>
+<ul>
+<li>域名解析:DNSpod 教程: <a href="http://xianhuo.org/godaddy-yuming-dnspod-jiexi.html" title="http://xianhuo.org/godaddy-yuming-dnspod-jiexi.html" target="_blank" rel="noopener">http://xianhuo.org/godaddy-yuming-dnspod-jiexi.html</a></li>
+</ul>
+<h2 id="连接vps"><a href="#连接vps" class="headerlink" title="连接vps"></a>连接vps</h2><p>推荐两个工具:</p>
+<ul>
+<li><code>putty</code> :纯命令行</li>
+<li><code>winscp</code>:有图形界面</li>
+</ul>
+<p><strong>putty</strong>:</p>
+<p><a href="http://farwmarth.bestnewbee.com/images/uploads/2012/12/QQ20121228192833.png" target="_blank" rel="noopener"><img src="http://farwmarth.bestnewbee.com/images/uploads/2012/12/QQ20121228192833.png" alt="QQ截图20121228192833" title="QQ截图20121228192833"></a></p>
+<p><strong>上传文件 用pscp . –r 参数递归拷贝目录.</strong><br><code>pscp -P 端口号 -l 用户 -r 本地路径 服务器ip:服务器目录</code></p>
+<p><strong>winscp:</strong></p>
+<p><a href="http://farwmarth.bestnewbee.com/images/uploads/2012/12/QQ20121228193513.png" target="_blank" rel="noopener"><img src="http://farwmarth.bestnewbee.com/images/uploads/2012/12/QQ20121228193513.png" alt="QQ截图20121228193513" title="QQ截图20121228193513"></a></p>
+<p>还可以绑定putty来启动.</p>
+<p><a href="http://farwmarth.bestnewbee.com/images/uploads/2012/12/QQ20121228193814.png" target="_blank" rel="noopener"><img src="http://farwmarth.bestnewbee.com/images/uploads/2012/12/QQ20121228193814.png" alt="QQ截图20121228193814" title="QQ截图20121228193814"></a></p>
+<p>熟悉的图形界面.</p>
+<p><a href="http://farwmarth.bestnewbee.com/images/uploads/2012/12/QQ20121228194100.png" target="_blank" rel="noopener"><img src="http://farwmarth.bestnewbee.com/images/uploads/2012/12/QQ20121228194100.png" alt="QQ截图20121228194100" title="QQ截图20121228194100"></a></p>
+<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p>vps上的环境litefeel都搭好了,centos +lnmp ,服务器是nginx:</p>
+<h3 id="ngnix配置"><a href="#ngnix配置" class="headerlink" title="ngnix配置"></a>ngnix配置</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">log_format  域名 '$remote_addr - $remote_user [$time_local] $request '</span><br><span class="line">             '$status $body_bytes_sent $http_referer '</span><br><span class="line">             '$http_user_agent $http_x_forwarded_for';</span><br><span class="line">server</span><br><span class="line">    &#123;</span><br><span class="line">        listen       80;</span><br><span class="line">        server_name 域名;</span><br><span class="line">        index index.html index.htm index.php default.html default.htm default.php;</span><br><span class="line">        root  项目目录;</span><br><span class="line">        include wordpress.conf;</span><br><span class="line">        location ~ .*.(php|php5)?$</span><br><span class="line">            &#123;</span><br><span class="line">                try_files $uri =404;</span><br><span class="line">                fastcgi_pass  unix:/tmp/php-cgi.sock;</span><br><span class="line">                fastcgi_index index.php;</span><br><span class="line">                include fcgi.conf;</span><br><span class="line">            &#125;</span><br><span class="line">        location ~ .*.(gif|jpg|jpeg|png|bmp|swf)$</span><br><span class="line">            &#123;</span><br><span class="line">                expires      30d;</span><br><span class="line">            &#125;</span><br><span class="line">        location ~ .*.(js|css)?$</span><br><span class="line">            &#123;</span><br><span class="line">                expires      1y;</span><br><span class="line">            &#125;</span><br><span class="line">        access_log  /home/wwwlogs/*.log  域名;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>检测配置是否正常:/usr/local/nginx/sbin/nginx –t</li>
+<li>重启nginx: /usr/local//sbin/nginx -s reload</li>
+</ul>
+<p>ok 网站搭建好了。</p>
+<h2 id="数据导入。"><a href="#数据导入。" class="headerlink" title="数据导入。"></a>数据导入。</h2><p>我的数据是从cnblog上导过来的。用了一个插件。导数据过程中出现warming.是网站目录的文件所属用户不正确的原因。可参考:<a href="http://www.litefeel.com/solve-wordpress-need-to-login-to-ftp/" title="http://www.litefeel.com/solve-wordpress-need-to-login-to-ftp/" target="_blank" rel="noopener">http://www.litefeel.com/solve-wordpress-need-to-login-to-ftp/</a>.其实也可以通过mysql导入。/usr/bin/mysql -u root –p 登录mysql后用导入命令.</p>
+<h2 id="选择写博工具"><a href="#选择写博工具" class="headerlink" title="选择写博工具."></a>选择写博工具.</h2><ul>
+<li><p><code>wordpress for android</code>:我的wordpress是3.5的版本，默认开启了xml-rpc服务。这个工具还是挺不错，可以在android手机上管理自己的博客，评论文章等功能。</p>
+</li>
+<li><p><code>Windows Live Writer</code> :离线写作的好工具.</p>
+</li>
+</ul>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2012/12/QQ20121228195948.png" alt="QQ截图20121228195948"></p>
+<p>唯一要注意的是日志的远程发布url和日志类型。我选择的是wordpress2.2+</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2012/12/QQ20121228200109.png" alt="QQ截图20121228200109"></p>
+<p>Down.</p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/wordpress/">wordpress</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/用bat来提高工作效率/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">用bat来提高工作效率</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/在github上建立自己的开源项目/">
+        <span class="next-text nav-default">在github上建立自己的开源项目</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

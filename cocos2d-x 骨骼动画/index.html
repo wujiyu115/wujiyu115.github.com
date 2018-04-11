@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="cocos2d-x 骨骼动画"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/cocos2d-x 骨骼动画/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> cocos2d-x 骨骼动画 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          cocos2d-x 骨骼动画
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2013-09-03
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/cocos2d-x/">cocos2d-x</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#何谓骨骼动画"><span class="toc-text">何谓骨骼动画?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#骨骼动画的优势"><span class="toc-text">骨骼动画的优势?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何制作骨骼动画"><span class="toc-text">如何制作骨骼动画?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DragonBones"><span class="toc-text">DragonBones</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h2 id="何谓骨骼动画"><a href="#何谓骨骼动画" class="headerlink" title="何谓骨骼动画?"></a>何谓骨骼动画?</h2><p> 骨骼动画包括两部分:蒙皮和系列相关联的骨头.在时间线上蒙皮会跟随骨骼的位置改变位置形成动画。 </p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/09/image.png" alt="image"> </p>
+<a id="more"></a>
+<h2 id="骨骼动画的优势"><a href="#骨骼动画的优势" class="headerlink" title="骨骼动画的优势?"></a>骨骼动画的优势?</h2><ol>
+<li>骨骼绑定可以让动画更精准，更真实自然，并可通过程序动态控制</li>
+<li>动画各部分采用拼接方式，占用位图／内存资源少</li>
+<li>骨骼显示对象与骨骼的逻辑分离，可在不影响动画播放的情况下动态更换</li>
+</ol>
+<h2 id="如何制作骨骼动画"><a href="#如何制作骨骼动画" class="headerlink" title="如何制作骨骼动画?"></a>如何制作骨骼动画?</h2><p> 这个是设计人员的活，flash cc 中已经取消了骨骼动画,flash cs6中还有。<br> 详解：<a href="http://help.adobe.com/zh_CN/flash/cs/using/WS58BD3A02-DA25-488f-B534-AE5463A24833.html" target="_blank" rel="noopener">http://help.adobe.com/zh_CN/flash/cs/using/WS58BD3A02-DA25-488f-B534-AE5463A24833.html</a><br>　　　　<a href="http://www.adobe.com/cn/devnet/flash/articles/character_animation_ik.html" target="_blank" rel="noopener">http://www.adobe.com/cn/devnet/flash/articles/character_animation_ik.html</a></p>
+<h2 id="DragonBones"><a href="#DragonBones" class="headerlink" title="DragonBones"></a>DragonBones</h2><p>　　DragonBones是一套开源的 2D骨骼动画框架和工具，它包含了基于Flash Pro的骨骼动画编辑面板.DragonBonesDesignPanel及骨骼动画ActionScript框架。它可以让开发者运用熟悉的Flash Pro元</p>
+<p>件及时间轴编辑方式，快速创建2D骨骼动画，并运用到Flash或其他技术的应用中.DragonBones在cocoStudio适配下可以用于cocos2d-x.DragonBones快速指南:<a href="http://dragonbones.github.io/getting_started_cn.html DragonBones" target="_blank" rel="noopener">http://dragonbones.github.io/getting_started_cn.html DragonBones</a></p>
+<p>DragonBone and cocos2d-x </p><p> 1 <a href="http://zengrong.net/post/1915.htm" target="_blank" rel="noopener">zengrong</a>修改的DragonBone插件，为cocos2d-x专用.下载地址: <a href="http://zengrong.net/download/115/" title="http://zengrong.net/download/115/" target="_blank" rel="noopener">http://zengrong.net/download/115/</a> </p><p> 2 导出zip格式。 </p><p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/09/image1.png" alt="image">  </p><p>3 导出的zip分为两部分，一个xml文件包括骨骼的信息,以及导出的图片。 </p><p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/09/image2.png" alt="image">  </p><p>4 将zip解压,打开cocostudio动作编辑器.导入flash项目，要选择解压的skeleton_and_texture.xml </p><p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/09/image3.png" alt="image">  </p><p></p>
+<p>5通过cocostudio导出的包括三个文件</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/09/image4.png" alt="image"> </p>
+<p>6 在代码中使用<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">CCArmatureDataManager::sharedArmatureDataManager()-&gt;addArmatureFileInfo(<span class="string">"warr0.png"</span>, <span class="string">"warr0.plist"</span>, <span class="string">"warr.ExportJson"</span>);</span><br><span class="line">CCArmature *armature = CCArmature::create(<span class="string">"warr"</span>);</span><br><span class="line">armature-&gt;getAnimation()-&gt;playByIndex(<span class="number">3</span>);</span><br><span class="line">armature-&gt;setScale(<span class="number">0.5f</span>);</span><br><span class="line">armature-&gt;setPosition(ccp(visibleSize.width * <span class="number">0.5</span>, visibleSize.height * <span class="number">0.5</span>));</span><br><span class="line"><span class="keyword">this</span>-&gt;addChild(armature,<span class="number">2</span>);</span><br></pre></td></tr></table></figure></p>
+<p>要注意的是CCArmature::create(“warr”);这个要在ExportJson中描述的name一样</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/09/image5.png" alt="image"><br> 运行效果</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/09/image6.png" alt="image"> </p>
+<p><strong>参考:</strong><br> <a href="http://zengrong.net/post/1915.htm" target="_blank" rel="noopener">http://zengrong.net/post/1915.htm</a><br> <a href="http://zengrong.net/post/1911.htm" target="_blank" rel="noopener">http://zengrong.net/post/1911.htm</a></p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/随地乱吐槽/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">随地乱吐槽</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/抓抓包/">
+        <span class="next-text nav-default">抓抓包</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

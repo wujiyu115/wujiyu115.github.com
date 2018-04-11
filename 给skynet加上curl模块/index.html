@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="给skynet加上curl模块"/>
+
+
+
+
+  <meta name="keywords" content="luacurl, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/给skynet加上curl模块/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> 给skynet加上curl模块 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          给skynet加上curl模块
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2015-07-02
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/c/">c++</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#编译curl"><span class="toc-text">编译curl</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译lua-curlv3-gt"><span class="toc-text">编译lua-curlv3 &gt;</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <p>&nbsp;&nbsp;现在项目里用的是早期的skynet版本,一直不支持http的get,post. 充值与后台交互方式都是采用socket的方式。大部分需求都尽量避开这一块，最近策划又提了个需求,关服开服状态要反应到客户端。这个项目服务器列表是直接是一个静态文件放在web容器中.思路很简单,用jsp写个服务来修改服务器状态(这里应该做安全检验),各服务器开关服，或者服务器崩溃时将状态上报到web服务上. 关键就在这个skynet的http上.</p><p></p><br>&nbsp;&nbsp;尝试用skynet的socket来模拟http请求,一直处于阻塞状态。没有去细究. 然后从github找了个luacurl库 : <a href="https://github.com/Lua-cURL/Lua-cURLv3" title="https://github.com/Lua-cURL/Lua-cURLv3" target="_blank" rel="noopener">https://github.com/Lua-cURL/Lua-cURLv3</a>&nbsp; , 然后把依赖库<a href="http://curl.haxx.se/download.html" title="http://curl.haxx.se/download.html" target="_blank" rel="noopener">http://curl.haxx.se/download.html</a> 也down下来.<p></p>
+<a id="more"></a>
+<h2 id="编译curl"><a href="#编译curl" class="headerlink" title="编译curl"></a>编译curl</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./configure --prefix=/usr/local/curl</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+<h2 id="编译lua-curlv3-gt"><a href="#编译lua-curlv3-gt" class="headerlink" title="编译lua-curlv3 &gt;"></a>编译lua-curlv3 &gt;</h2><p>这步有点蛋疼,刚开始是lua路径不对,默认写是的5.1的目录，skynet我们用的是lua 5.2.而且安装的路径也不一样，修改之后，一直卡在找不到curl/curl.h这个头文件上。最后修改makefile把头文件路径加上去解决了这个问题,修改的部分makefile代码:<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">include .config</span><br><span class="line"></span><br><span class="line">T=lcurl</span><br><span class="line"></span><br><span class="line">UNAME            ?= $(shell uname)</span><br><span class="line">DESTDIR          ?= /</span><br><span class="line">PKG_CONFIG       ?= pkg-config</span><br><span class="line">INSTALL          ?= install</span><br><span class="line">RM               ?= rm</span><br><span class="line">LUA_IMPL         ?= lua</span><br><span class="line">CC               ?= $(MAC_ENV) gcc</span><br><span class="line"></span><br><span class="line">LUA_VERSION       = $(shell lua -v| awk '&#123; print substr($$2,1,3) &#125;')</span><br><span class="line"><span class="meta">#</span> ifeq ($(LUA_VERSION),)</span><br><span class="line"><span class="meta">#</span> LUA_CMOD         ?= /usr/lib/lua/5.1</span><br><span class="line"><span class="meta">#</span> LUA_LMOD         ?= /usr/share/lua/5.1</span><br><span class="line"><span class="meta">#</span> LIBDIR           ?= /usr/lib</span><br><span class="line"><span class="meta">#</span> LUA_INC          ?= /usr/include</span><br><span class="line"><span class="meta">#</span> CURL_LIBS         = -L/usr/local/lib -lcurl</span><br><span class="line"><span class="meta">#</span> else</span><br><span class="line"><span class="meta">#</span> LUA_CMOD         ?= $(shell $(PKG_CONFIG) --variable INSTALL_CMOD $(LUA_IMPL))</span><br><span class="line"><span class="meta">#</span> LUA_LMOD         ?= $(shell $(PKG_CONFIG) --variable INSTALL_LMOD $(LUA_IMPL))</span><br><span class="line"><span class="meta">#</span> LIBDIR           ?= $(shell $(PKG_CONFIG) --variable libdir $(LUA_IMPL))</span><br><span class="line"><span class="meta">#</span> LUA_INC          ?= $(shell $(PKG_CONFIG) --variable includedir $(LUA_IMPL))</span><br><span class="line"><span class="meta">#</span> LUA_LIBS          = $(shell $(PKG_CONFIG) --libs $(LUA_IMPL))</span><br><span class="line"><span class="meta">#</span> CURL_LIBS         = $(shell $(PKG_CONFIG) --libs libcurl)</span><br><span class="line"><span class="meta">#</span> endif</span><br><span class="line"></span><br><span class="line">LUA_CMOD         ?= /usr/local/lib/lua/$(LUA_VERSION)</span><br><span class="line">LUA_LMOD         ?= /usr/local/share/lua/$(LUA_VERSION)</span><br><span class="line">LIBDIR           ?= /usr/lib</span><br><span class="line">LUA_INC          ?= /usr/local/include/</span><br><span class="line">CURL_INC          ?= /usr/local/curl/include/</span><br><span class="line">CURL_LIBS         = -L/usr/local/curl/lib -lcurl</span><br><span class="line"></span><br><span class="line">ifeq ($(UNAME), Linux)</span><br><span class="line">OS_FLAGS         ?= -shared</span><br><span class="line">LIBS              = -lrt -ldl $(CURL_LIBS)</span><br><span class="line">endif</span><br><span class="line">ifeq ($(UNAME), Darwin)</span><br><span class="line">OS_FLAGS         ?= -bundle -undefined dynamic_lookup</span><br><span class="line">MAC_ENV          ?= env MACOSX_DEPLOYMENT_TARGET='10.3'</span><br><span class="line">LIBS              = -ldl $(CURL_LIBS)</span><br><span class="line">endif</span><br><span class="line"></span><br><span class="line">ifneq ($(DEBUG),)</span><br><span class="line">DBG               = -ggdb</span><br><span class="line">endif</span><br><span class="line"></span><br><span class="line">ifeq ($(DEV),)</span><br><span class="line">WARN              = -Wall -Wno-unused-value</span><br><span class="line">else</span><br><span class="line">WARN              = -Wall -W -Waggregate-return -Wcast-align -Wmissing-prototypes -Wnested-externs -Wshadow -Wwrite-strings -pedantic</span><br><span class="line">endif</span><br><span class="line"></span><br><span class="line">INCLUDES          = -I$(LUA_INC)   -I$(CURL_INC)</span><br><span class="line">DEFINES           =</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">COMMONFLAGS       = -O2 -g -pipe -fPIC $(OS_FLAGS) $(DBG)</span><br><span class="line">LF                = $(LIBS) $(LDFLAGS)</span><br><span class="line">CF                = $(INCLUDES) $(DEFINES) $(COMMONFLAGS) $(WARN) -DPTHREADS $(CFLAGS)</span><br><span class="line"></span><br><span class="line">SCR               = src/lua/*.lua src/lua/cURL/*.lua src/lua/cURL/impl/*.lua</span><br><span class="line">SRCS              = src/*.c</span><br><span class="line"></span><br><span class="line">BIN               = $(T).so</span><br><span class="line"></span><br><span class="line">all: $(BIN)</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span>(BIN): $(SRCS)</span><br><span class="line">    $(CC) $(CF) -o $@ $^ $(LF)</span><br><span class="line">    # @echo $(LUA_CMOD) </span><br><span class="line"></span><br><span class="line">install: all</span><br><span class="line">    $(INSTALL) -d $(DESTDIR)$(LUA_CMOD) $(DESTDIR)$(LUA_LMOD)/cURL/impl</span><br><span class="line">    $(INSTALL) $(BIN) $(DESTDIR)$(LUA_CMOD)</span><br><span class="line">    $(INSTALL) src/lua/cURL.lua $(DESTDIR)$(LUA_LMOD)</span><br><span class="line">    $(INSTALL) src/lua/cURL/safe.lua $(DESTDIR)$(LUA_LMOD)/cURL</span><br><span class="line">    $(INSTALL) src/lua/cURL/utils.lua $(DESTDIR)$(LUA_LMOD)/cURL</span><br><span class="line">    $(INSTALL) src/lua/cURL/impl/cURL.lua $(DESTDIR)$(LUA_LMOD)/cURL/impl</span><br><span class="line"></span><br><span class="line">clean:</span><br><span class="line">    $(RM) -f $(BIN)</span><br></pre></td></tr></table></figure></p>
+<p>编译好后在目录生成lcurl.so文件。基本上就ok了。  </p><p><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">local curl = require &quot;lcurl&quot;</span><br><span class="line">curl.easy()</span><br><span class="line">      :setopt_url(url)</span><br><span class="line">      :setopt_writefunction(io.stderr) -- use io.stderr:write()</span><br><span class="line">      :perform()</span><br><span class="line">      :close()</span><br></pre></td></tr></table></figure></p>
+<p>这样require就可以加载这个动态链接库跑过来了</p>
+<p>默认是同步的,异步访问:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">local cURL = require(&quot;cURL&quot;)</span><br><span class="line"></span><br><span class="line">-- setup easy and url</span><br><span class="line">c1 = cURL.easy&#123;url = &quot;http://www.lua.org/&quot;&#125;</span><br><span class="line">c2 = cURL.easy&#123;url = &quot;http://luajit.org/&quot;&#125;</span><br><span class="line"></span><br><span class="line">m = cURL.multi()</span><br><span class="line">  :add_handle(c1)</span><br><span class="line">  :add_handle(c2)</span><br><span class="line"></span><br><span class="line">print(&quot;-------------------------&quot;)</span><br><span class="line">for data, type, easy in m:iperform() do</span><br><span class="line">  if type == &quot;data&quot; and c1 == easy then print(data) end</span><br><span class="line">  if type == &quot;data&quot; and c2 == easy then  print(data) end</span><br><span class="line">end</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/luacurl/">luacurl</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/wordpress迁移到hexo/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">wordpress迁移到hexo</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/翻翻旧货/">
+        <span class="next-text nav-default">翻翻旧货</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="NodeJs初探"/>
+
+
+
+
+  <meta name="keywords" content="nodejs, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/node/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> NodeJs初探 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          NodeJs初探
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2016-08-12
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/programm/">programm</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#nodejs"><span class="toc-text">nodejs</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#mac-node使用"><span class="toc-text">mac node使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#linux-node"><span class="toc-text">linux node</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#nodejs常用命令"><span class="toc-text">nodejs常用命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用例"><span class="toc-text">用例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#创建最简单的webserver"><span class="toc-text">创建最简单的webserver</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#断言-assert"><span class="toc-text">断言(assert)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#node-base64"><span class="toc-text">node base64</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#npm"><span class="toc-text">npm</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#npm常用命令"><span class="toc-text">npm常用命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#npm-使用新资源库"><span class="toc-text">npm 使用新资源库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Node-sass-安装失败解决方案"><span class="toc-text">Node-sass 安装失败解决方案</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#usr-bin-env-‘node’-No-such-file-or-directory"><span class="toc-text">/usr/bin/env: ‘node’: No such file or directory</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#node调试"><span class="toc-text">node调试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#node后台运行"><span class="toc-text">node后台运行</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h2 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h2><p>node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="mac-node使用"><a href="#mac-node使用" class="headerlink" title="mac node使用"></a>mac node使用</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>安装</span><br><span class="line">brew install node</span><br><span class="line"><span class="meta">#</span>升级node</span><br><span class="line">brew upgrade node</span><br></pre></td></tr></table></figure>
+<h4 id="linux-node"><a href="#linux-node" class="headerlink" title="linux node"></a>linux node</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>ubuntu安装6.x</span><br><span class="line">curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -</span><br><span class="line">sudo apt-get install -y nodejs</span><br><span class="line"><span class="meta">#</span>升级node</span><br><span class="line">npm install -g n</span><br><span class="line">n stable</span><br><span class="line"><span class="meta">#</span>升级npm</span><br><span class="line">npm install npm -g</span><br></pre></td></tr></table></figure>
+<h4 id="nodejs常用命令"><a href="#nodejs常用命令" class="headerlink" title="nodejs常用命令"></a>nodejs常用命令</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>查看版本</span><br><span class="line">node -v</span><br></pre></td></tr></table></figure>
+<h3 id="用例"><a href="#用例" class="headerlink" title="用例"></a>用例</h3><h4 id="创建最简单的webserver"><a href="#创建最简单的webserver" class="headerlink" title="创建最简单的webserver"></a>创建最简单的webserver</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> hostname = <span class="string">'127.0.0.1'</span>;</span><br><span class="line"><span class="keyword">const</span> port = <span class="number">3000</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> server = http.createServer(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line">  res.statusCode = <span class="number">200</span>;</span><br><span class="line">  res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/plain'</span>);</span><br><span class="line">  res.end(<span class="string">'Hello World\n'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">server.listen(port, hostname, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`Server running at http://<span class="subst">$&#123;hostname&#125;</span>:<span class="subst">$&#123;port&#125;</span>/`</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="断言-assert"><a href="#断言-assert" class="headerlink" title="断言(assert)"></a>断言(assert)</h4><p>当需要在一个值为FALSE时中断当前操作的话，可以使用断言<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> assert  = <span class="built_in">require</span> (<span class="string">"assert"</span>)</span><br><span class="line">assert(<span class="literal">true</span>)<span class="comment">//成功</span></span><br><span class="line">assert(<span class="number">1</span>)<span class="comment">//成功</span></span><br><span class="line">assert(<span class="literal">false</span>,<span class="string">"it's false"</span>)<span class="comment">//触发断言</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//deepEqual用于比较对象的属性是否相等,但会忽略原型链上的属性,原始值使用==</span></span><br><span class="line"><span class="keyword">const</span> obj1 = &#123;</span><br><span class="line">  a : &#123;</span><br><span class="line">    b : <span class="number">1</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> obj2 = &#123;</span><br><span class="line">  a : &#123;</span><br><span class="line">    b : <span class="number">2</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> obj3 = &#123;</span><br><span class="line">  a : &#123;</span><br><span class="line">    b : <span class="number">1</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> obj4 = <span class="built_in">Object</span>.create(obj1);</span><br><span class="line"></span><br><span class="line">assert.deepEqual(obj1, obj1);</span><br><span class="line"><span class="comment">//同一对象成功</span></span><br><span class="line">assert.deepEqual(obj1, obj2);</span><br><span class="line"><span class="comment">//失败,对象值不相等</span></span><br><span class="line">assert.deepEqual(obj1, obj3);</span><br><span class="line"><span class="comment">//成功,值相等</span></span><br><span class="line">assert.deepEqual(obj1, obj4);</span><br><span class="line"><span class="comment">//失败,忽略原型链上的值</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="node-base64"><a href="#node-base64" class="headerlink" title="node base64"></a>node base64</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="keyword">new</span> Buffer(<span class="string">"Hello World"</span>).toString(<span class="string">'base64'</span>));</span><br><span class="line">&lt;!--SGVsbG8gV29ybGQ=--&gt;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">new</span> Buffer(<span class="string">"SGVsbG8gV29ybGQ="</span>, <span class="string">'base64'</span>).toString(<span class="string">'ascii'</span>))</span><br><span class="line">&lt;!--Hello World--&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><p>NPM的全称是Node Package Manager，如ruby的gem，Python的PyPL、setuptools，PHP的pear，NPM就是Nodejs的包管理器</p>
+<h3 id="npm常用命令"><a href="#npm常用命令" class="headerlink" title="npm常用命令"></a>npm常用命令</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>版本</span><br><span class="line">npm -v</span><br><span class="line"><span class="meta">#</span>升级模块</span><br><span class="line">npm update modulename</span><br><span class="line">sudo npm install npm -g</span><br></pre></td></tr></table></figure>
+<h3 id="npm-使用新资源库"><a href="#npm-使用新资源库" class="headerlink" title="npm 使用新资源库"></a>npm 使用新资源库</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>以资源库安装</span><br><span class="line">npm --registry "http://npm.hacknodejs.com/" install underscore</span><br><span class="line"><span class="meta">#</span>默认资源库为淘宝</span><br><span class="line">npm config set registry "http://npm.taobao.org/"</span><br></pre></td></tr></table></figure>
+<h3 id="Node-sass-安装失败解决方案"><a href="#Node-sass-安装失败解决方案" class="headerlink" title="Node-sass 安装失败解决方案"></a>Node-sass 安装失败解决方案</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>mac</span><br><span class="line">SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass/ npm install node-sass --save-dev</span><br></pre></td></tr></table></figure>
+<h3 id="usr-bin-env-‘node’-No-such-file-or-directory"><a href="#usr-bin-env-‘node’-No-such-file-or-directory" class="headerlink" title="/usr/bin/env: ‘node’: No such file or directory"></a>/usr/bin/env: ‘node’: No such file or directory</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ln -s /usr/bin/nodejs /usr/bin/node</span><br></pre></td></tr></table></figure>
+<h2 id="node调试"><a href="#node调试" class="headerlink" title="node调试"></a>node调试</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo npm install supervisor -g   #安装</span><br><span class="line">supervisor index.js</span><br></pre></td></tr></table></figure>
+<h2 id="node后台运行"><a href="#node后台运行" class="headerlink" title="node后台运行"></a>node后台运行</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nohup node app.js &gt; /foo/log.txt 2&gt;&amp;1 &amp;</span><br><span class="line"><span class="meta">#</span>或者</span><br><span class="line">sudo npm install forever -g   #安装</span><br><span class="line">forever list</span><br><span class="line">forever start app.js</span><br><span class="line">forever stop app.js</span><br><span class="line">forever start -l forever.log -o out.log -e err.log app.js   #输出日志和错误</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/nodejs/">nodejs</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/mkdocs/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">readthedocs切换到mkdocs</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/readthedocs/">
+        <span class="next-text nav-default">read-the-docs托管学习笔记</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

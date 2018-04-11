@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="仓促的战斗模型设计"/>
+
+
+
+
+  <meta name="keywords" content="设计, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/仓促的战斗模型设计/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> 仓促的战斗模型设计 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          仓促的战斗模型设计
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2016-01-29
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#设计思路"><span class="toc-text">设计思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设计结构"><span class="toc-text">设计结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关键性实现"><span class="toc-text">关键性实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#公式配置实现"><span class="toc-text">公式配置实现</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h2 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h2><p>新游戏开发又接近收尾的工作,记录一下这几个月开发的一些想法.<br>服务器设计延续了上一个游戏的基础结构.<br>由于前期demo版本开发周期很短,两周时间要一个战斗版本,所以还是遗留了一些如搅屎棍般的缺陷在里面.<br><img src="http://farwmarth.bestnewbee.com/images/herosserver.png" alt=" heros服务器设计考量"><br>上图就是基于初期战斗的设计思路.<br>基本思路即了解概念,梳理需求中的疑惑,再来进行代码重构和设计<br><a id="more"></a></p>
+<ul>
+<li>概念<br>概念是指游戏中策划的一些定义,我把它分为两部分,<strong>单位</strong> 和 <strong>战斗规则</strong><br><strong>单位</strong>有英雄,兵种(兵种属性),技能,buff等.<br><strong>战斗规则</strong>概念繁多,有站位,战斗过程,伤害结算,buff结算,被动结算,技能释放等等.</li>
+<li>疑惑<br>疑惑主要是来解答一些需求文档不确定或者产生歧义的地方.也是和策划沟通的记录<br><img src="http://farwmarth.bestnewbee.com/images/20160129102138.png" alt=" 疑惑已解答"></li>
+<li>设计考量<br>因为服务器结构之前是服务于格斗游戏,现在转换成回合制游戏,除了一些基础模块外,大部分与游戏特性绑定的模块都得剥离掉. 可通用模块有 <strong>聊天</strong>,<strong>log</strong>,<strong>账号验证</strong>,<strong>活动主框架</strong>,<strong>公会主框架</strong>,<strong>数据传输</strong>模块和一些工具类.<br>在此基础上 <strong>数据配置表</strong>和 <strong>数据库表</strong>需要重新设计,旧功能模块剥离,还有一部分要考虑的是之前的设计问题,比如 <strong>静态数据共享</strong>,<strong>混服</strong>等.</li>
+</ul>
+<p>编码过程中,我发现耗费时间最多的环节并不是编写新的战斗过程,而是改造原有代码.<br>战斗的实现在理清战斗流程和概念之后思路也清晰了.然而在改造原有代码的时候感觉是举步维艰.<br>原有模块如下:<br><img src="http://farwmarth.bestnewbee.com/images/20160129103551.png" alt=" 原有模块"><br>事后想想其实在这过程犯了很多错误.归结一下</p>
+<ul>
+<li>过度设计<br>在实现战斗的时候总是考虑到以后要怎么扩展,比如可能组队战斗啊,还有就是太兼顾细节,如果一段代码用了两次就总想把他封装成起来.其实考虑这些也是无可厚非的事情,但是扩展,细节 与时间成本本来就是对立的,把握度上可以弹性一些,如果时间条件允许可以去精雕细琢.还有就是,一些需求是可以规避掉的,如果你考虑的扩展在短时间内不会提出来大可不必发花费时间在这上面</li>
+<li>快速减法<br>改造原有代是个费时费脑的活动.要先理清原有代码的逻辑,然后再思考重构的方案.把旧代码再剥离掉.刚开始我的思路是把没用的模块全部剔除掉,改了两天发现系统过于庞大,各模块之间耦合度相当高.于是转换了一下思路.突出最主要模块来改造,因为是快速出战斗版本,所以就把场景模块和登录验证的这两部分保留,把其他模块的接口一律屏蔽掉.然后花着重去重构场景代码部分.果然验证了:Done is better than perfect</li>
+</ul>
+<h2 id="设计结构"><a href="#设计结构" class="headerlink" title="设计结构"></a>设计结构</h2><p>结构设计并没有采用常见的多进程分隔数据服,登录服,游戏服这种结构<br><img src="http://farwmarth.bestnewbee.com/images/20160129143221.png" alt="常见结构"><br>基于skynet的单进程多线程,独立 <strong>lua state</strong>为服务的模式,把登录,数据中心做成单独的 <strong>service</strong>,大概结构如下.<br><img src="http://farwmarth.bestnewbee.com/images/20160129143643.mky.png" alt="service"><br>其他模块没啥好说的,说下战斗部分.<br><img src="http://farwmarth.bestnewbee.com/images/20160129172912.png" alt=" 站位"><br>初期战斗模式比较简单,每方6个站位,速度最快的怪物先出手,所有人出手一次则是一回合,一回合后一方单位死亡后则到一个新的波次,所有波次完成即战斗结束,进行结算.<br><img src="http://farwmarth.bestnewbee.com/images/battle.png" alt=" 战斗"></p>
+<p>玩家统帅和副本怪物分成两个表,应策划要求,副本怪物可直接配置战斗属性值,而玩家统帅则通过阶位和强化度来提升战斗中的属性.<br>技能同组合效果组成,组合效果包含:buff,伤害,加减血,属性值变化,一个技能可以分成多段,例如先附加提升攻击的buff,再进行伤害段计算,再把攻击buff移除.技能和buff和攻击效果通过 <strong>TB_find_target_选择目标配置表</strong>规则来设定,计算的伤害或者属性由 <strong>TB_formula_公式配置表</strong>进行配置.</p>
+<h2 id="关键性实现"><a href="#关键性实现" class="headerlink" title="关键性实现"></a>关键性实现</h2><h4 id="公式配置实现"><a href="#公式配置实现" class="headerlink" title="公式配置实现"></a>公式配置实现</h4><p>应策划要求,伤害结算,buff效果结算都要通过当前攻击者,被攻击者的状态来计算,所以把公式放在配置表 <strong>TB_formula_公式配置表</strong>中配置.策划需要的运算规则比较简单,条件选择,一些简单的数学库就能满足要求.<br><figure class="highlight lua"><table><tr><td class="code"><pre><span class="line">(factor *(owner.physicalAttack * <span class="number">0.75</span>&gt;= target.physicalAbsorb <span class="keyword">and</span> owner.physicalAttack-target.physicalAbsorb <span class="keyword">or</span>  <span class="number">0.25</span> *owner.physicalAttack ) * fightRate.r_kill * owner.cur_sodier_count * (<span class="number">1</span> + owner.physicalRaiseHurt)  * (<span class="number">1</span> - target.physicalReduceHurt)  *fightRate.luckRate   + attachDamage )/<span class="number">10</span></span><br></pre></td></tr></table></figure></p>
+<p>服务器环境基于lua5.3,5.3的实现如下:<br>主要是用 <strong>load</strong>加载字符串解析成代码, <strong>_ENV</strong>构造一个封闭的环境，<strong>load</strong> 和javascript中 <strong>eval</strong>类似<br><figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- @Author: wujiyu</span></span><br><span class="line"><span class="comment">-- @Date:   2015-11-26 14:14:18</span></span><br><span class="line"><span class="comment">-- @Last Modified by:   wujiyu</span></span><br><span class="line"><span class="comment">-- @Last Modified time: 2015-12-11 19:53:20</span></span><br><span class="line"><span class="comment">-- 表复制</span></span><br><span class="line"><span class="keyword">local</span> tableutil = <span class="built_in">require</span> <span class="string">"public/util/tableutil"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> _e = &#123;&#125;</span><br><span class="line">_e.<span class="built_in">print</span>=<span class="built_in">print</span></span><br><span class="line">_e.<span class="built_in">pairs</span>=<span class="built_in">pairs</span></span><br><span class="line">_e.<span class="built_in">ipairs</span>=<span class="built_in">ipairs</span></span><br><span class="line"><span class="keyword">for</span> k,v <span class="keyword">in</span> <span class="built_in">pairs</span>(<span class="built_in">math</span>) <span class="keyword">do</span></span><br><span class="line">    _e[k] = v</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> _formula_maps = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> formulautil = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formulautil.formula</span><span class="params">( ctx,params )</span></span></span><br><span class="line">    <span class="keyword">local</span> _data =tableutil.clone(_e)</span><br><span class="line">    <span class="keyword">local</span> f = _formula_maps[ctx]</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> f <span class="keyword">then</span></span><br><span class="line">        f = <span class="built_in">assert</span>(<span class="built_in">load</span>(<span class="string">"local _ENV=...; return "</span>..ctx))</span><br><span class="line">        _formula_maps[ctx]=f</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    tableutil.fill_data(_data,params)</span><br><span class="line">    <span class="comment">-- print("!!!!!!公式参数",ctx)</span></span><br><span class="line">    <span class="comment">-- tableutil.print_table(params)</span></span><br><span class="line">    <span class="keyword">return</span> f(_data)</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">-- local result = formulautil.formula("owner.hp&gt;owner.mp and max(5, floor(owner.hp * 2)) or owner.mp", &#123;owner=&#123;hp=10,mp=30&#125;&#125;)</span></span><br><span class="line"><span class="comment">-- print(result)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> formulautil</span><br></pre></td></tr></table></figure></p>
+<p>后来改成手动战斗后,整个战斗过程移植到了客户端,而客户端的lua版本为5.1.稍微改动了一下,用 <strong>loadstring</strong>替换 <strong>load</strong>,<strong>setfenv</strong>替换 <strong>_ENV</strong>.<br><figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- @Author: wujiyu</span></span><br><span class="line"><span class="comment">-- @Date:   2015-11-26 14:14:18</span></span><br><span class="line"><span class="comment">-- @Last Modified by:   wujiyu</span></span><br><span class="line"><span class="comment">-- @Last Modified time: 2015-12-11 19:53:20</span></span><br><span class="line"><span class="comment">-- 表复制</span></span><br><span class="line"><span class="keyword">local</span> tableutil = <span class="built_in">require</span> <span class="string">"tableutil"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> _e = &#123;&#125;</span><br><span class="line">_e.<span class="built_in">print</span>=<span class="built_in">print</span></span><br><span class="line">_e.<span class="built_in">pairs</span>=<span class="built_in">pairs</span></span><br><span class="line">_e.<span class="built_in">ipairs</span>=<span class="built_in">ipairs</span></span><br><span class="line"><span class="keyword">for</span> k,v <span class="keyword">in</span> <span class="built_in">pairs</span>(<span class="built_in">math</span>) <span class="keyword">do</span></span><br><span class="line">    _e[k] = v</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> _formula_maps = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> formulautil = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formulautil.formula</span><span class="params">( ctx,params )</span></span></span><br><span class="line">    <span class="keyword">local</span> _data =tableutil.clone(_e)</span><br><span class="line">    <span class="keyword">local</span> f = _formula_maps[ctx]</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> f <span class="keyword">then</span></span><br><span class="line">        f = <span class="built_in">assert</span>(loadstring(<span class="string">" return "</span>..ctx))</span><br><span class="line">        _formula_maps[ctx]=f</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    tableutil.fill_data(_data,params)</span><br><span class="line">    <span class="built_in">setfenv</span>(f,_data)</span><br><span class="line">    <span class="comment">-- print("!!!!!!公式参数",ctx)</span></span><br><span class="line">    <span class="comment">-- tableutil.print_table(params)</span></span><br><span class="line">    <span class="keyword">return</span> f(_data)</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">local</span> result = formulautil.formula(<span class="string">"owner.hp&gt;owner.mp and max(5, floor(owner.hp * 2)) or owner.mp"</span>, &#123;owner=&#123;hp=<span class="number">10</span>,mp=<span class="number">30</span>&#125;&#125;)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> formulautil</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/设计/">设计</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/kids/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">kids</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/谁点谁怀孕之代码解析/">
+        <span class="next-text nav-default">谁点谁怀孕之代码解析</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

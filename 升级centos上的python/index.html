@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="在CentOS 6.X 上升级 Python为 2.7"/>
+
+
+
+
+  <meta name="keywords" content="centos, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/升级centos上的python/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> 在CentOS 6.X 上升级 Python为 2.7 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          在CentOS 6.X 上升级 Python为 2.7
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2016-12-18
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装依赖包"><span class="toc-text">安装依赖包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#源码编译"><span class="toc-text">源码编译</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装详情："><span class="toc-text">安装详情：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链接python"><span class="toc-text">链接python</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#加入PATH"><span class="toc-text">加入PATH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#软连接"><span class="toc-text">软连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#检查"><span class="toc-text">检查</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装-setuptools"><span class="toc-text">安装 setuptools</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装-PIP"><span class="toc-text">安装 PIP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修复-yum-工具"><span class="toc-text">修复 yum 工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装sqlite3"><span class="toc-text">安装sqlite3</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <pre><code>CentOS 6.X 自带的python版本是 2.6 , 但是2.6已经被不被官方支持了，今天写后台程序放到阿里云上运行发现2.6的一些api和2.7不一样了。于是想升级下python
+</code></pre><h2 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum install -y zlib-devel bzip2-devel openssl-devel xz-libs wget</span><br></pre></td></tr></table></figure>
+<h2 id="源码编译"><a href="#源码编译" class="headerlink" title="源码编译"></a>源码编译</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget http://www.python.org/ftp/python/2.7.8/Python-2.7.8.tar.xz</span><br><span class="line"># 可以使用国内的源</span><br><span class="line">wget http://mirrors.sohu.com/python/2.7.8/Python-2.7.8.tar.xz</span><br><span class="line">xz -d Python-2.7.8.tar.xz</span><br><span class="line">tar -xvf Python-2.7.8.tar</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="安装详情："><a href="#安装详情：" class="headerlink" title="安装详情："></a>安装详情：</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 进入目录:</span><br><span class="line">cd Python-2.7.8</span><br><span class="line"># 运行配置 configure:</span><br><span class="line">./configure --prefix=/usr/local</span><br><span class="line"># 编译安装:</span><br><span class="line">make</span><br><span class="line">make altinstall</span><br><span class="line"># 检查 Python 版本:</span><br><span class="line">[root@dbmasterxxx ~]# python2.7 -V</span><br><span class="line">Python 2.7.8</span><br></pre></td></tr></table></figure>
+<h2 id="链接python"><a href="#链接python" class="headerlink" title="链接python"></a>链接python</h2><p>为了使我们刚安装的<code>2.7.8</code> 生效要么加入<code>PATH</code>目录要么进入软连接：</p>
+<h3 id="加入PATH"><a href="#加入PATH" class="headerlink" title="加入PATH"></a>加入PATH</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">export PATH=&quot;/usr/local/bin:$PATH&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="软连接"><a href="#软连接" class="headerlink" title="软连接"></a>软连接</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#如果连接时提示错误“ln: creating symbolic link `/usr/bin/python&apos;: File exists”则先改名</span><br><span class="line">mv /usr/bin/python /usr/bin/python2.6</span><br><span class="line">ln -s /usr/local/bin/python2.7  /usr/bin/python</span><br></pre></td></tr></table></figure>
+<h3 id="检查"><a href="#检查" class="headerlink" title="检查"></a>检查</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@dbmasterxxx ~]# python -V</span><br><span class="line">Python 2.7.8</span><br><span class="line">[root@dbmasterxxx ~]# which python </span><br><span class="line">/usr/bin/python</span><br></pre></td></tr></table></figure>
+<h2 id="安装-setuptools"><a href="#安装-setuptools" class="headerlink" title="安装 setuptools"></a>安装 setuptools</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#获取软件包</span><br><span class="line">wget --no-check-certificate https://pypi.python.org/packages/source/s/setuptools/setuptools-1.4.2.tar.gz</span><br><span class="line"># 解压:</span><br><span class="line">tar -xvf setuptools-1.4.2.tar.gz</span><br><span class="line">cd setuptools-1.4.2</span><br><span class="line"># 使用 Python 2.7.8 安装 setuptools</span><br><span class="line">python2.7 setup.py install</span><br></pre></td></tr></table></figure>
+<h2 id="安装-PIP"><a href="#安装-PIP" class="headerlink" title="安装 PIP"></a>安装 PIP</h2><p><code>curl  https://bootstrap.pypa.io/get-pip.py | python2.7 -</code></p>
+<h2 id="修复-yum-工具"><a href="#修复-yum-工具" class="headerlink" title="修复 yum 工具"></a>修复 yum 工具</h2><p>此时yum应该是失效的，因为此时默认python版本已经是2.7了。而yum需要的是2.6 所以：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#修改 yum中的python </span><br><span class="line">将第一行  #!/usr/bin/python  改为 #!/usr/bin/python2.6</span><br></pre></td></tr></table></figure>
+<h2 id="安装sqlite3"><a href="#安装sqlite3" class="headerlink" title="安装sqlite3"></a>安装sqlite3</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum install sqlite-devel</span><br><span class="line">pip install pysqlite</span><br><span class="line"><span class="meta">#</span>重新编译python</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/centos/">centos</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/给Iphone换个自定义的铃声/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">给Iphone换个自定义的铃声</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/如何避免一些危险的指令操作/">
+        <span class="next-text nav-default">如何避免一些危险的指令操作</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

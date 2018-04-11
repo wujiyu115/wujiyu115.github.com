@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="浅析 robotlegs2"/>
+
+
+
+
+  <meta name="keywords" content="robotlegs2, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/浅析 robotlegs2/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> 浅析 robotlegs2 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          浅析 robotlegs2
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2013-01-18
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/actionscript/">actionscript</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#1-概述"><span class="toc-text">1  概述</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-容器解析"><span class="toc-text">2   容器解析</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <p>当前阅读版本: 2.0.0b3.  <a href="https://github.com/robotlegs/robotlegs-framework" title="https://github.com/robotlegs/robotlegs-framework" target="_blank" rel="noopener">https://github.com/robotlegs/robotlegs-framework</a>  源代码中有readme文档，阅读readme可以了解整个程序的大致结构.</p>
+<a id="more"></a>
+<h6 id="1-概述"><a href="#1-概述" class="headerlink" title="1  概述"></a>1  概述</h6><p>robotlegs2比  1.5 的结构更加灵活,但是额外加了两个依赖包:</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/01/image5.png" alt="image"></p>
+<p>重构后robotlegs2分为四个部分 ：</p>
+<ol>
+<li>核心framework,包括:容器(Context) ,配置管理器(Configuration manager),扩展管理(Extension installer),两个新的状态对象(Guards and hooks) ,生命周期管理(Lifecycle),日志(Logging)</li>
+<li>扩展 :包括了 m v c 的管理器，日志扩展，事件中心等等。</li>
+<li>扩展包(Bundles):  实现的只有一个MVCSBundle,顾名思义是MVC的扩展组合 .</li>
+<li>MXML支持</li>
+</ol>
+<h6 id="2-容器解析"><a href="#2-容器解析" class="headerlink" title="2   容器解析"></a>2   容器解析</h6><p>RobotLegs的核心类是Context 管理整个程序的生命周期，和 puremvc 的Facade 有点类似的味道.</p>
+<p>我们先来创建一个简单的容器,再分析创建容器具体做了一些什么.<br><figure class="highlight as"><table><tr><td class="code"><pre><span class="line">_context = <span class="keyword">new</span> Context()</span><br><span class="line">.install(MVCSBundle)</span><br><span class="line">.configure(</span><br><span class="line">AppConfig,</span><br><span class="line"><span class="keyword">new</span> ContextView(<span class="keyword">this</span>));</span><br></pre></td></tr></table></figure></p>
+<p>这句代码就是创建一个容器上下文，并且装载mvc扩展包，添加一些自定的配置，将主视图初始化. Context初始化调用的方法<br><figure class="highlight as"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">setup</span><span class="params">()</span>:void</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">            _injector.map(Injector).toValue(_injector);</span><br><span class="line">            _injector.map(IContext).toValue(<span class="keyword">this</span>);</span><br><span class="line">            _logger = _logManager.getLogger(<span class="keyword">this</span>);</span><br><span class="line">            _lifecycle = <span class="keyword">new</span> Lifecycle(<span class="keyword">this</span>);</span><br><span class="line">            _configManager = <span class="keyword">new</span> ConfigManager(<span class="keyword">this</span>);</span><br><span class="line">            _extensionInstaller = <span class="keyword">new</span> ExtensionInstaller(<span class="keyword">this</span>);</span><br><span class="line">            beforeInitializing(beforeInitializingCallback);</span><br><span class="line">            afterInitializing(afterInitializingCallback);</span><br><span class="line">            beforeDestroying(beforeDestroyingCallback);</span><br><span class="line">            afterDestroying(afterDestroyingCallback);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>大概操作为:绑定注入器,绑定上下文，为容器提供日志,生命周期对象 ,配置管理，扩展安装类，后面几个是执行几个回调.</p>
+<p>MVCSBundle 装载<br><figure class="highlight as"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">extend</span><span class="params">(context:IContext)</span>:void</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">            context.logLevel = LogLevel.DEBUG;</span><br><span class="line">            context.install(</span><br><span class="line">                TraceLoggingExtension,</span><br><span class="line">                VigilanceExtension,</span><br><span class="line">                InjectableLoggerExtension,</span><br><span class="line">                ContextViewExtension,</span><br><span class="line">                EventDispatcherExtension,</span><br><span class="line">                ModularityExtension,</span><br><span class="line">                CommandCenterExtension,</span><br><span class="line">                EventCommandMapExtension,</span><br><span class="line">                LocalEventMapExtension,</span><br><span class="line">                ViewManagerExtension,</span><br><span class="line">                StageObserverExtension,</span><br><span class="line">                ManualStageObserverExtension,</span><br><span class="line">                MediatorMapExtension,</span><br><span class="line">                StageSyncExtension);</span><br><span class="line">            context.configure(ContextViewListenerConfig);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/01/image6.png" alt="image"></p>
+<p>写了个关于下拉切换图片的demo,还发邮件给作者 Shaun Smith 问了个低级问题:怎么样在初始化容器后派发事件来启动框架，Shaun Smith 让我把问题提交到<a href="http://knowledge.robotlegs.org/discussions/robotlegs-2/" title="http://knowledge.robotlegs.org/discussions/robotlegs-2/" target="_blank" rel="noopener">http://knowledge.robotlegs.org/discussions/robotlegs-2/</a> ,在这找到了答案，在你的config里面里就可以使用容器上下文，和事件派发器了:<br><figure class="highlight as"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">package</span> <span class="title">com</span>.<span class="title">far</span>.<span class="title">robotlegs2</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="meta"><span class="meta-keyword">import</span> com.far.robotlegs2.commands.GetDataCommand;</span></span><br><span class="line">    <span class="meta"><span class="meta-keyword">import</span> com.far.robotlegs2.common.view.ImageSelect;</span></span><br><span class="line">    <span class="meta"><span class="meta-keyword">import</span> com.far.robotlegs2.common.view.ImageShow;</span></span><br><span class="line">    <span class="meta"><span class="meta-keyword">import</span> com.far.robotlegs2.events.AppEvent;</span></span><br><span class="line">    <span class="meta"><span class="meta-keyword">import</span> com.far.robotlegs2.mediators.ImageSelectMediator;</span></span><br><span class="line">    <span class="meta"><span class="meta-keyword">import</span> com.far.robotlegs2.mediators.ImageShowMediator;</span></span><br><span class="line">    <span class="meta"><span class="meta-keyword">import</span> com.far.robotlegs2.models.ImageModel;</span></span><br><span class="line">    <span class="meta"><span class="meta-keyword">import</span> flash.display.DisplayObjectContainer;</span></span><br><span class="line">    <span class="meta"><span class="meta-keyword">import</span> flash.events.IEventDispatcher;</span></span><br><span class="line">    <span class="meta"><span class="meta-keyword">import</span> robotlegs.bender.extensions.contextView.ContextView;</span></span><br><span class="line">    <span class="meta"><span class="meta-keyword">import</span> robotlegs.bender.extensions.eventCommandMap.api.IEventCommandMap;</span></span><br><span class="line">    <span class="meta"><span class="meta-keyword">import</span> robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;</span></span><br><span class="line">    <span class="meta"><span class="meta-keyword">import</span> robotlegs.bender.framework.api.IContext;</span></span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AppConfig</span></span></span><br><span class="line"><span class="class">    </span>&#123;</span><br><span class="line">        [Inject]</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">var</span> eventDispatcher:IEventDispatcher;</span><br><span class="line">        [Inject]</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">var</span> contextview:ContextView;</span><br><span class="line">        [Inject]</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">var</span> mediatorMap:IMediatorMap;</span><br><span class="line">        [Inject]</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">var</span> commandMap:IEventCommandMap;</span><br><span class="line">        [Inject]</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">var</span> context:IContext;</span><br><span class="line">        <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">AppConfig</span><span class="params">()</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">        &#125;</span><br><span class="line">        [PostConstruct]</span><br><span class="line">        <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">start</span><span class="params">()</span>:void</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">                    context.injector.map(ImageModel).toSingleton(ImageModel);</span><br><span class="line">                    mediatorMap.map(ImageSelect).toMediator(ImageSelectMediator);</span><br><span class="line">                    mediatorMap.map(ImageShow).toMediator(ImageShowMediator);</span><br><span class="line">                    commandMap.map(AppEvent.GETDATA,AppEvent).toCommand(GetDataCommand);</span><br><span class="line">                    addImageSelect(contextview.view);</span><br><span class="line">                    addImageShow(contextview.view);</span><br><span class="line">                    eventDispatcher.dispatchEvent(<span class="keyword">new</span> AppEvent(AppEvent.GETDATA));</span><br><span class="line">         &#125;</span><br><span class="line">        <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">addImageSelect</span><span class="params">(container:DisplayObjectContainer)</span>:ImageSelect</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> ImageSelect(container);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">addImageShow</span><span class="params">(container:DisplayObjectContainer)</span>:ImageShow</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">                    <span class="keyword">var</span> imshow:ImageShow=<span class="keyword">new</span> ImageShow();</span><br><span class="line">                    imshow.y=<span class="number">50</span>;</span><br><span class="line">                    container.addChild(imshow);</span><br><span class="line">                   <span class="keyword">return</span> imshow;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>还要注意的是Mediator的onRegister 在2里面是initialize. robotlegs2还在开发中，希望作者尽快出来正式版.这段时间会仿着写个更轻量的框架.</p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/robotlegs2/">robotlegs2</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/同步利器GoodSync/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">同步利器GoodSync</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/gtd/">
+        <span class="next-text nav-default">GTD</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

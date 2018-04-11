@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="斗地主结构分析"/>
+
+
+
+
+  <meta name="keywords" content="android, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/斗地主结构分析/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> 斗地主结构分析 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          斗地主结构分析
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2013-04-27
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/android/">android</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    <div class="post-content">
+      
+        <p>这段时间在反编别人的代码,基本了解了android的游戏开发过程.在这里总结一下蛙蛙斗地主的体系结构.</p>
+<p><a href="http://farwmarth.bestnewbee.com/images/uploads/2013/04/7a52e3c36bb3.jpg" target="_blank" rel="noopener"><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/thumb1.jpg" alt="蛙蛙斗地主结构" title="蛙蛙斗地主结构"></a></p>
+<p>activity管理:</p>
+<p>注意在activity的回调中资源的创建及销毁.管理好activity的生命周期.</p>
+<a id="more"></a>
+<p>资源管理:</p>
+<p>手机和pc不一样,在内存和运行性能上还有一定差距.所以资源的释放非常重要,在pc页游项目中,经常采用缓存图片资源的做法来提高程序的流畅性,手机项目最好在activity切换时如果内存达到一个上限时释放掉.可以把资源集中管理.</p>
+<p>耗时操作</p>
+<p>flash11.4之前不提供多线程api,用分帧来处理耗时操作,11.4后有了work线程. android里耗时操作可以另劈线程,防止阻塞UI.</p>
+<p>蛙蛙结构:</p>
+<p> <strong>图片资源管理器</strong>: 分为单张图片和多个资源合成的图片.在管理器内切割.部分动画也打包成一张图片. 程序初始化的时候将图片加载好变成Bitmap,加载完所有资源后通知activity初始化界面.在退出程序之前销毁所有图片资源.</p>
+<p> <strong>游戏桌</strong>:分为了两层. 底层是GameScene,继承了SurfaceView,用于绘制牌和一些动画. 上层放android其他常规组件,如聊天,表情按钮什么的. 绘制对象上图已经描述清楚了. 蛙蛙的性能有待考究.绘制频率太快.屏幕元素太多时消耗太大.在mx上玩了一会就开始发热了 .draw的面积越大消耗越大.SurfaceView采用了双缓冲机制,图片是静态的不做动作的话,其实只要绘制二帧就可以了.可以将背景图这些少更改面积大的单独只绘制两帧.</p>
+<p> <strong>位图文字</strong>: 为了美化可能要显示一些样式特别的字体.就可以用Canvas.drawText方法将文字绘制成位图,当然要传入文字样式的笔刷.</p>
+<p> <strong> 扑克规则</strong>: 这个属于玩牌的规则了.牌型有:单张,对子,三张,三张一/二,炸弹等等. 基础功能点还包括:牌型大小比较,提示功能. 如果单纯的斗地主这里的代码量并不多.但是加上癞子斗地主,四人斗地主.复杂度也就增加不了.现在做的是把他的牌型分析抽离出来.判断规则和提示重写了.</p>
+<p> <strong>通信</strong>: 这块要分几种情况.是wap连接的时候要设置代理用HttpUrlConnection来操作.wifi和net直接用Socket就可以了.Socket连接时最好是单独开辟读写流线程.</p>
+<p> <strong>第三方接口</strong>:第三方接入其实是比较容易的.一般第三方都会提供demo.主要是要注册签约及与php调试要花一些时间 .蛙蛙的充值里包括了移动短信充值,支付宝. 看到的代码里还有google,lephone的一些东西 . 之前反编了博雅斗地主稍微看了一下.他们的充值接入更丰富.支付宝,移动短信,充值卡.等等. 登录接入包括了qq,sina,人人 一些平台.</p>
+<p> 核心代码并不很多,就通信,规则,游戏桌渲染.抛却那些附加的功能点界面也不多,就首页,登录,注册,大厅. 但是如果想做成一个好的完备的产品.还是需要发一些时间来优化.以下是博雅的基本功能点.<a href="http://farwmarth.bestnewbee.com/images/uploads/2013/04/6c96ae7bc56e.jpg" target="_blank" rel="noopener"><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/thumb2.jpg" alt="功能点" title="功能点"></a></p>
+<p>我这前一直纳闷的是为什么公司会选择这样一款产品.个人感觉斗地主这块市场是比较饱和.有联众,qq斗地主,博雅,蛙蛙.等等.后来boss给了一些数据.蛙蛙的月流水是500万的样子.我只能说.cao.</p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/android/">android</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/数据结构整理/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">数据结构整理</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/android 支付宝 快捷支付 接入/">
+        <span class="next-text nav-default">android 支付宝 快捷支付 接入</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

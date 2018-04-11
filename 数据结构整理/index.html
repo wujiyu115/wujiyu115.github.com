@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="数据结构整理"/>
+
+
+
+
+  <meta name="keywords" content="base, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/数据结构整理/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> 数据结构整理 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          数据结构整理
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2013-05-07
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/base/">base</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#数据结构形式定义"><span class="toc-text">数据结构形式定义:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#数组-Array"><span class="toc-text">数组 (Array)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#栈-Stack"><span class="toc-text">栈 (Stack)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#队列-Queue"><span class="toc-text">队列 (Queue)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#优先队列-有优先级别"><span class="toc-text">优先队列 :有优先级别</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#链表-Linked-List"><span class="toc-text">链表 (Linked List)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#树-Tree"><span class="toc-text">树 (Tree)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#四叉树-四叉树通常用于2d游戏碰撞检测-ghostcat版as实现"><span class="toc-text">四叉树:四叉树通常用于2d游戏碰撞检测.ghostcat版as实现:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#图-Graph"><span class="toc-text">图 (Graph)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#堆-Heap"><span class="toc-text">堆 (Heap)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#散列表-Hash"><span class="toc-text">散列表 (Hash)</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h5 id="数据结构形式定义"><a href="#数据结构形式定义" class="headerlink" title="数据结构形式定义:"></a>数据结构形式定义:</h5><ul>
+<li>逻辑结构<br>集合,线性,树形,图,网状<br>“数据结构”定义中的“关系”指数据间的逻辑关系，故也称数据结构为逻辑结构。</li>
+<li>存储结构<br>数据结构在计算机中的表示称为物理结构。又称存储结构。<br>顺序存储结构<br>链式存储结构</li>
+</ul>
+<a id="more"></a>
+<h5 id="数组-Array"><a href="#数组-Array" class="headerlink" title="数组 (Array)"></a>数组 (Array)</h5><p>数组设计之初是在形式上依赖<a href="http://zh.wikipedia.org/w/index.php?title=%E5%85%A7%E5%AD%98%E5%88%86%E9%85%8D&amp;action=edit&amp;redlink=1" title="%E5%85%A7%E5%AD%98%E5%88%86%E9%85%8D&amp;action=edit&amp;redlink=1" target="_blank" rel="noopener">內存分配</a>而成的，所以必须在使用前预先请求空间。这使得数组有以下特性：</p>
+<ul>
+<li>请求空间以后大小固定，不能再改变(<a href="http://zh.wikipedia.org/wiki/%E6%95%B8%E6%93%9A%E6%BA%A2%E5%87%BA" target="_blank" rel="noopener">数据溢出</a>问题)</li>
+<li>在內存中有空间连续性的表现，中间不会存在其他程序需要调用的数据，为此数组的专用內存空间；</li>
+<li>数组通过索引来访问元素,不用遍历整个数组列表,所以访问速度很快.但是因为数组是存储结构是连续的,在头部删除,中间插入元素时,操作的后半部分项都需要进行移动导致速度慢.所以删除可以从数组的尾部开始.<img src="http://farwmarth.bestnewbee.com/images/uploads/2013/05/image.png" alt="image"></li>
+</ul>
+<p>AS的数组与java不同,非定长.测试代码<br><figure class="highlight as"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr:Array = [];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i:uint= <span class="number">0</span> ;i&lt;<span class="number">1000000</span>;i++)arr[i]=i ;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> startT:Number = getTimer();</span><br><span class="line"><span class="keyword">var</span> num:uint = <span class="number">500</span>;</span><br><span class="line"><span class="keyword">while</span>(num&gt;<span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line">    arr.shift();</span><br><span class="line">    num--;</span><br><span class="line">&#125;</span><br><span class="line">trace(<span class="string">"time:"</span>,getTimer() - startT);上面消耗 <span class="number">822</span>ms,改为pop.消耗<span class="number">1</span>ms.</span><br><span class="line"><span class="keyword">var</span> arr:Array = [];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i:uint= <span class="number">0</span> ;i&lt;<span class="number">1000000</span>;i++)arr[i]=i ;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> startT:Number = getTimer();</span><br><span class="line"><span class="keyword">var</span> num:uint = <span class="number">500</span>;</span><br><span class="line"><span class="keyword">while</span>(num&gt;<span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line">    arr.pop();</span><br><span class="line">    num--;</span><br><span class="line">&#125;</span><br><span class="line">trace(<span class="string">"time:"</span>,getTimer() - startT);</span><br></pre></td></tr></table></figure></p>
+<h5 id="栈-Stack"><a href="#栈-Stack" class="headerlink" title="栈 (Stack)"></a>栈 (Stack)</h5><p>是只能在某一端插入和删除的特殊<a href="http://baike.baidu.com/view/178622.htm" target="_blank" rel="noopener">线性表</a>。它按照先进后出的原则存储数据，先进入的数据被压入栈底，最后的数据在栈顶，需要读数据的时候从栈顶开始弹出数据（最后一个数据被第一个读出来）。<br>as用数组实现的栈<br><figure class="highlight as"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Stack</span></span></span><br><span class="line"><span class="class">	</span>&#123;</span><br><span class="line">		<span class="keyword">private</span> <span class="keyword">var</span> _data:Array;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">Stack</span><span class="params">()</span></span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			_data = <span class="keyword">new</span> Array();</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">push</span><span class="params">(item:Object)</span>:void</span>&#123;</span><br><span class="line">			_data.push(item);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">pop</span><span class="params">()</span>:Object</span>&#123;</span><br><span class="line">			<span class="keyword">return</span> _data.pop();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></p>
+<p>java实现<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Stack</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> Object[] obj;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> minSize = <span class="number">2</span>;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> cursor = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Stack</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		obj = <span class="keyword">new</span> Object[minSize];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(Object item)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(cursor&gt;=obj.length-<span class="number">1</span>)&#123;</span><br><span class="line">			obj =Arrays.copyOf(obj, obj.length+minSize);</span><br><span class="line">		&#125;</span><br><span class="line">		obj[cursor++]=item;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Object <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> obj[--cursor];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h5 id="队列-Queue"><a href="#队列-Queue" class="headerlink" title="队列 (Queue)"></a>队列 (Queue)</h5><p>一种特殊的<a href="http://baike.baidu.com/view/178622.htm" target="_blank" rel="noopener">线性表</a>，它只允许在表的<a href="http://baike.baidu.com/view/495145.htm" target="_blank" rel="noopener">前端</a>（front）进行删除操作，而在表的后端（rear）进行插入操作。进行插入操作的端称为队尾，进行删除操作的端称为队头。队列是按照“先进先出”或“后进后出”的原则组织数据的。队列中没有元素时，称为空队列。</p>
+<figure class="highlight as"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Queue</span></span></span><br><span class="line"><span class="class">	</span>&#123;</span><br><span class="line">		<span class="keyword">private</span> <span class="keyword">var</span> _data:Array;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">Queue</span><span class="params">()</span></span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			_data = <span class="keyword">new</span> Array();</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">push</span><span class="params">(item:Object)</span>:void</span>&#123;</span><br><span class="line">			_data.push(item);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">shift</span><span class="params">()</span>:Object</span>&#123;</span><br><span class="line">			<span class="keyword">return</span> _data.shift();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="优先队列-有优先级别"><a href="#优先队列-有优先级别" class="headerlink" title="优先队列 :有优先级别"></a>优先队列 :有优先级别</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">////////////////////////////////////////////////////////////////</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PriorityQ</span></span></span><br><span class="line"><span class="class">   </span>&#123;</span><br><span class="line">   <span class="comment">// array in sorted order, from max at 0 to min at size-1</span></span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">int</span> maxSize;</span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">long</span>[] queArray;</span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">int</span> nItems;</span><br><span class="line"><span class="comment">//-------------------------------------------------------------</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="title">PriorityQ</span><span class="params">(<span class="keyword">int</span> s)</span>          <span class="comment">// constructor</span></span></span><br><span class="line"><span class="function">      </span>&#123;</span><br><span class="line">      maxSize = s;</span><br><span class="line">      queArray = <span class="keyword">new</span> <span class="keyword">long</span>[maxSize];</span><br><span class="line">      nItems = <span class="number">0</span>;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="comment">//-------------------------------------------------------------</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">long</span> item)</span>    <span class="comment">// insert item</span></span></span><br><span class="line"><span class="function">      </span>&#123;</span><br><span class="line">      <span class="keyword">int</span> j;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span>(nItems==<span class="number">0</span>)                         <span class="comment">// if no items,</span></span><br><span class="line">         queArray[nItems++] = item;         <span class="comment">// insert at 0</span></span><br><span class="line">      <span class="keyword">else</span>                                <span class="comment">// if items,</span></span><br><span class="line">         &#123;</span><br><span class="line">         <span class="keyword">for</span>(j=nItems-<span class="number">1</span>; j&gt;=<span class="number">0</span>; j--)         <span class="comment">// start at end,</span></span><br><span class="line">            &#123;</span><br><span class="line">            <span class="keyword">if</span>( item &gt; queArray[j] )      <span class="comment">// if new item larger,</span></span><br><span class="line">               queArray[j+<span class="number">1</span>] = queArray[j]; <span class="comment">// shift upward</span></span><br><span class="line">            <span class="keyword">else</span>                          <span class="comment">// if smaller,</span></span><br><span class="line">               <span class="keyword">break</span>;                     <span class="comment">// done shifting</span></span><br><span class="line">            &#125;  <span class="comment">// end for</span></span><br><span class="line">         queArray[j+<span class="number">1</span>] = item;            <span class="comment">// insert it</span></span><br><span class="line">         nItems++;</span><br><span class="line">         &#125;  <span class="comment">// end else (nItems &gt; 0)</span></span><br><span class="line">      &#125;  <span class="comment">// end insert()</span></span><br><span class="line"><span class="comment">//-------------------------------------------------------------</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">remove</span><span class="params">()</span>             <span class="comment">// remove minimum item</span></span></span><br><span class="line"><span class="function">      </span>&#123; <span class="keyword">return</span> queArray[--nItems]; &#125;</span><br><span class="line"><span class="comment">//-------------------------------------------------------------</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">peekMin</span><span class="params">()</span>            <span class="comment">// peek at minimum item</span></span></span><br><span class="line"><span class="function">      </span>&#123; <span class="keyword">return</span> queArray[nItems-<span class="number">1</span>]; &#125;</span><br><span class="line"><span class="comment">//-------------------------------------------------------------</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span>         <span class="comment">// true if queue is empty</span></span></span><br><span class="line"><span class="function">      </span>&#123; <span class="keyword">return</span> (nItems==<span class="number">0</span>); &#125;</span><br><span class="line"><span class="comment">//-------------------------------------------------------------</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isFull</span><span class="params">()</span>          <span class="comment">// true if queue is full</span></span></span><br><span class="line"><span class="function">      </span>&#123; <span class="keyword">return</span> (nItems == maxSize); &#125;</span><br><span class="line"><span class="comment">//-------------------------------------------------------------</span></span><br><span class="line">   &#125;  <span class="comment">// end class PriorityQ</span></span><br></pre></td></tr></table></figure>
+<h5 id="链表-Linked-List"><a href="#链表-Linked-List" class="headerlink" title="链表 (Linked List)"></a>链表 (Linked List)</h5><p>是一种物理存储单元上非连续、非顺序的存储结构，它既可以表示线性结构，也可以用于表示非线性结构，数据元素的<a href="http://baike.baidu.com/view/869200.htm" target="_blank" rel="noopener">逻辑顺序</a>是通过链表中的指针链接次序实现的。链表由一系列结点（链表中每一个元素称为结点）组成，结点可以在运行时<a href="http://baike.baidu.com/view/31294.htm" target="_blank" rel="noopener">动态</a>生成。每个结点包括两个部分：一个是存储数据元素的数据域，另一个是存储下一个结点地址的指针域。</p>
+<ul>
+<li><p><strong>单向链表</strong>: 从头部插入节点.<br><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/05/image1.png" alt="image"> </p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LinkList</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> Node first;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">LinkList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		first = <span class="keyword">null</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insertFirst</span><span class="params">(Object data)</span> </span>&#123;</span><br><span class="line">		Node newNode = <span class="keyword">new</span> Node(data);</span><br><span class="line">		newNode.next = first;</span><br><span class="line">		first = newNode;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Node <span class="title">deleteFirst</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		Node temp = first;</span><br><span class="line">		first = first.next;</span><br><span class="line">		<span class="keyword">return</span> temp;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> first == <span class="keyword">null</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		Node cu = first;</span><br><span class="line">		<span class="keyword">while</span> (cu != <span class="keyword">null</span>) &#123;</span><br><span class="line">			cu.display();</span><br><span class="line">			cu = cu.next;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</span><br><span class="line">		<span class="keyword">private</span> Object data;</span><br><span class="line">		<span class="keyword">private</span> Node next;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">private</span> <span class="title">Node</span><span class="params">(Object data)</span> </span>&#123;</span><br><span class="line">			<span class="keyword">this</span>.data = data;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">display</span><span class="params">()</span> </span>&#123;</span><br><span class="line">			System.out.println(data);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>双端链表</strong>:不要和双向链表混淆了,双端列表持有了末尾的节点可以方便地在末尾插入节点</p>
+</li>
+</ul>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/05/image2.png" alt="image"></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> datastruce;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FirstLastList</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> Link first; <span class="comment">// ref to first link</span></span><br><span class="line">	<span class="keyword">private</span> Link last; <span class="comment">// ref to last link</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">FirstLastList</span><span class="params">()</span> <span class="comment">// constructor</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		first = <span class="keyword">null</span>; <span class="comment">// no links on list yet</span></span><br><span class="line">		last = <span class="keyword">null</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span> <span class="comment">// true if no links</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> first == <span class="keyword">null</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insertFirst</span><span class="params">(<span class="keyword">long</span> dd)</span> <span class="comment">// insert at front of list</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		Link newLink = <span class="keyword">new</span> Link(dd); <span class="comment">// make new link</span></span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (isEmpty()) <span class="comment">// if empty list,</span></span><br><span class="line">			last = newLink; <span class="comment">// newLink &lt;-- last</span></span><br><span class="line">		newLink.next = first; <span class="comment">// newLink --&gt; old first</span></span><br><span class="line">		first = newLink; <span class="comment">// first --&gt; newLink</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// -------------------------------------------------------------</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insertLast</span><span class="params">(<span class="keyword">long</span> dd)</span> <span class="comment">// insert at end of list</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		Link newLink = <span class="keyword">new</span> Link(dd); <span class="comment">// make new link</span></span><br><span class="line">		<span class="keyword">if</span> (isEmpty()) <span class="comment">// if empty list,</span></span><br><span class="line">			first = newLink; <span class="comment">// first --&gt; newLink</span></span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			last.next = newLink; <span class="comment">// old last --&gt; newLink</span></span><br><span class="line">		last = newLink; <span class="comment">// newLink &lt;-- last</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// -------------------------------------------------------------</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">deleteFirst</span><span class="params">()</span> <span class="comment">// delete first link</span></span></span><br><span class="line"><span class="function">	</span>&#123; <span class="comment">// (assumes non-empty list)</span></span><br><span class="line">		<span class="keyword">long</span> temp = first.dData;</span><br><span class="line">		<span class="keyword">if</span> (first.next == <span class="keyword">null</span>) <span class="comment">// if only one item</span></span><br><span class="line">			last = <span class="keyword">null</span>; <span class="comment">// null &lt;-- last</span></span><br><span class="line">		first = first.next; <span class="comment">// first --&gt; old next</span></span><br><span class="line">		<span class="keyword">return</span> temp;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// -------------------------------------------------------------</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">displayList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.print(<span class="string">"List (first--&gt;last): "</span>);</span><br><span class="line">		Link current = first; <span class="comment">// start at beginning</span></span><br><span class="line">		<span class="keyword">while</span> (current != <span class="keyword">null</span>) <span class="comment">// until end of list,</span></span><br><span class="line">		&#123;</span><br><span class="line">			current.displayLink(); <span class="comment">// print data</span></span><br><span class="line">			current = current.next; <span class="comment">// move to next link</span></span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(<span class="string">""</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Link</span> </span>&#123;</span><br><span class="line">		<span class="keyword">public</span> <span class="keyword">long</span> dData; <span class="comment">// data item</span></span><br><span class="line">		<span class="keyword">public</span> Link next; <span class="comment">// next link in list</span></span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="title">Link</span><span class="params">(<span class="keyword">long</span> d)</span> <span class="comment">// constructor</span></span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			dData = d;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">displayLink</span><span class="params">()</span> <span class="comment">// display this link</span></span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			System.out.print(dData + <span class="string">" "</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>双向链表:</strong> </li>
+</ul>
+<p>双向链表的缺点是每一个插入删除操作,都要处理四个链节点的引用,因为持有前后结点的引用,内存占用也相应增加.</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/05/image3.png" alt="image"></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> datastruce;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DoubleLinkedList</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> Link first;</span><br><span class="line">	<span class="keyword">private</span> Link last;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> first == <span class="keyword">null</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insrtFirst</span><span class="params">(Object data)</span> </span>&#123;</span><br><span class="line">		Link newData = <span class="keyword">new</span> Link(data);</span><br><span class="line">		<span class="keyword">if</span> (isEmpty()) &#123;</span><br><span class="line">			last = newData;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			first.pre = newData;</span><br><span class="line">		&#125;</span><br><span class="line">		newData.next = first;</span><br><span class="line">		first = newData;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insertLast</span><span class="params">(Object data)</span> </span>&#123;</span><br><span class="line">		Link newData = <span class="keyword">new</span> Link(data);</span><br><span class="line">		<span class="keyword">if</span> (isEmpty()) &#123;</span><br><span class="line">			first = newData;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			last.next = newData;</span><br><span class="line">			newData.pre = last;</span><br><span class="line">		&#125;</span><br><span class="line">		last = newData;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">displayPre</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		Link cu=first;</span><br><span class="line">		<span class="keyword">while</span> (cu != <span class="keyword">null</span>) &#123;</span><br><span class="line">			cu.displayLink();</span><br><span class="line">			cu = cu.next;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">displayLast</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		Link cu=last;</span><br><span class="line">		<span class="keyword">while</span> (cu != <span class="keyword">null</span>) &#123;</span><br><span class="line">			cu.displayLink();</span><br><span class="line">			cu = cu.pre;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Link</span> </span>&#123;</span><br><span class="line">		<span class="keyword">public</span> Object dData;</span><br><span class="line">		<span class="keyword">public</span> Link next;</span><br><span class="line">		<span class="keyword">public</span> Link pre;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="title">Link</span><span class="params">(Object d)</span> </span>&#123;</span><br><span class="line">			dData = d;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">displayLink</span><span class="params">()</span> </span>&#123;</span><br><span class="line">			System.out.print(dData + <span class="string">" "</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="树-Tree"><a href="#树-Tree" class="headerlink" title="树 (Tree)"></a>树 (Tree)</h5><p>是包含n（n&gt;0）个结点的有穷集合K，且在K中定义了一个关系N，N满足 以下条件：<br>（1）有且仅有一个结点 K0，他对于关系N来说没有前驱，称K0为树的根结点。简称为根（root）。　<br>（2）除K0外，K中的每个结点，对于关系N来说有且仅有一个前驱。<br>（3）K中各结点，对关系N来说可以有m个后继（m&gt;=0）。<br><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/05/image4.png" alt="image"><br> <strong>二叉搜索树</strong> :一个节点的左子节点的关键字值小于这个节点,右子节点的关键字值大于或等于这个节点.(可以快速地插入和删除数据项)<br><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/05/image5.png" alt="image"></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> datastruce;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Stack;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BinaryFindTree</span> </span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</span><br><span class="line">		<span class="keyword">public</span> <span class="keyword">int</span> data;</span><br><span class="line">		<span class="keyword">public</span> Node leftChild;</span><br><span class="line">		<span class="keyword">public</span> Node rightChild;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="title">Node</span><span class="params">(<span class="keyword">int</span> data)</span> </span>&#123;</span><br><span class="line">			<span class="keyword">this</span>.data = data;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> Node root;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">BinaryFindTree</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		root = <span class="keyword">null</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> data)</span> </span>&#123;</span><br><span class="line">		Node newNode = <span class="keyword">new</span> Node(data);</span><br><span class="line">		<span class="keyword">if</span> (root == <span class="keyword">null</span>)</span><br><span class="line">			root = newNode;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			Node current = root; <span class="comment">// start at root</span></span><br><span class="line">			Node parent;</span><br><span class="line">			<span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">				parent = current;</span><br><span class="line">				<span class="keyword">if</span> (data &lt; current.data) &#123;</span><br><span class="line">					current = current.leftChild;</span><br><span class="line">					<span class="keyword">if</span> (current == <span class="keyword">null</span>) &#123;</span><br><span class="line">						parent.leftChild = newNode;</span><br><span class="line">						<span class="keyword">return</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					current = current.rightChild;</span><br><span class="line">					<span class="keyword">if</span> (current == <span class="keyword">null</span>) &#123;</span><br><span class="line">						parent.rightChild = newNode;</span><br><span class="line">						<span class="keyword">return</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">displayTree</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		Stack globalStack = <span class="keyword">new</span> Stack();</span><br><span class="line">		globalStack.push(root);</span><br><span class="line">		<span class="keyword">int</span> nBlanks = <span class="number">32</span>;</span><br><span class="line">		<span class="keyword">boolean</span> isRowEmpty = <span class="keyword">false</span>;</span><br><span class="line">		System.out</span><br><span class="line">				.println(<span class="string">"......................................................"</span>);</span><br><span class="line">		<span class="keyword">while</span> (isRowEmpty == <span class="keyword">false</span>) &#123;</span><br><span class="line">			Stack localStack = <span class="keyword">new</span> Stack();</span><br><span class="line">			isRowEmpty = <span class="keyword">true</span>;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; nBlanks; j++)</span><br><span class="line">				System.out.print(<span class="string">' '</span>);</span><br><span class="line"></span><br><span class="line">			<span class="keyword">while</span> (globalStack.isEmpty() == <span class="keyword">false</span>) &#123;</span><br><span class="line">				Node temp = (Node) globalStack.pop();</span><br><span class="line">				<span class="keyword">if</span> (temp != <span class="keyword">null</span>) &#123;</span><br><span class="line">					System.out.print(temp.data);</span><br><span class="line">					localStack.push(temp.leftChild);</span><br><span class="line">					localStack.push(temp.rightChild);</span><br><span class="line"></span><br><span class="line">					<span class="keyword">if</span> (temp.leftChild != <span class="keyword">null</span> || temp.rightChild != <span class="keyword">null</span>)</span><br><span class="line">						isRowEmpty = <span class="keyword">false</span>;</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					System.out.print(<span class="string">"--"</span>);</span><br><span class="line">					localStack.push(<span class="keyword">null</span>);</span><br><span class="line">					localStack.push(<span class="keyword">null</span>);</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; nBlanks * <span class="number">2</span> - <span class="number">2</span>; j++)</span><br><span class="line">					System.out.print(<span class="string">' '</span>);</span><br><span class="line">			&#125; <span class="comment">// end while globalStack not empty</span></span><br><span class="line">			System.out.println();</span><br><span class="line">			nBlanks /= <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">while</span> (localStack.isEmpty() == <span class="keyword">false</span>)</span><br><span class="line">				globalStack.push(localStack.pop());</span><br><span class="line">		&#125; <span class="comment">// end while isRowEmpty is false</span></span><br><span class="line">		System.out</span><br><span class="line">				.println(<span class="string">"......................................................"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="四叉树-四叉树通常用于2d游戏碰撞检测-ghostcat版as实现"><a href="#四叉树-四叉树通常用于2d游戏碰撞检测-ghostcat版as实现" class="headerlink" title="四叉树:四叉树通常用于2d游戏碰撞检测.ghostcat版as实现:"></a><strong>四叉树</strong>:四叉树通常用于2d游戏碰撞检测.ghostcat版as实现:</h5><figure class="highlight as"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">package</span> <span class="title">ghostcat</span>.<span class="title">algorithm</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="meta"><span class="meta-keyword">import</span> flash.geom.Rectangle;</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 图形筛选4叉树</span></span><br><span class="line"><span class="comment">	 * @author flashyiyi</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">QuadTree</span></span></span><br><span class="line"><span class="class">	</span>&#123;</span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 第1象限</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="keyword">var</span> q1:QuadTree;</span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 第2象限</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="keyword">var</span> q2:QuadTree;</span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 第3象限</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="keyword">var</span> q3:QuadTree;</span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 第4象限</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="keyword">var</span> q4:QuadTree;</span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 父节点</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="keyword">var</span> parent:QuadTree;</span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 起始节点</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="keyword">var</span> root:QuadTree;</span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 图形范围</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="keyword">var</span> rect:Rectangle;</span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 数据</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="keyword">var</span> data:Array = [];</span><br><span class="line"></span><br><span class="line">		<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">QuadTree</span><span class="params">(rect:Rectangle)</span></span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">this</span>.rect = rect;</span><br><span class="line">			<span class="keyword">this</span>.root = <span class="keyword">this</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 创建树结构</span></span><br><span class="line"><span class="comment">		 * @param deep</span></span><br><span class="line"><span class="comment">		 *</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">createChildren</span><span class="params">(deep:int)</span>:void</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (deep == <span class="number">0</span>)</span><br><span class="line">				<span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">const</span> hw:Number = rect.width / <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">const</span> hh:Number = rect.height / <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">			q1 = <span class="keyword">new</span> QuadTree(<span class="keyword">new</span> Rectangle(rect.x + hw, rect.y, hw, hh));</span><br><span class="line">			q2 = <span class="keyword">new</span> QuadTree(<span class="keyword">new</span> Rectangle(rect.x + hw, rect.y + hh, hw, hh));</span><br><span class="line">			q3 = <span class="keyword">new</span> QuadTree(<span class="keyword">new</span> Rectangle(rect.x, rect.y + hh, hw, hh));</span><br><span class="line">			q4 = <span class="keyword">new</span> QuadTree(<span class="keyword">new</span> Rectangle(rect.x, rect.y, hw, hh));</span><br><span class="line"></span><br><span class="line">			q1.parent = q2.parent = q3.parent = q4.parent = <span class="keyword">this</span>;</span><br><span class="line">			q1.root = q2.root = q3.root = q4.root = <span class="keyword">this</span>.root;</span><br><span class="line"></span><br><span class="line">			q1.createChildren(deep - <span class="number">1</span>);</span><br><span class="line">			q2.createChildren(deep - <span class="number">1</span>);</span><br><span class="line">			q3.createChildren(deep - <span class="number">1</span>);</span><br><span class="line">			q4.createChildren(deep - <span class="number">1</span>);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 是否有子树</span></span><br><span class="line"><span class="comment">		 * @return</span></span><br><span class="line"><span class="comment">		 *</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">get</span> <span class="title">hasChildren</span><span class="params">()</span>:Boolean</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">return</span> q1 &amp;&amp; q2 &amp;&amp; q3 &amp;&amp; q4;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 添加一个数据</span></span><br><span class="line"><span class="comment">		 * @param v</span></span><br><span class="line"><span class="comment">		 * @param x</span></span><br><span class="line"><span class="comment">		 * @param y</span></span><br><span class="line"><span class="comment">		 * @return</span></span><br><span class="line"><span class="comment">		 *</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">add</span><span class="params">(v:*, x:Number, y:Number)</span>:QuadTree</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (!isIn(x,y))</span><br><span class="line">				<span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span> (hasChildren)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">return</span> q1.add(v,x,y) || q2.add(v,x,y) || q3.add(v,x,y) || q4.add(v,x,y);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				data.push(v);</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 删除一个数据，坐标为NaN则会进行遍历查找</span></span><br><span class="line"><span class="comment">		 * @param v</span></span><br><span class="line"><span class="comment">		 * @param x</span></span><br><span class="line"><span class="comment">		 * @param y</span></span><br><span class="line"><span class="comment">		 * @return</span></span><br><span class="line"><span class="comment">		 *</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">remove</span><span class="params">(v:*, x:Number = NaN, y:Number = NaN)</span>:QuadTree</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (!isIn(x,y))</span><br><span class="line">				<span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span> (hasChildren)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">return</span> q1.remove(v,x,y) || q2.remove(v,x,y) || q3.remove(v,x,y) || q4.remove(v,x,y);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">var</span> index:int = data.indexOf(v);</span><br><span class="line">				<span class="keyword">if</span> (index!=<span class="number">-1</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					data.splice(index, <span class="number">1</span>);</span><br><span class="line">					<span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 检测是否还在当前区间内，并返回新的区间</span></span><br><span class="line"><span class="comment">		 * @param v</span></span><br><span class="line"><span class="comment">		 * @param x</span></span><br><span class="line"><span class="comment">		 * @param y</span></span><br><span class="line"><span class="comment">		 * @return</span></span><br><span class="line"><span class="comment">		 *</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">reinsert</span><span class="params">(v:*, x:Number, y:Number)</span>:QuadTree</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (!isIn(x,y))</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">var</span> result:QuadTree = root.add(v,x,y);</span><br><span class="line">				<span class="keyword">if</span> (result)</span><br><span class="line">				&#123;</span><br><span class="line">					remove(v);</span><br><span class="line">					<span class="keyword">return</span> result;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 判断坐标是否在界限内，设为NaN则不做限制</span></span><br><span class="line"><span class="comment">		 * @param x</span></span><br><span class="line"><span class="comment">		 * @param y</span></span><br><span class="line"><span class="comment">		 * @return</span></span><br><span class="line"><span class="comment">		 *</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">isIn</span><span class="params">(x:Number, y:Number)</span>:Boolean</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">return</span> (isNaN(x) || x &gt;= rect.x &amp;&amp; x &lt; rect.right) &amp;&amp; (isNaN(y) || y &gt;= rect.y &amp;&amp; y &lt; rect.bottom);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 获得一个范围内的所有数据</span></span><br><span class="line"><span class="comment">		 *</span></span><br><span class="line"><span class="comment">		 * @param rect</span></span><br><span class="line"><span class="comment">		 *</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getDataInRect</span><span class="params">(rect:Rectangle)</span>:Array</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (!<span class="keyword">this</span>.rect.intersects(rect))</span><br><span class="line">				<span class="keyword">return</span> [];</span><br><span class="line"></span><br><span class="line">			<span class="keyword">var</span> result:Array = data.concat();</span><br><span class="line">			<span class="keyword">if</span> (hasChildren)</span><br><span class="line">			&#123;</span><br><span class="line">				result.push.apply(<span class="literal">null</span>,q1.getDataInRect(rect));</span><br><span class="line">				result.push.apply(<span class="literal">null</span>,q2.getDataInRect(rect));</span><br><span class="line">				result.push.apply(<span class="literal">null</span>,q3.getDataInRect(rect));</span><br><span class="line">				result.push.apply(<span class="literal">null</span>,q4.getDataInRect(rect));</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> result;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="图-Graph"><a href="#图-Graph" class="headerlink" title="图 (Graph)"></a>图 (Graph)</h5><p>图是由结点的有穷集合V和边的集合E组成。其中，为了与树形结构加以<a href="http://baike.baidu.com/view/367270.htm" target="_blank" rel="noopener">区别</a>，在图结构中常常将结点称为顶点，边是顶点的有序偶对，若两个顶点之间存在一条边，就表示这两个顶点具有相邻关系。</p>
+<h5 id="堆-Heap"><a href="#堆-Heap" class="headerlink" title="堆 (Heap)"></a>堆 (Heap)</h5><p>在计算机科学中，堆是一种特殊的树形数据结构，每个结点都有一个值。通常我们所说的堆的数据结构，是指二叉堆。堆的特点是根结点的值最小（或最大），且根结点的两个子树也是一个堆。</p>
+<p> 二叉堆 :特殊结构的二叉树,比优先队列效率更高<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> ds</span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Heap是一种特殊的二叉树，它的每个节点都比它的子节点大。内部实现是用数组存储的。</span></span><br><span class="line"><span class="comment">	 * &lt;p&gt;</span></span><br><span class="line"><span class="comment">	 * 比如原树状结构为：</span></span><br><span class="line"><span class="comment">	 *    2</span></span><br><span class="line"><span class="comment">	 *   / \</span></span><br><span class="line"><span class="comment">	 *  1   0</span></span><br><span class="line"><span class="comment">	 * 则存储成数组为：</span></span><br><span class="line"><span class="comment">	 * [2,1,0]</span></span><br><span class="line"><span class="comment">	 * &lt;/p&gt;</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Heap</span></span></span><br><span class="line"><span class="class">	</span>&#123;</span><br><span class="line">		<span class="keyword">private</span> var _heap:Array</span><br><span class="line">		<span class="keyword">private</span> var _compare:Function</span><br><span class="line"></span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * <span class="doctag">@param</span> compare  返回正数，则a排在b前边,如果不指定，默认为 function (a:int,b:int):int&#123;return a-b&#125;;</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> function <span class="title">Heap</span><span class="params">(compare:Function = <span class="keyword">null</span>)</span>:<span class="keyword">void</span></span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			_heap = [];</span><br><span class="line">			<span class="keyword">if</span>(compare==<span class="keyword">null</span>)</span><br><span class="line">				_compare =  function (a:<span class="keyword">int</span>,b:<span class="keyword">int</span>):<span class="keyword">int</span>&#123;<span class="keyword">return</span> a-b&#125;;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				_compare =compare;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> function get <span class="title">length</span><span class="params">()</span>:uint</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">return</span> _heap.length</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> function <span class="title">modify</span><span class="params">(obj:*,newObj:*)</span>:Boolean</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			 var objIndex:<span class="keyword">int</span> = <span class="keyword">this</span>._heap.indexOf(obj);</span><br><span class="line">			 <span class="keyword">if</span>(objIndex&lt;<span class="number">0</span>)<span class="keyword">return</span> <span class="keyword">false</span></span><br><span class="line">			 _heap[objIndex]= newObj</span><br><span class="line">		     var parentIndex:<span class="keyword">int</span> = (objIndex-<span class="number">1</span>)&gt;&gt;<span class="number">1</span></span><br><span class="line">			 var temp:* =  _heap[objIndex]</span><br><span class="line">			 <span class="keyword">while</span>(objIndex&gt;<span class="number">0</span>) <span class="comment">//只有objIndex&gt;0才有可能有parent</span></span><br><span class="line">			 &#123;</span><br><span class="line">				 <span class="comment">//如果新插入的数据大于parent的数据，则应不断上移与parent交换位置</span></span><br><span class="line">				 <span class="keyword">if</span>(_compare(temp,<span class="keyword">this</span>._heap[parentIndex])&gt;<span class="number">0</span>)</span><br><span class="line">				 &#123;</span><br><span class="line">					 <span class="keyword">this</span>._heap[objIndex] = <span class="keyword">this</span>._heap[parentIndex]</span><br><span class="line">					 objIndex = parentIndex</span><br><span class="line">					 parentIndex = (parentIndex-<span class="number">1</span>)&gt;&gt;<span class="number">1</span> <span class="comment">//parent索引的算法</span></span><br><span class="line">				 &#125;<span class="keyword">else</span></span><br><span class="line">				 &#123;</span><br><span class="line">					 <span class="keyword">break</span>;</span><br><span class="line">				 &#125;</span><br><span class="line">			 &#125;</span><br><span class="line">			 _heap[objIndex] = temp</span><br><span class="line">		     <span class="keyword">return</span> <span class="keyword">true</span></span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//入队</span></span><br><span class="line">		<span class="comment">//parentIndex = (childindex -1)/2</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> function <span class="title">enqueue</span><span class="params">(obj:*)</span>:<span class="keyword">void</span></span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">this</span>._heap.push(obj)</span><br><span class="line"></span><br><span class="line">			var parentIndex:<span class="keyword">int</span> = (<span class="keyword">this</span>._heap.length-<span class="number">2</span>)&gt;&gt; <span class="number">1</span></span><br><span class="line">			var objIndex:<span class="keyword">int</span> = <span class="keyword">this</span>._heap.length -<span class="number">1</span></span><br><span class="line">			var temp:* = <span class="keyword">this</span>._heap[objIndex]</span><br><span class="line"></span><br><span class="line">			<span class="keyword">while</span>(objIndex&gt;<span class="number">0</span>) <span class="comment">//只有objIndex&gt;0才有可能有parent</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="comment">//如果新插入的数据大于parent的数据，则应不断上移与parent交换位置</span></span><br><span class="line">				<span class="keyword">if</span>(_compare(temp,<span class="keyword">this</span>._heap[parentIndex])&gt;<span class="number">0</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">this</span>._heap[objIndex] = <span class="keyword">this</span>._heap[parentIndex]</span><br><span class="line">					objIndex = parentIndex</span><br><span class="line">					parentIndex = (parentIndex-<span class="number">1</span>)&gt;&gt;<span class="number">1</span> <span class="comment">//parent索引的算法</span></span><br><span class="line">				&#125;<span class="keyword">else</span></span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			_heap[objIndex] = temp</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//出队</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> function <span class="title">dequeue</span><span class="params">()</span>:*</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">if</span>(_heap.length&gt;<span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				var r:* = _heap[<span class="number">0</span>]</span><br><span class="line">				_heap[<span class="number">0</span>] = _heap.pop()</span><br><span class="line">				var parentIndex:<span class="keyword">int</span> = <span class="number">0</span></span><br><span class="line">				var childIndex:<span class="keyword">int</span> = <span class="number">1</span></span><br><span class="line">				var temp:* = _heap[parentIndex]</span><br><span class="line">				<span class="keyword">while</span>(childIndex &lt;= _heap.length-<span class="number">1</span>)</span><br><span class="line">				&#123;</span><br><span class="line">						<span class="keyword">if</span>(_heap[childIndex+<span class="number">1</span>] &amp;&amp; <span class="keyword">this</span>._compare(_heap[childIndex],_heap[childIndex+<span class="number">1</span>])&lt;<span class="number">0</span>)</span><br><span class="line">						&#123;</span><br><span class="line">						 childIndex++</span><br><span class="line">						&#125;</span><br><span class="line">					<span class="keyword">if</span>(<span class="keyword">this</span>._compare(temp,<span class="keyword">this</span>._heap[childIndex])&lt;<span class="number">0</span>)</span><br><span class="line">					&#123;</span><br><span class="line">						  <span class="keyword">this</span>._heap[parentIndex] = _heap[childIndex]</span><br><span class="line">						  parentIndex = childIndex;</span><br><span class="line">						  childIndex = (childIndex &lt;&lt;<span class="number">1</span>)+<span class="number">1</span></span><br><span class="line">					&#125;<span class="keyword">else</span></span><br><span class="line">					&#123;</span><br><span class="line">						<span class="keyword">break</span></span><br><span class="line">					&#125;</span><br><span class="line"></span><br><span class="line">				&#125;</span><br><span class="line">				_heap[parentIndex] = temp</span><br><span class="line">				<span class="keyword">return</span> r</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> _heap.pop()</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> function <span class="title">toString</span><span class="params">()</span>:String</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">this</span>._heap.toString()</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="function"><span class="keyword">public</span> function get <span class="title">heap</span><span class="params">()</span>:Array</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">return</span> _heap;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h5 id="散列表-Hash"><a href="#散列表-Hash" class="headerlink" title="散列表 (Hash)"></a>散列表 (Hash)</h5><p>若结构中存在关键字和K相等的记录，则必定在f(K)的存储位置上。由此，不需比较便可直接取得所查记录。称这个对应关系f为散列函数(Hash function)，按这个思想建立的表为<a href="http://baike.baidu.com/view/1320746.htm" target="_blank" rel="noopener">散列表</a>。</p>
+<p><a href="http://www.nshen.net/dataStructure/2011/08/25/AS3-DataStructure.html" target="_blank" rel="noopener">http://www.nshen.net/dataStructure/2011/08/25/AS3-DataStructure.html</a></p>
+<p><a href="http://blog.csdn.net/zhanxinhang/article/details/6706217" target="_blank" rel="noopener">http://blog.csdn.net/zhanxinhang/article/details/6706217</a></p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/base/">base</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/最近迷恋上小霸王游戏,小蜜蜂/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">最近迷恋上小霸王游戏:小蜜蜂</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/斗地主结构分析/">
+        <span class="next-text nav-default">斗地主结构分析</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

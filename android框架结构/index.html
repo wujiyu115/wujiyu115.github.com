@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="android　框架结构"/>
+
+
+
+
+  <meta name="keywords" content="android, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/android框架结构/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> android　框架结构 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          android　框架结构
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2013-04-04
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/android/">android</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-Android平台结构-SDK目录结构-目录结构"><span class="toc-text">一 Android平台结构,SDK目录结构,目录结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三-签名apk"><span class="toc-text">三　签名apk</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h2 id="一-Android平台结构-SDK目录结构-目录结构"><a href="#一-Android平台结构-SDK目录结构-目录结构" class="headerlink" title="一 Android平台结构,SDK目录结构,目录结构"></a>一 Android平台结构,SDK目录结构,目录结构</h2><p>　android是一个linux内核的操作系统，常规编程语言是java,不过也推出了NDK,可以用c++来访问部分接口。这篇就略去环境搭建和hello world了。</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/2010100721194321.jpg" alt="2010100721194321"></p>
+<a id="more"></a>
+<p><strong>1. 平台整体架构</strong></p>
+<ul>
+<li>Applications： 应用程序层(自带的短信一些功能)</li>
+<li>Application Framework： 应用程序框架层(<font color="#ff0000">主要关注点</font>)</li>
+<li>Library &amp;&amp; Android Runtime： 底层功能库以及Android运行时</li>
+<li>Linux Kernel： Linux 内核</li>
+</ul>
+<p><strong>2. SDK目录:</strong></p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/QQ20130404114155_MarkMan.png" alt="QQ截图20130404114155_MarkMan"></p>
+<p><strong>3. 项目目录详解</strong></p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/0_1323176185TK99.gif" alt="0_1323176185TK99"></p>
+<ul>
+<li>src: 专门存放我们编写的java源代码的包。<br>gen: 该目录不用我们开发人员维护，但又非常重要的目录。该目录用来存放由Android开发工具所生成的目录。该目录下的所有文件都不是我们创建的，而是由ADT自动生成的。该目录下的R.java文件非常重要。</li>
+<li>android 2.1: 存放Android自身的jar包。</li>
+<li>assets：该目录用来存放应用中用到的类似于视频文件、Mp3一些媒体文件。</li>
+<li>res：res是resource的缩写，我们称该目录为资源目录。该目录可以存放一些图标、界面文件、应用到的文字信息。<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">res下有三个dawable文件夹：</span><br><span class="line">drawable-hdpi：用来存放高分辨率的图标；</span><br><span class="line">drawable-mdpi:用来存放中等分辨路的图标；</span><br><span class="line">drawable-ldpi:用来存放低分辨率的图标。</span><br><span class="line">程序运行时可以根据手机分辨率的高低选取相应的目录下的图标。</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>res下还有一个layout文件夹，里面是ADT默认自动创建的main.xml文件，在mian.xml中存放的是布局文件,下面是mian.xml中的部分代码：</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/0_1323176233eelO.gif" alt="0_1323176233eelO"></p>
+<p>res下的values中的strings.xml用来定义字符串和数值，在Activity中使用getResources().getString(resourceId)或getResources().getText(resourceId)取得资源。<code>strings.xml中的部分代码:</code><br><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/0_1323176257RHi0.gif" alt="0_1323176257RHi0"></p>
+<ul>
+<li>AndroidManifest.xml:该文件是功能清单文件，该文件列出了应用中所使用的所有组件，如“activity”。</li>
+<li>proguard.cfg：混淆脚本文件。</li>
+<li>project.properties:该文件存放了项目的一些环境配置，根据需要可以手工改动。<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/0_1323176269i9u9.gif" alt="0_1323176269i9u9"></p></li>
+</ul>
+<p>可以将7改为3,4，7,8,10,11,12,13,14中的任意数值。<br>res下的文件在R.java中生成唯一id，layout和Activity也通过id关联<br><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image3.png" alt="image"><br><strong>程序入口:</strong><br><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image4.png" alt="image"><br>AndroidManifest.xml中intent-filter为上图配置的Activity即为程序入口.</p>
+<h2 id="三-签名apk"><a href="#三-签名apk" class="headerlink" title="三　签名apk"></a>三　签名apk</h2><p><strong>1.签名的意义</strong><br>　　为了保证每个应用程序开发商合法ID，防止部分开放商可能通过使用相同的Package Name来混淆替换已经安装的程序，我们需要对我们发布的APK文件进行唯一签名，保证我们每次发布的版本的一致性(如自动更新不会因为版本不一致而无法安装)。</p>
+<p><strong>2.签名的步骤</strong></p>
+<ul>
+<li><p>创建key<br>创建key，需要用到keytool.exe (位于jdk1.6.0_24\jre\bin目录下)，使用产生的key对apk签名用到的是jarsigner.exe (位于jdk1.6.0_24\bin目录下)，把上两个软件所在的目录添加到环境变量path后，打开cmd输入<br><code>D:\&gt;keytool -genkey -alias demo.keystore -keyalg RSA -validity 40000 -keystore demo.keystore</code><br>说明：-genkey 产生密钥<br>-alias demo.keystore 别名 demo.keystore<br>-keyalg RSA 使用RSA算法对签名加密<br>-validity 40000 有效期限4000天<br>-keystore demo.keystore </p>
+</li>
+<li><p>使用key对apk签名<br><code>D:\&gt;jarsigner -verbose -keystore demo.keystore -signedjar demo_signed.apk demo.apk demo.keystore</code><br>说明：-verbose 输出签名的详细信息<br>-keystore demo.keystore 密钥库位置<br>-signedjar demor_signed.apk demo.apk demo.keystore 正式签名，三个参数中依次为签名后产生的文件demo_signed，要签名的文件demo.apk和密钥库demo.keystore.<br>注意事项：android工程的bin目录下的demo.apk默认是已经使用debug用户签名的，所以不能使用上述步骤对此文件再次签名。正确步骤应该是:在工程点击右键-&gt;Anroid Tools-Export Unsigned Application Package导出的apk采用上述步骤签名。</p>
+</li>
+</ul>
+<p><strong>3.签名之后,用zipalign(压缩对齐)优化你的APK文件</strong></p>
+<p>　未签名的apk不能使用,也不能优化.签名之后的apk使用zipalign.exe(android-sdk-windows\tools目录下)工具对其优化:<code>D:\&gt;zipalign -v 4 demo_signedfinal.apk</code></p>
+<p>如上，zipalign能够使apk文件中未压缩的数据在4个字节边界上对齐（4个字节是一个性能很好的值），这样android系统就可以使用mmap()(请自行查阅这个函数的用途)函数读取文件，可以在读取资源上获得较高的性能.</p>
+<ul>
+<li>在4个字节边界上对齐的意思就是，一般来说，是指编译器吧4个字节作为一个单位来进行读取的结果，这样的话，CPU能够对变量进行高效,快速的访问（较之前不对齐）。</li>
+<li>对齐的根源：android系统中的Davlik虚拟机使用自己专有的格式DEX，DEX的结构是紧凑的，为了让运行时的性能更好，可以进一步用”对齐”进一步优化，但是大小一般会有所增加。</li>
+</ul>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/android/">android</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/android 组件Activity/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">android 组件Activity</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/centos 基本设置/">
+        <span class="next-text nav-default">centos 命令，基本设置</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

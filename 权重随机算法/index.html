@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="权重随机算法"/>
+
+
+
+
+  <meta name="keywords" content="随机, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/权重随机算法/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> 权重随机算法 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          权重随机算法
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2016-10-10
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#权重和计算"><span class="toc-text">权重和计算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#常规做法"><span class="toc-text">常规做法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#按照权重排序优化"><span class="toc-text">按照权重排序优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#折半查找改进版本"><span class="toc-text">折半查找改进版本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#纯算法实现"><span class="toc-text">纯算法实现</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <p>带权随机算法在游戏开发中应用广泛,最近在做商店随机商品又遇到这种问题,重新思考并总结了一下带权随机的做法.</p>
+<p>带权随机其实很好理解<br>比如我们希望抽到A的抽到的比重是10,B的比重是5,C的比重是1,如下图<br><img src="http://farwmarth.bestnewbee.com/images/044TM313-0.jpg" alt="044TM313"></p>
+<a id="more"></a>
+<h2 id="权重和计算"><a href="#权重和计算" class="headerlink" title="权重和计算"></a>权重和计算</h2><p>常规做法是计算权重总和sum，然后在1到sum之间随机选择一个数R，之后遍历整个集合，统计遍历的项的权重之和，如果大于等于R，就停止遍历，选择遇到的项<br>好处:没有额外的空间占用，算法也比较简单。<br>坏处:选取的时候要遍历集合，时间复杂度是O（n）。</p>
+<h3 id="常规做法"><a href="#常规做法" class="headerlink" title="常规做法"></a>常规做法</h3><figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="built_in">math</span>.<span class="built_in">randomseed</span>(<span class="built_in">os</span>.<span class="built_in">time</span>())</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">pick</span><span class="params">(rules, count)</span></span></span><br><span class="line">    <span class="keyword">local</span> ret = &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">local</span> total_weight = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> _, v <span class="keyword">in</span> <span class="built_in">ipairs</span>(rules) <span class="keyword">do</span></span><br><span class="line">        total_weight = total_weight + v.weight</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i=<span class="number">1</span>, count <span class="keyword">do</span></span><br><span class="line">        <span class="keyword">local</span> rd = <span class="built_in">math</span>.<span class="built_in">random</span>(total_weight)</span><br><span class="line">        <span class="keyword">for</span> _, rule <span class="keyword">in</span> <span class="built_in">ipairs</span>(rules) <span class="keyword">do</span></span><br><span class="line">            <span class="keyword">if</span> rd &lt;= rule.weight <span class="keyword">then</span></span><br><span class="line">                <span class="built_in">table</span>.<span class="built_in">insert</span>(ret, rule.item)</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                rd = rd - rule.weight</span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">return</span> ret</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">weight_unique_pick_one</span><span class="params">(rules, count)</span></span></span><br><span class="line">    <span class="keyword">local</span> ret = &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">local</span> <span class="function"><span class="keyword">function</span> <span class="title">get_total_weight</span><span class="params">( rules )</span></span></span><br><span class="line">        <span class="keyword">local</span> total_weight = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> _, v <span class="keyword">in</span> <span class="built_in">ipairs</span>(rules) <span class="keyword">do</span></span><br><span class="line">            total_weight = total_weight + v.weight</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">return</span> total_weight</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">local</span> total_weight =get_total_weight(rules)</span><br><span class="line">    <span class="keyword">for</span> i=<span class="number">1</span>, count <span class="keyword">do</span></span><br><span class="line">        <span class="keyword">local</span> rd = <span class="built_in">math</span>.<span class="built_in">random</span>(total_weight)</span><br><span class="line">        <span class="keyword">for</span> index, rule <span class="keyword">in</span> <span class="built_in">ipairs</span>(rules) <span class="keyword">do</span></span><br><span class="line">            <span class="keyword">if</span> rd &lt;= rule.weight <span class="keyword">then</span></span><br><span class="line">                <span class="built_in">table</span>.<span class="built_in">insert</span>(ret, rule.item)</span><br><span class="line">                <span class="built_in">table</span>.<span class="built_in">remove</span>(rules, index)</span><br><span class="line">                total_weight =get_total_weight(rules)</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                rd = rd - rule.weight</span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">return</span> ret</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--test</span></span><br><span class="line"><span class="keyword">local</span> ret = weight_unique_pick_one(&#123;&#123;item=<span class="number">1</span>,weight=<span class="number">1</span>&#125;,&#123;item=<span class="number">2</span>,weight=<span class="number">50</span>&#125;,&#123;item=<span class="number">3</span>,weight=<span class="number">4</span>&#125;,&#123;item=<span class="number">4</span>,weight=<span class="number">4</span>&#125;,&#123;item=<span class="number">5</span>,weight=<span class="number">4</span>&#125;,&#123;item=<span class="number">6</span>,weight=<span class="number">4</span>&#125;,&#123;item=<span class="number">7</span>,weight=<span class="number">50</span>&#125;,&#123;item=<span class="number">8</span>,weight=<span class="number">4</span>&#125;&#125;,<span class="number">4</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"------------------"</span>)</span><br><span class="line"><span class="keyword">for</span> i,v <span class="keyword">in</span> <span class="built_in">ipairs</span>(ret) <span class="keyword">do</span></span><br><span class="line">    <span class="built_in">print</span>(i,v)</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h3 id="按照权重排序优化"><a href="#按照权重排序优化" class="headerlink" title="按照权重排序优化"></a>按照权重排序优化</h3><p>对项目集按照权重排序。这样遍历的时候，概率高的项排在前面，减少遍历的项。<br>比较{A:5，B:2，C:2，D:1}和{B:2，C:2，A:5，D:1}<br>前者遍历步数的期望是5/10<em>1+2/10</em>2+2/10<em>3+1/10</em>4而后者是2/10<em>1+2/10</em>2+5/10<em>3+1/10</em>4。<br>好处:提高了平均选取速度。<br>坏处:需要进行排序，并且不易添加删除修改项。</p>
+<p>实现很简单将上面的<code>weight_unique_pick_one</code>方法中<code>rules</code>按字段<code>weight</code>做一个高到低排序就可以了<br><figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">weight_unique_pick_one</span><span class="params">(rules, count)</span></span></span><br><span class="line">    <span class="keyword">local</span> ret = &#123;&#125;</span><br><span class="line">    <span class="built_in">table</span>.<span class="built_in">sort</span>(rules,<span class="function"><span class="keyword">function</span><span class="params">(a, b)</span></span> <span class="keyword">return</span> b.weight &lt; a.weight <span class="keyword">end</span> )</span><br><span class="line">    ...</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="折半查找改进版本"><a href="#折半查找改进版本" class="headerlink" title="折半查找改进版本"></a>折半查找改进版本</h3><p>折半查找的改进方法是将所有项的区间定义头尾,构造一个已排序的区间,然后用二分法加快查找<code>random</code>的区间</p>
+<p>实现如下:<br><figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="keyword">local</span> <span class="function"><span class="keyword">function</span> <span class="title">binsearch</span><span class="params">( t,value )</span></span></span><br><span class="line">    <span class="keyword">local</span> i_start,i_end,i_mid = <span class="number">1</span>,#t,<span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> i_start &lt;= i_end <span class="keyword">do</span></span><br><span class="line">        i_mid = <span class="built_in">math</span>.<span class="built_in">floor</span>( (i_start+i_end)/<span class="number">2</span> )</span><br><span class="line">        <span class="keyword">local</span> value2 =  t[i_mid]</span><br><span class="line">        <span class="keyword">if</span> value == value2 <span class="keyword">then</span></span><br><span class="line">            <span class="keyword">return</span> i_mid</span><br><span class="line">        <span class="keyword">elseif</span>  value &gt; value2 <span class="keyword">then</span></span><br><span class="line">            i_end = i_mid - <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            i_start = i_mid + <span class="number">1</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> <span class="function"><span class="keyword">function</span> <span class="title">bisect_left</span><span class="params">( t,value )</span></span></span><br><span class="line">    <span class="keyword">local</span> i_start,i_end,i_mid = <span class="number">1</span>,#t,<span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> i_start &lt; i_end <span class="keyword">do</span></span><br><span class="line">        i_mid = <span class="built_in">math</span>.<span class="built_in">floor</span>( (i_start+i_end)/<span class="number">2</span> )</span><br><span class="line">        <span class="keyword">local</span> value2 =  t[i_mid]</span><br><span class="line">        <span class="keyword">if</span>  value2 &lt; value <span class="keyword">then</span></span><br><span class="line">            i_start = i_mid + <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            i_end = i_mid</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">return</span> i_start</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> <span class="function"><span class="keyword">function</span> <span class="title">get_weight_interval</span><span class="params">( rules )</span></span></span><br><span class="line">    <span class="keyword">local</span> total_weight = <span class="number">0</span></span><br><span class="line">    <span class="keyword">local</span> weight_interval = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> _, v <span class="keyword">in</span> <span class="built_in">ipairs</span>(rules) <span class="keyword">do</span></span><br><span class="line">        total_weight = total_weight + v.weight</span><br><span class="line">        <span class="built_in">table</span>.<span class="built_in">insert</span>(weight_interval,total_weight)</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">return</span> total_weight,weight_interval</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">weight_unique_pick</span><span class="params">(rules, count)</span></span></span><br><span class="line">    <span class="keyword">local</span> ret = &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">local</span> total_weight,weight_interval =get_weight_interval(rules)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i=<span class="number">1</span>, count <span class="keyword">do</span></span><br><span class="line">        <span class="keyword">local</span> rd = <span class="built_in">math</span>.<span class="built_in">random</span>(total_weight)</span><br><span class="line">        <span class="keyword">local</span> b_index = bisect_left(weight_interval,rd)</span><br><span class="line">        <span class="keyword">local</span> item = rules[b_index]</span><br><span class="line">        <span class="built_in">table</span>.<span class="built_in">insert</span>(ret, item.item)</span><br><span class="line">        <span class="built_in">table</span>.<span class="built_in">remove</span>(rules, b_index)</span><br><span class="line">        total_weight,weight_interval =get_weight_interval(rules)</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">return</span> ret</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">--test</span></span><br><span class="line"><span class="keyword">local</span> ret = weight_unique_pick(&#123;&#123;item=<span class="number">1</span>,weight=<span class="number">1</span>&#125;,&#123;item=<span class="number">2</span>,weight=<span class="number">100</span>&#125;,&#123;item=<span class="number">3</span>,weight=<span class="number">4</span>&#125;,&#123;item=<span class="number">4</span>,weight=<span class="number">4</span>&#125;,&#123;item=<span class="number">5</span>,weight=<span class="number">50</span>&#125;&#125;,<span class="number">3</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"------------------"</span>)</span><br><span class="line"><span class="keyword">for</span> i,v <span class="keyword">in</span> <span class="built_in">ipairs</span>(ret) <span class="keyword">do</span></span><br><span class="line">    <span class="built_in">print</span>(i,v)</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="纯算法实现"><a href="#纯算法实现" class="headerlink" title="纯算法实现"></a>纯算法实现</h2><p>算法来源:<br><a href="http://utopia.duth.gr/~pefraimi/research/data/2007EncOfAlg.pdf" target="_blank" rel="noopener">http://utopia.duth.gr/~pefraimi/research/data/2007EncOfAlg.pdf</a><br>参考:<br><a href="http://kanglinxm.blogspot.jp/2013/10/blog-post.html" target="_blank" rel="noopener">http://kanglinxm.blogspot.jp/2013/10/blog-post.html</a></p>
+<p>纯算法实现的关键实现:<br><figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> _,item <span class="keyword">in</span> <span class="built_in">ipairs</span>(rules) <span class="keyword">do</span></span><br><span class="line">    <span class="keyword">local</span> u = <span class="built_in">math</span>.<span class="built_in">random</span>();</span><br><span class="line">    <span class="keyword">local</span> w_i = <span class="number">1</span> / item.weight;</span><br><span class="line">    <span class="keyword">local</span> k = <span class="built_in">math</span>.<span class="built_in">pow</span>(u, w_i);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<p>随机一个<code>0-1</code>之间的小数作为底数,将<code>1/权重</code>作为幂,权重越大,随机数相同时结果越大.将<code>k</code>由大到小排序取前<code>count</code>个即为要随机的个数.这种算法缺点是必须随机所有的项得到随机结果集.</p>
+<p>完整实现:<br><figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">weight_unique_math</span><span class="params">(rules, count)</span></span></span><br><span class="line">    <span class="keyword">local</span> ret = &#123;&#125;</span><br><span class="line">    <span class="keyword">local</span> all_random_weight = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> _,item <span class="keyword">in</span> <span class="built_in">ipairs</span>(rules) <span class="keyword">do</span></span><br><span class="line">        <span class="keyword">local</span> u = <span class="built_in">math</span>.<span class="built_in">random</span>();</span><br><span class="line">        <span class="keyword">local</span> w_i = <span class="number">1</span> / item.weight;</span><br><span class="line">        <span class="keyword">local</span> k = <span class="built_in">math</span>.<span class="built_in">pow</span>(u, w_i);</span><br><span class="line">        <span class="built_in">table</span>.<span class="built_in">insert</span>(all_random_weight,&#123;item =item.item,random_weight = k&#125;)</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    <span class="built_in">table</span>.<span class="built_in">sort</span>(all_random_weight,<span class="function"><span class="keyword">function</span><span class="params">(a, b)</span></span> <span class="keyword">return</span> b.random_weight &lt; a.random_weight <span class="keyword">end</span> )</span><br><span class="line">    <span class="keyword">for</span> i=<span class="number">1</span>,count <span class="keyword">do</span></span><br><span class="line">        <span class="keyword">local</span> item = all_random_weight[i].item</span><br><span class="line">        <span class="built_in">table</span>.<span class="built_in">insert</span>(ret,item)</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">return</span> ret</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> items = &#123;&#123;item=<span class="number">1</span>,weight=<span class="number">1</span>&#125;,&#123;item=<span class="number">2</span>,weight=<span class="number">50</span>&#125;,&#123;item=<span class="number">3</span>,weight=<span class="number">4</span>&#125;,&#123;item=<span class="number">4</span>,weight=<span class="number">4</span>&#125;,&#123;item=<span class="number">5</span>,weight=<span class="number">4</span>&#125;,&#123;item=<span class="number">6</span>,weight=<span class="number">4</span>&#125;,&#123;item=<span class="number">7</span>,weight=<span class="number">50</span>&#125;,&#123;item=<span class="number">8</span>,weight=<span class="number">4</span>&#125;&#125;</span><br><span class="line"><span class="keyword">local</span> ret = weight_unique_math(items,<span class="number">3</span>)</span><br><span class="line"><span class="keyword">for</span> i,v <span class="keyword">in</span> <span class="built_in">ipairs</span>(ret) <span class="keyword">do</span></span><br><span class="line">    <span class="built_in">print</span>(i,v)</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/随机/">随机</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/如何避免一些危险的指令操作/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">如何避免一些危险的指令操作</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/mkdocs/">
+        <span class="next-text nav-default">readthedocs切换到mkdocs</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

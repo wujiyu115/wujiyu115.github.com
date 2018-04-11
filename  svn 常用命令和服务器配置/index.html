@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="svn 常用命令和服务器配置"/>
+
+
+
+
+  <meta name="keywords" content="svn, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/ svn 常用命令和服务器配置/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> svn 常用命令和服务器配置 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          svn 常用命令和服务器配置
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2013-05-24
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/svn/">svn</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Subversion-与版本控制"><span class="toc-text">Subversion 与版本控制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SVN-操作"><span class="toc-text">SVN 操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#常用操作"><span class="toc-text">常用操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#清除svn缓存的密码"><span class="toc-text">清除svn缓存的密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#svn-ignore"><span class="toc-text">svn ignore</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#svn代码回滚改动已经被提交"><span class="toc-text">svn代码回滚改动已经被提交</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#svn-删除带-的文件"><span class="toc-text">svn 删除带!的文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#svn-server-配置"><span class="toc-text">svn server 配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#目录结构"><span class="toc-text">目录结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#svnserve-conf"><span class="toc-text">svnserve.conf</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他工具"><span class="toc-text">其他工具</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h2 id="Subversion-与版本控制"><a href="#Subversion-与版本控制" class="headerlink" title="Subversion 与版本控制"></a>Subversion 与版本控制</h2><p><a href="http://svnbook.red-bean.com/nightly/en/index.html" target="_blank" rel="noopener">http://svnbook.red-bean.com/nightly/en/index.html</a><br><a href="http://svnbook.red-bean.com/nightly/zh/svn-book.html" target="_blank" rel="noopener">http://svnbook.red-bean.com/nightly/zh/svn-book.html</a></p>
+<h2 id="SVN-操作"><a href="#SVN-操作" class="headerlink" title="SVN 操作"></a>SVN 操作</h2><h3 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h3><ul>
+<li><code>svn propset svn:ignore &#39;test&#39; .</code>    添加到忽略目录</li>
+<li><code>svn update</code> 更新</li>
+<li><code>svn update -r</code>  更新到一个指定版本</li>
+<li><code>svn checkout</code>     检出svn</li>
+<li><code>svn checkout --depth=empty</code> 检出为空文件夹</li>
+<li><code>svn revert -R .</code>  递归还原当前目录</li>
+<li><code>svn commit -m &#39;&#39;</code> 提交</li>
+<li><code>svn add * --force</code> 强制提交所有<br>+<code>svn diff filename</code>  比较文件</li>
+<li><code>svn status</code>  查看库文件状态</li>
+<li><code>svn relocate svn switch --relocate   源地址  新地址</code>     切换svn地址</li>
+<li><code>svn info</code>   查看目录信息</li>
+<li><code>svn cleanup</code>  清理文件</li>
+<li><code>svn (del, remove, rm)</code>  从svn中移除文件</li>
+<li><code>svn export  -r</code> 导出一个没有svn文件夹的目录</li>
+<li><code>svn merge -r 28:25</code>  从28到25回滚</li>
+<li><code>svn resolved  filename</code>  解决冲突</li>
+<li><code>svn rm  filename</code>   从svn中删除</li>
+<li><code>svn rm   --keep-local  filename</code>  从svn中删除并保留本地文件</li>
+</ul>
+<a id="more"></a>
+<h3 id="清除svn缓存的密码"><a href="#清除svn缓存的密码" class="headerlink" title="清除svn缓存的密码"></a>清除svn缓存的密码</h3><figure class="highlight plain"><figcaption><span>-rf ~/.subversion/auth```</span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">###  svn的working copy locked并且cleanup不能恢复</span><br></pre></td></tr></table></figure>
+<p>产生这种情况大多是因为上次svn命令执行失败且被锁定了。<br>如果cleanup没有效果的话只好手动删除锁定文件。<br>cd 到svn项目目录下，然后执行如下命令<br>del lock /q/s<br>就把锁删掉了。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">###  设置svn 默认编辑器</span><br><span class="line">```shell</span><br><span class="line">export SVN_EDITOR=vim</span><br></pre></td></tr></table></figure></p>
+<h3 id="svn-ignore"><a href="#svn-ignore" class="headerlink" title="svn ignore"></a>svn ignore</h3><ul>
+<li><p>若想创建一个文件夹，但不加入版本控制，即忽略这个文件夹：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>多行</span><br><span class="line">svn propset svn:ignore "cache\</span><br><span class="line">tmp\</span><br><span class="line">null\</span><br><span class="line">and_so_on" .</span><br><span class="line"><span class="meta">#</span>或者手动编辑</span><br><span class="line"> svn propedit svn:ignore .</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>若已经创建了文件夹，并加入了版本控制，现在想忽略这个文件夹，但要保持文件夹的内容：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">svn rm --keep-local path/directory_to_keep/*</span><br><span class="line">svn propset svn:ignore 'path/directory_to_keep/*' .</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>未加入版本控制,要忽略子目录</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">svn add -N dir</span><br><span class="line">cd dir</span><br><span class="line">svn propset svn:ignore "igdir"</span><br><span class="line">svn add .</span><br><span class="line">svn st</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>检查设置的忽略属性在哪个地方</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">svn proplist</span><br><span class="line"><span class="meta">#</span>查看设置的忽略详情</span><br><span class="line">svn propget svn:ignore</span><br><span class="line"><span class="meta">#</span>  删除设置的忽略目录</span><br><span class="line">svn propdel svn:ignore</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>svn-ignore-all :设置所有状态带<code>?</code>的资源ignore.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/sh</span><br><span class="line"><span class="meta">#</span> svn-ignore-all</span><br><span class="line"><span class="meta">#</span> usage:</span><br><span class="line"><span class="meta">#</span>   1. run svn status to see what is going on at each step</span><br><span class="line"><span class="meta">#</span>   2. add or commit all files that you DO want to have in svn</span><br><span class="line"><span class="meta">#</span>   3. remove any random files that you don't want to svn:ignore</span><br><span class="line"><span class="meta">#</span>   4. run this script to svn:ignore everything marked '?' in output of `svn status`</span><br><span class="line"></span><br><span class="line">svn status |</span><br><span class="line">grep '^?' |</span><br><span class="line">sed 's/^? *//' |</span><br><span class="line">while read f; do</span><br><span class="line">    d=`dirname "$f"`</span><br><span class="line">    b=`basename "$f"`</span><br><span class="line">    ignore=`svn propget svn:ignore "$d"`</span><br><span class="line">    if [ -n "$ignore" ]; then</span><br><span class="line">        ignore="$ignore</span><br><span class="line">"</span><br><span class="line">    fi</span><br><span class="line">    ignore="$ignore$b"</span><br><span class="line">    svn propset svn:ignore "$ignore" "$d"</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>svn-ignore目录 .输入目录加入忽略</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/sh</span><br><span class="line"><span class="meta">#</span> svn-ignore</span><br><span class="line"><span class="meta">#</span> usage:</span><br><span class="line"><span class="meta">#</span>   svn-ignore file/to/ignore ...</span><br><span class="line"></span><br><span class="line">for f; do</span><br><span class="line">    d=`dirname "$f"`</span><br><span class="line">    b=`basename "$f"`</span><br><span class="line">    ignore=`svn propget svn:ignore "$d"`</span><br><span class="line">    if [ -n "$ignore" ]; then</span><br><span class="line">        ignore="$ignore</span><br><span class="line">"</span><br><span class="line">    fi</span><br><span class="line">    ignore="$ignore$b"</span><br><span class="line">    svn propset svn:ignore "$ignore" "$d"</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="svn代码回滚改动已经被提交"><a href="#svn代码回滚改动已经被提交" class="headerlink" title="svn代码回滚改动已经被提交"></a>svn代码回滚改动已经被提交</h3><p>这种情况下，用<code>svn merge</code>命令来进行回滚。<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>假设最新版本号是28。</span><br><span class="line">svn update</span><br><span class="line"><span class="meta">#</span> 然后找出要回滚的确切版本号：</span><br><span class="line"> svn log [something]</span><br><span class="line"><span class="meta">#</span>回滚到版本号25：</span><br><span class="line">svn merge -r 28:25 something</span><br><span class="line"><span class="meta">#</span>为了保险起见，再次确认回滚的结果：</span><br><span class="line">svn diff -r 28:25 [something]</span><br><span class="line"><span class="meta">#</span>提交回滚：</span><br><span class="line">svn commit -m "Revert revision from r28 to r25,because of ..."</span><br><span class="line"><span class="meta">#</span>提交后版本变成了29。</span><br></pre></td></tr></table></figure></p>
+<h3 id="svn-删除带-的文件"><a href="#svn-删除带-的文件" class="headerlink" title="svn 删除带!的文件"></a>svn 删除带<code>!</code>的文件</h3><p>linux(支持带空格的文件)<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">svn st | grep ^! | awk '&#123;$1=""; print " --force \""substr($0,2)"@\"" &#125;' | xargs svn rm</span><br></pre></td></tr></table></figure></p>
+<p>win<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>## svndel.bat</span><br><span class="line">svn status | findstr /R "^!" &gt; missing.list</span><br><span class="line">for /F "tokens=* delims=! " %%A in (missing.list) do (svn delete "%%A")</span><br><span class="line">del missing.list 2&gt;NUL</span><br></pre></td></tr></table></figure></p>
+<h2 id="svn-server-配置"><a href="#svn-server-配置" class="headerlink" title="svn server 配置"></a>svn server 配置</h2><h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/05/image16.png" alt="image"></p>
+<h3 id="svnserve-conf"><a href="#svnserve-conf" class="headerlink" title="svnserve.conf"></a>svnserve.conf</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">[general]</span></span><br><span class="line"><span class="string">password-db</span> <span class="string">=</span> <span class="string">passwd</span></span><br><span class="line"><span class="string">authz-db</span> <span class="string">=</span> <span class="string">authz</span></span><br></pre></td></tr></table></figure>
+<p>passwd<br><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">[users]</span></span><br><span class="line"><span class="string">wujiyu</span> <span class="string">=</span> <span class="string">wujiyu</span></span><br><span class="line"><span class="string">chenshu</span> <span class="string">=</span> <span class="string">chenshu</span></span><br><span class="line"><span class="string">huangjunhai</span> <span class="string">=</span> <span class="string">huangjunhai</span></span><br><span class="line"><span class="string">liujiefeng</span> <span class="string">=</span> <span class="string">liujiefeng</span></span><br></pre></td></tr></table></figure></p>
+<p>authz<br><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">[groups]</span></span><br><span class="line"><span class="string">client</span> <span class="string">=</span> <span class="string">wujiyu,chenshu</span></span><br><span class="line"><span class="string">server</span> <span class="string">=</span> <span class="string">liujiefeng</span></span><br><span class="line"><span class="string">doc</span> <span class="string">=</span> <span class="string">huangjunhai</span></span><br><span class="line"></span><br><span class="line"><span class="string">[/]</span></span><br><span class="line"><span class="string">wujiyu</span> <span class="string">=</span> <span class="string">rw</span></span><br><span class="line"><span class="string">[/client]</span></span><br><span class="line"><span class="string">@client</span> <span class="string">=</span> <span class="string">rw</span></span><br><span class="line"><span class="string">[/server]</span></span><br><span class="line"><span class="string">@server</span> <span class="string">=</span> <span class="string">rw</span></span><br><span class="line"><span class="string">[/doc]</span></span><br><span class="line"><span class="string">@doc</span> <span class="string">=</span> <span class="string">rw</span></span><br><span class="line"><span class="string">@client</span> <span class="string">=</span> <span class="string">r</span></span><br><span class="line"><span class="string">@server</span> <span class="string">=</span> <span class="string">r</span></span><br><span class="line"><span class="string">[/&lt;span</span> <span class="string">style="color:</span> <span class="comment">#0000ff"&gt;public&lt;/span&gt;]</span></span><br><span class="line"><span class="string">*=rw</span></span><br></pre></td></tr></table></figure></p>
+<p>这样就可以实现目录权限分配了.</p>
+<h2 id="其他工具"><a href="#其他工具" class="headerlink" title="其他工具"></a>其他工具</h2><ul>
+<li>scm manager</li>
+<li>visual svn</li>
+</ul>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/svn/">svn</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/ visual studio 2012 备忘/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">visual studio 2012 备忘</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/顺丰快递接口/">
+        <span class="next-text nav-default">顺丰快递接口</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

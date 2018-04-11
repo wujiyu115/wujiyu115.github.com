@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="cocos2d-x vs开发"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/cocos2d-x vs开发/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> cocos2d-x vs开发 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          cocos2d-x vs开发
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2013-07-27
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/cocos2d-x/">cocos2d-x</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-vs环境配置"><span class="toc-text">一  vs环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#没有文件扩展”-js”的脚本引擎-解决办法"><span class="toc-text">没有文件扩展”.js”的脚本引擎 解决办法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二-cocos2d-x基本概念"><span class="toc-text">二  cocos2d-x基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#坐标系"><span class="toc-text">坐标系</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三-notices"><span class="toc-text">三 notices</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h2 id="一-vs环境配置"><a href="#一-vs环境配置" class="headerlink" title="一  vs环境配置"></a>一  <strong>vs环境配置</strong></h2><p>android环境配置不累赘了:<a href="http://farwmarth.com/?p=657" target="_blank" rel="noopener">http://farwmarth.com/?p=657</a></p>
+<p>vs配置：下载cocos2d-x 2.1.4  , install-templates-msvc.<br>bat是安装vs模板的，安装的时候发现2.1.4里竟然没有msv目录，下了2.1.3将msv目录复制到2.1.4重新运行，模板就安装成功了   </p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/07/image2.png" alt="image"></p>
+<a id="more"></a>
+<h4 id="没有文件扩展”-js”的脚本引擎-解决办法"><a href="#没有文件扩展”-js”的脚本引擎-解决办法" class="headerlink" title="没有文件扩展”.js”的脚本引擎 解决办法"></a>没有文件扩展”.js”的脚本引擎 解决办法</h4><p>在命令行运行JScript脚本时，遇到如下的错误提示：  “输入错误: 没有文件扩展“.js”的脚本引擎。”<br>这样的错误,原因是因为JS扩展名的文件被其他软件关联了，需要取消关联。<br>  如系统中安装了ULTRAEDIT或者E钻加密软件等，就需要去掉关联；  或者如下解决方法：  在运行中输入“regedit”进入注册表，  只需要把[HKEY_CLASSES_ROOT.js] 项下的那个默认值改成 “JSFile” 就可以正常运行JS 文件了。</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/07/image3.png" alt="image"></p>
+<p>还有一种创建项目的方式就是用tools目录下带的python脚本.<font color="#ff0000">注意python版本要为2.7,</font><font color="#000000">执行 python create_project.py -project BiuBiuSecondDemo -package com.jingui.BiuBiuSecondDemo -language cpp</font></p>
+<p>然后会生成projects目录下会生成一个工程</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/07/image4.png" alt="image"><br><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/07/image5.png" alt="image"></p>
+<p>导入vs,就可以开始coding了。</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/07/image6.png" alt="image"></p>
+<h2 id="二-cocos2d-x基本概念"><a href="#二-cocos2d-x基本概念" class="headerlink" title="二  cocos2d-x基本概念"></a><strong>二  cocos2d-x基本概念</strong></h2><p>下面这张图很生动地描述了cocos2d-x的舞台基本构成.</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/07/1352707127_9847.jpg" alt="1352707127_9847"></p>
+<ul>
+<li>CCDirector 导演，负责场景之间的导航</li>
+<li>CCScene   类似flash中的场景，用Transition在场景之间跳转</li>
+<li>CCLayer    层,表现各种元素的层级关系,接受触控反馈.</li>
+<li>CCSprite   精灵,如flash中Sprite,元素容器.</li>
+<li>CCAction  节点的动作</li>
+</ul>
+<h4 id="坐标系"><a href="#坐标系" class="headerlink" title="坐标系"></a>坐标系</h4><p>在移动游戏开发过程中，有三种类型的坐标系你可能遇到：</p>
+<p><strong>UI坐标系:</strong>  iOS/Android/Windows SDK/Flash中的通用UI坐标系: 起点坐标(x=0, y=0)位于左上角  · X轴从屏幕最左边开始，由左向右渐增  · Y轴坐标从屏幕最上方开始，由上向下渐增  详见下图</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/07/clip_image001.jpg" alt="clip_image001"></p>
+<p> <strong>Direct3D坐标系:</strong>  DirectX 使用Left-handed Cartesian Coordinate</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/07/clip_image003.jpg" alt="clip_image003"></p>
+<p> <strong>OpenGL**</strong>和Cocos2d坐标系:**  Cocos2d-x/-html5/-iphone使用的坐标系和OpenGL的坐标系一样，名为“Right-handed Cartesian Coordinate Syste”。</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/07/clip_image005.jpg" alt="clip_image005"><br><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/07/clip_image007.jpg" alt="clip_image007"></p>
+<p>下面这张图片有助于更好的阐述Cocos2d-x坐标：</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/07/clip_image009.jpg" alt="clip_image009"></p>
+<p>AnchorPoint :锚点,单位为精灵的宽度百分比，而不是像素.默认为0.5,0.5位于精灵的中心,所以,当我们设置坐标为0,0时,精灵只有一半显示</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/07/image7.png" alt="image"><br><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/07/image8.png" alt="image"></p>
+<h2 id="三-notices"><a href="#三-notices" class="headerlink" title="三 notices"></a><strong>三 notices</strong></h2><p>打开输出到控制台:<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> COCOS2D_DEBUG 1</span></span><br><span class="line">CCLog(<span class="string">"%f"</span>,visibleSize.width);</span><br></pre></td></tr></table></figure></p>
+<p>关闭fps显示:<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">CCDirector::sharedDirector()-&amp;gt;setDisplayStats(<span class="literal">false</span>);</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/JAVA内存分配/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">JAVA内存分配</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/ visual studio 2012 备忘/">
+        <span class="next-text nav-default">visual studio 2012 备忘</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

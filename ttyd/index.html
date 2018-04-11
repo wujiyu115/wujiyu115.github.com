@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="将内网终端分享给其他人使用"/>
+
+
+
+
+  <meta name="keywords" content="ttyd, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/ttyd/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> 将内网终端分享给其他人使用 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          将内网终端分享给其他人使用
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017-01-05
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ttyd"><span class="toc-text">ttyd</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ngrok"><span class="toc-text">ngrok</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#frp"><span class="toc-text">frp</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一键安装"><span class="toc-text">一键安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#frp配合ttyd的配置"><span class="toc-text">frp配合ttyd的配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#frp配合nginx"><span class="toc-text">frp配合nginx</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#服务器frp配置"><span class="toc-text">服务器frp配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#nginx配置"><span class="toc-text">nginx配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#客户端frp配置"><span class="toc-text">客户端frp配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用frp做ssh转发"><span class="toc-text">用frp做ssh转发</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#外网服务器配置"><span class="toc-text">外网服务器配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#内网客户端配置"><span class="toc-text">内网客户端配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#本机连接"><span class="toc-text">本机连接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#外网服务器访问内网web服务"><span class="toc-text">外网服务器访问内网web服务</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#socket-pipe"><span class="toc-text">socket-pipe</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <p>起因是某人要学习下<code>linux</code>,但是不想用虚拟机装linux,在网上也找了几个在线的<code>shell</code>练习网站,感觉不是很满意,于是想把自己内网主机上的终端share一下,github搜索了一下还真有这样的项目.</p>
+<h2 id="ttyd"><a href="#ttyd" class="headerlink" title="ttyd"></a>ttyd</h2><p><code>ttyd</code>是一个把自己的终端通过web方式共享给其他人操作的工具</p>
+<p><a href="https://github.com/tsl0922/ttyd" target="_blank" rel="noopener">https://github.com/tsl0922/ttyd</a></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo ttyd login</span><br><span class="line"><span class="meta">#</span>默认端口是7681 用login方式要输入账号密码</span><br><span class="line"><span class="meta">#</span>http://localhost:7681</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="ngrok"><a href="#ngrok" class="headerlink" title="ngrok"></a>ngrok</h2><p><code>ngrok</code>服务可以分配给你一个域名让你本地的web项目提供给外网访问，特别适合向别人展示你本机的web demo 以及调试一些远程的API.</p>
+<ul>
+<li>qydev : <a href="http://qydev.com/" target="_blank" rel="noopener">http://qydev.com/</a></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./ngrok -config=ngrok.cfg -hostname farwmarth 7681</span><br><span class="line"><span class="meta">#</span>http://farwmarth.tunnel.qydev.com/</span><br></pre></td></tr></table></figure>
+<p><img src="http://farwmarth.bestnewbee.com/images/ttyd.png" alt="ttyd"></p>
+<h2 id="frp"><a href="#frp" class="headerlink" title="frp"></a>frp</h2><p>frp 是一个高性能的反向代理应用，可以帮助您轻松地进行内网穿透，对外网提供服务，支持 tcp, udp, http, https 等协议类型，并且 web 服务支持根据域名进行路由转发</p>
+<h3 id="一键安装"><a href="#一键安装" class="headerlink" title="一键安装"></a>一键安装</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget --no-check-certificate https://raw.githubusercontent.com/clangcn/onekey-install-shell/master/frps/install-frps.sh -O ./install-frps.sh</span><br><span class="line">chmod 700 ./install-frps.sh</span><br><span class="line">./install-frps.sh install</span><br></pre></td></tr></table></figure>
+<h3 id="frp配合ttyd的配置"><a href="#frp配合ttyd的配置" class="headerlink" title="frp配合ttyd的配置"></a>frp配合ttyd的配置</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>frpc.ini</span><br><span class="line">[common]</span><br><span class="line">server_addr = frp.lu8.win</span><br><span class="line">server_port = 7000</span><br><span class="line">log_file = ./frpc.log</span><br><span class="line">log_level = info</span><br><span class="line">log_max_days = 3</span><br><span class="line">privilege_token = frp888</span><br><span class="line"></span><br><span class="line">[http_mode]</span><br><span class="line"><span class="meta">#</span>注意修改上方[]内的内容，不要与其他隧道名称重复</span><br><span class="line"><span class="meta">#</span>privilege_mode特权模式</span><br><span class="line">privilege_mode = true</span><br><span class="line">type = http</span><br><span class="line"><span class="meta">#</span>local_ip本地服务IP</span><br><span class="line">local_ip = 127.0.0.1</span><br><span class="line"><span class="meta">#</span>local_port本地服务端口</span><br><span class="line">local_port = 7681</span><br><span class="line">custom_domains = farwmarth.frp.lu8.win</span><br></pre></td></tr></table></figure>
+<h3 id="frp配合nginx"><a href="#frp配合nginx" class="headerlink" title="frp配合nginx"></a>frp配合nginx</h3><p>域名解析到服务器<code>frptest.xxx.com</code></p>
+<h4 id="服务器frp配置"><a href="#服务器frp配置" class="headerlink" title="服务器frp配置"></a>服务器frp配置</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[common]</span><br><span class="line">    bind_addr = 0.0.0.0</span><br><span class="line">    bind_port = 7000</span><br><span class="line">    vhost_http_port = 5999</span><br><span class="line"></span><br><span class="line">[frptest]</span><br><span class="line">    type = http</span><br><span class="line">    auth_token = xxx</span><br><span class="line">    custom_domains = frptest.xxx.com</span><br></pre></td></tr></table></figure>
+<h4 id="nginx配置"><a href="#nginx配置" class="headerlink" title="nginx配置"></a>nginx配置</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">upstream frptest&#123;</span><br><span class="line">    server 127.0.0.1:5999;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server</span><br><span class="line">&#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    server_name frptest.xxx.com;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        proxy_pass http://frptest;</span><br><span class="line">        proxy_http_version 1.1;</span><br><span class="line">        proxy_read_timeout 7200;</span><br><span class="line">        proxy_set_header Connection "";</span><br><span class="line">        proxy_set_header Host $host;</span><br><span class="line">        proxy_set_header X-Real-Ip $remote_addr;</span><br><span class="line">        proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="客户端frp配置"><a href="#客户端frp配置" class="headerlink" title="客户端frp配置"></a>客户端frp配置</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[common]</span><br><span class="line">    server_addr = 服务器ip</span><br><span class="line">    server_port = 7000</span><br><span class="line">    auth_token xxx</span><br><span class="line">    log_file = ./frpc.log</span><br><span class="line">    log_level = info</span><br><span class="line">    log_max_days = 3</span><br><span class="line"></span><br><span class="line">[frptest]</span><br><span class="line">    local_ip = 127.0.0.1</span><br><span class="line">    local_port = 8080</span><br><span class="line">    type = http</span><br><span class="line">    auth_token = xxx</span><br></pre></td></tr></table></figure>
+<h3 id="用frp做ssh转发"><a href="#用frp做ssh转发" class="headerlink" title="用frp做ssh转发"></a>用frp做ssh转发</h3><p>时序图大致如下:</p>
+<p><img src="http://farwmarth.bestnewbee.com/14904631822511.jpg" alt=""></p>
+<h4 id="外网服务器配置"><a href="#外网服务器配置" class="headerlink" title="外网服务器配置"></a>外网服务器配置</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>frps.ini</span><br><span class="line">[common]</span><br><span class="line">bind_addr = 0.0.0.0</span><br><span class="line">bind_port = 7000</span><br><span class="line">log_max_days = 7</span><br><span class="line">max_pool_count = 100</span><br><span class="line">log_file = frps.log</span><br><span class="line">log_level = info</span><br><span class="line"></span><br><span class="line">[ssh]</span><br><span class="line">listen_port = 6000</span><br><span class="line">type = tcp</span><br><span class="line">auth_token = 通讯加密token</span><br><span class="line">use_encryption = true</span><br><span class="line">use_gzip = true</span><br></pre></td></tr></table></figure>
+<h4 id="内网客户端配置"><a href="#内网客户端配置" class="headerlink" title="内网客户端配置"></a>内网客户端配置</h4><p>先要安装ssh服务开启并将端口设置为<code>22022</code></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>frpc.ini</span><br><span class="line">[common]</span><br><span class="line">server_addr = 外网服务器ip</span><br><span class="line">server_port = 7000</span><br><span class="line">auth_token = 通讯加密token</span><br><span class="line">log_file = ./frpc.log</span><br><span class="line">log_level = info</span><br><span class="line">log_max_days = 3</span><br><span class="line"></span><br><span class="line">[ssh]</span><br><span class="line">local_ip = 127.0.0.1</span><br><span class="line">local_port = 22022</span><br><span class="line">type = tcp</span><br><span class="line">use_gzip = true</span><br><span class="line">use_encryption = true</span><br></pre></td></tr></table></figure>
+<h4 id="本机连接"><a href="#本机连接" class="headerlink" title="本机连接"></a>本机连接</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -oPort=6000 内网客户端ssh用户@外网服务器ip</span><br></pre></td></tr></table></figure>
+<h4 id="外网服务器访问内网web服务"><a href="#外网服务器访问内网web服务" class="headerlink" title="外网服务器访问内网web服务"></a>外网服务器访问内网web服务</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>frps.ini</span><br><span class="line">[common]</span><br><span class="line">bind_addr = 0.0.0.0</span><br><span class="line">bind_port = 1234</span><br><span class="line">log_max_days = 7</span><br><span class="line">max_pool_count = 100</span><br><span class="line">log_file = frps.log</span><br><span class="line">log_level = info</span><br><span class="line">vhost_http_port = 1235</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[web]</span><br><span class="line">type = http</span><br><span class="line">auth_token = xxx</span><br><span class="line">custom_domains = xxx.xxx.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>frpc.ini</span><br><span class="line">[common]</span><br><span class="line">server_addr = m1-test-pub2.m1.ejoy.com</span><br><span class="line">server_port = 1234</span><br><span class="line">auth_token = xxx</span><br><span class="line">log_file = ./frpc.log</span><br><span class="line">log_level = info</span><br><span class="line">log_max_days = 3</span><br><span class="line"></span><br><span class="line">[web]</span><br><span class="line">type = http</span><br><span class="line">local_port =10003</span><br><span class="line">custom_domains = xxx.xxx.com</span><br></pre></td></tr></table></figure>
+<p>通过<code>http://xxx.xxx.com:1235</code>可以访问内网web服务</p>
+<h2 id="socket-pipe"><a href="#socket-pipe" class="headerlink" title="socket-pipe"></a>socket-pipe</h2><p>node写的,直接看作者的介绍</p>
+<ul>
+<li><a href="https://joyqi.com/javascript/socket-pipe.html" target="_blank" rel="noopener">https://joyqi.com/javascript/socket-pipe.html</a></li>
+<li><a href="https://github.com/joyqi/socket-pipe" target="_blank" rel="noopener">https://github.com/joyqi/socket-pipe</a></li>
+</ul>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/ttyd/">ttyd</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/语音服务器的选型/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">语音服务器的选型</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/初级运维指南/">
+        <span class="next-text nav-default">初级运维指南</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

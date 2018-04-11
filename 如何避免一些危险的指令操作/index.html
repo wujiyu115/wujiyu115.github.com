@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="如何避免一些危险的指令操作"/>
+
+
+
+
+  <meta name="keywords" content="hook, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/如何避免一些危险的指令操作/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> 如何避免一些危险的指令操作 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          如何避免一些危险的指令操作
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2016-11-29
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#git引发的事故"><span class="toc-text">git引发的事故</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#恢复过程"><span class="toc-text">恢复过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#禁止强制推送"><span class="toc-text">禁止强制推送</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#本地禁止强制推送"><span class="toc-text">本地禁止强制推送</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hook方式"><span class="toc-text">hook方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gitbucket-远程仓库禁止强制推送"><span class="toc-text">gitbucket 远程仓库禁止强制推送</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#github配置"><span class="toc-text">github配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gitlab配置"><span class="toc-text">gitlab配置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#强制删除rm-rf"><span class="toc-text">强制删除rm -rf</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#trash-cli"><span class="toc-text">trash-cli</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rmtrash"><span class="toc-text">rmtrash</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mv替代rm"><span class="toc-text">mv替代rm</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h1 id="git引发的事故"><a href="#git引发的事故" class="headerlink" title="git引发的事故"></a>git引发的事故</h1><p>上周服务器的一位同事一个不小心用了<code>git push -f</code>,抹掉了我们一上午的工作内容,还好抹掉的记录不是太多大概八九条.<br>各自花了大概半小时恢复了数据</p>
+<h2 id="恢复过程"><a href="#恢复过程" class="headerlink" title="恢复过程"></a>恢复过程</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>查看所有的本地操作数据</span><br><span class="line">git reflog</span><br><span class="line"><span class="meta">#</span>或者查看所有数据,找到被抹掉的commit</span><br><span class="line">git log -g</span><br><span class="line"><span class="meta">#</span>复制一个提交节点并在当前分支做一次完全一样的新提交。</span><br><span class="line">git cherry-pick commit_id</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>可以看出强制提交这个命令的危险性,如何来禁止强制呢?</p>
+<h2 id="禁止强制推送"><a href="#禁止强制推送" class="headerlink" title="禁止强制推送"></a>禁止强制推送</h2><h3 id="本地禁止强制推送"><a href="#本地禁止强制推送" class="headerlink" title="本地禁止强制推送"></a>本地禁止强制推送</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git config --global receive.denyNonFastForwards true</span><br><span class="line">git config --global receive.denyDeletes true</span><br></pre></td></tr></table></figure>
+<h3 id="hook方式"><a href="#hook方式" class="headerlink" title="hook方式"></a>hook方式</h3><p><a href="https://gist.github.com/stefansundin/d465f1e331fc5c632088" target="_blank" rel="noopener">https://gist.github.com/stefansundin/d465f1e331fc5c632088</a></p>
+<h3 id="gitbucket-远程仓库禁止强制推送"><a href="#gitbucket-远程仓库禁止强制推送" class="headerlink" title="gitbucket 远程仓库禁止强制推送"></a>gitbucket 远程仓库禁止强制推送</h3><p>gitbucket提供了分支权限配置: <a href="https://confluence.atlassian.com/bitbucketserver/stash-3-10-release-notes-776640856.html" target="_blank" rel="noopener">参考</a></p>
+<p><code>Rewriting history</code> 就是防止强制推送</p>
+<p><img src="https://confluence.atlassian.com/bitbucketserver/files/776640856/776640857/1/1433804733697/STASH310_branch_permissions.png" alt=""></p>
+<h3 id="github配置"><a href="#github配置" class="headerlink" title="github配置"></a>github配置</h3><p><a href="https://help.github.com/articles/configuring-protected-branches/" target="_blank" rel="noopener">https://help.github.com/articles/configuring-protected-branches/</a></p>
+<p><img src="http://farwmarth.bestnewbee.com/images/git_push_force.png" alt=""></p>
+<h3 id="gitlab配置"><a href="#gitlab配置" class="headerlink" title="gitlab配置"></a>gitlab配置</h3><p><a href="https://about.gitlab.com/2014/11/26/keeping-your-code-protected/" target="_blank" rel="noopener">https://about.gitlab.com/2014/11/26/keeping-your-code-protected/</a></p>
+<p><img src="https://about.gitlab.com/images/protected_branches.png" alt=""></p>
+<h1 id="强制删除rm-rf"><a href="#强制删除rm-rf" class="headerlink" title="强制删除rm -rf"></a>强制删除<code>rm -rf</code></h1><p>mac下可以用zsh这样的终端<code>rm -rf /</code>会有二次确认</p>
+<h3 id="trash-cli"><a href="#trash-cli" class="headerlink" title="trash-cli"></a>trash-cli</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>https://github.com/andreafrancia/trash-cli</span><br><span class="line">easy_install trash-cli</span><br></pre></td></tr></table></figure>
+<h3 id="rmtrash"><a href="#rmtrash" class="headerlink" title="rmtrash"></a>rmtrash</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">brew install rmtrash</span><br><span class="line"><span class="meta">#</span>配置</span><br><span class="line">alias rm="rmtrash"</span><br><span class="line">alias rmdir="rmdirtrash"</span><br></pre></td></tr></table></figure>
+<h3 id="mv替代rm"><a href="#mv替代rm" class="headerlink" title="mv替代rm"></a>mv替代rm</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mkdir -p ~/.trash</span><br><span class="line">alias rm=trash  </span><br><span class="line">alias r=trash  </span><br><span class="line">alias rl="ls ~/.trash"</span><br><span class="line">alias ur=undelfile</span><br><span class="line">undelfile()</span><br><span class="line">&#123;</span><br><span class="line">  mv -i ~/.trash/$@ ./</span><br><span class="line">&#125;</span><br><span class="line">trash()</span><br><span class="line">&#123;  </span><br><span class="line">  mv $@ ~/.trash/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/hook/">hook</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/升级centos上的python/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">在CentOS 6.X 上升级 Python为 2.7</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/权重随机算法/">
+        <span class="next-text nav-default">权重随机算法</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

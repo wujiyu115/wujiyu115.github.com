@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="read-the-docs托管学习笔记"/>
+
+
+
+
+  <meta name="keywords" content="sphinx github readthedoc, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/readthedocs/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> read-the-docs托管学习笔记 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          read-the-docs托管学习笔记
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2016-06-24
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Sphinx"><span class="toc-text">Sphinx</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Sphinx安装"><span class="toc-text">Sphinx安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#快速开始"><span class="toc-text">快速开始</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加一篇文章"><span class="toc-text">添加一篇文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#支持markdown编写"><span class="toc-text">支持markdown编写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更改主题-sphinx-rtd-theme"><span class="toc-text">更改主题 sphinx_rtd_theme</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Github托管-read-the-docs发布"><span class="toc-text">Github托管, read_the_docs发布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Webhooks监听github提交"><span class="toc-text">Webhooks监听github提交</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#make-nonlocal-image-URI-found-waring-gone"><span class="toc-text">make nonlocal image URI found waring gone</span></a></li></ol></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h2 id="Sphinx"><a href="#Sphinx" class="headerlink" title="Sphinx"></a>Sphinx</h2><p><a href="http://sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>是一个基于Python的文档生成项目,采用了<strong>reStructuredText</strong>作为文档写作语言 ,不过也可以通过模块支持其他格式.<br>(Sphinx标记结构)[<a href="http://www.pythondoc.com/sphinx/markup/]" target="_blank" rel="noopener">http://www.pythondoc.com/sphinx/markup/]</a></p>
+<h3 id="Sphinx安装"><a href="#Sphinx安装" class="headerlink" title="Sphinx安装"></a>Sphinx安装</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install sphinx sphinx-autobuild</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>创建目录</span><br><span class="line">cd /path/to/project</span><br><span class="line">mkdir docs</span><br><span class="line"><span class="meta">#</span>sphinx工作目录基本配置</span><br><span class="line">cd docs</span><br><span class="line"><span class="meta">#</span>可以回车按默认配置来写</span><br><span class="line">sphinx-quickstart</span><br><span class="line"><span class="meta">#</span>quickstart 后生成的目录结构</span><br><span class="line">readthedocs</span><br><span class="line">│ make.bat</span><br><span class="line">│ Makefile</span><br><span class="line">├─build</span><br><span class="line">└─source</span><br><span class="line">　　│ conf.py</span><br><span class="line">　　│ index.rst</span><br><span class="line">　　├─_static</span><br><span class="line">　　└─_templates</span><br><span class="line"><span class="meta">#</span> 默认会有一个index.rst,make html用来生成html页面</span><br><span class="line">make html</span><br></pre></td></tr></table></figure>
+<h3 id="添加一篇文章"><a href="#添加一篇文章" class="headerlink" title="添加一篇文章"></a>添加一篇文章</h3><p>在<code>source</code>目录下新建<code>hello.rst</code>:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hello,world</span><br><span class="line">======================================</span><br></pre></td></tr></table></figure></p>
+<p>index.rst修改如下:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Contents:</span><br><span class="line"></span><br><span class="line">.. toctree::</span><br><span class="line">   :maxdepth: 2</span><br><span class="line"></span><br><span class="line">   hello</span><br></pre></td></tr></table></figure></p>
+<p><code>make html</code>后效果如下:<br><img src="http://farwmarth.bestnewbee.com/images/sphinx.png" alt="sphinx"></p>
+<p><code>toctree</code> 支持多级目录,有时候要区分同文件比如<code>python.rst</code>,<code>swift.rst</code>笔记在不同的目录,<code>toctree</code>这样设置:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Contents:</span><br><span class="line"></span><br><span class="line">.. toctree::</span><br><span class="line"></span><br><span class="line">   python/python</span><br><span class="line">   swift/swift</span><br></pre></td></tr></table></figure></p>
+<h3 id="支持markdown编写"><a href="#支持markdown编写" class="headerlink" title="支持markdown编写"></a>支持markdown编写</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install recommonmark</span><br></pre></td></tr></table></figure>
+<p>更改<strong>conf.py</strong>:<br><figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> recommonmark.parser <span class="keyword">import</span> CommonMarkParser</span><br><span class="line"></span><br><span class="line">source_parsers = &#123;</span><br><span class="line">    <span class="string">'.md'</span>: CommonMarkParser,</span><br><span class="line">&#125;</span><br><span class="line">source_suffix = [<span class="string">'.rst'</span>, <span class="string">'.md'</span>]</span><br></pre></td></tr></table></figure></p>
+<h3 id="更改主题-sphinx-rtd-theme"><a href="#更改主题-sphinx-rtd-theme" class="headerlink" title="更改主题 sphinx_rtd_theme"></a>更改主题 <a href="https://github.com/snide/sphinx_rtd_theme" target="_blank" rel="noopener">sphinx_rtd_theme</a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install sphinx_rtd_theme</span><br></pre></td></tr></table></figure>
+<p>更改<strong>conf.py</strong>:<br><figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sphinx_rtd_theme</span><br><span class="line"></span><br><span class="line">html_theme = <span class="string">"sphinx_rtd_theme"</span></span><br><span class="line"></span><br><span class="line">html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]</span><br></pre></td></tr></table></figure></p>
+<h3 id="Github托管-read-the-docs发布"><a href="#Github托管-read-the-docs发布" class="headerlink" title="Github托管, read_the_docs发布"></a>Github托管, read_the_docs发布</h3><p><a href="https://read-the-docs.readthedocs.io/en/latest" target="_blank" rel="noopener">doc</a></p>
+<ol>
+<li>github上<code>push</code>用<code>sphinx-quickstart</code>生成的项目,<code>build</code>目录可以设置到.gitignore中</li>
+<li>登录<a href="https://readthedocs.org/" target="_blank" rel="noopener">readthedocs</a>,注册账号,<code>Connected Services</code>中授权<code>github</code></li>
+<li><a href="https://readthedocs.org/dashboard/" target="_blank" rel="noopener">dashboard</a>中<code>Import a Porject</code>导入<code>github</code>中的项目然后<code>build</code></li>
+</ol>
+<h3 id="Webhooks监听github提交"><a href="#Webhooks监听github提交" class="headerlink" title="Webhooks监听github提交"></a>Webhooks监听github提交</h3><ol>
+<li>在文档项目的<code>setting</code>中选中<code>Webhooks &amp; Services</code>,</li>
+<li>在<code>Services</code>项中点击<code>Add service</code></li>
+<li>选择<code>ReadTheDocs</code>,点击<code>Active</code></li>
+</ol>
+<h3 id="make-nonlocal-image-URI-found-waring-gone"><a href="#make-nonlocal-image-URI-found-waring-gone" class="headerlink" title="make nonlocal image URI found waring gone"></a>make <code>nonlocal image URI found</code> waring gone</h3><p>更改<code>conf.py</code><br><figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> sphinx.environment</span><br><span class="line"><span class="keyword">from</span> docutils.utils <span class="keyword">import</span> get_source_line</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_warn_node</span><span class="params">(self, msg, node, **kwargs)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> msg.startswith(<span class="string">'nonlocal image URI found:'</span>):</span><br><span class="line">        self._warnfunc(msg, <span class="string">'%s:%s'</span> % get_source_line(node), **kwargs)</span><br><span class="line"></span><br><span class="line">sphinx.environment.BuildEnvironment.warn_node = _warn_node</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/sphinx-github-readthedoc/">sphinx github readthedoc</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/node/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">NodeJs初探</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/vsftpd/">
+        <span class="next-text nav-default">vsftpd使用</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

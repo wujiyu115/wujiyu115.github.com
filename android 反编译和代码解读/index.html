@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="android 反编译和代码解读"/>
+
+
+
+
+  <meta name="keywords" content="android, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/android 反编译和代码解读/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> android 反编译和代码解读 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          android 反编译和代码解读
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2013-04-23
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/android/">android</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-apk反编译"><span class="toc-text">一 apk反编译</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#if…else-语句"><span class="toc-text">if…else 语句:</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#switch语句"><span class="toc-text">switch语句</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#enum枚举"><span class="toc-text">enum枚举</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <p><font color="red">update :2013-5-18</font></p>
+<p><font color="red">反编译工具小米人改之理:&nbsp; </font><a href="http://www.xiaomiren.net/apkmodifier/" target="_blank" rel="noopener">http://www.xiaomiren.net/apkmodifier/</a></p>
+<h2 id="一-apk反编译"><a href="#一-apk反编译" class="headerlink" title="一 apk反编译"></a>一 apk反编译</h2><p>将apk文件解压后有两部分文件需要处理，一种是xml文件，另一种一个dex文件（.dex）</p>
+<a id="more"></a>
+<ol>
+<li>对xml文件进行包的解析，一般有两种方式:<a href="https://code.google.com/p/android-apktool/" target="_blank" rel="noopener">apktool</a>（推荐）和AXMLPrinter2.jar;</li>
+<li>从dex到class公认<a href="https://code.google.com/p/dex2jar/" target="_blank" rel="noopener">dex2jar</a>.bat，实现反编译；公认的强者；</li>
+<li>而class到java的方式要更多样化一些,因为只是查看反编译后的代码：<a href="http://java.decompiler.free.fr/?q=jdgui" target="_blank" rel="noopener">jd-gui</a>（推荐），<a href="http://sourceforge.net/projects/jadclipse/" target="_blank" rel="noopener">Jodeclipse</a>（Jode的Eclipse插件），<a href="http://sourceforge.net/projects/jadclipse/" target="_blank" rel="noopener">JadClipse</a>（Jad的Eclipse插件）。 <p>dex解包</p></li>
+</ol>
+<ul>
+<li>首先把apk文件改名为.zip，然后解压缩其中的class.dex文件，它就是java文件编译再通过dx工具打包成的。</li>
+<li>把class.dex拷贝到dex2jar.bat所在目录。运行dex2jar.bat class.dex，生成classes.dex.dex2jar.jar。</li>
+<li>运行JD-GUI工具（绿色软件，好用的软件！），打开上面的jar文件，即可看到java源代码。</li>
+<li>file-saveall将java源码保存为zip文件 </li>
+<li>资源文件解包<br>1 安装apktool,将apk反编译<br><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image6.png" alt="image"><br><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image7.png" alt="image"><br>将smali文件包删除.<br>2 将上一步保存的源码解压,在此建立一个src目录.将源码放入src下,导入到eclipse中.结构如下.<br><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image8.png" alt="image"> <img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image9.png" alt="image"><br>反编译完成.错误会很多..可以选择不同的工具来反编译,然后交叉对比.我一般使用jd-ui和jad-eclipse插件来编译. <p>jad-eclipse配置<br><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image10.png" alt="image"><br><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image11.png" alt="image"> </p><p>二 错误代码还原规则</p></li>
+</ul>
+<h6 id="if…else-语句"><a href="#if…else-语句" class="headerlink" title="if…else 语句:"></a>if…else 语句:</h6><p>反编译代码<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (paramBoolean)</span><br><span class="line">        paramTextView.setTextColor(-<span class="number">16727809</span>);</span><br><span class="line">       <span class="keyword">while</span> (<span class="keyword">true</span>)</span><br><span class="line">       &#123;</span><br><span class="line">         <span class="keyword">return</span>;</span><br><span class="line">         paramTextView.setTextColor(-<span class="number">1315861</span>);</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure></p>
+<p> 还原后<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">if</span> (paramBoolean)</span><br><span class="line">   &#123;</span><br><span class="line">     paramTextView.setTextColor(-<span class="number">16727809</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">   &#123;</span><br><span class="line">      paramTextView.setTextColor(-<span class="number">1315861</span>);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<p>会把if ..esle 反编译成 if …while(true)结构.<br>反编译代码<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (paramInt1 != <span class="number">1</span>)</span><br><span class="line">       <span class="keyword">break</span> label185;</span><br><span class="line">     <span class="keyword">if</span> (<span class="keyword">this</span>.countChild_1 == <span class="keyword">null</span>)</span><br><span class="line">     &#123;</span><br><span class="line">       <span class="keyword">this</span>.countChild_1 = <span class="keyword">new</span> PokerCountChild(<span class="keyword">this</span>.mContext);</span><br><span class="line">       <span class="keyword">this</span>.countChild_1 = <span class="keyword">new</span> PokerCountChild(<span class="keyword">this</span>.mContext);</span><br><span class="line">       <span class="keyword">this</span>.countChild_1.setPosition((<span class="keyword">int</span>)(<span class="number">0.83</span>D * BaseGameActivity.screenWidth</span><br><span class="line">- <span class="keyword">this</span>.countChild_1.getWidth()), (<span class="keyword">int</span>)(<span class="number">0.2</span>D * BaseGameActivity.screenHeight));</span><br><span class="line">       <span class="keyword">this</span>.countChild_1.setCount(paramInt2);</span><br><span class="line">       addOneChild(<span class="keyword">this</span>.countChild_1);</span><br><span class="line">       <span class="keyword">if</span> (paramInt2 == <span class="number">0</span>)</span><br><span class="line">         <span class="keyword">this</span>.countChild_1.setAlpha(<span class="number">0</span>);</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">this</span>.countChild_1.setCount(paramInt2);</span><br><span class="line">   &#125;</span><br><span class="line">   label185: </span><br><span class="line">   <span class="keyword">do</span></span><br><span class="line">     <span class="keyword">return</span>;</span><br><span class="line">   <span class="keyword">while</span> (paramInt1 != <span class="number">2</span>);</span><br><span class="line">   <span class="keyword">if</span> (<span class="keyword">this</span>.countChild_2 == <span class="keyword">null</span>)</span><br><span class="line">   &#123;</span><br><span class="line">     <span class="keyword">this</span>.countChild_2 = <span class="keyword">new</span> PokerCountChild(<span class="keyword">this</span>.mContext);</span><br><span class="line">     <span class="keyword">this</span>.countChild_2 = <span class="keyword">new</span> PokerCountChild(<span class="keyword">this</span>.mContext);</span><br><span class="line">     <span class="keyword">this</span>.countChild_2.setPosition((<span class="keyword">int</span>)(<span class="number">0.17</span>D * BaseGameActivity.screenWidth),</span><br><span class="line">(<span class="keyword">int</span>)(<span class="number">0.2</span>D * BaseGameActivity.screenHeight));</span><br><span class="line">     <span class="keyword">this</span>.countChild_2.setCount(paramInt2);</span><br><span class="line">     addOneChild(<span class="keyword">this</span>.countChild_2);</span><br><span class="line">     <span class="keyword">if</span> (paramInt2 == <span class="number">0</span>)</span><br><span class="line">       <span class="keyword">this</span>.countChild_2.setAlpha(<span class="number">0</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">this</span>.countChild_2.setCount(paramInt2);</span><br></pre></td></tr></table></figure></p>
+<p>还原<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">if</span>(i == <span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(countChild_1 == <span class="keyword">null</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    countChild_1 = <span class="keyword">new</span> PokerCountChild(mContext);</span><br><span class="line">                    countChild_1 = <span class="keyword">new</span> PokerCountChild(mContext);</span><br><span class="line">                    countChild_1.setPosition((<span class="keyword">int</span>)(<span class="number">0.83</span>D * </span><br><span class="line">(<span class="keyword">double</span>)BaseGameActivity.screenWidth - (<span class="keyword">double</span>)countChild_1.getWidth()), </span><br><span class="line">(<span class="keyword">int</span>)(<span class="number">0.2</span>D * (<span class="keyword">double</span>)BaseGameActivity.screenHeight));</span><br><span class="line">                    countChild_1.setCount(j);</span><br><span class="line">                    addOneChild(countChild_1);</span><br><span class="line">                    <span class="keyword">if</span>(j == <span class="number">0</span>)</span><br><span class="line">                        countChild_1.setAlpha(<span class="number">0</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                countChild_1.setCount(j);</span><br><span class="line">            &#125; <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">if</span>(i == <span class="number">2</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(countChild_2 == <span class="keyword">null</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    countChild_2 = <span class="keyword">new</span> PokerCountChild(mContext);</span><br><span class="line">                    countChild_2 = <span class="keyword">new</span> PokerCountChild(mContext);</span><br><span class="line">                    countChild_2.setPosition((<span class="keyword">int</span>)(<span class="number">0.17</span>D * </span><br><span class="line">(<span class="keyword">double</span>)BaseGameActivity.screenWidth), (<span class="keyword">int</span>)(<span class="number">0.2</span>D *</span><br><span class="line"> (<span class="keyword">double</span>)BaseGameActivity.screenHeight));</span><br><span class="line">                    countChild_2.setCount(j);</span><br><span class="line">                    addOneChild(countChild_2);</span><br><span class="line">                    <span class="keyword">if</span>(j == <span class="number">0</span>)</span><br><span class="line">                        countChild_2.setAlpha(<span class="number">0</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                countChild_2.setCount(j);</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure></p>
+<p>会将语句倒序,出现break label结构<br>反编译代码<br><a href="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image12.png" target="_blank" rel="noopener">image</a><br>jd-gui有时会将whilei语句翻译成if,此处要将if改成while</p>
+<h6 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h6><p>反编译代码<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span> (<span class="keyword">this</span>.mBand)</span><br><span class="line">    &#123;</span><br><span class="line">     <span class="keyword">default</span>:</span><br><span class="line">     <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">     <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">     <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (<span class="keyword">true</span>)</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">      <span class="keyword">this</span>.mBand.setText(<span class="string">"FM1"</span>);</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">      <span class="keyword">this</span>.mBand.setText(<span class="string">"FM2"</span>);</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">      <span class="keyword">this</span>.mBand.setText(<span class="string">"AM"</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>还原<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span> (mBand)</span><br><span class="line">    &#123;</span><br><span class="line">     <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">      mBand.setText(<span class="string">"FM1"</span>);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">     <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">       mBand.setText(<span class="string">"FM2"</span>);</span><br><span class="line">       <span class="keyword">break</span>;</span><br><span class="line">     <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">       mBand.setText(<span class="string">"AM"</span>);</span><br><span class="line">       <span class="keyword">break</span>;</span><br><span class="line">     <span class="keyword">default</span>:</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>switch规则就是一个continue对应一个case.要注意是是要外层的continue才算数,在if里的continue不算</p>
+<h6 id="enum枚举"><a href="#enum枚举" class="headerlink" title="enum枚举"></a>enum枚举</h6><p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image13.png" alt="image"><br>还原<br><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image14.png" alt="image"> </p>
+<p>jd-gui<br><a href="http://www.qiaodiqiu.com/how-to-read-java-confusion-after-the-anti-compiled-code.html" target="_blank" rel="noopener">http://www.qiaodiqiu.com/how-to-read-java-confusion-after-the-anti-compiled-code.html</a><br><a href="http://blog.csdn.net/xyz_fly/article/details/8014455" target="_blank" rel="noopener">http://blog.csdn.net/xyz_fly/article/details/8014455</a><br><a href="http://blog.csdn.net/hp_2008/article/details/8626010" target="_blank" rel="noopener">http://blog.csdn.net/hp_2008/article/details/8626010</a></p>
+<p>jad<br><a href="http://blog.csdn.net/z3h/article/details/2515287" target="_blank" rel="noopener">http://blog.csdn.net/z3h/article/details/2515287</a><br><a href="http://blog.csdn.net/z3h/article/details/2640522" target="_blank" rel="noopener">http://blog.csdn.net/z3h/article/details/2640522</a></p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/android/">android</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/android 支付宝 快捷支付 接入/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">android 支付宝 快捷支付 接入</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/android 组件Activity/">
+        <span class="next-text nav-default">android 组件Activity</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

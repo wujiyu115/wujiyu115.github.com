@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="hexo图片迁移至七牛"/>
+
+
+
+
+  <meta name="keywords" content="hexo, qiniu, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/hexo图片迁移至七牛/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> hexo图片迁移至七牛 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          hexo图片迁移至七牛
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017-03-12
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/hexo/">hexo</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#批量迁移"><span class="toc-text">批量迁移</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#生成图片索引gen4idx"><span class="toc-text">生成图片索引gen4idx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#qshell使用"><span class="toc-text">qshell使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化账户"><span class="toc-text">初始化账户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置qsync-json"><span class="toc-text">配置qsync.json</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#同步"><span class="toc-text">同步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他命令"><span class="toc-text">其他命令</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#替换图片"><span class="toc-text">替换图片</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#几个上传七牛的写作插件"><span class="toc-text">几个上传七牛的写作插件</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <p>之前图片一直是直接到在page服务上的,最近发现图片越来越多,打算图片迁移到七牛上.</p>
+<p>七牛可以cdn加速,每月有固定的免费流量,可以设置防盗链,可以自动压缩图片打水印。众多优点。对小博客来说真是有莫大的帮助。</p>
+<p>七牛注册这些过程就略过不表了.前置工作</p>
+<ul>
+<li>注册七牛账号并创建对象空间，充十块自定义域名</li>
+<li>绑定<a href="https://support.qiniu.com/hc/kb/article/68977" target="_blank" rel="noopener">加速域名</a>，自定义域名必须为中国大陆已备案。推荐使用二级域名。</li>
+<li>设置一下防盗链和图片瘦身<br><img src="http://farwmarth.bestnewbee.com/images/uploads/2017/03/qiniu_steal.png" alt="防盗链"></li>
+<li>获取AccessKey  SecretKey</li>
+</ul>
+<a id="more"></a>
+<h1 id="批量迁移"><a href="#批量迁移" class="headerlink" title="批量迁移"></a>批量迁移</h1><p><code>qrsync</code>已经被七牛废弃了,现在使用<a href="http://devtools.qiniu.com/qshell-v2.0.5.zip" target="_blank" rel="noopener">qshell</a>完成图片批量同步</p>
+<p>我的迁移目录结构<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">├── gen4idx.py #生成索引</span><br><span class="line">├── images #要同步的图片,可多级</span><br><span class="line">├── qshell # 同步程序</span><br><span class="line">├── qsync.json #同步配置</span><br><span class="line">├── qsync.sh #同步shell</span><br><span class="line">└── upload.log #同步日志</span><br></pre></td></tr></table></figure></p>
+<h2 id="生成图片索引gen4idx"><a href="#生成图片索引gen4idx" class="headerlink" title="生成图片索引gen4idx"></a>生成图片索引gen4idx</h2><p>因为七牛上传的图片没有预览界面只能在对象存储中搜索查看,非常不方便,我们可以在同步前遍历一下目录生成一个html也同步到七牛对象空间中.这样访问html就可以检索所有的图片了,改造了一下其他人写的索引代码放在<a href="https://gist.github.com/wujiyu115/d4c91852357853678b8f675b11f56421" target="_blank" rel="noopener">gist</a></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>要遍历的根目录 指定的图片目录用逗号隔开</span><br><span class="line">python gen4idx.py images NULL</span><br></pre></td></tr></table></figure>
+<h2 id="qshell使用"><a href="#qshell使用" class="headerlink" title="qshell使用"></a><a href="https://developer.qiniu.com/kodo/tools/qshell" target="_blank" rel="noopener">qshell</a>使用</h2><h3 id="初始化账户"><a href="#初始化账户" class="headerlink" title="初始化账户"></a>初始化账户</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./qshell  account AccessKey  SecretKey</span><br></pre></td></tr></table></figure>
+<h3 id="配置qsync-json"><a href="#配置qsync-json" class="headerlink" title="配置qsync.json"></a>配置qsync.json</h3><p>配置参考<a href="https://github.com/qiniu/qshell/blob/master/docs/qupload.md" target="_blank" rel="noopener">文档</a><br><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   <span class="attr">"src_dir"</span>            :   <span class="string">"/Users/far/Develop/tools/qiniu/"</span>,</span><br><span class="line">   <span class="attr">"bucket"</span>             :   <span class="string">"farwmarth"</span>,</span><br><span class="line">   <span class="attr">"overwrite"</span>          :   <span class="literal">false</span>,</span><br><span class="line">   <span class="attr">"check_exists"</span>       :   <span class="literal">true</span>,</span><br><span class="line">   <span class="attr">"check_hash"</span>         :   <span class="literal">false</span>,</span><br><span class="line">   <span class="attr">"check_size"</span>         :   <span class="literal">true</span>,</span><br><span class="line">   <span class="attr">"rescan_local"</span>       :   <span class="literal">true</span>,</span><br><span class="line">   <span class="attr">"skip_file_prefixes"</span> :   <span class="string">"qrsboxcli,qshell"</span>,</span><br><span class="line">   <span class="attr">"skip_fixed_strings"</span> :   <span class="string">".svn,.git"</span>,</span><br><span class="line">   <span class="attr">"skip_suffixes"</span>      :   <span class="string">".DS_Store,.exe,.log,.sh,.py,.pyc,.json,.md"</span>,</span><br><span class="line">   <span class="attr">"log_file"</span>           :   <span class="string">"upload.log"</span>,</span><br><span class="line">   <span class="attr">"log_level"</span>          :   <span class="string">"info"</span>,</span><br><span class="line">   <span class="attr">"log_rotate"</span>         :   <span class="number">1</span>,</span><br><span class="line">   <span class="attr">"log_stdout"</span>         :   <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="同步"><a href="#同步" class="headerlink" title="同步"></a>同步</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./qshell qupload 2 qsync.json</span><br></pre></td></tr></table></figure>
+<p>同步完成后会生成log,终端上也会有同步的过程和统计信息,如果同步异常中断了也会接着上次的进度续传的.<br><img src="http://farwmarth.bestnewbee.com/images/uploads/2017/03/qiniu_upload.png" alt="同步"></p>
+<h3 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>列举空间下的列表到控制台输出</span><br><span class="line">./qshell  listbucket farwmarth stdout</span><br><span class="line"><span class="meta">#</span>列举目录中的文件到result.txt中</span><br><span class="line">./qshell  dircache . result.txt</span><br></pre></td></tr></table></figure>
+<h1 id="替换图片"><a href="#替换图片" class="headerlink" title="替换图片"></a>替换图片</h1><p>替换图片比较简单<br><img src="http://farwmarth.bestnewbee.com/images/uploads/2017/03/qiniu_reg_relplace.png" alt="替换图片"></p>
+<h1 id="几个上传七牛的写作插件"><a href="#几个上传七牛的写作插件" class="headerlink" title="几个上传七牛的写作插件"></a>几个上传七牛的写作插件</h1><ul>
+<li>MWeb</li>
+<li>alfred插件上传: <a href="https://github.com/iammapping/alfred-uploader" target="_blank" rel="noopener">https://github.com/iammapping/alfred-uploader</a></li>
+<li>hexo插件: <a href="https://github.com/gyk001/hexo-qiniu-sync" target="_blank" rel="noopener">https://github.com/gyk001/hexo-qiniu-sync</a></li>
+<li>极简图床: <a href="http://yotuku.cn/#/" target="_blank" rel="noopener">http://yotuku.cn/#/</a></li>
+</ul>
+<p>试了 <code>ulysses</code> <code>ia-write</code>等一打写作工具后最后停留在了<code>MWeb</code>和<code>Sublime</code>上.<code>MWeb</code>的各项插件很齐全,写MarkDown体验也好.</p>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2017/03/mweb.png" alt="mweb"></p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/hexo/">hexo</a>
+            
+              <a href="/tags/qiniu/">qiniu</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/autohexo/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">hexo自动化构建</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/vultr/">
+        <span class="next-text nav-default">给shadowsocks插上tcptun,bbr这对翅膀</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>

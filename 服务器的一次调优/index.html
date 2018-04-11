@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="服务器的一次调优"/>
+
+
+
+
+  <meta name="keywords" content="server, farwmarth" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="farwmarth">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://www.farwmarth.com/服务器的一次调优/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+    <title> 服务器的一次调优 - farwmarth </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">farwmarth</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            关于
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            归档
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            标签
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            分类
+          
+        </li>
+      </a>
+    
+      <a href="/douban">
+        <li class="mobile-menu-item">
+          
+          
+            豆瓣
+          
+        </li>
+      </a>
+    
+      <a href="/music">
+        <li class="mobile-menu-item">
+          
+          
+            音乐
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">farwmarth</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/douban">
+            
+            
+              豆瓣
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/music">
+            
+            
+              音乐
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          服务器的一次调优
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2016-03-28
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#历史遗留问题"><span class="toc-text">历史遗留问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#压测调优"><span class="toc-text">压测调优</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ubuntu-too-many-open-files"><span class="toc-text">ubuntu too many open files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#skynet-调试台使用"><span class="toc-text">skynet 调试台使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据库优化"><span class="toc-text">数据库优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#服务过载"><span class="toc-text">服务过载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#内存泄露"><span class="toc-text">内存泄露</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#减少登录流量"><span class="toc-text">减少登录流量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设计问题"><span class="toc-text">设计问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#原有核心服务结构"><span class="toc-text">原有核心服务结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#优化登录登出过程"><span class="toc-text">优化登录登出过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#优化log-道具流水-货币流水"><span class="toc-text">优化log,道具流水,货币流水</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#优化退出处理"><span class="toc-text">优化退出处理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#日志大小处理"><span class="toc-text">日志大小处理</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <font color="red">update 2016-5-12 10:32  优化结构</font><br><font color="red">update 2016-5-5 16:30  skynet调试</font>
+
+<h2 id="历史遗留问题"><a href="#历史遗留问题" class="headerlink" title="历史遗留问题"></a>历史遗留问题</h2><p>这一项目的开发又接近尾声了,功能开发完毕,接下来就是运营方面的接入工作,还有就是服务器性能性的调优了.<br>之前服务器一直存在两个比较严重的问题,一个是加载离线玩家.另外一个则是静态数据未共享,导致的服务器启动内存过高的问题.</p>
+<a id="more"></a>
+<p>开发过程中,因为功能性的开发,不得不去解决这个离线玩家的问题,像好友这样的功能,不可能说离线就不能加好友.<br>之前一直搁置的原因是一方面是系统成型,改造的成本太高，最重要的原因还是懒 .<br>其实改造起来方案还是比较简单的.因为采用单模块单库的设计,在离线数据的加载上也极为方便.<br>玩家数据在playercenter中的结构如下:<br><figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="keyword">local</span> cache_class = class()</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">cache_class:ctor</span><span class="params">()</span></span></span><br><span class="line">    self.is_online = <span class="literal">false</span>   <span class="comment">--是否是线</span></span><br><span class="line">    self.do_save_time = <span class="number">0</span> <span class="comment">--上一次存库时间</span></span><br><span class="line">    self.dirty_mark = &#123;&#125;  <span class="comment">--脏标cache</span></span><br><span class="line">    self.player = player_factory.player_class.new()<span class="comment">--放置角色基础数据</span></span><br><span class="line">    self.quest_list_obj = &#123;&#125; <span class="comment">-- 放置任务数据</span></span><br><span class="line">    self.friend = friend_factory.player_cls.new()<span class="comment">--好友数据</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<p>dirty_mark是用作数据库加载标记使用,如果单模块的库被加载,dirty_mark则设置为true,内存中数据则是最新的.如好友表信息存储在friend表中,<br>在好友模块中如果在线玩家要加载离线玩家为好友时,只要将离线玩家的friend数据load到内存中即可,这些可以节省内存消耗 .<br>is_online标志则是标记好友是否是正常登录,正常登录数据是完整的,各系统对其数据存取没有限制,如果is_online是false,虽说明其是离线加载数据,数据不完整,在进行业务逻辑时要区别对待.加载的离线数据设定是在内存中无修改则保持最大两小时,两小时过后,或者是玩家再次上线则会先保存离线数据,再切换到正常的登录加载完整数据过程.</p>
+<p>静态数据的问题其实是skynet的服务设计造成的,每个服务都是一个独立的lua state. 开多个lua服务时每个服务都要加载相同的静态数据.前期数据表不大时这个问题突显不出现,运营开服的时候在单台物理机上测试开5个服过一会总有一个服会宕掉,花了一个中午没有找到具体原因,log里并没有出现报错信息.思考良久才考虑到之前出现启动内存过高的情况.一查内存占用果不其然,因为配置表在单个服务中展开将近 30M的内存.单个逻辑服启动占用内存将近800M.<br><img src="http://farwmarth.bestnewbee.com/images/server800m.png" alt=""><br>战斗场景因为有各种类型,比如pvp等总共开了8个场景服务用于分流.这部分内存占用就400多M<br><img src="http://farwmarth.bestnewbee.com/images/scene420m.png" alt=""></p>
+<p>官方的解决方案:<br><a href="https://github.com/cloudwu/skynet/wiki/ShareData" target="_blank" rel="noopener">https://github.com/cloudwu/skynet/wiki/ShareData</a><br>这个残留问题一直没有解决是因为涉及的代码太多了,大概有100个文件左右,之前每张静态表都对应 了一个对应的excel,先把静态表结构化成后端要的结构,比如公式配置表结构化类如下:<br><figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="keyword">local</span> battle_formula_excel = &#123;&#125;</span><br><span class="line"><span class="keyword">local</span> formula_data = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> <span class="function"><span class="keyword">function</span> <span class="title">init</span><span class="params">()</span></span></span><br><span class="line">    <span class="built_in">require</span> <span class="string">"config/data/TB_formula"</span> <span class="comment">-- 公式表</span></span><br><span class="line">    <span class="keyword">for</span> id, value <span class="keyword">in</span> <span class="built_in">pairs</span>(TB_formula) <span class="keyword">do</span></span><br><span class="line">        formula_data[id] = value.content</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    <span class="comment">-- commonutil.print_table(formula_data)</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">init()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">battle_formula_excel.get_formula</span><span class="params">(id)</span></span></span><br><span class="line">    <span class="keyword">return</span> formula_data[id]</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">return</span> battle_formula_excel</span><br></pre></td></tr></table></figure></p>
+<p>然后battle_formula_excel这个lua文件会被各个服务引用,所以单独共享TB_formula这个静态配置表这种方案的代价实在太大,折中的办法就是将结构化后的数据如formula_data,share出来,battle_formula_excel中数据源用一个标志去从不同的地方获取,如果是数据中心服务则调用init方法来初始化这个结构化数据,如果非服务则在服务启动时将数据中心服务的数据注入进去.数据和接口分离开来<br>数据中心服务如下:<br><figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="keyword">local</span> sharedata = <span class="built_in">require</span> <span class="string">"sharedata"</span></span><br><span class="line"><span class="keyword">local</span> skynet = <span class="built_in">require</span> <span class="string">"skynet"</span></span><br><span class="line"><span class="built_in">require</span> <span class="string">"skynet.manager"</span></span><br><span class="line"><span class="keyword">local</span> svrname, svrcount = ...</span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> command = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> <span class="function"><span class="keyword">function</span> <span class="title">init_all_data</span><span class="params">()</span></span></span><br><span class="line">    <span class="comment">-- 静态数据配置统一操作入口</span></span><br><span class="line">    <span class="built_in">require</span> <span class="string">"config/data/TB_formula"</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">local</span> all_excel =&#123;</span><br><span class="line">    &#123;<span class="string">"battle_formula_excel"</span>, <span class="string">"config/battle_formula_excel"</span>&#125;,</span><br><span class="line">    &#123;<span class="string">"mine_excel"</span>, <span class="string">"config/silvermine_excel"</span>&#125;,</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">local</span> all_excel_data = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> _,config_obj <span class="keyword">in</span> <span class="built_in">ipairs</span>(all_excel) <span class="keyword">do</span></span><br><span class="line">        <span class="keyword">local</span> path_key = config_obj[<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">local</span> <span class="built_in">path</span> =config_obj[<span class="number">2</span>]</span><br><span class="line">        <span class="keyword">local</span> excel_obj = <span class="built_in">require</span> (<span class="built_in">path</span>)</span><br><span class="line">        <span class="comment">-- print("--",path,excel_obj.init_excel_data)</span></span><br><span class="line">        <span class="keyword">if</span> excel_obj.init_excel_data <span class="keyword">then</span></span><br><span class="line">            <span class="keyword">local</span> result = excel_obj.init_excel_data()</span><br><span class="line">            <span class="built_in">assert</span>(result ~=<span class="literal">nil</span>,<span class="string">"返回结构化数据为空"</span>..path_key )</span><br><span class="line">            all_excel_data[path_key] =result</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"没有init_excel_data方法的excel"</span>,path_key)</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    sharedata.new(<span class="string">"all_excel_data"</span>,all_excel_data)</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">skynet.init(<span class="function"><span class="keyword">function</span> <span class="params">(  )</span></span></span><br><span class="line">    <span class="comment">--数据中心服务标志</span></span><br><span class="line">    exceldatecenter = <span class="literal">true</span></span><br><span class="line">    init_all_data()</span><br><span class="line"><span class="keyword">end</span>)</span><br><span class="line"></span><br><span class="line">skynet.start(<span class="function"><span class="keyword">function</span><span class="params">()</span></span></span><br><span class="line">    <span class="comment">-- 接收逻辑调用协议</span></span><br><span class="line">    skynet.dispatch(<span class="string">"lua"</span>, receive_lua)</span><br><span class="line"><span class="keyword">end</span>)</span><br></pre></td></tr></table></figure></p>
+<p>改造后的结构化excel如下:<br><figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="keyword">local</span> battle_formula_excel = &#123;&#125;</span><br><span class="line"><span class="comment">--是否数据中心</span></span><br><span class="line"><span class="keyword">local</span> formula_data = &#123;&#125;</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> exceldatecenter <span class="keyword">then</span></span><br><span class="line">    formula_data =all_excel_data.battle_formula_excel.formula_data</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">local</span> <span class="function"><span class="keyword">function</span> <span class="title">init</span><span class="params">()</span></span></span><br><span class="line">    <span class="keyword">for</span> id, value <span class="keyword">in</span> <span class="built_in">pairs</span>(TB_formula) <span class="keyword">do</span></span><br><span class="line">        formula_data[id] = value.content</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-------------------供数据中心调度的接口</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">battle_formula_excel.init_excel_data</span><span class="params">(  )</span></span></span><br><span class="line">    init()</span><br><span class="line">    <span class="keyword">return</span> &#123;formula_data = formula_data&#125;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">battle_formula_excel.get_formula</span><span class="params">(id)</span></span></span><br><span class="line">    <span class="keyword">return</span> formula_data[id]</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">return</span> battle_formula_excel</span><br></pre></td></tr></table></figure></p>
+<p>非数据中心服务注入结构化数据:<br><figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="keyword">local</span> sharedata = <span class="built_in">require</span> <span class="string">"sharedata"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> battle_formula_excel = <span class="literal">nil</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> command = &#123;&#125;</span><br><span class="line"><span class="keyword">local</span> svr_hash_id = <span class="literal">nil</span></span><br><span class="line"><span class="keyword">local</span> svrname, svrcount = ...</span><br><span class="line"></span><br><span class="line">skynet.init(<span class="function"><span class="keyword">function</span> <span class="params">( )</span></span></span><br><span class="line">    <span class="comment">--数据模块</span></span><br><span class="line">    all_excel_data =sharedata.query(<span class="string">"all_excel_data"</span>)</span><br><span class="line">    <span class="comment">--battle_formula_excel</span></span><br><span class="line">    battle_formula_excel = <span class="built_in">require</span> <span class="string">"config/battle_formula_excel"</span></span><br><span class="line"><span class="keyword">end</span>)</span><br><span class="line"></span><br><span class="line">skynet.start(<span class="function"><span class="keyword">function</span><span class="params">()</span></span></span><br><span class="line">    svrcount = <span class="built_in">tonumber</span>(svrcount)</span><br><span class="line">    skynet.dispatch(<span class="string">"lua"</span>, receive_lua)</span><br><span class="line"><span class="keyword">end</span>)</span><br></pre></td></tr></table></figure></p>
+<p>改造之前怕做无用功测试了几种方案.先启一个exceldatacenter服务把所有静态数据全部require进去 .再启动一个test去加载共享数据.<br><img src="http://farwmarth.bestnewbee.com/images/require.png" alt=""><br>可以看到test服务内存不像之前一样重新加载静态数据了,为了保险起见,再开了9个test服务.<br><img src="http://farwmarth.bestnewbee.com/images/datacenter.png" alt=""><br>单服务没有附加静态数据内存都在几百k左右.然后就是开发漫长的苦力活了.<br>改造完毕,内存终于降下来了,启动内存为300M<br><img src="http://farwmarth.bestnewbee.com/images/20160328211905.png" alt=""><br><img src="http://farwmarth.bestnewbee.com/images/20160328212051.png" alt=""></p>
+<h2 id="压测调优"><a href="#压测调优" class="headerlink" title="压测调优"></a>压测调优</h2><p>压测过程 中性能真是惨不忍睹,关键还是前期的为了急着完成功能,设计上也没有作过多的考虑,编码过程中也没有统一规范,review代码.<br>压化也是一个循序渐进的过程,出于时间排 期的考虑只能分步走.在短时间内解决压力瓶颈.<br>如果是消息过载可以统计消耗时间找出热点,内在泄露可以通过快照方式来定位未释放的内存.</p>
+<p>开发机为ubuntu,在用机器人压测过程中有连接数的限制,需要更改连接数.</p>
+<h3 id="ubuntu-too-many-open-files"><a href="#ubuntu-too-many-open-files" class="headerlink" title="ubuntu too many open files"></a>ubuntu too many open files</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> 单个登录用最大文件数</span><br><span class="line">cat /proc/sys/fs/file-max</span><br><span class="line">输出最大连接数</span><br><span class="line">ulimit -Hn</span><br><span class="line">输出最大连接数</span><br><span class="line">ulimit -sn</span><br><span class="line">更改最大连接数</span><br><span class="line">sudo sh -c &quot;ulimit -n 102400 &amp;&amp; exec su $LOGNAME&quot;</span><br><span class="line">ulimit -n unlimited</span><br></pre></td></tr></table></figure>
+<h3 id="skynet-调试台使用"><a href="#skynet-调试台使用" class="headerlink" title="skynet 调试台使用"></a>skynet 调试台使用</h3><p><a href="https://github.com/cloudwu/skynet/wiki/DebugConsole" target="_blank" rel="noopener">https://github.com/cloudwu/skynet/wiki/DebugConsole</a><br>常用的针对所有 lua 服务的指令有：</p>
+<ul>
+<li>clearcache  清除多个lua虚拟机共享的代码</li>
+<li>cmem    显示c层hook的内存</li>
+<li>debug   针对一个 lua 服务启动内置的单步调试器。<a href="http://blog.codingnow.com/2015/02/skynet_debugger.html" target="_blank" rel="noopener">http://blog.codingnow.com/2015/02/skynet_debugger.html</a></li>
+<li>exit    让一个 lua 服务退出</li>
+<li>gc   强制让所有 lua 服务都执行一次垃圾回收，并报告回收后的内存</li>
+<li>help    显示帮助</li>
+<li>info    让一个 lua 服务汇报自己的内部信息<br>获取服务内部数据 - info address<figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="keyword">local</span> skynet = <span class="built_in">require</span> <span class="string">"skynet"</span></span><br><span class="line"><span class="built_in">require</span> <span class="string">"skynet.manager"</span>    <span class="comment">-- import skynet.register</span></span><br><span class="line"><span class="keyword">local</span> db = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">local</span> command = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">command.GET</span><span class="params">(key)</span></span></span><br><span class="line">  <span class="keyword">return</span> db[key]</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">command.SET</span><span class="params">(key, value)</span></span></span><br><span class="line">  <span class="keyword">local</span> last = db[key]</span><br><span class="line">  db[key] = value</span><br><span class="line">  <span class="keyword">return</span> last</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 新增的代码 -- start</span></span><br><span class="line">skynet.info_func(<span class="function"><span class="keyword">function</span><span class="params">()</span></span> <span class="keyword">return</span> <span class="string">"hello world!"</span> <span class="keyword">end</span>)</span><br><span class="line"><span class="comment">-- 新增的代码 -- end</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">skynet.start(<span class="function"><span class="keyword">function</span><span class="params">()</span></span></span><br><span class="line">  skynet.dispatch(<span class="string">"lua"</span>, <span class="function"><span class="keyword">function</span><span class="params">(session, address, cmd, ...)</span></span></span><br><span class="line">    <span class="keyword">local</span> f = command[<span class="built_in">string</span>.<span class="built_in">upper</span>(cmd)]</span><br><span class="line">    <span class="keyword">if</span> f <span class="keyword">then</span></span><br><span class="line">      skynet.ret(skynet.pack(f(...)))</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      <span class="built_in">error</span>(<span class="built_in">string</span>.<span class="built_in">format</span>(<span class="string">"Unknown command %s"</span>, <span class="built_in">tostring</span>(cmd)))</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">  <span class="keyword">end</span>)</span><br><span class="line">  skynet.register <span class="string">"SIMPLEDB"</span></span><br><span class="line"><span class="keyword">end</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span> telnet 127.0.0.1 9000</span><br><span class="line">Welcome to skynet console</span><br><span class="line">list</span><br><span class="line">:0000000d       snlua simpledb</span><br><span class="line">OK</span><br><span class="line">info :0000000d</span><br><span class="line">hello world</span><br></pre></td></tr></table></figure>
+<ul>
+<li>inject 将 script 名字对应的脚本插入到指定服务中运行（通常可用于热更新补丁[ inject address luascript.lua]</li>
+<li>kill    强制中止一个 lua 服务</li>
+<li>list    列出所有服务，以及启动服务的命令参数</li>
+<li>log  带log启动一个lua服务</li>
+<li>logoff   关闭日志记录一个服务所有的输入消息到文件。需要在 Config 里配置 logpath</li>
+<li>logon   对一个服务打开日志</li>
+<li>mem  让所有 lua 服务汇报自己占用的内存</li>
+<li>service  列出所有的唯一 lua 服务</li>
+<li>shrtbl  Show shared short string table info</li>
+<li>signal  address sig 向服务发送一个信号，sig 默认为 0 。当一个服务陷入死循环时，默认信号会打断正在执行的 lua 字节码，并抛出 error 显示调用栈。这是针对 endless loop 的 log 的有效调试方法。注：这里的信号并非系统信号</li>
+<li>snax    lanuch a new snax service</li>
+<li>start   启动一个lua服务</li>
+<li>stat    列出所有 lua 服务的消息队列长度，以及被挂起的请求数量</li>
+<li>task    显示一个服务中所有被挂起的请求的调用栈。</li>
+</ul>
+<h3 id="数据库优化"><a href="#数据库优化" class="headerlink" title="数据库优化"></a>数据库优化</h3><ul>
+<li>数据脏标<br>定时保存数据的弊端带来的工作就是,当数据变脏时要设置 数据为脏,会减少很多写库的io.</li>
+<li>数据队列<br>脏标在一定程度上可以减少很多io,但是同时在线人数过多,操作频繁时数据的写io还是很多.所以存库一般放在独立的线程中.还有一个设想就是根据玩家的等级和vip和数据的保存次数确定权重,在服务器压力过大时先保存重要级的玩家数据.在空闲时段再去保存次要的玩家数据,这样就算异常情况数据丢失损失也不会太大.当然存库时单玩家的数据必须是完整的.</li>
+<li>内存数据库<br>后期考虑把非线性增长的玩家数据用redis来替代,在监测mysql登录玩家上线时加载数据需要2s左右,如果换成redis应该会有很多改观.<br>,redis当缓存 定时线程写入mysql 直接存json .表结构不改直接存json.必须注意字节长度我们曾经有字节长度不足的问题</li>
+</ul>
+<h3 id="服务过载"><a href="#服务过载" class="headerlink" title="服务过载"></a>服务过载</h3><ul>
+<li>避免单点服务<br>逻辑过多的单点服务往往会成为性能热点,导致消息过载,除了watchdog和一些交互不频繁的服务外可以服务多开让线程驱动.</li>
+<li>skynet.mqlen()  当前服务的消息队列</li>
+<li>skynet.task(ret) 当前服务挂起的待处理的call任务</li>
+</ul>
+<h3 id="内存泄露"><a href="#内存泄露" class="headerlink" title="内存泄露"></a>内存泄露</h3><ul>
+<li>调试台<code>mem</code>查看lua服务占用</li>
+<li>cmemory.lua 统计c内存占用 &lt;: <a href="https://github.com/cloudwu/skynet/wiki/MemoryHook&gt;" target="_blank" rel="noopener">https://github.com/cloudwu/skynet/wiki/MemoryHook&gt;</a></li>
+<li>snapshot <a href="https://github.com/cloudwu/lua-snapshot" target="_blank" rel="noopener">https://github.com/cloudwu/lua-snapshot</a></li>
+<li>从_G查找表<figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="keyword">local</span> findedObjMap = <span class="literal">nil</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> _G.findObject<span class="params">(obj, findDest)</span></span></span><br><span class="line">    <span class="keyword">if</span> findDest == <span class="literal">nil</span> <span class="keyword">then</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">if</span> findedObjMap[findDest] ~= <span class="literal">nil</span> <span class="keyword">then</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    findedObjMap[findDest] = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">local</span> destType = <span class="built_in">type</span>(findDest)</span><br><span class="line">    <span class="keyword">if</span> destType == <span class="string">"table"</span> <span class="keyword">then</span></span><br><span class="line">        <span class="keyword">if</span> findDest == <span class="built_in">_G</span>.CMemoryDebug <span class="keyword">then</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">for</span> key, value <span class="keyword">in</span> <span class="built_in">pairs</span>(findDest) <span class="keyword">do</span></span><br><span class="line">            <span class="keyword">if</span> key == obj <span class="keyword">or</span> value == obj <span class="keyword">then</span></span><br><span class="line">                _info(<span class="string">"Finded Object"</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">            <span class="keyword">if</span> findObject(obj, key) == <span class="literal">true</span> <span class="keyword">then</span></span><br><span class="line">                _info(<span class="string">"table key"</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">            <span class="keyword">if</span> findObject(obj, value) == <span class="literal">true</span> <span class="keyword">then</span></span><br><span class="line">                _info(<span class="string">"key:["</span>..<span class="built_in">tostring</span>(key)..<span class="string">"]"</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">elseif</span> destType == <span class="string">"function"</span> <span class="keyword">then</span></span><br><span class="line">        <span class="keyword">local</span> uvIndex = <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> <span class="literal">true</span> <span class="keyword">do</span></span><br><span class="line">            <span class="keyword">local</span> name, value = <span class="built_in">debug</span>.<span class="built_in">getupvalue</span>(findDest, uvIndex)</span><br><span class="line">            <span class="keyword">if</span> name == <span class="literal">nil</span> <span class="keyword">then</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">            <span class="keyword">if</span> findObject(obj, value) == <span class="literal">true</span> <span class="keyword">then</span></span><br><span class="line">                _info(<span class="string">"upvalue name:["</span>..<span class="built_in">tostring</span>(name)..<span class="string">"]"</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">            uvIndex = uvIndex + <span class="number">1</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> _G.findObjectInGlobal<span class="params">(obj)</span></span></span><br><span class="line">    findedObjMap = &#123;&#125;</span><br><span class="line">    <span class="built_in">setmetatable</span>(findedObjMap, &#123;<span class="built_in">__mode</span> = <span class="string">"k"</span>&#125;)</span><br><span class="line">    <span class="built_in">_G</span>.findObject(obj, <span class="built_in">_G</span>)</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="减少登录流量"><a href="#减少登录流量" class="headerlink" title="减少登录流量"></a>减少登录流量</h3><ul>
+<li>合并协议<br>像红点提示这种可能分部在各系统中发送,这些协议号重复但功能代码分步在各个系统中的协议可以在模块中预留接口来获取提示结果再打包发送.</li>
+<li>减少登录时的推送数据<br>登录时可只推送玩家的基础角色信息,和一些必要的提示数据,其他数据可以选择延迟初始化的方式,在玩家打开客户端界面再请求数据.</li>
+<li>数据分页<br>这是web中最常见的方式,数据量过大时,分成多页,好友,排行榜这种数据量大的请求可以使用分页来做优化</li>
+</ul>
+<h3 id="设计问题"><a href="#设计问题" class="headerlink" title="设计问题"></a>设计问题</h3><h4 id="原有核心服务结构"><a href="#原有核心服务结构" class="headerlink" title="原有核心服务结构"></a>原有核心服务结构</h4><ul>
+<li>watchdog  :维护全护玩家的登录登出</li>
+<li>role  :创建角色</li>
+<li>auth  :第三方sdk验证</li>
+<li>agent  : 玩家服务,中转数据</li>
+<li>playercenter  :   玩家数据中心</li>
+<li>scene  :   场景服务(城镇场景根据人流分服,单人副本,其他特殊战斗场景)</li>
+</ul>
+<p>watchdog(单个) —-&gt;role(多个)    : 创建角色<br>watchdog(单个) —-&gt;auth(多个)    : 账号验证,创建账号<br>watchdog (单个)—&gt; agent(对应玩家数量) ——&gt;playercenter(多个)  : 验证成功后,创建agent线程,个人数据加载到 playercenter中.<br>watchdog (单个)—&gt; agent(对应玩家数量) ——&gt;scene(多个)  :  登录加载数据后客户端可进入对应的场景服务.</p>
+<h4 id="优化登录登出过程"><a href="#优化登录登出过程" class="headerlink" title="优化登录登出过程"></a>优化登录登出过程</h4><p>之前的设计因为在服务器做流失统计,把登录过程细化成一个很长的过程.这就导致各服务间的交互过于频繁.</p>
+<p>client连接socket,发送auth数据—-&gt;[watchdog]请求auth—-&gt;[auth]连接python服务与sdk第三方校验token——&gt;[watchdog]返回auth结果—-&gt;client登录—-&gt;[watchdog]检查排队重复登录—–&gt;client获取角色列表—–&gt;[watchdog]请求role得到角色列表—&gt;[role]获取角色列表—-&gt;client如果角色个数不为0请求进入游戏—–&gt;[watchdog]创建[agent]—-&gt;[agent]实始化成功返回[watchdog]—-&gt;[watchdog]通知[agent]加载数据—&gt;[agent]通知[playercenter]加载数据—-&gt;成功后推送数据让客户端进入[scene]</p>
+<p>开启[auth]服务的初衷是要异步与后台的python服务交互,其实auth完全没必要通过游戏服务器中转,优化后的过程如下:client通过sdk登录得到token等信息——-&gt;连接python服务校验生成加密串—-&gt;client连接gameserver发送python的加密串—–&gt;gameserver验证串与时间有效性—-&gt;走之前的登录过程,优化后的[auth]服务可以合并到[role]中,优化后[watchdog] 与[role],[agent]只要交互一次就可以完全登录操作.</p>
+<h4 id="优化log-道具流水-货币流水"><a href="#优化log-道具流水-货币流水" class="headerlink" title="优化log,道具流水,货币流水"></a>优化log,道具流水,货币流水</h4><p>道具和流水消息过多,导致log服务在一直写库,消息过载.</p>
+<ul>
+<li>减少日志生成条数</li>
+<li>打包多条日志,在10条日志数据时候再调度log服务</li>
+<li>优化插入速度:事务,索引,批量插入(1000条插入一次),合并insert语句(多条日志一条insert)</li>
+</ul>
+<h4 id="优化退出处理"><a href="#优化退出处理" class="headerlink" title="优化退出处理"></a>优化退出处理</h4><p>退出数据不立即落地,保存一段时间.</p>
+<h4 id="日志大小处理"><a href="#日志大小处理" class="headerlink" title="日志大小处理"></a>日志大小处理</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">logrotate  copytruncate</span><br></pre></td></tr></table></figure>
+<p>参考链接:</p>
+<ul>
+<li><a href="http://blog.codingnow.com/2015/01/skynet_netpack.html" target="_blank" rel="noopener">http://blog.codingnow.com/2015/01/skynet_netpack.html</a></li>
+<li><a href="http://blog.codingnow.com/2013/06/skynet_watchdog.html" target="_blank" rel="noopener">http://blog.codingnow.com/2013/06/skynet_watchdog.html</a></li>
+<li><a href="http://blog.codingnow.com/2013/12/skynet_agent_pool.html" target="_blank" rel="noopener">http://blog.codingnow.com/2013/12/skynet_agent_pool.html</a></li>
+<li><a href="http://blog.codingnow.com/2014/10/skynet_overload.html" target="_blank" rel="noopener">http://blog.codingnow.com/2014/10/skynet_overload.html</a></li>
+<li><a href="http://blog.codingnow.com/2012/09/the_design_of_skynet.html" target="_blank" rel="noopener">http://blog.codingnow.com/2012/09/the_design_of_skynet.html</a></li>
+</ul>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+  <div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">赞赏支持</label>
+    <div class="qr-code">
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/wechat.png" title="wechat">
+        </label>
+      
+      
+        <label class="qr-code-image" for="reward">
+          <img class="image" src="/image/reward/alipay.png" title="alipay">
+        </label>
+      
+    </div>
+  </div>
+
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/server/">server</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/redis初探/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">redis初探</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/gradle/">
+        <span class="next-text nav-default">Gradle 打包</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:wujiyu115@email.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="http://github.com/wujiyu115" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="/farwmwarth" class="iconfont icon-instagram" title="instagram"></a>
+        
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2011 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">farwmarth</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
+
+  </body>
+</html>
