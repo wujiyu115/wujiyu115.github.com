@@ -4,47 +4,6 @@
   
     
     <entry>
-      <title><![CDATA[使用hubot构建运维机器人]]></title>
-      <url>http://www.farwmarth.com/%E4%BD%BF%E7%94%A8hubot%E6%9E%84%E5%BB%BA%E8%BF%90%E7%BB%B4%E6%9C%BA%E5%99%A8%E4%BA%BA/</url>
-      <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Hubot是Github开发并开源的chatbot，但它并不仅仅是一个聊天机器人，Hubot已经广泛应用于Github的日常运维工作，被称为最忙碌的员工<br><a href="https://scarletsky.github.io/2016/05/02/write-your-own-hubot-scripts/" target="_blank" rel="noopener">https://scarletsky.github.io/2016/05/02/write-your-own-hubot-scripts/</a></p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p><a href="https://github.com/hubotio/hubot" target="_blank" rel="noopener">https://github.com/hubotio/hubot</a><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g yo generator-hubot</span><br></pre></td></tr></table></figure></p>
-<h3 id="生成slack适配机器人"><a href="#生成slack适配机器人" class="headerlink" title="生成slack适配机器人"></a>生成slack适配机器人</h3><p><a href="https://github.com/slackapi/hubot-slack" target="_blank" rel="noopener">https://github.com/slackapi/hubot-slack</a><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir myhubot</span><br><span class="line">cd myhubot</span><br><span class="line">yo hubot --adapter=slack</span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">HUBOT_SLACK_TOKEN=xxx  ./bin/hubot --adapter slack</span><br></pre></td></tr></table></figure>
-<h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><ul>
-<li>robot.hear</li>
-<li>res.send</li>
-<li>robot.respond</li>
-<li>res.reply</li>
-<li>res.match</li>
-<li>robot.listen</li>
-<li>robot.http</li>
-<li>robot.hear /error</li>
-<li>robot.hear /event</li>
-<li>robot.brain<ul>
-<li>data.users</li>
-</ul>
-</li>
-</ul>
-<h3 id="slack-api"><a href="#slack-api" class="headerlink" title="slack api"></a>slack api</h3><p><a href="https://api.slack.com/bot-users#api_usage" target="_blank" rel="noopener">https://api.slack.com/bot-users#api_usage</a></p>
-<h3 id="侦听回应"><a href="#侦听回应" class="headerlink" title="侦听回应"></a>侦听回应</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = (robot) -&gt;</span><br><span class="line">  robot.hear /badger/i, (res) -&gt;</span><br><span class="line">    # your code here</span><br><span class="line"></span><br><span class="line">  robot.respond /open the pod bay doors/i, (res) -&gt;</span><br></pre></td></tr></table></figure>]]></content>
-      
-        <categories>
-            
-            <category> 教你瞎折腾 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 教你瞎折腾 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[hexo自动化构建]]></title>
       <url>http://www.farwmarth.com/autohexo/</url>
       <content type="html"><![CDATA[<p>最近发现博客的图片和文章数量增长后,hexo生成和发布的时间越来越长,而且换了电脑后hexo的环境又要倒腾一遍,实在是消耗时间。</p>
