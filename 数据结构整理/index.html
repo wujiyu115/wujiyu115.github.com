@@ -5,14 +5,20 @@
 
 
 
+
+
+
+
+
+
   
 
 
 <html class="theme-next gemini use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -26,8 +32,6 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
 
 
 
@@ -48,23 +52,21 @@
 
 
 
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=6.2.0" rel="stylesheet" type="text/css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.2.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.2.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.2.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=6.2.0" color="#222">
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
 
 
 
@@ -74,12 +76,12 @@
 
 
 
-<script type="text/javascript" id="hexo.configurations">
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '6.2.0',
+    version: '6.6.0',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
     fastclick: false,
@@ -124,16 +126,16 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="farwmarth" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="farwmarth" type="application/atom+xml">
 
 
 
 
-  <link rel="canonical" href="http://www.farwmarth.com/数据结构整理/"/>
+  <link rel="canonical" href="http://www.farwmarth.com/数据结构整理/">
 
 
 
-<script type="text/javascript" id="page.configurations">
+<script id="page.configurations">
   CONFIG.page = {
     sidebar: "",
   };
@@ -150,8 +152,11 @@
 
 
 
+
+
+
   <noscript>
-  <style type="text/css">
+  <style>
     .use-motion .motion-element,
     .use-motion .brand,
     .use-motion .menu-item,
@@ -170,16 +175,14 @@
       top: initial;
     }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+    .use-motion .logo-line-before i { left: initial; }
+    .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -189,7 +192,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
@@ -201,9 +204,11 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <p class="site-subtitle">Those that can,do.Those that can't ,complain</p>
       
+    
   </div>
 
   <div class="site-nav-toggle">
@@ -217,7 +222,6 @@
 
 
 
-
 <nav class="site-nav">
   
     <ul id="menu" class="menu">
@@ -227,56 +231,119 @@
         
           
           <li class="menu-item menu-item-home">
-    <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-tags">
-    <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-categories">
-    <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-archives">
-    <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-douban">
-    <a href="/douban" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />豆瓣</a>
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/douban" rel="section"><i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>豆瓣</a>
+
   </li>
         
         
         
           
           <li class="menu-item menu-item-music">
-    <a href="/music" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />网易云音乐</a>
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/music" rel="section"><i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>网易云音乐</a>
+
   </li>
 
       
@@ -322,20 +389,20 @@
 
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.farwmarth.com/数据结构整理/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="farwmarth">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="博主">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="farwmarth">
     </span>
 
@@ -345,6 +412,7 @@
         
         
           <h1 class="post-title" itemprop="name headline">数据结构整理
+
               
             
           </h1>
@@ -392,7 +460,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -403,7 +471,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/base/" itemprop="url" rel="index"><span itemprop="name">base</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/base/" itemprop="url" rel="index"><span itemprop="name">base</span></a></span>
 
                 
                 
@@ -475,7 +543,7 @@
 <h5 id="四叉树-四叉树通常用于2d游戏碰撞检测-ghostcat版as实现"><a href="#四叉树-四叉树通常用于2d游戏碰撞检测-ghostcat版as实现" class="headerlink" title="四叉树:四叉树通常用于2d游戏碰撞检测.ghostcat版as实现:"></a><strong>四叉树</strong>:四叉树通常用于2d游戏碰撞检测.ghostcat版as实现:</h5><figure class="highlight as"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">package</span> <span class="title">ghostcat</span>.<span class="title">algorithm</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="meta"><span class="meta-keyword">import</span> flash.geom.Rectangle;</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 图形筛选4叉树</span></span><br><span class="line"><span class="comment">	 * @author flashyiyi</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">QuadTree</span></span></span><br><span class="line"><span class="class">	</span>&#123;</span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 第1象限</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="keyword">var</span> q1:QuadTree;</span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 第2象限</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="keyword">var</span> q2:QuadTree;</span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 第3象限</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="keyword">var</span> q3:QuadTree;</span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 第4象限</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="keyword">var</span> q4:QuadTree;</span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 父节点</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="keyword">var</span> parent:QuadTree;</span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 起始节点</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="keyword">var</span> root:QuadTree;</span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 图形范围</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="keyword">var</span> rect:Rectangle;</span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 数据</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="keyword">var</span> data:Array = [];</span><br><span class="line"></span><br><span class="line">		<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">QuadTree</span><span class="params">(rect:Rectangle)</span></span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">this</span>.rect = rect;</span><br><span class="line">			<span class="keyword">this</span>.root = <span class="keyword">this</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 创建树结构</span></span><br><span class="line"><span class="comment">		 * @param deep</span></span><br><span class="line"><span class="comment">		 *</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">createChildren</span><span class="params">(deep:int)</span>:void</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (deep == <span class="number">0</span>)</span><br><span class="line">				<span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">const</span> hw:Number = rect.width / <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">const</span> hh:Number = rect.height / <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">			q1 = <span class="keyword">new</span> QuadTree(<span class="keyword">new</span> Rectangle(rect.x + hw, rect.y, hw, hh));</span><br><span class="line">			q2 = <span class="keyword">new</span> QuadTree(<span class="keyword">new</span> Rectangle(rect.x + hw, rect.y + hh, hw, hh));</span><br><span class="line">			q3 = <span class="keyword">new</span> QuadTree(<span class="keyword">new</span> Rectangle(rect.x, rect.y + hh, hw, hh));</span><br><span class="line">			q4 = <span class="keyword">new</span> QuadTree(<span class="keyword">new</span> Rectangle(rect.x, rect.y, hw, hh));</span><br><span class="line"></span><br><span class="line">			q1.parent = q2.parent = q3.parent = q4.parent = <span class="keyword">this</span>;</span><br><span class="line">			q1.root = q2.root = q3.root = q4.root = <span class="keyword">this</span>.root;</span><br><span class="line"></span><br><span class="line">			q1.createChildren(deep - <span class="number">1</span>);</span><br><span class="line">			q2.createChildren(deep - <span class="number">1</span>);</span><br><span class="line">			q3.createChildren(deep - <span class="number">1</span>);</span><br><span class="line">			q4.createChildren(deep - <span class="number">1</span>);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 是否有子树</span></span><br><span class="line"><span class="comment">		 * @return</span></span><br><span class="line"><span class="comment">		 *</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">get</span> <span class="title">hasChildren</span><span class="params">()</span>:Boolean</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">return</span> q1 &amp;&amp; q2 &amp;&amp; q3 &amp;&amp; q4;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 添加一个数据</span></span><br><span class="line"><span class="comment">		 * @param v</span></span><br><span class="line"><span class="comment">		 * @param x</span></span><br><span class="line"><span class="comment">		 * @param y</span></span><br><span class="line"><span class="comment">		 * @return</span></span><br><span class="line"><span class="comment">		 *</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">add</span><span class="params">(v:*, x:Number, y:Number)</span>:QuadTree</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (!isIn(x,y))</span><br><span class="line">				<span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span> (hasChildren)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">return</span> q1.add(v,x,y) || q2.add(v,x,y) || q3.add(v,x,y) || q4.add(v,x,y);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				data.push(v);</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 删除一个数据，坐标为NaN则会进行遍历查找</span></span><br><span class="line"><span class="comment">		 * @param v</span></span><br><span class="line"><span class="comment">		 * @param x</span></span><br><span class="line"><span class="comment">		 * @param y</span></span><br><span class="line"><span class="comment">		 * @return</span></span><br><span class="line"><span class="comment">		 *</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">remove</span><span class="params">(v:*, x:Number = NaN, y:Number = NaN)</span>:QuadTree</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (!isIn(x,y))</span><br><span class="line">				<span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span> (hasChildren)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">return</span> q1.remove(v,x,y) || q2.remove(v,x,y) || q3.remove(v,x,y) || q4.remove(v,x,y);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">var</span> index:int = data.indexOf(v);</span><br><span class="line">				<span class="keyword">if</span> (index!=<span class="number">-1</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					data.splice(index, <span class="number">1</span>);</span><br><span class="line">					<span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 检测是否还在当前区间内，并返回新的区间</span></span><br><span class="line"><span class="comment">		 * @param v</span></span><br><span class="line"><span class="comment">		 * @param x</span></span><br><span class="line"><span class="comment">		 * @param y</span></span><br><span class="line"><span class="comment">		 * @return</span></span><br><span class="line"><span class="comment">		 *</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">reinsert</span><span class="params">(v:*, x:Number, y:Number)</span>:QuadTree</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (!isIn(x,y))</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">var</span> result:QuadTree = root.add(v,x,y);</span><br><span class="line">				<span class="keyword">if</span> (result)</span><br><span class="line">				&#123;</span><br><span class="line">					remove(v);</span><br><span class="line">					<span class="keyword">return</span> result;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 判断坐标是否在界限内，设为NaN则不做限制</span></span><br><span class="line"><span class="comment">		 * @param x</span></span><br><span class="line"><span class="comment">		 * @param y</span></span><br><span class="line"><span class="comment">		 * @return</span></span><br><span class="line"><span class="comment">		 *</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">isIn</span><span class="params">(x:Number, y:Number)</span>:Boolean</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">return</span> (isNaN(x) || x &gt;= rect.x &amp;&amp; x &lt; rect.right) &amp;&amp; (isNaN(y) || y &gt;= rect.y &amp;&amp; y &lt; rect.bottom);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 获得一个范围内的所有数据</span></span><br><span class="line"><span class="comment">		 *</span></span><br><span class="line"><span class="comment">		 * @param rect</span></span><br><span class="line"><span class="comment">		 *</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getDataInRect</span><span class="params">(rect:Rectangle)</span>:Array</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">if</span> (!<span class="keyword">this</span>.rect.intersects(rect))</span><br><span class="line">				<span class="keyword">return</span> [];</span><br><span class="line"></span><br><span class="line">			<span class="keyword">var</span> result:Array = data.concat();</span><br><span class="line">			<span class="keyword">if</span> (hasChildren)</span><br><span class="line">			&#123;</span><br><span class="line">				result.push.apply(<span class="literal">null</span>,q1.getDataInRect(rect));</span><br><span class="line">				result.push.apply(<span class="literal">null</span>,q2.getDataInRect(rect));</span><br><span class="line">				result.push.apply(<span class="literal">null</span>,q3.getDataInRect(rect));</span><br><span class="line">				result.push.apply(<span class="literal">null</span>,q4.getDataInRect(rect));</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> result;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h5 id="图-Graph"><a href="#图-Graph" class="headerlink" title="图 (Graph)"></a>图 (Graph)</h5><p>图是由结点的有穷集合V和边的集合E组成。其中，为了与树形结构加以<a href="http://baike.baidu.com/view/367270.htm" target="_blank" rel="noopener">区别</a>，在图结构中常常将结点称为顶点，边是顶点的有序偶对，若两个顶点之间存在一条边，就表示这两个顶点具有相邻关系。</p>
 <h5 id="堆-Heap"><a href="#堆-Heap" class="headerlink" title="堆 (Heap)"></a>堆 (Heap)</h5><p>在计算机科学中，堆是一种特殊的树形数据结构，每个结点都有一个值。通常我们所说的堆的数据结构，是指二叉堆。堆的特点是根结点的值最小（或最大），且根结点的两个子树也是一个堆。</p>
-<p> 二叉堆 :特殊结构的二叉树,比优先队列效率更高<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> ds</span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Heap是一种特殊的二叉树，它的每个节点都比它的子节点大。内部实现是用数组存储的。</span></span><br><span class="line"><span class="comment">	 * &lt;p&gt;</span></span><br><span class="line"><span class="comment">	 * 比如原树状结构为：</span></span><br><span class="line"><span class="comment">	 *    2</span></span><br><span class="line"><span class="comment">	 *   / \</span></span><br><span class="line"><span class="comment">	 *  1   0</span></span><br><span class="line"><span class="comment">	 * 则存储成数组为：</span></span><br><span class="line"><span class="comment">	 * [2,1,0]</span></span><br><span class="line"><span class="comment">	 * &lt;/p&gt;</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Heap</span></span></span><br><span class="line"><span class="class">	</span>&#123;</span><br><span class="line">		<span class="keyword">private</span> var _heap:Array</span><br><span class="line">		<span class="keyword">private</span> var _compare:Function</span><br><span class="line"></span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * <span class="doctag">@param</span> compare  返回正数，则a排在b前边,如果不指定，默认为 function (a:int,b:int):int&#123;return a-b&#125;;</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> function <span class="title">Heap</span><span class="params">(compare:Function = <span class="keyword">null</span>)</span>:<span class="keyword">void</span></span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			_heap = [];</span><br><span class="line">			<span class="keyword">if</span>(compare==<span class="keyword">null</span>)</span><br><span class="line">				_compare =  function (a:<span class="keyword">int</span>,b:<span class="keyword">int</span>):<span class="keyword">int</span>&#123;<span class="keyword">return</span> a-b&#125;;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				_compare =compare;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> function get <span class="title">length</span><span class="params">()</span>:uint</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">return</span> _heap.length</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> function <span class="title">modify</span><span class="params">(obj:*,newObj:*)</span>:Boolean</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			 var objIndex:<span class="keyword">int</span> = <span class="keyword">this</span>._heap.indexOf(obj);</span><br><span class="line">			 <span class="keyword">if</span>(objIndex&lt;<span class="number">0</span>)<span class="keyword">return</span> <span class="keyword">false</span></span><br><span class="line">			 _heap[objIndex]= newObj</span><br><span class="line">		     var parentIndex:<span class="keyword">int</span> = (objIndex-<span class="number">1</span>)&gt;&gt;<span class="number">1</span></span><br><span class="line">			 var temp:* =  _heap[objIndex]</span><br><span class="line">			 <span class="keyword">while</span>(objIndex&gt;<span class="number">0</span>) <span class="comment">//只有objIndex&gt;0才有可能有parent</span></span><br><span class="line">			 &#123;</span><br><span class="line">				 <span class="comment">//如果新插入的数据大于parent的数据，则应不断上移与parent交换位置</span></span><br><span class="line">				 <span class="keyword">if</span>(_compare(temp,<span class="keyword">this</span>._heap[parentIndex])&gt;<span class="number">0</span>)</span><br><span class="line">				 &#123;</span><br><span class="line">					 <span class="keyword">this</span>._heap[objIndex] = <span class="keyword">this</span>._heap[parentIndex]</span><br><span class="line">					 objIndex = parentIndex</span><br><span class="line">					 parentIndex = (parentIndex-<span class="number">1</span>)&gt;&gt;<span class="number">1</span> <span class="comment">//parent索引的算法</span></span><br><span class="line">				 &#125;<span class="keyword">else</span></span><br><span class="line">				 &#123;</span><br><span class="line">					 <span class="keyword">break</span>;</span><br><span class="line">				 &#125;</span><br><span class="line">			 &#125;</span><br><span class="line">			 _heap[objIndex] = temp</span><br><span class="line">		     <span class="keyword">return</span> <span class="keyword">true</span></span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//入队</span></span><br><span class="line">		<span class="comment">//parentIndex = (childindex -1)/2</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> function <span class="title">enqueue</span><span class="params">(obj:*)</span>:<span class="keyword">void</span></span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">this</span>._heap.push(obj)</span><br><span class="line"></span><br><span class="line">			var parentIndex:<span class="keyword">int</span> = (<span class="keyword">this</span>._heap.length-<span class="number">2</span>)&gt;&gt; <span class="number">1</span></span><br><span class="line">			var objIndex:<span class="keyword">int</span> = <span class="keyword">this</span>._heap.length -<span class="number">1</span></span><br><span class="line">			var temp:* = <span class="keyword">this</span>._heap[objIndex]</span><br><span class="line"></span><br><span class="line">			<span class="keyword">while</span>(objIndex&gt;<span class="number">0</span>) <span class="comment">//只有objIndex&gt;0才有可能有parent</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="comment">//如果新插入的数据大于parent的数据，则应不断上移与parent交换位置</span></span><br><span class="line">				<span class="keyword">if</span>(_compare(temp,<span class="keyword">this</span>._heap[parentIndex])&gt;<span class="number">0</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">this</span>._heap[objIndex] = <span class="keyword">this</span>._heap[parentIndex]</span><br><span class="line">					objIndex = parentIndex</span><br><span class="line">					parentIndex = (parentIndex-<span class="number">1</span>)&gt;&gt;<span class="number">1</span> <span class="comment">//parent索引的算法</span></span><br><span class="line">				&#125;<span class="keyword">else</span></span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			_heap[objIndex] = temp</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//出队</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> function <span class="title">dequeue</span><span class="params">()</span>:*</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">if</span>(_heap.length&gt;<span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				var r:* = _heap[<span class="number">0</span>]</span><br><span class="line">				_heap[<span class="number">0</span>] = _heap.pop()</span><br><span class="line">				var parentIndex:<span class="keyword">int</span> = <span class="number">0</span></span><br><span class="line">				var childIndex:<span class="keyword">int</span> = <span class="number">1</span></span><br><span class="line">				var temp:* = _heap[parentIndex]</span><br><span class="line">				<span class="keyword">while</span>(childIndex &lt;= _heap.length-<span class="number">1</span>)</span><br><span class="line">				&#123;</span><br><span class="line">						<span class="keyword">if</span>(_heap[childIndex+<span class="number">1</span>] &amp;&amp; <span class="keyword">this</span>._compare(_heap[childIndex],_heap[childIndex+<span class="number">1</span>])&lt;<span class="number">0</span>)</span><br><span class="line">						&#123;</span><br><span class="line">						 childIndex++</span><br><span class="line">						&#125;</span><br><span class="line">					<span class="keyword">if</span>(<span class="keyword">this</span>._compare(temp,<span class="keyword">this</span>._heap[childIndex])&lt;<span class="number">0</span>)</span><br><span class="line">					&#123;</span><br><span class="line">						  <span class="keyword">this</span>._heap[parentIndex] = _heap[childIndex]</span><br><span class="line">						  parentIndex = childIndex;</span><br><span class="line">						  childIndex = (childIndex &lt;&lt;<span class="number">1</span>)+<span class="number">1</span></span><br><span class="line">					&#125;<span class="keyword">else</span></span><br><span class="line">					&#123;</span><br><span class="line">						<span class="keyword">break</span></span><br><span class="line">					&#125;</span><br><span class="line"></span><br><span class="line">				&#125;</span><br><span class="line">				_heap[parentIndex] = temp</span><br><span class="line">				<span class="keyword">return</span> r</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> _heap.pop()</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> function <span class="title">toString</span><span class="params">()</span>:String</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">this</span>._heap.toString()</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="function"><span class="keyword">public</span> function get <span class="title">heap</span><span class="params">()</span>:Array</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">return</span> _heap;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p> 二叉堆 :特殊结构的二叉树,比优先队列效率更高<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> ds</span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Heap是一种特殊的二叉树，它的每个节点都比它的子节点大。内部实现是用数组存储的。</span></span><br><span class="line"><span class="comment">	 * &lt;p&gt;</span></span><br><span class="line"><span class="comment">	 * 比如原树状结构为：</span></span><br><span class="line"><span class="comment">	 *    2</span></span><br><span class="line"><span class="comment">	 *   / \</span></span><br><span class="line"><span class="comment">	 *  1   0</span></span><br><span class="line"><span class="comment">	 * 则存储成数组为：</span></span><br><span class="line"><span class="comment">	 * [2,1,0]</span></span><br><span class="line"><span class="comment">	 * &lt;/p&gt;</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Heap</span></span></span><br><span class="line"><span class="class">	</span>&#123;</span><br><span class="line">		<span class="keyword">private</span> <span class="keyword">var</span> _heap:Array</span><br><span class="line">		<span class="keyword">private</span> <span class="keyword">var</span> _compare:Function</span><br><span class="line"></span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * <span class="doctag">@param</span> compare  返回正数，则a排在b前边,如果不指定，默认为 function (a:int,b:int):int&#123;return a-b&#125;;</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> function <span class="title">Heap</span><span class="params">(compare:Function = <span class="keyword">null</span>)</span>:<span class="keyword">void</span></span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			_heap = [];</span><br><span class="line">			<span class="keyword">if</span>(compare==<span class="keyword">null</span>)</span><br><span class="line">				_compare =  function (a:<span class="keyword">int</span>,b:<span class="keyword">int</span>):<span class="keyword">int</span>&#123;<span class="keyword">return</span> a-b&#125;;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				_compare =compare;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> function get <span class="title">length</span><span class="params">()</span>:uint</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">return</span> _heap.length</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> function <span class="title">modify</span><span class="params">(obj:*,newObj:*)</span>:Boolean</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			 <span class="keyword">var</span> objIndex:<span class="keyword">int</span> = <span class="keyword">this</span>._heap.indexOf(obj);</span><br><span class="line">			 <span class="keyword">if</span>(objIndex&lt;<span class="number">0</span>)<span class="keyword">return</span> <span class="keyword">false</span></span><br><span class="line">			 _heap[objIndex]= newObj</span><br><span class="line">		     <span class="keyword">var</span> parentIndex:<span class="keyword">int</span> = (objIndex-<span class="number">1</span>)&gt;&gt;<span class="number">1</span></span><br><span class="line">			 <span class="keyword">var</span> temp:* =  _heap[objIndex]</span><br><span class="line">			 <span class="keyword">while</span>(objIndex&gt;<span class="number">0</span>) <span class="comment">//只有objIndex&gt;0才有可能有parent</span></span><br><span class="line">			 &#123;</span><br><span class="line">				 <span class="comment">//如果新插入的数据大于parent的数据，则应不断上移与parent交换位置</span></span><br><span class="line">				 <span class="keyword">if</span>(_compare(temp,<span class="keyword">this</span>._heap[parentIndex])&gt;<span class="number">0</span>)</span><br><span class="line">				 &#123;</span><br><span class="line">					 <span class="keyword">this</span>._heap[objIndex] = <span class="keyword">this</span>._heap[parentIndex]</span><br><span class="line">					 objIndex = parentIndex</span><br><span class="line">					 parentIndex = (parentIndex-<span class="number">1</span>)&gt;&gt;<span class="number">1</span> <span class="comment">//parent索引的算法</span></span><br><span class="line">				 &#125;<span class="keyword">else</span></span><br><span class="line">				 &#123;</span><br><span class="line">					 <span class="keyword">break</span>;</span><br><span class="line">				 &#125;</span><br><span class="line">			 &#125;</span><br><span class="line">			 _heap[objIndex] = temp</span><br><span class="line">		     <span class="keyword">return</span> <span class="keyword">true</span></span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//入队</span></span><br><span class="line">		<span class="comment">//parentIndex = (childindex -1)/2</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> function <span class="title">enqueue</span><span class="params">(obj:*)</span>:<span class="keyword">void</span></span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">this</span>._heap.push(obj)</span><br><span class="line"></span><br><span class="line">			<span class="keyword">var</span> parentIndex:<span class="keyword">int</span> = (<span class="keyword">this</span>._heap.length-<span class="number">2</span>)&gt;&gt; <span class="number">1</span></span><br><span class="line">			<span class="keyword">var</span> objIndex:<span class="keyword">int</span> = <span class="keyword">this</span>._heap.length -<span class="number">1</span></span><br><span class="line">			<span class="keyword">var</span> temp:* = <span class="keyword">this</span>._heap[objIndex]</span><br><span class="line"></span><br><span class="line">			<span class="keyword">while</span>(objIndex&gt;<span class="number">0</span>) <span class="comment">//只有objIndex&gt;0才有可能有parent</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="comment">//如果新插入的数据大于parent的数据，则应不断上移与parent交换位置</span></span><br><span class="line">				<span class="keyword">if</span>(_compare(temp,<span class="keyword">this</span>._heap[parentIndex])&gt;<span class="number">0</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">this</span>._heap[objIndex] = <span class="keyword">this</span>._heap[parentIndex]</span><br><span class="line">					objIndex = parentIndex</span><br><span class="line">					parentIndex = (parentIndex-<span class="number">1</span>)&gt;&gt;<span class="number">1</span> <span class="comment">//parent索引的算法</span></span><br><span class="line">				&#125;<span class="keyword">else</span></span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			_heap[objIndex] = temp</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//出队</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> function <span class="title">dequeue</span><span class="params">()</span>:*</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">if</span>(_heap.length&gt;<span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">var</span> r:* = _heap[<span class="number">0</span>]</span><br><span class="line">				_heap[<span class="number">0</span>] = _heap.pop()</span><br><span class="line">				<span class="keyword">var</span> parentIndex:<span class="keyword">int</span> = <span class="number">0</span></span><br><span class="line">				<span class="keyword">var</span> childIndex:<span class="keyword">int</span> = <span class="number">1</span></span><br><span class="line">				<span class="keyword">var</span> temp:* = _heap[parentIndex]</span><br><span class="line">				<span class="keyword">while</span>(childIndex &lt;= _heap.length-<span class="number">1</span>)</span><br><span class="line">				&#123;</span><br><span class="line">						<span class="keyword">if</span>(_heap[childIndex+<span class="number">1</span>] &amp;&amp; <span class="keyword">this</span>._compare(_heap[childIndex],_heap[childIndex+<span class="number">1</span>])&lt;<span class="number">0</span>)</span><br><span class="line">						&#123;</span><br><span class="line">						 childIndex++</span><br><span class="line">						&#125;</span><br><span class="line">					<span class="keyword">if</span>(<span class="keyword">this</span>._compare(temp,<span class="keyword">this</span>._heap[childIndex])&lt;<span class="number">0</span>)</span><br><span class="line">					&#123;</span><br><span class="line">						  <span class="keyword">this</span>._heap[parentIndex] = _heap[childIndex]</span><br><span class="line">						  parentIndex = childIndex;</span><br><span class="line">						  childIndex = (childIndex &lt;&lt;<span class="number">1</span>)+<span class="number">1</span></span><br><span class="line">					&#125;<span class="keyword">else</span></span><br><span class="line">					&#123;</span><br><span class="line">						<span class="keyword">break</span></span><br><span class="line">					&#125;</span><br><span class="line"></span><br><span class="line">				&#125;</span><br><span class="line">				_heap[parentIndex] = temp</span><br><span class="line">				<span class="keyword">return</span> r</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> _heap.pop()</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> function <span class="title">toString</span><span class="params">()</span>:String</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">this</span>._heap.toString()</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="function"><span class="keyword">public</span> function get <span class="title">heap</span><span class="params">()</span>:Array</span></span><br><span class="line"><span class="function">		</span>&#123;</span><br><span class="line">			<span class="keyword">return</span> _heap;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h5 id="散列表-Hash"><a href="#散列表-Hash" class="headerlink" title="散列表 (Hash)"></a>散列表 (Hash)</h5><p>若结构中存在关键字和K相等的记录，则必定在f(K)的存储位置上。由此，不需比较便可直接取得所查记录。称这个对应关系f为散列函数(Hash function)，按这个思想建立的表为<a href="http://baike.baidu.com/view/1320746.htm" target="_blank" rel="noopener">散列表</a>。</p>
 <p><a href="http://www.nshen.net/dataStructure/2011/08/25/AS3-DataStructure.html" target="_blank" rel="noopener">http://www.nshen.net/dataStructure/2011/08/25/AS3-DataStructure.html</a></p>
 <p><a href="http://blog.csdn.net/zhanxinhang/article/details/6706217" target="_blank" rel="noopener">http://blog.csdn.net/zhanxinhang/article/details/6706217</a></p>
@@ -491,6 +559,9 @@
 
     
 
+    
+      
+    
     
 
     
@@ -540,10 +611,6 @@
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
@@ -583,11 +650,11 @@
         </ul>
       
 
-      <section class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">farwmarth</p>
+              <p class="site-author-name" itemprop="name">博主</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -598,7 +665,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">98</span>
+                    <span class="site-state-item-count">99</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -883,14 +950,19 @@
             <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
-                  <a href="https://github.com/wujiyu115" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
                   
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/wujiyu115" title="GitHub &rarr; https://github.com/wujiyu115" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
                 </span>
               
             </div>
           
 
-          
           
 
           
@@ -903,11 +975,11 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://www.litefeel.com" title="litefeel" target="_blank">litefeel</a>
+                    <a href="http://www.litefeel.com" title="http://www.litefeel.com" rel="noopener" target="_blank">litefeel</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://learndocs.farwmarth.com/" title="学习笔记" target="_blank">学习笔记</a>
+                    <a href="http://learndocs.farwmarth.com/" title="http://learndocs.farwmarth.com/" rel="noopener" target="_blank">学习笔记</a>
                   </li>
                 
               </ul>
@@ -920,11 +992,11 @@
           
 
         </div>
-      </section>
+      </div>
 
       
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
@@ -936,7 +1008,7 @@
             
 
           </div>
-        </section>
+        </div>
       <!--/noindex-->
       
 
@@ -952,11 +1024,11 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2011 &mdash; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2011 – <span itemprop="copyrightYear">2018</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">farwmarth</span>
+  <span class="author" itemprop="copyrightHolder">博主</span>
 
   
 
@@ -964,9 +1036,7 @@
 </div>
 
 
-
-
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 
@@ -974,7 +1044,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Gemini</a> v6.2.0</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v6.6.0</div>
 
 
 
@@ -1001,11 +1071,14 @@
 
     
 
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -1038,59 +1111,49 @@
 
   
   
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+    <script src="/lib/jquery/index.js?v=2.1.3"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+    <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+    <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=6.2.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=6.2.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=6.2.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.2.0"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.2.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.2.0"></script>
-
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.2.0"></script>
+  <script src="/js/src/utils.js?v=6.6.0"></script>
+
+  <script src="/js/src/motion.js?v=6.6.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=6.6.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=6.6.0"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script src="/js/src/post-details.js?v=6.6.0"></script>
 
 
 
   
 
 
-
-	
-
-
+  <script src="/js/src/bootstrap.js?v=6.6.0"></script>
 
 
 
@@ -1098,9 +1161,8 @@
 
 
 
-
-
   
+
 
 
 
@@ -1126,6 +1188,10 @@
   
 
   
+
+  
+  
+
   
 
   
