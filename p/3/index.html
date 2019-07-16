@@ -118,53 +118,6 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="http://farwmarth.com/post/lua%E6%95%B0%E6%8D%AE%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E9%80%89%E6%8B%A9/" itemprop="url">
-        lua数据序列化的选择
-        </a>
-      </h1>
-      <div class="post-meta">
-      <span class="post-time">
-<span class="post-meta-item-icon">
-    <i class="fa fa-calendar-o"></i>
-</span>
-<span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-04-20">
-    2016-04-20
-</time>
-</span> 
-      
-       <span>
-&nbsp; | &nbsp;
-<span class="post-meta-item-icon">
-    <i class="fa fa-eye"></i>
-</span>
-<span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">1510 字 ~4分钟</span>
-</span>
-      </div>
-    </header>
-    <div class="post-body" itemprop="articleBody">
-    <p>在寻找lua的json库时并没有找到太如意的方案.都是年久失修的库.
-+ DKJSON 2.1 <a href="http://dkolf.de/src/dkjson-lua.fsl/home">http://dkolf.de/src/dkjson-lua.fsl/home</a>
-+ Lua YAJL 2.0 <a href="https://github.com/brimworks/lua-yajl">https://github.com/brimworks/lua-yajl</a>
-+ Lua CSJON 2.0.0 <a href="http://www.kyne.com.au/~mark/software/lua-cjson.php">http://www.kyne.com.au/~mark/software/lua-cjson.php</a></p>
-
-<p><a href="http://www.kyne.com.au/~mark/software/lua-json-performance.html">http://www.kyne.com.au/~mark/software/lua-json-performance.html</a>
-最高选择了把cjson整合到项目 中</p>
-    </div>
-    
-    <div class="post-more-link text-center">
-    <a class="btn" href="http://farwmarth.com/post/lua%E6%95%B0%E6%8D%AE%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E9%80%89%E6%8B%A9/" rel="contents">
-      阅读全文 &raquo;
-    </a>
-    </div>
-    
-    <footer class="post-footer"><div class="post-eof"></div></footer>
-  </article>
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
         <a class="post-title-link" href="http://farwmarth.com/post/redis%E5%88%9D%E6%8E%A2/" itemprop="url">
         redis初探
         </a>
@@ -570,6 +523,54 @@ sudo apt-get install libmysqlclient-dev</code></pre></div>
     <footer class="post-footer"><div class="post-eof"></div></footer>
   </article>
 
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/%E4%BB%93%E4%BF%83%E7%9A%84%E6%88%98%E6%96%97%E6%A8%A1%E5%9E%8B%E8%AE%BE%E8%AE%A1/" itemprop="url">
+        仓促的战斗模型设计
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-01-29">
+    2016-01-29
+</time>
+</span> 
+      
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1889 字 ~4分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <h2 id="设计思路">设计思路</h2>
+
+<p>新游戏开发又接近收尾的工作,记录一下这几个月开发的一些想法.
+服务器设计延续了上一个游戏的基础结构.
+由于前期demo版本开发周期很短,两周时间要一个战斗版本,所以还是遗留了一些如搅屎棍般的缺陷在里面.
+<img src="http://farwmarth.bestnewbee.com/images/herosserver.png" alt=" heros服务器设计考量" />
+上图就是基于初期战斗的设计思路.
+基本思路即了解概念,梳理需求中的疑惑,再来进行代码重构和设计</p>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="http://farwmarth.com/post/%E4%BB%93%E4%BF%83%E7%9A%84%E6%88%98%E6%96%97%E6%A8%A1%E5%9E%8B%E8%AE%BE%E8%AE%A1/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
 </section>
 
 
@@ -681,7 +682,7 @@ sudo apt-get install libmysqlclient-dev</code></pre></div>
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="http://farwmarth.com/post/">
-        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-count">100</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>

@@ -31,25 +31,6 @@ public static String getSecretToken(Context paramContext) { paramContext = (Pare
     </entry>
     
      <entry>
-        <title>登录</title>
-        <url>http://farwmarth.com/post/game_login/</url>
-        <categories>
-          <category>programm</category>
-        </categories>
-        <tags>
-          <tag>programm</tag>
-        </tags>
-        <content type="html"> DH密钥交换算法的作用是使通信双方可以在不安全的通道中建立一个相同的密钥，用于加密通信。 基本原理示例：
- 通信方A和通信方B约定一个初始数g，如g=5，一个质数p，如p=23，g和p是公开的 A生成一个随机数a，a是保密的，如a=6 A计算g^a%p发送给B，g^a%p=5^6%23=8 B生成一个随机数b，b是保密的，如b=15 B计算g^b%p发送给A，g^b%p=5^15%23=19 A接收到g^b%p后，再使用保密的a，计算(g^b%p)^a%p=19^6%23=2 B接收到g^a%p后，再使用保密的b，计算(g^a%p)^b%p=8^15%23=2 这样通信方A和B得到一个相同的密钥：2  (g^b%p)^a%p=(g^a%p)^b%p的证明： 如果a=2： (g^b%p)^a%p=(g^b%p)^2%p=(g^b-n*p)^2%p=(g^(2*b)-2*g^b*n*p&#43;(n*p)^2)%p=g^(2*b)%p 可以看出(g^b-n*p)^2展开后除g^(2*b)外，其它都是p的倍数，所以整个算式的结果是g^(2*b)%p 同理对(g^b-n*p)^a展开后除g^(a*b)外，其它都是p的倍数，所以整个算式的结果是g^(a*b)%p 同样可以得出(g^a%p)^b%p=g^(a*b)%p 所以(g^b%p)^a%p=(g^a%p)^b%p 整个通信过程中g、p、g^a%p、g^b%p是公开的，这时通过g、p、g^a%p得到a比较难，同样通过g、p、g^b%p得到b比较难，所以最终的密钥是比较安全的。 以g=5、p=23、g^a%p=8计算a为例，a=log(5, (8&#43;23*n))，这个只能将n的可能值逐个带入公式试验才能得到a的值。如果a、p是比较大的数那么计算更加困难。
-如果注意的是，为了防止应用优化算法计算上述问题，质数p不是随便选择的，需要符合一定的条件。随机数a、b的生成算法也必需注意，应使结果尽可能随机，不能出现可预测的规律，否则会使破解变的容易。
-通过上述计算过程也可以看出DH算法不仅可以应用在2方通信的情况，如果多方通信，也可以使用该算法。
-DH密钥交换算法无法验证对方身份，所以DH密钥交换算法不能抵御中间人攻击（MITM，Man-in-the-middle attack）。
-（1） Alice 公开发送值a和p给Bob,攻击者Carol截获这些值，随即把自己产生的公开值发给Bob。 （2） Bob 公开发送值a和p给Alice,又被 Carol截获，随即把自己产生的公开值发给Alice。 （3） Alice 和Carol计算出两人之间的共享密钥k1。 （4） Bob 和Carol计算出两人之间另一个的共享密钥k2。 受到中间人Carol攻击后，Alice用密钥k1给Bob发送消息，Carol截获后用k1解密就可读取消息，然后将获得的明文消息用k2加密（加密前对消息可能做某些修改，即主动攻击），然后发给Bob。对Bob发给Alice的消息，Carol用同样的手法读取和修改。 造成中间人攻击得逞的原因是：DH密钥交换算法不进行认证对方。利用数字签名可以解决中间人攻击的缺陷。
-https://blog.csdn.net/qq769651718/article/details/79435251
-</content>
-    </entry>
-    
-     <entry>
         <title>hexo自动化构建</title>
         <url>http://farwmarth.com/post/autohexo/</url>
         <categories>

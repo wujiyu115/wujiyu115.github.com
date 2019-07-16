@@ -37,10 +37,10 @@
     
     <item>
       <title>登录</title>
-      <link>http://farwmarth.com/post/game_login/</link>
+      <link>http://farwmarth.com/drafts/game_login/</link>
       <pubDate>Sun, 09 Dec 2018 17:41:27 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/game_login/</guid>
+      <guid>http://farwmarth.com/drafts/game_login/</guid>
       <description>DH密钥交换算法的作用是使通信双方可以在不安全的通道中建立一个相同的密钥，用于加密通信。 基本原理示例： 通信方A和通信方B约定一个初始数g，如</description>
     </item>
     
