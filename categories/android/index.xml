@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>android on farwmarth</title>
+    <link>http://farwmarth.com/categories/android/</link>
+    <description>Recent content in android on farwmarth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 31 Jul 2013 17:09:51 +0000</lastBuildDate>
+    
+	<atom:link href="http://farwmarth.com/categories/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>android 删除未引用资源,优化字节码</title>
+      <link>http://farwmarth.com/post/android-%E5%88%A0%E9%99%A4%E6%9C%AA%E5%BC%95%E7%94%A8%E8%B5%84%E6%BA%90%E4%BC%98%E5%8C%96%E5%AD%97%E8%8A%82%E7%A0%81/</link>
+      <pubDate>Wed, 31 Jul 2013 17:09:51 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/android-%E5%88%A0%E9%99%A4%E6%9C%AA%E5%BC%95%E7%94%A8%E8%B5%84%E6%BA%90%E4%BC%98%E5%8C%96%E5%AD%97%E8%8A%82%E7%A0%81/</guid>
+      <description>&lt;h2 id=&#34;一-资源文件&#34;&gt;一 资源文件&lt;/h2&gt;
+
+&lt;p&gt;删除未使用图片资源 .&lt;/p&gt;
+
+&lt;p&gt;adt  的 android tool有一个检测app潜在问题的选项叫Run Lint.检测之后有各种各种检测的信息,包括px单位，资源未使用等等。在android sdk里也有这个工具Lint.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>顺丰快递接口</title>
+      <link>http://farwmarth.com/post/%E9%A1%BA%E4%B8%B0%E5%BF%AB%E9%80%92%E6%8E%A5%E5%8F%A3/</link>
+      <pubDate>Wed, 22 May 2013 19:47:25 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E9%A1%BA%E4%B8%B0%E5%BF%AB%E9%80%92%E6%8E%A5%E5%8F%A3/</guid>
+      <description>&lt;p&gt;事件起源是:买了某物品,快递公司是顺丰. 手机本是装了快递100来追踪快件的.结果输入单号居然查不到信息.只能抱怨快递100这软件坑爹了.于是度娘一下.找到了顺风的官网查单号&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://kf.sf-express.com/css/myquery/trackSmallTel.action&#34;&gt;http://kf.sf-express.com/css/myquery/trackSmallTel.action&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;查询结果是有的,可能是给快递100的接口有问题吧.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Android 开发调试</title>
+      <link>http://farwmarth.com/post/android-%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/</link>
+      <pubDate>Sat, 18 May 2013 11:10:11 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/android-%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/</guid>
+      <description>&lt;p&gt;&lt;font color=&#34;red&#34;&gt;update: 2016-1-14 更新模拟器&lt;strong&gt;夜神模拟器&lt;/strong&gt;&lt;/font&gt;
+&lt;font color=&#34;red&#34;&gt;update: 2013-8-13 更新模拟器&lt;strong&gt;Genymotion&lt;/strong&gt;&lt;/font&gt;
+&lt;font color=&#34;red&#34;&gt;update: 2013-5-19 更新wifi调试工具&lt;/font&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;模拟器&#34;&gt;模拟器&lt;/h2&gt;
+
+&lt;p&gt;android自带模拟器真是龟速,果断放弃
++ 夜神模拟器
++ &lt;a href=&#34;http://www.bluestacks.net.cn/Download/&#34;&gt;bluestacks&lt;/a&gt;: 可以安装软件和调试的模拟器,速度比android的不知道快到哪去了.
+安装完后,eclipse会把它识别为一台设备 .和真机调试没啥区别.运行界面
+&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/05/image11.png&#34; alt=&#34;image&#34; /&gt;
++ Genymotion
++ 逍遥安卓模拟器
++ 靠谱助手安卓模拟器
++ 海马玩模拟器
+mac下连接: &lt;code&gt;adb connect 192.168.56.101&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>斗地主结构分析</title>
+      <link>http://farwmarth.com/post/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90/</link>
+      <pubDate>Sat, 27 Apr 2013 12:21:53 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90/</guid>
+      <description>&lt;p&gt;这段时间在反编别人的代码,基本了解了android的游戏开发过程.在这里总结一下蛙蛙斗地主的体系结构.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/04/7a52e3c36bb3.jpg&#34;&gt;&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/04/thumb1.jpg&#34; alt=&#34;蛙蛙斗地主结构&#34; title=&#34;蛙蛙斗地主结构&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;activity管理:&lt;/p&gt;
+
+&lt;p&gt;注意在activity的回调中资源的创建及销毁.管理好activity的生命周期.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>android 支付宝 快捷支付 接入</title>
+      <link>http://farwmarth.com/post/android-%E6%94%AF%E4%BB%98%E5%AE%9D-%E5%BF%AB%E6%8D%B7%E6%94%AF%E4%BB%98-%E6%8E%A5%E5%85%A5/</link>
+      <pubDate>Fri, 26 Apr 2013 11:55:25 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/android-%E6%94%AF%E4%BB%98%E5%AE%9D-%E5%BF%AB%E6%8D%B7%E6%94%AF%E4%BB%98-%E6%8E%A5%E5%85%A5/</guid>
+      <description>&lt;p&gt;&lt;font color=&#34;red&#34;&gt;update: 2013-4-28 私钥安全性修正&lt;/font&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;一-sdk下载&#34;&gt;一 sdk下载&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://b.alipay.com/order/techService.htm&#34;&gt;https://b.alipay.com/order/techService.htm&lt;/a&gt;.最下面有快捷支付(无线)zip包,包含了教程,开发指南和demo.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>android 反编译和代码解读</title>
+      <link>http://farwmarth.com/post/android-%E5%8F%8D%E7%BC%96%E8%AF%91%E5%92%8C%E4%BB%A3%E7%A0%81%E8%A7%A3%E8%AF%BB/</link>
+      <pubDate>Tue, 23 Apr 2013 15:59:09 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/android-%E5%8F%8D%E7%BC%96%E8%AF%91%E5%92%8C%E4%BB%A3%E7%A0%81%E8%A7%A3%E8%AF%BB/</guid>
+      <description>&lt;p&gt;&lt;font color=red&gt;update :2013-5-18&lt;/font&gt;
+&lt;font color=red&gt;反编译工具小米人改之理:&amp;nbsp; &lt;/font&gt;&lt;a href=&#34;http://www.xiaomiren.net/apkmodifier/&#34;&gt;http://www.xiaomiren.net/apkmodifier/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;一-apk反编译&#34;&gt;一 apk反编译&lt;/h2&gt;
+
+&lt;p&gt;将apk文件解压后有两部分文件需要处理，一种是xml文件，另一种一个dex文件（.dex）&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>android 组件Activity</title>
+      <link>http://farwmarth.com/post/android-%E7%BB%84%E4%BB%B6activity/</link>
+      <pubDate>Fri, 05 Apr 2013 14:50:39 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/android-%E7%BB%84%E4%BB%B6activity/</guid>
+      <description>&lt;p&gt;Android开发四大组件分别是：
++ 活动（Activity)： 用于表现功能。
++ 服务（Service)： 后台运行服务，不提供界面呈现。
++ 广播接收器（BroadcastReceiver)：用于接收广播。
++ 数据实体（Content Provider）： 支持在多个应用中存储和读取数据，相当于数据库&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>android　框架结构</title>
+      <link>http://farwmarth.com/post/android%E6%A1%86%E6%9E%B6%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Thu, 04 Apr 2013 12:03:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/android%E6%A1%86%E6%9E%B6%E7%BB%93%E6%9E%84/</guid>
+      <description>&lt;h2 id=&#34;一-android平台结构-sdk目录结构-目录结构&#34;&gt;一 Android平台结构,SDK目录结构,目录结构&lt;/h2&gt;
+
+&lt;p&gt;　android是一个linux内核的操作系统，常规编程语言是java,不过也推出了NDK,可以用c++来访问部分接口。这篇就略去环境搭建和hello world了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/04/2010100721194321.jpg&#34; alt=&#34;2010100721194321&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

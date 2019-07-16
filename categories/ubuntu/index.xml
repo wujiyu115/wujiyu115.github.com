@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ubuntu on farwmarth</title>
+    <link>http://farwmarth.com/categories/ubuntu/</link>
+    <description>Recent content in ubuntu on farwmarth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 27 Nov 2014 14:49:16 +0000</lastBuildDate>
+    
+	<atom:link href="http://farwmarth.com/categories/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ubuntu 终端终结者</title>
+      <link>http://farwmarth.com/post/-ubuntu-%E7%BB%88%E7%AB%AF%E7%BB%88%E7%BB%93%E8%80%85/</link>
+      <pubDate>Thu, 27 Nov 2014 14:49:16 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/-ubuntu-%E7%BB%88%E7%AB%AF%E7%BB%88%E7%BB%93%E8%80%85/</guid>
+      <description>&lt;p&gt;在linux中经常要在多个终端界面间切换，于是就找了下终端管理的方法。&lt;/p&gt;
+
+&lt;h2 id=&#34;一-screen命令&#34;&gt;&lt;strong&gt;一 screen命令&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;screen命令是ubuntu自带的.查看screen是否安装可以用如下命令:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;root@tivf06 ~&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# rpm -qa|grep screen&lt;/span&gt;
+xscreensaver-4.18-5.rhel4.11
+**screen-4.0.2-5**&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>ubuntu,centos 备忘</title>
+      <link>http://farwmarth.com/post/ubuntu%E5%A4%87%E5%BF%98/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/ubuntu%E5%A4%87%E5%BF%98/</guid>
+      <description>&lt;h2 id=&#34;安装常用软件&#34;&gt;安装常用软件:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;subversion&lt;/code&gt;  svn 版本命令行&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lua5.2&lt;/code&gt;  lua版本&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ssh&lt;/code&gt;    ssh 连接&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nautilus-open-terminal&lt;/code&gt;   终端&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fcitx-table-wbpy&lt;/code&gt;  五笔&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;avant-window-navigator&lt;/code&gt; 启动器位置&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

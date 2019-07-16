@@ -1,0 +1,1662 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on farwmarth</title>
+    <link>http://farwmarth.com/post/</link>
+    <description>Recent content in Posts on farwmarth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 18 Dec 2018 18:26:16 +0000</lastBuildDate>
+    
+	<atom:link href="http://farwmarth.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>反编下某疫苗接种app</title>
+      <link>http://farwmarth.com/post/umiao/</link>
+      <pubDate>Tue, 18 Dec 2018 18:26:16 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/umiao/</guid>
+      <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
+
+&lt;p&gt;今天带小孩去打疫苗，发现之前的社区医院改成app预约了,下载app用了一下,真是无力吐槽,除了注册功能是好的。其他功能一点开全在转圏加载,预约教程页面还报了个sql语句错误.报着学习的态度想看看大佬们写的代码.&lt;/p&gt;
+
+&lt;h1 id=&#34;工具准备&#34;&gt;工具准备&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.yeshen.com/&#34;&gt;夜神模拟器&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.coolapk.com/apk/app.greyshirts.sslcapture&#34;&gt;Packet Capture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/android-hacker/VirtualXposed&#34;&gt;VirtuanXposed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.coolapk.com/apk/bin.mt.plus&#34;&gt;mt文件管理器2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://bbs.pediy.com/thread-224105.htm&#34;&gt;FDex2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.gda.wiki:9090/&#34;&gt;gda&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/pxb1988/dex2jar&#34;&gt;dex2jar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/java-decompiler/jd-gui&#34;&gt;jd-gui&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>登录</title>
+      <link>http://farwmarth.com/post/game_login/</link>
+      <pubDate>Sun, 09 Dec 2018 17:41:27 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/game_login/</guid>
+      <description>DH密钥交换算法的作用是使通信双方可以在不安全的通道中建立一个相同的密钥，用于加密通信。 基本原理示例： 通信方A和通信方B约定一个初始数g，如</description>
+    </item>
+    
+    <item>
+      <title>hexo自动化构建</title>
+      <link>http://farwmarth.com/post/autohexo/</link>
+      <pubDate>Sun, 12 Mar 2017 23:21:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/autohexo/</guid>
+      <description>&lt;p&gt;最近发现博客的图片和文章数量增长后,hexo生成和发布的时间越来越长,而且换了电脑后hexo的环境又要倒腾一遍,实在是消耗时间。&lt;/p&gt;
+
+&lt;p&gt;但是又不想换简书这种单纯的写作平台，毕竟博客还是需要一点个性化的元素。&lt;/p&gt;
+
+&lt;p&gt;那能不能我写完markdown然后commit之后就可以自动生成静态页面自动发布呢？当然懒人们有很多种办法。研究了一下一般都是用&lt;code&gt;webhook&lt;/code&gt;来实现,目前大概有几种方式:&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>hexo图片迁移至七牛</title>
+      <link>http://farwmarth.com/post/hexo%E5%9B%BE%E7%89%87%E8%BF%81%E7%A7%BB%E8%87%B3%E4%B8%83%E7%89%9B/</link>
+      <pubDate>Sun, 12 Mar 2017 00:21:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/hexo%E5%9B%BE%E7%89%87%E8%BF%81%E7%A7%BB%E8%87%B3%E4%B8%83%E7%89%9B/</guid>
+      <description>&lt;hr /&gt;
+
+&lt;p&gt;之前图片一直是直接到在page服务上的,最近发现图片越来越多,打算图片迁移到七牛上.&lt;/p&gt;
+
+&lt;p&gt;七牛可以cdn加速,每月有固定的免费流量,可以设置防盗链,可以自动压缩图片打水印。众多优点。对小博客来说真是有莫大的帮助。&lt;/p&gt;
+
+&lt;p&gt;七牛注册这些过程就略过不表了.前置工作&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;注册七牛账号并创建对象空间，充十块自定义域名&lt;/li&gt;
+&lt;li&gt;绑定&lt;a href=&#34;https://support.qiniu.com/hc/kb/article/68977&#34;&gt;加速域名&lt;/a&gt;，自定义域名必须为中国大陆已备案。推荐使用二级域名。&lt;/li&gt;
+&lt;li&gt;设置一下防盗链和图片瘦身
+&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2017/03/qiniu_steal.png&#34; alt=&#34;防盗链&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;获取AccessKey  SecretKey&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>初级运维指南</title>
+      <link>http://farwmarth.com/post/%E5%88%9D%E7%BA%A7%E8%BF%90%E7%BB%B4%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Wed, 04 Jan 2017 09:42:39 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E5%88%9D%E7%BA%A7%E8%BF%90%E7%BB%B4%E6%8C%87%E5%8D%97/</guid>
+      <description>&lt;h1 id=&#34;加固&#34;&gt;加固&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;CentOS 7防火墙换用Friewalld&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;ssh配置&#34;&gt;SSH配置&lt;/h1&gt;
+
+&lt;h2 id=&#34;安装ssh&#34;&gt;安装ssh&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#安装&lt;/span&gt;
+yum install ssh
+&lt;span style=&#34;color:#75715e&#34;&gt;#启动&lt;/span&gt;
+service sshd start
+&lt;span style=&#34;color:#75715e&#34;&gt;#设置开机启动&lt;/span&gt;
+chkconfig ssd on
+&lt;span style=&#34;color:#75715e&#34;&gt;#重启&lt;/span&gt;
+service sshd restart
+&lt;span style=&#34;color:#75715e&#34;&gt;#重启网络&lt;/span&gt;
+service network restart
+&lt;span style=&#34;color:#75715e&#34;&gt;#centos7&lt;/span&gt;
+systemctl restart  sshd.service&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>国内源</title>
+      <link>http://farwmarth.com/post/%E5%9B%BD%E5%86%85%E6%BA%90/</link>
+      <pubDate>Sun, 18 Dec 2016 23:20:39 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
+      <description>&lt;p&gt;&amp;ndash;&lt;/p&gt;
+
+&lt;p&gt;清华大学的源太全面了:
+&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/&#34;&gt;https://mirrors.tuna.tsinghua.edu.cn/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;pypi&#34;&gt;pypi&lt;/h1&gt;
+
+&lt;p&gt;镜像状态监控: &lt;a href=&#34;https://www.pypi-mirrors.org/&#34;&gt;https://www.pypi-mirrors.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;豆瓣:&lt;a href=&#34;http://pypi.douban.com/&#34;&gt;http://pypi.douban.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;中国科学技术大学:&lt;a href=&#34;http://pypi.mirrors.ustc.edu.cn/&#34;&gt;http://pypi.mirrors.ustc.edu.cn/&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;阿里云:&lt;a href=&#34;http://mirrors.aliyun.com/pypi/simple&#34;&gt;http://mirrors.aliyun.com/pypi/simple&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;临时使用:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;pip install -i https://&amp;lt;mirror&amp;gt;/simple &amp;lt;package&amp;gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;全局设置:
+添加到&lt;code&gt;~/.pip/pip.conf&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;[global]
+index-url = https://&amp;lt;mirror&amp;gt;/simple&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>域名解析的一些概念</title>
+      <link>http://farwmarth.com/post/a%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sun, 18 Dec 2016 19:10:39 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/a%E8%AE%B0%E5%BD%95/</guid>
+      <description>&lt;p&gt;##概念
++ A记录（IP指向）
+用户可以在此设置子域名并指向到自己的目标主机地址上，从而实现通过域名找到服务器找到相应网页的功能。
+说明：指向的目标主机地址类型只能使用IP地址。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;CNAME（别名指向）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;通常称别名指向。您可以为一个主机设置别名。相当于用子域名来代替ip地址，优点是如果ip地址变化，只需要改动子域名的解析，而不需要逐一改变ip地址解析。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;1. CNAME的目标主机地址只能使用主机名，不能使用IP地址；
+2. 主机名前不能有任何其他前缀，如：http://等是不被允许的；
+3. A记录优先于CNAME记录。即如果一个主机地址同时存在A记录和CNAME记录，则CNAME记录不生效。&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>在CentOS 6.X 上升级 Python为 2.7</title>
+      <link>http://farwmarth.com/post/%E5%8D%87%E7%BA%A7centos%E4%B8%8A%E7%9A%84python/</link>
+      <pubDate>Sun, 18 Dec 2016 12:20:39 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E5%8D%87%E7%BA%A7centos%E4%B8%8A%E7%9A%84python/</guid>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;CentOS 6.X 自带的python版本是 2.6 , 但是2.6已经被不被官方支持了，今天写后台程序放到阿里云上运行发现2.6的一些api和2.7不一样了。于是想升级下python&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&#34;安装依赖包&#34;&gt;安装依赖包&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;yum install -y zlib-devel bzip2-devel openssl-devel xz-libs wget&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&#34;源码编译&#34;&gt;源码编译&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;wget http://www.python.org/ftp/python/2.7.8/Python-2.7.8.tar.xz
+# 可以使用国内的源
+wget http://mirrors.sohu.com/python/2.7.8/Python-2.7.8.tar.xz
+xz -d Python-2.7.8.tar.xz
+tar -xvf Python-2.7.8.tar&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>给Iphone换个自定义的铃声</title>
+      <link>http://farwmarth.com/post/%E7%BB%99iphone%E6%8D%A2%E4%B8%AA%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E9%93%83%E5%A3%B0/</link>
+      <pubDate>Sun, 18 Dec 2016 12:20:39 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E7%BB%99iphone%E6%8D%A2%E4%B8%AA%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E9%93%83%E5%A3%B0/</guid>
+      <description>&lt;p&gt;&amp;ndash;&lt;/p&gt;
+
+&lt;h1 id=&#34;概述&#34;&gt;概述&lt;/h1&gt;
+
+&lt;p&gt;iPhone的铃声格式是m4r格式，普通的mp3无法直接设置为铃声,所以需要使用铃声制作工具来转换,一般电话铃声的最长时长设置为40s,闹钟的时长最长为30s&lt;/p&gt;
+
+&lt;h1 id=&#34;制作工具&#34;&gt;制作工具&lt;/h1&gt;
+
+&lt;h2 id=&#34;ringer制作铃声&#34;&gt;Ringer制作铃声&lt;/h2&gt;
+
+&lt;p&gt;Ringer是Mac上制作铃声的工具,操作非常简单,将下载的歌曲播放到Ringer的主界面&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;大音轨用于精确控制,双击大的音轨可以从点击处开始播放,设置头尾的Preview可以听整个铃声,下面的小音轨用来快速拖动预览声音&lt;/li&gt;
+&lt;li&gt;可以制作两种:铃声和立名声音,没发现太大的区别只是最大时长不一样&lt;/li&gt;
+&lt;li&gt;FadeOut/FadeIn : 为铃声添加淡入淡出效果&lt;/li&gt;
+&lt;li&gt;设置好后点击Create按钮即可将制作好的铃声自动导入到Itunes中&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>如何避免一些危险的指令操作</title>
+      <link>http://farwmarth.com/post/%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E4%B8%80%E4%BA%9B%E5%8D%B1%E9%99%A9%E7%9A%84%E6%8C%87%E4%BB%A4%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Tue, 29 Nov 2016 11:07:39 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E4%B8%80%E4%BA%9B%E5%8D%B1%E9%99%A9%E7%9A%84%E6%8C%87%E4%BB%A4%E6%93%8D%E4%BD%9C/</guid>
+      <description>&lt;h1 id=&#34;git引发的事故&#34;&gt;git引发的事故&lt;/h1&gt;
+
+&lt;p&gt;上周服务器的一位同事一个不小心用了&lt;code&gt;git push -f&lt;/code&gt;,抹掉了我们一上午的工作内容,还好抹掉的记录不是太多大概八九条.
+各自花了大概半小时恢复了数据&lt;/p&gt;
+
+&lt;h2 id=&#34;恢复过程&#34;&gt;恢复过程&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#查看所有的本地操作数据&lt;/span&gt;
+git reflog
+&lt;span style=&#34;color:#75715e&#34;&gt;#或者查看所有数据,找到被抹掉的commit&lt;/span&gt;
+git log -g
+&lt;span style=&#34;color:#75715e&#34;&gt;#复制一个提交节点并在当前分支做一次完全一样的新提交。&lt;/span&gt;
+git cherry-pick commit_id&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>权重随机算法</title>
+      <link>http://farwmarth.com/post/%E6%9D%83%E9%87%8D%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Mon, 10 Oct 2016 19:10:39 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E6%9D%83%E9%87%8D%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/</guid>
+      <description>&lt;p&gt;带权随机算法在游戏开发中应用广泛,最近在做商店随机商品又遇到这种问题,重新思考并总结了一下带权随机的做法.&lt;/p&gt;
+
+&lt;p&gt;带权随机其实很好理解
+比如我们希望抽到A的抽到的比重是10,B的比重是5,C的比重是1,如下图
+&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/044TM313-0.jpg&#34; alt=&#34;044TM313&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>readthedocs切换到mkdocs</title>
+      <link>http://farwmarth.com/post/mkdocs/</link>
+      <pubDate>Sun, 04 Sep 2016 12:04:15 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/mkdocs/</guid>
+      <description>&lt;p&gt;之前把学习笔记用&lt;code&gt;sphinx&lt;/code&gt;生成然后托管在&lt;code&gt;github&lt;/code&gt;上,然后用&lt;code&gt;readthedocs&lt;/code&gt;的&lt;code&gt;webhook&lt;/code&gt;自动&lt;code&gt;build&lt;/code&gt;文章数量渐多感觉排版拥挤.于是google了一下找了个替代品,那就就是这篇文章的主角&lt;code&gt;mkdocs&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/mkdocs/mkdocs&#34;&gt;mkdocs&lt;/a&gt;是一个支持&lt;code&gt;markdown&lt;/code&gt;语法的项目文档管理工具，结构很简单,一个&lt;code&gt;yml&lt;/code&gt;配置文件管理文档结构和主题信息,&lt;code&gt;docs&lt;/code&gt;目录则是项目文档.官方文档(&lt;a href=&#34;http://www.mkdocs.org/&#34;&gt;http://www.mkdocs.org/&lt;/a&gt;)&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>vsftpd使用</title>
+      <link>http://farwmarth.com/post/vsftpd/</link>
+      <pubDate>Tue, 17 May 2016 14:09:25 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/vsftpd/</guid>
+      <description>&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+
+&lt;p&gt;vsftpd意思为“very secure FTP daemon(非常安全的FTP进程)”，是一个基于GPL发布的类UNIX类操作系统上运行的服务器的名字（是一种守护进程），可以运行在诸如Linux、BSD、Solaris、HP-UX以及Irix等系统上面。vsftpd支持很多其他传统的FTP服务器不支持的良好特性&lt;/p&gt;
+
+&lt;h3 id=&#34;命令&#34;&gt;命令&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#安装&lt;/span&gt;
+yum install vsftpd
+&lt;span style=&#34;color:#75715e&#34;&gt;#启动&lt;/span&gt;
+service vsftpd start
+&lt;span style=&#34;color:#75715e&#34;&gt;#重启&lt;/span&gt;
+service vsfptd restart&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>脚本自动化手册</title>
+      <link>http://farwmarth.com/post/%E8%84%9A%E6%9C%AC%E8%87%AA%E5%8A%A8%E5%8C%96%E6%89%8B%E5%86%8C/</link>
+      <pubDate>Thu, 12 May 2016 09:42:39 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E8%84%9A%E6%9C%AC%E8%87%AA%E5%8A%A8%E5%8C%96%E6%89%8B%E5%86%8C/</guid>
+      <description>&lt;h2 id=&#34;同步文件&#34;&gt;同步文件&lt;/h2&gt;
+
+&lt;h3 id=&#34;rsync-remote-synchronize&#34;&gt;rsync(remote synchronize)&lt;/h3&gt;
+
+&lt;p&gt;实现远程同步功能的软件,它在同步文件的同时,可以保持原来文件的权限、时间、软硬链接等附加信息.&lt;/p&gt;
+
+&lt;h4 id=&#34;rsync认证方式&#34;&gt;rsync认证方式&lt;/h4&gt;
+
+&lt;p&gt;rsync有两种常用的认证方式，一种是&lt;code&gt;rsync-daemon&lt;/code&gt;方式，另外一种是ssh方式。在平时使用过程，我们使用最多的是&lt;code&gt;rsync-daemon&lt;/code&gt;方式&lt;/p&gt;
+
+&lt;h4 id=&#34;rsync服务器架设&#34;&gt;rsync服务器架设&lt;/h4&gt;
+
+&lt;p&gt;rsync的主要有以下三个配置文件&lt;code&gt;rsyncd.conf&lt;/code&gt;(主配置文件)、&lt;code&gt;rsyncd.secrets&lt;/code&gt;(密码文件)、&lt;code&gt;rsyncd.motd&lt;/code&gt;(rysnc服务器信息)&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>驾考</title>
+      <link>http://farwmarth.com/post/%E9%A9%BE%E8%80%83%E7%9F%A5%E8%AF%86%E7%82%B9/</link>
+      <pubDate>Wed, 11 May 2016 19:10:39 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E9%A9%BE%E8%80%83%E7%9F%A5%E8%AF%86%E7%82%B9/</guid>
+      <description>&lt;h2 id=&#34;报考&#34;&gt;报考&lt;/h2&gt;
+
+&lt;p&gt;驾照这个事情其实被搁置了很久,一来人太懒,再者觉得边上班还要请假练车是件比较让人头痛的事情,年初的时候被催着把这报名的事情给完成了,报名之前听说广州报个名,拿到证一年多是家常便饭,主要是排队时间太长了.&lt;/p&gt;
+
+&lt;p&gt;报考前也逛了一下附近的驾校,知乎上,贴吧上一些帖子也琢磨了下,一般驾校分快慢班,快班的意思就是广州练车可能就到湖南去考试,快班自然价格要贵一些，包括了长途的交通费用，还有一个就是手动档和自动档,一般都学习手动档,学费便宜一些,另外可以驾驶自动档的车型。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>xposed初探</title>
+      <link>http://farwmarth.com/post/xposed%E5%88%9D%E6%8E%A2/</link>
+      <pubDate>Fri, 22 Apr 2016 19:10:39 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/xposed%E5%88%9D%E6%8E%A2/</guid>
+      <description>&lt;h2 id=&#34;xposed-概念&#34;&gt;xposed 概念&lt;/h2&gt;
+
+&lt;p&gt;用一句话概念其牛b之处就是:&lt;code&gt;可以hook到系统任意一个Java进程&lt;/code&gt;
+官方wiki: &lt;a href=&#34;https://github.com/rovo89/XposedBridge/wiki&#34;&gt;https://github.com/rovo89/XposedBridge/wiki&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rovo89/XposedInstaller&#34;&gt;XposedInstaller&lt;/a&gt;，Xposed安装器,管理,下载,禁用Xposed Module,需要root权限。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rovo89/Xposed&#34;&gt;Xposed&lt;/a&gt;，&lt;code&gt;zygote&lt;/code&gt;的修改版.xposed实现的核心.这个zygote会替换系统原生的zygote。XposedInstaller会将它放到&lt;code&gt;/system/bin&lt;/code&gt;目录下&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rovo89/XposedBridge&#34;&gt;XposedBridge&lt;/a&gt;。java部分,编译出来是一个XposedBridge.jar包,写&lt;code&gt;hook&lt;/code&gt;模块时使用.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rovo89/XposedTools&#34;&gt;XposedTools&lt;/a&gt;。帮助我们编译Xposed和XposedBridge。&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>lua数据序列化的选择</title>
+      <link>http://farwmarth.com/post/lua%E6%95%B0%E6%8D%AE%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E9%80%89%E6%8B%A9/</link>
+      <pubDate>Wed, 20 Apr 2016 19:10:39 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/lua%E6%95%B0%E6%8D%AE%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
+      <description>&lt;p&gt;在寻找lua的json库时并没有找到太如意的方案.都是年久失修的库.
++ DKJSON 2.1 &lt;a href=&#34;http://dkolf.de/src/dkjson-lua.fsl/home&#34;&gt;http://dkolf.de/src/dkjson-lua.fsl/home&lt;/a&gt;
++ Lua YAJL 2.0 &lt;a href=&#34;https://github.com/brimworks/lua-yajl&#34;&gt;https://github.com/brimworks/lua-yajl&lt;/a&gt;
++ Lua CSJON 2.0.0 &lt;a href=&#34;http://www.kyne.com.au/~mark/software/lua-cjson.php&#34;&gt;http://www.kyne.com.au/~mark/software/lua-cjson.php&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.kyne.com.au/~mark/software/lua-json-performance.html&#34;&gt;http://www.kyne.com.au/~mark/software/lua-json-performance.html&lt;/a&gt;
+最高选择了把cjson整合到项目 中&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>redis初探</title>
+      <link>http://farwmarth.com/post/redis%E5%88%9D%E6%8E%A2/</link>
+      <pubDate>Sun, 10 Apr 2016 19:10:39 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/redis%E5%88%9D%E6%8E%A2/</guid>
+      <description>&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://redis.io/&#34;&gt;http://redis.io/&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#安装&lt;/span&gt;
+brew install redis-server
+&lt;span style=&#34;color:#75715e&#34;&gt;#启动&lt;/span&gt;
+redis-server
+&lt;span style=&#34;color:#75715e&#34;&gt;#附带config&lt;/span&gt;
+redis-server /path/to/redis.conf
+&lt;span style=&#34;color:#75715e&#34;&gt;#检查版本&lt;/span&gt;
+redis-server --version
+&lt;span style=&#34;color:#75715e&#34;&gt;#检查是否成功&lt;/span&gt;
+redis-cli
+ping PONG
+&lt;span style=&#34;color:#75715e&#34;&gt;#关闭&lt;/span&gt;
+redis-cli shutdown&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>服务器的一次调优</title>
+      <link>http://farwmarth.com/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E4%B8%80%E6%AC%A1%E8%B0%83%E4%BC%98/</link>
+      <pubDate>Mon, 28 Mar 2016 20:29:05 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E4%B8%80%E6%AC%A1%E8%B0%83%E4%BC%98/</guid>
+      <description>&lt;p&gt;&lt;font color=&#34;red&#34;&gt;update 2016-5-12 10:32  优化结构&lt;/font&gt;
+&lt;font color=&#34;red&#34;&gt;update 2016-5-5 16:30  skynet调试&lt;/font&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;历史遗留问题&#34;&gt;历史遗留问题&lt;/h2&gt;
+
+&lt;p&gt;这一项目的开发又接近尾声了,功能开发完毕,接下来就是运营方面的接入工作,还有就是服务器性能性的调优了.
+之前服务器一直存在两个比较严重的问题,一个是加载离线玩家.另外一个则是静态数据未共享,导致的服务器启动内存过高的问题.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Gradle 打包</title>
+      <link>http://farwmarth.com/post/gradle/</link>
+      <pubDate>Sun, 13 Mar 2016 20:26:02 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/gradle/</guid>
+      <description>&lt;h2 id=&#34;什么是gradle&#34;&gt;什么是Gradle？&lt;/h2&gt;
+
+&lt;p&gt;Gradle是一种依赖管理工具，基于Groovy语言，面向Java应用为主，它抛弃了基于XML的各种繁琐配置，取而代之的是一种基于Groovy的内部领域特定（DSL）语言&lt;/p&gt;
+
+&lt;h2 id=&#34;安装gradle&#34;&gt;安装Gradle&lt;/h2&gt;
+
+&lt;p&gt;Android Studio 默认下载目录,如果下载太慢可以手动从官网下载放到对应目录&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Mac&lt;/strong&gt;: /Users/&amp;lt;用户名&amp;gt;/.gradle/wrapper/dists** 目录&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Win&lt;/strong&gt;: C:\Documents and Settings&amp;lt;用户名&amp;gt;.gradle\wrapper\dists 目录&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>mysql 备忘录</title>
+      <link>http://farwmarth.com/post/mysql%E5%A4%87%E5%BF%98/</link>
+      <pubDate>Thu, 25 Feb 2016 19:10:39 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/mysql%E5%A4%87%E5%BF%98/</guid>
+      <description>&lt;h2 id=&#34;基础&#34;&gt;基础&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;安装 mysql&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#server&lt;/span&gt;
+sudo apt-get install mysql-server
+&lt;span style=&#34;color:#75715e&#34;&gt;#server dev&lt;/span&gt;
+sudo apt-get install libmysqld-dev
+&lt;span style=&#34;color:#75715e&#34;&gt;#client&lt;/span&gt;
+sudo apt-get install mysql-client
+&lt;span style=&#34;color:#75715e&#34;&gt;#client dev&lt;/span&gt;
+sudo apt-get install libmysqlclient-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>倒戈又如何</title>
+      <link>http://farwmarth.com/post/%E5%80%92%E6%88%88%E5%8F%88%E5%A6%82%E4%BD%95/</link>
+      <pubDate>Thu, 25 Feb 2016 14:13:22 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E5%80%92%E6%88%88%E5%8F%88%E5%A6%82%E4%BD%95/</guid>
+      <description>&lt;h2 id=&#34;倒戈&#34;&gt;倒戈&lt;/h2&gt;
+
+&lt;p&gt;七月底的时候，开发了一年的游戏最终还是倒戈了,技术团队以整队收编的方式到了现在这家公司.
+掰着脚趾头数一数,失败的项目快凑成一打了.
+反观这几年这些项目.只能说成功的游戏都是一个模样,赚得盆满钵满.失败的原因却各不相同.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>一个游戏的生长过程</title>
+      <link>http://farwmarth.com/post/%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F%E7%9A%84%E7%94%9F%E9%95%BF%E8%BF%87%E7%A8%8B/</link>
+      <pubDate>Tue, 23 Feb 2016 20:26:02 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F%E7%9A%84%E7%94%9F%E9%95%BF%E8%BF%87%E7%A8%8B/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;每次都是挖了一个巨大无比的坑,填了好久都填不完.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;概念&#34;&gt;概念&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;IP&lt;/strong&gt; : (Intellectual Property),知识产权,在游戏圈可以理解为拥有知识产权的一方,授权游戏开发商使用其主题素材&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SP&lt;/strong&gt; : (Service Provider)渠道商:相当于电影院(电影院线),电影院是直接面向观众的,各电影院线上映电影给观众看,渠道商则是上架游戏应用给用户下载玩.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CP&lt;/strong&gt; : (Content Provider)游戏开发商: 相当于电影制片方,聘请导演、演员、剧组人员进行电影的拍摄和制作,同理,游戏开发商聘请策划,程序,美术,开发团队进行游戏的开发和制作.开发商的核心竞争力,就是产品本身,产品做的越牛逼,开发商就越牛逼.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;游戏运营商(发行商)&lt;/strong&gt; : 相当于电影发行公司,进行电影的发行、销售、经营、推广,其实这个跟牌照也有关,因为在我朝面向群众的文化制品是管制品,不是什么阿猫阿狗拍个电影都能进电影院给观众传递不正确价值观的,于是就有牌照(电影发行经营许可证),制片方制作的电影必须通过有牌照的电影发行公司发行.同理在端游上也有牌照(文网文),端游审查、备案都需要通过拥有牌照的游戏发行商,而手游相对而言没有端游审查严格,手游发行商更多的作用是做市场营销、上线运营、渠道对接的工作,这些职能不是所有游戏开发商或开发团队都具备的.运营(发行)商的核心竞争力,是钱,是推广实力以及渠道关系.榜上有名的那些游戏,除了腾讯系以外.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;渠道&lt;/strong&gt; : 是直接面对用户的,用户可从渠道下载游戏玩.渠道的核心竞争力(仅针对手游)是用户数量和质量&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;代理商&lt;/strong&gt; : 发行商的一种,属于分包发行商,从总包手中取得某个地区的发行权,并在该区域内制定销售策略并组织销售.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>kids</title>
+      <link>http://farwmarth.com/post/kids/</link>
+      <pubDate>Thu, 11 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/kids/</guid>
+      <description>&lt;p&gt;一直以来对于小孩子处于一种敬而远之的状态。即使自己也是从熊孩子进化过来。今天就来说说各种小孩子的故事吧。&lt;/p&gt;
+
+&lt;h2 id=&#34;我的熊孩子时代&#34;&gt;我的熊孩子时代&lt;/h2&gt;
+
+&lt;p&gt;掏鸟蛋,捕鱼,偷板栗,瓜果,这些应该是农村里我们那个时候经常干的事情了,特别是偷别人家瓜果的时候,那种兴奋和紧张感现在想起来还觉得可笑。
+怎么说偷这个东西呢，从行为上来讲肯定是不对的,但是作为一个孩子,如果自家又没有这个东西,难免会极度地艳羡.
+印象比较深的是有一年夏天，和邻居的小伙伴去偷别人家的西瓜。
+放学路过的时候已经踩过点,谁家的瓜地里瓜特别多,个头特大。夏天正午的时候太阳酷热无比，大人们一般在睡午觉，我和小伙伴两个人蹑手蹑脚地走在小山窝的水稻田小路上，走几步四周张望，生怕有个大人突然出现把我们逮个正着。确认视野内没有人之后我们开始行动了，我负责放哨，邻居比我年纪稍长的小伙伴负责摘瓜，偷瓜的过程没有多少考究，他花了两三秒钏选好了一个合适的瓜，考虑到瓜太大太显眼，而且又不好搬运，就挑了一个篮球大小的。摘好递给了我，看着手中的瓜心里正扑通扑通直跳，刚松一口气正准备提着战果离开的离开的时候，发现山窝里有一个人影拿着锄头出现了。我和小伙伴对看了一眼，慌忙地把瓜往水渠里一扔，卯足了劲撒腿就跑，回头看了一眼。只见那个人影也开始加速，骂骂咧咧的声音随即而来，我们被吓坏了，这如果被逮到了送家长晚上又没有好果子吃了，紧迫之下我们俩开始往山上跑，因为穿着短衣短裤跑的速度又快，松枝和杂草很快在脚上画上红色的印子。可是我们顾不了那么多，沿着山脉一直跑，根本不敢停下来。跑累之后，终于没有听见骂声了。坐在山顶上歇息，回想着刚才的事情还是心有悸然。我想，那次应该是长这么大以来跑得最快的一次了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>仓促的战斗模型设计</title>
+      <link>http://farwmarth.com/post/%E4%BB%93%E4%BF%83%E7%9A%84%E6%88%98%E6%96%97%E6%A8%A1%E5%9E%8B%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Fri, 29 Jan 2016 11:09:35 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E4%BB%93%E4%BF%83%E7%9A%84%E6%88%98%E6%96%97%E6%A8%A1%E5%9E%8B%E8%AE%BE%E8%AE%A1/</guid>
+      <description>&lt;h2 id=&#34;设计思路&#34;&gt;设计思路&lt;/h2&gt;
+
+&lt;p&gt;新游戏开发又接近收尾的工作,记录一下这几个月开发的一些想法.
+服务器设计延续了上一个游戏的基础结构.
+由于前期demo版本开发周期很短,两周时间要一个战斗版本,所以还是遗留了一些如搅屎棍般的缺陷在里面.
+&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/herosserver.png&#34; alt=&#34; heros服务器设计考量&#34; /&gt;
+上图就是基于初期战斗的设计思路.
+基本思路即了解概念,梳理需求中的疑惑,再来进行代码重构和设计&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>谁点谁怀孕之代码解析</title>
+      <link>http://farwmarth.com/post/%E8%B0%81%E7%82%B9%E8%B0%81%E6%80%80%E5%AD%95%E4%B9%8B%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90/</link>
+      <pubDate>Fri, 22 Jan 2016 17:41:51 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E8%B0%81%E7%82%B9%E8%B0%81%E6%80%80%E5%AD%95%E4%B9%8B%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90/</guid>
+      <description>&lt;p&gt;最近又发现有新的崩溃代码了,打开页面,内存就会被榨干.回想之前也有过特殊字符使iphone白屏的情况.收集一下玩玩.&lt;/p&gt;
+
+&lt;h2 id=&#34;iphone调到1970年变砖&#34;&gt;iPhone调到1970年变砖&lt;/h2&gt;
+
+&lt;h4 id=&#34;触发bug条件与表现&#34;&gt;触发bug条件与表现&lt;/h4&gt;
+
+&lt;p&gt;满足以下条件，『时间回归』bug被触发：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;系统版本：iOS 8.0 ~ iOS 9.3 beta 3&lt;/li&gt;
+&lt;li&gt;硬件设备：搭载64位处理器的设备（即处理器为A7~A9X的设备）&lt;/li&gt;
+&lt;li&gt;进入『设置』-『通用』-『时间与日期』，关闭『自动设置』，并将时间修改为1970年1月1日，分秒任意.&lt;/li&gt;
+&lt;li&gt;修改时间后，需要重启设备。&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>markdown简明语法</title>
+      <link>http://farwmarth.com/post/markdown%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Thu, 14 Jan 2016 14:55:10 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/markdown%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95/</guid>
+      <description>&lt;h2 id=&#34;简明语法&#34;&gt;简明语法&lt;/h2&gt;
+
+&lt;h3 id=&#34;基本符号&#34;&gt;基本符号&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;*,-,+&lt;/code&gt; 3个符号效果都一样，这3个符号被称为 Markdown符号&lt;/li&gt;
+&lt;li&gt;空白行表示另起一个段落&lt;/li&gt;
+&lt;li&gt;`是表示inline代码，tab是用来标记 代码段，分别对应html的code，pre标签&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;标题&#34;&gt;标题&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;标题 &lt;code&gt;##&lt;/code&gt;生成h1-h6&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Kindle不完全指南</title>
+      <link>http://farwmarth.com/post/kindle%E4%B8%8D%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Wed, 13 Jan 2016 17:32:42 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/kindle%E4%B8%8D%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</guid>
+      <description>&lt;p&gt;资料整理来自(&lt;a href=&#34;http://kindlefere.com&#34;&gt;http://kindlefere.com&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h2 id=&#34;1-推送&#34;&gt;1. 推送&lt;/h2&gt;
+
+&lt;h3 id=&#34;1-邮件推送&#34;&gt;1. 邮件推送&lt;/h3&gt;
+
+&lt;h4 id=&#34;1-基础知识&#34;&gt;1. 基础知识&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;1 美亚kindle管理:https://www.amazon.com/mn/dcw/myx.html/ref=kinw_myk_redirect#/home/settings/payment
+2 中亚kindle管理:https://www.amazon.cn/mn/dcw/myx.html/ref=kinw_myk_redirect#/home/settings/payment&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&#34;2-页面设置&#34;&gt;2. 页面设置&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;为 Kindle 设备绑定亚马逊账号
+点击 Kindle 屏幕右上角的三条横杆菜单图标，在弹出的菜单中点选设置，选取自己的Wifi热点将Kindle连接上WiFi,然后点击“注册”项填入第一步注册（或已有）的亚马逊帐号&lt;/li&gt;
+&lt;li&gt;获取接收推送的邮箱地址
+&lt;img src=&#34;http://ww1.sinaimg.cn/large/4b5a1116gw1exh613cdz4j20jg0g4gor.jpg&#34; alt=&#34;我的头像&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;添加推送邮箱地址到已认可邮箱列表
+需要在【设置】页面底部找到“已认可的发件人电子邮箱列表”这一项，点击“添加认可的电子邮箱”把第一步申请的邮箱地址（或已有邮箱地址）添加进去。
+&lt;img src=&#34;http://ww2.sinaimg.cn/large/4b5a1116gw1exh69h4fsxj20jg0akgnf.jpg&#34; alt=&#34;我的头像&#34; /&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>wordpress迁移到hexo</title>
+      <link>http://farwmarth.com/post/wordpress%E8%BF%81%E7%A7%BB%E5%88%B0hexo/</link>
+      <pubDate>Wed, 13 Jan 2016 16:21:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/wordpress%E8%BF%81%E7%A7%BB%E5%88%B0hexo/</guid>
+      <description>&lt;h2 id=&#34;引用&#34;&gt;引用&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;(&lt;a href=&#34;https://hexo.io/zh-cn/docs/setup&#34;&gt;官方帮助&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;依赖&#34;&gt;依赖&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#安装hexo&lt;/span&gt;
+npm install hexo  -g
+&lt;span style=&#34;color:#75715e&#34;&gt;#安装hexo命令行模块&lt;/span&gt;
+npm install hexo-cli -g
+&lt;span style=&#34;color:#75715e&#34;&gt;#创建blog目录&lt;/span&gt;
+hexo init blog
+cd blog
+&lt;span style=&#34;color:#75715e&#34;&gt;#初始化&lt;/span&gt;
+npm install
+
+&lt;span style=&#34;color:#75715e&#34;&gt;#安装server插件&lt;/span&gt;
+npm install hexo-server --save
+&lt;span style=&#34;color:#75715e&#34;&gt;#git插件&lt;/span&gt;
+npm install hexo-deployer-git --save
+&lt;span style=&#34;color:#75715e&#34;&gt;#feed&lt;/span&gt;
+npm install hexo-generator-feed@1.0.2 --save
+&lt;span style=&#34;color:#75715e&#34;&gt;#sitemap&lt;/span&gt;
+npm install hexo-generator-sitemap@1.0.1 --save&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>给skynet加上curl模块</title>
+      <link>http://farwmarth.com/post/%E7%BB%99skynet%E5%8A%A0%E4%B8%8Acurl%E6%A8%A1%E5%9D%97/</link>
+      <pubDate>Thu, 02 Jul 2015 16:03:44 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E7%BB%99skynet%E5%8A%A0%E4%B8%8Acurl%E6%A8%A1%E5%9D%97/</guid>
+      <description>&lt;p&gt;&amp;nbsp;&amp;nbsp;现在项目里用的是早期的skynet版本,一直不支持http的get,post. 充值与后台交互方式都是采用socket的方式。大部分需求都尽量避开这一块，最近策划又提了个需求,关服开服状态要反应到客户端。这个项目服务器列表是直接是一个静态文件放在web容器中.思路很简单,用jsp写个服务来修改服务器状态(这里应该做安全检验),各服务器开关服，或者服务器崩溃时将状态上报到web服务上. 关键就在这个skynet的http上.&lt;p&gt;&lt;/p&gt;
+&amp;nbsp;&amp;nbsp;尝试用skynet的socket来模拟http请求,一直处于阻塞状态。没有去细究. 然后从github找了个luacurl库 : &lt;a href=&#34;https://github.com/Lua-cURL/Lua-cURLv3&#34; title=&#34;https://github.com/Lua-cURL/Lua-cURLv3&#34;&gt;https://github.com/Lua-cURL/Lua-cURLv3&lt;/a&gt;&amp;nbsp; , 然后把依赖库&lt;a href=&#34;http://curl.haxx.se/download.html&#34; title=&#34;http://curl.haxx.se/download.html&#34;&gt;http://curl.haxx.se/download.html&lt;/a&gt; 也down下来.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>翻翻旧货</title>
+      <link>http://farwmarth.com/post/%E7%BF%BB%E7%BF%BB%E6%97%A7%E8%B4%A7/</link>
+      <pubDate>Thu, 23 Apr 2015 23:29:33 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E7%BF%BB%E7%BF%BB%E6%97%A7%E8%B4%A7/</guid>
+      <description>&lt;p&gt;这两个月代码产出量比以往都要高，可能是兴趣所致,总喜欢折腾一些工作外的想法.&lt;/p&gt;
+
+&lt;p&gt;二月份的时候断断续续花了一周的时间写了fei.py这个自动化注册的东西。也当是python的一次练手.&lt;/p&gt;
+
+&lt;p&gt;说来也巧,写这个东西起因是因为在博客上看到&amp;rdquo;轻松筹&amp;rdquo;发起了刷脸送parallels desktop 正版激活码的活动.其实就是在&amp;rdquo;轻松筹&amp;rdquo;上发起一个活动,让好友来支持,这样就可以得到一套正版的激活码.但是注册这个网站不是一般的邮箱注册,而是手机号注册.神奇的网路上一搜索，果然有专门提供一次性注册得到验证码的服务,筛选了一下就用了飞Q(&lt;a href=&#34;http://sms.xudan123.com/api.html&#34; title=&#34;http://sms.xudan123.com/api.html&#34;&gt;http://sms.xudan123.com/api.html&lt;/a&gt;)这个服务,代码分为三个部分,注册,创建支持项目,确认支持.期间也遇到不少问题,调用&amp;rdquo;轻松筹&amp;rdquo;短信接口太频繁被封ip,然后就写了个代理筛选的模块.需要BeautifulSoup模块的支持.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>萌芽</title>
+      <link>http://farwmarth.com/post/%E8%90%8C%E8%8A%BD/</link>
+      <pubDate>Tue, 21 Apr 2015 18:26:16 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E8%90%8C%E8%8A%BD/</guid>
+      <description>&lt;h2 id=&#34;再开始写点东西&#34;&gt;再开始写点东西&lt;/h2&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; 话说我为什么又开始写点东西了? 一是心血来潮,二是发现大半年都在一种半漂浮的状态,没有一些真正的思考.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; 整理了下旧时写的一些博文,用四个字来形容是:其差无比,要么是篇幅太短,要么结构缭乱,要么是一些现在看来一文不值的转载,万物大概都遵循了这个法则:随着时间的推演,总会产生一些变化.当时的心境和现在也是大相径庭.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; 我记得第一篇博文应该是在刚参加工作的时候,字里行间尽是刚工作的困惑与新奇感.思绪也像脱缰的野马,完全没有逻辑,而且写完后从来不会再审阅,就像twitter上有人发过一句话一样:写过后的文章就像拉过的屎,不忍回头再看.现在倒是养成了一点小习惯,不管文章写得多烂,还是会自己再去读一读,改改错别字和措辞,估且算是一种进步吧.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>这一年看的电影</title>
+      <link>http://farwmarth.com/post/%E8%BF%99%E4%B8%80%E5%B9%B4%E7%9C%8B%E7%9A%84%E7%94%B5%E5%BD%B1/</link>
+      <pubDate>Mon, 29 Dec 2014 17:23:48 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E8%BF%99%E4%B8%80%E5%B9%B4%E7%9C%8B%E7%9A%84%E7%94%B5%E5%BD%B1/</guid>
+      <description>&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;font color=&#34;#ff0000&#34;&gt;少年时代(boyhood)&lt;/font&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; 此片时长166分钟,看的时候自备干粮。整个故事讲的是一个男孩从6岁到18岁的成长过程,父母在6岁的时候就离婚，母亲独自抚养姐弟俩，只有每年夏天的时候会和父亲有段时间相处。母亲为了他们更好的生活，一边读求学一边照顾他们。后来嫁了一个酒鬼老师,一个社区警察,最后都以离婚告终.整个故事并没有太多波澜,平淡地描述了成长叛逆的过程,年少时对外部世界的懵懂,对自我认知的探索,对未知旅程的激动而紧张。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>游戏数值修改器</title>
+      <link>http://farwmarth.com/post/%E6%B8%B8%E6%88%8F%E6%95%B0%E5%80%BC%E4%BF%AE%E6%94%B9%E5%99%A8/</link>
+      <pubDate>Fri, 05 Dec 2014 14:21:40 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E6%B8%B8%E6%88%8F%E6%95%B0%E5%80%BC%E4%BF%AE%E6%94%B9%E5%99%A8/</guid>
+      <description>&lt;h2 id=&#34;windows&#34;&gt;Windows:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;金山游侠:&lt;/li&gt;
+&lt;li&gt;变速齿轮:&lt;/li&gt;
+&lt;li&gt;flash修改大师 :&lt;a href=&#34;http://www.cordyblog.cn/&#34; title=&#34;http://www.cordyblog.cn/&#34;&gt;http://www.cordyblog.cn/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>广告拦截指南</title>
+      <link>http://farwmarth.com/post/%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Thu, 04 Dec 2014 15:18:21 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E6%8C%87%E5%8D%97/</guid>
+      <description>&lt;p&gt;&lt;span style=&#34;color: #ff0000;&#34;&gt;
+update:2016-09-14 20:13 更新pac,ADfree&lt;br /&gt;
+update:2014-12-04 10:42 更新插件&lt;br /&gt;
+&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;一-windows&#34;&gt;一 windows :&lt;/h2&gt;
+
+&lt;h3 id=&#34;1-chrome插件&#34;&gt;1. chrome插件:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.adtchrome.com/&#34; title=&#34;http://www.adtchrome.com/&#34;&gt;广告终结者&lt;/a&gt; (好像是抄袭的adblock )&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/%E8%A7%86%E9%A2%91%E5%B9%BF%E5%91%8A%E7%BB%88%E7%BB%93%E8%80%85/jlnekjcjlfbocaonidkndcobheipmmhj?utm_source=chrome-app-launcher-info-dialog&#34;&gt;视频广告终结者&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://adblockplus.org/zh_CN/chrome&#34; title=&#34;https://adblockplus.org/zh_CN/chrome&#34;&gt;adblock&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb?utm_source=chrome-app-launcher-info-dialog&#34;&gt;adblock plus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/iaebjamgfeimndfmoaddgocnhddjhgfd?utm_source=chrome-app-launcher-info-dialog&#34;&gt;小猪广告杀手&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/%E5%B0%8F%E9%BB%84%E7%93%9C%E8%A7%86%E9%A2%91%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA/goppkfbpdcohaknmoabhnfclcepcjlda?utm_source=chrome-app-launcher-info-dialog&#34;&gt;小黄瓜视频广告拦截&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/bgnkhhnnamicmpeenaelnjfhikgbkllg?utm_source=chrome-app-launcher-info-dialog&#34;&gt;&lt;del&gt;Adguard 广告拦截器&lt;/del&gt; &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/adfreeplayeronline/gnpjhfjhgfkohgdklomfbjmnchpenngp&#34;&gt;ADfree.Player.Online &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>翻墙有术</title>
+      <link>http://farwmarth.com/post/%E7%BF%BB%E5%A2%99%E6%9C%89%E6%9C%AF/</link>
+      <pubDate>Fri, 28 Nov 2014 18:11:18 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E7%BF%BB%E5%A2%99%E6%9C%89%E6%9C%AF/</guid>
+      <description>&lt;p&gt;&lt;span style=&#34;color: #ff0000;&#34;&gt;
+update:2016-09-14 20:13 更新pac&lt;br /&gt;
+update:2014-12-04 10:42&lt;br /&gt;
+update:2014-4-21 17:08 更新chrome插件
+&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;在天朝,难免要翻翻墙，看看墙外的世界.&lt;/p&gt;
+
+&lt;p&gt;网盘里上传了墙外需要的一些应用instagram,facebook,twitter,youtube,google+还有一些翻墙道具,国外的不用翻墙的商店,现在大都是android应用 .&lt;/p&gt;
+
+&lt;p&gt;百度,115,360,乐视网盘,金山快盘都有敏感字限制,有些应用上传不了,所以找了个无限制的网盘:&lt;a href=&#34;https://jianguoyun.com/p/DZwoJSEQ8MfmBRiUpgo&#34; title=&#34;https://jianguoyun.com/p/DZwoJSEQ8MfmBRiUpgo&#34;&gt;https://jianguoyun.com/p/DZwoJSEQ8MfmBRiUpgo&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ubuntu 终端终结者</title>
+      <link>http://farwmarth.com/post/-ubuntu-%E7%BB%88%E7%AB%AF%E7%BB%88%E7%BB%93%E8%80%85/</link>
+      <pubDate>Thu, 27 Nov 2014 14:49:16 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/-ubuntu-%E7%BB%88%E7%AB%AF%E7%BB%88%E7%BB%93%E8%80%85/</guid>
+      <description>&lt;p&gt;在linux中经常要在多个终端界面间切换，于是就找了下终端管理的方法。&lt;/p&gt;
+
+&lt;h2 id=&#34;一-screen命令&#34;&gt;&lt;strong&gt;一 screen命令&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;screen命令是ubuntu自带的.查看screen是否安装可以用如下命令:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;root@tivf06 ~&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# rpm -qa|grep screen&lt;/span&gt;
+xscreensaver-4.18-5.rhel4.11
+**screen-4.0.2-5**&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>游戏SDK接入的一些总结</title>
+      <link>http://farwmarth.com/post/%E6%B8%B8%E6%88%8Fsdk%E6%8E%A5%E5%85%A5%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Mon, 20 Oct 2014 17:01:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E6%B8%B8%E6%88%8Fsdk%E6%8E%A5%E5%85%A5%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93/</guid>
+      <description>&lt;p&gt;&lt;font color=&#34;red&#34;&gt; update: 2016-04-23     ysdk  &lt;/font&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;概念&#34;&gt;概念&lt;/h2&gt;
+
+&lt;p&gt;首先来澄清两个概念:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CP&lt;/strong&gt;:Content Provider,中文翻译为内容提供商。通常指制作厂商&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;游戏sdk&lt;/strong&gt;: SDK是手游渠道提供的、集成了用户登录、充值通道、社区功能、社交分享功能、数据后台统计功能的一个功能模块&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>代码加密,渠道打包过程</title>
+      <link>http://farwmarth.com/post/%E4%BB%A3%E7%A0%81%E5%8A%A0%E5%AF%86%E6%B8%A0%E9%81%93%E6%89%93%E5%8C%85%E8%BF%87%E7%A8%8B/</link>
+      <pubDate>Fri, 10 Oct 2014 10:34:30 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E4%BB%A3%E7%A0%81%E5%8A%A0%E5%AF%86%E6%B8%A0%E9%81%93%E6%89%93%E5%8C%85%E8%BF%87%E7%A8%8B/</guid>
+      <description>&lt;p&gt;前段时间就计划着把项目里用到的一些通用的东西整理出来，正好最近项目不是太忙，就整理一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>一套键鼠的忧愁</title>
+      <link>http://farwmarth.com/post/%E4%B8%80%E5%A5%97%E9%94%AE%E9%BC%A0%E7%9A%84%E5%BF%A7%E6%84%81/</link>
+      <pubDate>Thu, 09 Oct 2014 17:56:02 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E4%B8%80%E5%A5%97%E9%94%AE%E9%BC%A0%E7%9A%84%E5%BF%A7%E6%84%81/</guid>
+      <description>&lt;p&gt;最近终于从虚拟机的囧境里走了出来，申请了一台macMini在win和mac之间切换开发.两台主机键鼠频繁切换真是件蛋疼的事情，不过还好有局域网键鼠控制工具。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小工具之AppInfo</title>
+      <link>http://farwmarth.com/post/%E5%B0%8F%E5%B7%A5%E5%85%B7%E4%B9%8Bappinfo/</link>
+      <pubDate>Mon, 29 Sep 2014 14:58:22 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E5%B0%8F%E5%B7%A5%E5%85%B7%E4%B9%8Bappinfo/</guid>
+      <description>&lt;p&gt;因为经常打包需要查看apk或者是ipa中的版本信息,包名信息就写了这么个小工具，要跨平台就选择了java来写.&lt;/p&gt;
+
+&lt;p&gt;功能非常简单,拖放apk到界面就会把AndroidManifest.xml内容解析出来,拖放ipa到界面会把Info.plist解析出来&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>libgdx字体渲染选择方案</title>
+      <link>http://farwmarth.com/post/libgdx%E5%AD%97%E4%BD%93%E6%B8%B2%E6%9F%93%E9%80%89%E6%8B%A9%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Fri, 28 Feb 2014 13:42:06 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/libgdx%E5%AD%97%E4%BD%93%E6%B8%B2%E6%9F%93%E9%80%89%E6%8B%A9%E6%96%B9%E6%A1%88/</guid>
+      <description>&lt;p&gt;最近在优化一下游戏中内的字体渲染方案。
+找了下资料发现渲染方案就两种。一种是使用ttf，动态去生成纹理渲染.第二种是采用位图字体.两种方案各有利弊.第一种方案性能损耗比较大,在libgdx的FreeTypeFontGenerator中会每次都重新生成纹理。如果界面上Label数量增多,&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>虚拟货币二三事</title>
+      <link>http://farwmarth.com/post/%E8%99%9A%E6%8B%9F%E8%B4%A7%E5%B8%81%E4%BA%8C%E4%B8%89%E4%BA%8B/</link>
+      <pubDate>Fri, 28 Feb 2014 13:37:57 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E8%99%9A%E6%8B%9F%E8%B4%A7%E5%B8%81%E4%BA%8C%E4%B8%89%E4%BA%8B/</guid>
+      <description>&lt;h3 id=&#34;比特币&#34;&gt;比特币&lt;/h3&gt;
+
+&lt;p&gt;最近比特币炒得比较火,最开始听说这种虚拟货币是从国外的极客网站上看到的,流传于极客之间的玩物.十一月初的时候还是对人民币汇率还是1000元的样子。不到一个月，等到媒体大肆报道的时候已经翻了六七倍。出于好奇和装b的心理于是查了下维基百科.原理如下 ：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>曲线救国之罗技蓝牙键盘</title>
+      <link>http://farwmarth.com/post/%E6%9B%B2%E7%BA%BF%E6%95%91%E5%9B%BD%E4%B9%8B%E7%BD%97%E6%8A%80%E8%93%9D%E7%89%99%E9%94%AE%E7%9B%98/</link>
+      <pubDate>Fri, 28 Feb 2014 13:35:37 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E6%9B%B2%E7%BA%BF%E6%95%91%E5%9B%BD%E4%B9%8B%E7%BD%97%E6%8A%80%E8%93%9D%E7%89%99%E9%94%AE%E7%9B%98/</guid>
+      <description>&lt;p&gt;双十一的时候手一抖秒了个罗技的蓝牙键盘，买来配ipad来写写博客.官网上报价499,秒杀价99。昨天到货后迫不及待地把玩一番，心想着坑爹的ipad输入终于有个好伴侣了。下班回家把ipad蓝牙打开，死活搜索不到这个键盘设备。朕以为哪里设置有问题，各种百度各种google无果，好吧，既然ipad连接不上,那就试下笔记本吧，尼玛,dell笔记本也是各种连不上，蓝牙驱动重装n遍还是无果啊。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>回归</title>
+      <link>http://farwmarth.com/post/%E5%9B%9E%E5%BD%92/</link>
+      <pubDate>Fri, 28 Feb 2014 13:31:56 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E5%9B%9E%E5%BD%92/</guid>
+      <description>&lt;h4 id=&#34;休了个好长一个假&#34;&gt;休了个好长一个假&lt;/h4&gt;
+
+&lt;p&gt;加上国庆的话,休息了二十来天的样子,又开始了忙碌的日子.这二十来天不上班的日子节奏放慢不少,国庆回了趟女朋友家,呼吸了一星期的新鲜空气.10号辞职后就开始不急不忙地找工作.辞职之前盘算着去厦门玩一个礼拜,真的辞了后又懒成一陀了,加上小锅又要上班,一个人出游似乎有点寂寞,于是一个周的时间又宅在家里.算下来应该是第三次找工作了,本以为是比较轻松的事情.投了简历一星期才一面试电话,还不是所做的行业.这倒让我挺吃惊了的.后面一周的时间面了几个不太相关的职位.活倒是轻松不少,双休不加班,工资也比现在的要好.但是总感觉做app以后不知道怎么发展,不继续做游戏感觉浪费了这两年的技能.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>windows常用bat命令</title>
+      <link>http://farwmarth.com/post/%E5%B8%B8%E7%94%A8bat%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Mon, 14 Oct 2013 17:07:28 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E5%B8%B8%E7%94%A8bat%E5%91%BD%E4%BB%A4/</guid>
+      <description>&lt;h2 id=&#34;完整脚本&#34;&gt;完整脚本&lt;/h2&gt;
+
+&lt;h3 id=&#34;pandoc-rst-to-markdown&#34;&gt;pandoc rst to markdown&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;set mddir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;md
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; /f &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tokens=*&amp;#34;&lt;/span&gt; %%i in &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;dir/s/b *.rst&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt;  pandoc -s -t rst --toc %%i -o %mddir%/%%~ni.md&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>养了几天喵</title>
+      <link>http://farwmarth.com/post/%E5%85%BB%E4%BA%86%E5%87%A0%E5%A4%A9%E5%96%B5/</link>
+      <pubDate>Fri, 11 Oct 2013 10:30:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E5%85%BB%E4%BA%86%E5%87%A0%E5%A4%A9%E5%96%B5/</guid>
+      <description>&lt;p&gt;以前家里养猫完全是放养状态.猫到处乱跑,饿了就回来吃饭,猫碗里要么是饭,要么是鱼骨头.一样长得肥肥壮壮还会抓老鼠.除了发情期很少听到猫叫,有些黑色的野猫更是神龙见首不见尾,很少能看清它的真容,经常是傍晚的时候一对眼就不见了.农村里的家猫基本作用是抓老鼠.养得也没那么骄贵.所以形态也和宠物猫有所不同,长得紧凑而彪悍.&lt;/p&gt;
+
+&lt;p&gt;昨天小锅跟我说她们公司门卫那里有3只小猫,想要抱回家.  下班回去的时候就看到一只2个月大小的小猫咪,蜷缩在客厅的长椅的角落里不出来.像是到了一个完全陌生的环境里的人,又没了小伙伴的陪伴那种落寞感让人看着心疼.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>清静了几天</title>
+      <link>http://farwmarth.com/post/%E6%B8%85%E9%9D%99%E4%BA%86%E5%87%A0%E5%A4%A9/</link>
+      <pubDate>Wed, 09 Oct 2013 20:50:32 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E6%B8%85%E9%9D%99%E4%BA%86%E5%87%A0%E5%A4%A9/</guid>
+      <description>&lt;h3 id=&#34;见家长&#34;&gt;见家长&lt;/h3&gt;
+
+&lt;p&gt;国庆难得长假，和女朋友回家见了见家长，不懂人情事故，没准备什么礼物，临时买的烟酒，买了些骨质增生的药给他爸，见面尴尬自不用说，特别是吃饭的时候，因为是语言不通，大部分时候都听他们在讲，和女朋友和她她妈打电话多了，大部分意思还是可以揣摩出来.一个劲地叫我吃菜，只能点头客气。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>几多良友</title>
+      <link>http://farwmarth.com/post/%E5%87%A0%E5%A4%9A%E8%89%AF%E5%8F%8B/</link>
+      <pubDate>Wed, 25 Sep 2013 22:48:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E5%87%A0%E5%A4%9A%E8%89%AF%E5%8F%8B/</guid>
+      <description>&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 仔细一想，我的大部分现在的好朋友都来自中学时期。当然每个时期身边都会有一些走得比较近的人，但说实话有些也无法称之为真正的朋友。中学时代交的朋友如此独特，也许是那个时候所处大环境一样,正在形成自己的观感，很多想法也不谋而同。&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 我有一个从幼儿园就认识的朋友。同班了5年.学习成绩上会比赛，一起玩，放假的时候会去他家那边的小溪流里抓螃蟹，他喜欢画画，有时候会画一些卡通人物送给我。把他听过的故事讲给我听，那些什么薛仁贵的故事我现在还记得。那个时候娱乐的东西很少，下课时间又很漫长,通常是两个小时，经常会爬到学校上围墙择一种叫”竹节虫”的玩意,然后收拾到书包里，放学的时候丢到家里的火堆里燃得噼里啪啦响，像放鞭炮一样，就是这样的无聊的活动我们也乐此不疲。还有一件事情印象比较深刻的是上二三年级的时候,他用一种红色的剪纸剪了只特别好看的纸老虎,那个年纪自然是见到新奇的东西就要抢的时候。我们那时候课桌是那种很长的两人共用的那种，然后他就在各个课桌上窜来窜去的,我在过道里不停地追,一不小心就碰到他的脚跟,结果可想而知,鼻血暗涌。然后我就被罚站抄课文。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>关于正版软件</title>
+      <link>http://farwmarth.com/post/%E5%85%B3%E4%BA%8E%E6%AD%A3%E7%89%88%E8%BD%AF%E4%BB%B6/</link>
+      <pubDate>Mon, 23 Sep 2013 16:21:41 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E5%85%B3%E4%BA%8E%E6%AD%A3%E7%89%88%E8%BD%AF%E4%BB%B6/</guid>
+      <description>&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 很少有人说去买一个正版的操作系统,或者付费去买一个只有十几个字符串的license.我们的概念里很少去正视软件这种劳动果实。有这种想法和基调的人大概有两种:一是大多数人没有去自己费尽心血去开发一个软件。不知道为了几行核心代码会多熬多少个通宵。二是因为囊中羞涩，有时一个正版软件得花几百美元甚至更多。我也是此等苦逼之人。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>食物印象</title>
+      <link>http://farwmarth.com/post/%E9%A3%9F%E7%89%A9%E5%8D%B0%E8%B1%A1/</link>
+      <pubDate>Sun, 22 Sep 2013 18:09:44 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E9%A3%9F%E7%89%A9%E5%8D%B0%E8%B1%A1/</guid>
+      <description>&lt;h2 id=&#34;早餐&#34;&gt;早餐&lt;/h2&gt;
+
+&lt;p&gt;在广州呆了两年多，没吃到啥好吃的东西，多数都会带些甜味而且又不放辣椒，对于无长期吃惯了辣椒的我来说是种折磨。虽然有不少湘菜馆，越总是吃不出读书时代那种小炒的味道。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>摄影入门</title>
+      <link>http://farwmarth.com/post/%E6%91%84%E5%BD%B1%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Mon, 16 Sep 2013 18:40:15 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E6%91%84%E5%BD%B1%E5%85%A5%E9%97%A8/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;摄影可以看作是绘画的一个缩影，共通的地方有构图，线条和层次感。所谓构图就是将点线面，色彩，明暗合理安排。
+摄影教程里的什么九宫格构图，对角线构图在特定的场景下拍摄会有很好的效果，但是不要拘泥于这个构图规则，选择自己感觉舒服的角度就可以了。
+摄影包括很多种，风光，人像，纪实，商业，建筑，静物，还有衍生出来的延时摄影。摄影里最重要的元素之一就是光线,不同的光强度和光的照射角度可以让照片产生风格迥异的效果。清晨和傍晚是光线比较柔软的时候。风光摄影要注重层次感。而人像摄影则要注重人物的神态和情绪。&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>摄影笔记 摘录</title>
+      <link>http://farwmarth.com/post/%E6%91%84%E5%BD%B1%E7%AC%94%E8%AE%B0-%E6%91%98%E5%BD%95/</link>
+      <pubDate>Mon, 16 Sep 2013 17:40:15 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E6%91%84%E5%BD%B1%E7%AC%94%E8%AE%B0-%E6%91%98%E5%BD%95/</guid>
+      <description>&lt;h2 id=&#34;一-相机分类&#34;&gt;一 相机分类:&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;一 按取景系统分 :&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;平视旁轴取景相机 (人眼与ccd感光器会有视差)&lt;br /&gt;
+&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/09/image8.png&#34; alt=&#34;image&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;单反(无视差)&lt;br /&gt;
+&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/09/image9.png&#34; alt=&#34;image&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>随地乱吐槽</title>
+      <link>http://farwmarth.com/post/%E9%9A%8F%E5%9C%B0%E4%B9%B1%E5%90%90%E6%A7%BD/</link>
+      <pubDate>Sat, 14 Sep 2013 13:02:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E9%9A%8F%E5%9C%B0%E4%B9%B1%E5%90%90%E6%A7%BD/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/08/20090901_492a8b90c69e2d830a8e7pKluQREBo9d.jpg&#34; alt=&#34;20090901_492a8b90c69e2d830a8e7pKluQREBo9d&#34; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;我的上帝,请赐予我宁静去接受我不能改变的一切，请赐予我勇气，去改变我所能改变的一切，并赐予我智慧，去分辨两者的不同.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>cocos2d-x 骨骼动画</title>
+      <link>http://farwmarth.com/post/cocos2d-x-%E9%AA%A8%E9%AA%BC%E5%8A%A8%E7%94%BB/</link>
+      <pubDate>Tue, 03 Sep 2013 20:35:02 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/cocos2d-x-%E9%AA%A8%E9%AA%BC%E5%8A%A8%E7%94%BB/</guid>
+      <description>&lt;h2 id=&#34;何谓骨骼动画&#34;&gt;何谓骨骼动画?&lt;/h2&gt;
+
+&lt;p&gt;骨骼动画包括两部分:蒙皮和系列相关联的骨头.在时间线上蒙皮会跟随骨骼的位置改变位置形成动画。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/09/image.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>抓抓包</title>
+      <link>http://farwmarth.com/post/%E6%8A%93%E6%8A%93%E5%8C%85/</link>
+      <pubDate>Fri, 23 Aug 2013 17:22:41 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E6%8A%93%E6%8A%93%E5%8C%85/</guid>
+      <description>&lt;h2 id=&#34;wpe-pro-http-wpepro-net&#34;&gt;&lt;a href=&#34;http://wpepro.net/&#34;&gt;WPE PRO&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;基于进程的抓包工具.强大的网络封包编辑器，wpe可以截取网络上的信息，修改封包数据，是外挂制作的常用工具&lt;/p&gt;
+
+&lt;p&gt;还没研究怎么弄外挂，先拿来看看软件的get,post数据.如七色追剧助手。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>a* 初探</title>
+      <link>http://farwmarth.com/post/a%E6%98%9F%E5%88%9D%E6%8E%A2/</link>
+      <pubDate>Fri, 16 Aug 2013 15:54:49 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/a%E6%98%9F%E5%88%9D%E6%8E%A2/</guid>
+      <description>&lt;p&gt;以前面试被问到过一次，后来没去做这一块的东西就没去理会了。准备辞职找下一个工作，捡起来看了下。&lt;br /&gt;
+   A*算法是一种在多节点网络上寻求最短路径的方法.属于启发式搜索的一种。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;先描述一下a星的几个基本概念.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;节点:A星寻路中会将搜索区域划分为一个个小单元。每个单元即一个节点，一般为方格.&lt;/li&gt;
+&lt;li&gt;开启列表:还未展开的节点列表&lt;/li&gt;
+&lt;li&gt;关闭列表:已经遍历过的节点列表&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>一次失败的逆向工程</title>
+      <link>http://farwmarth.com/post/%E4%B8%80%E6%AC%A1%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</link>
+      <pubDate>Wed, 07 Aug 2013 22:35:06 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E4%B8%80%E6%AC%A1%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</guid>
+      <description>&lt;p&gt;源起是要拿一下一个韩国游戏的图片资源,本以为挺容易的,google了一下, ipa也是压缩包格式,改成zip解压.然后把png图片拿出来，发现有一部分图片在windows上无法解析.继续google.原来是在编译打包到app的过程中，原有的png都被在最后加上了特定都数据段，这样从app里直接取出来图片既不能看，也不能用，所以需要工具来进行还原.网上python脚本一大堆，down下来还原了一下图片，确实可以恢复正常。但是这堆图片里面都是无关紧要的素材，想了想，应该是把图片弄成了自定义格式。在目录下果然发现了一个spr的目录，里面有一堆自定义扩展名叫f3spr的文件，用文本编辑器打开发现是个xml.有一段数据结构如下.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/08/image.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>android 删除未引用资源,优化字节码</title>
+      <link>http://farwmarth.com/post/android-%E5%88%A0%E9%99%A4%E6%9C%AA%E5%BC%95%E7%94%A8%E8%B5%84%E6%BA%90%E4%BC%98%E5%8C%96%E5%AD%97%E8%8A%82%E7%A0%81/</link>
+      <pubDate>Wed, 31 Jul 2013 17:09:51 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/android-%E5%88%A0%E9%99%A4%E6%9C%AA%E5%BC%95%E7%94%A8%E8%B5%84%E6%BA%90%E4%BC%98%E5%8C%96%E5%AD%97%E8%8A%82%E7%A0%81/</guid>
+      <description>&lt;h2 id=&#34;一-资源文件&#34;&gt;一 资源文件&lt;/h2&gt;
+
+&lt;p&gt;删除未使用图片资源 .&lt;/p&gt;
+
+&lt;p&gt;adt  的 android tool有一个检测app潜在问题的选项叫Run Lint.检测之后有各种各种检测的信息,包括px单位，资源未使用等等。在android sdk里也有这个工具Lint.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>JAVA内存分配</title>
+      <link>http://farwmarth.com/post/java%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/</link>
+      <pubDate>Mon, 29 Jul 2013 22:54:49 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/java%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;寄存器：我们在程序中无法控制&lt;/li&gt;
+&lt;li&gt;栈：存放基本类型的数据和对象的引用，但对象本身不存放在栈中，而是存放在堆中&lt;/li&gt;
+&lt;li&gt;堆：存放用new产生的数据&lt;/li&gt;
+&lt;li&gt;静态域：存放在对象中用static定义的静态成员&lt;/li&gt;
+&lt;li&gt;常量池：存放常量&lt;/li&gt;
+&lt;li&gt;非RAM存储：硬盘等永久存储空间&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;java内存分配中的栈&#34;&gt;Java内存分配中的栈&lt;/h2&gt;
+
+&lt;p&gt;在函数中定义的一些基本类型的变量数据和对象的引用变量都在函数的栈内存中分配。&lt;/p&gt;
+
+&lt;p&gt;当在一段代码块定义一个变量时，Java就在栈中 为这个变量分配内存空间，当该变量退出该作用域后，Java会自动释放掉为该变量所分配的内存空间，该内存空间可以立即被另作他用。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cocos2d-x vs开发</title>
+      <link>http://farwmarth.com/post/cocos2d-x-vs%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Sat, 27 Jul 2013 21:01:30 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/cocos2d-x-vs%E5%BC%80%E5%8F%91/</guid>
+      <description>&lt;h2 id=&#34;一-vs环境配置&#34;&gt;一  &lt;strong&gt;vs环境配置&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;android环境配置不累赘了:&lt;a href=&#34;http://farwmarth.com/?p=657&#34;&gt;http://farwmarth.com/?p=657&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;vs配置：下载cocos2d-x 2.1.4  , install-templates-msvc.&lt;br /&gt;
+bat是安装vs模板的，安装的时候发现2.1.4里竟然没有msv目录，下了2.1.3将msv目录复制到2.1.4重新运行，模板就安装成功了&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/07/image2.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>visual studio 2012 备忘</title>
+      <link>http://farwmarth.com/post/-visual-studio-2012-%E5%A4%87%E5%BF%98/</link>
+      <pubDate>Sat, 27 Jul 2013 11:57:43 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/-visual-studio-2012-%E5%A4%87%E5%BF%98/</guid>
+      <description>&lt;h2 id=&#34;一-插件&#34;&gt;&lt;strong&gt;一 插件:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Productivity Power Tools&lt;/strong&gt;&lt;br /&gt;
+最近发现神器Productivity Power Tools也更新了支持VS2012的版本（之前只有适用于VS2008/2010的）,和上面的VS Commands不太相同，这个插件更倾向于补足VS本身的功能。比如Ctrl+点击转到定义、一键整理C#的using和VB的Imports、括号自动补 全、标签栏按颜色分组、代码着色拷贝到HTML格式等.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Visual Assist X Options 代码助手&lt;/strong&gt;&lt;br /&gt;
+&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/07/image.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>svn 常用命令和服务器配置</title>
+      <link>http://farwmarth.com/post/-svn-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Fri, 24 May 2013 13:37:02 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/-svn-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;h2 id=&#34;subversion-与版本控制&#34;&gt;Subversion 与版本控制&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://svnbook.red-bean.com/nightly/en/index.html&#34;&gt;http://svnbook.red-bean.com/nightly/en/index.html&lt;/a&gt;
+&lt;a href=&#34;http://svnbook.red-bean.com/nightly/zh/svn-book.html&#34;&gt;http://svnbook.red-bean.com/nightly/zh/svn-book.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;svn-操作&#34;&gt;SVN 操作&lt;/h2&gt;
+
+&lt;h3 id=&#34;常用操作&#34;&gt;常用操作&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;svn propset svn:ignore &#39;test&#39; .&lt;/code&gt;    添加到忽略目录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;svn update&lt;/code&gt; 更新&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;svn update -r&lt;/code&gt;  更新到一个指定版本&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;svn checkout&lt;/code&gt;     检出svn&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;svn checkout --depth=empty&lt;/code&gt; 检出为空文件夹&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;svn revert -R .&lt;/code&gt;  递归还原当前目录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;svn commit -m &#39;&#39;&lt;/code&gt; 提交&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;svn add * --force&lt;/code&gt; 强制提交所有
++&lt;code&gt;svn diff filename&lt;/code&gt;  比较文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;svn status&lt;/code&gt;  查看库文件状态&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;svn relocate svn switch --relocate   源地址  新地址&lt;/code&gt;     切换svn地址&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;svn info&lt;/code&gt;   查看目录信息&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;svn cleanup&lt;/code&gt;  清理文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;svn (del, remove, rm)&lt;/code&gt;  从svn中移除文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;svn export  -r&lt;/code&gt; 导出一个没有svn文件夹的目录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;svn merge -r 28:25&lt;/code&gt;  从28到25回滚&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;svn resolved  filename&lt;/code&gt;  解决冲突&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;svn rm  filename&lt;/code&gt;   从svn中删除&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;svn rm   --keep-local  filename&lt;/code&gt;  从svn中删除并保留本地文件&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>顺丰快递接口</title>
+      <link>http://farwmarth.com/post/%E9%A1%BA%E4%B8%B0%E5%BF%AB%E9%80%92%E6%8E%A5%E5%8F%A3/</link>
+      <pubDate>Wed, 22 May 2013 19:47:25 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E9%A1%BA%E4%B8%B0%E5%BF%AB%E9%80%92%E6%8E%A5%E5%8F%A3/</guid>
+      <description>&lt;p&gt;事件起源是:买了某物品,快递公司是顺丰. 手机本是装了快递100来追踪快件的.结果输入单号居然查不到信息.只能抱怨快递100这软件坑爹了.于是度娘一下.找到了顺风的官网查单号&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://kf.sf-express.com/css/myquery/trackSmallTel.action&#34;&gt;http://kf.sf-express.com/css/myquery/trackSmallTel.action&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;查询结果是有的,可能是给快递100的接口有问题吧.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>About TexturePacker</title>
+      <link>http://farwmarth.com/post/about-texturepacker/</link>
+      <pubDate>Sun, 19 May 2013 16:31:02 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/about-texturepacker/</guid>
+      <description>&lt;p&gt;TexturePacker是一个材质打包工具,最近学习starling的时候需要用到这个工具.先来个图  &lt;p&gt;&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/05/image12.png&#34; alt=&#34;image&#34; /&gt;  &lt;p&gt;功能很齐全,支持众多语言. &lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/05/image13.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Android 开发调试</title>
+      <link>http://farwmarth.com/post/android-%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/</link>
+      <pubDate>Sat, 18 May 2013 11:10:11 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/android-%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/</guid>
+      <description>&lt;p&gt;&lt;font color=&#34;red&#34;&gt;update: 2016-1-14 更新模拟器&lt;strong&gt;夜神模拟器&lt;/strong&gt;&lt;/font&gt;
+&lt;font color=&#34;red&#34;&gt;update: 2013-8-13 更新模拟器&lt;strong&gt;Genymotion&lt;/strong&gt;&lt;/font&gt;
+&lt;font color=&#34;red&#34;&gt;update: 2013-5-19 更新wifi调试工具&lt;/font&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;模拟器&#34;&gt;模拟器&lt;/h2&gt;
+
+&lt;p&gt;android自带模拟器真是龟速,果断放弃
++ 夜神模拟器
++ &lt;a href=&#34;http://www.bluestacks.net.cn/Download/&#34;&gt;bluestacks&lt;/a&gt;: 可以安装软件和调试的模拟器,速度比android的不知道快到哪去了.
+安装完后,eclipse会把它识别为一台设备 .和真机调试没啥区别.运行界面
+&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/05/image11.png&#34; alt=&#34;image&#34; /&gt;
++ Genymotion
++ 逍遥安卓模拟器
++ 靠谱助手安卓模拟器
++ 海马玩模拟器
+mac下连接: &lt;code&gt;adb connect 192.168.56.101&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>最近迷恋上小霸王游戏:小蜜蜂</title>
+      <link>http://farwmarth.com/post/%E6%9C%80%E8%BF%91%E8%BF%B7%E6%81%8B%E4%B8%8A%E5%B0%8F%E9%9C%B8%E7%8E%8B%E6%B8%B8%E6%88%8F%E5%B0%8F%E8%9C%9C%E8%9C%82/</link>
+      <pubDate>Wed, 15 May 2013 20:53:35 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E6%9C%80%E8%BF%91%E8%BF%B7%E6%81%8B%E4%B8%8A%E5%B0%8F%E9%9C%B8%E7%8E%8B%E6%B8%B8%E6%88%8F%E5%B0%8F%E8%9C%9C%E8%9C%82/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/05/image8.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;这个东东是不是勾起了你童年的回忆..是的,80,90都是这么过来的.黑白电视机加小霸王学习机就是那个年代的无敌装备.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>数据结构整理</title>
+      <link>http://farwmarth.com/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%95%B4%E7%90%86/</link>
+      <pubDate>Tue, 07 May 2013 21:23:04 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%95%B4%E7%90%86/</guid>
+      <description>&lt;h5 id=&#34;数据结构形式定义&#34;&gt;数据结构形式定义:&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;逻辑结构
+集合,线性,树形,图,网状&lt;br /&gt;
+“数据结构”定义中的“关系”指数据间的逻辑关系，故也称数据结构为逻辑结构。&lt;/li&gt;
+&lt;li&gt;存储结构
+数据结构在计算机中的表示称为物理结构。又称存储结构。&lt;br /&gt;
+顺序存储结构&lt;br /&gt;
+链式存储结构&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>斗地主结构分析</title>
+      <link>http://farwmarth.com/post/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90/</link>
+      <pubDate>Sat, 27 Apr 2013 12:21:53 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90/</guid>
+      <description>&lt;p&gt;这段时间在反编别人的代码,基本了解了android的游戏开发过程.在这里总结一下蛙蛙斗地主的体系结构.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/04/7a52e3c36bb3.jpg&#34;&gt;&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/04/thumb1.jpg&#34; alt=&#34;蛙蛙斗地主结构&#34; title=&#34;蛙蛙斗地主结构&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;activity管理:&lt;/p&gt;
+
+&lt;p&gt;注意在activity的回调中资源的创建及销毁.管理好activity的生命周期.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>android 支付宝 快捷支付 接入</title>
+      <link>http://farwmarth.com/post/android-%E6%94%AF%E4%BB%98%E5%AE%9D-%E5%BF%AB%E6%8D%B7%E6%94%AF%E4%BB%98-%E6%8E%A5%E5%85%A5/</link>
+      <pubDate>Fri, 26 Apr 2013 11:55:25 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/android-%E6%94%AF%E4%BB%98%E5%AE%9D-%E5%BF%AB%E6%8D%B7%E6%94%AF%E4%BB%98-%E6%8E%A5%E5%85%A5/</guid>
+      <description>&lt;p&gt;&lt;font color=&#34;red&#34;&gt;update: 2013-4-28 私钥安全性修正&lt;/font&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;一-sdk下载&#34;&gt;一 sdk下载&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://b.alipay.com/order/techService.htm&#34;&gt;https://b.alipay.com/order/techService.htm&lt;/a&gt;.最下面有快捷支付(无线)zip包,包含了教程,开发指南和demo.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>android 反编译和代码解读</title>
+      <link>http://farwmarth.com/post/android-%E5%8F%8D%E7%BC%96%E8%AF%91%E5%92%8C%E4%BB%A3%E7%A0%81%E8%A7%A3%E8%AF%BB/</link>
+      <pubDate>Tue, 23 Apr 2013 15:59:09 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/android-%E5%8F%8D%E7%BC%96%E8%AF%91%E5%92%8C%E4%BB%A3%E7%A0%81%E8%A7%A3%E8%AF%BB/</guid>
+      <description>&lt;p&gt;&lt;font color=red&gt;update :2013-5-18&lt;/font&gt;
+&lt;font color=red&gt;反编译工具小米人改之理:&amp;nbsp; &lt;/font&gt;&lt;a href=&#34;http://www.xiaomiren.net/apkmodifier/&#34;&gt;http://www.xiaomiren.net/apkmodifier/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;一-apk反编译&#34;&gt;一 apk反编译&lt;/h2&gt;
+
+&lt;p&gt;将apk文件解压后有两部分文件需要处理，一种是xml文件，另一种一个dex文件（.dex）&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>android 组件Activity</title>
+      <link>http://farwmarth.com/post/android-%E7%BB%84%E4%BB%B6activity/</link>
+      <pubDate>Fri, 05 Apr 2013 14:50:39 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/android-%E7%BB%84%E4%BB%B6activity/</guid>
+      <description>&lt;p&gt;Android开发四大组件分别是：
++ 活动（Activity)： 用于表现功能。
++ 服务（Service)： 后台运行服务，不提供界面呈现。
++ 广播接收器（BroadcastReceiver)：用于接收广播。
++ 数据实体（Content Provider）： 支持在多个应用中存储和读取数据，相当于数据库&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>android　框架结构</title>
+      <link>http://farwmarth.com/post/android%E6%A1%86%E6%9E%B6%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Thu, 04 Apr 2013 12:03:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/android%E6%A1%86%E6%9E%B6%E7%BB%93%E6%9E%84/</guid>
+      <description>&lt;h2 id=&#34;一-android平台结构-sdk目录结构-目录结构&#34;&gt;一 Android平台结构,SDK目录结构,目录结构&lt;/h2&gt;
+
+&lt;p&gt;　android是一个linux内核的操作系统，常规编程语言是java,不过也推出了NDK,可以用c++来访问部分接口。这篇就略去环境搭建和hello world了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/04/2010100721194321.jpg&#34; alt=&#34;2010100721194321&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos 命令，基本设置</title>
+      <link>http://farwmarth.com/post/centos-%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/</link>
+      <pubDate>Fri, 29 Mar 2013 00:16:43 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/centos-%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/</guid>
+      <description>&lt;p&gt;&lt;font color=&#34;#ff0000&#34;&gt; update 2016-7-21 13:53&lt;/font&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;centos6-4配置163的yum源&#34;&gt;CentOS6.4配置163的yum源&lt;/h2&gt;
+
+&lt;p&gt;CentOS系统自带的更新源的速度实在是慢，为了让CentOS6使用速度更快的YUM更新源，可以选择163（网易）的更新源。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;查看版本&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;cat /etc/redhat-release&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>windows下蛋疼的cocos2d-x，android配置。</title>
+      <link>http://farwmarth.com/post/windows%E4%B8%8B%E8%9B%8B%E7%96%BC%E7%9A%84cocos2d-xandroid%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Thu, 28 Mar 2013 00:08:31 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/windows%E4%B8%8B%E8%9B%8B%E7%96%BC%E7%9A%84cocos2d-xandroid%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;h2 id=&#34;安装android开发环境&#34;&gt;安装android开发环境&lt;/h2&gt;
+
+&lt;p&gt;接着上一篇: &lt;a href=&#34;http://farwmarth.com/?p=584&#34; title=&#34;http://farwmarth.com/?p=584&#34;&gt;http://farwmarth.com/?p=584&lt;/a&gt;&lt;br /&gt;
+在装了eclipse和cdt的环境下:&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在菲音听的几堂培训课</title>
+      <link>http://farwmarth.com/post/%E5%9C%A8%E8%8F%B2%E9%9F%B3%E5%90%AC%E7%9A%84%E5%87%A0%E5%A0%82%E5%9F%B9%E8%AE%AD%E8%AF%BE/</link>
+      <pubDate>Mon, 25 Mar 2013 00:12:09 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E5%9C%A8%E8%8F%B2%E9%9F%B3%E5%90%AC%E7%9A%84%E5%87%A0%E5%A0%82%E5%9F%B9%E8%AE%AD%E8%AF%BE/</guid>
+      <description>&lt;p&gt;　在菲音也呆了半年多了，新人培训一次也没去，讲的是什么时间管理，高效XX的东西，技术培训倒是去了不少，每周四的晚上会有项目负责人或者主程宣讲。工作心得，一些问题解答，个人觉得某些课听了还是收获裨益的。当时的ppt没能要过来，时隔几个月才想起来写一篇稿子总结一下。
+　刚进公司那会听第一堂技术课，有种膜拜大牛的感觉。主讲是一个新项目的主程，讲的是as的基本知识体系和ARPG游戏引擎设计思路.当时还做了大量笔记，现在笔记本都不知道丢哪去了，记得的唯一的一点是。以组件方式编程，将功能点设计成组件，而不是用深层次的继承，这和最近看的robotlegs有异曲同工之妙。每个功能点都分离成组件，这样就代码就可以灵活装配了，(哈，想法是好的，但是将抽象付于实践才是最难的一部分，努力向着这一步迈进)
+　再有印象点的就是天地会的舵主弃笑天的效率之道讲座。介绍了不少提高效率的途径和方法.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>折腾一下，游戏每周首页</title>
+      <link>http://farwmarth.com/post/%E6%8A%98%E8%85%BE%E4%B8%80%E4%B8%8B%E6%B8%B8%E6%88%8F%E6%AF%8F%E5%91%A8%E9%A6%96%E9%A1%B5/</link>
+      <pubDate>Fri, 22 Mar 2013 14:58:43 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E6%8A%98%E8%85%BE%E4%B8%80%E4%B8%8B%E6%B8%B8%E6%88%8F%E6%AF%8F%E5%91%A8%E9%A6%96%E9%A1%B5/</guid>
+      <description>&lt;p&gt;　昨天晚上版本更新，又到了难熬的等待时刻了，看完了更新的绿箭侠，邪恶力量，实在是不想干活了，突然想起来最近每周都把游戏更新的首页截图做个纪念，索性把以前的首页也翻出来吧。&lt;br /&gt;
+找了找工程目录，素材是一个叫homePage.tempdata的文件，被加密了的，ok，开始工作.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ipad2初级指南</title>
+      <link>http://farwmarth.com/post/ipad2%E5%88%9D%E7%BA%A7%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Fri, 08 Mar 2013 16:14:48 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/ipad2%E5%88%9D%E7%BA%A7%E6%8C%87%E5%8D%97/</guid>
+      <description>&lt;p&gt;&lt;font color=&#34;red&#34;&gt;
+update :2014-12-1 19:36 更新神器flex2&lt;br /&gt;
+update :2013-4-28 10:53 视频播放器,阅读,数据传输&lt;br /&gt;
+update :2013-3-12 16:51 evasion 更新到1.5.2,支持中文，据说ios6.1.3修复了漏洞，此工具会失效&lt;br /&gt;
+update :2013-3-11 16:46 零碎&lt;br /&gt;
+update :2013-3-9 10:19 系统增强软件&lt;br /&gt;
+update :2013-3-8 17:16&lt;br /&gt;
+&lt;/font&gt;&lt;/p&gt;
+
+&lt;p&gt;本来是打算买个nexus 7 玩玩的，港版好像没货，叫朋友同事从香港带了个ipad2.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Another New Year 2013</title>
+      <link>http://farwmarth.com/post/another-new-year-2013/</link>
+      <pubDate>Wed, 06 Mar 2013 15:56:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/another-new-year-2013/</guid>
+      <description>&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; 过年在家里的一个星期相对清静，不用整天对着屏幕，不用一坐就一整天，晚上10点就上床睡觉，睡觉前看看以前下的电影。本来还想着放假做点什么小游戏的，又夭折在日程表上，杀鸡宰鱼的事情占满了前几天。还是农村里过年气氛浓郁，团圆饭，一家人看看春晚烤烤火，打打牌，还有一个个人觉得很有意思的保留节目:除夕夜到认识或者不不认识的人家庭高声辞岁，一声呐喊算时辞旧迎新，给人们带来美好的祝愿。我记得小时候老是盼着过年，过年意味着 有新衣服穿，可以拿压岁钱，可以吃好吃的，更好玩的是可以在除夕夜里辞岁，要到很多糖果和零食，还有就是在除夕夜里可以”守岁”,可以通宵达旦地玩。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Crocus Modeller 试用无限期</title>
+      <link>http://farwmarth.com/post/crocus-modeller-%E8%AF%95%E7%94%A8%E6%97%A0%E9%99%90%E6%9C%9F/</link>
+      <pubDate>Mon, 18 Feb 2013 14:34:19 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/crocus-modeller-%E8%AF%95%E7%94%A8%E6%97%A0%E9%99%90%E6%9C%9F/</guid>
+      <description>&lt;p&gt;想找一个本地的画as的uml图软件，从美观程序和功能性选择了crocus modeller,它提供了试用版和付费版，付费版49美元，用不起，而是试用版只能试用五天.尝试着去破解。&lt;/p&gt;
+
+&lt;p&gt;用的是rsa算法 ,类库为 &lt;a href=&#34;http://code.google.com/p/as3crypto/&#34;&gt;as3crypto&lt;/a&gt;，算法如下:&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>进制及位运算</title>
+      <link>http://farwmarth.com/post/%E8%BF%9B%E5%88%B6%E5%8F%8A%E4%BD%8D%E8%BF%90%E7%AE%97/</link>
+      <pubDate>Sun, 17 Feb 2013 19:03:03 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E8%BF%9B%E5%88%B6%E5%8F%8A%E4%BD%8D%E8%BF%90%E7%AE%97/</guid>
+      <description>&lt;h2 id=&#34;单位&#34;&gt;单位&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1TB=1024 GB = 1024 M = 1024 KB = 1024 BYTE(字节) = 8 BIT(二进制位)&lt;/li&gt;
+&lt;li&gt;ASCII码：一个英文字母（不分大小写）占一个字节的空间，一个中文汉字占两个字节的空间。一个二进制数字序列，在计算机中作为一个数字单元，一般为8位二进制数，换算为十进制。最小值0，最大值255。如一个ASCII码就是一个字节。&lt;/li&gt;
+&lt;li&gt;UTF-8编码:一个英文字符等于一个字节，一个中文（含繁体）等于三个字节。&lt;/li&gt;
+&lt;li&gt;Unicode编码:一个英文等于两个字节，一个中文（含繁体）等于两个字节。&lt;/li&gt;
+&lt;li&gt;符号:英文标点占一个字节，中文标点占两个字节。举例：英文句号“.”占1个字节的大小，中文句号“。”占2个字节的大小。&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>同步利器GoodSync</title>
+      <link>http://farwmarth.com/post/%E5%90%8C%E6%AD%A5%E5%88%A9%E5%99%A8goodsync/</link>
+      <pubDate>Wed, 23 Jan 2013 23:57:55 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E5%90%8C%E6%AD%A5%E5%88%A9%E5%99%A8goodsync/</guid>
+      <description>&lt;p&gt;Goodsync 用了两年了，个人感觉是比较好的同步工具，适合各种同步场景。u盘到目录，本地目录到本地目录，本地到远程，局域网共享目录到目录 等等。&lt;/p&gt;
+
+&lt;p&gt;Goodsync分为免费和付费版，我用的版本是9.1 破解版，破解前要将日期往2010年前调，破解之后去掉自动更新设置，网上有破解版本。&lt;/p&gt;
+
+&lt;p&gt;使用它第一步就是新建任务，任务分两种类型:备份和同步.&amp;nbsp; 备份任务是单向的，如左向右，则备份则是保证右边和左边的状态一致，右边有多余的文件会删除。&amp;nbsp; 同步任务会保证两边的状态保证一致。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>浅析 robotlegs2</title>
+      <link>http://farwmarth.com/post/%E6%B5%85%E6%9E%90-robotlegs2/</link>
+      <pubDate>Fri, 18 Jan 2013 19:36:10 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E6%B5%85%E6%9E%90-robotlegs2/</guid>
+      <description>&lt;nav&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#1-概述&#34;&gt;1  概述&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#2-容器解析&#34;&gt;2   容器解析&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;p&gt;当前阅读版本: 2.0.0b3.  &lt;a href=&#34;https://github.com/robotlegs/robotlegs-framework&#34; title=&#34;https://github.com/robotlegs/robotlegs-framework&#34;&gt;https://github.com/robotlegs/robotlegs-framework&lt;/a&gt;  源代码中有readme文档，阅读readme可以了解整个程序的大致结构.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>GTD</title>
+      <link>http://farwmarth.com/post/gtd/</link>
+      <pubDate>Wed, 16 Jan 2013 12:53:26 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/gtd/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;GTD流程图 : Getting Things Done的缩写&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;把所有事情都从你的脑袋里弄出来。在事情出现就做好相关行动的一系列决定，而不是在事情爆发的时候。以合适的类别组织好你的项目的各种提醒以及下一步行动。保持你的系统更新和完整，及时进行回顾，使你在任何时候都能信任你的系统和对任务的处理。”&lt;/p&gt;
+
+&lt;p&gt;GTD系统由五条核心原则组成：收集、处理、管理、执行、回顾&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/5584467049_4caa6bdff6.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用bat来提高工作效率</title>
+      <link>http://farwmarth.com/post/%E7%94%A8bat%E6%9D%A5%E6%8F%90%E9%AB%98%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87/</link>
+      <pubDate>Sat, 29 Dec 2012 13:55:02 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E7%94%A8bat%E6%9D%A5%E6%8F%90%E9%AB%98%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87/</guid>
+      <description>&lt;p&gt;项目发布流程通常是手工的，需要加密，编译模块，改名，svn提交，生成版本号。上传svn服务器。手工发布效率很低。还容易出错。就写了个bat脚本 。&lt;/p&gt;
+
+&lt;p&gt;本来是打算写ant脚本的。但ant脚本需要环境支持,还是用bat算了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>初入wordpress</title>
+      <link>http://farwmarth.com/post/%E5%88%9D%E5%85%A5wordpress/</link>
+      <pubDate>Fri, 28 Dec 2012 19:07:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E5%88%9D%E5%85%A5wordpress/</guid>
+      <description>&lt;p&gt;刚开始玩网站，记录一下。多谢&lt;a href=&#34;http://www.litefeel.com&#34;&gt;litefeel&lt;/a&gt;的帮忙&lt;/p&gt;
+
+&lt;h2 id=&#34;申请域名&#34;&gt;申请域名&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;注册: &lt;code&gt;godaddy.com&lt;/code&gt; ,注册教程:&lt;a href=&#34;http://jingyan.baidu.com/article/414eccf63bb2ea6b421f0a47.html&#34; title=&#34;http://jingyan.baidu.com/article/414eccf63bb2ea6b421f0a47.html&#34;&gt;http://jingyan.baidu.com/article/414eccf63bb2ea6b421f0a47.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>在github上建立自己的开源项目</title>
+      <link>http://farwmarth.com/post/%E5%9C%A8github%E4%B8%8A%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</link>
+      <pubDate>Wed, 18 Apr 2012 00:50:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E5%9C%A8github%E4%B8%8A%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</guid>
+      <description>&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;由于代码一直在自己这保存，一方面别人看不见，也不安全。搜了下，发现在github是一个提供免费git管理的网站，于是用了下，非常爽，功能很强大。&lt;/p&gt;
+
+&lt;p&gt;下面就是我注册和提交github代码的流程&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>三月一夏</title>
+      <link>http://farwmarth.com/post/%E4%B8%89%E6%9C%88%E4%B8%80%E5%A4%8F/</link>
+      <pubDate>Tue, 16 Aug 2011 08:01:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E4%B8%89%E6%9C%88%E4%B8%80%E5%A4%8F/</guid>
+      <description>&lt;p&gt;老实说这个夏天 过得太漫长。&lt;/p&gt;
+
+&lt;p&gt;花一三个月的时间把所学忘得差不多，细想只剩一些基本思想 。想换个地方 。&lt;/p&gt;
+
+&lt;p&gt;草草地总结一下 二个月的工作，其实还学到了些许东西:&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>as3一些常用数学公式</title>
+      <link>http://farwmarth.com/post/as3%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</link>
+      <pubDate>Thu, 21 Jul 2011 10:30:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/as3%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</guid>
+      <description>&lt;h3 id=&#34;基本三角函数的计算&#34;&gt;基本三角函数的计算：&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;角的正弦值 = 对边 / 斜边&lt;/li&gt;
+&lt;li&gt;角的余弦值 = 邻边 / 斜边&lt;/li&gt;
+&lt;li&gt;角的正切值 = 对边 / 邻边&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;角度制与弧度制的相互转换&#34;&gt;角度制与弧度制的相互转换：&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;弧度 = 角度 * Math.PI / 180&lt;/li&gt;
+&lt;li&gt;角度 = 弧度 * 180 / Math.PI&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>开始记录</title>
+      <link>http://farwmarth.com/post/%E5%BC%80%E5%A7%8B%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Fri, 17 Jun 2011 10:25:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E5%BC%80%E5%A7%8B%E8%AE%B0%E5%BD%95/</guid>
+      <description>&lt;p&gt;上班十来天了,觉得很有必要写一个这样的博客 ,记录一下所见所学所感.&lt;/p&gt;
+
+&lt;p&gt;刚开始找工作的时候感觉是挺容易的事,面试,通过,握手,然后就入职。但事实上并非是一蹴而就的,面试了各种不同的公司,每一轮都会暴露出新的薄弱环,刚开始是觉得没准备好,知识储备不够深厚,有些受挫感,但后来仔细想想其实客观原因的比重更大些,毕竟是刚毕业没有任何实战经验的黄毛小子,而不同公司的技术要求又不尽相同.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>NodeJs初探</title>
+      <link>http://farwmarth.com/post/node/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/node/</guid>
+      <description>nodejs node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效 安装 mac node使用 #安装 brew install node #升级n</description>
+    </item>
+    
+    <item>
+      <title>reStructuredText简明语法</title>
+      <link>http://farwmarth.com/post/restructuredtext%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/restructuredtext%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95/</guid>
+      <description>&lt;h1 id=&#34;pandoc&#34;&gt;pandoc&lt;/h1&gt;
+
+&lt;p&gt;pandoc 转换rst 为markdown&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;pandoc  rest.rst  -f rst -t markdown -s -o rest.md&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&#34;摘录&#34;&gt;摘录&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/xunxuny/zh-sphinx-doc/blob/master/rest.rst&#34;&gt;https://github.com/xunxuny/zh-sphinx-doc/blob/master/rest.rst&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;本章节介绍 reStructuredText (reST)
+的概念和语法，为文档生成者提供足够的信息. reST
+被认为是简单，实用的标记语言，因此学习它不会花太多时间.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>read-the-docs托管学习笔记</title>
+      <link>http://farwmarth.com/post/readthedocs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/readthedocs/</guid>
+      <description>&lt;h2 id=&#34;sphinx&#34;&gt;Sphinx&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://sphinx-doc.org/&#34;&gt;Sphinx&lt;/a&gt;是一个基于Python的文档生成项目,采用了&lt;strong&gt;reStructuredText&lt;/strong&gt;作为文档写作语言 ,不过也可以通过模块支持其他格式.
+(Sphinx标记结构)[&lt;a href=&#34;http://www.pythondoc.com/sphinx/markup/&#34;&gt;http://www.pythondoc.com/sphinx/markup/&lt;/a&gt;]&lt;/p&gt;
+
+&lt;h3 id=&#34;sphinx安装&#34;&gt;Sphinx安装&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;pip install sphinx sphinx-autobuild&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>ubuntu,centos 备忘</title>
+      <link>http://farwmarth.com/post/ubuntu%E5%A4%87%E5%BF%98/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/ubuntu%E5%A4%87%E5%BF%98/</guid>
+      <description>&lt;h2 id=&#34;安装常用软件&#34;&gt;安装常用软件:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;subversion&lt;/code&gt;  svn 版本命令行&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lua5.2&lt;/code&gt;  lua版本&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ssh&lt;/code&gt;    ssh 连接&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nautilus-open-terminal&lt;/code&gt;   终端&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fcitx-table-wbpy&lt;/code&gt;  五笔&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;avant-window-navigator&lt;/code&gt; 启动器位置&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>将内网终端分享给其他人使用</title>
+      <link>http://farwmarth.com/post/ttyd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/ttyd/</guid>
+      <description>&lt;hr /&gt;
+
+&lt;p&gt;起因是某人要学习下&lt;code&gt;linux&lt;/code&gt;,但是不想用虚拟机装linux,在网上也找了几个在线的&lt;code&gt;shell&lt;/code&gt;练习网站,感觉不是很满意,于是想把自己内网主机上的终端share一下,github搜索了一下还真有这样的项目.&lt;/p&gt;
+
+&lt;h2 id=&#34;ttyd&#34;&gt;ttyd&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;ttyd&lt;/code&gt;是一个把自己的终端通过web方式共享给其他人操作的工具&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/tsl0922/ttyd&#34;&gt;https://github.com/tsl0922/ttyd&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo ttyd login
+&lt;span style=&#34;color:#75715e&#34;&gt;#默认端口是7681 用login方式要输入账号密码&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;#http://localhost:7681&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>微信开发调试</title>
+      <link>http://farwmarth.com/post/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/</guid>
+      <description>&lt;h2 id=&#34;接入文档&#34;&gt;接入文档&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mp.weixin.qq.com/wiki/home/index.html&#34;&gt;http://mp.weixin.qq.com/wiki/home/index.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;申请免费公众号&#34;&gt;申请免费公众号&lt;/h2&gt;
+
+&lt;p&gt;无需公众号,普通微信既可申请测试公众号:
+&lt;a href=&#34;http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;amp;t=sandbox/index&#34;&gt;http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;amp;t=sandbox/index&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>恶补键盘知识</title>
+      <link>http://farwmarth.com/post/%E6%81%B6%E8%A1%A5%E9%94%AE%E7%9B%98%E7%9F%A5%E8%AF%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E6%81%B6%E8%A1%A5%E9%94%AE%E7%9B%98%E7%9F%A5%E8%AF%86/</guid>
+      <description>&lt;h2 id=&#34;引用&#34;&gt;引用&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.pcpop.com/doc/0/836/836084_all.shtml&#34;&gt;http://www.pcpop.com/doc/0/836/836084_all.shtml&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;键盘类型&#34;&gt;键盘类型&lt;/h2&gt;
+
+&lt;h3 id=&#34;薄膜&#34;&gt;薄膜&lt;/h3&gt;
+
+&lt;h3 id=&#34;机械&#34;&gt;机械&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;红轴
+&lt;img src=&#34;http://ww4.sinaimg.cn/large/4b5a1116gw1exo6kg6fl4j20dw05j3yv.jpg&#34; alt=&#34;红轴&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;红轴，它的力度比较轻，与黑轴塑料部分相同，直上直下爽快自然，入门者可能会觉得它比较滑。
+这是一种备受争议的轴，由于力度太轻，导致个别用户手搭载键盘上误触，而且它的造价是所有轴里最高的。
+因此很多人认为他是失败品，在国外的销量并不理想。
+但是国内不少玩家给予好评，如果搭配得当使用者可感受到丝绸般顺滑，无论是游戏还是打字亦或其它应用都可以，只是价格略高&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>我的mac配置</title>
+      <link>http://farwmarth.com/post/%E6%88%91%E7%9A%84mac%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E6%88%91%E7%9A%84mac%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;h2 id=&#34;mysql记录&#34;&gt;mysql记录&lt;/h2&gt;
+
+&lt;h3 id=&#34;brew-安装mysql&#34;&gt;brew 安装mysql&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;brew install mysql
+初始化mysql
+sudo mysql_install_db  --verbose --user=`whoami`  --basedir=&amp;#34;\$(brew --prefix mysql)&amp;#34;  --datadir=/usr/local/var/mysql --tmpdir=/tmp --explicit_defaults_for_timestamp
+或者
+mysql_install_db --basedir=/usr/local/Cellar/mysql/5.6.10
+开启mysql
+mysql.server start
+mysql.server stop
+初始化超级管理员
+mysqladmin -u root password&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>给shadowsocks插上tcptun,bbr这对翅膀</title>
+      <link>http://farwmarth.com/post/vultr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/vultr/</guid>
+      <description>&lt;p&gt;最近&lt;a href=&#34;https://www.vultr.com/&#34;&gt;vultr&lt;/a&gt; 搞活动充五刀送五刀.之前用的服务商速度有点不给力.想着撸个ss玩玩,晚上折腾到一点多, 易票联的&lt;code&gt;全球付&lt;/code&gt;卡在vultr一直刷不了.又不想用&lt;code&gt;paypal&lt;/code&gt;绑银行卡.试着把&lt;code&gt;全球付&lt;/code&gt;的卡绑到&lt;code&gt;paypal&lt;/code&gt;上。然后用&lt;code&gt;paypal&lt;/code&gt;一刷居然成功了.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;vultr&lt;/code&gt;比&lt;code&gt;linode&lt;/code&gt;同等配置价格更便宜.&lt;code&gt;500G&lt;/code&gt;的流量绝对够用了.知乎上看了一下好像日本的线路速度比较快.自己也测试了一下.然后开了个实例准备试用几个月看效果如何.&lt;/p&gt;
+
+&lt;h2 id=&#34;速度测试&#34;&gt;速度测试&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;国内线路测试vps速度ping
+&lt;a href=&#34;http://ping.chinaz.com/45.76.185.184&#34;&gt;http://ping.chinaz.com/45.76.185.184&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;speedtest测试带宽&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;wget https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py
+python speedtest.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&#34;shadowsocks安装&#34;&gt;Shadowsocks安装&lt;/h1&gt;
+
+&lt;h2 id=&#34;安装shadowsocks-go&#34;&gt;安装Shadowsocks-go&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#安装&lt;/span&gt;
+wget --no-check-certificate -O shadowsocks-go.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-go.sh
+chmod +x shadowsocks-go.sh
+./shadowsocks-go.sh &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;&amp;gt;&amp;amp;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | tee shadowsocks-go.log
+
+&lt;span style=&#34;color:#75715e&#34;&gt;#默认配置文件在&lt;/span&gt;
+/etc/shadowsocks/config.json&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>语音服务器的选型</title>
+      <link>http://farwmarth.com/post/%E8%AF%AD%E9%9F%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E5%9E%8B/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E8%AF%AD%E9%9F%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E5%9E%8B/</guid>
+      <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
+
+&lt;p&gt;最近游戏要接入一下语音服务器,调查了一下融合的语音sdk
+腾讯云GVoice:&lt;a href=&#34;https://www.qcloud.com/document/product/556/7673&#34;&gt;https://www.qcloud.com/document/product/556/7673&lt;/a&gt;
+好像只有这个比较靠谱,但是收费好像有点贵,还是决定基于原有的免费的百度语音识别造一个轮子&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

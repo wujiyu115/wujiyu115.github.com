@@ -1,0 +1,1143 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>数据结构整理 - farwmarth</title>
+    <meta name="keywords" content="程序员">
+    
+    <meta property="og:title" content="数据结构整理">
+    <meta property="og:site_name" content="farwmarth">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="数据结构整理 - farwmarth" />
+    <meta name="description" content="game"> 
+    <link rel="shortcut icon" href="http://farwmarth.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link href="http://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="http://farwmarth.com/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">farwmarth</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Those that can,do.Those that can&#39;t ,complain</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/douban/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />豆瓣
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/music/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-music"></i> <br />音乐
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%95%B4%E7%90%86/" itemprop="url">
+        数据结构整理
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2013-05-07">
+    2013-05-07
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="http://farwmarth.com/categories/base" itemprop="url" rel="index">
+        <span itemprop="name">base</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">3549 字 ~8分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <h5 id="数据结构形式定义">数据结构形式定义:</h5>
+
+<ul>
+<li>逻辑结构
+集合,线性,树形,图,网状<br />
+“数据结构”定义中的“关系”指数据间的逻辑关系，故也称数据结构为逻辑结构。</li>
+<li>存储结构
+数据结构在计算机中的表示称为物理结构。又称存储结构。<br />
+顺序存储结构<br />
+链式存储结构</li>
+</ul>
+
+<h5 id="数组-array">数组 (Array)</h5>
+
+<p>数组设计之初是在形式上依赖<a href="http://zh.wikipedia.org/w/index.php?title=%E5%85%A7%E5%AD%98%E5%88%86%E9%85%8D&amp;action=edit&amp;redlink=1" title="%E5%85%A7%E5%AD%98%E5%88%86%E9%85%8D&amp;action=edit&amp;redlink=1">內存分配</a>而成的，所以必须在使用前预先请求空间。这使得数组有以下特性：</p>
+
+<ul>
+<li>请求空间以后大小固定，不能再改变(<a href="http://zh.wikipedia.org/wiki/%E6%95%B8%E6%93%9A%E6%BA%A2%E5%87%BA">数据溢出</a>问题)</li>
+<li>在內存中有空间连续性的表现，中间不会存在其他程序需要调用的数据，为此数组的专用內存空间；</li>
+<li>数组通过索引来访问元素,不用遍历整个数组列表,所以访问速度很快.但是因为数组是存储结构是连续的,在头部删除,中间插入元素时,操作的后半部分项都需要进行移动导致速度慢.所以删除可以从数组的尾部开始.<img src="http://farwmarth.bestnewbee.com/images/uploads/2013/05/image.png" alt="image" /></li>
+</ul>
+
+<p>AS的数组与java不同,非定长.测试代码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-as" data-lang="as"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">arr</span><span style="color:#f92672">:</span>Array <span style="color:#f92672">=</span> [];
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">:</span>uint<span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">;</span><span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#ae81ff">1000000</span><span style="color:#f92672">;</span><span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>)<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>]<span style="color:#f92672">=</span><span style="color:#a6e22e">i</span> <span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">startT</span><span style="color:#f92672">:</span>Number <span style="color:#f92672">=</span> <span style="color:#a6e22e">getTimer</span>();
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">num</span><span style="color:#f92672">:</span>uint <span style="color:#f92672">=</span> <span style="color:#ae81ff">500</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">while</span>(<span style="color:#a6e22e">num</span><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>)
+{
+    <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">shift</span>();
+    <span style="color:#a6e22e">num</span><span style="color:#f92672">--;</span>
+}
+<span style="color:#a6e22e">trace</span>(<span style="color:#e6db74">&#34;time:&#34;</span><span style="color:#f92672">,</span><span style="color:#a6e22e">getTimer</span>() <span style="color:#f92672">-</span> <span style="color:#a6e22e">startT</span>);<span style="color:#960050;background-color:#1e0010">上面消耗</span> <span style="color:#ae81ff">822</span><span style="color:#a6e22e">ms</span><span style="color:#f92672">,</span><span style="color:#960050;background-color:#1e0010">改为</span><span style="color:#a6e22e">pop</span>.<span style="color:#960050;background-color:#1e0010">消耗</span><span style="color:#ae81ff">1</span><span style="color:#a6e22e">ms</span>.
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">arr</span><span style="color:#f92672">:</span>Array <span style="color:#f92672">=</span> [];
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">:</span>uint<span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">;</span><span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#ae81ff">1000000</span><span style="color:#f92672">;</span><span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>)<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>]<span style="color:#f92672">=</span><span style="color:#a6e22e">i</span> <span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">startT</span><span style="color:#f92672">:</span>Number <span style="color:#f92672">=</span> <span style="color:#a6e22e">getTimer</span>();
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">num</span><span style="color:#f92672">:</span>uint <span style="color:#f92672">=</span> <span style="color:#ae81ff">500</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">while</span>(<span style="color:#a6e22e">num</span><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>)
+{
+    <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">pop</span>();
+    <span style="color:#a6e22e">num</span><span style="color:#f92672">--;</span>
+}
+<span style="color:#a6e22e">trace</span>(<span style="color:#e6db74">&#34;time:&#34;</span><span style="color:#f92672">,</span><span style="color:#a6e22e">getTimer</span>() <span style="color:#f92672">-</span> <span style="color:#a6e22e">startT</span>);</code></pre></div>
+<h5 id="栈-stack">栈 (Stack)</h5>
+
+<p>是只能在某一端插入和删除的特殊<a href="http://baike.baidu.com/view/178622.htm">线性表</a>。它按照先进后出的原则存储数据，先进入的数据被压入栈底，最后的数据在栈顶，需要读数据的时候从栈顶开始弹出数据（最后一个数据被第一个读出来）。
+as用数组实现的栈</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-as" data-lang="as"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Stack</span>
+    {
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">_data</span><span style="color:#f92672">:</span>Array<span style="color:#f92672">;</span>
+
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Stack</span>()
+        {
+            <span style="color:#a6e22e">_data</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Array();
+        }
+
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">item</span><span style="color:#f92672">:</span>Object)<span style="color:#f92672">:</span><span style="color:#a6e22e">void</span>{
+            <span style="color:#a6e22e">_data</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">item</span>);
+        }
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">pop</span>()<span style="color:#f92672">:</span>Object{
+            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">_data</span>.<span style="color:#a6e22e">pop</span>();
+        }
+    }</code></pre></div>
+<p>java实现</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Stack</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> Object<span style="color:#f92672">[]</span> obj<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> minSize <span style="color:#f92672">=</span> 2<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> cursor <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Stack</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        obj <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Object<span style="color:#f92672">[</span>minSize<span style="color:#f92672">];</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>Object item<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>cursor<span style="color:#f92672">&gt;=</span>obj<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">-</span>1<span style="color:#f92672">){</span>
+            obj <span style="color:#f92672">=</span>Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">copyOf</span><span style="color:#f92672">(</span>obj<span style="color:#f92672">,</span> obj<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">+</span>minSize<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        obj<span style="color:#f92672">[</span>cursor<span style="color:#f92672">++]=</span>item<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> Object <span style="color:#a6e22e">pop</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> obj<span style="color:#f92672">[--</span>cursor<span style="color:#f92672">];</span>
+    <span style="color:#f92672">}</span>
+
+<span style="color:#f92672">}</span></code></pre></div>
+<h5 id="队列-queue">队列 (Queue)</h5>
+
+<p>一种特殊的<a href="http://baike.baidu.com/view/178622.htm">线性表</a>，它只允许在表的<a href="http://baike.baidu.com/view/495145.htm">前端</a>（front）进行删除操作，而在表的后端（rear）进行插入操作。进行插入操作的端称为队尾，进行删除操作的端称为队头。队列是按照“先进先出”或“后进后出”的原则组织数据的。队列中没有元素时，称为空队列。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-as" data-lang="as"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Queue</span>
+    {
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">_data</span><span style="color:#f92672">:</span>Array<span style="color:#f92672">;</span>
+
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Queue</span>()
+        {
+            <span style="color:#a6e22e">_data</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Array();
+        }
+
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">item</span><span style="color:#f92672">:</span>Object)<span style="color:#f92672">:</span><span style="color:#a6e22e">void</span>{
+            <span style="color:#a6e22e">_data</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">item</span>);
+        }
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">shift</span>()<span style="color:#f92672">:</span>Object{
+            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">_data</span>.<span style="color:#a6e22e">shift</span>();
+        }
+    }</code></pre></div>
+<h5 id="优先队列-有优先级别">优先队列 :有优先级别</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">////////////////////////////////////////////////////////////////
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PriorityQ</span>
+   <span style="color:#f92672">{</span>
+   <span style="color:#75715e">// array in sorted order, from max at 0 to min at size-1
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> maxSize<span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">long</span><span style="color:#f92672">[]</span> queArray<span style="color:#f92672">;</span>
+   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> nItems<span style="color:#f92672">;</span>
+<span style="color:#75715e">//-------------------------------------------------------------
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">PriorityQ</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> s<span style="color:#f92672">)</span>          <span style="color:#75715e">// constructor
+</span><span style="color:#75715e"></span>      <span style="color:#f92672">{</span>
+      maxSize <span style="color:#f92672">=</span> s<span style="color:#f92672">;</span>
+      queArray <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">long</span><span style="color:#f92672">[</span>maxSize<span style="color:#f92672">];</span>
+      nItems <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+      <span style="color:#f92672">}</span>
+<span style="color:#75715e">//-------------------------------------------------------------
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insert</span><span style="color:#f92672">(</span><span style="color:#66d9ef">long</span> item<span style="color:#f92672">)</span>    <span style="color:#75715e">// insert item
+</span><span style="color:#75715e"></span>      <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">int</span> j<span style="color:#f92672">;</span>
+
+      <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>nItems<span style="color:#f92672">==</span>0<span style="color:#f92672">)</span>                         <span style="color:#75715e">// if no items,
+</span><span style="color:#75715e"></span>         queArray<span style="color:#f92672">[</span>nItems<span style="color:#f92672">++]</span> <span style="color:#f92672">=</span> item<span style="color:#f92672">;</span>         <span style="color:#75715e">// insert at 0
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">else</span>                                <span style="color:#75715e">// if items,
+</span><span style="color:#75715e"></span>         <span style="color:#f92672">{</span>
+         <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span>j<span style="color:#f92672">=</span>nItems<span style="color:#f92672">-</span>1<span style="color:#f92672">;</span> j<span style="color:#f92672">&gt;=</span>0<span style="color:#f92672">;</span> j<span style="color:#f92672">--)</span>         <span style="color:#75715e">// start at end,
+</span><span style="color:#75715e"></span>            <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span> item <span style="color:#f92672">&gt;</span> queArray<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">)</span>      <span style="color:#75715e">// if new item larger,
+</span><span style="color:#75715e"></span>               queArray<span style="color:#f92672">[</span>j<span style="color:#f92672">+</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> queArray<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span> <span style="color:#75715e">// shift upward
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">else</span>                          <span style="color:#75715e">// if smaller,
+</span><span style="color:#75715e"></span>               <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>                     <span style="color:#75715e">// done shifting
+</span><span style="color:#75715e"></span>            <span style="color:#f92672">}</span>  <span style="color:#75715e">// end for
+</span><span style="color:#75715e"></span>         queArray<span style="color:#f92672">[</span>j<span style="color:#f92672">+</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> item<span style="color:#f92672">;</span>            <span style="color:#75715e">// insert it
+</span><span style="color:#75715e"></span>         nItems<span style="color:#f92672">++;</span>
+         <span style="color:#f92672">}</span>  <span style="color:#75715e">// end else (nItems &gt; 0)
+</span><span style="color:#75715e"></span>      <span style="color:#f92672">}</span>  <span style="color:#75715e">// end insert()
+</span><span style="color:#75715e">//-------------------------------------------------------------
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">long</span> <span style="color:#a6e22e">remove</span><span style="color:#f92672">()</span>             <span style="color:#75715e">// remove minimum item
+</span><span style="color:#75715e"></span>      <span style="color:#f92672">{</span> <span style="color:#66d9ef">return</span> queArray<span style="color:#f92672">[--</span>nItems<span style="color:#f92672">];</span> <span style="color:#f92672">}</span>
+<span style="color:#75715e">//-------------------------------------------------------------
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">long</span> <span style="color:#a6e22e">peekMin</span><span style="color:#f92672">()</span>            <span style="color:#75715e">// peek at minimum item
+</span><span style="color:#75715e"></span>      <span style="color:#f92672">{</span> <span style="color:#66d9ef">return</span> queArray<span style="color:#f92672">[</span>nItems<span style="color:#f92672">-</span>1<span style="color:#f92672">];</span> <span style="color:#f92672">}</span>
+<span style="color:#75715e">//-------------------------------------------------------------
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">()</span>         <span style="color:#75715e">// true if queue is empty
+</span><span style="color:#75715e"></span>      <span style="color:#f92672">{</span> <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>nItems<span style="color:#f92672">==</span>0<span style="color:#f92672">);</span> <span style="color:#f92672">}</span>
+<span style="color:#75715e">//-------------------------------------------------------------
+</span><span style="color:#75715e"></span>   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isFull</span><span style="color:#f92672">()</span>          <span style="color:#75715e">// true if queue is full
+</span><span style="color:#75715e"></span>      <span style="color:#f92672">{</span> <span style="color:#66d9ef">return</span> <span style="color:#f92672">(</span>nItems <span style="color:#f92672">==</span> maxSize<span style="color:#f92672">);</span> <span style="color:#f92672">}</span>
+<span style="color:#75715e">//-------------------------------------------------------------
+</span><span style="color:#75715e"></span>   <span style="color:#f92672">}</span>  <span style="color:#f92672">//</span> end <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PriorityQ</span></code></pre></div>
+<h5 id="链表-linked-list">链表 (Linked List)</h5>
+
+<p>是一种物理存储单元上非连续、非顺序的存储结构，它既可以表示线性结构，也可以用于表示非线性结构，数据元素的<a href="http://baike.baidu.com/view/869200.htm">逻辑顺序</a>是通过链表中的指针链接次序实现的。链表由一系列结点（链表中每一个元素称为结点）组成，结点可以在运行时<a href="http://baike.baidu.com/view/31294.htm">动态</a>生成。每个结点包括两个部分：一个是存储数据元素的数据域，另一个是存储下一个结点地址的指针域。</p>
+
+<ul>
+<li><p><strong>单向链表</strong>: 从头部插入节点.
+<img src="http://farwmarth.bestnewbee.com/images/uploads/2013/05/image1.png" alt="image" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LinkList</span> <span style="color:#f92672">{</span>
+<span style="color:#66d9ef">private</span> Node first<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">LinkList</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    first <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insertFirst</span><span style="color:#f92672">(</span>Object data<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    Node newNode <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Node<span style="color:#f92672">(</span>data<span style="color:#f92672">);</span>
+    newNode<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> first<span style="color:#f92672">;</span>
+    first <span style="color:#f92672">=</span> newNode<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">public</span> Node <span style="color:#a6e22e">deleteFirst</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    Node temp <span style="color:#f92672">=</span> first<span style="color:#f92672">;</span>
+    first <span style="color:#f92672">=</span> first<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">return</span> temp<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> first <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">print</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    Node cu <span style="color:#f92672">=</span> first<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>cu <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        cu<span style="color:#f92672">.</span><span style="color:#a6e22e">display</span><span style="color:#f92672">();</span>
+        cu <span style="color:#f92672">=</span> cu<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Node</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> Object data<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> Node next<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">Node</span><span style="color:#f92672">(</span>Object data<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> data<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">display</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>data<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
+<ul>
+<li><strong>双端链表</strong>:不要和双向链表混淆了,双端列表持有了末尾的节点可以方便地在末尾插入节点</li>
+</ul>
+
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/05/image2.png" alt="image" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> datastruce<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FirstLastList</span> <span style="color:#f92672">{</span>
+<span style="color:#66d9ef">private</span> Link first<span style="color:#f92672">;</span> <span style="color:#75715e">// ref to first link
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">private</span> Link last<span style="color:#f92672">;</span> <span style="color:#75715e">// ref to last link
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">FirstLastList</span><span style="color:#f92672">()</span> <span style="color:#75715e">// constructor
+</span><span style="color:#75715e"></span><span style="color:#f92672">{</span>
+    first <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span> <span style="color:#75715e">// no links on list yet
+</span><span style="color:#75715e"></span>    last <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">()</span> <span style="color:#75715e">// true if no links
+</span><span style="color:#75715e"></span><span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> first <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insertFirst</span><span style="color:#f92672">(</span><span style="color:#66d9ef">long</span> dd<span style="color:#f92672">)</span> <span style="color:#75715e">// insert at front of list
+</span><span style="color:#75715e"></span><span style="color:#f92672">{</span>
+    Link newLink <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Link<span style="color:#f92672">(</span>dd<span style="color:#f92672">);</span> <span style="color:#75715e">// make new link
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>isEmpty<span style="color:#f92672">())</span> <span style="color:#75715e">// if empty list,
+</span><span style="color:#75715e"></span>        last <span style="color:#f92672">=</span> newLink<span style="color:#f92672">;</span> <span style="color:#75715e">// newLink &lt;-- last
+</span><span style="color:#75715e"></span>    newLink<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> first<span style="color:#f92672">;</span> <span style="color:#75715e">// newLink --&gt; old first
+</span><span style="color:#75715e"></span>    first <span style="color:#f92672">=</span> newLink<span style="color:#f92672">;</span> <span style="color:#75715e">// first --&gt; newLink
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+
+<span style="color:#75715e">// -------------------------------------------------------------
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insertLast</span><span style="color:#f92672">(</span><span style="color:#66d9ef">long</span> dd<span style="color:#f92672">)</span> <span style="color:#75715e">// insert at end of list
+</span><span style="color:#75715e"></span><span style="color:#f92672">{</span>
+    Link newLink <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Link<span style="color:#f92672">(</span>dd<span style="color:#f92672">);</span> <span style="color:#75715e">// make new link
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>isEmpty<span style="color:#f92672">())</span> <span style="color:#75715e">// if empty list,
+</span><span style="color:#75715e"></span>        first <span style="color:#f92672">=</span> newLink<span style="color:#f92672">;</span> <span style="color:#75715e">// first --&gt; newLink
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">else</span>
+        last<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> newLink<span style="color:#f92672">;</span> <span style="color:#75715e">// old last --&gt; newLink
+</span><span style="color:#75715e"></span>    last <span style="color:#f92672">=</span> newLink<span style="color:#f92672">;</span> <span style="color:#75715e">// newLink &lt;-- last
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+
+<span style="color:#75715e">// -------------------------------------------------------------
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">long</span> <span style="color:#a6e22e">deleteFirst</span><span style="color:#f92672">()</span> <span style="color:#75715e">// delete first link
+</span><span style="color:#75715e"></span><span style="color:#f92672">{</span> <span style="color:#75715e">// (assumes non-empty list)
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">long</span> temp <span style="color:#f92672">=</span> first<span style="color:#f92672">.</span><span style="color:#a6e22e">dData</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>first<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#75715e">// if only one item
+</span><span style="color:#75715e"></span>        last <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span> <span style="color:#75715e">// null &lt;-- last
+</span><span style="color:#75715e"></span>    first <span style="color:#f92672">=</span> first<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span> <span style="color:#75715e">// first --&gt; old next
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> temp<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e">// -------------------------------------------------------------
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">displayList</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;List (first--&gt;last): &#34;</span><span style="color:#f92672">);</span>
+    Link current <span style="color:#f92672">=</span> first<span style="color:#f92672">;</span> <span style="color:#75715e">// start at beginning
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>current <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#75715e">// until end of list,
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">{</span>
+        current<span style="color:#f92672">.</span><span style="color:#a6e22e">displayLink</span><span style="color:#f92672">();</span> <span style="color:#75715e">// print data
+</span><span style="color:#75715e"></span>        current <span style="color:#f92672">=</span> current<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span> <span style="color:#75715e">// move to next link
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Link</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">long</span> dData<span style="color:#f92672">;</span> <span style="color:#75715e">// data item
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> Link next<span style="color:#f92672">;</span> <span style="color:#75715e">// next link in list
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Link</span><span style="color:#f92672">(</span><span style="color:#66d9ef">long</span> d<span style="color:#f92672">)</span> <span style="color:#75715e">// constructor
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">{</span>
+        dData <span style="color:#f92672">=</span> d<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">displayLink</span><span style="color:#f92672">()</span> <span style="color:#75715e">// display this link
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span>dData <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div></li>
+
+<li><p><strong>双向链表:</strong></p></li>
+</ul>
+
+<p>双向链表的缺点是每一个插入删除操作,都要处理四个链节点的引用,因为持有前后结点的引用,内存占用也相应增加.</p>
+
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/05/image3.png" alt="image" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> datastruce<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DoubleLinkedList</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> Link first<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> Link last<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> first <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insrtFirst</span><span style="color:#f92672">(</span>Object data<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Link newData <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Link<span style="color:#f92672">(</span>data<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>isEmpty<span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+            last <span style="color:#f92672">=</span> newData<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+            first<span style="color:#f92672">.</span><span style="color:#a6e22e">pre</span> <span style="color:#f92672">=</span> newData<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        newData<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> first<span style="color:#f92672">;</span>
+        first <span style="color:#f92672">=</span> newData<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insertLast</span><span style="color:#f92672">(</span>Object data<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Link newData <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Link<span style="color:#f92672">(</span>data<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>isEmpty<span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+            first <span style="color:#f92672">=</span> newData<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+            last<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> newData<span style="color:#f92672">;</span>
+            newData<span style="color:#f92672">.</span><span style="color:#a6e22e">pre</span> <span style="color:#f92672">=</span> last<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        last <span style="color:#f92672">=</span> newData<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">displayPre</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        Link cu<span style="color:#f92672">=</span>first<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>cu <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            cu<span style="color:#f92672">.</span><span style="color:#a6e22e">displayLink</span><span style="color:#f92672">();</span>
+            cu <span style="color:#f92672">=</span> cu<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">displayLast</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        Link cu<span style="color:#f92672">=</span>last<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>cu <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            cu<span style="color:#f92672">.</span><span style="color:#a6e22e">displayLink</span><span style="color:#f92672">();</span>
+            cu <span style="color:#f92672">=</span> cu<span style="color:#f92672">.</span><span style="color:#a6e22e">pre</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Link</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">public</span> Object dData<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">public</span> Link next<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">public</span> Link pre<span style="color:#f92672">;</span>
+
+        <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Link</span><span style="color:#f92672">(</span>Object d<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            dData <span style="color:#f92672">=</span> d<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">displayLink</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span>dData <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
+<h5 id="树-tree">树 (Tree)</h5>
+
+<p>是包含n（n&gt;0）个结点的有穷集合K，且在K中定义了一个关系N，N满足 以下条件：
+（1）有且仅有一个结点 K0，他对于关系N来说没有前驱，称K0为树的根结点。简称为根（root）。　
+（2）除K0外，K中的每个结点，对于关系N来说有且仅有一个前驱。
+（3）K中各结点，对关系N来说可以有m个后继（m&gt;=0）。
+<img src="http://farwmarth.bestnewbee.com/images/uploads/2013/05/image4.png" alt="image" />
+ <strong>二叉搜索树</strong> :一个节点的左子节点的关键字值小于这个节点,右子节点的关键字值大于或等于这个节点.(可以快速地插入和删除数据项)
+<img src="http://farwmarth.bestnewbee.com/images/uploads/2013/05/image5.png" alt="image" /></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> datastruce<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> java.util.Stack<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BinaryFindTree</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Node</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> data<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">public</span> Node leftChild<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">public</span> Node rightChild<span style="color:#f92672">;</span>
+
+        <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Node</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> data<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> data<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">private</span> Node root<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">BinaryFindTree</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        root <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insert</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> data<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Node newNode <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Node<span style="color:#f92672">(</span>data<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>root <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+            root <span style="color:#f92672">=</span> newNode<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+            Node current <span style="color:#f92672">=</span> root<span style="color:#f92672">;</span> <span style="color:#75715e">// start at root
+</span><span style="color:#75715e"></span>            Node parent<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                parent <span style="color:#f92672">=</span> current<span style="color:#f92672">;</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>data <span style="color:#f92672">&lt;</span> current<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    current <span style="color:#f92672">=</span> current<span style="color:#f92672">.</span><span style="color:#a6e22e">leftChild</span><span style="color:#f92672">;</span>
+                    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>current <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                        parent<span style="color:#f92672">.</span><span style="color:#a6e22e">leftChild</span> <span style="color:#f92672">=</span> newNode<span style="color:#f92672">;</span>
+                        <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+                    <span style="color:#f92672">}</span>
+                <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                    current <span style="color:#f92672">=</span> current<span style="color:#f92672">.</span><span style="color:#a6e22e">rightChild</span><span style="color:#f92672">;</span>
+                    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>current <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                        parent<span style="color:#f92672">.</span><span style="color:#a6e22e">rightChild</span> <span style="color:#f92672">=</span> newNode<span style="color:#f92672">;</span>
+                        <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+                    <span style="color:#f92672">}</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">displayTree</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        Stack globalStack <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Stack<span style="color:#f92672">();</span>
+        globalStack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>root<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">int</span> nBlanks <span style="color:#f92672">=</span> 32<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">boolean</span> isRowEmpty <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span>
+                <span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;......................................................&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>isRowEmpty <span style="color:#f92672">==</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            Stack localStack <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Stack<span style="color:#f92672">();</span>
+            isRowEmpty <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+
+            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> nBlanks<span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span>
+                System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">);</span>
+
+            <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>globalStack<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">()</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                Node temp <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>Node<span style="color:#f92672">)</span> globalStack<span style="color:#f92672">.</span><span style="color:#a6e22e">pop</span><span style="color:#f92672">();</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>temp <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span>temp<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">);</span>
+                    localStack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>temp<span style="color:#f92672">.</span><span style="color:#a6e22e">leftChild</span><span style="color:#f92672">);</span>
+                    localStack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>temp<span style="color:#f92672">.</span><span style="color:#a6e22e">rightChild</span><span style="color:#f92672">);</span>
+
+                    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>temp<span style="color:#f92672">.</span><span style="color:#a6e22e">leftChild</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> temp<span style="color:#f92672">.</span><span style="color:#a6e22e">rightChild</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+                        isRowEmpty <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+                <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;--&#34;</span><span style="color:#f92672">);</span>
+                    localStack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span><span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+                    localStack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span><span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+                <span style="color:#f92672">}</span>
+                <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> nBlanks <span style="color:#f92672">*</span> 2 <span style="color:#f92672">-</span> 2<span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span>
+                    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span> <span style="color:#75715e">// end while globalStack not empty
+</span><span style="color:#75715e"></span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">();</span>
+            nBlanks <span style="color:#f92672">/=</span> 2<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>localStack<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">()</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">)</span>
+                globalStack<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>localStack<span style="color:#f92672">.</span><span style="color:#a6e22e">pop</span><span style="color:#f92672">());</span>
+        <span style="color:#f92672">}</span> <span style="color:#75715e">// end while isRowEmpty is false
+</span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span>
+                <span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;......................................................&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+<span style="color:#f92672">}</span></code></pre></div>
+<h5 id="四叉树-四叉树通常用于2d游戏碰撞检测-ghostcat版as实现"><strong>四叉树</strong>:四叉树通常用于2d游戏碰撞检测.ghostcat版as实现:</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-as" data-lang="as"><span style="color:#66d9ef">package</span> <span style="color:#a6e22e">ghostcat</span>.<span style="color:#a6e22e">algorithm</span>
+{
+    <span style="color:#66d9ef">import</span> <span style="color:#a6e22e">flash</span>.<span style="color:#a6e22e">geom</span>.Rectangle<span style="color:#f92672">;</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 图形筛选4叉树
+</span><span style="color:#75715e">     * @author flashyiyi
+</span><span style="color:#75715e">     *
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">QuadTree</span>
+    {
+        <span style="color:#75715e">/**
+</span><span style="color:#75715e">         * 第1象限
+</span><span style="color:#75715e">         */</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">q1</span><span style="color:#f92672">:</span><span style="color:#a6e22e">QuadTree</span><span style="color:#f92672">;</span>
+        <span style="color:#75715e">/**
+</span><span style="color:#75715e">         * 第2象限
+</span><span style="color:#75715e">         */</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">q2</span><span style="color:#f92672">:</span><span style="color:#a6e22e">QuadTree</span><span style="color:#f92672">;</span>
+        <span style="color:#75715e">/**
+</span><span style="color:#75715e">         * 第3象限
+</span><span style="color:#75715e">         */</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">q3</span><span style="color:#f92672">:</span><span style="color:#a6e22e">QuadTree</span><span style="color:#f92672">;</span>
+        <span style="color:#75715e">/**
+</span><span style="color:#75715e">         * 第4象限
+</span><span style="color:#75715e">         */</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">q4</span><span style="color:#f92672">:</span><span style="color:#a6e22e">QuadTree</span><span style="color:#f92672">;</span>
+        <span style="color:#75715e">/**
+</span><span style="color:#75715e">         * 父节点
+</span><span style="color:#75715e">         */</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">parent</span><span style="color:#f92672">:</span><span style="color:#a6e22e">QuadTree</span><span style="color:#f92672">;</span>
+        <span style="color:#75715e">/**
+</span><span style="color:#75715e">         * 起始节点
+</span><span style="color:#75715e">         */</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">root</span><span style="color:#f92672">:</span><span style="color:#a6e22e">QuadTree</span><span style="color:#f92672">;</span>
+        <span style="color:#75715e">/**
+</span><span style="color:#75715e">         * 图形范围
+</span><span style="color:#75715e">         */</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">rect</span><span style="color:#f92672">:</span>Rectangle<span style="color:#f92672">;</span>
+        <span style="color:#75715e">/**
+</span><span style="color:#75715e">         * 数据
+</span><span style="color:#75715e">         */</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span>Array <span style="color:#f92672">=</span> [];
+
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">QuadTree</span>(<span style="color:#a6e22e">rect</span><span style="color:#f92672">:</span>Rectangle)
+        {
+            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">rect</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">rect</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">root</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">;</span>
+        }
+
+        <span style="color:#75715e">/**
+</span><span style="color:#75715e">         * 创建树结构
+</span><span style="color:#75715e">         * @param deep
+</span><span style="color:#75715e">         *
+</span><span style="color:#75715e">         */</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">createChildren</span>(<span style="color:#a6e22e">deep</span><span style="color:#f92672">:</span>int)<span style="color:#f92672">:</span><span style="color:#a6e22e">void</span>
+        {
+            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">deep</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+                <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+
+            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">hw</span><span style="color:#f92672">:</span>Number <span style="color:#f92672">=</span> <span style="color:#a6e22e">rect</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">hh</span><span style="color:#f92672">:</span>Number <span style="color:#f92672">=</span> <span style="color:#a6e22e">rect</span>.<span style="color:#a6e22e">height</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">;</span>
+
+            <span style="color:#a6e22e">q1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">QuadTree</span>(<span style="color:#66d9ef">new</span> Rectangle(<span style="color:#a6e22e">rect</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">hw</span><span style="color:#f92672">,</span> <span style="color:#a6e22e">rect</span>.<span style="color:#a6e22e">y</span><span style="color:#f92672">,</span> <span style="color:#a6e22e">hw</span><span style="color:#f92672">,</span> <span style="color:#a6e22e">hh</span>));
+            <span style="color:#a6e22e">q2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">QuadTree</span>(<span style="color:#66d9ef">new</span> Rectangle(<span style="color:#a6e22e">rect</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">hw</span><span style="color:#f92672">,</span> <span style="color:#a6e22e">rect</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">hh</span><span style="color:#f92672">,</span> <span style="color:#a6e22e">hw</span><span style="color:#f92672">,</span> <span style="color:#a6e22e">hh</span>));
+            <span style="color:#a6e22e">q3</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">QuadTree</span>(<span style="color:#66d9ef">new</span> Rectangle(<span style="color:#a6e22e">rect</span>.<span style="color:#a6e22e">x</span><span style="color:#f92672">,</span> <span style="color:#a6e22e">rect</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">hh</span><span style="color:#f92672">,</span> <span style="color:#a6e22e">hw</span><span style="color:#f92672">,</span> <span style="color:#a6e22e">hh</span>));
+            <span style="color:#a6e22e">q4</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">QuadTree</span>(<span style="color:#66d9ef">new</span> Rectangle(<span style="color:#a6e22e">rect</span>.<span style="color:#a6e22e">x</span><span style="color:#f92672">,</span> <span style="color:#a6e22e">rect</span>.<span style="color:#a6e22e">y</span><span style="color:#f92672">,</span> <span style="color:#a6e22e">hw</span><span style="color:#f92672">,</span> <span style="color:#a6e22e">hh</span>));
+
+            <span style="color:#a6e22e">q1</span>.<span style="color:#a6e22e">parent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">q2</span>.<span style="color:#a6e22e">parent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">q3</span>.<span style="color:#a6e22e">parent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">q4</span>.<span style="color:#a6e22e">parent</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">;</span>
+            <span style="color:#a6e22e">q1</span>.<span style="color:#a6e22e">root</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">q2</span>.<span style="color:#a6e22e">root</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">q3</span>.<span style="color:#a6e22e">root</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">q4</span>.<span style="color:#a6e22e">root</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">root</span><span style="color:#f92672">;</span>
+
+            <span style="color:#a6e22e">q1</span>.<span style="color:#a6e22e">createChildren</span>(<span style="color:#a6e22e">deep</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+            <span style="color:#a6e22e">q2</span>.<span style="color:#a6e22e">createChildren</span>(<span style="color:#a6e22e">deep</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+            <span style="color:#a6e22e">q3</span>.<span style="color:#a6e22e">createChildren</span>(<span style="color:#a6e22e">deep</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+            <span style="color:#a6e22e">q4</span>.<span style="color:#a6e22e">createChildren</span>(<span style="color:#a6e22e">deep</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+        }
+
+        <span style="color:#75715e">/**
+</span><span style="color:#75715e">         * 是否有子树
+</span><span style="color:#75715e">         * @return
+</span><span style="color:#75715e">         *
+</span><span style="color:#75715e">         */</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#66d9ef">get</span> <span style="color:#a6e22e">hasChildren</span>()<span style="color:#f92672">:</span>Boolean
+        {
+            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">q1</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">q2</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">q3</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">q4</span><span style="color:#f92672">;</span>
+        }
+
+        <span style="color:#75715e">/**
+</span><span style="color:#75715e">         * 添加一个数据
+</span><span style="color:#75715e">         * @param v
+</span><span style="color:#75715e">         * @param x
+</span><span style="color:#75715e">         * @param y
+</span><span style="color:#75715e">         * @return
+</span><span style="color:#75715e">         *
+</span><span style="color:#75715e">         */</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">v</span><span style="color:#f92672">:*,</span> <span style="color:#a6e22e">x</span><span style="color:#f92672">:</span>Number<span style="color:#f92672">,</span> <span style="color:#a6e22e">y</span><span style="color:#f92672">:</span>Number)<span style="color:#f92672">:</span><span style="color:#a6e22e">QuadTree</span>
+        {
+            <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">isIn</span>(<span style="color:#a6e22e">x</span><span style="color:#f92672">,</span><span style="color:#a6e22e">y</span>))
+                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+
+            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">hasChildren</span>)
+            {
+                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">q1</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">v</span><span style="color:#f92672">,</span><span style="color:#a6e22e">x</span><span style="color:#f92672">,</span><span style="color:#a6e22e">y</span>) <span style="color:#f92672">||</span> <span style="color:#a6e22e">q2</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">v</span><span style="color:#f92672">,</span><span style="color:#a6e22e">x</span><span style="color:#f92672">,</span><span style="color:#a6e22e">y</span>) <span style="color:#f92672">||</span> <span style="color:#a6e22e">q3</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">v</span><span style="color:#f92672">,</span><span style="color:#a6e22e">x</span><span style="color:#f92672">,</span><span style="color:#a6e22e">y</span>) <span style="color:#f92672">||</span> <span style="color:#a6e22e">q4</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">v</span><span style="color:#f92672">,</span><span style="color:#a6e22e">x</span><span style="color:#f92672">,</span><span style="color:#a6e22e">y</span>);
+            }
+            <span style="color:#66d9ef">else</span>
+            {
+                <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">v</span>);
+                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">;</span>
+            }
+        }
+
+        <span style="color:#75715e">/**
+</span><span style="color:#75715e">         * 删除一个数据，坐标为NaN则会进行遍历查找
+</span><span style="color:#75715e">         * @param v
+</span><span style="color:#75715e">         * @param x
+</span><span style="color:#75715e">         * @param y
+</span><span style="color:#75715e">         * @return
+</span><span style="color:#75715e">         *
+</span><span style="color:#75715e">         */</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">remove</span>(<span style="color:#a6e22e">v</span><span style="color:#f92672">:*,</span> <span style="color:#a6e22e">x</span><span style="color:#f92672">:</span>Number <span style="color:#f92672">=</span> <span style="color:#66d9ef">NaN</span><span style="color:#f92672">,</span> <span style="color:#a6e22e">y</span><span style="color:#f92672">:</span>Number <span style="color:#f92672">=</span> <span style="color:#66d9ef">NaN</span>)<span style="color:#f92672">:</span><span style="color:#a6e22e">QuadTree</span>
+        {
+            <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">isIn</span>(<span style="color:#a6e22e">x</span><span style="color:#f92672">,</span><span style="color:#a6e22e">y</span>))
+                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+
+            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">hasChildren</span>)
+            {
+                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">q1</span>.<span style="color:#a6e22e">remove</span>(<span style="color:#a6e22e">v</span><span style="color:#f92672">,</span><span style="color:#a6e22e">x</span><span style="color:#f92672">,</span><span style="color:#a6e22e">y</span>) <span style="color:#f92672">||</span> <span style="color:#a6e22e">q2</span>.<span style="color:#a6e22e">remove</span>(<span style="color:#a6e22e">v</span><span style="color:#f92672">,</span><span style="color:#a6e22e">x</span><span style="color:#f92672">,</span><span style="color:#a6e22e">y</span>) <span style="color:#f92672">||</span> <span style="color:#a6e22e">q3</span>.<span style="color:#a6e22e">remove</span>(<span style="color:#a6e22e">v</span><span style="color:#f92672">,</span><span style="color:#a6e22e">x</span><span style="color:#f92672">,</span><span style="color:#a6e22e">y</span>) <span style="color:#f92672">||</span> <span style="color:#a6e22e">q4</span>.<span style="color:#a6e22e">remove</span>(<span style="color:#a6e22e">v</span><span style="color:#f92672">,</span><span style="color:#a6e22e">x</span><span style="color:#f92672">,</span><span style="color:#a6e22e">y</span>);
+            }
+            <span style="color:#66d9ef">else</span>
+            {
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">index</span><span style="color:#f92672">:</span>int <span style="color:#f92672">=</span> <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#a6e22e">v</span>);
+                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">index</span><span style="color:#f92672">!=-</span><span style="color:#ae81ff">1</span>)
+                {
+                    <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#a6e22e">index</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">1</span>);
+                    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">;</span>
+                }
+                <span style="color:#66d9ef">else</span>
+                {
+                    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+                }
+            }
+        }
+
+        <span style="color:#75715e">/**
+</span><span style="color:#75715e">         * 检测是否还在当前区间内，并返回新的区间
+</span><span style="color:#75715e">         * @param v
+</span><span style="color:#75715e">         * @param x
+</span><span style="color:#75715e">         * @param y
+</span><span style="color:#75715e">         * @return
+</span><span style="color:#75715e">         *
+</span><span style="color:#75715e">         */</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">reinsert</span>(<span style="color:#a6e22e">v</span><span style="color:#f92672">:*,</span> <span style="color:#a6e22e">x</span><span style="color:#f92672">:</span>Number<span style="color:#f92672">,</span> <span style="color:#a6e22e">y</span><span style="color:#f92672">:</span>Number)<span style="color:#f92672">:</span><span style="color:#a6e22e">QuadTree</span>
+        {
+            <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">isIn</span>(<span style="color:#a6e22e">x</span><span style="color:#f92672">,</span><span style="color:#a6e22e">y</span>))
+            {
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">result</span><span style="color:#f92672">:</span><span style="color:#a6e22e">QuadTree</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">root</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">v</span><span style="color:#f92672">,</span><span style="color:#a6e22e">x</span><span style="color:#f92672">,</span><span style="color:#a6e22e">y</span>);
+                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">result</span>)
+                {
+                    <span style="color:#a6e22e">remove</span>(<span style="color:#a6e22e">v</span>);
+                    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span><span style="color:#f92672">;</span>
+                }
+            }
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">;</span>
+        }
+
+        <span style="color:#75715e">/**
+</span><span style="color:#75715e">         * 判断坐标是否在界限内，设为NaN则不做限制
+</span><span style="color:#75715e">         * @param x
+</span><span style="color:#75715e">         * @param y
+</span><span style="color:#75715e">         * @return
+</span><span style="color:#75715e">         *
+</span><span style="color:#75715e">         */</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">isIn</span>(<span style="color:#a6e22e">x</span><span style="color:#f92672">:</span>Number<span style="color:#f92672">,</span> <span style="color:#a6e22e">y</span><span style="color:#f92672">:</span>Number)<span style="color:#f92672">:</span>Boolean
+        {
+            <span style="color:#66d9ef">return</span> (<span style="color:#a6e22e">isNaN</span>(<span style="color:#a6e22e">x</span>) <span style="color:#f92672">||</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">&gt;=</span> <span style="color:#a6e22e">rect</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">rect</span>.<span style="color:#a6e22e">right</span>) <span style="color:#f92672">&amp;&amp;</span> (<span style="color:#a6e22e">isNaN</span>(<span style="color:#a6e22e">y</span>) <span style="color:#f92672">||</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">&gt;=</span> <span style="color:#a6e22e">rect</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">rect</span>.<span style="color:#a6e22e">bottom</span>);
+        }
+
+        <span style="color:#75715e">/**
+</span><span style="color:#75715e">         * 获得一个范围内的所有数据
+</span><span style="color:#75715e">         *
+</span><span style="color:#75715e">         * @param rect
+</span><span style="color:#75715e">         *
+</span><span style="color:#75715e">         */</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getDataInRect</span>(<span style="color:#a6e22e">rect</span><span style="color:#f92672">:</span>Rectangle)<span style="color:#f92672">:</span>Array
+        {
+            <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">rect</span>.<span style="color:#a6e22e">intersects</span>(<span style="color:#a6e22e">rect</span>))
+                <span style="color:#66d9ef">return</span> [];
+
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">result</span><span style="color:#f92672">:</span>Array <span style="color:#f92672">=</span> <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">concat</span>();
+            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">hasChildren</span>)
+            {
+                <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">push</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#66d9ef">null</span><span style="color:#f92672">,</span><span style="color:#a6e22e">q1</span>.<span style="color:#a6e22e">getDataInRect</span>(<span style="color:#a6e22e">rect</span>));
+                <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">push</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#66d9ef">null</span><span style="color:#f92672">,</span><span style="color:#a6e22e">q2</span>.<span style="color:#a6e22e">getDataInRect</span>(<span style="color:#a6e22e">rect</span>));
+                <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">push</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#66d9ef">null</span><span style="color:#f92672">,</span><span style="color:#a6e22e">q3</span>.<span style="color:#a6e22e">getDataInRect</span>(<span style="color:#a6e22e">rect</span>));
+                <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">push</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#66d9ef">null</span><span style="color:#f92672">,</span><span style="color:#a6e22e">q4</span>.<span style="color:#a6e22e">getDataInRect</span>(<span style="color:#a6e22e">rect</span>));
+            }
+            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span><span style="color:#f92672">;</span>
+        }
+    }
+}</code></pre></div>
+<h5 id="图-graph">图 (Graph)</h5>
+
+<p>图是由结点的有穷集合V和边的集合E组成。其中，为了与树形结构加以<a href="http://baike.baidu.com/view/367270.htm">区别</a>，在图结构中常常将结点称为顶点，边是顶点的有序偶对，若两个顶点之间存在一条边，就表示这两个顶点具有相邻关系。</p>
+
+<h5 id="堆-heap">堆 (Heap)</h5>
+
+<p>在计算机科学中，堆是一种特殊的树形数据结构，每个结点都有一个值。通常我们所说的堆的数据结构，是指二叉堆。堆的特点是根结点的值最小（或最大），且根结点的两个子树也是一个堆。</p>
+
+<p>二叉堆 :特殊结构的二叉树,比优先队列效率更高</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> ds
+<span style="color:#f92672">{</span>
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * Heap是一种特殊的二叉树，它的每个节点都比它的子节点大。内部实现是用数组存储的。
+</span><span style="color:#75715e">     * &lt;p&gt;
+</span><span style="color:#75715e">     * 比如原树状结构为：
+</span><span style="color:#75715e">     *    2
+</span><span style="color:#75715e">     *   / \
+</span><span style="color:#75715e">     *  1   0
+</span><span style="color:#75715e">     * 则存储成数组为：
+</span><span style="color:#75715e">     * [2,1,0]
+</span><span style="color:#75715e">     * &lt;/p&gt;
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Heap</span>
+    <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">private</span> var _heap:Array
+        <span style="color:#66d9ef">private</span> var _compare:Function
+
+        <span style="color:#75715e">/**
+</span><span style="color:#75715e">         * @param compare  返回正数，则a排在b前边,如果不指定，默认为 function (a:int,b:int):int{return a-b};
+</span><span style="color:#75715e">         */</span>
+        <span style="color:#66d9ef">public</span> function <span style="color:#a6e22e">Heap</span><span style="color:#f92672">(</span>compare:Function <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">):</span><span style="color:#66d9ef">void</span>
+        <span style="color:#f92672">{</span>
+            _heap <span style="color:#f92672">=</span> <span style="color:#f92672">[];</span>
+            <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>compare<span style="color:#f92672">==</span><span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+                _compare <span style="color:#f92672">=</span>  function <span style="color:#f92672">(</span>a:<span style="color:#66d9ef">int</span><span style="color:#f92672">,</span>b:<span style="color:#66d9ef">int</span><span style="color:#f92672">):</span><span style="color:#66d9ef">int</span><span style="color:#f92672">{</span><span style="color:#66d9ef">return</span> a<span style="color:#f92672">-</span>b<span style="color:#f92672">};</span>
+            <span style="color:#66d9ef">else</span>
+                _compare <span style="color:#f92672">=</span>compare<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">public</span> function get <span style="color:#a6e22e">length</span><span style="color:#f92672">():</span>uint
+        <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> _heap<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">public</span> function <span style="color:#a6e22e">modify</span><span style="color:#f92672">(</span>obj:<span style="color:#f92672">*,</span>newObj:<span style="color:#f92672">*):</span>Boolean
+        <span style="color:#f92672">{</span>
+             var objIndex:<span style="color:#66d9ef">int</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">_heap</span><span style="color:#f92672">.</span><span style="color:#a6e22e">indexOf</span><span style="color:#f92672">(</span>obj<span style="color:#f92672">);</span>
+             <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>objIndex<span style="color:#f92672">&lt;</span>0<span style="color:#f92672">)</span><span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>
+             _heap<span style="color:#f92672">[</span>objIndex<span style="color:#f92672">]=</span> newObj
+             var parentIndex:<span style="color:#66d9ef">int</span> <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>objIndex<span style="color:#f92672">-</span>1<span style="color:#f92672">)&gt;&gt;</span>1
+             var temp:<span style="color:#f92672">*</span> <span style="color:#f92672">=</span>  _heap<span style="color:#f92672">[</span>objIndex<span style="color:#f92672">]</span>
+             <span style="color:#a6e22e">while</span><span style="color:#f92672">(</span>objIndex<span style="color:#f92672">&gt;</span>0<span style="color:#f92672">)</span> <span style="color:#75715e">//只有objIndex&gt;0才有可能有parent
+</span><span style="color:#75715e"></span>             <span style="color:#f92672">{</span>
+                 <span style="color:#75715e">//如果新插入的数据大于parent的数据，则应不断上移与parent交换位置
+</span><span style="color:#75715e"></span>                 <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>_compare<span style="color:#f92672">(</span>temp<span style="color:#f92672">,</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">_heap</span><span style="color:#f92672">[</span>parentIndex<span style="color:#f92672">])&gt;</span>0<span style="color:#f92672">)</span>
+                 <span style="color:#f92672">{</span>
+                     <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">_heap</span><span style="color:#f92672">[</span>objIndex<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">_heap</span><span style="color:#f92672">[</span>parentIndex<span style="color:#f92672">]</span>
+                     objIndex <span style="color:#f92672">=</span> parentIndex
+                     parentIndex <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>parentIndex<span style="color:#f92672">-</span>1<span style="color:#f92672">)&gt;&gt;</span>1 <span style="color:#75715e">//parent索引的算法
+</span><span style="color:#75715e"></span>                 <span style="color:#f92672">}</span><span style="color:#66d9ef">else</span>
+                 <span style="color:#f92672">{</span>
+                     <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+                 <span style="color:#f92672">}</span>
+             <span style="color:#f92672">}</span>
+             _heap<span style="color:#f92672">[</span>objIndex<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> temp
+             <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>
+
+        <span style="color:#f92672">}</span>
+        <span style="color:#75715e">//入队
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">//parentIndex = (childindex -1)/2
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">public</span> function <span style="color:#a6e22e">enqueue</span><span style="color:#f92672">(</span>obj:<span style="color:#f92672">*):</span><span style="color:#66d9ef">void</span>
+        <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">_heap</span><span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>obj<span style="color:#f92672">)</span>
+
+            var parentIndex:<span style="color:#66d9ef">int</span> <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">_heap</span><span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">-</span>2<span style="color:#f92672">)&gt;&gt;</span> 1
+            var objIndex:<span style="color:#66d9ef">int</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">_heap</span><span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span>1
+            var temp:<span style="color:#f92672">*</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">_heap</span><span style="color:#f92672">[</span>objIndex<span style="color:#f92672">]</span>
+
+            <span style="color:#a6e22e">while</span><span style="color:#f92672">(</span>objIndex<span style="color:#f92672">&gt;</span>0<span style="color:#f92672">)</span> <span style="color:#75715e">//只有objIndex&gt;0才有可能有parent
+</span><span style="color:#75715e"></span>            <span style="color:#f92672">{</span>
+                <span style="color:#75715e">//如果新插入的数据大于parent的数据，则应不断上移与parent交换位置
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>_compare<span style="color:#f92672">(</span>temp<span style="color:#f92672">,</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">_heap</span><span style="color:#f92672">[</span>parentIndex<span style="color:#f92672">])&gt;</span>0<span style="color:#f92672">)</span>
+                <span style="color:#f92672">{</span>
+                    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">_heap</span><span style="color:#f92672">[</span>objIndex<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">_heap</span><span style="color:#f92672">[</span>parentIndex<span style="color:#f92672">]</span>
+                    objIndex <span style="color:#f92672">=</span> parentIndex
+                    parentIndex <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>parentIndex<span style="color:#f92672">-</span>1<span style="color:#f92672">)&gt;&gt;</span>1 <span style="color:#75715e">//parent索引的算法
+</span><span style="color:#75715e"></span>                <span style="color:#f92672">}</span><span style="color:#66d9ef">else</span>
+                <span style="color:#f92672">{</span>
+                    <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span>
+            _heap<span style="color:#f92672">[</span>objIndex<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> temp
+
+        <span style="color:#f92672">}</span>
+        <span style="color:#75715e">//出队
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">public</span> function <span style="color:#a6e22e">dequeue</span><span style="color:#f92672">():*</span>
+        <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>_heap<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">&gt;</span>1<span style="color:#f92672">)</span>
+            <span style="color:#f92672">{</span>
+                var r:<span style="color:#f92672">*</span> <span style="color:#f92672">=</span> _heap<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>
+                _heap<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> _heap<span style="color:#f92672">.</span><span style="color:#a6e22e">pop</span><span style="color:#f92672">()</span>
+                var parentIndex:<span style="color:#66d9ef">int</span> <span style="color:#f92672">=</span> 0
+                var childIndex:<span style="color:#66d9ef">int</span> <span style="color:#f92672">=</span> 1
+                var temp:<span style="color:#f92672">*</span> <span style="color:#f92672">=</span> _heap<span style="color:#f92672">[</span>parentIndex<span style="color:#f92672">]</span>
+                <span style="color:#a6e22e">while</span><span style="color:#f92672">(</span>childIndex <span style="color:#f92672">&lt;=</span> _heap<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">-</span>1<span style="color:#f92672">)</span>
+                <span style="color:#f92672">{</span>
+                        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>_heap<span style="color:#f92672">[</span>childIndex<span style="color:#f92672">+</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">_compare</span><span style="color:#f92672">(</span>_heap<span style="color:#f92672">[</span>childIndex<span style="color:#f92672">],</span>_heap<span style="color:#f92672">[</span>childIndex<span style="color:#f92672">+</span>1<span style="color:#f92672">])&lt;</span>0<span style="color:#f92672">)</span>
+                        <span style="color:#f92672">{</span>
+                         childIndex<span style="color:#f92672">++</span>
+                        <span style="color:#f92672">}</span>
+                    <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">_compare</span><span style="color:#f92672">(</span>temp<span style="color:#f92672">,</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">_heap</span><span style="color:#f92672">[</span>childIndex<span style="color:#f92672">])&lt;</span>0<span style="color:#f92672">)</span>
+                    <span style="color:#f92672">{</span>
+                          <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">_heap</span><span style="color:#f92672">[</span>parentIndex<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> _heap<span style="color:#f92672">[</span>childIndex<span style="color:#f92672">]</span>
+                          parentIndex <span style="color:#f92672">=</span> childIndex<span style="color:#f92672">;</span>
+                          childIndex <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>childIndex <span style="color:#f92672">&lt;&lt;</span>1<span style="color:#f92672">)+</span>1
+                    <span style="color:#f92672">}</span><span style="color:#66d9ef">else</span>
+                    <span style="color:#f92672">{</span>
+                        <span style="color:#66d9ef">break</span>
+                    <span style="color:#f92672">}</span>
+
+                <span style="color:#f92672">}</span>
+                _heap<span style="color:#f92672">[</span>parentIndex<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> temp
+                <span style="color:#66d9ef">return</span> r
+            <span style="color:#f92672">}</span>
+            <span style="color:#66d9ef">return</span> _heap<span style="color:#f92672">.</span><span style="color:#a6e22e">pop</span><span style="color:#f92672">()</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">public</span> function <span style="color:#a6e22e">toString</span><span style="color:#f92672">():</span>String
+        <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">_heap</span><span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">public</span> function get <span style="color:#a6e22e">heap</span><span style="color:#f92672">():</span>Array
+        <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> _heap<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
+<h5 id="散列表-hash">散列表 (Hash)</h5>
+
+<p>若结构中存在关键字和K相等的记录，则必定在f(K)的存储位置上。由此，不需比较便可直接取得所查记录。称这个对应关系f为散列函数(Hash function)，按这个思想建立的表为<a href="http://baike.baidu.com/view/1320746.htm">散列表</a>。</p>
+
+<p><a href="http://www.nshen.net/dataStructure/2011/08/25/AS3-DataStructure.html">http://www.nshen.net/dataStructure/2011/08/25/AS3-DataStructure.html</a></p>
+
+<p><a href="http://blog.csdn.net/zhanxinhang/article/details/6706217">http://blog.csdn.net/zhanxinhang/article/details/6706217</a></p>
+    </div>
+    <footer class="post-footer">
+     
+
+
+<div class="post-tags">
+     
+    <a href="http://farwmarth.com/tags/base" rel="tag" title="base">#base#</a>
+    
+</div>
+
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="http://farwmarth.com/post/%E6%9C%80%E8%BF%91%E8%BF%B7%E6%81%8B%E4%B8%8A%E5%B0%8F%E9%9C%B8%E7%8E%8B%E6%B8%B8%E6%88%8F%E5%B0%8F%E8%9C%9C%E8%9C%82/" rel="next" title="最近迷恋上小霸王游戏:小蜜蜂">
+        <i class="fa fa-chevron-left"></i> 最近迷恋上小霸王游戏:小蜜蜂
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="http://farwmarth.com/post/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90/" rel="prev" title="斗地主结构分析">
+        斗地主结构分析 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="http://farwmarth.com/img/author.jpg"
+        alt="farwmarth" />
+    <p class="site-author-name" itemprop="name">farwmarth</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="http://farwmarth.com/post/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="http://farwmarth.com/categories/">      
+         
+        <span class="site-state-item-count">31</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="http://farwmarth.com/tags/">
+         
+        <span class="site-state-item-count">90</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/wujiyu115/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">farwmarth</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.6</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=286131889" charset="UTF-8"></script> 
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="http://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/utils.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/motion.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/affix.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/post-details.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/toc.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

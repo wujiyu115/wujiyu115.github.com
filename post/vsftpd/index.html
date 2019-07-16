@@ -1,0 +1,642 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>vsftpd使用 - farwmarth</title>
+    <meta name="keywords" content="程序员">
+    
+    <meta property="og:title" content="vsftpd使用">
+    <meta property="og:site_name" content="farwmarth">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="vsftpd使用 - farwmarth" />
+    <meta name="description" content="game"> 
+    <link rel="shortcut icon" href="http://farwmarth.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link href="http://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="http://farwmarth.com/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">farwmarth</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Those that can,do.Those that can&#39;t ,complain</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/douban/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />豆瓣
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/music/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-music"></i> <br />音乐
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/vsftpd/" itemprop="url">
+        vsftpd使用
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-05-17">
+    2016-05-17
+</time>
+</span> 
+      
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">3368 字 ~7分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <h2 id="安装">安装</h2>
+
+<p>vsftpd意思为“very secure FTP daemon(非常安全的FTP进程)”，是一个基于GPL发布的类UNIX类操作系统上运行的服务器的名字（是一种守护进程），可以运行在诸如Linux、BSD、Solaris、HP-UX以及Irix等系统上面。vsftpd支持很多其他传统的FTP服务器不支持的良好特性</p>
+
+<h3 id="命令">命令</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#安装</span>
+yum install vsftpd
+<span style="color:#75715e">#启动</span>
+service vsftpd start
+<span style="color:#75715e">#重启</span>
+service vsfptd restart</code></pre></div>
+<h2 id="配置">配置</h2>
+
+<h3 id="配置文件">配置文件</h3>
+
+<p>在<code>/etc/vsftpd</code>目录下的配置文件:
++ <code>vsfptd.conf</code>:主配置
++ <code>ftpusers</code>:不允许登录的用户,不受任何配制项的影响
++ <code>userlist_file</code>:<code>userlist_enable</code>和<code>userlist_deny</code>控制,这两个参数配置不同他可以是白名单也可以是黑名单.创建tom: 在user_list中,jim:不在user_list中测试配置关系
+  - Case 1: userlist_enable=YES, userlist_deny=YES
+  tom: 拒绝登入
+  jim: 允许登录
+  - Case 2: userlist_enable=YES, userlist_deny=NO
+  tom: 允许登录
+  jim:拒绝登录（如user_list文件开头的注释所述，甚至不会提示输入密码，即无登入提示框，直接拒绝连接）
+  - Case 3: userlist_enable=NO,userlist_deny=NO
+  tom: 允许登录
+  jim: 允许登录
+  - Case 4: userlist_enable=NO,userlist_deny=YES
+  tom: 允许登录
+  jim: 允许登录
+  - userlist_enable和userlist_deny两个选项联合起来针对的是：本地全体用户（除去ftpusers中的用户）和出现在user_list文件中的用户以及不在在user_list文件中的用户这三类用户集合进行的设置。
+  - 当且仅当userlist_enable=YES时：userlist_deny项的配置才有效，user_list文件才会被使用；当其为NO时，无论userlist_deny项为何值都是无效的，本地全体用户（除去ftpusers中的用户）都可以登入FTP
+  - 当userlist_enable=YES时，userlist_deny=YES时：user_list是一个黑名单，即：所有出现在名单中的用户都会被拒绝登入；
+  - 当userlist_enable=YES时，userlist_deny=NO时：user_list是一个白名单，即：只有出现在名单中的用户才会被准许登入(user_list之外的用户都被拒绝登入)；另外需要特别提醒的是：使用白名单后，匿名用户将无法登入！除非显式在user_list中加入一行：anonymous</p>
+
+<h3 id="更改vsfptd-conf关键配置">更改vsfptd.conf关键配置:</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#接受匿名用户</span>
+anonymous_enable<span style="color:#f92672">=</span>NO
+<span style="color:#75715e">#若为YES,则userlist_file中的用户将不能登录,为NO则只有userlist_file的用户可以登录</span>
+userlist_deny<span style="color:#f92672">=</span>NO
+<span style="color:#75715e">#监听端口</span>
+listen_port <span style="color:#f92672">=</span> <span style="color:#ae81ff">21</span>
+<span style="color:#75715e">#指定默认用户目录</span>
+local_root<span style="color:#f92672">=</span>/var/www/html
+<span style="color:#75715e">#指定系统用户只能访问其主目录</span>
+chroot_local_user<span style="color:#f92672">=</span>YES
+chroot_list_enable<span style="color:#f92672">=</span>YES
+chroot_list_file<span style="color:#f92672">=</span>YES
+<span style="color:#75715e">#匿名用户目录</span>
+anon_root<span style="color:#f92672">=</span>/var/www/html</code></pre></div>
+<h3 id="添加用户登录">添加用户登录</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#添加用户update主目录为/home/user_update</span>
+useradd -d /home/user_update update -s /bin/bash
+<span style="color:#75715e">#设置密码</span>
+passwd update
+<span style="color:#75715e">## 更改用户update的主目录为/update</span>
+usermod -d /user_update update
+<span style="color:#75715e">#在 `/etc/vsftpd/userlist_file` 中添加`update`用户</span>
+<span style="color:#75715e">#更改目录权限给update</span>
+chown -R update client_update/
+chmod -R <span style="color:#ae81ff">755</span> 目录</code></pre></div>
+<h3 id="防火墙">防火墙</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">iptables -A INPUT -p tcp --dport <span style="color:#ae81ff">21</span> -j ACCEPT
+service iptables save
+service iptables status
+service iptables restart</code></pre></div>
+<h3 id="cannot-change-directory-root">cannot change directory:/root</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#设置切换目录</span>
+setsebool -P ftpd_disable_trans <span style="color:#ae81ff">1</span>
+<span style="color:#75715e">#设置ftp读写控制</span>
+setsebool -P allow_ftpd_full_access <span style="color:#ae81ff">1</span>
+service vsftpd restart</code></pre></div>
+<h3 id="linux-vsftpd-550-create-directory-operation-failed">linux vsftpd 550 create directory operation failed</h3>
+
+<p>关闭SELinux方法</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#vi /etc/selinux/config</span>
+SELINUX<span style="color:#f92672">=</span>disabled</code></pre></div>
+<h4 id="如果用root登录">如果用root登录</h4>
+
+<ul>
+<li>注释 <code>/etc/vsftpd/ftpusers</code> 中<code>root</code>用户</li>
+<li>在 <code>/etc/vsftpd/userlist_file</code> 中添加<code>root</code>用户</li>
+</ul>
+
+<h2 id="配详解">配详解</h2>
+
+<p><a href="http://blog.sina.com.cn/s/blog_56ae1d580100yhel.html">vsftpd.conf中文详解</a>
+<code>/etc/vsftpd/vsftpd.conf</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">#################用户选项###############
+接受匿名用户
+anonymous_enable=YES
+
+#匿名用户login时不询问口令
+no_anon_password=YES
+
+#匿名用户主目录
+anon_root=(none)
+
+#接受本地用户
+local_enable=YES
+
+#本地用户主目录
+local_root=(none)
+
+#如果匿名用户需要密码,那么使用banned_email_file里面的电子邮件地址的用户不能登录
+deny_email_enable=YES
+
+#仅在没有pam验证版本时有用,是否检查用户有一个有效的shell来登录
+check_shell=YES
+
+#若启用此选项,userlist_deny选项才被启动
+userlist_enable=YES
+
+#若为YES,则userlist_file中的用户将不能登录,为NO则只有userlist_file的用户可以登录
+userlist_deny=NO
+
+#如果和chroot_local_user一起开启,那么用户锁定的目录来自/etc/passwd每个用户指定的目录(这个不是很清楚,很哪位熟悉的指点一下)
+passwd_chroot_enable=NO
+
+#定义匿名登入的使用者名称。默认值为ftp。
+ftp_username=FTP
+
+#################用户权限控制###############
+
+#可以上传(全局控制).
+write_enable=YES
+
+#本地用户上传文件的umask
+local_umask=022
+
+#上传文件的权限配合umask使用
+#file_open_mode=0666
+
+#匿名用户可以上传
+anon_upload_enable=NO
+
+#匿名用户可以建目录
+anon_mkdir_write_enable=NO
+
+匿名用户其它的写权利(更改权限?)
+anon_other_write_enable=NO
+
+如果设为YES，匿名登入者会被允许下载可阅读的档案。默认值为YES。
+anon_world_readable_only=YES
+
+#如果开启,那么所有非匿名登陆的用户名都会被切换成guest_username指定的用户名
+#guest_enable=NO
+
+所有匿名上传的文件的所属用户将会被更改成chown_username
+chown_uploads=YES
+
+匿名上传文件所属用户名
+chown_username=lightwiter
+
+#如果启动这项功能，则所有列在chroot_list_file之中的使用者不能更改根目录
+chroot_list_enable=YES
+
+#允许使用\&#34;async ABOR\&#34;命令,一般不用,容易出问题
+async_abor_enable=YES
+
+管控是否可用ASCII 模式上传。默认值为NO。
+ascii_upload_enable=YES
+
+#管控是否可用ASCII 模式下载。默认值为NO。
+ascii_download_enable=YES
+
+#这个选项必须指定一个空的数据夹且任何登入者都不能有写入的权限，当vsftpd 不需要file system 的权限时，就会将使用者限制在此数据夹中。默认值为/usr/share/empty
+secure_chroot_dir=/usr/share/empty
+
+###################超时设置##################
+
+#空闲连接超时
+idle_session_timeout=600
+
+#数据传输超时
+data_connection_timeout=120
+
+#PAVS请求超时
+ACCEPT_TIMEOUT=60
+
+#PROT模式连接超时
+connect_timeout=60
+
+################服务器功能选项###############
+
+#开启日记功能
+xferlog_enable=YES
+
+#使用标准格式
+xferlog_std_format=YES
+
+#当xferlog_std_format关闭且本选项开启时,记录所有ftp请求和回复,当调试比较有用.
+#log_ftp_protocol=NO
+
+#允许使用pasv模式
+pasv_enable=YES
+
+#关闭安全检查,小心呀.
+#pasv_promiscuous+NO
+
+#允许使用port模式
+#port_enable=YES
+
+#关闭安全检查
+#prot_promiscuous
+
+#开启tcp_wrappers支持
+tcp_wrappers=YES
+
+#定义PAM 所使用的名称，预设为vsftpd。
+pam_service_name=vsftpd
+
+#当服务器运行于最底层时使用的用户名
+nopriv_user=nobody
+
+#使vsftpd在pasv命令回复时跳转到指定的IP地址.(服务器联接跳转?)
+pasv_address=(none)
+
+#################服务器性能选项##############
+
+#是否能使用ls -R命令以防止浪费大量的服务器资源
+#ls_recurse_enable=YES
+
+#是否使用单进程模式
+#one_process_model
+
+#绑定到listen_port指定的端口,既然都绑定了也就是每时都开着的,就是那个什么standalone模式
+listen=YES
+
+#当使用者登入后使用ls -al 之类的指令查询该档案的管理权时，预设会出现拥有者的UID，而不是该档案拥有者的名称。若是希望出现拥有者的名称，则将此功能开启。
+text_userdb_names=NO
+
+#显示目录清单时是用本地时间还是GMT时间,可以通过mdtm命令来达到一样的效果
+use_localtime=NO
+
+#测试平台优化
+#use_sendfile=YES
+
+################信息类设置################
+
+#login时显示欢迎信息.如果设置了banner_file则此设置无效
+ftpd_banner=欢迎来到湖南三辰Fake-Ta FTP 网站.
+
+#允许为目录配置显示信息,显示每个目录下面的message_file文件的内容
+dirmessage_enable=YES
+
+#显示会话状态信息,关!
+#setproctitle_enable=YES
+
+############## 文件定义 ##################
+
+#定义不能更改用户主目录的文件
+chroot_list_file=/etc/vsftpd/vsftpd.chroot_list
+
+#定义限制/允许用户登录的文件
+userlist_file=/etc/vsftpd/vsftpd.user_list
+
+#定义登录信息文件的位置
+banner_file=/etc/vsftpd/banner
+
+#禁止使用的匿名用户登陆时作为密码的电子邮件地址
+banned_email_file=/etc/vsftpd.banned_emails
+
+#日志文件位置
+xferlog_file=/var/log/vsftpd.log
+
+#目录信息文件
+message_file=.message
+
+############## 目录定义 #################
+
+#定义用户配置文件的目录
+user_config_dir=/etc/vsftpd/userconf
+
+#定义本地用户登陆的根目录,注意定义根目录可以是相对路径也可以是绝对路径.相对路径是针对用户家目录来说的.
+local_root=webdisk #此项设置每个用户登陆后其根目录为/home/username/webdisk
+
+#匿名用户登陆后的根目录
+anon_root=/var/ftp
+
+#############用户连接选项#################
+
+#可接受的最大client数目
+max_clients=100
+
+#每个ip的最大client数目
+max_per_ip=5
+
+#使用标准的20端口来连接ftp
+connect_from_port_20=YES
+
+#绑定到某个IP,其它IP不能访问
+listen_address=192.168.0.2
+
+#绑定到某个端口
+#listen_port=2121
+
+#数据传输端口
+#ftp_data_port=2020
+
+#pasv连接模式时可以使用port 范围的上界，0 表示任意。默认值为0。
+pasv_max_port=0
+
+#pasv连接模式时可以使用port 范围的下界，0 表示任意。默认值为0。
+pasv_min_port=0
+
+##############数据传输选项#################
+
+#匿名用户的传输比率(b/s)
+anon_max_rate=51200
+
+#本地用户的传输比率(b/s)
+local_max_rate=5120000</pre></div>
+<p><a href="http://desert3.iteye.com/blog/1685734">http://desert3.iteye.com/blog/1685734</a></p>
+    </div>
+    <footer class="post-footer">
+     
+
+
+<div class="post-tags">
+     
+    <a href="http://farwmarth.com/tags/vsftpd" rel="tag" title="vsftpd">#vsftpd#</a>
+    
+</div>
+
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="http://farwmarth.com/post/mkdocs/" rel="next" title="readthedocs切换到mkdocs">
+        <i class="fa fa-chevron-left"></i> readthedocs切换到mkdocs
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="http://farwmarth.com/post/%E8%84%9A%E6%9C%AC%E8%87%AA%E5%8A%A8%E5%8C%96%E6%89%8B%E5%86%8C/" rel="prev" title="脚本自动化手册">
+        脚本自动化手册 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="http://farwmarth.com/img/author.jpg"
+        alt="farwmarth" />
+    <p class="site-author-name" itemprop="name">farwmarth</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="http://farwmarth.com/post/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="http://farwmarth.com/categories/">      
+         
+        <span class="site-state-item-count">31</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="http://farwmarth.com/tags/">
+         
+        <span class="site-state-item-count">90</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/wujiyu115/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">farwmarth</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.6</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=286131889" charset="UTF-8"></script> 
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="http://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/utils.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/motion.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/affix.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/post-details.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/toc.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

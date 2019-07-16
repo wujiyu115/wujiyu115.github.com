@@ -1,0 +1,378 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>斗地主结构分析 - farwmarth</title>
+    <meta name="keywords" content="程序员">
+    
+    <meta property="og:title" content="斗地主结构分析">
+    <meta property="og:site_name" content="farwmarth">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="斗地主结构分析 - farwmarth" />
+    <meta name="description" content="game"> 
+    <link rel="shortcut icon" href="http://farwmarth.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link href="http://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="http://farwmarth.com/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">farwmarth</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Those that can,do.Those that can&#39;t ,complain</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/douban/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />豆瓣
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/music/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-music"></i> <br />音乐
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/%E6%96%97%E5%9C%B0%E4%B8%BB%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90/" itemprop="url">
+        斗地主结构分析
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2013-04-27">
+    2013-04-27
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="http://farwmarth.com/categories/android" itemprop="url" rel="index">
+        <span itemprop="name">android</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1284 字 ~3分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>这段时间在反编别人的代码,基本了解了android的游戏开发过程.在这里总结一下蛙蛙斗地主的体系结构.</p>
+
+<p><a href="http://farwmarth.bestnewbee.com/images/uploads/2013/04/7a52e3c36bb3.jpg"><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/thumb1.jpg" alt="蛙蛙斗地主结构" title="蛙蛙斗地主结构" /></a></p>
+
+<p>activity管理:</p>
+
+<p>注意在activity的回调中资源的创建及销毁.管理好activity的生命周期.</p>
+
+<p>资源管理:</p>
+
+<p>手机和pc不一样,在内存和运行性能上还有一定差距.所以资源的释放非常重要,在pc页游项目中,经常采用缓存图片资源的做法来提高程序的流畅性,手机项目最好在activity切换时如果内存达到一个上限时释放掉.可以把资源集中管理.</p>
+
+<p>耗时操作</p>
+
+<p>flash11.4之前不提供多线程api,用分帧来处理耗时操作,11.4后有了work线程. android里耗时操作可以另劈线程,防止阻塞UI.</p>
+
+<p>蛙蛙结构:</p>
+
+<p><strong>图片资源管理器</strong>: 分为单张图片和多个资源合成的图片.在管理器内切割.部分动画也打包成一张图片. 程序初始化的时候将图片加载好变成Bitmap,加载完所有资源后通知activity初始化界面.在退出程序之前销毁所有图片资源.</p>
+
+<p><strong>游戏桌</strong>:分为了两层. 底层是GameScene,继承了SurfaceView,用于绘制牌和一些动画. 上层放android其他常规组件,如聊天,表情按钮什么的. 绘制对象上图已经描述清楚了. 蛙蛙的性能有待考究.绘制频率太快.屏幕元素太多时消耗太大.在mx上玩了一会就开始发热了 .draw的面积越大消耗越大.SurfaceView采用了双缓冲机制,图片是静态的不做动作的话,其实只要绘制二帧就可以了.可以将背景图这些少更改面积大的单独只绘制两帧.</p>
+
+<p><strong>位图文字</strong>: 为了美化可能要显示一些样式特别的字体.就可以用Canvas.drawText方法将文字绘制成位图,当然要传入文字样式的笔刷.</p>
+
+<p>** 扑克规则**: 这个属于玩牌的规则了.牌型有:单张,对子,三张,三张一/二,炸弹等等. 基础功能点还包括:牌型大小比较,提示功能. 如果单纯的斗地主这里的代码量并不多.但是加上癞子斗地主,四人斗地主.复杂度也就增加不了.现在做的是把他的牌型分析抽离出来.判断规则和提示重写了.</p>
+
+<p><strong>通信</strong>: 这块要分几种情况.是wap连接的时候要设置代理用HttpUrlConnection来操作.wifi和net直接用Socket就可以了.Socket连接时最好是单独开辟读写流线程.</p>
+
+<p><strong>第三方接口</strong>:第三方接入其实是比较容易的.一般第三方都会提供demo.主要是要注册签约及与php调试要花一些时间 .蛙蛙的充值里包括了移动短信充值,支付宝. 看到的代码里还有google,lephone的一些东西 . 之前反编了博雅斗地主稍微看了一下.他们的充值接入更丰富.支付宝,移动短信,充值卡.等等. 登录接入包括了qq,sina,人人 一些平台.</p>
+
+<p>核心代码并不很多,就通信,规则,游戏桌渲染.抛却那些附加的功能点界面也不多,就首页,登录,注册,大厅. 但是如果想做成一个好的完备的产品.还是需要发一些时间来优化.以下是博雅的基本功能点.<a href="http://farwmarth.bestnewbee.com/images/uploads/2013/04/6c96ae7bc56e.jpg"><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/thumb2.jpg" alt="功能点" title="功能点" /></a></p>
+
+<p>我这前一直纳闷的是为什么公司会选择这样一款产品.个人感觉斗地主这块市场是比较饱和.有联众,qq斗地主,博雅,蛙蛙.等等.后来boss给了一些数据.蛙蛙的月流水是500万的样子.我只能说.cao.</p>
+    </div>
+    <footer class="post-footer">
+     
+
+
+<div class="post-tags">
+     
+    <a href="http://farwmarth.com/tags/android" rel="tag" title="android">#android#</a>
+    
+</div>
+
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="http://farwmarth.com/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%95%B4%E7%90%86/" rel="next" title="数据结构整理">
+        <i class="fa fa-chevron-left"></i> 数据结构整理
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="http://farwmarth.com/post/android-%E6%94%AF%E4%BB%98%E5%AE%9D-%E5%BF%AB%E6%8D%B7%E6%94%AF%E4%BB%98-%E6%8E%A5%E5%85%A5/" rel="prev" title="android 支付宝 快捷支付 接入">
+        android 支付宝 快捷支付 接入 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="http://farwmarth.com/img/author.jpg"
+        alt="farwmarth" />
+    <p class="site-author-name" itemprop="name">farwmarth</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="http://farwmarth.com/post/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="http://farwmarth.com/categories/">      
+         
+        <span class="site-state-item-count">31</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="http://farwmarth.com/tags/">
+         
+        <span class="site-state-item-count">90</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/wujiyu115/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">farwmarth</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.6</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=286131889" charset="UTF-8"></script> 
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="http://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/utils.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/motion.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/affix.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/post-details.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/toc.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

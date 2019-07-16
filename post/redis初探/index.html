@@ -1,0 +1,1109 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>redis初探 - farwmarth</title>
+    <meta name="keywords" content="程序员">
+    
+    <meta property="og:title" content="redis初探">
+    <meta property="og:site_name" content="farwmarth">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="redis初探 - farwmarth" />
+    <meta name="description" content="game"> 
+    <link rel="shortcut icon" href="http://farwmarth.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link href="http://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="http://farwmarth.com/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">farwmarth</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Those that can,do.Those that can&#39;t ,complain</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/douban/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />豆瓣
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/music/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-music"></i> <br />音乐
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/redis%E5%88%9D%E6%8E%A2/" itemprop="url">
+        redis初探
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-04-10">
+    2016-04-10
+</time>
+</span> 
+      
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">12451 字 ~25分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <h2 id="安装">安装</h2>
+
+<p><a href="http://redis.io/">http://redis.io/</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#安装</span>
+brew install redis-server
+<span style="color:#75715e">#启动</span>
+redis-server
+<span style="color:#75715e">#附带config</span>
+redis-server /path/to/redis.conf
+<span style="color:#75715e">#检查版本</span>
+redis-server --version
+<span style="color:#75715e">#检查是否成功</span>
+redis-cli
+ping PONG
+<span style="color:#75715e">#关闭</span>
+redis-cli shutdown</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">To have launchd start redis at login:
+  ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
+Then to load redis now:
+  launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
+Or, if you don&#39;t want/need launchctl, you can just run:
+  redis-server /usr/local/etc/redis.conf</pre></div>
+<p>ubuntu 默认位置:
+<code>/etc/redis/redis.conf</code></p>
+
+<h2 id="配置详解">配置详解</h2>
+
+<p><a href="http://www.cnblogs.com/tmpt/p/redis_conf_detail_annotation.html">http://www.cnblogs.com/tmpt/p/redis_conf_detail_annotation.html</a>
+基于这篇修改</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"># redis version 3.0.7
+
+# 1k =&gt; 1000 bytes
+# 1kb =&gt; 1024 bytes
+# 1m =&gt; 1000000 bytes
+# 1mb =&gt; 1024*1024 bytes
+# 1g =&gt; 1000000000 bytes
+# 1gb =&gt; 1024*1024*1024 bytes
+
+# 只用最新的，所以可以放到最后。
+# include /path/to/local.conf
+# include /path/to/other.conf
+
+################################  通用 #####################################
+
+# 是否后台执行
+daemonize yes
+
+# 后台执行的pid文件
+# pidfile /var/run/redis.pid
+
+# 0的话，不接受TCP连接
+port 6379
+
+# TCP listen() backlog. 虽然listen有两个参数int listen(int s, int backlog); 但是第二个参数会被/proc/sys/net/core/somaxconn覆盖。比如nginx设置的是511，但是也会被这个覆盖成默认的128,
+# 所以要/etc/sysctl.conf中添加net.core.somaxconn = 2048 然后 sysctl -p ，就是说，如果软件设置大于linux配置，就是linux配置，软件设置小于linux，就用软件的，就是用最小的那个。
+tcp-backlog 511
+
+# 绑定IP请求来源
+# bind 192.168.1.100 10.0.0.1
+
+# 在空闲多少秒后关闭链接（0是禁用此功能）
+timeout 0
+
+# TCP keepalive
+# Linux内核里，下边的值以秒记，相当于tcp_keepalive_time，要用两倍的这个时间才能杀死（画外音，也就是probes*intvl=如下的值了，详见EverNote搜索“linux 在线服务器优化配置”）
+# 设成60比较好
+tcp-keepalive 0
+
+# 日志记录等级debug》verbose》notice（生产环境）》warning
+loglevel notice
+
+# 日志名。空字符串意味着输出到 标准输出。后台运行的redis标准输出是/dev/null。（画外音，所以要设置个文件名）
+logfile &#34;&#34;
+
+# 是否把log记到系统日志里。标示是什么？
+# syslog-enabled no
+# syslog-ident redis
+
+#设置db的数量，默认db是0，你可以用SELECT &lt;dbid&gt; dbid在0到下边的值-1；
+databases 16
+
+################################ 快照 ################################
+
+# 保存时间间隔，更新数量。如果1个key更新了，15min保存一次。10个key更新了，5分钟保存一次，10000个key更新了，每1分钟保存一次。主动调用SAVE()会阻塞所有客户端！一般是BGSAVE异步的。
+save 900 1
+save 300 10
+save 60 10000
+
+# 如果最后一次的后台保存RDB snapshot出错，redis就会拒绝所有写请求。这样也相当于一个报警吧。等后台保存继续工作后，redis就允许写了。
+# 如果你自己配置好了redis的持久化进程的监控，你可以关闭下边：
+stop-writes-on-bgsave-error yes
+
+# 是否压缩dump后的   .rdb 数据库？默认压缩。会省硬盘，但耗CPU。
+rdbcompression no
+
+# 是否校验rdb快照？CRC64校验值会放在文件尾部。会导致10%性能下降。关闭后，校验值用0填充
+rdbchecksum yes
+
+# DB名称
+dbfilename dump.rdb
+
+# 工作目录
+# DB会写入这个目录，以上边的名字。“仅追加文件”也会存在这个目录。注意：这里必须是目录名，不能是文件名！
+dir ./
+
+################################# 复制集 #################################
+
+# 主从复制。用slaveof去复制另一份redis。
+# 1）redis复制是异步的。但你可以让主redis拒绝写请求，当少于某个个数的从redis在线。
+# 2）如果复制进程暂停了一小会儿，slave可以进行重新进行部分同步，你可以设置一下复制backlog大小
+# 3）是自动的，无需干预。
+
+# slaveof &lt;masterip&gt; &lt;masterport&gt;
+
+# 如果主机需要鉴权，则需要配置密码
+# masterauth &lt;master-password&gt;
+
+# 当slave和master断了，会有两种情况：
+# 1）默认：slave-serve-stale-data yes 这时，slave接受请求并返回老数据
+# 2）如果是no了，则对任何命令都返回SYNC with master in progress，INFO和SLAVEOF命令除外！
+slave-serve-stale-data yes
+
+# 2.6之后，redis默认slave都是read-only的，但是slave默认可以执行所有管理员命令。CONFIG,DEBUG等。你可以用rename-command去重命名危险的命令，隐藏他们。
+slave-read-only yes
+
+# 复制集同步策略：磁盘或者socket
+# 新slave连接或者老slave重新连接时候不能只接收不同，得做一个全同步。需要一个新的RDB文件dump出来，然后从master传到slave。可以有两种情况：
+# 1）基于硬盘（disk-backed）：master创建一个新进程dump RDB，完事儿之后由父进程（即主进程）增量传给slaves。
+# 2）基于socket（diskless）：master创建一个新进程直接dump RDB到slave的socket，不经过主进程，不经过硬盘。
+# 基于硬盘的话，RDB文件创建后，一旦创建完毕，可以同时服务更多的slave。基于socket的话， 新slave来了后，得排队（如果超出了repl-diskless-sync-delay还没来），完事儿一个再进行下一个。
+# 当用diskless的时候，master等待一个repl-diskless-sync-delay的秒数，如果没slave来的话，就直接传，后来的得排队等了。否则就可以一起传。
+# disk较慢，并且网络较快的时候，可以用diskless。（默认用disk-based）
+repl-diskless-sync no
+# 设置成0的话，传输开始ASAP
+repl-diskless-sync-delay 5
+
+# Slave发送ping给master。默认10s
+# repl-ping-slave-period 10
+
+# 超时时间，包括从master看slave，从slave看master，要大于上边的repl-ping-slave-period
+# repl-timeout 60
+
+# SYNC完毕后，在slave的socket里关闭TCP_NODELAY。
+# 如果是yes,reids发送少量的TCP包给slave，但可能导致最高40ms的数据延迟。
+# 如果是no，那可能在复制的时候，会消耗 少量带宽。
+# 默认我们是为了低延迟优化而设置成no，如果主从之间有很多网络跳跃。那设置成yes吧。
+repl-disable-tcp-nodelay no
+
+# 复制集后台backlog大小
+# 越大，slave可以丢失的时间就越长。
+# repl-backlog-size 1mb
+
+# 多久释放backlog，当确认master不再需要slave的时候，多久释放。0是永远不释放。
+# repl-backlog-ttl 3600
+
+# 当master不可用，Sentinel会根据slave的优先级选举一个master。最低的优先级的slave，当选master。而配置成0，永远不会被选举。（必须≥0）。默认是100
+slave-priority 100
+
+# slave小于几个，网络lag大于几秒的时候，master停止接受write请求。默认对slave数目无限制，给0。网络延迟给10s
+# min-slaves-to-write 3
+min-slaves-max-lag 10
+
+################################## 安全 ###################################
+# 多数情况下无需密码鉴别slave。同时，由于redis处理速度太快，所以爆破速率可达150K/S。10万/S。所以如果你要设置密码，必须设置超强的密码。
+# requirepass foobared &lt;--这就是密码
+
+# 命令重命名
+# 在一个shared环境里，可以对危险的命令，比如CONFIG，进行重命名：也可以用空字符串，达到完全屏蔽此命令的目的。
+# rename-command CONFIG b840fc02d524045429941cc15f59e41cb7be6c52
+# rename-command CONFIG &#34;&#34;
+# 记录进AOF或者传给slave的重命名操作可能会引发问题哦~。
+
+################################### 限制 ####################################
+# 设置最大client连接数。默认(10000)一万个。如果redis没法控制最大文件数。则给到最低32.
+# maxclients 10000
+
+# 如果redis用内存超过了设置的限制，第一，开始用maxmemory-policy配置的策略往外删数据，如果配置成了noeviction。所有write都会拒绝，比如set，lpush等。所有读请求可以接受。
+# 主要用在把redis用在LRU缓存，或者用在一个内存吃紧又不能删除的策略上。
+# 如果你有slave，你应该把最大内存别设置的太大，留一些系统内存给slave output buffers（如果是noeviction策略，就无需这样设置了）
+# maxmemory &lt;bytes&gt;
+
+# 内存策略。
+# volatile-lru -&gt;用LRU删除设置了ttl的key
+# allkeys-lru -&gt;用LRU删除任何key
+# volatile-random -&gt;随机删除有ttl的key
+# allkeys-random -&gt;随机删除任何key
+# volatile-ttl -&gt;删除即将ttl到期的key
+# noeviction -&gt;不删，有write的时候报错。
+# 如下操作会返回错误
+#       set setnx setex append
+#       incr decr rpush lpush rpushx lpushx linsert lset rpoplpush sadd
+#       sinter sinterstore sunion sunionstore sdiff sdiffstore zadd zincrby
+#       zunionstore zinterstore hset hsetnx hmset hincrby incrby decrby
+#       getset mset msetnx exec sort
+# 默认是
+# maxmemory-policy volatile-lru
+
+# LRU和最小TTL并不是最精确的，但是差不多了也。默认redis每次取3个key然后取最符合删除策略的删除。你可以配置这个数。越低，删除的东西就会越多。比如设置100个，就能删百分之一。
+# maxmemory-samples 3
+
+############################## AOF ###############################
+# 默认redis异步的dump数据到disk。但如果断电了，那么就会丢失一部分数据了（根据save的配置）。
+# AOF提供更好模式。比如用默认的AOF，redis只丢失最近一秒的数据（断电情况），或者最后一个write操作（redis自身错误，os正常）。每个write操作写一次AOF。
+# 当AOF文件太大了，redis会自动重写一个aof文件出来。
+# AOF和RDB持久化可以同时启用。redis会优先读AOF恢复数据。
+# Please check http://redis.io/topics/persistence for more information
+appendonly no
+
+# 默认文件名
+appendfilename &#34;appendonly.aof&#34;
+
+# fsync()三种：
+# no：让OS托管，这样更快。
+# always：每次write都刷到log，慢，最安全。
+# everysec：每秒一次flush。（默认）
+# http://antirez.com/post/redis-persistence-demystified.html
+# appendfsync always
+appendfsync everysec
+# appendfsync no
+
+# 当fsync为always或者everysec，当一个bgsave或者AOF rewrite线程正在耗费大量I/0，redis可能会在fsync上阻塞很久。发生之后就无法fix，即使是另一个线程跑fsync，也会阻塞我们同步的write方法。
+# 如下方法可以解决这个问题：当bgsave()或bgrewriteaof()在跑，主进程的fsync()就无法调用。也就是当子进程在save，那段时光相当于redis是appendaof no的。也就是有可能会丢失最多30s的log。
+# 所以如果你有lag问题，把下边改成yes，否则就用no。yes意思是暂停aof，拒绝主进程的这次fsync。no是redis是排队的，不会被prevent了，但主进程是阻塞的。
+no-appendfsync-on-rewrite no
+
+# 自动重写AOF
+# 当AOF文件大小到一定比例，就自动隐式调用BGREWRITEAOF
+# 过程：redis记住最后一次rewrite时aof文件大小（重启后没rewrite的话，就是启动时AOF文件的大小），如果现在AOF大小和上次的比例达到特定值就重写。也要指定最小AOF大小，防止到2倍：1M的时候也重写。
+# 把percentage改成0，就是禁用重写。
+auto-aof-rewrite-percentage 100
+auto-aof-rewrite-min-size 64mb
+
+# AOF文件可能在尾部是不完整的（上次system关闭有问题，尤其是mount ext4文件系统时没有加上data=ordered选项。只会发生在os死时，redis自己死不会不完整）。那redis重启时load进内存的时候就有问题了。
+# 发生的时候，可以选择redis启动报错，或者load尽量多正常的数据。
+# 如果aof-load-truncated是yes，会自动发布一个log给客户端然后load（默认）。如果是no，用户必须手动redis-check-aof修复AOF文件才可以。
+aof-load-truncated yes
+
+################################ REDIS 集群配置  ###############################
+#打开集群节点开关才能加入到集群中
+# cluster-enabled yes
+
+#每个集群节点都需要一个不同的节点文件名，由节点自动维护
+# cluster-config-file nodes-6379.conf
+
+#节点请求超时时间单位毫秒
+# cluster-node-timeout 15000
+
+#
+#并没有实质的获取从机正确数据的做法，但有两种方法来提高这种准确性
+#
+# 1)如果有多个从机能够实行故障转移机制，他们会以与主机数据偏差最小的作为排名来交换数据
+#
+# 2) 每个从机都记录最后一次与主机连接的时间，如果最后的连接时间太旧了就不再进行故障转移。
+#第二点可以由用户来配置，从机最后和主机的交互时间不能大于下面的公式：
+#   (node-timeout * slave-validity-factor) + repl-ping-slave-period
+#
+#举例来说如果node-timeout设置为30s,slave-validity-factor为10,repl-ping-slave-period默认配置为10s,那么如果从机和主机最后连接时间超过310s就不会进行故障转移
+#
+# 一个过大的因子设置可能会导致将从机过旧的数据同步到集群中，而过小则会导致集群中这个从机被选择到的概率变小.
+#
+# 为了获得最高的可用性,可以把slave-validity-factor设置为0，这意味着这个从机节点不管和主机连接的时间，总是会进行故障转移。
+#
+#零值总能保证集群可以恢复数据运行.
+#
+# cluster-slave-validity-factor 10
+
+# 集群的从机可以迁移成独立的主机模式.但是这样以独立主机运行在遇到故障时无法进行故障转移。
+#
+#从节点迁移成独立主机必须满足的条件是，这前的集群主机的从机数量不少于配置值,这个配置值一般是1,如果想禁止迁移模式可以将值设置为0，0值只要在调试模式下是合理的。
+#
+# cluster-migration-barrier 1
+
+#当检测到没有可用的哈希槽结点宕机时,redis会集群停止所有的查询服务,但是有时候你想这个集群在其他部分节点宕掉时还可以接受查询服务,你可以设置值luster-require-full-coverage为no
+# cluster-require-full-coverage yes
+
+
+################################ LUA SCRIPTING  ###############################
+# 如果达到最大时间限制（毫秒），redis会记个log，然后返回error。
+# 当一个脚本超过了最大时限。只有SCRIPT KILL和SHUTDOWN NOSAVE可以用。第一个可以杀没有调write命令的东西。要是已经调用了write，只能用第二个命令杀。
+# 设置成0或者负值，时限就无限。
+lua-time-limit 5000
+
+################################## SLOW LOG ###################################
+# 线程阻塞不能服务其他请求的时间长度。两个参数：第一个是时长（以微秒为单位！，是毫秒的千分之一。）。第二个是log的size，超过了，就会删除之前的log。
+# 1000000是一秒。负值是所有请求都记log！下边是0.10S。100毫秒。
+slowlog-log-slower-than 10000
+
+# log长度的设置值是没限制。但是需要内存。
+slowlog-max-len 128
+
+################################ LATENCY MONITOR ##############################
+# 用LATENCY打印redis实例在跑命令时的耗时图表。
+# 只记录大于等于下边设置的值的操作。0的话，就是关闭监视。可以动态开启。直接运行CONFIG SET latency-monitor-threshold &lt;milliseconds&gt;
+latency-monitor-threshold 0
+
+############################# Event notification ##############################
+# 可以通知pub/sub客户端关于key空间的变化。http://redis.io/topics/notifications
+# 比如如果开着开关。一个client进行了DEL操作在“foo”key上在database0上。两个消息将会发布通过 pub/sub
+# PUBLISH __keyspace@0__:foo del
+# PUBLISH __keyevent@0__:del foo
+# 大部分人不需要这个功能，并且还需要一定开销，所以默认关闭。
+notify-keyspace-events &#34;&#34;
+
+############################### ADVANCED CONFIG ###############################
+# hash结构存储，小数据量的用数组，大数据量用map（encoding保存结构信息）
+hash-max-ziplist-entries 512
+hash-max-ziplist-value 64
+
+# list同上。
+list-max-ziplist-entries 512
+list-max-ziplist-value 64
+
+# Set在一种情况下会用特殊encoding：整个set是string组成，但是突然需要变成64位带符号整数且是10为根。。不懂。
+set-max-intset-entries 512
+
+# zset同set
+zset-max-ziplist-entries 128
+zset-max-ziplist-value 64
+
+# HyperLogLog 不懂。大于16000完全不可接受！当CPU很顶得住的话，给10000可以。默认给3000.
+hll-sparse-max-bytes 3000
+
+# Active rehashing 越多次的操作进入了正在进行rehash的table，越多的rehash步骤需要执行。如果redis是空闲的，那么rehash操作是永远没法停止的，越多的内存也被消耗了。
+# 默认就用yes就行 了如果你想释放内存ASAP。
+activerehashing yes
+
+# client output buffer限制，可以用来强制关闭传输缓慢的客户端（比如redis pub的东西有比较慢的client无法及时sub）
+# client-output-buffer-limit &lt;class&gt; &lt;hard limit&gt; &lt;soft limit&gt; &lt;soft seconds&gt;
+# class可以为以下：
+#
+# normal -&gt; normal clients including MONITOR clients
+# slave  -&gt; slave clients
+# pubsub -&gt; clients subscribed to at least one pubsub channel or pattern
+# 当hard限制到了会立即被关闭客户端。如果soft限制到了，会等soft秒。
+# 比如硬限制是32m，soft是16m，10secs。到32m就立即断，或者在16m以上停止了10secs。
+# 设置成0就是关闭。
+client-output-buffer-limit normal 0 0 0
+client-output-buffer-limit slave 256mb 64mb 60
+client-output-buffer-limit pubsub 32mb 8mb 60
+
+# redis内部调度（进行关闭timeout的客户端，删除过期key等等）频率，越大则调度频率越高。设置成100以上会对CPU造成大压力除非你对线上实时性要求很高。可以在1~500之间。
+hz 10
+
+# 当child进程在rewrite AOF文件，如果这个选项是yes，那么这个file每32MB会写fsync()。这个是保证增量写硬盘而防止写硬盘时I/O突增。
+aof-rewrite-incremental-fsync yes</pre></div>
+<h2 id="参考手册">参考手册</h2>
+
+<p><a href="http://redis.readthedocs.org/en/2.4/index.html">http://redis.readthedocs.org/en/2.4/index.html</a>
+<a href="http://redisdoc.com/">http://redisdoc.com/</a></p>
+
+<h3 id="key值">key值</h3>
+
+<p>key值用二进制是安全的,但是太长的key值太消耗内存，太短的key值不易阅读,”object-type:id:field”可以用这种形式来标识</p>
+
+<ul>
+<li>del <code>del mykey</code> 删除给定的一个或多个 key，不存在的 key 会被忽略，返回值：被删除 key 的数量</li>
+<li>dump    <code>dump mykey</code>序列化给定 key，返回被序列化的值，使用 restore 命令可以将这个值反序列化为 redis 键</li>
+<li>exists  <code>exists mykey</code>检查给定 key 是否存在,返回值1或者0</li>
+
+<li><p>expire  <code>expire mykey  60</code>为给定key设置有效时间,单位秒</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&gt; set key some-value
+OK
+&gt; expire key 5
+(integer) 1
+&gt; get key (immediately)
+&#34;some-value&#34;
+&gt; get key (after some time)
+(nil)</pre></div></li>
+
+<li><p>expireat    <code>expire mykey  1355292000</code>  这个key将在2012.12.12过期.为给定key设置有效时间，接受时间戳timestamp</p></li>
+
+<li><p>keys    <code>keys *</code>查找所有符合给定模式 pattern 的 key;keys * 匹配数据库中所有 key；keys h?llo 匹配 hello，hallo等。keys h[ae]llo匹配hello和hallo</p></li>
+
+<li><p>migrate 将 key 原子性地从当前实例传送到目标实例的指定数据库上,一旦传送成功,  key 保证会出现在目标实例上,而当前实例上的 key 会被删除.执行的时候会阻塞进行迁移的两个实例.KEYS的速度非常快，但在一个大的数据库中使用它仍然可能造成性能问题，如果你需要从一个数据集中查找特定的key，你最好还是用集合(Set)</p></li>
+
+<li><p>move  <code>move song 1</code># 将song移动到数据库1.  将当前数据库的 key 移动到给定的数据库 db当中.因为两个数据库有相同的key，MOVE失败</p></li>
+
+<li><p>object  从内部察看给定 key 的 redis 对象<br />
+object命令有多个子命令：</p>
+
+<ul>
+<li>object refcount <key>返回给定key引用所储存的值的次数。此命令主要用于除错。</li>
+<li>object encoding <key>返回给定key锁储存的值所使用的内部表示(representation)。</li>
+<li>object idletime <key>返回给定key自储存以来的空转时间(idle， 没有被读取也没有被写入)，以秒为单位。<br />
+对象可以以多种方式编码：</li>
+<li>字符串可以被编码为raw(一般字符串)或int(用字符串表示64位数字是为了节约空间)。</li>
+<li>列表可以被编码为ziplist或linkedlist。ziplist是为节约大小较小的列表空间而作的特殊表示。</li>
+<li>集合可以被编码为intset或者hashtable。intset是只储存数字的小集合的特殊表示。</li>
+<li>哈希表可以编码为zipmap或者hashtable。zipmap是小哈希表的特殊表示。</li>
+
+<li><p>有序集合可以被编码为ziplist或者skiplist格式。ziplist用于表示小的有序集合，而skiplist则用于表示任何大小的有序集合。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">redis&gt; set game &#34;cod&#34;  # 设置一个字符串
+ok
+redis&gt; object refcount game  # 只有一个引用
+(integer) 1
+redis&gt; object idletime game  # 等待一阵。。。然后查看空转时间
+(integer) 90
+redis&gt; get game  # 提取game， 让它处于活跃(active)状态
+&#34;cod&#34;
+redis&gt; object idletime game  # 不再处于空转
+(integer) 0
+redis&gt; object encoding game  # 字符串的编码方式
+&#34;raw&#34;
+redis&gt; set phone 15820123123  # 大的数字也被编码为字符串
+ok
+redis&gt; object encoding phone
+&#34;raw&#34;
+redis&gt; set age 20  # 短数字被编码为int
+ok
+redis&gt; object encoding age
+&#34;int&#34;</pre></div></li>
+</ul></li>
+
+<li><p>persist <code>persist mykey</code> 移除给定 key 的有效时间</p></li>
+
+<li><p>pexpire  <code>pexpire mykey 1000</code>以毫秒为单位设置 key 的有效时间 (Available since 2.6.0)</p></li>
+
+<li><p>pexpireat   <code>pexpireat mykey 1000</code>以毫秒为单位设置 key 的有效时间戳(timestamp)(Available since 2.6.0)</p></li>
+
+<li><p>pttl  <code>pttl mykey</code>  以毫秒为单位返回key的剩余有效时间(Available since 2.6.0)</p></li>
+
+<li><p>randomkey  <code>randomkey</code> 从当前数据库中随机返回(已使用的)一个key</p></li>
+
+<li><p>rename <code>rename mykey mykey1</code> 将key改名</p></li>
+
+<li><p>renamenx     <code>rename mykey newkey</code>当且仅当 newkey 不存在时,将 key 改名为 newkey</p></li>
+
+<li><p>restore  <code>restore mykey</code>反序列化给定的序列化值，并将它和给定的 key 关联</p></li>
+
+<li><p>scan    `` 增量迭代 Available since 2.8.0()</p></li>
+
+<li><p><strong>sort</strong>    <code>sor mylist</code>返回或保存给定列表、集合、有序集合 key 中经过排序的元素,默认会返回该列表值的递增(从小到大)排序结果</p></li>
+
+<li><p>ttl <code>ttl mykey</code>以秒为单位，返回给定 key 的剩余有效时间</p></li>
+
+<li><p>type    <code>type mykey</code> 返回 key 所储存的值的类型</p></li>
+
+<li><p>wait    <code>wait mykey</code> 堵塞等待写操作传输到指定数量的从节点(Available since 3.0.0)</p></li>
+</ul>
+
+<h3 id="strings">strings</h3>
+
+<p>就是个字符串</p>
+
+<ul>
+<li><strong>append</strong>  <code>append mykey 'hello'</code> 将值追加到指定key的值末尾，如果key不存在，则相当于增加操作。</li>
+<li>bitcount     <code>bitcount mykey</code> 计算给定字符串中，被设置为 1 的Bit位的数量。redis的setbit修改的是bit位置,而bitcount检查的是byte位置，两者相差有8的倍数</li>
+<li>bitop   对一个或多个保存二进制位的字符串 key 进行位元操作
+
+<ul>
+<li>BITOP AND destkey srckey1 srckey2 srckey3 &hellip; srckeyN  <code>bittop and newkey key1 key2</code></li>
+<li>BITOP OR destkey srckey1 srckey2 srckey3 &hellip; srckeyN <code>bittop or newkey key1 key2</code></li>
+<li>BITOP XOR destkey srckey1 srckey2 srckey3 &hellip; srckeyN <code>bittop xor newkey key1 key2</code></li>
+<li>BITOP NOT destkey srckey  <code>bittop not newkey key1</code></li>
+</ul></li>
+<li><strong>decr</strong>  <code>decr mykey</code>  将 key 中储存的数字值减一。Key不存在，则将值置0，key类型不正确返回一个错误。</li>
+<li>decrby  <code>decrby key  2</code> 将key所储存的值减去指定数量,可以为负数</li>
+<li><strong>get</strong> <code>get mykey</code>  返回key所关联的字符串值，如果Key储存的值不是字符串类型，返回一个错误。</li>
+<li>getbit  <code>getbit mykey</code> 对key所储存的字符串值，获取指定偏移量上的位,</li>
+<li><strong>getrange</strong>  <code>getrange mykey 0 -1</code>  返回key中字符串值的子字符串，字符串的截取范围由start和end两个偏移量决定</li>
+<li>getset <code>getset mykey 2</code> 将给定key的值设为value,并返回key的旧值.非字符串报错.和decr配合使用,主要是返回旧值,如果键不存在,那么返回nil</li>
+<li>incr   <code>incr mykey</code> 原子递增,可以把字符串值解释成一个数字递增，因为有原子性所有多个客户端操作不会出现竞争的问题</li>
+<li>incrby   <code>incr mykey  2</code>将key所储存的值加上指定增量</li>
+<li>incrbyfloat <code>incrbyfloat mykey  2.5</code>为key中所储存的值加上指定的浮点数增量</li>
+<li><strong>mget</strong>    <code>mget a b c</code>返回所有(一个或多个)给定key的值</li>
+<li><strong>mset</strong>    <code>mset a 1 b 2 c 3</code> 同时设置一个或多个key-value对</li>
+<li>msetnx  同时设置一个或多个key-value对，若一个key已被占用，则全部的执行取消。</li>
+<li>psetex  以毫秒为单位设置 key 的有效时间</li>
+<li><strong>set</strong>  <code>set mykey hello</code>将字符串值value关联到key ,不能超过512MB</li>
+<li>setbit  <code>setbit mykey 1 1</code> 两种状态0和1 ,每个字符有8bit对key所储存的字符串值，设置或清除指定偏移量上的位(bit)</li>
+<li>setex    <code>setex cache_user_id 60(时间秒) 10086(值)</code> 将值value关联到 key,并设置超时时间 相当于<code>set key value ;expire key seconds</code>两条命令,但这个操作是原子性的</li>
+<li>setnx   <code>setnx mykey 1</code>「SET if Not eXists」,当key未被使用时，设置为指定值,返回值1设置 了0 未设置
+<a href="http://huoding.com/2015/09/14/463">http://huoding.com/2015/09/14/463</a></li>
+<li>setrange   <code>setrange mykey  1 &quot;me&quot;</code> 用value参数覆写(overwrite)给定key所储存的字符串值，从偏移量 offset 开始</li>
+<li>strlen   <code>strlen mykey</code>返回key所储存的字符串值的长度</li>
+</ul>
+
+<h3 id="list">list</h3>
+
+<p>基于Linked Lists实现,头尾部添加新元素的速度快，而在索引访问数据方面牺牲了部分性能。</p>
+
+<ul>
+<li>blpop    <code>blpop mylist</code>它是 lpop 命令的阻塞版本，当给定列表内没有任何元素可供弹出的时候，连接将被 blpop 命令阻塞，直到等待超时或发现可弹出元素为止</li>
+<li>brpop    <code>brpop mylist</code>与blpop同义，弹出位置不同</li>
+<li>brpoplpush  <code>brpoplpush source destination</code> 当列表 source 为空时， brpoplpush 命令将阻塞连接，直到等待超时</li>
+<li><strong>lindex</strong>   <code>lindex mylist 0</code>返回列表 key 中，下标为 index 的元素</li>
+<li>linsert <code>linsert mylist  before 2 0</code> 将0插入到2之前, 将值 value 插入到列表 key 当中</li>
+<li><strong>llen</strong>     <code>llen mylist</code>  返回列表 key 的长度</li>
+<li>lpop    <code>lpop mylist</code>移除并返回列表 key 的头元素</li>
+<li>lpush   <code>lpush mylist 1 2</code>将一个或多个值 value 插入到列表 key 的表头</li>
+<li>lpushx  <code>lpushx mylist 1</code>将值 value 插入到列表 key 的表头，当且仅当 key 存在并且是一个列表</li>
+<li><strong>lrange</strong>   <code>lrange mylist 0 -1</code>返回列表 key 中指定区间内的元素，区间以偏移量 start 和 stop 指定</li>
+<li>lrem  <code>lrem mylist 2(count值) hello(value值)</code> 从头部查找移除两个hello, 根据参数 count 的值，移除列表中与参数 value 相等的元素
+count 的值可以是以下几种：
+
+<ul>
+<li>count &gt; 0 : 从表头开始向表尾搜索，移除与 value 相等的元素，数量为 count 。</li>
+<li>count &lt; 0 : 从表尾开始向表头搜索，移除与 value 相等的元素，数量为 count 的绝对值。</li>
+<li>count = 0 : 移除表中所有与 value 相等的值</li>
+</ul></li>
+<li><strong>lset</strong> <code>lset mylist 1(下标) 2(值)</code>  将列表 key 下标为 index 的元素的值设置为 value</li>
+<li>ltrim   <code>ltrim mylist 0 2</code>对一个列表进行修剪(trim)，就是说，让列表只保留指定区间内的元素，不在指定区间之内的元素都将被删除</li>
+<li><strong>rpop</strong>    <code>rpop mylist</code>移除并返回列表 key 的尾元素</li>
+<li>rpoplpush  <code>rpoplpush source destination</code> 命令 rpoplpush 在一个原子时间内，执行两个动作：1、将列表 source 中的最后一个元素(尾元素)弹出，并返回给客户端。2、将 source 弹出的元素插入到列表 destination ，作为 destination 列表的的头元素。</li>
+<li><strong>rpush</strong>    <code>rpush mylist A B</code>将一个或多个值 value 插入到列表 key 的表尾</li>
+<li>rpushx   <code>rpushx mylist 1</code>将值 value 插入到列表 key 的表尾，当且仅当 key 存在并且是一个列表</li>
+</ul>
+
+<h3 id="hashes">hashes</h3>
+
+<p>哈希表,表示对象</p>
+
+<ul>
+<li><strong>hdel</strong>    <code>hdel user username</code>删除哈希表 key 中的一个或多个指定域，不存在的域将被忽略。</li>
+<li><strong>hexists</strong> <code>hexists user name</code>查看哈希表 key 中，给定域 field 是否存在</li>
+<li><strong>hget</strong>   <code>hget user username</code> 返回哈希表 key 中给定域 field 的值</li>
+<li>**hgetall ** <code>hgetall user</code>返回哈希表 key 中，所有的域和值</li>
+<li>hincrby <code>hincrby user age 25</code>指定加10.为哈希表 key 中的域 field 的值加上指定增量</li>
+<li>hincrbyfloat  <code>hincrbyfloat user age  1.5</code>  为哈希表 key 中的域 field 加上指定的浮点数增量</li>
+<li><strong>hkeys</strong>   <code>hkeys user</code> 返回哈希表 key 中的所有域</li>
+<li><strong>hlen</strong>    <code>hlen user</code> 返回哈希表 key 中域的数量</li>
+<li><strong>hmget</strong>   <code>hmget user username birthyear no-such-field</code> 返回哈希表 key 中, 以数组方式返回</li>
+<li><strong>hmset</strong>   <code>hmset user username antirez age 25</code>同时将多个 field-value (域-值)对设置到哈希表 key 中</li>
+<li><strong>hset</strong>     <code>hmset user username antirez</code> 将哈希表 key 中的域 field 的值设为 value</li>
+<li>hsetnx  <code>hsetnx user username me</code>当且仅当域 field 不存在时，将哈希表 key 中的域 field 的值设置为 value</li>
+<li><strong>hvals</strong>   <code>hvals user username age</code>返回哈希表 key 中所有域的值</li>
+<li>hscan   增量迭代</li>
+</ul>
+
+<h3 id="sets">sets</h3>
+
+<p>不重复的集合</p>
+
+<ul>
+<li><p><strong>sadd</strong>   <code>sadd myset 1 2</code> 将一个或多个 member 元素加入到集合 key 当中，已经存在于集合的 member 元素将被忽略</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">sadd myset 1 2
+sadd myset1 1 2 3 4</pre></div></li>
+
+<li><p><strong>scard</strong>   <code>scard myset</code>返回集合 key 的集合中元素的数量</p></li>
+
+<li><p>sdiff   返回一个集合的全部成员，该集合是所有给定集合之间的差集</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">127.0.0.1:6379&gt; smembers myset
+1) &#34;1&#34;
+2) &#34;2&#34;
+127.0.0.1:6379&gt; smembers myset1
+1) &#34;1&#34;
+2) &#34;2&#34;
+3) &#34;3&#34;
+4) &#34;4&#34;
+127.0.0.1:6379&gt; sdiff myset myset1
+(empty list or set)
+127.0.0.1:6379&gt; sdiff myset1 myset
+1) &#34;3&#34;
+2) &#34;4&#34;</pre></div></li>
+
+<li><p>sdiffstore  <code>sdiffstore destination key [key ...]</code>这个命令的作用和 sdiff 类似，但它将结果保存到新集合，而不是简单地返回结果集</p></li>
+
+<li><p>sinter <code>sinter myset myet1</code> 返回一个集合的全部成员，该集合是所有给定集合的交集</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">127.0.0.1:6379&gt; sinter myset myset1
+1) &#34;1&#34;
+2) &#34;2&#34;</pre></div></li>
+
+<li><p>sinterstore <code>sinterstore destination key [key ...]</code> 与sinter类似，不过可以指定保存到新集合</p></li>
+
+<li><p>sismember  <code>sismember myset 1</code> 判断 member 元素是否集合 key 的成员</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">127.0.0.1:6379&gt; sismember myset 1
+(integer) 1
+127.0.0.1:6379&gt; sismember myset 3
+(integer) 0</pre></div></li>
+
+<li><p><strong>smembers</strong> <code>smembers myset</code>    返回集合 key 中的所有成员</p></li>
+
+<li><p>smove   <code>smove source destination member</code>将 member 元素从一个集合移动到另一个集合</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">127.0.0.1:6379&gt; smembers myset
+1) &#34;1&#34;
+2) &#34;2&#34;
+127.0.0.1:6379&gt; smembers myset1
+1) &#34;1&#34;
+2) &#34;2&#34;
+3) &#34;3&#34;
+4) &#34;4&#34;
+127.0.0.1:6379&gt; smove myset1 myset 3
+(integer) 1
+127.0.0.1:6379&gt; smembers myset
+1) &#34;1&#34;
+2) &#34;2&#34;
+3) &#34;3&#34;
+127.0.0.1:6379&gt; smembers myset1
+1) &#34;1&#34;
+2) &#34;2&#34;
+3) &#34;4&#34;</pre></div></li>
+
+<li><p>spop   <code>spop myset</code> 移除并返回集合中的一个随机元素</p></li>
+
+<li><p>srandmember <code>srandmember myset</code>仅仅返回随机元素，而不对集合进行任何改动，与spop的区别在于不移除</p></li>
+
+<li><p>srem    <code>srem myset 1 2</code> 移除集合 key 中的一个或多个 member 元素，不存在的 member 元素会被忽略</p></li>
+
+<li><p>sunion  <code>sunion myset myset1</code>返回一个集合的全部成员，该集合是所有给定集合的并集</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">127.0.0.1:6379&gt; smembers myset
+1) &#34;3&#34;
+127.0.0.1:6379&gt; smembers myset1
+1) &#34;1&#34;
+2) &#34;2&#34;
+3) &#34;4&#34;
+127.0.0.1:6379&gt; sunion myset myset1
+1) &#34;1&#34;
+2) &#34;2&#34;
+3) &#34;3&#34;
+4) &#34;4&#34;</pre></div></li>
+
+<li><p>sunionstore 与sunion类似，不过可以指定保存到新集合</p></li>
+
+<li><p>sscan   增量迭代</p></li>
+</ul>
+
+<h3 id="sortedset-有序集合">sortedset (有序集合)</h3>
+
+<ul>
+<li>zadd   <code>zadd key score member [[score member] [score member] ...]</code> 将一个或多个 member 元素及其 score 值加入到有序集 key 当中</li>
+<li>zcard   <code>zcard key</code> 返回有序集 key 的基数</li>
+
+<li><p>zcount    <code>zcount key min max</code> 返回有序集 key 中,score 值在 min 和 max 之间(包括 score 值等于 min 或 max )的成员的数量</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">127.0.0.1:6379&gt; zadd zset 1 me
+(integer) 1
+127.0.0.1:6379&gt; zcount zset 0 1
+(integer) 1</pre></div></li>
+
+<li><p>zincrby <code>zincrby key increment member</code>为有序集 key 的成员 member 的 score 值加上指定增量</p></li>
+
+<li><p>zrange <code>ZRANGE key start stop</code> 返回有序集 key 中，指定区间内的成员(小到大排列)</p></li>
+
+<li><p>zrangebyscore <code>zrangebyscore key min max</code>  返回有序集 key 中，所有 score 值介于 min 和 max 之间(包括等于 min 或 max )的成员</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">redis&gt; zadd salary 2500 jack                        # 测试数据
+(integer) 0
+redis&gt; zadd salary 5000 tom
+(integer) 0
+redis&gt; zadd salary 12000 peter
+(integer) 0
+
+redis&gt; zrangebyscore salary -inf +inf               # 显示整个有序集
+1) &#34;jack&#34;
+2) &#34;tom&#34;
+3) &#34;peter&#34;
+
+redis&gt; zrangebyscore salary -inf +inf withscores    # 显示整个有序集及成员的 score 值
+1) &#34;jack&#34;
+2) &#34;2500&#34;
+3) &#34;tom&#34;
+4) &#34;5000&#34;
+5) &#34;peter&#34;
+6) &#34;12000&#34;</pre></div></li>
+
+<li><p>zrank <code>zrank key member</code>  返回有序集 key 中成员 member 的排名。其中有序集成员按 score 值递增(从小到大)顺序排列</p></li>
+
+<li><p>zrem  <code>zrem key member [member ...]</code>  移除有序集 key 中的一个或多个成员，不存在的成员将被忽略</p></li>
+
+<li><p>zremrangebyrank <code>zremrangebyrank key start stop</code>移除有序集 key 中，指定排名(rank)区间内的所有成员</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">redis&gt; zadd salary 2000 jack
+(integer) 1
+redis&gt; zadd salary 5000 tom
+(integer) 1
+redis&gt; zadd salary 3500 peter
+(integer) 1
+
+redis&gt; zremrangebyrank salary 0 1       # 移除排名 0 至 1 区间内的成员
+(integer) 2
+
+redis&gt; zrange salary 0 -1 withscores    # 有序集只剩下一个成员
+1) &#34;tom&#34;
+2) &#34;5000&#34;</pre></div></li>
+
+<li><p>zremrangebyscore    移除有序集 key 中，所有 score 值介于 min 和 max 之间(包括等于 min 或 max )的成员</p></li>
+
+<li><p>zrevrange   返回有序集 key 中，指定区间内的成员，成员位置按score大到小排列
+zrevrangebyscore    返回有序集 key 中， score 值介于 max 和 min 之间(默认包括等于 max 或 min )的所有的成员。成员按 score 值递减(从大到小)+ 排列</p></li>
+
+<li><p>zrevrank    返回有序集 key 中成员 member 的排名。其中有序集成员按 score 值递减(从大到小)排序</p></li>
+
+<li><p>zscore  返回有序集 key 中，成员 member 的 score 值</p></li>
+
+<li><p>zunionstore 计算给定的一个或多个有序集的并集，其中给定 key 的数量必须以 numkeys 参数指定，并将该并集(结果集)储存到新集合</p></li>
+
+<li><p>zinterstore 计算给定的一个或多个有序集的交集，其中给定 key 的数量必须以 numkeys 参数指定，并将该交集(结果集)储存到新集合</p></li>
+
+<li><p>zscan   增量迭代</p></li>
+</ul>
+
+<h3 id="pub-sub">pub/sub</h3>
+
+<ul>
+<li>psubscribe  订阅一个或多个符合给定模式的频道</li>
+<li>publish 将信息 message 发送到指定的频道</li>
+<li>pubsub  pubsub 是一个查看订阅与发布系统状态的内省命令</li>
+<li>punsubscribe    指示客户端退订所有给定模式</li>
+<li>subscribe   订阅给定的一个或多个频道的信息</li>
+<li>unsubscribe 指示客户端退订给定的频道</li>
+</ul>
+
+<h3 id="transaction">transaction</h3>
+
+<ul>
+<li>discard 取消事务，放弃执行事务块内的所有命令</li>
+<li>exec    执行所有事务块内的命令</li>
+<li>multi   标记一个事务块的开始</li>
+<li>unwatch 取消 watch 命令对所有 key 的监视</li>
+<li>watch   监视一个(或多个) key ，如果在事务执行之前这个(或这些) key 被其他命令所改动，那么事务将被打断</li>
+</ul>
+
+<h3 id="scripts">scripts</h3>
+
+<p>命令  说明
++ eval    通过内置的 lua 解释器，可以使用 eval 命令对 lua 脚本进行求值
++ evalsha 根据给定的 sha1 校验码，对缓存在服务器中的脚本进行求值
++ script exists   给定一个或多个脚本的 sha1 校验和，返回一个包含 0 和 1 的列表，表示校验和所指定的脚本是否已经被保存在缓存当中
++ script flush    清除所有 lua 脚本缓存
+script kill 停止当前正在运行的 lua + 脚本，当且仅当这个脚本没有执行过任何写操作时，这个命令才生效。这个命令主要用于终止运行时间过长的脚本
++ script load 将脚本 script 添加到脚本缓存中，但并不立即执行这个脚本</p>
+
+<h3 id="connection">connection</h3>
+
+<ul>
+<li>auth    通过设置配置文件中 requirepass 项的值，可以使用密码来保护 redis 服务器</li>
+<li>echo    打印一个特定的信息 message ，测试时使用。</li>
+<li>ping    使用客户端向 redis 服务器发送一个 ping ，如果服务器运作正常的话，会返回一个pong，通常用于测试与服务器的连接是否仍然生效，或者用于测量延迟值</li>
+<li>quit    请求服务器关闭与当前客户端的连接</li>
+<li>select  切换到指定的数据库，数据库索引号 index 用数字值指定，以 0 作为起始索引值</li>
+</ul>
+
+<h3 id="server">server</h3>
+
+<ul>
+<li>bgrewriteaof    执行一个 aof文件 重写操作。重写会创建一个当前 aof 文件的体积优化版本。</li>
+<li>bgsave  在后台异步(asynchronously)保存当前数据库的数据到磁盘</li>
+<li>client getname  返回 client setname 命令为连接设置的名字</li>
+<li>client kill 关闭地址为 ip:port 的客户端</li>
+<li>client list 以人类可读的格式，返回所有连接到服务器的客户端信息和统计数据</li>
+<li>client setname  为当前连接分配一个名字</li>
+<li>config get  config get 命令用于取得运行中的 redis 服务器的配置参数</li>
+<li>config resetstat    重置 info 命令中的某些统计数据</li>
+<li>config rewrite  config rewrite 命令对启动 redis 服务器时所指定的 redis.conf 文件进行改写</li>
+<li>config set  config set 命令可以动态地调整 redis 服务器的配置而无须重启</li>
+<li>dbsize  返回当前数据库的 key 的数量</li>
+<li>debug object    debug object 是一个调试命令，它不应被客户端所使用</li>
+<li>debug segfault  执行一个不合法的内存访问从而让 redis 崩溃，仅在开发时用于 bug 模拟</li>
+<li>flushall    清空整个 redis 服务器的数据(删除所有数据库的所有 key )</li>
+<li>flushdb 清空当前数据库中的所有 key</li>
+<li>info    返回关于 redis 服务器的各种信息和统计数值</li>
+<li>lastsave    返回最近一次 redis 成功将数据保存到磁盘上的时间，以 unix 时间戳格式表示</li>
+<li>monitor 实时打印出 redis 服务器接收到的命令，调试用</li>
+<li>psync   用于复制功能的内部命令</li>
+<li>save</li>
+<li>save 命令执行一个同步保存操作，将当前 redis 实例的所有数据快照(snapshot)以 rdb 文件的形式保存到硬盘。
+一般来说，在生产环境很少执行 save 操作，因为它会阻塞所有客户端，保存数据库的任务通常由 bgsave + 命令异步地执行。然而，如果负责保存数据的后台子进程不幸出现问题时， save 可以作为保存数据的最后手段来使用。</li>
+<li>shutdown shutdown 命令执行以下操作： 停止所有客户端如果有至少一个保存点在等待，执行 save 命令 如果 aof 选项被打开，更新 aof 文件
+.关闭 redis 服务器(server)</li>
+<li>slaveof slaveof 命令用于在 redis 运行时动态地修改复制(replication)功能的行为</li>
+<li>slowlog slow log 是 redis 用来记录查询执行时间的日志系统</li>
+<li>sync    用于复制功能的内部命令</li>
+<li>time    返回当前服务器时间</li>
+</ul>
+
+<p>三条通用规则
++ 当添加元素到一个不存在的复合数据类型如list时，会自动创建这个列表,如lpush元素到一个不存在的列表会自动创建列表
++ 如果删除一个空列表，会自动释放这个key
++ 读写一个空列表总会返回相同的结果,如llen得到空列表长度为0,del空列表返回也是0</p>
+
+<h2 id="高级属性">高级属性</h2>
+
+<h3 id="pipeline">pipeline</h3>
+
+<h2 id="桌面管理器">桌面管理器</h2>
+
+<p><a href="http://docs.redisdesktop.com/en/latest/install/">http://docs.redisdesktop.com/en/latest/install/</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">## 安装桌面管理项
+brew cask install rdm</pre></div>
+<p><img src="http://farwmarth.bestnewbee.com/images/rdm.png" alt=" rdm" /></p>
+
+<p>##TODO
+<a href="http://fengwan.blog.51cto.com/508652/1746731">http://fengwan.blog.51cto.com/508652/1746731</a>
+<a href="http://blog.csdn.net/dc_726/article/details/48552531">http://blog.csdn.net/dc_726/article/details/48552531</a>
+<a href="http://my.oschina.net/davehe/blog/174662">http://my.oschina.net/davehe/blog/174662</a></p>
+    </div>
+    <footer class="post-footer">
+     
+
+
+<div class="post-tags">
+     
+    <a href="http://farwmarth.com/tags/redis" rel="tag" title="redis">#redis#</a>
+    
+</div>
+
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="http://farwmarth.com/post/lua%E6%95%B0%E6%8D%AE%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E9%80%89%E6%8B%A9/" rel="next" title="lua数据序列化的选择">
+        <i class="fa fa-chevron-left"></i> lua数据序列化的选择
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="http://farwmarth.com/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E4%B8%80%E6%AC%A1%E8%B0%83%E4%BC%98/" rel="prev" title="服务器的一次调优">
+        服务器的一次调优 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="http://farwmarth.com/img/author.jpg"
+        alt="farwmarth" />
+    <p class="site-author-name" itemprop="name">farwmarth</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="http://farwmarth.com/post/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="http://farwmarth.com/categories/">      
+         
+        <span class="site-state-item-count">31</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="http://farwmarth.com/tags/">
+         
+        <span class="site-state-item-count">90</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/wujiyu115/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">farwmarth</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.6</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=286131889" charset="UTF-8"></script> 
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="http://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/utils.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/motion.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/affix.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/post-details.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/toc.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

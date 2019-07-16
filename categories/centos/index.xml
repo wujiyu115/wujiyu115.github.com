@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>centos on farwmarth</title>
+    <link>http://farwmarth.com/categories/centos/</link>
+    <description>Recent content in centos on farwmarth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 29 Mar 2013 00:16:43 +0000</lastBuildDate>
+    
+	<atom:link href="http://farwmarth.com/categories/centos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>centos 命令，基本设置</title>
+      <link>http://farwmarth.com/post/centos-%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/</link>
+      <pubDate>Fri, 29 Mar 2013 00:16:43 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/centos-%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/</guid>
+      <description>&lt;p&gt;&lt;font color=&#34;#ff0000&#34;&gt; update 2016-7-21 13:53&lt;/font&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;centos6-4配置163的yum源&#34;&gt;CentOS6.4配置163的yum源&lt;/h2&gt;
+
+&lt;p&gt;CentOS系统自带的更新源的速度实在是慢，为了让CentOS6使用速度更快的YUM更新源，可以选择163（网易）的更新源。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;查看版本&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;cat /etc/redhat-release&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

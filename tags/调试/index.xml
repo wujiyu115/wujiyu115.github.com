@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>调试 on farwmarth</title>
+    <link>http://farwmarth.com/tags/%E8%B0%83%E8%AF%95/</link>
+    <description>Recent content in 调试 on farwmarth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 18 May 2013 11:10:11 +0000</lastBuildDate>
+    
+	<atom:link href="http://farwmarth.com/tags/%E8%B0%83%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android 开发调试</title>
+      <link>http://farwmarth.com/post/android-%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/</link>
+      <pubDate>Sat, 18 May 2013 11:10:11 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/android-%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/</guid>
+      <description>&lt;p&gt;&lt;font color=&#34;red&#34;&gt;update: 2016-1-14 更新模拟器&lt;strong&gt;夜神模拟器&lt;/strong&gt;&lt;/font&gt;
+&lt;font color=&#34;red&#34;&gt;update: 2013-8-13 更新模拟器&lt;strong&gt;Genymotion&lt;/strong&gt;&lt;/font&gt;
+&lt;font color=&#34;red&#34;&gt;update: 2013-5-19 更新wifi调试工具&lt;/font&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;模拟器&#34;&gt;模拟器&lt;/h2&gt;
+
+&lt;p&gt;android自带模拟器真是龟速,果断放弃
++ 夜神模拟器
++ &lt;a href=&#34;http://www.bluestacks.net.cn/Download/&#34;&gt;bluestacks&lt;/a&gt;: 可以安装软件和调试的模拟器,速度比android的不知道快到哪去了.
+安装完后,eclipse会把它识别为一台设备 .和真机调试没啥区别.运行界面
+&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/05/image11.png&#34; alt=&#34;image&#34; /&gt;
++ Genymotion
++ 逍遥安卓模拟器
++ 靠谱助手安卓模拟器
++ 海马玩模拟器
+mac下连接: &lt;code&gt;adb connect 192.168.56.101&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>支付宝 on farwmarth</title>
+    <link>http://farwmarth.com/tags/%E6%94%AF%E4%BB%98%E5%AE%9D/</link>
+    <description>Recent content in 支付宝 on farwmarth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 26 Apr 2013 11:55:25 +0000</lastBuildDate>
+    
+	<atom:link href="http://farwmarth.com/tags/%E6%94%AF%E4%BB%98%E5%AE%9D/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>android 支付宝 快捷支付 接入</title>
+      <link>http://farwmarth.com/post/android-%E6%94%AF%E4%BB%98%E5%AE%9D-%E5%BF%AB%E6%8D%B7%E6%94%AF%E4%BB%98-%E6%8E%A5%E5%85%A5/</link>
+      <pubDate>Fri, 26 Apr 2013 11:55:25 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/android-%E6%94%AF%E4%BB%98%E5%AE%9D-%E5%BF%AB%E6%8D%B7%E6%94%AF%E4%BB%98-%E6%8E%A5%E5%85%A5/</guid>
+      <description>&lt;p&gt;&lt;font color=&#34;red&#34;&gt;update: 2013-4-28 私钥安全性修正&lt;/font&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;一-sdk下载&#34;&gt;一 sdk下载&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://b.alipay.com/order/techService.htm&#34;&gt;https://b.alipay.com/order/techService.htm&lt;/a&gt;.最下面有快捷支付(无线)zip包,包含了教程,开发指南和demo.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

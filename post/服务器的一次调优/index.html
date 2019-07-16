@@ -1,0 +1,699 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>服务器的一次调优 - farwmarth</title>
+    <meta name="keywords" content="程序员">
+    
+    <meta property="og:title" content="服务器的一次调优">
+    <meta property="og:site_name" content="farwmarth">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="服务器的一次调优 - farwmarth" />
+    <meta name="description" content="game"> 
+    <link rel="shortcut icon" href="http://farwmarth.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link href="http://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="http://farwmarth.com/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">farwmarth</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Those that can,do.Those that can&#39;t ,complain</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/douban/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />豆瓣
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/music/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-music"></i> <br />音乐
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E4%B8%80%E6%AC%A1%E8%B0%83%E4%BC%98/" itemprop="url">
+        服务器的一次调优
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-03-28">
+    2016-03-28
+</time>
+</span> 
+      
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">4817 字 ~10分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p><font color="red">update 2016-5-12 10:32  优化结构</font>
+<font color="red">update 2016-5-5 16:30  skynet调试</font></p>
+
+<h2 id="历史遗留问题">历史遗留问题</h2>
+
+<p>这一项目的开发又接近尾声了,功能开发完毕,接下来就是运营方面的接入工作,还有就是服务器性能性的调优了.
+之前服务器一直存在两个比较严重的问题,一个是加载离线玩家.另外一个则是静态数据未共享,导致的服务器启动内存过高的问题.</p>
+
+<p>开发过程中,因为功能性的开发,不得不去解决这个离线玩家的问题,像好友这样的功能,不可能说离线就不能加好友.
+之前一直搁置的原因是一方面是系统成型,改造的成本太高，最重要的原因还是懒 .
+其实改造起来方案还是比较简单的.因为采用单模块单库的设计,在离线数据的加载上也极为方便.
+玩家数据在playercenter中的结构如下:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#66d9ef">local</span> cache_class <span style="color:#f92672">=</span> class()
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">cache_class</span>:<span style="color:#a6e22e">ctor</span>()
+    self.is_online <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>   <span style="color:#75715e">--是否是线</span>
+    self.do_save_time <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#75715e">--上一次存库时间</span>
+    self.dirty_mark <span style="color:#f92672">=</span> {}  <span style="color:#75715e">--脏标cache</span>
+    self.player <span style="color:#f92672">=</span> player_factory.player_class.new()<span style="color:#75715e">--放置角色基础数据</span>
+    self.quest_list_obj <span style="color:#f92672">=</span> {} <span style="color:#75715e">-- 放置任务数据</span>
+    self.friend <span style="color:#f92672">=</span> friend_factory.player_cls.new()<span style="color:#75715e">--好友数据</span>
+<span style="color:#66d9ef">end</span></code></pre></div>
+<p>dirty_mark是用作数据库加载标记使用,如果单模块的库被加载,dirty_mark则设置为true,内存中数据则是最新的.如好友表信息存储在friend表中,
+在好友模块中如果在线玩家要加载离线玩家为好友时,只要将离线玩家的friend数据load到内存中即可,这些可以节省内存消耗 .
+is_online标志则是标记好友是否是正常登录,正常登录数据是完整的,各系统对其数据存取没有限制,如果is_online是false,虽说明其是离线加载数据,数据不完整,在进行业务逻辑时要区别对待.加载的离线数据设定是在内存中无修改则保持最大两小时,两小时过后,或者是玩家再次上线则会先保存离线数据,再切换到正常的登录加载完整数据过程.</p>
+
+<p>静态数据的问题其实是skynet的服务设计造成的,每个服务都是一个独立的lua state. 开多个lua服务时每个服务都要加载相同的静态数据.前期数据表不大时这个问题突显不出现,运营开服的时候在单台物理机上测试开5个服过一会总有一个服会宕掉,花了一个中午没有找到具体原因,log里并没有出现报错信息.思考良久才考虑到之前出现启动内存过高的情况.一查内存占用果不其然,因为配置表在单个服务中展开将近 30M的内存.单个逻辑服启动占用内存将近800M.
+<img src="http://farwmarth.bestnewbee.com/images/server800m.png" alt="" />
+战斗场景因为有各种类型,比如pvp等总共开了8个场景服务用于分流.这部分内存占用就400多M
+<img src="http://farwmarth.bestnewbee.com/images/scene420m.png" alt="" /></p>
+
+<p>官方的解决方案:
+<a href="https://github.com/cloudwu/skynet/wiki/ShareData">https://github.com/cloudwu/skynet/wiki/ShareData</a>
+这个残留问题一直没有解决是因为涉及的代码太多了,大概有100个文件左右,之前每张静态表都对应 了一个对应的excel,先把静态表结构化成后端要的结构,比如公式配置表结构化类如下:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#66d9ef">local</span> battle_formula_excel <span style="color:#f92672">=</span> {}
+<span style="color:#66d9ef">local</span> formula_data <span style="color:#f92672">=</span> {}
+
+<span style="color:#66d9ef">local</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">init</span>()
+    require <span style="color:#e6db74">&#34;config/data/TB_formula&#34;</span> <span style="color:#75715e">-- 公式表</span>
+    <span style="color:#66d9ef">for</span> id, value <span style="color:#66d9ef">in</span> pairs(TB_formula) <span style="color:#66d9ef">do</span>
+        formula_data[id] <span style="color:#f92672">=</span> value.content
+    <span style="color:#66d9ef">end</span>
+    <span style="color:#75715e">-- commonutil.print_table(formula_data)</span>
+<span style="color:#66d9ef">end</span>
+
+init()
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">battle_formula_excel</span>.<span style="color:#a6e22e">get_formula</span>(id)
+    <span style="color:#66d9ef">return</span> formula_data[id]
+<span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">return</span> battle_formula_excel</code></pre></div>
+<p>然后battle_formula_excel这个lua文件会被各个服务引用,所以单独共享TB_formula这个静态配置表这种方案的代价实在太大,折中的办法就是将结构化后的数据如formula_data,share出来,battle_formula_excel中数据源用一个标志去从不同的地方获取,如果是数据中心服务则调用init方法来初始化这个结构化数据,如果非服务则在服务启动时将数据中心服务的数据注入进去.数据和接口分离开来
+数据中心服务如下:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#66d9ef">local</span> sharedata <span style="color:#f92672">=</span> require <span style="color:#e6db74">&#34;sharedata&#34;</span>
+<span style="color:#66d9ef">local</span> skynet <span style="color:#f92672">=</span> require <span style="color:#e6db74">&#34;skynet&#34;</span>
+require <span style="color:#e6db74">&#34;skynet.manager&#34;</span>
+<span style="color:#66d9ef">local</span> svrname, svrcount <span style="color:#f92672">=</span> ...
+
+<span style="color:#66d9ef">local</span> command <span style="color:#f92672">=</span> {}
+
+<span style="color:#66d9ef">local</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">init_all_data</span>()
+    <span style="color:#75715e">-- 静态数据配置统一操作入口</span>
+    require <span style="color:#e6db74">&#34;config/data/TB_formula&#34;</span>
+
+    <span style="color:#66d9ef">local</span> all_excel <span style="color:#f92672">=</span>{
+    {<span style="color:#e6db74">&#34;battle_formula_excel&#34;</span>, <span style="color:#e6db74">&#34;config/battle_formula_excel&#34;</span>},
+    {<span style="color:#e6db74">&#34;mine_excel&#34;</span>, <span style="color:#e6db74">&#34;config/silvermine_excel&#34;</span>},
+    }
+
+    <span style="color:#66d9ef">local</span> all_excel_data <span style="color:#f92672">=</span> {}
+    <span style="color:#66d9ef">for</span> _,config_obj <span style="color:#66d9ef">in</span> ipairs(all_excel) <span style="color:#66d9ef">do</span>
+        <span style="color:#66d9ef">local</span> path_key <span style="color:#f92672">=</span> config_obj[<span style="color:#ae81ff">1</span>]
+        <span style="color:#66d9ef">local</span> path <span style="color:#f92672">=</span>config_obj[<span style="color:#ae81ff">2</span>]
+        <span style="color:#66d9ef">local</span> excel_obj <span style="color:#f92672">=</span> require (path)
+        <span style="color:#75715e">-- print(&#34;--&#34;,path,excel_obj.init_excel_data)</span>
+        <span style="color:#66d9ef">if</span> excel_obj.init_excel_data <span style="color:#66d9ef">then</span>
+            <span style="color:#66d9ef">local</span> result <span style="color:#f92672">=</span> excel_obj.init_excel_data()
+            assert(result <span style="color:#f92672">~=</span><span style="color:#66d9ef">nil</span>,<span style="color:#e6db74">&#34;返回结构化数据为空&#34;</span><span style="color:#f92672">..</span>path_key )
+            all_excel_data[path_key] <span style="color:#f92672">=</span>result
+        <span style="color:#66d9ef">else</span>
+            print(<span style="color:#e6db74">&#34;没有init_excel_data方法的excel&#34;</span>,path_key)
+        <span style="color:#66d9ef">end</span>
+    <span style="color:#66d9ef">end</span>
+    sharedata.new(<span style="color:#e6db74">&#34;all_excel_data&#34;</span>,all_excel_data)
+<span style="color:#66d9ef">end</span>
+
+skynet.init(<span style="color:#66d9ef">function</span> (  )
+    <span style="color:#75715e">--数据中心服务标志</span>
+    exceldatecenter <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
+    init_all_data()
+<span style="color:#66d9ef">end</span>)
+
+skynet.start(<span style="color:#66d9ef">function</span>()
+    <span style="color:#75715e">-- 接收逻辑调用协议</span>
+    skynet.dispatch(<span style="color:#e6db74">&#34;lua&#34;</span>, receive_lua)
+<span style="color:#66d9ef">end</span>)</code></pre></div>
+<p>改造后的结构化excel如下:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#66d9ef">local</span> battle_formula_excel <span style="color:#f92672">=</span> {}
+<span style="color:#75715e">--是否数据中心</span>
+<span style="color:#66d9ef">local</span> formula_data <span style="color:#f92672">=</span> {}
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> exceldatecenter <span style="color:#66d9ef">then</span>
+    formula_data <span style="color:#f92672">=</span>all_excel_data.battle_formula_excel.formula_data
+<span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">local</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">init</span>()
+    <span style="color:#66d9ef">for</span> id, value <span style="color:#66d9ef">in</span> pairs(TB_formula) <span style="color:#66d9ef">do</span>
+        formula_data[id] <span style="color:#f92672">=</span> value.content
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+<span style="color:#75715e">-------------------供数据中心调度的接口</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">battle_formula_excel</span>.<span style="color:#a6e22e">init_excel_data</span>(  )
+    init()
+    <span style="color:#66d9ef">return</span> {formula_data <span style="color:#f92672">=</span> formula_data}
+<span style="color:#66d9ef">end</span>
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">battle_formula_excel</span>.<span style="color:#a6e22e">get_formula</span>(id)
+    <span style="color:#66d9ef">return</span> formula_data[id]
+<span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">return</span> battle_formula_excel</code></pre></div>
+<p>非数据中心服务注入结构化数据:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#66d9ef">local</span> sharedata <span style="color:#f92672">=</span> require <span style="color:#e6db74">&#34;sharedata&#34;</span>
+
+<span style="color:#66d9ef">local</span> battle_formula_excel <span style="color:#f92672">=</span> <span style="color:#66d9ef">nil</span>
+
+<span style="color:#66d9ef">local</span> command <span style="color:#f92672">=</span> {}
+<span style="color:#66d9ef">local</span> svr_hash_id <span style="color:#f92672">=</span> <span style="color:#66d9ef">nil</span>
+<span style="color:#66d9ef">local</span> svrname, svrcount <span style="color:#f92672">=</span> ...
+
+skynet.init(<span style="color:#66d9ef">function</span> ( )
+    <span style="color:#75715e">--数据模块</span>
+    all_excel_data <span style="color:#f92672">=</span>sharedata.query(<span style="color:#e6db74">&#34;all_excel_data&#34;</span>)
+    <span style="color:#75715e">--battle_formula_excel</span>
+    battle_formula_excel <span style="color:#f92672">=</span> require <span style="color:#e6db74">&#34;config/battle_formula_excel&#34;</span>
+<span style="color:#66d9ef">end</span>)
+
+skynet.start(<span style="color:#66d9ef">function</span>()
+    svrcount <span style="color:#f92672">=</span> tonumber(svrcount)
+    skynet.dispatch(<span style="color:#e6db74">&#34;lua&#34;</span>, receive_lua)
+<span style="color:#66d9ef">end</span>)</code></pre></div>
+<p>改造之前怕做无用功测试了几种方案.先启一个exceldatacenter服务把所有静态数据全部require进去 .再启动一个test去加载共享数据.
+<img src="http://farwmarth.bestnewbee.com/images/require.png" alt="" />
+可以看到test服务内存不像之前一样重新加载静态数据了,为了保险起见,再开了9个test服务.
+<img src="http://farwmarth.bestnewbee.com/images/datacenter.png" alt="" />
+单服务没有附加静态数据内存都在几百k左右.然后就是开发漫长的苦力活了.
+改造完毕,内存终于降下来了,启动内存为300M
+<img src="http://farwmarth.bestnewbee.com/images/20160328211905.png" alt="" />
+<img src="http://farwmarth.bestnewbee.com/images/20160328212051.png" alt="" /></p>
+
+<h2 id="压测调优">压测调优</h2>
+
+<p>压测过程 中性能真是惨不忍睹,关键还是前期的为了急着完成功能,设计上也没有作过多的考虑,编码过程中也没有统一规范,review代码.
+压化也是一个循序渐进的过程,出于时间排 期的考虑只能分步走.在短时间内解决压力瓶颈.
+如果是消息过载可以统计消耗时间找出热点,内在泄露可以通过快照方式来定位未释放的内存.</p>
+
+<p>开发机为ubuntu,在用机器人压测过程中有连接数的限制,需要更改连接数.</p>
+
+<h3 id="ubuntu-too-many-open-files">ubuntu too many open files</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"> 单个登录用最大文件数
+cat /proc/sys/fs/file-max
+输出最大连接数
+ulimit -Hn
+输出最大连接数
+ulimit -sn
+更改最大连接数
+sudo sh -c &#34;ulimit -n 102400 &amp;&amp; exec su $LOGNAME&#34;
+ulimit -n unlimited</pre></div>
+<h3 id="skynet-调试台使用">skynet 调试台使用</h3>
+
+<p><a href="https://github.com/cloudwu/skynet/wiki/DebugConsole">https://github.com/cloudwu/skynet/wiki/DebugConsole</a>
+常用的针对所有 lua 服务的指令有：</p>
+
+<ul>
+<li>clearcache  清除多个lua虚拟机共享的代码</li>
+<li>cmem    显示c层hook的内存</li>
+<li>debug   针对一个 lua 服务启动内置的单步调试器。<a href="http://blog.codingnow.com/2015/02/skynet_debugger.html">http://blog.codingnow.com/2015/02/skynet_debugger.html</a></li>
+<li>exit    让一个 lua 服务退出</li>
+<li>gc   强制让所有 lua 服务都执行一次垃圾回收，并报告回收后的内存</li>
+<li>help    显示帮助</li>
+<li>info    让一个 lua 服务汇报自己的内部信息
+获取服务内部数据 - info address
+```lua
+local skynet = require &ldquo;skynet&rdquo;
+require &ldquo;skynet.manager&rdquo;    &ndash; import skynet.register
+local db = {}</li>
+</ul>
+
+<p>local command = {}</p>
+
+<p>function command.GET(key)
+  return db[key]
+end</p>
+
+<p>function command.SET(key, value)
+  local last = db[key]
+  db[key] = value
+  return last
+end</p>
+
+<p>&ndash; 新增的代码 &ndash; start
+skynet.info_func(function() return &ldquo;hello world!&rdquo; end)
+&ndash; 新增的代码 &ndash; end</p>
+
+<p>skynet.start(function()
+  skynet.dispatch(&ldquo;lua&rdquo;, function(session, address, cmd, &hellip;)
+    local f = command[string.upper(cmd)]
+    if f then
+      skynet.ret(skynet.pack(f(&hellip;)))
+    else
+      error(string.format(&ldquo;Unknown command %s&rdquo;, tostring(cmd)))
+    end
+  end)
+  skynet.register &ldquo;SIMPLEDB&rdquo;
+end)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">```shell
+$ telnet 127.0.0.1 9000
+Welcome to skynet console
+list
+:0000000d       snlua simpledb
+OK
+info :0000000d
+hello world</pre></div>
+<ul>
+<li>inject 将 script 名字对应的脚本插入到指定服务中运行（通常可用于热更新补丁[ inject address luascript.lua]</li>
+<li>kill    强制中止一个 lua 服务</li>
+<li>list    列出所有服务，以及启动服务的命令参数</li>
+<li>log  带log启动一个lua服务</li>
+<li>logoff   关闭日志记录一个服务所有的输入消息到文件。需要在 Config 里配置 logpath</li>
+<li>logon   对一个服务打开日志</li>
+<li>mem  让所有 lua 服务汇报自己占用的内存</li>
+<li>service  列出所有的唯一 lua 服务</li>
+<li>shrtbl  Show shared short string table info</li>
+<li>signal  address sig 向服务发送一个信号，sig 默认为 0 。当一个服务陷入死循环时，默认信号会打断正在执行的 lua 字节码，并抛出 error 显示调用栈。这是针对 endless loop 的 log 的有效调试方法。注：这里的信号并非系统信号</li>
+<li>snax    lanuch a new snax service</li>
+<li>start   启动一个lua服务</li>
+<li>stat    列出所有 lua 服务的消息队列长度，以及被挂起的请求数量</li>
+<li>task    显示一个服务中所有被挂起的请求的调用栈。</li>
+</ul>
+
+<h3 id="数据库优化">数据库优化</h3>
+
+<ul>
+<li>数据脏标
+定时保存数据的弊端带来的工作就是,当数据变脏时要设置 数据为脏,会减少很多写库的io.</li>
+<li>数据队列
+脏标在一定程度上可以减少很多io,但是同时在线人数过多,操作频繁时数据的写io还是很多.所以存库一般放在独立的线程中.还有一个设想就是根据玩家的等级和vip和数据的保存次数确定权重,在服务器压力过大时先保存重要级的玩家数据.在空闲时段再去保存次要的玩家数据,这样就算异常情况数据丢失损失也不会太大.当然存库时单玩家的数据必须是完整的.</li>
+<li>内存数据库
+后期考虑把非线性增长的玩家数据用redis来替代,在监测mysql登录玩家上线时加载数据需要2s左右,如果换成redis应该会有很多改观.
+,redis当缓存 定时线程写入mysql 直接存json .表结构不改直接存json.必须注意字节长度我们曾经有字节长度不足的问题</li>
+</ul>
+
+<h3 id="服务过载">服务过载</h3>
+
+<ul>
+<li>避免单点服务
+逻辑过多的单点服务往往会成为性能热点,导致消息过载,除了watchdog和一些交互不频繁的服务外可以服务多开让线程驱动.</li>
+<li>skynet.mqlen()  当前服务的消息队列</li>
+<li>skynet.task(ret) 当前服务挂起的待处理的call任务</li>
+</ul>
+
+<h3 id="内存泄露">内存泄露</h3>
+
+<ul>
+<li>调试台<code>mem</code>查看lua服务占用</li>
+<li>cmemory.lua 统计c内存占用 &lt;: <a href="https://github.com/cloudwu/skynet/wiki/MemoryHook&gt;">https://github.com/cloudwu/skynet/wiki/MemoryHook&gt;</a></li>
+<li>snapshot <a href="https://github.com/cloudwu/lua-snapshot">https://github.com/cloudwu/lua-snapshot</a></li>
+
+<li><p>从_G查找表
+```lua
+local findedObjMap = nil
+function _G.findObject(obj, findDest)
+if findDest == nil then
+    return false
+end
+if findedObjMap[findDest] ~= nil then
+    return false
+end
+findedObjMap[findDest] = true</p>
+
+<p>local destType = type(findDest)
+if destType == &ldquo;table&rdquo; then
+    if findDest == _G.CMemoryDebug then
+        return false
+    end
+    for key, value in pairs(findDest) do
+        if key == obj or value == obj then
+            _info(&ldquo;Finded Object&rdquo;)
+            return true
+        end
+        if findObject(obj, key) == true then
+            _info(&ldquo;table key&rdquo;)
+            return true
+        end
+        if findObject(obj, value) == true then
+            _info(&ldquo;key:[&ldquo;..tostring(key)..&rdquo;]&ldquo;)
+            return true
+        end
+    end
+elseif destType == &ldquo;function&rdquo; then
+    local uvIndex = 1
+    while true do
+        local name, value = debug.getupvalue(findDest, uvIndex)
+        if name == nil then
+            break
+        end
+        if findObject(obj, value) == true then
+            _info(&ldquo;upvalue name:[&ldquo;..tostring(name)..&rdquo;]&ldquo;)
+            return true
+        end
+        uvIndex = uvIndex + 1
+    end
+end
+return false
+end</p></li>
+</ul>
+
+<p>function _G.findObjectInGlobal(obj)
+    findedObjMap = {}
+    setmetatable(findedObjMap, {__mode = &ldquo;k&rdquo;})
+    _G.findObject(obj, _G)
+end</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">### 减少登录流量
++ 合并协议
+像红点提示这种可能分部在各系统中发送,这些协议号重复但功能代码分步在各个系统中的协议可以在模块中预留接口来获取提示结果再打包发送.
++ 减少登录时的推送数据
+登录时可只推送玩家的基础角色信息,和一些必要的提示数据,其他数据可以选择延迟初始化的方式,在玩家打开客户端界面再请求数据.
++ 数据分页
+这是web中最常见的方式,数据量过大时,分成多页,好友,排行榜这种数据量大的请求可以使用分页来做优化
+
+### 设计问题
+#### 原有核心服务结构
++ watchdog  :维护全护玩家的登录登出
++ role  :创建角色
++ auth  :第三方sdk验证
++ agent  : 玩家服务,中转数据
++ playercenter  :   玩家数据中心
++ scene  :   场景服务(城镇场景根据人流分服,单人副本,其他特殊战斗场景)
+
+watchdog(单个) ----&gt;role(多个)    : 创建角色
+watchdog(单个) ----&gt;auth(多个)    : 账号验证,创建账号
+watchdog (单个)---&gt; agent(对应玩家数量) ------&gt;playercenter(多个)  : 验证成功后,创建agent线程,个人数据加载到 playercenter中.
+watchdog (单个)---&gt; agent(对应玩家数量) ------&gt;scene(多个)  :  登录加载数据后客户端可进入对应的场景服务.
+
+#### 优化登录登出过程
+之前的设计因为在服务器做流失统计,把登录过程细化成一个很长的过程.这就导致各服务间的交互过于频繁.
+
+client连接socket,发送auth数据----&gt;[watchdog]请求auth----&gt;[auth]连接python服务与sdk第三方校验token------&gt;[watchdog]返回auth结果----&gt;client登录----&gt;[watchdog]检查排队重复登录-----&gt;client获取角色列表-----&gt;[watchdog]请求role得到角色列表---&gt;[role]获取角色列表----&gt;client如果角色个数不为0请求进入游戏-----&gt;[watchdog]创建[agent]----&gt;[agent]实始化成功返回[watchdog]----&gt;[watchdog]通知[agent]加载数据---&gt;[agent]通知[playercenter]加载数据----&gt;成功后推送数据让客户端进入[scene]
+
+开启[auth]服务的初衷是要异步与后台的python服务交互,其实auth完全没必要通过游戏服务器中转,优化后的过程如下:client通过sdk登录得到token等信息-------&gt;连接python服务校验生成加密串----&gt;client连接gameserver发送python的加密串-----&gt;gameserver验证串与时间有效性----&gt;走之前的登录过程,优化后的[auth]服务可以合并到[role]中,优化后[watchdog] 与[role],[agent]只要交互一次就可以完全登录操作.
+
+#### 优化log,道具流水,货币流水
+道具和流水消息过多,导致log服务在一直写库,消息过载.
+
++ 减少日志生成条数
++ 打包多条日志,在10条日志数据时候再调度log服务
++ 优化插入速度:事务,索引,批量插入(1000条插入一次),合并insert语句(多条日志一条insert)
+
+
+#### 优化退出处理
+退出数据不立即落地,保存一段时间.
+
+#### 日志大小处理</pre></div>
+<p>logrotate  copytruncate
+```</p>
+
+<p>参考链接:</p>
+
+<ul>
+<li><a href="http://blog.codingnow.com/2015/01/skynet_netpack.html">http://blog.codingnow.com/2015/01/skynet_netpack.html</a></li>
+<li><a href="http://blog.codingnow.com/2013/06/skynet_watchdog.html">http://blog.codingnow.com/2013/06/skynet_watchdog.html</a></li>
+<li><a href="http://blog.codingnow.com/2013/12/skynet_agent_pool.html">http://blog.codingnow.com/2013/12/skynet_agent_pool.html</a></li>
+<li><a href="http://blog.codingnow.com/2014/10/skynet_overload.html">http://blog.codingnow.com/2014/10/skynet_overload.html</a></li>
+<li><a href="http://blog.codingnow.com/2012/09/the_design_of_skynet.html">http://blog.codingnow.com/2012/09/the_design_of_skynet.html</a></li>
+</ul>
+    </div>
+    <footer class="post-footer">
+     
+
+
+<div class="post-tags">
+     
+    <a href="http://farwmarth.com/tags/server" rel="tag" title="server">#server#</a>
+    
+</div>
+
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="http://farwmarth.com/post/redis%E5%88%9D%E6%8E%A2/" rel="next" title="redis初探">
+        <i class="fa fa-chevron-left"></i> redis初探
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="http://farwmarth.com/post/gradle/" rel="prev" title="Gradle 打包">
+        Gradle 打包 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="http://farwmarth.com/img/author.jpg"
+        alt="farwmarth" />
+    <p class="site-author-name" itemprop="name">farwmarth</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="http://farwmarth.com/post/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="http://farwmarth.com/categories/">      
+         
+        <span class="site-state-item-count">31</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="http://farwmarth.com/tags/">
+         
+        <span class="site-state-item-count">90</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/wujiyu115/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">farwmarth</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.6</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=286131889" charset="UTF-8"></script> 
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="http://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/utils.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/motion.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/affix.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/post-details.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/toc.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

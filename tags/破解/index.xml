@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>破解 on farwmarth</title>
+    <link>http://farwmarth.com/tags/%E7%A0%B4%E8%A7%A3/</link>
+    <description>Recent content in 破解 on farwmarth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 23 Aug 2013 17:22:41 +0000</lastBuildDate>
+    
+	<atom:link href="http://farwmarth.com/tags/%E7%A0%B4%E8%A7%A3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>抓抓包</title>
+      <link>http://farwmarth.com/post/%E6%8A%93%E6%8A%93%E5%8C%85/</link>
+      <pubDate>Fri, 23 Aug 2013 17:22:41 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E6%8A%93%E6%8A%93%E5%8C%85/</guid>
+      <description>&lt;h2 id=&#34;wpe-pro-http-wpepro-net&#34;&gt;&lt;a href=&#34;http://wpepro.net/&#34;&gt;WPE PRO&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;基于进程的抓包工具.强大的网络封包编辑器，wpe可以截取网络上的信息，修改封包数据，是外挂制作的常用工具&lt;/p&gt;
+
+&lt;p&gt;还没研究怎么弄外挂，先拿来看看软件的get,post数据.如七色追剧助手。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>一次失败的逆向工程</title>
+      <link>http://farwmarth.com/post/%E4%B8%80%E6%AC%A1%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</link>
+      <pubDate>Wed, 07 Aug 2013 22:35:06 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E4%B8%80%E6%AC%A1%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</guid>
+      <description>&lt;p&gt;源起是要拿一下一个韩国游戏的图片资源,本以为挺容易的,google了一下, ipa也是压缩包格式,改成zip解压.然后把png图片拿出来，发现有一部分图片在windows上无法解析.继续google.原来是在编译打包到app的过程中，原有的png都被在最后加上了特定都数据段，这样从app里直接取出来图片既不能看，也不能用，所以需要工具来进行还原.网上python脚本一大堆，down下来还原了一下图片，确实可以恢复正常。但是这堆图片里面都是无关紧要的素材，想了想，应该是把图片弄成了自定义格式。在目录下果然发现了一个spr的目录，里面有一堆自定义扩展名叫f3spr的文件，用文本编辑器打开发现是个xml.有一段数据结构如下.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/08/image.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Crocus Modeller 试用无限期</title>
+      <link>http://farwmarth.com/post/crocus-modeller-%E8%AF%95%E7%94%A8%E6%97%A0%E9%99%90%E6%9C%9F/</link>
+      <pubDate>Mon, 18 Feb 2013 14:34:19 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/crocus-modeller-%E8%AF%95%E7%94%A8%E6%97%A0%E9%99%90%E6%9C%9F/</guid>
+      <description>&lt;p&gt;想找一个本地的画as的uml图软件，从美观程序和功能性选择了crocus modeller,它提供了试用版和付费版，付费版49美元，用不起，而是试用版只能试用五天.尝试着去破解。&lt;/p&gt;
+
+&lt;p&gt;用的是rsa算法 ,类库为 &lt;a href=&#34;http://code.google.com/p/as3crypto/&#34;&gt;as3crypto&lt;/a&gt;，算法如下:&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

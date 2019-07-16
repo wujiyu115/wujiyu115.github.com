@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>robotlegs2 on farwmarth</title>
+    <link>http://farwmarth.com/tags/robotlegs2/</link>
+    <description>Recent content in robotlegs2 on farwmarth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 18 Jan 2013 19:36:10 +0000</lastBuildDate>
+    
+	<atom:link href="http://farwmarth.com/tags/robotlegs2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>浅析 robotlegs2</title>
+      <link>http://farwmarth.com/post/%E6%B5%85%E6%9E%90-robotlegs2/</link>
+      <pubDate>Fri, 18 Jan 2013 19:36:10 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E6%B5%85%E6%9E%90-robotlegs2/</guid>
+      <description>&lt;nav&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#1-概述&#34;&gt;1  概述&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#2-容器解析&#34;&gt;2   容器解析&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;p&gt;当前阅读版本: 2.0.0b3.  &lt;a href=&#34;https://github.com/robotlegs/robotlegs-framework&#34; title=&#34;https://github.com/robotlegs/robotlegs-framework&#34;&gt;https://github.com/robotlegs/robotlegs-framework&lt;/a&gt;  源代码中有readme文档，阅读readme可以了解整个程序的大致结构.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>c&#43;&#43; on farwmarth</title>
+    <link>http://farwmarth.com/tags/c&#43;&#43;/</link>
+    <description>Recent content in c&#43;&#43; on farwmarth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 27 Jul 2013 11:57:43 +0000</lastBuildDate>
+    
+	<atom:link href="http://farwmarth.com/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>visual studio 2012 备忘</title>
+      <link>http://farwmarth.com/post/-visual-studio-2012-%E5%A4%87%E5%BF%98/</link>
+      <pubDate>Sat, 27 Jul 2013 11:57:43 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/-visual-studio-2012-%E5%A4%87%E5%BF%98/</guid>
+      <description>&lt;h2 id=&#34;一-插件&#34;&gt;&lt;strong&gt;一 插件:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Productivity Power Tools&lt;/strong&gt;&lt;br /&gt;
+最近发现神器Productivity Power Tools也更新了支持VS2012的版本（之前只有适用于VS2008/2010的）,和上面的VS Commands不太相同，这个插件更倾向于补足VS本身的功能。比如Ctrl+点击转到定义、一键整理C#的using和VB的Imports、括号自动补 全、标签栏按颜色分组、代码着色拷贝到HTML格式等.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Visual Assist X Options 代码助手&lt;/strong&gt;&lt;br /&gt;
+&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/07/image.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>windows下蛋疼的cocos2d-x，android配置。</title>
+      <link>http://farwmarth.com/post/windows%E4%B8%8B%E8%9B%8B%E7%96%BC%E7%9A%84cocos2d-xandroid%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Thu, 28 Mar 2013 00:08:31 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/windows%E4%B8%8B%E8%9B%8B%E7%96%BC%E7%9A%84cocos2d-xandroid%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;h2 id=&#34;安装android开发环境&#34;&gt;安装android开发环境&lt;/h2&gt;
+
+&lt;p&gt;接着上一篇: &lt;a href=&#34;http://farwmarth.com/?p=584&#34; title=&#34;http://farwmarth.com/?p=584&#34;&gt;http://farwmarth.com/?p=584&lt;/a&gt;&lt;br /&gt;
+在装了eclipse和cdt的环境下:&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

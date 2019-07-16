@@ -1,0 +1,676 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>mysql 备忘录 - farwmarth</title>
+    <meta name="keywords" content="程序员">
+    
+    <meta property="og:title" content="mysql 备忘录">
+    <meta property="og:site_name" content="farwmarth">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="mysql 备忘录 - farwmarth" />
+    <meta name="description" content="game"> 
+    <link rel="shortcut icon" href="http://farwmarth.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link href="http://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="http://farwmarth.com/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">farwmarth</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Those that can,do.Those that can&#39;t ,complain</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/douban/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />豆瓣
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/music/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-music"></i> <br />音乐
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/mysql%E5%A4%87%E5%BF%98/" itemprop="url">
+        mysql 备忘录
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-02-25">
+    2016-02-25
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="http://farwmarth.com/categories/programm" itemprop="url" rel="index">
+        <span itemprop="name">programm</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1485 字 ~3分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <h2 id="基础">基础</h2>
+
+<ul>
+<li><p>安装 mysql</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#server</span>
+sudo apt-get install mysql-server
+<span style="color:#75715e">#server dev</span>
+sudo apt-get install libmysqld-dev
+<span style="color:#75715e">#client</span>
+sudo apt-get install mysql-client
+<span style="color:#75715e">#client dev</span>
+sudo apt-get install libmysqlclient-dev</code></pre></div>
+<ul>
+<li>删除mysql:
+<code>shell
+sudo apt-get autoremove --purge mysql-server-5.0
+sudo apt-get remove mysql-server
+sudo apt-get autoremove mysql-server
+sudo apt-get remove mysql-common (非常重要)
+dpkg -l |grep ^rc|awk '{print $2}' |sudo xargs dpkg -P
+</code></li>
+</ul></li>
+
+<li><p>检测是否安装成功</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo netstat -tap | grep mysql</code></pre></div>
+<ul>
+<li>开启关闭:
+<code>shell
+service mysqld start
+sudo /etc/init.d/mysql start
+sudo start mysql
+</code></li>
+</ul></li>
+
+<li><p>加到开机列表:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">chkconfig -add mysqld</code></pre></div>
+<ul>
+<li>创建root管理员：
+<code>shell
+mysqladmin -u root password 12345678
+</code></li>
+</ul></li>
+
+<li><p>忘记密码：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">service mysqld stop
+mysqld_safe --user<span style="color:#f92672">=</span>root --skip-grant-tables
+mysql -u root
+use mysql
+update user set password<span style="color:#f92672">=</span>password<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;new_pass&#34;</span><span style="color:#f92672">)</span> where user<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;root&#34;</span>;
+flush privileges;</code></pre></div>
+<ul>
+<li>为root添加远程连接的能力：
+<code>shell
+GRANT ALL PRIVILEGES ON *.* TO root@&quot;%&quot; IDENTIFIED BY &quot;root&quot;;
+use mysql;
+update user set Password = password('12345678') where User='root';
+#mysql5.7
+#update user set authentication_string = password('12345678') where User='root';
+flush privileges;
+select host,user,password from user;
+#select host,user,authentication_string from user;
+修改 Mysql 配置文件 sudo vi /etc/mysql/my.cnf
+注释#bind-address = 127.0.0.1
+重启sudo /etc/init.d/mysql restart
+</code></li>
+</ul></li>
+
+<li><p>mysql pid 找不到</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd /var/run
+ls -l mysqld*
+<span style="color:#75715e">#ls: mysqld*: No such file or directory</span>
+<span style="color:#75715e">#创建该目录，并将其权限赋给mysql用户</span>
+mkdir mysqld
+chown -R mysql:mysql /var/run/mysqld</code></pre></div>
+<ul>
+<li>mysql重置
+<code>shell
+/usr/local/mysql/scripts/mysql_install_db --user=mysql --basedir=/usr/local/mysql --datadir=/var/lib/mysql  --pid-file=/var/run/mysqld/mysqld.pid --tmpdir=/tmp
+</code></li>
+</ul></li>
+
+<li><p>字符集utf-8:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>client<span style="color:#f92672">]</span>
+default-character-set<span style="color:#f92672">=</span>utf8 <span style="color:#75715e">#增加这一行，指定字符集</span>
+port            <span style="color:#f92672">=</span> <span style="color:#ae81ff">3306</span>
+socket          <span style="color:#f92672">=</span> /var/run/mysqld/mysqld.sock
+<span style="color:#f92672">[</span>mysqld<span style="color:#f92672">]</span>
+character-set-server<span style="color:#f92672">=</span>utf8#增加这一行，指定字符集
+user            <span style="color:#f92672">=</span> mysql
+pid-file        <span style="color:#f92672">=</span> /var/run/mysqld/mysqld.pid
+show variables like <span style="color:#e6db74">&#39;%char%&#39;</span> ;<span style="color:#75715e">#更改前存在的用户字符集不会改变，以后新建的用户字符集都变成了UTF-8</span>
+重启服务，字符集就成了UTF-8</code></pre></div>
+<h3 id="配置">配置</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>client<span style="color:#f92672">]</span>
+default-character-set<span style="color:#f92672">=</span>utf8
+port    <span style="color:#f92672">=</span> <span style="color:#ae81ff">3306</span>
+socket  <span style="color:#f92672">=</span> /tmp/mysql.sock
+
+<span style="color:#f92672">[</span>mysqld<span style="color:#f92672">]</span>
+<span style="color:#75715e">## 基本配置</span>
+user    <span style="color:#f92672">=</span> mysql
+port    <span style="color:#f92672">=</span> <span style="color:#ae81ff">3306</span>
+socket  <span style="color:#f92672">=</span> /tmp/mysql.sock
+
+character-set-server <span style="color:#f92672">=</span> utf8
+replicate-ignore-db <span style="color:#f92672">=</span> mysql
+replicate-ignore-db <span style="color:#f92672">=</span> test
+replicate-ignore-db <span style="color:#f92672">=</span> information_schema
+
+basedir <span style="color:#f92672">=</span> /data/mysql
+datadir <span style="color:#f92672">=</span> /data/mysql/data
+pid-file <span style="color:#f92672">=</span> /data/mysql/mysql.pid
+log-error <span style="color:#f92672">=</span> /data/mysql/mysql.error.log
+<span style="color:#75715e">#log = /data/mysql/mysql.exec.log</span>
+
+back_log <span style="color:#f92672">=</span> <span style="color:#ae81ff">600</span>
+<span style="color:#75715e">#最大连接数</span>
+max_connections <span style="color:#f92672">=</span> <span style="color:#ae81ff">8000</span>
+max_connect_errors <span style="color:#f92672">=</span> <span style="color:#ae81ff">6000</span>
+open_files_limit <span style="color:#f92672">=</span> <span style="color:#ae81ff">10240</span>
+table_open_cache <span style="color:#f92672">=</span> <span style="color:#ae81ff">2048</span>
+
+external-locking <span style="color:#f92672">=</span> FALSE
+max_allowed_packet <span style="color:#f92672">=</span> 32M
+sort_buffer_size <span style="color:#f92672">=</span> 16M
+join_buffer_size <span style="color:#f92672">=</span> 16M
+thread_cache_size <span style="color:#f92672">=</span> <span style="color:#ae81ff">300</span>
+<span style="color:#75715e">#thread_concurrency = 24</span>
+query_cache_size <span style="color:#f92672">=</span> 512M
+query_cache_limit <span style="color:#f92672">=</span> 2M
+query_cache_min_res_unit <span style="color:#f92672">=</span> 2k
+default-storage-engine <span style="color:#f92672">=</span> MyISAM
+thread_stack <span style="color:#f92672">=</span> 192K
+<span style="color:#75715e">#transaction_isolation = READ-COMMITTED</span>
+tmp_table_size <span style="color:#f92672">=</span> 512M
+
+skip-name-resolve
+interactive_timeout <span style="color:#f92672">=</span> <span style="color:#ae81ff">86400</span>
+wait_timeout <span style="color:#f92672">=</span> <span style="color:#ae81ff">86400</span>
+
+<span style="color:#75715e">## 慢查询(5.5与5.6之间有差异)</span>
+<span style="color:#75715e">#5.5版本</span>
+<span style="color:#75715e">#long_query_time = 10</span>
+<span style="color:#75715e">#log-slow-queries = /data/mysql/slow.query.log</span>
+<span style="color:#75715e">#5.6版本</span>
+long_query_time <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+slow_query_log <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+log_queries_not_using_indexes <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+slow_query_log_file <span style="color:#f92672">=</span> /data/mysql/slow.query.log
+
+<span style="color:#75715e">## 二进制日志</span>
+binlog_format <span style="color:#f92672">=</span> MIXED
+expire_logs_days <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>
+max_binlog_size <span style="color:#f92672">=</span> 1G
+binlog_cache_size <span style="color:#f92672">=</span> 4M
+max_binlog_cache_size <span style="color:#f92672">=</span> 10G
+log-bin <span style="color:#f92672">=</span> /data/mysql/binlog/binlog
+
+<span style="color:#75715e">## 主从同步</span>
+server-id <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+<span style="color:#75715e">#master-host     =   192.168.1.2</span>
+<span style="color:#75715e">#master-user     =   username</span>
+<span style="color:#75715e">#master-password =   password</span>
+<span style="color:#75715e">#master-port     =  3306</span>
+<span style="color:#75715e">#master-connect-retry = 10</span>
+<span style="color:#75715e">#slave-skip-errors = 1032,1062,126,1114,1146,1048,1396</span>
+
+relay-log-index <span style="color:#f92672">=</span> /data/mysql/relaylog/relaylog
+relay-log-info-file <span style="color:#f92672">=</span> /data/mysql/relaylog/relaylog
+relay-log <span style="color:#f92672">=</span> /data/mysql/relaylog/relaylog
+
+<span style="color:#75715e">## MYISAM相关选项</span>
+key_buffer_size <span style="color:#f92672">=</span> 256M
+read_buffer_size <span style="color:#f92672">=</span> 2M
+read_rnd_buffer_size <span style="color:#f92672">=</span> 64M
+max_heap_table_size <span style="color:#f92672">=</span> 246M
+bulk_insert_buffer_size <span style="color:#f92672">=</span> 64M
+myisam_sort_buffer_size <span style="color:#f92672">=</span> 8M
+myisam_max_sort_file_size <span style="color:#f92672">=</span> 10G
+myisam_repair_threads <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+myisam-recover-options
+
+<span style="color:#75715e">## INNODB相关选项</span>
+<span style="color:#75715e">#innodb_additional_mem_pool_size = 16M #(5.6中不再推荐使用)</span>
+innodb_buffer_pool_size <span style="color:#f92672">=</span> 512M
+innodb_data_file_path <span style="color:#f92672">=</span> ibdata1:256M:autoextend
+innodb_file_io_threads <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>
+innodb_thread_concurrency <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>
+innodb_flush_log_at_trx_commit <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+innodb_log_buffer_size <span style="color:#f92672">=</span> 16M
+innodb_log_file_size <span style="color:#f92672">=</span> 128M
+innodb_log_files_in_group <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>
+innodb_max_dirty_pages_pct <span style="color:#f92672">=</span> <span style="color:#ae81ff">90</span>
+innodb_lock_wait_timeout <span style="color:#f92672">=</span> <span style="color:#ae81ff">120</span>
+innodb_file_format <span style="color:#f92672">=</span> Barracuda
+innodb_strict_mode <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+innodb_file_per_table <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+
+<span style="color:#f92672">[</span>mysqldump<span style="color:#f92672">]</span>
+quick
+max_allowed_packet <span style="color:#f92672">=</span> 32M</code></pre></div></li>
+</ul>
+
+<h3 id="sql">sql</h3>
+
+<ul>
+<li><p>#Mysql 查询所有表的行数和大小</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">SELECT TABLE_NAME,TABLE_ROWS,DATA_LENGTH/1024/1024 <span style="color:#e6db74">&#34;DATA_LENGTH&#34;</span>,CREATE_TIME,TABLE_COLLATION FROM
+INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;hj_game_stat_lyx_s&#39;</span> ORDER BY TABLE_ROWS DESC</code></pre></div>
+<h2 id="问题">问题</h2>
+
+<h3 id="mysql-has-gone-away">mysql has gone away</h3>
+
+<ul>
+<li><p>先查看日志是否有错误,是否mysql是否宕掉了
+/data/mysql/mysql.error.log</p></li>
+
+<li><p><strong>show status;</strong> 或者  <strong>show status  like &lsquo;%uptime&rsquo;;</strong>,看mysql运行时长</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Variable_name</th>
+<th align="center">Value</th>
+<th align="center">Desc</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Aborted_clients</td>
+<td align="center">575</td>
+<td align="center">由于客户端没有正确关闭连接导致客户端终止而中断的连接数</td>
+</tr>
+
+<tr>
+<td>Aborted_connects</td>
+<td align="center">12</td>
+<td align="center">试图连接到MySQL服务器而失败的连接数</td>
+</tr>
+
+<tr>
+<td>Threads_cached</td>
+<td align="center">45</td>
+<td align="center">线程缓存内的线程的数量</td>
+</tr>
+
+<tr>
+<td>Threads_connected</td>
+<td align="center">6</td>
+<td align="center">当前打开的连接的数量</td>
+</tr>
+
+<tr>
+<td>Threads_created</td>
+<td align="center">51</td>
+<td align="center">创建用来处理连接的线程数,如果Threads_created较大,你可能要增加thread_cache_size值。缓存访问率的计算方法Threads_created/Connections</td>
+</tr>
+
+<tr>
+<td>Threads_running</td>
+<td align="center">2</td>
+<td align="center">激活的（非睡眠状态）线程数</td>
+</tr>
+
+<tr>
+<td>Uptime</td>
+<td align="center">1155442</td>
+<td align="center">服务器已经运行的时间（以秒为单位）</td>
+</tr>
+
+<tr>
+<td>Uptime_since_flush_status</td>
+<td align="center">1155442</td>
+<td align="center">最近一次使用FLUSH STATUS 的时间(以秒为单位)</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>show global variables like &lsquo;%timeout&rsquo;;  查看设置 的超时时间
+| Variable_name               | Value    | Desc |
+| &mdash;     |:&mdash;&mdash;&mdash;&ndash;:|:&mdash;&mdash;&mdash;&ndash;:|
+| connect_timeout             | 10       |
+| delayed_insert_timeout      | 300      |
+| innodb_flush_log_at_timeout | 1        |
+| innodb_lock_wait_timeout    | 7200     |
+| innodb_rollback_on_timeout  | OFF      |
+| interactive_timeout         | 3600     | 服务器关闭交互式连接前等待活动的秒数。交互式客户端定义为在mysql_real_connect()中使用CLIENT_INTERACTIVE选项的客户端|
+| lock_wait_timeout           | 31536000 |
+| net_read_timeout            | 30       |
+| net_write_timeout           | 60       |
+| rpl_stop_slave_timeout      | 31536000 |
+| slave_net_timeout           | 3600     |
+| wait_timeout                | 3600     | 服务器关闭非交互连接之前等待活动的秒数|</li>
+</ul>
+
+<p>如果是wait_timeout时间过短,可以设置时间
+```</p></li>
+</ul>
+
+<p>set global wait_timeout=28800;
+set global interactive_timeout=28800;</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">程序方面可以在出现这个问题后作一样重连数据库再执行sql.
+
++ 查看连接数,状态 SHOW PROCESSLIST;
++ SHOW GLOBAL STATUS LIKE &#39;aborted_connects&#39;;
++ SHOW GLOBAL VARIABLES LIKE &#39;max_connections&#39;;
++ SHOW GLOBAL STATUS LIKE &#39;max_used_connections&#39;;
++ show table status  ;  显示table状态
+
+
+### MySQL无法重启问题解决
+```shell
+Warning: World-writable config file ‘/etc/my.cnf’ is ignored
+ls -l /etc/my.cnf
+chmod 644 /etc/my.cnf</pre></div>
+<h3 id="warning-changing-a-readonly-file">Warning: Changing a readonly file</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo vi /etc/exports</code></pre></div>
+<h3 id="查看mysql-端口tcp数据">查看mysql 端口tcp数据</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">tcpdump -s <span style="color:#ae81ff">1500</span> -w tcp.out port <span style="color:#ae81ff">3306</span>
+tailf tcp.out|grep strings</code></pre></div>
+<h3 id="设置sql模式">设置sql模式</h3>
+
+<p><code>SET GLOBAL sql_mode=''</code></p>
+
+<h2 id="mysql-config-not-found">mysql_config not found</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ln -s /usr/local/mysql/bin/mysql_config /usr/local/bin/mysql_config</code></pre></div>
+<h3 id="备份">备份</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">mysqldump -hhostname -uusername -ppassword –databases databasename1 databasename2 databasename3 &gt; multibackupfile.sql</pre></div>
+    </div>
+    <footer class="post-footer">
+     
+
+
+<div class="post-tags">
+     
+    <a href="http://farwmarth.com/tags/mysql" rel="tag" title="mysql">#mysql#</a>
+    
+</div>
+
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="http://farwmarth.com/post/gradle/" rel="next" title="Gradle 打包">
+        <i class="fa fa-chevron-left"></i> Gradle 打包
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="http://farwmarth.com/post/%E5%80%92%E6%88%88%E5%8F%88%E5%A6%82%E4%BD%95/" rel="prev" title="倒戈又如何">
+        倒戈又如何 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="http://farwmarth.com/img/author.jpg"
+        alt="farwmarth" />
+    <p class="site-author-name" itemprop="name">farwmarth</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="http://farwmarth.com/post/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="http://farwmarth.com/categories/">      
+         
+        <span class="site-state-item-count">31</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="http://farwmarth.com/tags/">
+         
+        <span class="site-state-item-count">90</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/wujiyu115/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">farwmarth</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.6</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=286131889" charset="UTF-8"></script> 
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="http://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/utils.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/motion.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/affix.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/post-details.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/toc.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

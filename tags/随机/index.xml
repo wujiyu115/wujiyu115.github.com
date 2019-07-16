@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>随机 on farwmarth</title>
+    <link>http://farwmarth.com/tags/%E9%9A%8F%E6%9C%BA/</link>
+    <description>Recent content in 随机 on farwmarth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 10 Oct 2016 19:10:39 +0000</lastBuildDate>
+    
+	<atom:link href="http://farwmarth.com/tags/%E9%9A%8F%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>权重随机算法</title>
+      <link>http://farwmarth.com/post/%E6%9D%83%E9%87%8D%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Mon, 10 Oct 2016 19:10:39 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E6%9D%83%E9%87%8D%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/</guid>
+      <description>&lt;p&gt;带权随机算法在游戏开发中应用广泛,最近在做商店随机商品又遇到这种问题,重新思考并总结了一下带权随机的做法.&lt;/p&gt;
+
+&lt;p&gt;带权随机其实很好理解
+比如我们希望抽到A的抽到的比重是10,B的比重是5,C的比重是1,如下图
+&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/044TM313-0.jpg&#34; alt=&#34;044TM313&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

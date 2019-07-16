@@ -1,0 +1,664 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>centos 命令，基本设置 - farwmarth</title>
+    <meta name="keywords" content="程序员">
+    
+    <meta property="og:title" content="centos 命令，基本设置">
+    <meta property="og:site_name" content="farwmarth">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="centos 命令，基本设置 - farwmarth" />
+    <meta name="description" content="game"> 
+    <link rel="shortcut icon" href="http://farwmarth.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link href="http://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="http://farwmarth.com/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">farwmarth</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Those that can,do.Those that can&#39;t ,complain</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/douban/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />豆瓣
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/music/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-music"></i> <br />音乐
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/centos-%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/" itemprop="url">
+        centos 命令，基本设置
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2013-03-29">
+    2013-03-29
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="http://farwmarth.com/categories/centos" itemprop="url" rel="index">
+        <span itemprop="name">centos</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">2436 字 ~5分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p><font color="#ff0000"> update 2016-7-21 13:53</font></p>
+
+<h2 id="centos6-4配置163的yum源">CentOS6.4配置163的yum源</h2>
+
+<p>CentOS系统自带的更新源的速度实在是慢，为了让CentOS6使用速度更快的YUM更新源，可以选择163（网易）的更新源。</p>
+
+<ul>
+<li><p>查看版本</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">cat /etc/redhat-release</pre></div></li>
+</ul>
+
+<ul>
+<li>查看cpu核数</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 总核数 = 物理CPU个数 X 每颗物理CPU的核数</span>
+<span style="color:#75715e"># 总逻辑CPU数 = 物理CPU个数 X 每颗物理CPU的核数 X 超线程数</span>
+<span style="color:#75715e"># 查看物理CPU个数</span>
+cat /proc/cpuinfo| grep <span style="color:#e6db74">&#34;physical id&#34;</span>| sort| uniq| wc -l
+<span style="color:#75715e"># 查看每个物理CPU中core的个数(即核数)</span>
+cat /proc/cpuinfo| grep <span style="color:#e6db74">&#34;cpu cores&#34;</span>| uniq
+<span style="color:#75715e"># 查看逻辑CPU的个数</span>
+cat /proc/cpuinfo| grep <span style="color:#e6db74">&#34;processor&#34;</span>| wc -l</code></pre></div>
+<ul>
+<li><p>下载repo文件</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">wget http://mirrors.163.com/.help/CentOS6-Base-163.repo</code></pre></div>
+<ul>
+<li>备份并替换系统的repo文件
+<code>shell
+[root@localhost ~]# cd /etc/yum.repos.d/
+[root@localhost ~]# mv CentOS-Base.repo CentOS-Base.repo.bak
+[root@localhost ~]# mv CentOS6-Base-163.repo CentOS-Base.repo
+</code></li>
+</ul></li>
+
+<li><p>执行yum源更新</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>root@localhost ~<span style="color:#f92672">]</span><span style="color:#75715e"># yum clean all</span>
+<span style="color:#f92672">[</span>root@localhost ~<span style="color:#f92672">]</span><span style="color:#75715e"># yum makecache</span>
+<span style="color:#f92672">[</span>root@localhost ~<span style="color:#f92672">]</span><span style="color:#75715e"># yum update</span></code></pre></div>
+<h2 id="yum">YUM**</h2>
+
+<p>yum: Yellow dog Updater, Modified.
+主要功能是更方便的添加/删除/更新RPM包.它能自动解决包的倚赖性问题.它能便于管理大量系统的更新问题.</p>
+
+<p><strong>1. yum的使用:</strong>
+1)<strong>包的更新</strong>
+1.1)检查可更新包: yum check-update
+1.2)更新所有包: yum update
+1.3)更新指定包: yum update package_name
+1.4)版本升级: yum upgrade
+2)<strong>包安装与删除</strong>
+2.1)yum install package_name
+2.2)yum remove package_name
+3)<strong>包搜索</strong>
+3.1)搜索特定包: yum search package_name
+3.2)搜索包含特定文件名的包:yum provides name
+4)<strong>包列表</strong>
+4.1)列出所有安装或更新的包: yum list
+4.2)列出指定包:yum list name
+4.3)列出可更新包:yum list updates
+4.4)列出已安装包:yum list installed
+4.5)列出已安装但不包含在资源库中的包:yum list extras</p>
+
+<p><strong>2. 自动选择最快的源:</strong></p>
+
+<p>安装yum-fastestmirror插件，它会在下载时自动选择最快的源。
+<code>yum install yum-fastestmirror</code></p>
+
+<p><strong>3. 使用图形化的yum:</strong>
+<code>yum install yumex</code>
+<img src="http://farwmarth.bestnewbee.com/images/uploads/2013/03/image43.png" alt="image" /></p>
+
+<h2 id="二-安装各种包"><strong>二 安装各种包</strong></h2>
+
+<p><strong>安装bin文件</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#ae81ff">1</span>:  //授予当前用户执行权限
+<span style="color:#ae81ff">2</span>:  chmod a+x jdk-6u26-linux-i586.bin
+<span style="color:#ae81ff">3</span>:  //执行安装文件
+<span style="color:#ae81ff">4</span>:  ./jdk-6u26-linux-i586.bin
+<span style="color:#ae81ff">5</span>:   卸载：把安装时中选择的安装目录删除就OK</code></pre></div></li>
+</ul>
+
+<p>**安装rpm
+<code>rpm -ivh /home/server/bind-9.8.1-6.2.x86_64.rpm</code></p>
+
+<ol>
+<li><p>查询软件包
+rpm -q [选项] [软件包名称]
+常用选项：
+-a ：查询所有安装的软件包。
+-i ：显示软件包的概要信息。
+-l ：显示软件包中的文件列表。
+-c ：显示配置文件列表。
+-d ：显示文档文件列表。
+-s ：显示软件包中的文件列表和每个文件状态。
+-f file ：查询属于哪个软件包。
+-p file ：查询某个RPM包内含有的文件。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">--import ：导入公钥。
+# rpm -qa 查询所有的软件包
+# rpm -qi make 查询make软件包的概要。
+# rpm -ql apache 查询apache软件包的文件列表。</pre></div></li>
+</ol>
+
+<p>2、安装软件包
+rpm -i [选项] [软件包名称]
+常用选项：
+-h ：显示安装进度。
+-v ：显示详细信息。
+&ndash;force ：忽略冲突强制安装。
+&ndash;nodeps ：不检查依赖关系。
+<code># rpm -ivh /home/server/bind-9.8.1-6.2.x86_64.rpm</code>
+安装一个bind软件包，并显示安装进度。</p>
+
+<p>3、升级软件包
+rpm -U [选项] [软件包名称]
+常用选项：
+-h ：显示安装进度。
+-v ：显示详细信息。
+&ndash;force ：忽略冲突强制安装。
+&ndash;nodeps ：不检查依赖关系。
+<code># rpm -Uvh /home/vim-7.3.338-1.src.rpm</code>
+升级vim软件包，并显示安装进度。</p>
+
+<p>4、卸载软件包
+rpm -e [选项] [软件包名称]
+常用选项：
+&ndash;nodeps ：不检查依赖关系。
+<code># rpm -e vim-common</code> 卸载vim-common软件包。<p>
+PS：rpm包的弊端就是它的依赖性。rpm包的依赖性据说是这样的，当要安装软件包A时提示先要安装软件包B，当安装软件包B时又提示先要安装软件包C。当装完软件包C和B后装软件包A又提示C的版本不对。。。所以现在都直接用yum命令了
+<strong>安装tar.gz(bz或bz2等)结尾的源代码包.</strong>
+这种软件包里面都是源程序，没有编译过，需要编译后才能安装，安装方法为:
+1、用CD 命令进入源代码压缩包所在的目录
+2、根据压缩包类型解压缩文件(*代表压缩包名称)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">tar -zxvf ****.tar.gz
+tar -jxvf ****.tar.bz<span style="color:#f92672">(</span>或bz2<span style="color:#f92672">)</span></code></pre></div>
+<p>3、用CD命令进入解压缩后的目录
+4、输入编译文件命令：./configure(有的压缩包已经编译过，这一步可以省去)
+5、然后是命令：make
+6、再是安装文件命令：make install
+卸载：make uninstall</p>
+
+<h2 id="三-常规设置"><strong>三　常规设置</strong></h2>
+
+<p>1 安装中文输入法: yum install &ldquo;@Chinese Support&rdquo;
+2 修改hosts : /etc/hosts
+3 切换权限: su root
+4 让Centos解压RAR:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#ae81ff">1</span>:  //安装
+<span style="color:#ae81ff">2</span>:  wget http://www.rarsoft.com/rar/rarlinux-3.9.3.tar.gz
+<span style="color:#ae81ff">3</span>:  tar -xvf rarlinux-3.9.3.tar.gz
+<span style="color:#ae81ff">4</span>:  cd rar
+<span style="color:#ae81ff">5</span>:  make
+<span style="color:#ae81ff">6</span>:  //用法
+<span style="color:#ae81ff">7</span>:  rar x vpsyou.rar           //解压 vpsyou.rar 到当前目录
+<span style="color:#ae81ff">8</span>:  rar vpsyou.rar  ./vpsyou.com/        //将 vpsyou.com 目录打包为 vpsyou.rar</code></pre></div>
+<p>5 安装字体:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#ae81ff">1</span>:  //创建目录YaHei
+<span style="color:#ae81ff">2</span>:  mkdir -p /usr/share/fonts/YaHei
+<span style="color:#ae81ff">3</span>:  cp YaHei.Consolas.1.12.ttf /usr/share/fonts/YaHei/YaHei.Consolas.ttf
+<span style="color:#ae81ff">4</span>:  //安装字体
+<span style="color:#ae81ff">5</span>:  cd /usr/share/fonts/YaHei/
+<span style="color:#ae81ff">6</span>:  mkfontscale
+<span style="color:#ae81ff">7</span>:  mkfontdir
+<span style="color:#ae81ff">8</span>:  fc-cache -fv
+<span style="color:#ae81ff">9</span>:  //最后，到系统－首选项－字体里修改字体</code></pre></div>
+<p>６centos设置文件夹打开方式：在同一窗口打开文件夹
+　　编辑 － 首选项 － 行为，勾选“总是在浏览器窗口打开”，点击关闭</p>
+
+<h2 id="四-开发环境"><strong>四　开发环境</strong></h2>
+
+<ul>
+<li><p><strong>安装jdk :</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#ae81ff">1</span>:  //授予当前用户执行权限
+<span style="color:#ae81ff">2</span>: chmod a+x jdk-6u26-linux-i586.bin
+<span style="color:#ae81ff">3</span>:  //执行安装文件
+<span style="color:#ae81ff">4</span>:  ./jdk-6u26-linux-i586.bin
+<span style="color:#ae81ff">5</span>:</code></pre></div>
+<p>配置环境变量:
+<code>gedit /etc/profile</code>
+打开后加入配置:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">export JAVA_HOME<span style="color:#f92672">=</span>/usr/java/jdk1.6.0_24
+export CLASSPATH<span style="color:#f92672">=</span>.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export PATH<span style="color:#f92672">=</span>$PATH:$JAVA_HOME/bin</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#立即生效</span>
+. /etc/profile</code></pre></div>
+<h3 id="解决-usr-bin-ld-cannot-find-lmysqlclient错误">解决/usr/bin/ld: cannot find -lmysqlclient错误</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#mysqlclinet地址</span>
+/usr/local/mysql/lib/libmysqlclient.so.18
+/usr/lib64/mysql/libmysqlclient.so.16
+
+<span style="color:#75715e">#查找libmysqlclient的位置</span>
+repoquery --whatprovides *libmysqlclient*
+<span style="color:#75715e">#mysql-libs-0:5.1.71-1.el6.x86_64</span>
+
+repoquery -l mysql-libs-0:5.1.71-1.el6.x86_64 | head -9
+<span style="color:#75715e">#/etc/my.cnf</span>
+<span style="color:#75715e">#/usr/lib64/mysql</span>
+<span style="color:#75715e">#/usr/lib64/mysql/libmysqlclient.so.16</span>
+<span style="color:#75715e">#/usr/lib64/mysql/libmysqlclient.so.16.0.0</span></code></pre></div></li>
+</ul>
+
+<h2 id="centos7-最小化安装配置">centos7 最小化安装配置</h2>
+
+<h3 id="基本">基本</h3>
+
+<p>+查看版本
+cat /etc/redhat-release
++ ifconfig
+yum provides ifconfig
++ centos7 failed to start lsb
+网卡地址被删除或者配置错误
+<a href="http://blog.sina.com.cn/s/blog_4bbf963a0102vnk8.html">http://blog.sina.com.cn/s/blog_4bbf963a0102vnk8.html</a>
+ip addr 查看网卡地址(liner/ether)，填写到配置 HWADDR
++ 编辑ip地址</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">#static assignment
+ONBOOT=yes #开机启动
+BOOTPROTO=static #静态IP
+IPADDR=192.168.1.151 #本机地址
+NETMASK=255.255.255.0 #子网掩码
+GATEWAY=192.168.1.1 #默认网关</pre></div>
+<p>/etc/sysconfig/network-scripts
+或者</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">yum install NetworkManager-tui
+nmtui edit enp0s3(网络配置文件名)
+systemctl enable NetworkManager-wait-online.service
+systemctl status NetworkManager.service
+systemctl restart network.service 重启网络</pre></div>
+<p><a href="http://blog.csdn.net/johnnycode/article/details/50184073">http://blog.csdn.net/johnnycode/article/details/50184073</a>
+虚拟 机网卡记得改为桥接模式</p>
+
+<h3 id="mysql-安装">mysql 安装</h3>
+
+<p><a href="http://www.cnblogs.com/starof/p/4680083.html">http://www.cnblogs.com/starof/p/4680083.html</a></p>
+
+<h3 id="dns设置">dns设置</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">vi /etc/resolv.conf</pre></div>
+<h3 id="dns查询">dns查询</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">nslookup open.huanjia.cc</pre></div>
+<h2 id="centos-问题">centos 问题</h2>
+
+<h3 id="centos下出现-lib64-libc-so-6-version-glibc-2-17-not-found问题解决方案">centos下出现/lib64/libc.so.6: version `GLIBC_2.17&rsquo; not found问题解决方案</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#查看glibc版本</span>
+strings /lib64/libc.so.6 |grep GLIBC
+wget http://ftp.gnu.org/gnu/glibc/glibc-2.14.tar.gz
+tar xvf glibc-2.14.tar.gz
+cd glibc-2.14
+mkdir build
+cd ./build
+ ../configure --prefix<span style="color:#f92672">=</span>/opt/glibc-2.14
+chmod +r ../configure
+make -j4
+sudo make install
+export LD_LIBRARY_PATH<span style="color:#f92672">=</span>/opt/glibc-2.14/lib:$LD_LIBRARY_PATH
+<span style="color:#75715e">#解除环境变量 unset LD_LIBRARY_PATH</span></code></pre></div>
+<p>glibc操作</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#查看glibc版本引用</span>
+objdump -p  skynet
+<span style="color:#75715e">#查看指定版本引用的函数</span>
+nm skynet |grep GLIBC_2.14
+
+<span style="color:#75715e">#查看</span>
+strings /lib64/libc.so.6 |grep GLIBC_
+<span style="color:#75715e">#升级</span>
+wget http://ftp.gnu.org/gnu/glibc/glibc-2.14.tar.gz
+tar xvf glibc-2.14.tar.gz
+cd glibc-2.14
+mkdir build
+cd ./build
+../configure --prefix<span style="color:#f92672">=</span>/opt/glibc-2.14
+make -j4
+make install
+<span style="color:#75715e">#备份</span>
+rm -rf /lib64/libc.so.6
+ln -s /opt/glibc-2.14/lib/libc-2.14.so /lib64/libc.so.6
+<span style="color:#75715e">#删除libc.so.6之后可能导致系统命令不可用的情况, 可使用如下方法解决:</span>
+LD_PRELOAD<span style="color:#f92672">=</span>/opt/glibc-2.14/lib/libc-2.14.so  ln -s /opt/glibc-2.14/lib/libc-2.14.so /lib64/libc.so.6
+<span style="color:#75715e">#如果上述更新失败可使用如下命令还原:</span>
+LD_PRELOAD<span style="color:#f92672">=</span>/lib64/libc-2.12.so ln -s /lib64/libc-2.12.so /lib64/libc.so.6    <span style="color:#75715e">#libc-2.12.so 此项是系统升级前的版本</span></code></pre></div>
+<h1 id="升级">升级</h1>
+
+<h2 id="升级git">升级git</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#编译环境</span>
+yum install crul curl-devel zlib-devel openssl-devel perl cpio expat-devel gettext-devel gcc perl-ExtUtils-MakeMaker
+<span style="color:#75715e">#下载</span>
+wget https://www.kernel.org/pub/software/scm/git/git-1.9.4.tar.gz
+tar xzf git-1.9.4.tar.gz
+<span style="color:#75715e">#编译</span>
+cd git-1.9.4
+autoconf
+./configure
+make
+make install
+<span style="color:#75715e">#指定git版本</span>
+echo <span style="color:#e6db74">&#34;export PATH=</span>$PATH<span style="color:#e6db74">:/usr/local/bin/git&#34;</span> &gt;&gt; /etc/bashrc
+source /etc/bashrc
+<span style="color:#75715e">#检查</span>
+git --version</code></pre></div>
+<h2 id="升级node-npm">升级node,npm</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">yum install node
+yum install npm
+npm install -g n
+n stable
+echo <span style="color:#e6db74">&#34;export PATH=</span>$PATH<span style="color:#e6db74">://usr/local/bin/node&#34;</span> &gt;&gt; /etc/bashrc
+source /etc/bashrc
+<span style="color:#75715e">#延缓npm</span>
+npm install npm@latest -g</code></pre></div>
+<h1 id="安装nmon">安装nmon</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd /tmp
+wget http://sourceforge.net/projects/nmon/files/nmon16e_mpginc.tar.gz
+<span style="color:#75715e"># Untar archive</span>
+tar -xzvf nmon16e_mpginc.tar.gz
+<span style="color:#75715e"># Copy nmon file</span>
+cp nmon_x86_64_centos7 /usr/local/bin/
+chmod a+x /usr/local/bin/nmon_x86_64_centos7
+<span style="color:#75715e"># Create symbolic link</span>
+ln -s /usr/local/bin/nmon_x86_64_centos7 /usr/local/bin/nmon
+<span style="color:#75715e"># tidy up tmp</span>
+rm -f nmon_*</code></pre></div>
+<h1 id="curl-wget下载github-releases">curl,wget下载github,releases</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">curl -sL https://github.com/fatedier/frp/releases/download/v0.9.3/frp_0.9.3_linux_amd64.tar.gz | tar xz
+wget --no-check-certificate  https://github.com/fatedier/frp/releases/download/v0.9.3/frp_0.9.3_linux_amd64.tar.gz  -O - | tar xz</pre></div>
+    </div>
+    <footer class="post-footer">
+     
+
+
+<div class="post-tags">
+     
+    <a href="http://farwmarth.com/tags/centos" rel="tag" title="centos">#centos#</a>
+    
+</div>
+
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="http://farwmarth.com/post/android%E6%A1%86%E6%9E%B6%E7%BB%93%E6%9E%84/" rel="next" title="android　框架结构">
+        <i class="fa fa-chevron-left"></i> android　框架结构
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="http://farwmarth.com/post/windows%E4%B8%8B%E8%9B%8B%E7%96%BC%E7%9A%84cocos2d-xandroid%E9%85%8D%E7%BD%AE/" rel="prev" title="windows下蛋疼的cocos2d-x，android配置。">
+        windows下蛋疼的cocos2d-x，android配置。 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="http://farwmarth.com/img/author.jpg"
+        alt="farwmarth" />
+    <p class="site-author-name" itemprop="name">farwmarth</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="http://farwmarth.com/post/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="http://farwmarth.com/categories/">      
+         
+        <span class="site-state-item-count">31</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="http://farwmarth.com/tags/">
+         
+        <span class="site-state-item-count">90</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/wujiyu115/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">farwmarth</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.6</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=286131889" charset="UTF-8"></script> 
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="http://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/utils.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/motion.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/affix.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/post-details.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/toc.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

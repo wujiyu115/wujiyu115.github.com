@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tools on farwmarth</title>
+    <link>http://farwmarth.com/tags/tools/</link>
+    <description>Recent content in tools on farwmarth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 09 Oct 2014 17:56:02 +0000</lastBuildDate>
+    
+	<atom:link href="http://farwmarth.com/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>一套键鼠的忧愁</title>
+      <link>http://farwmarth.com/post/%E4%B8%80%E5%A5%97%E9%94%AE%E9%BC%A0%E7%9A%84%E5%BF%A7%E6%84%81/</link>
+      <pubDate>Thu, 09 Oct 2014 17:56:02 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E4%B8%80%E5%A5%97%E9%94%AE%E9%BC%A0%E7%9A%84%E5%BF%A7%E6%84%81/</guid>
+      <description>&lt;p&gt;最近终于从虚拟机的囧境里走了出来，申请了一台macMini在win和mac之间切换开发.两台主机键鼠频繁切换真是件蛋疼的事情，不过还好有局域网键鼠控制工具。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

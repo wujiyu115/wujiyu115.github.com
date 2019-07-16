@@ -1,0 +1,512 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>android 反编译和代码解读 - farwmarth</title>
+    <meta name="keywords" content="程序员">
+    
+    <meta property="og:title" content="android 反编译和代码解读">
+    <meta property="og:site_name" content="farwmarth">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="android 反编译和代码解读 - farwmarth" />
+    <meta name="description" content="game"> 
+    <link rel="shortcut icon" href="http://farwmarth.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link href="http://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="http://farwmarth.com/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">farwmarth</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Those that can,do.Those that can&#39;t ,complain</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/douban/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />豆瓣
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/music/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-music"></i> <br />音乐
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/android-%E5%8F%8D%E7%BC%96%E8%AF%91%E5%92%8C%E4%BB%A3%E7%A0%81%E8%A7%A3%E8%AF%BB/" itemprop="url">
+        android 反编译和代码解读
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2013-04-23">
+    2013-04-23
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="http://farwmarth.com/categories/android" itemprop="url" rel="index">
+        <span itemprop="name">android</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1049 字 ~3分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p><font color=red>update :2013-5-18</font>
+<font color=red>反编译工具小米人改之理:&nbsp; </font><a href="http://www.xiaomiren.net/apkmodifier/">http://www.xiaomiren.net/apkmodifier/</a></p>
+
+<h2 id="一-apk反编译">一 apk反编译</h2>
+
+<p>将apk文件解压后有两部分文件需要处理，一种是xml文件，另一种一个dex文件（.dex）</p>
+
+<ol>
+<li>对xml文件进行包的解析，一般有两种方式:<a href="https://code.google.com/p/android-apktool/">apktool</a>（推荐）和AXMLPrinter2.jar;</li>
+<li>从dex到class公认<a href="https://code.google.com/p/dex2jar/">dex2jar</a>.bat，实现反编译；公认的强者；</li>
+<li>而class到java的方式要更多样化一些,因为只是查看反编译后的代码：<a href="http://java.decompiler.free.fr/?q=jdgui">jd-gui</a>（推荐），<a href="http://sourceforge.net/projects/jadclipse/">Jodeclipse</a>（Jode的Eclipse插件），<a href="http://sourceforge.net/projects/jadclipse/">JadClipse</a>（Jad的Eclipse插件）。 <p>dex解包</li>
+<li>首先把apk文件改名为.zip，然后解压缩其中的class.dex文件，它就是java文件编译再通过dx工具打包成的。</li>
+<li>把class.dex拷贝到dex2jar.bat所在目录。运行dex2jar.bat class.dex，生成classes.dex.dex2jar.jar。</li>
+<li>运行JD-GUI工具（绿色软件，好用的软件！），打开上面的jar文件，即可看到java源代码。</li>
+<li>file-saveall将java源码保存为zip文件</li>
+<li>资源文件解包
+1 安装apktool,将apk反编译
+<img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image6.png" alt="image" />
+<img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image7.png" alt="image" />
+将smali文件包删除.
+2 将上一步保存的源码解压,在此建立一个src目录.将源码放入src下,导入到eclipse中.结构如下.
+<img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image8.png" alt="image" /> <img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image9.png" alt="image" />
+反编译完成.错误会很多..可以选择不同的工具来反编译,然后交叉对比.我一般使用jd-ui和jad-eclipse插件来编译. <p>jad-eclipse配置
+<img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image10.png" alt="image" />
+<img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image11.png" alt="image" /> <p>二 错误代码还原规则</li>
+</ol>
+
+<h6 id="if-else-语句">if…else 语句:</h6>
+
+<p>反编译代码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>paramBoolean<span style="color:#f92672">)</span>
+        paramTextView<span style="color:#f92672">.</span><span style="color:#a6e22e">setTextColor</span><span style="color:#f92672">(-</span>16727809<span style="color:#f92672">);</span>
+       <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span>
+       <span style="color:#f92672">{</span>
+         <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+         paramTextView<span style="color:#f92672">.</span><span style="color:#a6e22e">setTextColor</span><span style="color:#f92672">(-</span>1315861<span style="color:#f92672">);</span>
+       <span style="color:#f92672">}</span></code></pre></div>
+<p>还原后</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>paramBoolean<span style="color:#f92672">)</span>
+         <span style="color:#f92672">{</span>
+           paramTextView<span style="color:#f92672">.</span><span style="color:#a6e22e">setTextColor</span><span style="color:#f92672">(-</span>16727809<span style="color:#f92672">);</span>
+         <span style="color:#f92672">}</span>
+         <span style="color:#66d9ef">else</span>
+         <span style="color:#f92672">{</span>
+            paramTextView<span style="color:#f92672">.</span><span style="color:#a6e22e">setTextColor</span><span style="color:#f92672">(-</span>1315861<span style="color:#f92672">);</span>
+         <span style="color:#f92672">}</span>  </code></pre></div>
+<p>会把if ..esle 反编译成 if …while(true)结构.
+反编译代码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>paramInt1 <span style="color:#f92672">!=</span> 1<span style="color:#f92672">)</span>
+        <span style="color:#66d9ef">break</span> label185<span style="color:#f92672">;</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">countChild_1</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+      <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">countChild_1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PokerCountChild<span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">mContext</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">countChild_1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PokerCountChild<span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">mContext</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">countChild_1</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setPosition</span><span style="color:#f92672">((</span><span style="color:#66d9ef">int</span><span style="color:#f92672">)(</span>0<span style="color:#f92672">.</span><span style="color:#a6e22e">83D</span> <span style="color:#f92672">*</span> BaseGameActivity<span style="color:#f92672">.</span><span style="color:#a6e22e">screenWidth</span>
+ <span style="color:#f92672">-</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">countChild_1</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getWidth</span><span style="color:#f92672">()),</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">)(</span>0<span style="color:#f92672">.</span><span style="color:#a6e22e">2D</span> <span style="color:#f92672">*</span> BaseGameActivity<span style="color:#f92672">.</span><span style="color:#a6e22e">screenHeight</span><span style="color:#f92672">));</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">countChild_1</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setCount</span><span style="color:#f92672">(</span>paramInt2<span style="color:#f92672">);</span>
+        addOneChild<span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">countChild_1</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>paramInt2 <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span>
+          <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">countChild_1</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setAlpha</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+      <span style="color:#f92672">}</span>
+      <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">countChild_1</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setCount</span><span style="color:#f92672">(</span>paramInt2<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+    label185: 
+    <span style="color:#66d9ef">do</span>
+      <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>paramInt1 <span style="color:#f92672">!=</span> 2<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">countChild_2</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">countChild_2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PokerCountChild<span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">mContext</span><span style="color:#f92672">);</span>
+      <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">countChild_2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PokerCountChild<span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">mContext</span><span style="color:#f92672">);</span>
+      <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">countChild_2</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setPosition</span><span style="color:#f92672">((</span><span style="color:#66d9ef">int</span><span style="color:#f92672">)(</span>0<span style="color:#f92672">.</span><span style="color:#a6e22e">17D</span> <span style="color:#f92672">*</span> BaseGameActivity<span style="color:#f92672">.</span><span style="color:#a6e22e">screenWidth</span><span style="color:#f92672">),</span>
+ <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">)(</span>0<span style="color:#f92672">.</span><span style="color:#a6e22e">2D</span> <span style="color:#f92672">*</span> BaseGameActivity<span style="color:#f92672">.</span><span style="color:#a6e22e">screenHeight</span><span style="color:#f92672">));</span>
+      <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">countChild_2</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setCount</span><span style="color:#f92672">(</span>paramInt2<span style="color:#f92672">);</span>
+      addOneChild<span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">countChild_2</span><span style="color:#f92672">);</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>paramInt2 <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">countChild_2</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setAlpha</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">countChild_2</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setCount</span><span style="color:#f92672">(</span>paramInt2<span style="color:#f92672">);</span></code></pre></div>
+<p>还原</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"> <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>i <span style="color:#f92672">==</span> 1<span style="color:#f92672">)</span>
+            <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>countChild_1 <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+                <span style="color:#f92672">{</span>
+                    countChild_1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PokerCountChild<span style="color:#f92672">(</span>mContext<span style="color:#f92672">);</span>
+                    countChild_1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PokerCountChild<span style="color:#f92672">(</span>mContext<span style="color:#f92672">);</span>
+                    countChild_1<span style="color:#f92672">.</span><span style="color:#a6e22e">setPosition</span><span style="color:#f92672">((</span><span style="color:#66d9ef">int</span><span style="color:#f92672">)(</span>0<span style="color:#f92672">.</span><span style="color:#a6e22e">83D</span> <span style="color:#f92672">*</span> 
+<span style="color:#f92672">(</span><span style="color:#66d9ef">double</span><span style="color:#f92672">)</span>BaseGameActivity<span style="color:#f92672">.</span><span style="color:#a6e22e">screenWidth</span> <span style="color:#f92672">-</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">double</span><span style="color:#f92672">)</span>countChild_1<span style="color:#f92672">.</span><span style="color:#a6e22e">getWidth</span><span style="color:#f92672">()),</span> 
+<span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">)(</span>0<span style="color:#f92672">.</span><span style="color:#a6e22e">2D</span> <span style="color:#f92672">*</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">double</span><span style="color:#f92672">)</span>BaseGameActivity<span style="color:#f92672">.</span><span style="color:#a6e22e">screenHeight</span><span style="color:#f92672">));</span>
+                    countChild_1<span style="color:#f92672">.</span><span style="color:#a6e22e">setCount</span><span style="color:#f92672">(</span>j<span style="color:#f92672">);</span>
+                    addOneChild<span style="color:#f92672">(</span>countChild_1<span style="color:#f92672">);</span>
+                    <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>j <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span>
+                        countChild_1<span style="color:#f92672">.</span><span style="color:#a6e22e">setAlpha</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+                <span style="color:#f92672">}</span>
+                countChild_1<span style="color:#f92672">.</span><span style="color:#a6e22e">setCount</span><span style="color:#f92672">(</span>j<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span>
+            <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>i <span style="color:#f92672">==</span> 2<span style="color:#f92672">)</span>
+            <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>countChild_2 <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+                <span style="color:#f92672">{</span>
+                    countChild_2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PokerCountChild<span style="color:#f92672">(</span>mContext<span style="color:#f92672">);</span>
+                    countChild_2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PokerCountChild<span style="color:#f92672">(</span>mContext<span style="color:#f92672">);</span>
+                    countChild_2<span style="color:#f92672">.</span><span style="color:#a6e22e">setPosition</span><span style="color:#f92672">((</span><span style="color:#66d9ef">int</span><span style="color:#f92672">)(</span>0<span style="color:#f92672">.</span><span style="color:#a6e22e">17D</span> <span style="color:#f92672">*</span> 
+<span style="color:#f92672">(</span><span style="color:#66d9ef">double</span><span style="color:#f92672">)</span>BaseGameActivity<span style="color:#f92672">.</span><span style="color:#a6e22e">screenWidth</span><span style="color:#f92672">),</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">)(</span>0<span style="color:#f92672">.</span><span style="color:#a6e22e">2D</span> <span style="color:#f92672">*</span>
+ <span style="color:#f92672">(</span><span style="color:#66d9ef">double</span><span style="color:#f92672">)</span>BaseGameActivity<span style="color:#f92672">.</span><span style="color:#a6e22e">screenHeight</span><span style="color:#f92672">));</span>
+                    countChild_2<span style="color:#f92672">.</span><span style="color:#a6e22e">setCount</span><span style="color:#f92672">(</span>j<span style="color:#f92672">);</span>
+                    addOneChild<span style="color:#f92672">(</span>countChild_2<span style="color:#f92672">);</span>
+                    <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>j <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span>
+                        countChild_2<span style="color:#f92672">.</span><span style="color:#a6e22e">setAlpha</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+                <span style="color:#f92672">}</span>
+                countChild_2<span style="color:#f92672">.</span><span style="color:#a6e22e">setCount</span><span style="color:#f92672">(</span>j<span style="color:#f92672">);</span>
+                <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span></code></pre></div>
+<p>会将语句倒序,出现break label结构
+反编译代码
+<a href="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image12.png">image</a>
+jd-gui有时会将whilei语句翻译成if,此处要将if改成while</p>
+
+<h6 id="switch语句">switch语句</h6>
+
+<p>反编译代码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">switch</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">mBand</span><span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+     default:
+     <span style="color:#66d9ef">case</span> 0:
+     <span style="color:#66d9ef">case</span> 1:
+     <span style="color:#66d9ef">case</span> 2:
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+      <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">mBand</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;FM1&#34;</span><span style="color:#f92672">);</span>
+      <span style="color:#66d9ef">continue</span><span style="color:#f92672">;</span>
+      <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">mBand</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;FM2&#34;</span><span style="color:#f92672">);</span>
+      <span style="color:#66d9ef">continue</span><span style="color:#f92672">;</span>
+      <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">mBand</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;AM&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span></code></pre></div>
+<p>还原</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">switch</span> <span style="color:#f92672">(</span>mBand<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+     <span style="color:#66d9ef">case</span> 0:
+      mBand<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;FM1&#34;</span><span style="color:#f92672">);</span>
+      <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+     <span style="color:#66d9ef">case</span> 1:
+       mBand<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;FM2&#34;</span><span style="color:#f92672">);</span>
+       <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+     <span style="color:#66d9ef">case</span> 2:
+       mBand<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;AM&#34;</span><span style="color:#f92672">);</span>
+       <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+     default:
+    <span style="color:#f92672">}</span></code></pre></div>
+<p>switch规则就是一个continue对应一个case.要注意是是要外层的continue才算数,在if里的continue不算</p>
+
+<h6 id="enum枚举">enum枚举</h6>
+
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image13.png" alt="image" />
+还原
+<img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image14.png" alt="image" /></p>
+
+<p>jd-gui
+<a href="http://www.qiaodiqiu.com/how-to-read-java-confusion-after-the-anti-compiled-code.html">http://www.qiaodiqiu.com/how-to-read-java-confusion-after-the-anti-compiled-code.html</a>
+<a href="http://blog.csdn.net/xyz_fly/article/details/8014455">http://blog.csdn.net/xyz_fly/article/details/8014455</a>
+<a href="http://blog.csdn.net/hp_2008/article/details/8626010">http://blog.csdn.net/hp_2008/article/details/8626010</a></p>
+
+<p>jad
+<a href="http://blog.csdn.net/z3h/article/details/2515287">http://blog.csdn.net/z3h/article/details/2515287</a>
+<a href="http://blog.csdn.net/z3h/article/details/2640522">http://blog.csdn.net/z3h/article/details/2640522</a></p>
+    </div>
+    <footer class="post-footer">
+     
+
+
+<div class="post-tags">
+     
+    <a href="http://farwmarth.com/tags/android" rel="tag" title="android">#android#</a>
+    
+</div>
+
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="http://farwmarth.com/post/android-%E6%94%AF%E4%BB%98%E5%AE%9D-%E5%BF%AB%E6%8D%B7%E6%94%AF%E4%BB%98-%E6%8E%A5%E5%85%A5/" rel="next" title="android 支付宝 快捷支付 接入">
+        <i class="fa fa-chevron-left"></i> android 支付宝 快捷支付 接入
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="http://farwmarth.com/post/android-%E7%BB%84%E4%BB%B6activity/" rel="prev" title="android 组件Activity">
+        android 组件Activity <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="http://farwmarth.com/img/author.jpg"
+        alt="farwmarth" />
+    <p class="site-author-name" itemprop="name">farwmarth</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="http://farwmarth.com/post/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="http://farwmarth.com/categories/">      
+         
+        <span class="site-state-item-count">31</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="http://farwmarth.com/tags/">
+         
+        <span class="site-state-item-count">90</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/wujiyu115/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">farwmarth</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.6</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=286131889" charset="UTF-8"></script> 
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="http://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/utils.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/motion.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/affix.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/post-details.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/toc.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

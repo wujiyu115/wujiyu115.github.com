@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tools on farwmarth</title>
+    <link>http://farwmarth.com/categories/tools/</link>
+    <description>Recent content in tools on farwmarth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 09 Oct 2014 17:56:02 +0000</lastBuildDate>
+    
+	<atom:link href="http://farwmarth.com/categories/tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>一套键鼠的忧愁</title>
+      <link>http://farwmarth.com/post/%E4%B8%80%E5%A5%97%E9%94%AE%E9%BC%A0%E7%9A%84%E5%BF%A7%E6%84%81/</link>
+      <pubDate>Thu, 09 Oct 2014 17:56:02 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E4%B8%80%E5%A5%97%E9%94%AE%E9%BC%A0%E7%9A%84%E5%BF%A7%E6%84%81/</guid>
+      <description>&lt;p&gt;最近终于从虚拟机的囧境里走了出来，申请了一台macMini在win和mac之间切换开发.两台主机键鼠频繁切换真是件蛋疼的事情，不过还好有局域网键鼠控制工具。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>同步利器GoodSync</title>
+      <link>http://farwmarth.com/post/%E5%90%8C%E6%AD%A5%E5%88%A9%E5%99%A8goodsync/</link>
+      <pubDate>Wed, 23 Jan 2013 23:57:55 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E5%90%8C%E6%AD%A5%E5%88%A9%E5%99%A8goodsync/</guid>
+      <description>&lt;p&gt;Goodsync 用了两年了，个人感觉是比较好的同步工具，适合各种同步场景。u盘到目录，本地目录到本地目录，本地到远程，局域网共享目录到目录 等等。&lt;/p&gt;
+
+&lt;p&gt;Goodsync分为免费和付费版，我用的版本是9.1 破解版，破解前要将日期往2010年前调，破解之后去掉自动更新设置，网上有破解版本。&lt;/p&gt;
+
+&lt;p&gt;使用它第一步就是新建任务，任务分两种类型:备份和同步.&amp;nbsp; 备份任务是单向的，如左向右，则备份则是保证右边和左边的状态一致，右边有多余的文件会删除。&amp;nbsp; 同步任务会保证两边的状态保证一致。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

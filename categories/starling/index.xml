@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>starling on farwmarth</title>
+    <link>http://farwmarth.com/categories/starling/</link>
+    <description>Recent content in starling on farwmarth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 19 May 2013 16:31:02 +0000</lastBuildDate>
+    
+	<atom:link href="http://farwmarth.com/categories/starling/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About TexturePacker</title>
+      <link>http://farwmarth.com/post/about-texturepacker/</link>
+      <pubDate>Sun, 19 May 2013 16:31:02 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/about-texturepacker/</guid>
+      <description>&lt;p&gt;TexturePacker是一个材质打包工具,最近学习starling的时候需要用到这个工具.先来个图  &lt;p&gt;&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/05/image12.png&#34; alt=&#34;image&#34; /&gt;  &lt;p&gt;功能很齐全,支持众多语言. &lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/05/image13.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

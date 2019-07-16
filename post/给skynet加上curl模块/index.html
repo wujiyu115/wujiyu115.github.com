@@ -1,0 +1,464 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>给skynet加上curl模块 - farwmarth</title>
+    <meta name="keywords" content="程序员">
+    
+    <meta property="og:title" content="给skynet加上curl模块">
+    <meta property="og:site_name" content="farwmarth">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="给skynet加上curl模块 - farwmarth" />
+    <meta name="description" content="game"> 
+    <link rel="shortcut icon" href="http://farwmarth.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link href="http://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="http://farwmarth.com/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">farwmarth</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Those that can,do.Those that can&#39;t ,complain</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/douban/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />豆瓣
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/music/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-music"></i> <br />音乐
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/%E7%BB%99skynet%E5%8A%A0%E4%B8%8Acurl%E6%A8%A1%E5%9D%97/" itemprop="url">
+        给skynet加上curl模块
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2015-07-02">
+    2015-07-02
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="http://farwmarth.com/categories/c&#43;&#43;" itemprop="url" rel="index">
+        <span itemprop="name">c&#43;&#43;</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">897 字 ~2分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>&nbsp;&nbsp;现在项目里用的是早期的skynet版本,一直不支持http的get,post. 充值与后台交互方式都是采用socket的方式。大部分需求都尽量避开这一块，最近策划又提了个需求,关服开服状态要反应到客户端。这个项目服务器列表是直接是一个静态文件放在web容器中.思路很简单,用jsp写个服务来修改服务器状态(这里应该做安全检验),各服务器开关服，或者服务器崩溃时将状态上报到web服务上. 关键就在这个skynet的http上.<p></p>
+&nbsp;&nbsp;尝试用skynet的socket来模拟http请求,一直处于阻塞状态。没有去细究. 然后从github找了个luacurl库 : <a href="https://github.com/Lua-cURL/Lua-cURLv3" title="https://github.com/Lua-cURL/Lua-cURLv3">https://github.com/Lua-cURL/Lua-cURLv3</a>&nbsp; , 然后把依赖库<a href="http://curl.haxx.se/download.html" title="http://curl.haxx.se/download.html">http://curl.haxx.se/download.html</a> 也down下来.</p>
+
+<h2 id="编译curl">编译curl</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"> ./configure --prefix<span style="color:#f92672">=</span>/usr/local/curl
+ make
+ make install</code></pre></div>
+<h2 id="编译lua-curlv3">编译lua-curlv3 &gt;</h2>
+
+<p>这步有点蛋疼,刚开始是lua路径不对,默认写是的5.1的目录，skynet我们用的是lua 5.2.而且安装的路径也不一样，修改之后，一直卡在找不到curl/curl.h这个头文件上。最后修改makefile把头文件路径加上去解决了这个问题,修改的部分makefile代码:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">include .config
+
+T<span style="color:#f92672">=</span>lcurl
+
+UNAME            ?<span style="color:#f92672">=</span> <span style="color:#66d9ef">$(</span>shell uname<span style="color:#66d9ef">)</span>
+DESTDIR          ?<span style="color:#f92672">=</span> /
+PKG_CONFIG       ?<span style="color:#f92672">=</span> pkg-config
+INSTALL          ?<span style="color:#f92672">=</span> install
+RM               ?<span style="color:#f92672">=</span> rm
+LUA_IMPL         ?<span style="color:#f92672">=</span> lua
+CC               ?<span style="color:#f92672">=</span> <span style="color:#66d9ef">$(</span>MAC_ENV<span style="color:#66d9ef">)</span> gcc
+
+LUA_VERSION       <span style="color:#f92672">=</span> <span style="color:#66d9ef">$(</span>shell lua -v| awk <span style="color:#e6db74">&#39;{ print substr($$2,1,3) }&#39;</span><span style="color:#66d9ef">)</span>
+<span style="color:#75715e"># ifeq ($(LUA_VERSION),)</span>
+<span style="color:#75715e"># LUA_CMOD         ?= /usr/lib/lua/5.1</span>
+<span style="color:#75715e"># LUA_LMOD         ?= /usr/share/lua/5.1</span>
+<span style="color:#75715e"># LIBDIR           ?= /usr/lib</span>
+<span style="color:#75715e"># LUA_INC          ?= /usr/include</span>
+<span style="color:#75715e"># CURL_LIBS         = -L/usr/local/lib -lcurl</span>
+<span style="color:#75715e"># else</span>
+<span style="color:#75715e"># LUA_CMOD         ?= $(shell $(PKG_CONFIG) --variable INSTALL_CMOD $(LUA_IMPL))</span>
+<span style="color:#75715e"># LUA_LMOD         ?= $(shell $(PKG_CONFIG) --variable INSTALL_LMOD $(LUA_IMPL))</span>
+<span style="color:#75715e"># LIBDIR           ?= $(shell $(PKG_CONFIG) --variable libdir $(LUA_IMPL))</span>
+<span style="color:#75715e"># LUA_INC          ?= $(shell $(PKG_CONFIG) --variable includedir $(LUA_IMPL))</span>
+<span style="color:#75715e"># LUA_LIBS          = $(shell $(PKG_CONFIG) --libs $(LUA_IMPL))</span>
+<span style="color:#75715e"># CURL_LIBS         = $(shell $(PKG_CONFIG) --libs libcurl)</span>
+<span style="color:#75715e"># endif</span>
+
+LUA_CMOD         ?<span style="color:#f92672">=</span> /usr/local/lib/lua/<span style="color:#66d9ef">$(</span>LUA_VERSION<span style="color:#66d9ef">)</span>
+LUA_LMOD         ?<span style="color:#f92672">=</span> /usr/local/share/lua/<span style="color:#66d9ef">$(</span>LUA_VERSION<span style="color:#66d9ef">)</span>
+LIBDIR           ?<span style="color:#f92672">=</span> /usr/lib
+LUA_INC          ?<span style="color:#f92672">=</span> /usr/local/include/
+CURL_INC          ?<span style="color:#f92672">=</span> /usr/local/curl/include/
+CURL_LIBS         <span style="color:#f92672">=</span> -L/usr/local/curl/lib -lcurl
+
+ifeq <span style="color:#f92672">(</span><span style="color:#66d9ef">$(</span>UNAME<span style="color:#66d9ef">)</span>, Linux<span style="color:#f92672">)</span>
+OS_FLAGS         ?<span style="color:#f92672">=</span> -shared
+LIBS              <span style="color:#f92672">=</span> -lrt -ldl <span style="color:#66d9ef">$(</span>CURL_LIBS<span style="color:#66d9ef">)</span>
+endif
+ifeq <span style="color:#f92672">(</span><span style="color:#66d9ef">$(</span>UNAME<span style="color:#66d9ef">)</span>, Darwin<span style="color:#f92672">)</span>
+OS_FLAGS         ?<span style="color:#f92672">=</span> -bundle -undefined dynamic_lookup
+MAC_ENV          ?<span style="color:#f92672">=</span> env MACOSX_DEPLOYMENT_TARGET<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;10.3&#39;</span>
+LIBS              <span style="color:#f92672">=</span> -ldl <span style="color:#66d9ef">$(</span>CURL_LIBS<span style="color:#66d9ef">)</span>
+endif
+
+ifneq <span style="color:#f92672">(</span><span style="color:#66d9ef">$(</span>DEBUG<span style="color:#66d9ef">)</span>,<span style="color:#f92672">)</span>
+DBG               <span style="color:#f92672">=</span> -ggdb
+endif
+
+ifeq <span style="color:#f92672">(</span><span style="color:#66d9ef">$(</span>DEV<span style="color:#66d9ef">)</span>,<span style="color:#f92672">)</span>
+WARN              <span style="color:#f92672">=</span> -Wall -Wno-unused-value
+<span style="color:#66d9ef">else</span>
+WARN              <span style="color:#f92672">=</span> -Wall -W -Waggregate-return -Wcast-align -Wmissing-prototypes -Wnested-externs -Wshadow -Wwrite-strings -pedantic
+endif
+
+INCLUDES          <span style="color:#f92672">=</span> -I<span style="color:#66d9ef">$(</span>LUA_INC<span style="color:#66d9ef">)</span>   -I<span style="color:#66d9ef">$(</span>CURL_INC<span style="color:#66d9ef">)</span>
+DEFINES           <span style="color:#f92672">=</span>
+
+
+COMMONFLAGS       <span style="color:#f92672">=</span> -O2 -g -pipe -fPIC <span style="color:#66d9ef">$(</span>OS_FLAGS<span style="color:#66d9ef">)</span> <span style="color:#66d9ef">$(</span>DBG<span style="color:#66d9ef">)</span>
+LF                <span style="color:#f92672">=</span> <span style="color:#66d9ef">$(</span>LIBS<span style="color:#66d9ef">)</span> <span style="color:#66d9ef">$(</span>LDFLAGS<span style="color:#66d9ef">)</span>
+CF                <span style="color:#f92672">=</span> <span style="color:#66d9ef">$(</span>INCLUDES<span style="color:#66d9ef">)</span> <span style="color:#66d9ef">$(</span>DEFINES<span style="color:#66d9ef">)</span> <span style="color:#66d9ef">$(</span>COMMONFLAGS<span style="color:#66d9ef">)</span> <span style="color:#66d9ef">$(</span>WARN<span style="color:#66d9ef">)</span> -DPTHREADS <span style="color:#66d9ef">$(</span>CFLAGS<span style="color:#66d9ef">)</span>
+
+SCR               <span style="color:#f92672">=</span> src/lua/*.lua src/lua/cURL/*.lua src/lua/cURL/impl/*.lua
+SRCS              <span style="color:#f92672">=</span> src/*.c
+
+BIN               <span style="color:#f92672">=</span> <span style="color:#66d9ef">$(</span>T<span style="color:#66d9ef">)</span>.so
+
+all: <span style="color:#66d9ef">$(</span>BIN<span style="color:#66d9ef">)</span>
+
+<span style="color:#66d9ef">$(</span>BIN<span style="color:#66d9ef">)</span>: <span style="color:#66d9ef">$(</span>SRCS<span style="color:#66d9ef">)</span>
+    <span style="color:#66d9ef">$(</span>CC<span style="color:#66d9ef">)</span> <span style="color:#66d9ef">$(</span>CF<span style="color:#66d9ef">)</span> -o $@ $^ <span style="color:#66d9ef">$(</span>LF<span style="color:#66d9ef">)</span>
+    <span style="color:#75715e"># @echo $(LUA_CMOD)</span> 
+
+install: all
+    <span style="color:#66d9ef">$(</span>INSTALL<span style="color:#66d9ef">)</span> -d <span style="color:#66d9ef">$(</span>DESTDIR<span style="color:#66d9ef">)$(</span>LUA_CMOD<span style="color:#66d9ef">)</span> <span style="color:#66d9ef">$(</span>DESTDIR<span style="color:#66d9ef">)$(</span>LUA_LMOD<span style="color:#66d9ef">)</span>/cURL/impl
+    <span style="color:#66d9ef">$(</span>INSTALL<span style="color:#66d9ef">)</span> <span style="color:#66d9ef">$(</span>BIN<span style="color:#66d9ef">)</span> <span style="color:#66d9ef">$(</span>DESTDIR<span style="color:#66d9ef">)$(</span>LUA_CMOD<span style="color:#66d9ef">)</span>
+    <span style="color:#66d9ef">$(</span>INSTALL<span style="color:#66d9ef">)</span> src/lua/cURL.lua <span style="color:#66d9ef">$(</span>DESTDIR<span style="color:#66d9ef">)$(</span>LUA_LMOD<span style="color:#66d9ef">)</span>
+    <span style="color:#66d9ef">$(</span>INSTALL<span style="color:#66d9ef">)</span> src/lua/cURL/safe.lua <span style="color:#66d9ef">$(</span>DESTDIR<span style="color:#66d9ef">)$(</span>LUA_LMOD<span style="color:#66d9ef">)</span>/cURL
+    <span style="color:#66d9ef">$(</span>INSTALL<span style="color:#66d9ef">)</span> src/lua/cURL/utils.lua <span style="color:#66d9ef">$(</span>DESTDIR<span style="color:#66d9ef">)$(</span>LUA_LMOD<span style="color:#66d9ef">)</span>/cURL
+    <span style="color:#66d9ef">$(</span>INSTALL<span style="color:#66d9ef">)</span> src/lua/cURL/impl/cURL.lua <span style="color:#66d9ef">$(</span>DESTDIR<span style="color:#66d9ef">)$(</span>LUA_LMOD<span style="color:#66d9ef">)</span>/cURL/impl
+
+clean:
+    <span style="color:#66d9ef">$(</span>RM<span style="color:#66d9ef">)</span> -f <span style="color:#66d9ef">$(</span>BIN<span style="color:#66d9ef">)</span></code></pre></div>
+<p>编译好后在目录生成lcurl.so文件。基本上就ok了。  <p></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">local curl = require &#34;lcurl&#34;
+curl.easy()
+      :setopt_url(url)
+      :setopt_writefunction(io.stderr) -- use io.stderr:write()
+      :perform()
+      :close()</pre></div>
+<p>这样require就可以加载这个动态链接库跑过来了</p>
+
+<p>默认是同步的,异步访问:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">local cURL = require(&#34;cURL&#34;)
+
+-- setup easy and url
+c1 = cURL.easy{url = &#34;http://www.lua.org/&#34;}
+c2 = cURL.easy{url = &#34;http://luajit.org/&#34;}
+
+m = cURL.multi()
+  :add_handle(c1)
+  :add_handle(c2)
+
+print(&#34;-------------------------&#34;)
+for data, type, easy in m:iperform() do
+  if type == &#34;data&#34; and c1 == easy then print(data) end
+  if type == &#34;data&#34; and c2 == easy then  print(data) end
+end</pre></div>
+    </div>
+    <footer class="post-footer">
+     
+
+
+<div class="post-tags">
+     
+    <a href="http://farwmarth.com/tags/luacurl" rel="tag" title="luacurl">#luacurl#</a>
+    
+</div>
+
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="http://farwmarth.com/post/wordpress%E8%BF%81%E7%A7%BB%E5%88%B0hexo/" rel="next" title="wordpress迁移到hexo">
+        <i class="fa fa-chevron-left"></i> wordpress迁移到hexo
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="http://farwmarth.com/post/%E7%BF%BB%E7%BF%BB%E6%97%A7%E8%B4%A7/" rel="prev" title="翻翻旧货">
+        翻翻旧货 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="http://farwmarth.com/img/author.jpg"
+        alt="farwmarth" />
+    <p class="site-author-name" itemprop="name">farwmarth</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="http://farwmarth.com/post/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="http://farwmarth.com/categories/">      
+         
+        <span class="site-state-item-count">31</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="http://farwmarth.com/tags/">
+         
+        <span class="site-state-item-count">90</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/wujiyu115/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">farwmarth</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.6</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=286131889" charset="UTF-8"></script> 
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="http://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/utils.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/motion.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/affix.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/post-details.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/toc.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

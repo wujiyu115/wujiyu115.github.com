@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>programm on farwmarth</title>
+    <link>http://farwmarth.com/tags/programm/</link>
+    <description>Recent content in programm on farwmarth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 09 Dec 2018 17:41:27 +0000</lastBuildDate>
+    
+	<atom:link href="http://farwmarth.com/tags/programm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>登录</title>
+      <link>http://farwmarth.com/post/game_login/</link>
+      <pubDate>Sun, 09 Dec 2018 17:41:27 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/game_login/</guid>
+      <description>DH密钥交换算法的作用是使通信双方可以在不安全的通道中建立一个相同的密钥，用于加密通信。 基本原理示例： 通信方A和通信方B约定一个初始数g，如</description>
+    </item>
+    
+    <item>
+      <title>在github上建立自己的开源项目</title>
+      <link>http://farwmarth.com/post/%E5%9C%A8github%E4%B8%8A%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</link>
+      <pubDate>Wed, 18 Apr 2012 00:50:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E5%9C%A8github%E4%B8%8A%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</guid>
+      <description>&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;由于代码一直在自己这保存，一方面别人看不见，也不安全。搜了下，发现在github是一个提供免费git管理的网站，于是用了下，非常爽，功能很强大。&lt;/p&gt;
+
+&lt;p&gt;下面就是我注册和提交github代码的流程&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

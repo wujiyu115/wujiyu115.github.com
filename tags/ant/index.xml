@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ant on farwmarth</title>
+    <link>http://farwmarth.com/tags/ant/</link>
+    <description>Recent content in ant on farwmarth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 29 Sep 2014 14:58:22 +0000</lastBuildDate>
+    
+	<atom:link href="http://farwmarth.com/tags/ant/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>小工具之AppInfo</title>
+      <link>http://farwmarth.com/post/%E5%B0%8F%E5%B7%A5%E5%85%B7%E4%B9%8Bappinfo/</link>
+      <pubDate>Mon, 29 Sep 2014 14:58:22 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E5%B0%8F%E5%B7%A5%E5%85%B7%E4%B9%8Bappinfo/</guid>
+      <description>&lt;p&gt;因为经常打包需要查看apk或者是ipa中的版本信息,包名信息就写了这么个小工具，要跨平台就选择了java来写.&lt;/p&gt;
+
+&lt;p&gt;功能非常简单,拖放apk到界面就会把AndroidManifest.xml内容解析出来,拖放ipa到界面会把Info.plist解析出来&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>游戏 on farwmarth</title>
+    <link>http://farwmarth.com/tags/%E6%B8%B8%E6%88%8F/</link>
+    <description>Recent content in 游戏 on farwmarth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 23 Feb 2016 20:26:02 +0000</lastBuildDate>
+    
+	<atom:link href="http://farwmarth.com/tags/%E6%B8%B8%E6%88%8F/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>一个游戏的生长过程</title>
+      <link>http://farwmarth.com/post/%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F%E7%9A%84%E7%94%9F%E9%95%BF%E8%BF%87%E7%A8%8B/</link>
+      <pubDate>Tue, 23 Feb 2016 20:26:02 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F%E7%9A%84%E7%94%9F%E9%95%BF%E8%BF%87%E7%A8%8B/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;每次都是挖了一个巨大无比的坑,填了好久都填不完.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;概念&#34;&gt;概念&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;IP&lt;/strong&gt; : (Intellectual Property),知识产权,在游戏圈可以理解为拥有知识产权的一方,授权游戏开发商使用其主题素材&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SP&lt;/strong&gt; : (Service Provider)渠道商:相当于电影院(电影院线),电影院是直接面向观众的,各电影院线上映电影给观众看,渠道商则是上架游戏应用给用户下载玩.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CP&lt;/strong&gt; : (Content Provider)游戏开发商: 相当于电影制片方,聘请导演、演员、剧组人员进行电影的拍摄和制作,同理,游戏开发商聘请策划,程序,美术,开发团队进行游戏的开发和制作.开发商的核心竞争力,就是产品本身,产品做的越牛逼,开发商就越牛逼.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;游戏运营商(发行商)&lt;/strong&gt; : 相当于电影发行公司,进行电影的发行、销售、经营、推广,其实这个跟牌照也有关,因为在我朝面向群众的文化制品是管制品,不是什么阿猫阿狗拍个电影都能进电影院给观众传递不正确价值观的,于是就有牌照(电影发行经营许可证),制片方制作的电影必须通过有牌照的电影发行公司发行.同理在端游上也有牌照(文网文),端游审查、备案都需要通过拥有牌照的游戏发行商,而手游相对而言没有端游审查严格,手游发行商更多的作用是做市场营销、上线运营、渠道对接的工作,这些职能不是所有游戏开发商或开发团队都具备的.运营(发行)商的核心竞争力,是钱,是推广实力以及渠道关系.榜上有名的那些游戏,除了腾讯系以外.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;渠道&lt;/strong&gt; : 是直接面对用户的,用户可从渠道下载游戏玩.渠道的核心竞争力(仅针对手游)是用户数量和质量&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;代理商&lt;/strong&gt; : 发行商的一种,属于分包发行商,从总包手中取得某个地区的发行权,并在该区域内制定销售策略并组织销售.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>语音服务器的选型</title>
+      <link>http://farwmarth.com/post/%E8%AF%AD%E9%9F%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E5%9E%8B/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E8%AF%AD%E9%9F%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E5%9E%8B/</guid>
+      <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
+
+&lt;p&gt;最近游戏要接入一下语音服务器,调查了一下融合的语音sdk
+腾讯云GVoice:&lt;a href=&#34;https://www.qcloud.com/document/product/556/7673&#34;&gt;https://www.qcloud.com/document/product/556/7673&lt;/a&gt;
+好像只有这个比较靠谱,但是收费好像有点贵,还是决定基于原有的免费的百度语音识别造一个轮子&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

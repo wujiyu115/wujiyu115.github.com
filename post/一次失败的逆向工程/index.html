@@ -1,0 +1,462 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>一次失败的逆向工程 - farwmarth</title>
+    <meta name="keywords" content="程序员">
+    
+    <meta property="og:title" content="一次失败的逆向工程">
+    <meta property="og:site_name" content="farwmarth">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="一次失败的逆向工程 - farwmarth" />
+    <meta name="description" content="game"> 
+    <link rel="shortcut icon" href="http://farwmarth.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link href="http://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="http://farwmarth.com/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">farwmarth</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Those that can,do.Those that can&#39;t ,complain</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/douban/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />豆瓣
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/music/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-music"></i> <br />音乐
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/%E4%B8%80%E6%AC%A1%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/" itemprop="url">
+        一次失败的逆向工程
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2013-08-07">
+    2013-08-07
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="http://farwmarth.com/categories/%E7%A0%B4%E8%A7%A3" itemprop="url" rel="index">
+        <span itemprop="name">破解</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1072 字 ~3分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>源起是要拿一下一个韩国游戏的图片资源,本以为挺容易的,google了一下, ipa也是压缩包格式,改成zip解压.然后把png图片拿出来，发现有一部分图片在windows上无法解析.继续google.原来是在编译打包到app的过程中，原有的png都被在最后加上了特定都数据段，这样从app里直接取出来图片既不能看，也不能用，所以需要工具来进行还原.网上python脚本一大堆，down下来还原了一下图片，确实可以恢复正常。但是这堆图片里面都是无关紧要的素材，想了想，应该是把图片弄成了自定义格式。在目录下果然发现了一个spr的目录，里面有一堆自定义扩展名叫f3spr的文件，用文本编辑器打开发现是个xml.有一段数据结构如下.</p>
+
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/08/image.png" alt="image" /></p>
+
+<p>呃，这段数据像是被加密的png图片，再google还真发现可以将图片压缩成base64字符串。c#代码如下:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">using</span> System;
+<span style="color:#66d9ef">using</span> System.Collections.Generic;
+<span style="color:#66d9ef">using</span> System.ComponentModel;
+<span style="color:#66d9ef">using</span> System.Data;
+<span style="color:#66d9ef">using</span> System.Drawing;
+<span style="color:#66d9ef">using</span> System.Linq;
+<span style="color:#66d9ef">using</span> System.Text;
+<span style="color:#66d9ef">using</span> System.Threading.Tasks;
+<span style="color:#66d9ef">using</span> System.Windows.Forms;
+<span style="color:#66d9ef">using</span> System.IO;
+<span style="color:#66d9ef">using</span> System.Xml;
+
+<span style="color:#66d9ef">namespace</span> WindowsFormsApplication1
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">partial</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Form1</span> : Form
+    {
+        <span style="color:#66d9ef">public</span> Form1()
+        {
+            InitializeComponent();
+        }
+
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> button1_Click(<span style="color:#66d9ef">object</span> sender, EventArgs e)
+        {
+            <span style="color:#66d9ef">try</span>
+            {
+                <span style="color:#66d9ef">int</span> readbyte = <span style="color:#ae81ff">0</span>;
+                <span style="color:#66d9ef">int</span> bytestoread = <span style="color:#ae81ff">1044</span>;
+                XmlTextReader xmltxtrd = <span style="color:#66d9ef">new</span> XmlTextReader(<span style="color:#e6db74">&#34;C:/11.xml&#34;</span>);
+                FileStream fs = <span style="color:#66d9ef">new</span> FileStream(<span style="color:#e6db74">&#34;C:/002.png&#34;</span>, FileMode.Create);
+                BinaryWriter bw = <span style="color:#66d9ef">new</span> BinaryWriter(fs);
+                <span style="color:#66d9ef">byte</span><span style="color:#a6e22e">[]</span> base64buffer = <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#a6e22e">[bytestoread]</span>;
+                <span style="color:#66d9ef">while</span> (xmltxtrd.Read())
+                {
+                    <span style="color:#66d9ef">if</span> (xmltxtrd.NodeType == XmlNodeType.Element &amp;&amp; xmltxtrd.Name == <span style="color:#e6db74">&#34;_data_ImageData&#34;</span>)
+                    {
+                        Console.WriteLine(<span style="color:#e6db74">&#34;_data_ImageData&#34;</span>);
+                        <span style="color:#66d9ef">do</span>
+                        {
+                            Console.WriteLine(<span style="color:#e6db74">&#34;cout............&#34;</span>);
+                           <span style="color:#75715e">//readbyte = xmltxtrd.ReadBase64(base64buffer, 0, bytestoread);
+</span><span style="color:#75715e"></span>                            readbyte = xmltxtrd.ReadElementContentAsBase64(base64buffer, <span style="color:#ae81ff">0</span>, bytestoread);
+                            bw.Write(base64buffer, <span style="color:#ae81ff">0</span>, readbyte);
+                        }
+                        <span style="color:#66d9ef">while</span> (bytestoread &amp;lt;= readbyte);
+                        <span style="color:#66d9ef">break</span>;
+                    }
+
+                }
+                bw.Flush();
+                bw.Close();
+                fs.Close();
+                xmltxtrd.Close();
+
+                MessageBox.Show(<span style="color:#e6db74">&#34;读写结束！&#34;</span>);
+            }
+            <span style="color:#66d9ef">catch</span> (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> button2_Click(<span style="color:#66d9ef">object</span> sender, EventArgs e)
+        {
+            <span style="color:#66d9ef">try</span>
+            {
+                XmlDocument myxmldoc = <span style="color:#66d9ef">new</span> XmlDocument();
+                myxmldoc.Load(<span style="color:#e6db74">&#34;C:/11.xml&#34;</span>);
+                XmlElement elem = myxmldoc.CreateElement(<span style="color:#e6db74">&#34;_data_ImageData&#34;</span>);
+                FileStream fs = <span style="color:#66d9ef">new</span> FileStream(<span style="color:#e6db74">&#34;C:/001.png&#34;</span>, FileMode.Open);
+                BinaryReader br = <span style="color:#66d9ef">new</span> BinaryReader(fs);
+                <span style="color:#66d9ef">byte</span><span style="color:#a6e22e">[]</span> imagebuffer = <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#a6e22e">[br.BaseStream.Length]</span>;
+                br.Read(imagebuffer, <span style="color:#ae81ff">0</span>, Convert.ToInt32(br.BaseStream.Length));
+                <span style="color:#66d9ef">string</span> textstring = System.Convert.ToBase64String(imagebuffer);
+                fs.Close();
+                br.Close();
+                XmlText text = myxmldoc.CreateTextNode(textstring);
+                myxmldoc.DocumentElement.AppendChild(elem);
+                myxmldoc.DocumentElement.LastChild.AppendChild(text);
+
+                myxmldoc.Save(<span style="color:#e6db74">&#34;C:/11.xml&#34;</span>);
+
+                MessageBox.Show(<span style="color:#e6db74">&#34;读写结束！&#34;</span>);
+            }
+            <span style="color:#66d9ef">catch</span> (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+    }
+}
+</code></pre></div>
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/08/image1.png" alt="image" /></p>
+
+<p>加密后数据格式和f3spr的格式近似,本以为可以还原这个图片资源，然后写个批处理就搞定了。结果还原的png无法显示。用winHex看了下。</p>
+
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/08/winhex.png" alt="winhex" /></p>
+
+<p>上图依次是png,rar和f3spr还原图片在winhex下的数据.正常图片和压缩文件都要数据段标识.而我还原的png图片却是一堆乱码。未果。在f3spr里看到一个数据段</p>
+
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/08/image2.png" alt="image" /></p>
+
+<p>这个看起来有点像texturepacker打包的plist文件。之前的是图片数据是无疑的,可能是在转成base64之前用byte数组错位加密了一下。</p>
+
+<p>应该有android版本.搜索了一下果然有.又有了一丝希望的小火花。破解apk还是熟悉一些。逆向了一下导成android工程.</p>
+
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/08/image3.png" alt="image" /></p>
+
+<p>果然是cocos2dx又一作品。从包结构名可以看出公司域名:<a href="http://www.n2play.co.kr/">http://www.n2play.co.kr/</a>.一堆韩语看不懂.google了一翻这引擎，在github找了一下看是否源了这类库。还是没有结果。看了下代码结构，</p>
+
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/08/image4.png" alt="image" /></p>
+
+<p>发现那f3spr文件解析是用调的c++代码。so文件怎么破啊。。只能反汇编没法还原。。卡住了。功力不够了。</p>
+    </div>
+    <footer class="post-footer">
+     
+
+
+<div class="post-tags">
+     
+    <a href="http://farwmarth.com/tags/%e7%a0%b4%e8%a7%a3" rel="tag" title="破解">#破解#</a>
+    
+</div>
+
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="http://farwmarth.com/post/a%E6%98%9F%E5%88%9D%E6%8E%A2/" rel="next" title="a* 初探">
+        <i class="fa fa-chevron-left"></i> a* 初探
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="http://farwmarth.com/post/android-%E5%88%A0%E9%99%A4%E6%9C%AA%E5%BC%95%E7%94%A8%E8%B5%84%E6%BA%90%E4%BC%98%E5%8C%96%E5%AD%97%E8%8A%82%E7%A0%81/" rel="prev" title="android 删除未引用资源,优化字节码">
+        android 删除未引用资源,优化字节码 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="http://farwmarth.com/img/author.jpg"
+        alt="farwmarth" />
+    <p class="site-author-name" itemprop="name">farwmarth</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="http://farwmarth.com/post/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="http://farwmarth.com/categories/">      
+         
+        <span class="site-state-item-count">31</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="http://farwmarth.com/tags/">
+         
+        <span class="site-state-item-count">90</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/wujiyu115/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">farwmarth</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.6</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=286131889" charset="UTF-8"></script> 
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="http://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/utils.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/motion.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/affix.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/post-details.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/toc.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

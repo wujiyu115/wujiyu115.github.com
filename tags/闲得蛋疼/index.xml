@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>闲得蛋疼 on farwmarth</title>
+    <link>http://farwmarth.com/tags/%E9%97%B2%E5%BE%97%E8%9B%8B%E7%96%BC/</link>
+    <description>Recent content in 闲得蛋疼 on farwmarth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 22 Mar 2013 14:58:43 +0000</lastBuildDate>
+    
+	<atom:link href="http://farwmarth.com/tags/%E9%97%B2%E5%BE%97%E8%9B%8B%E7%96%BC/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>折腾一下，游戏每周首页</title>
+      <link>http://farwmarth.com/post/%E6%8A%98%E8%85%BE%E4%B8%80%E4%B8%8B%E6%B8%B8%E6%88%8F%E6%AF%8F%E5%91%A8%E9%A6%96%E9%A1%B5/</link>
+      <pubDate>Fri, 22 Mar 2013 14:58:43 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E6%8A%98%E8%85%BE%E4%B8%80%E4%B8%8B%E6%B8%B8%E6%88%8F%E6%AF%8F%E5%91%A8%E9%A6%96%E9%A1%B5/</guid>
+      <description>&lt;p&gt;　昨天晚上版本更新，又到了难熬的等待时刻了，看完了更新的绿箭侠，邪恶力量，实在是不想干活了，突然想起来最近每周都把游戏更新的首页截图做个纪念，索性把以前的首页也翻出来吧。&lt;br /&gt;
+找了找工程目录，素材是一个叫homePage.tempdata的文件，被加密了的，ok，开始工作.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>设计 on farwmarth</title>
+    <link>http://farwmarth.com/tags/%E8%AE%BE%E8%AE%A1/</link>
+    <description>Recent content in 设计 on farwmarth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 29 Jan 2016 11:09:35 +0000</lastBuildDate>
+    
+	<atom:link href="http://farwmarth.com/tags/%E8%AE%BE%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>仓促的战斗模型设计</title>
+      <link>http://farwmarth.com/post/%E4%BB%93%E4%BF%83%E7%9A%84%E6%88%98%E6%96%97%E6%A8%A1%E5%9E%8B%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Fri, 29 Jan 2016 11:09:35 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E4%BB%93%E4%BF%83%E7%9A%84%E6%88%98%E6%96%97%E6%A8%A1%E5%9E%8B%E8%AE%BE%E8%AE%A1/</guid>
+      <description>&lt;h2 id=&#34;设计思路&#34;&gt;设计思路&lt;/h2&gt;
+
+&lt;p&gt;新游戏开发又接近收尾的工作,记录一下这几个月开发的一些想法.
+服务器设计延续了上一个游戏的基础结构.
+由于前期demo版本开发周期很短,两周时间要一个战斗版本,所以还是遗留了一些如搅屎棍般的缺陷在里面.
+&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/herosserver.png&#34; alt=&#34; heros服务器设计考量&#34; /&gt;
+上图就是基于初期战斗的设计思路.
+基本思路即了解概念,梳理需求中的疑惑,再来进行代码重构和设计&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

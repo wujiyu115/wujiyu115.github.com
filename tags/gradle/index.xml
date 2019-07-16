@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gradle on farwmarth</title>
+    <link>http://farwmarth.com/tags/gradle/</link>
+    <description>Recent content in gradle on farwmarth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 13 Mar 2016 20:26:02 +0000</lastBuildDate>
+    
+	<atom:link href="http://farwmarth.com/tags/gradle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Gradle 打包</title>
+      <link>http://farwmarth.com/post/gradle/</link>
+      <pubDate>Sun, 13 Mar 2016 20:26:02 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/gradle/</guid>
+      <description>&lt;h2 id=&#34;什么是gradle&#34;&gt;什么是Gradle？&lt;/h2&gt;
+
+&lt;p&gt;Gradle是一种依赖管理工具，基于Groovy语言，面向Java应用为主，它抛弃了基于XML的各种繁琐配置，取而代之的是一种基于Groovy的内部领域特定（DSL）语言&lt;/p&gt;
+
+&lt;h2 id=&#34;安装gradle&#34;&gt;安装Gradle&lt;/h2&gt;
+
+&lt;p&gt;Android Studio 默认下载目录,如果下载太慢可以手动从官网下载放到对应目录&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Mac&lt;/strong&gt;: /Users/&amp;lt;用户名&amp;gt;/.gradle/wrapper/dists** 目录&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Win&lt;/strong&gt;: C:\Documents and Settings&amp;lt;用户名&amp;gt;.gradle\wrapper\dists 目录&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

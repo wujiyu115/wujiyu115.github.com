@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mind on farwmarth</title>
+    <link>http://farwmarth.com/categories/mind/</link>
+    <description>Recent content in mind on farwmarth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 25 Mar 2013 00:12:09 +0000</lastBuildDate>
+    
+	<atom:link href="http://farwmarth.com/categories/mind/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>在菲音听的几堂培训课</title>
+      <link>http://farwmarth.com/post/%E5%9C%A8%E8%8F%B2%E9%9F%B3%E5%90%AC%E7%9A%84%E5%87%A0%E5%A0%82%E5%9F%B9%E8%AE%AD%E8%AF%BE/</link>
+      <pubDate>Mon, 25 Mar 2013 00:12:09 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E5%9C%A8%E8%8F%B2%E9%9F%B3%E5%90%AC%E7%9A%84%E5%87%A0%E5%A0%82%E5%9F%B9%E8%AE%AD%E8%AF%BE/</guid>
+      <description>&lt;p&gt;　在菲音也呆了半年多了，新人培训一次也没去，讲的是什么时间管理，高效XX的东西，技术培训倒是去了不少，每周四的晚上会有项目负责人或者主程宣讲。工作心得，一些问题解答，个人觉得某些课听了还是收获裨益的。当时的ppt没能要过来，时隔几个月才想起来写一篇稿子总结一下。
+　刚进公司那会听第一堂技术课，有种膜拜大牛的感觉。主讲是一个新项目的主程，讲的是as的基本知识体系和ARPG游戏引擎设计思路.当时还做了大量笔记，现在笔记本都不知道丢哪去了，记得的唯一的一点是。以组件方式编程，将功能点设计成组件，而不是用深层次的继承，这和最近看的robotlegs有异曲同工之妙。每个功能点都分离成组件，这样就代码就可以灵活装配了，(哈，想法是好的，但是将抽象付于实践才是最难的一部分，努力向着这一步迈进)
+　再有印象点的就是天地会的舵主弃笑天的效率之道讲座。介绍了不少提高效率的途径和方法.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>GTD</title>
+      <link>http://farwmarth.com/post/gtd/</link>
+      <pubDate>Wed, 16 Jan 2013 12:53:26 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/gtd/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;GTD流程图 : Getting Things Done的缩写&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;把所有事情都从你的脑袋里弄出来。在事情出现就做好相关行动的一系列决定，而不是在事情爆发的时候。以合适的类别组织好你的项目的各种提醒以及下一步行动。保持你的系统更新和完整，及时进行回顾，使你在任何时候都能信任你的系统和对任务的处理。”&lt;/p&gt;
+
+&lt;p&gt;GTD系统由五条核心原则组成：收集、处理、管理、执行、回顾&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/5584467049_4caa6bdff6.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

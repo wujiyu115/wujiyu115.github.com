@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vultr on farwmarth</title>
+    <link>http://farwmarth.com/tags/vultr/</link>
+    <description>Recent content in vultr on farwmarth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    
+	<atom:link href="http://farwmarth.com/tags/vultr/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>给shadowsocks插上tcptun,bbr这对翅膀</title>
+      <link>http://farwmarth.com/post/vultr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/vultr/</guid>
+      <description>&lt;p&gt;最近&lt;a href=&#34;https://www.vultr.com/&#34;&gt;vultr&lt;/a&gt; 搞活动充五刀送五刀.之前用的服务商速度有点不给力.想着撸个ss玩玩,晚上折腾到一点多, 易票联的&lt;code&gt;全球付&lt;/code&gt;卡在vultr一直刷不了.又不想用&lt;code&gt;paypal&lt;/code&gt;绑银行卡.试着把&lt;code&gt;全球付&lt;/code&gt;的卡绑到&lt;code&gt;paypal&lt;/code&gt;上。然后用&lt;code&gt;paypal&lt;/code&gt;一刷居然成功了.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;vultr&lt;/code&gt;比&lt;code&gt;linode&lt;/code&gt;同等配置价格更便宜.&lt;code&gt;500G&lt;/code&gt;的流量绝对够用了.知乎上看了一下好像日本的线路速度比较快.自己也测试了一下.然后开了个实例准备试用几个月看效果如何.&lt;/p&gt;
+
+&lt;h2 id=&#34;速度测试&#34;&gt;速度测试&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;国内线路测试vps速度ping
+&lt;a href=&#34;http://ping.chinaz.com/45.76.185.184&#34;&gt;http://ping.chinaz.com/45.76.185.184&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;speedtest测试带宽&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;wget https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py
+python speedtest.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&#34;shadowsocks安装&#34;&gt;Shadowsocks安装&lt;/h1&gt;
+
+&lt;h2 id=&#34;安装shadowsocks-go&#34;&gt;安装Shadowsocks-go&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#安装&lt;/span&gt;
+wget --no-check-certificate -O shadowsocks-go.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-go.sh
+chmod +x shadowsocks-go.sh
+./shadowsocks-go.sh &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;&amp;gt;&amp;amp;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | tee shadowsocks-go.log
+
+&lt;span style=&#34;color:#75715e&#34;&gt;#默认配置文件在&lt;/span&gt;
+/etc/shadowsocks/config.json&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

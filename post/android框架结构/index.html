@@ -1,0 +1,434 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>android　框架结构 - farwmarth</title>
+    <meta name="keywords" content="程序员">
+    
+    <meta property="og:title" content="android　框架结构">
+    <meta property="og:site_name" content="farwmarth">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="android　框架结构 - farwmarth" />
+    <meta name="description" content="game"> 
+    <link rel="shortcut icon" href="http://farwmarth.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link href="http://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="http://farwmarth.com/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">farwmarth</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Those that can,do.Those that can&#39;t ,complain</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/douban/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />豆瓣
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/music/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-music"></i> <br />音乐
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/android%E6%A1%86%E6%9E%B6%E7%BB%93%E6%9E%84/" itemprop="url">
+        android　框架结构
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2013-04-04">
+    2013-04-04
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="http://farwmarth.com/categories/android" itemprop="url" rel="index">
+        <span itemprop="name">android</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">2050 字 ~5分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <h2 id="一-android平台结构-sdk目录结构-目录结构">一 Android平台结构,SDK目录结构,目录结构</h2>
+
+<p>　android是一个linux内核的操作系统，常规编程语言是java,不过也推出了NDK,可以用c++来访问部分接口。这篇就略去环境搭建和hello world了。</p>
+
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/2010100721194321.jpg" alt="2010100721194321" /></p>
+
+<p><strong>1. 平台整体架构</strong>
++ Applications： 应用程序层(自带的短信一些功能)
++ Application Framework： 应用程序框架层(<font color="#ff0000">主要关注点</font>)
++ Library &amp;&amp; Android Runtime： 底层功能库以及Android运行时
++ Linux Kernel： Linux 内核</p>
+
+<p><strong>2. SDK目录:</strong></p>
+
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/QQ20130404114155_MarkMan.png" alt="QQ截图20130404114155_MarkMan" /></p>
+
+<p><strong>3. 项目目录详解</strong></p>
+
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/0_1323176185TK99.gif" alt="0_1323176185TK99" /></p>
+
+<ul>
+<li>src: 专门存放我们编写的java源代码的包。
+gen: 该目录不用我们开发人员维护，但又非常重要的目录。该目录用来存放由Android开发工具所生成的目录。该目录下的所有文件都不是我们创建的，而是由ADT自动生成的。该目录下的R.java文件非常重要。</li>
+<li>android 2.1: 存放Android自身的jar包。</li>
+<li>assets：该目录用来存放应用中用到的类似于视频文件、Mp3一些媒体文件。</li>
+
+<li><p>res：res是resource的缩写，我们称该目录为资源目录。该目录可以存放一些图标、界面文件、应用到的文字信息。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">res下有三个dawable文件夹：
+drawable-hdpi：用来存放高分辨率的图标；
+drawable-mdpi:用来存放中等分辨路的图标；
+drawable-ldpi:用来存放低分辨率的图标。
+程序运行时可以根据手机分辨率的高低选取相应的目录下的图标。</pre></div></li>
+</ul>
+
+<p>res下还有一个layout文件夹，里面是ADT默认自动创建的main.xml文件，在mian.xml中存放的是布局文件,下面是mian.xml中的部分代码：</p>
+
+<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/0_1323176233eelO.gif" alt="0_1323176233eelO" /></p>
+
+<p>res下的values中的strings.xml用来定义字符串和数值，在Activity中使用getResources().getString(resourceId)或getResources().getText(resourceId)取得资源。<code>strings.xml中的部分代码:</code>
+<img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/0_1323176257RHi0.gif" alt="0_1323176257RHi0" /></p>
+
+<ul>
+<li>AndroidManifest.xml:该文件是功能清单文件，该文件列出了应用中所使用的所有组件，如“activity”。</li>
+<li>proguard.cfg：混淆脚本文件。</li>
+<li>project.properties:该文件存放了项目的一些环境配置，根据需要可以手工改动。<p><img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/0_1323176269i9u9.gif" alt="0_1323176269i9u9" /></li>
+</ul>
+
+<p>可以将7改为3,4，7,8,10,11,12,13,14中的任意数值。
+res下的文件在R.java中生成唯一id，layout和Activity也通过id关联
+<img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image3.png" alt="image" />
+<strong>程序入口:</strong>
+<img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image4.png" alt="image" />
+AndroidManifest.xml中intent-filter为上图配置的Activity即为程序入口.</p>
+
+<h2 id="三-签名apk">三　签名apk</h2>
+
+<p><strong>1.签名的意义</strong>
+　　为了保证每个应用程序开发商合法ID，防止部分开放商可能通过使用相同的Package Name来混淆替换已经安装的程序，我们需要对我们发布的APK文件进行唯一签名，保证我们每次发布的版本的一致性(如自动更新不会因为版本不一致而无法安装)。</p>
+
+<p><strong>2.签名的步骤</strong></p>
+
+<ul>
+<li><p>创建key
+创建key，需要用到keytool.exe (位于jdk1.6.0_24\jre\bin目录下)，使用产生的key对apk签名用到的是jarsigner.exe (位于jdk1.6.0_24\bin目录下)，把上两个软件所在的目录添加到环境变量path后，打开cmd输入
+<code>D:\&gt;keytool -genkey -alias demo.keystore -keyalg RSA -validity 40000 -keystore demo.keystore</code>
+说明：-genkey 产生密钥
+-alias demo.keystore 别名 demo.keystore
+-keyalg RSA 使用RSA算法对签名加密
+-validity 40000 有效期限4000天
+-keystore demo.keystore</p></li>
+
+<li><p>使用key对apk签名
+<code>D:\&gt;jarsigner -verbose -keystore demo.keystore -signedjar demo_signed.apk demo.apk demo.keystore</code>
+说明：-verbose 输出签名的详细信息
+-keystore demo.keystore 密钥库位置
+-signedjar demor_signed.apk demo.apk demo.keystore 正式签名，三个参数中依次为签名后产生的文件demo_signed，要签名的文件demo.apk和密钥库demo.keystore.
+注意事项：android工程的bin目录下的demo.apk默认是已经使用debug用户签名的，所以不能使用上述步骤对此文件再次签名。正确步骤应该是:在工程点击右键-&gt;Anroid Tools-Export Unsigned Application Package导出的apk采用上述步骤签名。</p></li>
+</ul>
+
+<p><strong>3.签名之后,用zipalign(压缩对齐)优化你的APK文件</strong></p>
+
+<p>　未签名的apk不能使用,也不能优化.签名之后的apk使用zipalign.exe(android-sdk-windows\tools目录下)工具对其优化:<code>D:\&gt;zipalign -v 4 demo_signedfinal.apk</code></p>
+
+<p>如上，zipalign能够使apk文件中未压缩的数据在4个字节边界上对齐（4个字节是一个性能很好的值），这样android系统就可以使用mmap()(请自行查阅这个函数的用途)函数读取文件，可以在读取资源上获得较高的性能.</p>
+
+<ul>
+<li>在4个字节边界上对齐的意思就是，一般来说，是指编译器吧4个字节作为一个单位来进行读取的结果，这样的话，CPU能够对变量进行高效,快速的访问（较之前不对齐）。</li>
+<li>对齐的根源：android系统中的Davlik虚拟机使用自己专有的格式DEX，DEX的结构是紧凑的，为了让运行时的性能更好，可以进一步用&rdquo;对齐&rdquo;进一步优化，但是大小一般会有所增加。</li>
+</ul>
+    </div>
+    <footer class="post-footer">
+     
+
+
+<div class="post-tags">
+     
+    <a href="http://farwmarth.com/tags/android" rel="tag" title="android">#android#</a>
+    
+</div>
+
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="http://farwmarth.com/post/android-%E7%BB%84%E4%BB%B6activity/" rel="next" title="android 组件Activity">
+        <i class="fa fa-chevron-left"></i> android 组件Activity
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="http://farwmarth.com/post/centos-%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/" rel="prev" title="centos 命令，基本设置">
+        centos 命令，基本设置 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="http://farwmarth.com/img/author.jpg"
+        alt="farwmarth" />
+    <p class="site-author-name" itemprop="name">farwmarth</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="http://farwmarth.com/post/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="http://farwmarth.com/categories/">      
+         
+        <span class="site-state-item-count">31</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="http://farwmarth.com/tags/">
+         
+        <span class="site-state-item-count">90</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/wujiyu115/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">farwmarth</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.6</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=286131889" charset="UTF-8"></script> 
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="http://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/utils.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/motion.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/affix.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/post-details.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/toc.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

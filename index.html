@@ -1,2686 +1,843 @@
-<!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next gemini use-motion" lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
-
-
-
-
-
-
-
-
-
-<script id="hexo.configurations">
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+	<meta name="generator" content="Hugo 0.55.6" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>farwmarth - farwmarth</title>
+    <meta name="keywords" content="程序员">
+    
+    <meta property="og:title" content="farwmarth">
+    <meta property="og:site_name" content="farwmarth">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="farwmarth - farwmarth" />
+    <meta name="description" content="game"> 
+    <link rel="shortcut icon" href="http://farwmarth.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link href="http://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    
+    <link href="http://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/',
-    scheme: 'Gemini',
-    version: '6.6.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: false,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: false, 
+    motion: true
   };
 </script>
-
-
-  
-
-
-
-
-  <meta property="og:type" content="website">
-<meta property="og:title" content="farwmarth">
-<meta property="og:url" content="http://www.farwmarth.com/index.html">
-<meta property="og:site_name" content="farwmarth">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="farwmarth">
-
-
-
-  <link rel="alternate" href="/atom.xml" title="farwmarth" type="application/atom+xml">
-
-
-
-
-  <link rel="canonical" href="http://www.farwmarth.com/">
-
-
-
-<script id="page.configurations">
-  CONFIG.page = {
-    sidebar: "",
-  };
-</script>
-
-  <title>farwmarth</title>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  <noscript>
-  <style>
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
-
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
-
-    .use-motion .logo-line-before i { left: initial; }
-    .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
 </head>
-
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
 
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">farwmarth</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-    
-      
-        <p class="site-subtitle">Those that can,do.Those that can't ,complain</p>
-      
-    
+  <div class="custom-logo-site-title">
+    <a href="http://farwmarth.com/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">farwmarth</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
   </div>
-
-  <div class="site-nav-toggle">
-    <button aria-label="Toggle navigation bar">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
+  <p class="site-subtitle">Those that can,do.Those that can&#39;t ,complain</p>
 </div>
 
-
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
 
 <nav class="site-nav">
-  
     <ul id="menu" class="menu">
       
-        
-        
-        
-          
-          <li class="menu-item menu-item-home menu-item-active">
-
-    
-    
-    
       
-    
-
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
-
-    
-    
-    
+        <li class="menu-item menu-item-active">
+          <a href="http://farwmarth.com/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
       
-    
-
-    
-
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
-
-    
-    
-    
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
       
-    
-
-    
-
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
-
-    
-    
-    
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
       
-    
-
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-
-    
-    
-    
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/douban/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />豆瓣
+          </a>
+        </li>
       
-    
-
-    
-
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-douban">
-
-    
-    
-    
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/music/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-music"></i> <br />音乐
+          </a>
+        </li>
       
-    
-
-    
-
-    <a href="/douban" rel="section"><i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>豆瓣</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-music">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/music" rel="section"><i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>网易云音乐</a>
-
-  </li>
-
-      
-      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
     </ul>
-  
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
 
-  
-
-  
+    </div>
 </nav>
 
-
-
-  
-
-
-
-</div>
+ </div>
     </header>
-
-    
-
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          
-            
-
-          
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
     
+ <section id="posts" class="posts-expand">
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/umiao/" itemprop="url">
+        反编下某疫苗接种app
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2018-12-18">
+    2018-12-18
+</time>
+</span> 
       
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.farwmarth.com/umiao/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="博主">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="farwmarth">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/umiao/" class="post-title-link" itemprop="http://www.farwmarth.com/index.html">反编下某疫苗接种app</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建于：2018-12-18 18:26:16 / 更新于：21:03:44" itemprop="dateCreated datePublished" datetime="2018-12-18T18:26:16+08:00">2018-12-18</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">647 字 ~2分钟</span>
+</span>
+      </div>
+    </header>
     <div class="post-body" itemprop="articleBody">
+    <h1 id="前言">前言</h1>
 
-      
-      
+<p>今天带小孩去打疫苗，发现之前的社区医院改成app预约了,下载app用了一下,真是无力吐槽,除了注册功能是好的。其他功能一点开全在转圏加载,预约教程页面还报了个sql语句错误.报着学习的态度想看看大佬们写的代码.</p>
 
-      
-        
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>今天带小孩去打疫苗，发现之前的社区医院改成app预约了,下载app用了一下,真是无力吐槽,除了注册功能是好的。其他功能一点开全在转圏加载,预约教程页面还报了个sql语句错误.报着学习的态度想看看大佬们写的代码.</p>
-<h1 id="工具准备"><a href="#工具准备" class="headerlink" title="工具准备"></a>工具准备</h1><ul>
-<li><a href="https://www.yeshen.com/" target="_blank" rel="noopener">夜神模拟器</a></li>
-<li><a href="https://www.coolapk.com/apk/app.greyshirts.sslcapture" target="_blank" rel="noopener">Packet Capture</a></li>
-<li><a href="https://github.com/android-hacker/VirtualXposed" target="_blank" rel="noopener">VirtuanXposed</a></li>
-<li><a href="https://www.coolapk.com/apk/bin.mt.plus" target="_blank" rel="noopener">mt文件管理器2</a></li>
-<li><a href="https://bbs.pediy.com/thread-224105.htm" target="_blank" rel="noopener">FDex2</a></li>
-<li><a href="http://www.gda.wiki:9090/" target="_blank" rel="noopener">gda</a></li>
-<li><a href="https://github.com/pxb1988/dex2jar" target="_blank" rel="noopener">dex2jar</a></li>
-<li><a href="https://github.com/java-decompiler/jd-gui" target="_blank" rel="noopener">jd-gui</a></li>
+<h1 id="工具准备">工具准备</h1>
+
+<ul>
+<li><a href="https://www.yeshen.com/">夜神模拟器</a></li>
+<li><a href="https://www.coolapk.com/apk/app.greyshirts.sslcapture">Packet Capture</a></li>
+<li><a href="https://github.com/android-hacker/VirtualXposed">VirtuanXposed</a></li>
+<li><a href="https://www.coolapk.com/apk/bin.mt.plus">mt文件管理器2</a></li>
+<li><a href="https://bbs.pediy.com/thread-224105.htm">FDex2</a></li>
+<li><a href="http://www.gda.wiki:9090/">gda</a></li>
+<li><a href="https://github.com/pxb1988/dex2jar">dex2jar</a></li>
+<li><a href="https://github.com/java-decompiler/jd-gui">jd-gui</a></li>
 </ul>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/umiao/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-         
-          <!--/noindex-->
-        
-      
     </div>
-
     
-
+    <div class="post-more-link text-center">
+    <a class="btn" href="http://farwmarth.com/post/umiao/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
     
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+    <footer class="post-footer"><div class="post-eof"></div></footer>
   </article>
 
-
-    
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/game_login/" itemprop="url">
+        登录
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2018-12-09">
+    2018-12-09
+</time>
+</span> 
       
 
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
   
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.farwmarth.com/autohexo/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="博主">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="http://farwmarth.com/categories/programm" itemprop="url" rel="index">
+        <span itemprop="name">programm</span>
+      </a>
+      &nbsp; 
     </span>
+  
+</span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="farwmarth">
-    </span>
 
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/autohexo/" class="post-title-link" itemprop="http://www.farwmarth.com/index.html">hexo自动化构建</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建于：2017-03-12 23:21:00" itemprop="dateCreated datePublished" datetime="2017-03-12T23:21:00+08:00">2017-03-12</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="更新于：2017-11-16 17:17:59" itemprop="dateModified" datetime="2017-11-16T17:17:59+08:00">2017-11-16</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1196 字 ~3分钟</span>
+</span>
+      </div>
+    </header>
     <div class="post-body" itemprop="articleBody">
+    DH密钥交换算法的作用是使通信双方可以在不安全的通道中建立一个相同的密钥，用于加密通信。 基本原理示例： 通信方A和通信方B约定一个初始数g，如
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="http://farwmarth.com/post/game_login/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
 
-      
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/autohexo/" itemprop="url">
+        hexo自动化构建
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-03-12">
+    2017-03-12
+</time>
+</span> 
       
 
-      
-        
-          <p>最近发现博客的图片和文章数量增长后,hexo生成和发布的时间越来越长,而且换了电脑后hexo的环境又要倒腾一遍,实在是消耗时间。</p>
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="http://farwmarth.com/categories/hexo" itemprop="url" rel="index">
+        <span itemprop="name">hexo</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1331 字 ~3分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>最近发现博客的图片和文章数量增长后,hexo生成和发布的时间越来越长,而且换了电脑后hexo的环境又要倒腾一遍,实在是消耗时间。</p>
+
 <p>但是又不想换简书这种单纯的写作平台，毕竟博客还是需要一点个性化的元素。</p>
+
 <p>那能不能我写完markdown然后commit之后就可以自动生成静态页面自动发布呢？当然懒人们有很多种办法。研究了一下一般都是用<code>webhook</code>来实现,目前大概有几种方式:</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/autohexo/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-         
-          <!--/noindex-->
-        
-      
     </div>
-
     
-
+    <div class="post-more-link text-center">
+    <a class="btn" href="http://farwmarth.com/post/autohexo/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
     
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+    <footer class="post-footer"><div class="post-eof"></div></footer>
   </article>
 
-
-    
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/hexo%E5%9B%BE%E7%89%87%E8%BF%81%E7%A7%BB%E8%87%B3%E4%B8%83%E7%89%9B/" itemprop="url">
+        hexo图片迁移至七牛
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-03-12">
+    2017-03-12
+</time>
+</span> 
       
 
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
   
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.farwmarth.com/hexo图片迁移至七牛/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="博主">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="http://farwmarth.com/categories/hexo" itemprop="url" rel="index">
+        <span itemprop="name">hexo</span>
+      </a>
+      &nbsp; 
     </span>
+  
+</span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="farwmarth">
-    </span>
 
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/hexo图片迁移至七牛/" class="post-title-link" itemprop="http://www.farwmarth.com/index.html">hexo图片迁移至七牛</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建于：2017-03-12 00:21:00" itemprop="dateCreated datePublished" datetime="2017-03-12T00:21:00+08:00">2017-03-12</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="更新于：2017-11-16 17:17:59" itemprop="dateModified" datetime="2017-11-16T17:17:59+08:00">2017-11-16</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">753 字 ~2分钟</span>
+</span>
+      </div>
+    </header>
     <div class="post-body" itemprop="articleBody">
+    <hr />
 
-      
-      
+<p>之前图片一直是直接到在page服务上的,最近发现图片越来越多,打算图片迁移到七牛上.</p>
 
-      
-        
-          <p>之前图片一直是直接到在page服务上的,最近发现图片越来越多,打算图片迁移到七牛上.</p>
 <p>七牛可以cdn加速,每月有固定的免费流量,可以设置防盗链,可以自动压缩图片打水印。众多优点。对小博客来说真是有莫大的帮助。</p>
+
 <p>七牛注册这些过程就略过不表了.前置工作</p>
+
 <ul>
 <li>注册七牛账号并创建对象空间，充十块自定义域名</li>
-<li>绑定<a href="https://support.qiniu.com/hc/kb/article/68977" target="_blank" rel="noopener">加速域名</a>，自定义域名必须为中国大陆已备案。推荐使用二级域名。</li>
-<li>设置一下防盗链和图片瘦身<br><img src="http://farwmarth.bestnewbee.com/images/uploads/2017/03/qiniu_steal.png" alt="防盗链"></li>
+<li>绑定<a href="https://support.qiniu.com/hc/kb/article/68977">加速域名</a>，自定义域名必须为中国大陆已备案。推荐使用二级域名。</li>
+<li>设置一下防盗链和图片瘦身
+<img src="http://farwmarth.bestnewbee.com/images/uploads/2017/03/qiniu_steal.png" alt="防盗链" /></li>
 <li>获取AccessKey  SecretKey</li>
 </ul>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/hexo图片迁移至七牛/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-         
-          <!--/noindex-->
-        
-      
     </div>
-
     
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.farwmarth.com/vultr/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="博主">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="farwmarth">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/vultr/" class="post-title-link" itemprop="http://www.farwmarth.com/index.html">给shadowsocks插上tcptun,bbr这对翅膀</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建于：2017-03-10 12:10:39" itemprop="dateCreated datePublished" datetime="2017-03-10T12:10:39+08:00">2017-03-10</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="更新于：2017-11-16 17:17:59" itemprop="dateModified" datetime="2017-11-16T17:17:59+08:00">2017-11-16</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>最近<a href="https://www.vultr.com/" target="_blank" rel="noopener">vultr</a> 搞活动充五刀送五刀.之前用的服务商速度有点不给力.想着撸个ss玩玩,晚上折腾到一点多, 易票联的<code>全球付</code>卡在vultr一直刷不了.又不想用<code>paypal</code>绑银行卡.试着把<code>全球付</code>的卡绑到<code>paypal</code>上。然后用<code>paypal</code>一刷居然成功了.</p>
-<p><code>vultr</code>比<code>linode</code>同等配置价格更便宜.<code>500G</code>的流量绝对够用了.知乎上看了一下好像日本的线路速度比较快.自己也测试了一下.然后开了个实例准备试用几个月看效果如何.</p>
-<h2 id="速度测试"><a href="#速度测试" class="headerlink" title="速度测试"></a>速度测试</h2><ul>
-<li><p>国内线路测试vps速度ping<br><a href="http://ping.chinaz.com/45.76.185.184" target="_blank" rel="noopener">http://ping.chinaz.com/45.76.185.184</a></p>
-</li>
-<li><p>speedtest测试带宽</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py</span><br><span class="line">python speedtest.py</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="Shadowsocks安装"><a href="#Shadowsocks安装" class="headerlink" title="Shadowsocks安装"></a>Shadowsocks安装</h1><h2 id="安装Shadowsocks-go"><a href="#安装Shadowsocks-go" class="headerlink" title="安装Shadowsocks-go"></a>安装Shadowsocks-go</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>安装</span><br><span class="line">wget --no-check-certificate -O shadowsocks-go.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-go.sh</span><br><span class="line">chmod +x shadowsocks-go.sh</span><br><span class="line">./shadowsocks-go.sh 2&gt;&amp;1 | tee shadowsocks-go.log</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>默认配置文件在</span><br><span class="line">/etc/shadowsocks/config.json</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/vultr/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-         
-          <!--/noindex-->
-        
-      
+    <div class="post-more-link text-center">
+    <a class="btn" href="http://farwmarth.com/post/hexo%E5%9B%BE%E7%89%87%E8%BF%81%E7%A7%BB%E8%87%B3%E4%B8%83%E7%89%9B/" rel="contents">
+      阅读全文 &raquo;
+    </a>
     </div>
-
     
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+    <footer class="post-footer"><div class="post-eof"></div></footer>
   </article>
 
-
-    
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/%E5%88%9D%E7%BA%A7%E8%BF%90%E7%BB%B4%E6%8C%87%E5%8D%97/" itemprop="url">
+        初级运维指南
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-01-04">
+    2017-01-04
+</time>
+</span> 
       
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.farwmarth.com/语音服务器的选型/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="博主">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="farwmarth">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/语音服务器的选型/" class="post-title-link" itemprop="http://www.farwmarth.com/index.html">语音服务器的选型</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建于：2017-01-06 15:13:02" itemprop="dateCreated datePublished" datetime="2017-01-06T15:13:02+08:00">2017-01-06</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="更新于：2017-11-16 17:17:59" itemprop="dateModified" datetime="2017-11-16T17:17:59+08:00">2017-11-16</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/audio/" itemprop="url" rel="index"><span itemprop="name">audio</span></a></span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/audio/skill/" itemprop="url" rel="index"><span itemprop="name">skill</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">2414 字 ~5分钟</span>
+</span>
+      </div>
+    </header>
     <div class="post-body" itemprop="articleBody">
+    <h1 id="加固">加固</h1>
 
-      
-      
-
-      
-        
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近游戏要接入一下语音服务器,调查了一下融合的语音sdk<br>腾讯云GVoice:<a href="https://www.qcloud.com/document/product/556/7673" target="_blank" rel="noopener">https://www.qcloud.com/document/product/556/7673</a><br>好像只有这个比较靠谱,但是收费好像有点贵,还是决定基于原有的免费的百度语音识别造一个轮子<br>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/语音服务器的选型/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-         
-          <!--/noindex-->
-        
-      
-    </p></div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.farwmarth.com/ttyd/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="博主">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="farwmarth">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/ttyd/" class="post-title-link" itemprop="http://www.farwmarth.com/index.html">将内网终端分享给其他人使用</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建于：2017-01-05 11:54:39" itemprop="dateCreated datePublished" datetime="2017-01-05T11:54:39+08:00">2017-01-05</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="更新于：2017-11-16 17:17:59" itemprop="dateModified" datetime="2017-11-16T17:17:59+08:00">2017-11-16</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>起因是某人要学习下<code>linux</code>,但是不想用虚拟机装linux,在网上也找了几个在线的<code>shell</code>练习网站,感觉不是很满意,于是想把自己内网主机上的终端share一下,github搜索了一下还真有这样的项目.</p>
-<h2 id="ttyd"><a href="#ttyd" class="headerlink" title="ttyd"></a>ttyd</h2><p><code>ttyd</code>是一个把自己的终端通过web方式共享给其他人操作的工具</p>
-<p><a href="https://github.com/tsl0922/ttyd" target="_blank" rel="noopener">https://github.com/tsl0922/ttyd</a></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo ttyd login</span><br><span class="line"><span class="meta">#</span>默认端口是7681 用login方式要输入账号密码</span><br><span class="line"><span class="meta">#</span>http://localhost:7681</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/ttyd/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-         
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.farwmarth.com/初级运维指南/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="博主">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="farwmarth">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/初级运维指南/" class="post-title-link" itemprop="http://www.farwmarth.com/index.html">初级运维指南</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建于：2017-01-04 09:42:39" itemprop="dateCreated datePublished" datetime="2017-01-04T09:42:39+08:00">2017-01-04</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="更新于：2017-11-16 17:17:59" itemprop="dateModified" datetime="2017-11-16T17:17:59+08:00">2017-11-16</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="加固"><a href="#加固" class="headerlink" title="加固"></a>加固</h1><ul>
+<ul>
 <li>CentOS 7防火墙换用Friewalld</li>
 </ul>
-<h1 id="SSH配置"><a href="#SSH配置" class="headerlink" title="SSH配置"></a>SSH配置</h1><h2 id="安装ssh"><a href="#安装ssh" class="headerlink" title="安装ssh"></a>安装ssh</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span>安装</span><br><span class="line">yum install ssh</span><br><span class="line"><span class="meta">#</span>启动</span><br><span class="line">service sshd start</span><br><span class="line"><span class="meta">#</span>设置开机启动</span><br><span class="line">chkconfig ssd on</span><br><span class="line"><span class="meta">#</span>重启</span><br><span class="line">service sshd restart</span><br><span class="line"><span class="meta">#</span>重启网络</span><br><span class="line">service network restart</span><br><span class="line"><span class="meta">#</span>centos7</span><br><span class="line">systemctl restart  sshd.service</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/初级运维指南/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-         
-          <!--/noindex-->
-        
-      
+
+<h1 id="ssh配置">SSH配置</h1>
+
+<h2 id="安装ssh">安装ssh</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#安装</span>
+yum install ssh
+<span style="color:#75715e">#启动</span>
+service sshd start
+<span style="color:#75715e">#设置开机启动</span>
+chkconfig ssd on
+<span style="color:#75715e">#重启</span>
+service sshd restart
+<span style="color:#75715e">#重启网络</span>
+service network restart
+<span style="color:#75715e">#centos7</span>
+systemctl restart  sshd.service</code></pre></div>
     </div>
-
     
-
+    <div class="post-more-link text-center">
+    <a class="btn" href="http://farwmarth.com/post/%E5%88%9D%E7%BA%A7%E8%BF%90%E7%BB%B4%E6%8C%87%E5%8D%97/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
     
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+    <footer class="post-footer"><div class="post-eof"></div></footer>
   </article>
 
-
-    
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/%E5%9B%BD%E5%86%85%E6%BA%90/" itemprop="url">
+        国内源
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-12-18">
+    2016-12-18
+</time>
+</span> 
       
 
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.farwmarth.com/ubuntu备忘/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="博主">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="farwmarth">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/ubuntu备忘/" class="post-title-link" itemprop="http://www.farwmarth.com/index.html">ubuntu,centos 备忘</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建于：2017-01-03 20:13:42" itemprop="dateCreated datePublished" datetime="2017-01-03T20:13:42+08:00">2017-01-03</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="更新于：2017-11-16 17:17:59" itemprop="dateModified" datetime="2017-11-16T17:17:59+08:00">2017-11-16</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/ubuntu/" itemprop="url" rel="index"><span itemprop="name">ubuntu</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="安装常用软件"><a href="#安装常用软件" class="headerlink" title="安装常用软件:"></a>安装常用软件:</h2><ul>
-<li><code>subversion</code>  svn 版本命令行</li>
-<li><code>lua5.2</code>  lua版本</li>
-<li><code>ssh</code>    ssh 连接</li>
-<li><code>nautilus-open-terminal</code>   终端</li>
-<li><code>fcitx-table-wbpy</code>  五笔</li>
-<li><code>avant-window-navigator</code> 启动器位置</li>
-</ul>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/ubuntu备忘/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-         
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.farwmarth.com/国内源/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="博主">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="farwmarth">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/国内源/" class="post-title-link" itemprop="http://www.farwmarth.com/index.html">国内源</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建于：2016-12-18 23:20:39" itemprop="dateCreated datePublished" datetime="2016-12-18T23:20:39+08:00">2016-12-18</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="更新于：2017-11-16 17:17:59" itemprop="dateModified" datetime="2017-11-16T17:17:59+08:00">2017-11-16</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/soft/" itemprop="url" rel="index"><span itemprop="name">soft</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>清华大学的源太全面了:<br><a href="https://mirrors.tuna.tsinghua.edu.cn/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/</a></p>
-<h1 id="pypi"><a href="#pypi" class="headerlink" title="pypi"></a>pypi</h1><p>镜像状态监控: <a href="https://www.pypi-mirrors.org/" target="_blank" rel="noopener">https://www.pypi-mirrors.org/</a></p>
-<ul>
-<li>豆瓣:<a href="http://pypi.douban.com/" target="_blank" rel="noopener">http://pypi.douban.com/</a> </li>
-<li>中国科学技术大学:<a href="http://pypi.mirrors.ustc.edu.cn/" target="_blank" rel="noopener">http://pypi.mirrors.ustc.edu.cn/</a>  </li>
-<li>阿里云:<a href="http://mirrors.aliyun.com/pypi/simple" target="_blank" rel="noopener">http://mirrors.aliyun.com/pypi/simple</a></li>
-</ul>
-<p>临时使用: </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install -i https://&lt;mirror&gt;/simple &lt;package&gt;</span><br></pre></td></tr></table></figure>
-<p>全局设置:<br>添加到<code>~/.pip/pip.conf</code>:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url = https://&lt;mirror&gt;/simple</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/国内源/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-         
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.farwmarth.com/a记录/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="博主">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="farwmarth">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/a记录/" class="post-title-link" itemprop="http://www.farwmarth.com/index.html">域名解析的一些概念</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建于：2016-12-18 19:10:39" itemprop="dateCreated datePublished" datetime="2016-12-18T19:10:39+08:00">2016-12-18</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="更新于：2017-11-16 17:17:59" itemprop="dateModified" datetime="2017-11-16T17:17:59+08:00">2017-11-16</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>##概念</p>
-<ul>
-<li><p>A记录（IP指向）<br>用户可以在此设置子域名并指向到自己的目标主机地址上，从而实现通过域名找到服务器找到相应网页的功能。<br>说明：指向的目标主机地址类型只能使用IP地址。</p>
-</li>
-<li><p>CNAME（别名指向）</p>
-</li>
-</ul>
-<p>通常称别名指向。您可以为一个主机设置别名。相当于用子域名来代替ip地址，优点是如果ip地址变化，只需要改动子域名的解析，而不需要逐一改变ip地址解析。</p>
-<pre><code>1. CNAME的目标主机地址只能使用主机名，不能使用IP地址；
-2. 主机名前不能有任何其他前缀，如：http://等是不被允许的；
-3. A记录优先于CNAME记录。即如果一个主机地址同时存在A记录和CNAME记录，则CNAME记录不生效。
-</code></pre>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/a记录/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-         
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">博主</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">99</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  <a href="/categories/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">34</span>
-                    <span class="site-state-item-name">分类</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  <a href="/tags/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">76</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
-
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/wujiyu115" title="GitHub &rarr; https://github.com/wujiyu115" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                </span>
-              
-            </div>
-          
-
-          
-
-          
-          
-            <div class="links-of-blogroll motion-element links-of-blogroll-block">
-              <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-link"></i>
-                Links
-              </div>
-              <ul class="links-of-blogroll-list">
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://www.litefeel.com" title="http://www.litefeel.com" rel="noopener" target="_blank">litefeel</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://learndocs.farwmarth.com/" title="http://learndocs.farwmarth.com/" rel="noopener" target="_blank">学习笔记</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
-
-          
-            
-          
-          
-
-        </div>
-      </div>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; 2011 – <span itemprop="copyrightYear">2018</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">博主</span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="http://farwmarth.com/categories/soft" itemprop="url" rel="index">
+        <span itemprop="name">soft</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">566 字 ~2分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>&ndash;</p>
+
+<p>清华大学的源太全面了:
+<a href="https://mirrors.tuna.tsinghua.edu.cn/">https://mirrors.tuna.tsinghua.edu.cn/</a></p>
+
+<h1 id="pypi">pypi</h1>
+
+<p>镜像状态监控: <a href="https://www.pypi-mirrors.org/">https://www.pypi-mirrors.org/</a></p>
+
+<ul>
+<li>豆瓣:<a href="http://pypi.douban.com/">http://pypi.douban.com/</a></li>
+<li>中国科学技术大学:<a href="http://pypi.mirrors.ustc.edu.cn/">http://pypi.mirrors.ustc.edu.cn/</a><br /></li>
+<li>阿里云:<a href="http://mirrors.aliyun.com/pypi/simple">http://mirrors.aliyun.com/pypi/simple</a></li>
+</ul>
+
+<p>临时使用:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">pip install -i https://&lt;mirror&gt;/simple &lt;package&gt;</pre></div>
+<p>全局设置:
+添加到<code>~/.pip/pip.conf</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[global]
+index-url = https://&lt;mirror&gt;/simple</pre></div>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="http://farwmarth.com/post/%E5%9B%BD%E5%86%85%E6%BA%90/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/a%E8%AE%B0%E5%BD%95/" itemprop="url">
+        域名解析的一些概念
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-12-18">
+    2016-12-18
+</time>
+</span> 
+      
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">898 字 ~2分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>##概念
++ A记录（IP指向）
+用户可以在此设置子域名并指向到自己的目标主机地址上，从而实现通过域名找到服务器找到相应网页的功能。
+说明：指向的目标主机地址类型只能使用IP地址。</p>
+
+<ul>
+<li>CNAME（别名指向）</li>
+</ul>
+
+<p>通常称别名指向。您可以为一个主机设置别名。相当于用子域名来代替ip地址，优点是如果ip地址变化，只需要改动子域名的解析，而不需要逐一改变ip地址解析。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">1. CNAME的目标主机地址只能使用主机名，不能使用IP地址；
+2. 主机名前不能有任何其他前缀，如：http://等是不被允许的；
+3. A记录优先于CNAME记录。即如果一个主机地址同时存在A记录和CNAME记录，则CNAME记录不生效。</pre></div>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="http://farwmarth.com/post/a%E8%AE%B0%E5%BD%95/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/%E5%8D%87%E7%BA%A7centos%E4%B8%8A%E7%9A%84python/" itemprop="url">
+        在CentOS 6.X 上升级 Python为 2.7
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-12-18">
+    2016-12-18
+</time>
+</span> 
+      
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">402 字 ~1分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">CentOS 6.X 自带的python版本是 2.6 , 但是2.6已经被不被官方支持了，今天写后台程序放到阿里云上运行发现2.6的一些api和2.7不一样了。于是想升级下python</pre></div>
+<h2 id="安装依赖包">安装依赖包</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">yum install -y zlib-devel bzip2-devel openssl-devel xz-libs wget</code></pre></div>
+<h2 id="源码编译">源码编译</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">wget http://www.python.org/ftp/python/2.7.8/Python-2.7.8.tar.xz
+# 可以使用国内的源
+wget http://mirrors.sohu.com/python/2.7.8/Python-2.7.8.tar.xz
+xz -d Python-2.7.8.tar.xz
+tar -xvf Python-2.7.8.tar</pre></div>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="http://farwmarth.com/post/%E5%8D%87%E7%BA%A7centos%E4%B8%8A%E7%9A%84python/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+</section>
+
+
+
+
+
+
+
+
 
   
-
   
+
+
+
+
+
+
+
+
+<nav class="pagination">
+    
+    
+        
+        
+          <span class="page-number current">1</span>
+        
+        
+    
+        
+        
+          <a class="page-number" href="http://farwmarth.com/p/2/">2</a>
+        
+        
+    
+        
+        
+          <a class="page-number" href="http://farwmarth.com/p/3/">3</a>
+        
+        
+    
+        
+        
+          <a class="page-number" href="http://farwmarth.com/p/4/">4</a>
+        
+        
+    
+        
+        
+          <a class="page-number" href="http://farwmarth.com/p/5/">5</a>
+        
+        
+    
+        
+        
+          <a class="page-number" href="http://farwmarth.com/p/6/">6</a>
+        
+        
+    
+        
+        
+          <a class="page-number" href="http://farwmarth.com/p/7/">7</a>
+        
+        
+    
+        
+        
+          <a class="page-number" href="http://farwmarth.com/p/8/">8</a>
+        
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    <a class="extend next" rel="next" href="http://farwmarth.com/p/2/"><i class="fa fa-angle-right"></i></a>
+</nav>
+
+
+
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="http://farwmarth.com/img/author.jpg"
+        alt="farwmarth" />
+    <p class="site-author-name" itemprop="name">farwmarth</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="http://farwmarth.com/post/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="http://farwmarth.com/categories/">      
+         
+        <span class="site-state-item-count">31</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="http://farwmarth.com/tags/">
+         
+        <span class="site-state-item-count">90</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+<div class="feed-link motion-element">
+<a href="http://farwmarth.com/index.xml" rel="alternate" type="application/rss+xml" target="_blank">
+    <i class="fa fa-rss"></i>
+    RSS 订阅
+</a>
+</div>
+
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/wujiyu115/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+      
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">farwmarth</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.6</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
 
 
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v6.6.0</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-
-        
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-    
-
-    
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
   </div>
 
   
-
-<script>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=286131889" charset="UTF-8"></script> 
+<script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-
-  
-
-
-  <script src="/js/src/utils.js?v=6.6.0"></script>
-
-  <script src="/js/src/motion.js?v=6.6.0"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/src/affix.js?v=6.6.0"></script>
-
-  <script src="/js/src/schemes/pisces.js?v=6.6.0"></script>
-
-
-
-  
-
-  
-
-
-  <script src="/js/src/bootstrap.js?v=6.6.0"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="http://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/utils.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/motion.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/affix.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/bootstrap.js"></script>
+
+<script type="text/javascript" id="motion.page.archive">
+  $('.archive-year').velocity('transition.slideLeftIn');
+</script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
 </body>
 </html>

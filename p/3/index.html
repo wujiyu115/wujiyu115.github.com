@@ -1,0 +1,805 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+	<meta name="generator" content="Hugo 0.55.6" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>farwmarth - farwmarth</title>
+    <meta name="keywords" content="程序员">
+    
+    <meta property="og:title" content="farwmarth">
+    <meta property="og:site_name" content="farwmarth">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="farwmarth - farwmarth" />
+    <meta name="description" content="game"> 
+    <link rel="shortcut icon" href="http://farwmarth.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="http://farwmarth.com/img/apple-touch-icon.png" />
+    <link href="http://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    
+    <link href="http://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="http://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: false, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="http://farwmarth.com/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">farwmarth</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Those that can,do.Those that can&#39;t ,complain</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item menu-item-active">
+          <a href="http://farwmarth.com/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/douban/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />豆瓣
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://farwmarth.com/music/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-music"></i> <br />音乐
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+    
+ <section id="posts" class="posts-expand">
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/lua%E6%95%B0%E6%8D%AE%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E9%80%89%E6%8B%A9/" itemprop="url">
+        lua数据序列化的选择
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-04-20">
+    2016-04-20
+</time>
+</span> 
+      
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1510 字 ~4分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>在寻找lua的json库时并没有找到太如意的方案.都是年久失修的库.
++ DKJSON 2.1 <a href="http://dkolf.de/src/dkjson-lua.fsl/home">http://dkolf.de/src/dkjson-lua.fsl/home</a>
++ Lua YAJL 2.0 <a href="https://github.com/brimworks/lua-yajl">https://github.com/brimworks/lua-yajl</a>
++ Lua CSJON 2.0.0 <a href="http://www.kyne.com.au/~mark/software/lua-cjson.php">http://www.kyne.com.au/~mark/software/lua-cjson.php</a></p>
+
+<p><a href="http://www.kyne.com.au/~mark/software/lua-json-performance.html">http://www.kyne.com.au/~mark/software/lua-json-performance.html</a>
+最高选择了把cjson整合到项目 中</p>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="http://farwmarth.com/post/lua%E6%95%B0%E6%8D%AE%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E9%80%89%E6%8B%A9/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/redis%E5%88%9D%E6%8E%A2/" itemprop="url">
+        redis初探
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-04-10">
+    2016-04-10
+</time>
+</span> 
+      
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">12451 字 ~25分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <h2 id="安装">安装</h2>
+
+<p><a href="http://redis.io/">http://redis.io/</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#安装</span>
+brew install redis-server
+<span style="color:#75715e">#启动</span>
+redis-server
+<span style="color:#75715e">#附带config</span>
+redis-server /path/to/redis.conf
+<span style="color:#75715e">#检查版本</span>
+redis-server --version
+<span style="color:#75715e">#检查是否成功</span>
+redis-cli
+ping PONG
+<span style="color:#75715e">#关闭</span>
+redis-cli shutdown</code></pre></div>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="http://farwmarth.com/post/redis%E5%88%9D%E6%8E%A2/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E4%B8%80%E6%AC%A1%E8%B0%83%E4%BC%98/" itemprop="url">
+        服务器的一次调优
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-03-28">
+    2016-03-28
+</time>
+</span> 
+      
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">4817 字 ~10分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p><font color="red">update 2016-5-12 10:32  优化结构</font>
+<font color="red">update 2016-5-5 16:30  skynet调试</font></p>
+
+<h2 id="历史遗留问题">历史遗留问题</h2>
+
+<p>这一项目的开发又接近尾声了,功能开发完毕,接下来就是运营方面的接入工作,还有就是服务器性能性的调优了.
+之前服务器一直存在两个比较严重的问题,一个是加载离线玩家.另外一个则是静态数据未共享,导致的服务器启动内存过高的问题.</p>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="http://farwmarth.com/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E4%B8%80%E6%AC%A1%E8%B0%83%E4%BC%98/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/gradle/" itemprop="url">
+        Gradle 打包
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-03-13">
+    2016-03-13
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="http://farwmarth.com/categories/programm" itemprop="url" rel="index">
+        <span itemprop="name">programm</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">914 字 ~2分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <h2 id="什么是gradle">什么是Gradle？</h2>
+
+<p>Gradle是一种依赖管理工具，基于Groovy语言，面向Java应用为主，它抛弃了基于XML的各种繁琐配置，取而代之的是一种基于Groovy的内部领域特定（DSL）语言</p>
+
+<h2 id="安装gradle">安装Gradle</h2>
+
+<p>Android Studio 默认下载目录,如果下载太慢可以手动从官网下载放到对应目录</p>
+
+<ul>
+<li><strong>Mac</strong>: /Users/&lt;用户名&gt;/.gradle/wrapper/dists** 目录</li>
+<li><strong>Win</strong>: C:\Documents and Settings&lt;用户名&gt;.gradle\wrapper\dists 目录</li>
+</ul>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="http://farwmarth.com/post/gradle/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/mysql%E5%A4%87%E5%BF%98/" itemprop="url">
+        mysql 备忘录
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-02-25">
+    2016-02-25
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="http://farwmarth.com/categories/programm" itemprop="url" rel="index">
+        <span itemprop="name">programm</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1485 字 ~3分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <h2 id="基础">基础</h2>
+
+<ul>
+<li><p>安装 mysql</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#server</span>
+sudo apt-get install mysql-server
+<span style="color:#75715e">#server dev</span>
+sudo apt-get install libmysqld-dev
+<span style="color:#75715e">#client</span>
+sudo apt-get install mysql-client
+<span style="color:#75715e">#client dev</span>
+sudo apt-get install libmysqlclient-dev</code></pre></div>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="http://farwmarth.com/post/mysql%E5%A4%87%E5%BF%98/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/%E5%80%92%E6%88%88%E5%8F%88%E5%A6%82%E4%BD%95/" itemprop="url">
+        倒戈又如何
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-02-25">
+    2016-02-25
+</time>
+</span> 
+      
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">2216 字 ~5分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <h2 id="倒戈">倒戈</h2>
+
+<p>七月底的时候，开发了一年的游戏最终还是倒戈了,技术团队以整队收编的方式到了现在这家公司.
+掰着脚趾头数一数,失败的项目快凑成一打了.
+反观这几年这些项目.只能说成功的游戏都是一个模样,赚得盆满钵满.失败的原因却各不相同.</p>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="http://farwmarth.com/post/%E5%80%92%E6%88%88%E5%8F%88%E5%A6%82%E4%BD%95/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F%E7%9A%84%E7%94%9F%E9%95%BF%E8%BF%87%E7%A8%8B/" itemprop="url">
+        一个游戏的生长过程
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-02-23">
+    2016-02-23
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="http://farwmarth.com/categories/life" itemprop="url" rel="index">
+        <span itemprop="name">life</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">5933 字 ~12分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <blockquote>
+<p>每次都是挖了一个巨大无比的坑,填了好久都填不完.</p>
+</blockquote>
+
+<h2 id="概念">概念</h2>
+
+<ul>
+<li><strong>IP</strong> : (Intellectual Property),知识产权,在游戏圈可以理解为拥有知识产权的一方,授权游戏开发商使用其主题素材</li>
+<li><strong>SP</strong> : (Service Provider)渠道商:相当于电影院(电影院线),电影院是直接面向观众的,各电影院线上映电影给观众看,渠道商则是上架游戏应用给用户下载玩.</li>
+<li><strong>CP</strong> : (Content Provider)游戏开发商: 相当于电影制片方,聘请导演、演员、剧组人员进行电影的拍摄和制作,同理,游戏开发商聘请策划,程序,美术,开发团队进行游戏的开发和制作.开发商的核心竞争力,就是产品本身,产品做的越牛逼,开发商就越牛逼.</li>
+<li><strong>游戏运营商(发行商)</strong> : 相当于电影发行公司,进行电影的发行、销售、经营、推广,其实这个跟牌照也有关,因为在我朝面向群众的文化制品是管制品,不是什么阿猫阿狗拍个电影都能进电影院给观众传递不正确价值观的,于是就有牌照(电影发行经营许可证),制片方制作的电影必须通过有牌照的电影发行公司发行.同理在端游上也有牌照(文网文),端游审查、备案都需要通过拥有牌照的游戏发行商,而手游相对而言没有端游审查严格,手游发行商更多的作用是做市场营销、上线运营、渠道对接的工作,这些职能不是所有游戏开发商或开发团队都具备的.运营(发行)商的核心竞争力,是钱,是推广实力以及渠道关系.榜上有名的那些游戏,除了腾讯系以外.</li>
+<li><strong>渠道</strong> : 是直接面对用户的,用户可从渠道下载游戏玩.渠道的核心竞争力(仅针对手游)是用户数量和质量</li>
+<li><strong>代理商</strong> : 发行商的一种,属于分包发行商,从总包手中取得某个地区的发行权,并在该区域内制定销售策略并组织销售.</li>
+</ul>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="http://farwmarth.com/post/%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F%E7%9A%84%E7%94%9F%E9%95%BF%E8%BF%87%E7%A8%8B/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://farwmarth.com/post/kids/" itemprop="url">
+        kids
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-02-11">
+    2016-02-11
+</time>
+</span> 
+      
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1521 字 ~4分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>一直以来对于小孩子处于一种敬而远之的状态。即使自己也是从熊孩子进化过来。今天就来说说各种小孩子的故事吧。</p>
+
+<h2 id="我的熊孩子时代">我的熊孩子时代</h2>
+
+<p>掏鸟蛋,捕鱼,偷板栗,瓜果,这些应该是农村里我们那个时候经常干的事情了,特别是偷别人家瓜果的时候,那种兴奋和紧张感现在想起来还觉得可笑。
+怎么说偷这个东西呢，从行为上来讲肯定是不对的,但是作为一个孩子,如果自家又没有这个东西,难免会极度地艳羡.
+印象比较深的是有一年夏天，和邻居的小伙伴去偷别人家的西瓜。
+放学路过的时候已经踩过点,谁家的瓜地里瓜特别多,个头特大。夏天正午的时候太阳酷热无比，大人们一般在睡午觉，我和小伙伴两个人蹑手蹑脚地走在小山窝的水稻田小路上，走几步四周张望，生怕有个大人突然出现把我们逮个正着。确认视野内没有人之后我们开始行动了，我负责放哨，邻居比我年纪稍长的小伙伴负责摘瓜，偷瓜的过程没有多少考究，他花了两三秒钏选好了一个合适的瓜，考虑到瓜太大太显眼，而且又不好搬运，就挑了一个篮球大小的。摘好递给了我，看着手中的瓜心里正扑通扑通直跳，刚松一口气正准备提着战果离开的离开的时候，发现山窝里有一个人影拿着锄头出现了。我和小伙伴对看了一眼，慌忙地把瓜往水渠里一扔，卯足了劲撒腿就跑，回头看了一眼。只见那个人影也开始加速，骂骂咧咧的声音随即而来，我们被吓坏了，这如果被逮到了送家长晚上又没有好果子吃了，紧迫之下我们俩开始往山上跑，因为穿着短衣短裤跑的速度又快，松枝和杂草很快在脚上画上红色的印子。可是我们顾不了那么多，沿着山脉一直跑，根本不敢停下来。跑累之后，终于没有听见骂声了。坐在山顶上歇息，回想着刚才的事情还是心有悸然。我想，那次应该是长这么大以来跑得最快的一次了。</p>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="http://farwmarth.com/post/kids/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+</section>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+<nav class="pagination">
+    <a class="extend prev" rel="prev" href="http://farwmarth.com/p/2/"><i class="fa fa-angle-left"></i></a>
+    
+        
+        
+          <a class="page-number" href="http://farwmarth.com/">1</a>
+        
+        
+    
+        
+        
+          <a class="page-number" href="http://farwmarth.com/p/2/">2</a>
+        
+        
+    
+        
+        
+          <span class="page-number current">3</span>
+        
+        
+    
+        
+        
+          <a class="page-number" href="http://farwmarth.com/p/4/">4</a>
+        
+        
+    
+        
+        
+          <a class="page-number" href="http://farwmarth.com/p/5/">5</a>
+        
+        
+    
+        
+        
+          <a class="page-number" href="http://farwmarth.com/p/6/">6</a>
+        
+        
+    
+        
+        
+          <a class="page-number" href="http://farwmarth.com/p/7/">7</a>
+        
+        
+    
+        
+        
+          <a class="page-number" href="http://farwmarth.com/p/8/">8</a>
+        
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    <a class="extend next" rel="next" href="http://farwmarth.com/p/4/"><i class="fa fa-angle-right"></i></a>
+</nav>
+
+
+
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="http://farwmarth.com/img/author.jpg"
+        alt="farwmarth" />
+    <p class="site-author-name" itemprop="name">farwmarth</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="http://farwmarth.com/post/">
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="http://farwmarth.com/categories/">      
+         
+        <span class="site-state-item-count">31</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="http://farwmarth.com/tags/">
+         
+        <span class="site-state-item-count">90</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+<div class="feed-link motion-element">
+<a href="http://farwmarth.com/index.xml" rel="alternate" type="application/rss+xml" target="_blank">
+    <i class="fa fa-rss"></i>
+    RSS 订阅
+</a>
+</div>
+
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/wujiyu115/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">farwmarth</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.6</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=286131889" charset="UTF-8"></script> 
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="http://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/utils.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/motion.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/affix.js"></script>
+<script type="text/javascript" src="http://farwmarth.com/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/bootstrap.js"></script>
+
+<script type="text/javascript" id="motion.page.archive">
+  $('.archive-year').velocity('transition.slideLeftIn');
+</script>
+
+<script type="text/javascript" src="http://farwmarth.com/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

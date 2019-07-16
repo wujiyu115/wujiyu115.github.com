@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>c&#43;&#43; on farwmarth</title>
+    <link>http://farwmarth.com/categories/c&#43;&#43;/</link>
+    <description>Recent content in c&#43;&#43; on farwmarth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 02 Jul 2015 16:03:44 +0000</lastBuildDate>
+    
+	<atom:link href="http://farwmarth.com/categories/c++/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>给skynet加上curl模块</title>
+      <link>http://farwmarth.com/post/%E7%BB%99skynet%E5%8A%A0%E4%B8%8Acurl%E6%A8%A1%E5%9D%97/</link>
+      <pubDate>Thu, 02 Jul 2015 16:03:44 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/%E7%BB%99skynet%E5%8A%A0%E4%B8%8Acurl%E6%A8%A1%E5%9D%97/</guid>
+      <description>&lt;p&gt;&amp;nbsp;&amp;nbsp;现在项目里用的是早期的skynet版本,一直不支持http的get,post. 充值与后台交互方式都是采用socket的方式。大部分需求都尽量避开这一块，最近策划又提了个需求,关服开服状态要反应到客户端。这个项目服务器列表是直接是一个静态文件放在web容器中.思路很简单,用jsp写个服务来修改服务器状态(这里应该做安全检验),各服务器开关服，或者服务器崩溃时将状态上报到web服务上. 关键就在这个skynet的http上.&lt;p&gt;&lt;/p&gt;
+&amp;nbsp;&amp;nbsp;尝试用skynet的socket来模拟http请求,一直处于阻塞状态。没有去细究. 然后从github找了个luacurl库 : &lt;a href=&#34;https://github.com/Lua-cURL/Lua-cURLv3&#34; title=&#34;https://github.com/Lua-cURL/Lua-cURLv3&#34;&gt;https://github.com/Lua-cURL/Lua-cURLv3&lt;/a&gt;&amp;nbsp; , 然后把依赖库&lt;a href=&#34;http://curl.haxx.se/download.html&#34; title=&#34;http://curl.haxx.se/download.html&#34;&gt;http://curl.haxx.se/download.html&lt;/a&gt; 也down下来.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>visual studio 2012 备忘</title>
+      <link>http://farwmarth.com/post/-visual-studio-2012-%E5%A4%87%E5%BF%98/</link>
+      <pubDate>Sat, 27 Jul 2013 11:57:43 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/-visual-studio-2012-%E5%A4%87%E5%BF%98/</guid>
+      <description>&lt;h2 id=&#34;一-插件&#34;&gt;&lt;strong&gt;一 插件:&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Productivity Power Tools&lt;/strong&gt;&lt;br /&gt;
+最近发现神器Productivity Power Tools也更新了支持VS2012的版本（之前只有适用于VS2008/2010的）,和上面的VS Commands不太相同，这个插件更倾向于补足VS本身的功能。比如Ctrl+点击转到定义、一键整理C#的using和VB的Imports、括号自动补 全、标签栏按颜色分组、代码着色拷贝到HTML格式等.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Visual Assist X Options 代码助手&lt;/strong&gt;&lt;br /&gt;
+&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/07/image.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>windows下蛋疼的cocos2d-x，android配置。</title>
+      <link>http://farwmarth.com/post/windows%E4%B8%8B%E8%9B%8B%E7%96%BC%E7%9A%84cocos2d-xandroid%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Thu, 28 Mar 2013 00:08:31 +0000</pubDate>
+      
+      <guid>http://farwmarth.com/post/windows%E4%B8%8B%E8%9B%8B%E7%96%BC%E7%9A%84cocos2d-xandroid%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;h2 id=&#34;安装android开发环境&#34;&gt;安装android开发环境&lt;/h2&gt;
+
+&lt;p&gt;接着上一篇: &lt;a href=&#34;http://farwmarth.com/?p=584&#34; title=&#34;http://farwmarth.com/?p=584&#34;&gt;http://farwmarth.com/?p=584&lt;/a&gt;&lt;br /&gt;
+在装了eclipse和cdt的环境下:&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
