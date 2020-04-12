@@ -1,49 +1,49 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>centos on farwmarth</title>
-    <link>http://farwmarth.com/tags/centos/</link>
+    <link>https://farwmarth.com/tags/centos/</link>
     <description>Recent content in centos on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sun, 18 Dec 2016 12:20:39 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/tags/centos/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/tags/centos/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>在CentOS 6.X 上升级 Python为 2.7</title>
-      <link>http://farwmarth.com/post/%E5%8D%87%E7%BA%A7centos%E4%B8%8A%E7%9A%84python/</link>
+      <link>https://farwmarth.com/post/%E5%8D%87%E7%BA%A7centos%E4%B8%8A%E7%9A%84python/</link>
       <pubDate>Sun, 18 Dec 2016 12:20:39 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E5%8D%87%E7%BA%A7centos%E4%B8%8A%E7%9A%84python/</guid>
-      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;CentOS 6.X 自带的python版本是 2.6 , 但是2.6已经被不被官方支持了，今天写后台程序放到阿里云上运行发现2.6的一些api和2.7不一样了。于是想升级下python&lt;/pre&gt;&lt;/div&gt;
+      <guid>https://farwmarth.com/post/%E5%8D%87%E7%BA%A7centos%E4%B8%8A%E7%9A%84python/</guid>
+      <description>&lt;pre&gt;&lt;code&gt;CentOS 6.X 自带的python版本是 2.6 , 但是2.6已经被不被官方支持了，今天写后台程序放到阿里云上运行发现2.6的一些api和2.7不一样了。于是想升级下python
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;安装依赖包&#34;&gt;安装依赖包&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;yum install -y zlib-devel bzip2-devel openssl-devel xz-libs wget&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;源码编译&#34;&gt;源码编译&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;wget http://www.python.org/ftp/python/2.7.8/Python-2.7.8.tar.xz
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;yum install -y zlib-devel bzip2-devel openssl-devel xz-libs wget
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;源码编译&#34;&gt;源码编译&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;wget http://www.python.org/ftp/python/2.7.8/Python-2.7.8.tar.xz
 # 可以使用国内的源
 wget http://mirrors.sohu.com/python/2.7.8/Python-2.7.8.tar.xz
 xz -d Python-2.7.8.tar.xz
-tar -xvf Python-2.7.8.tar&lt;/pre&gt;&lt;/div&gt;</description>
+tar -xvf Python-2.7.8.tar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
       <title>centos 命令，基本设置</title>
-      <link>http://farwmarth.com/post/centos-%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/</link>
+      <link>https://farwmarth.com/post/centos-%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/</link>
       <pubDate>Fri, 29 Mar 2013 00:16:43 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/centos-%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/</guid>
-      <description>&lt;p&gt;&lt;font color=&#34;#ff0000&#34;&gt; update 2016-7-21 13:53&lt;/font&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;centos6-4配置163的yum源&#34;&gt;CentOS6.4配置163的yum源&lt;/h2&gt;
-
+      <guid>https://farwmarth.com/post/centos-%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE/</guid>
+      <description>&lt;p&gt;&lt;!-- raw HTML omitted --&gt; update 2016-7-21 13:53&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h2 id=&#34;centos64配置163的yum源&#34;&gt;CentOS6.4配置163的yum源&lt;/h2&gt;
 &lt;p&gt;CentOS系统自带的更新源的速度实在是慢，为了让CentOS6使用速度更快的YUM更新源，可以选择163（网易）的更新源。&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;查看版本&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;cat /etc/redhat-release&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;li&gt;查看版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;cat /etc/redhat-release
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
   </channel>

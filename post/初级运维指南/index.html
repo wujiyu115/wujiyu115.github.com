@@ -12,13 +12,13 @@
     <meta property="og:image" content="/img/author.jpg"> 
     <meta name="title" content="初级运维指南 - farwmarth" />
     <meta name="description" content="game"> 
-    <link rel="shortcut icon" href="http://farwmarth.com/img/favicon.ico" />
-    <link rel="apple-touch-icon" href="http://farwmarth.com/img/apple-touch-icon.png" />
-    <link rel="apple-touch-icon-precomposed" href="http://farwmarth.com/img/apple-touch-icon.png" />
-    <link href="http://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="https://farwmarth.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://farwmarth.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://farwmarth.com/img/apple-touch-icon.png" />
+    <link href="https://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
@@ -37,7 +37,7 @@
       <div class="header-inner"> <div class="site-meta  custom-logo ">
 
   <div class="custom-logo-site-title">
-    <a href="http://farwmarth.com/"  class="brand" rel="start">
+    <a href="https://farwmarth.com/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">farwmarth</span>
       <span class="logo-line-after"><i></i></span>
@@ -59,31 +59,31 @@
       
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/" rel="section">
+          <a href="https://farwmarth.com/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/about/" rel="section">
+          <a href="https://farwmarth.com/about/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/post/" rel="section">
+          <a href="https://farwmarth.com/post/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/douban/" rel="section">
+          <a href="https://farwmarth.com/douban/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />豆瓣
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/music/" rel="section">
+          <a href="https://farwmarth.com/music/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-music"></i> <br />音乐
           </a>
         </li>
@@ -115,7 +115,7 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="http://farwmarth.com/post/%E5%88%9D%E7%BA%A7%E8%BF%90%E7%BB%B4%E6%8C%87%E5%8D%97/" itemprop="url">
+        <a class="post-title-link" href="https://farwmarth.com/post/%E5%88%9D%E7%BA%A7%E8%BF%90%E7%BB%B4%E6%8C%87%E5%8D%97/" itemprop="url">
         初级运维指南
         </a>
       </h1>
@@ -142,13 +142,10 @@
     </header>
     <div class="post-body" itemprop="articleBody">
     <h1 id="加固">加固</h1>
-
 <ul>
 <li>CentOS 7防火墙换用Friewalld</li>
 </ul>
-
 <h1 id="ssh配置">SSH配置</h1>
-
 <h2 id="安装ssh">安装ssh</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#安装</span>
 yum install ssh
@@ -161,9 +158,8 @@ service sshd restart
 <span style="color:#75715e">#重启网络</span>
 service network restart
 <span style="color:#75715e">#centos7</span>
-systemctl restart  sshd.service</code></pre></div>
-<h2 id="配置">配置</h2>
-
+systemctl restart  sshd.service
+</code></pre></div><h2 id="配置">配置</h2>
 <p>配置文件目录: <code>/etc/ssh/sshd_config</code> ,<a href="http://www.jinbuguo.com/openssh/sshd_config.html">参考</a></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Port <span style="color:#ae81ff">22022</span> <span style="color:#75715e">#对外端口,改了端口后别忘记了防火墙的出口端口设置</span>
 Protocol <span style="color:#ae81ff">2</span> <span style="color:#75715e">#协议</span>
@@ -172,38 +168,34 @@ PubkeyAuthentication yes
 AuthorizedKeysFile     .ssh/authorized_keys
 PermitRootLogin yes  <span style="color:#75715e">#允许root用户以任何认证方式登录 without-password no</span>
 SyslogFacility AUTHPRIV
-PasswordAuthentication no <span style="color:#75715e">#禁止密码登录</span></code></pre></div>
-<h3 id="只允许特定用户登录">只允许特定用户登录</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">在sshd_config中设置AllowUsers
+PasswordAuthentication no <span style="color:#75715e">#禁止密码登录</span>
+</code></pre></div><h3 id="只允许特定用户登录">只允许特定用户登录</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">在sshd_config中设置AllowUsers
 AllowUsers a b c
-重启sshd服务，则只有a/b/c3个用户可以登陆</pre></div>
-<h2 id="密钥生成">密钥生成</h2>
+重启sshd服务，则只有a/b/c3个用户可以登陆
+</code></pre></div><h2 id="密钥生成">密钥生成</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#生成</span>
 ssh-keygen -t rsa
 <span style="color:#75715e">#添加</span>
 cat .ssh/id_rsa.pub &gt;&gt; .ssh/authorized_keys
 <span style="color:#75715e">#检查</span>
-cat .ssh/authorized_keys</code></pre></div>
-<h2 id="常见免密码登录失败分析">常见免密码登录失败分析</h2>
-
+cat .ssh/authorized_keys
+</code></pre></div><h2 id="常见免密码登录失败分析">常见免密码登录失败分析</h2>
 <h3 id="配置问题">配置问题</h3>
-
 <ul>
 <li>检查配置文件<code>/etc/ssh/sshd_config</code>是否开启了<code>AuthorizedKeysFile</code>选项</li>
 <li>检查<code>AuthorizedKeysFile</code>选项指定的文件是否存在并内容正常</li>
 </ul>
-
 <h3 id="目录权限问题">目录权限问题</h3>
-
 <ul>
 <li>~权限设置为700</li>
 <li>~/.ssh权限设置为700</li>
-
-<li><p>~/.ssh/authorized_keys的权限设置为<code>600</code></p>
+<li>~/.ssh/authorized_keys的权限设置为<code>600</code></li>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo chmod <span style="color:#ae81ff">700</span> ~
 sudo chmod <span style="color:#ae81ff">700</span> ~/.ssh
-sudo chmod <span style="color:#ae81ff">600</span> ~/.ssh/authorized_keys</code></pre></div>
-<h2 id="配置ssd防止暴力破解-https-github-com-denyhosts-denyhosts"><a href="https://github.com/denyhosts/denyhosts">配置ssd防止暴力破解</a></h2>
+sudo chmod <span style="color:#ae81ff">600</span> ~/.ssh/authorized_keys
+</code></pre></div><h2 id="配置ssd防止暴力破解httpsgithubcomdenyhostsdenyhosts"><a href="https://github.com/denyhosts/denyhosts">配置ssd防止暴力破解</a></h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># KeyError: &#39;FAILED_ENTRY_REGEX10&#39; 20161206居然有问题要还原代码编译 git reset --hard 65e1bc1</span>
 <span style="color:#75715e">#依赖</span>
 pip install ipaddr
@@ -221,22 +213,21 @@ DENYHOSTS_BIN   <span style="color:#f92672">=</span> <span style="color:#e6db74"
 <span style="color:#75715e">#加入开机启动</span>
 chkconfig --level <span style="color:#ae81ff">3</span> daemon-control on
 /etc/init.d/daemon-control start
-<span style="color:#75715e">#日志tail -50 /var/log/denyhosts</span></code></pre></div></li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#https://github.com/denyhosts/denyhosts/blob/master/denyhosts.conf</span>
+<span style="color:#75715e">#日志tail -50 /var/log/denyhosts</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#https://github.com/denyhosts/denyhosts/blob/master/denyhosts.conf</span>
 <span style="color:#75715e">#linux版本相关 SECURE_LOG HOSTS_DENY LOCK_FILE</span>
 SECURE_LOG <span style="color:#f92672">=</span> /var/log/secure  <span style="color:#75715e">#ssh 日志文件，它是根据这个文件来判断的。</span>
 HOSTS_DENY <span style="color:#f92672">=</span> /etc/hosts.deny  <span style="color:#75715e">#控制用户登陆的文件，根据UNIX版本不同配置不同</span>
 PURGE_DENY <span style="color:#f92672">=</span> 15m     <span style="color:#75715e">#过多久后清除已经禁止的，默认为空，即马上清除掉，这个根据自己的需要设置。</span>
 BLOCK_SERVICE  <span style="color:#f92672">=</span> sshd   <span style="color:#75715e">#被加入hosts.deny后阻止的服务:阻止SSHD服务</span>
 <span style="color:#75715e">#允许无效用户失败的次数</span>
-DENY_THRESHOLD_INVALID <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+DENY_THRESHOLD_INVALID <span style="color:#f92672">=</span> 1
 <span style="color:#75715e">#允许普通用户登陆失败的次数</span>
-DENY_THRESHOLD_VALID <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+DENY_THRESHOLD_VALID <span style="color:#f92672">=</span> 10
 <span style="color:#75715e">#允许root登陆失败的次数</span>
-DENY_THRESHOLD_ROOT <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+DENY_THRESHOLD_ROOT <span style="color:#f92672">=</span> 5
 <span style="color:#75715e">#对WORK_DIR/restricted-usernames配置的用户次数判定</span>
-DENY_THRESHOLD_RESTRICTED <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+DENY_THRESHOLD_RESTRICTED <span style="color:#f92672">=</span> 1
 WORK_DIR <span style="color:#f92672">=</span> /usr/share/denyhosts/data <span style="color:#75715e">#工作目录</span>
 SUSPICIOUS_LOGIN_REPORT_ALLOWED_HOSTS<span style="color:#f92672">=</span>YES <span style="color:#75715e">#allowed-hosts中的用户有可疑登录行为如果此配置为YES则会报告</span>
 HOSTNAME_LOOKUP<span style="color:#f92672">=</span>NO  <span style="color:#75715e">#是否做域名反解</span>
@@ -244,7 +235,7 @@ LOCK_FILE <span style="color:#f92672">=</span> /var/lock/subsys/denyhosts
 <span style="color:#75715e">############ THESE SETTINGS ARE OPTIONAL ############</span>
 ADMIN_EMAIL <span style="color:#f92672">=</span>  wujiyu115@gmail.com <span style="color:#75715e">#管理员邮件地址</span>
 SMTP_HOST <span style="color:#f92672">=</span> localhost
-SMTP_PORT <span style="color:#f92672">=</span> <span style="color:#ae81ff">25</span>
+SMTP_PORT <span style="color:#f92672">=</span> 25
 SMTP_FROM <span style="color:#f92672">=</span> DenyHosts &lt;nobody@localhost&gt;
 SMTP_SUBJECT <span style="color:#f92672">=</span> Redocn-DenyHosts Report
 AGE_RESET_VALID<span style="color:#f92672">=</span>5d
@@ -254,14 +245,12 @@ AGE_RESET_INVALID<span style="color:#f92672">=</span>10d
 <span style="color:#75715e">######### THESE SETTINGS ARE SPECIFIC TO DAEMON MODE  ##########</span>
 DAEMON_LOG <span style="color:#f92672">=</span> /var/log/denyhosts <span style="color:#75715e">#日志文件</span>
 DAEMON_SLEEP <span style="color:#f92672">=</span> 30s
-DAEMON_PURGE <span style="color:#f92672">=</span> 1h</code></pre></div>
-<ul>
+DAEMON_PURGE <span style="color:#f92672">=</span> 1h
+</code></pre></div><ul>
 <li><a href="http://skypegnu1.blog.51cto.com/8991766/1641064">http://skypegnu1.blog.51cto.com/8991766/1641064</a></li>
 <li><a href="https://help.aliyun.com/knowledge_detail/41212.html">https://help.aliyun.com/knowledge_detail/41212.html</a></li>
 </ul>
-
 <h1 id="nginx配置">Nginx配置</h1>
-
 <h2 id="常用命令">常用命令</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#启动</span>
 sudo  nginx
@@ -270,9 +259,8 @@ sudo nginx -s stop
 <span style="color:#75715e">#检测配置是否正常:</span>
 nginx –t
 <span style="color:#75715e">#重新启动</span>
-nginx -s reload</code></pre></div>
-<h2 id="配置-1">配置</h2>
-
+nginx -s reload
+</code></pre></div><h2 id="配置-1">配置</h2>
 <h3 id="nginx反向代理长链接">nginx反向代理长链接</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">upstream</span> <span style="color:#960050;background-color:#1e0010">chat_cluster</span>{
      <span style="color:#960050;background-color:#1e0010">##多server负载,根据ip_hash作分流也可以用weight权重分流</span>
@@ -298,8 +286,8 @@ nginx -s reload</code></pre></div>
         <span style="color:#960050;background-color:#1e0010">proxy_set_header</span> <span style="color:#960050;background-color:#1e0010">X-Real-Ip</span> <span style="color:#960050;background-color:#1e0010">$remote_addr;</span>
         <span style="color:#960050;background-color:#1e0010">proxy_set_header</span>   <span style="color:#960050;background-color:#1e0010">X-Forwarded-For</span>  <span style="color:#960050;background-color:#1e0010">$proxy_add_x_forwarded_for;</span>
     }
-<span style="color:#960050;background-color:#1e0010">}</span></code></pre></div>
-<h2 id="lnmp集成环镜">lnmp集成环镜</h2>
+<span style="color:#960050;background-color:#1e0010">}</span>
+</code></pre></div><h2 id="lnmp集成环镜">lnmp集成环镜</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">##默认网站(虚拟主机)##</span>
 /usr/local/nginx/conf/vhost
 <span style="color:#75715e">#LNMP默认网站配置文件：</span>
@@ -310,100 +298,96 @@ nginx -s reload</code></pre></div>
 /usr/local/apache/conf/extra/httpd-vhosts.conf
 <span style="color:#75715e">#LAMP默认网站</span>
 /home/wwwroot/default
-<span style="color:#75715e">#做反代,nginx里面的server_name和tomcat那里的Host保持一致</span></code></pre></div>
-<h1 id="iptables">iptables</h1>
+<span style="color:#75715e">#做反代,nginx里面的server_name和tomcat那里的Host保持一致</span>
+</code></pre></div><h1 id="iptables">iptables</h1>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!!!!iptables ACCEPT要放在DROP前才生效 /etc/sysconfig/iptables
 </span><span style="color:#75715e"></span><span style="color:#75715e">#查看iptables的数据</span>
 iptables -L -n
 <span style="color:#75715e">#保存iptables的数据</span>
 service iptables save
 <span style="color:#75715e">#把某端口的权限开放给某个IP</span>
-iptables -I INPUT -s <span style="color:#ae81ff">113</span>.68.65.85 -p tcp --dport <span style="color:#ae81ff">3306</span> -j ACCEPT
+iptables -I INPUT -s 113.68.65.85 -p tcp --dport <span style="color:#ae81ff">3306</span> -j ACCEPT
 iptables -A INPUT -p tcp --dport <span style="color:#ae81ff">3306</span> -j DROP
 service iptables save
 <span style="color:#75715e">#把某端口权限打开 dport指本地，sport指外部</span>
 iptables -A INPUT -p tcp --dport <span style="color:#ae81ff">8888</span> -j ACCEPT
 iptables -A OUTPUT -p tcp --sport <span style="color:#ae81ff">8888</span> -j ACCEPT
 <span style="color:#75715e">#限制只能某个ip访问端口</span>
-iptables -I INPUT -s  <span style="color:#ae81ff">10</span>.21.213.74  -p tcp --dport <span style="color:#ae81ff">8888</span> -j ACCEPT
+iptables -I INPUT -s  10.21.213.74  -p tcp --dport <span style="color:#ae81ff">8888</span> -j ACCEPT
 iptables -A INPUT -p tcp --dport <span style="color:#ae81ff">8888</span> -j DROP
 <span style="color:#75715e">#插入到指定位置 -i</span>
-iptables -I INPUT <span style="color:#ae81ff">2</span> -s <span style="color:#ae81ff">14</span>.23.124.130  -p    tcp --dport <span style="color:#ae81ff">8888</span> -j ACCEPT
+iptables -I INPUT <span style="color:#ae81ff">2</span> -s 14.23.124.130  -p    tcp --dport <span style="color:#ae81ff">8888</span> -j ACCEPT
 <span style="color:#75715e">#添加允许之后要DROP掉其他端口的input</span>
 iptables -P INPUT DROP
 <span style="color:#75715e">#查看INPUT的linnumber</span>
 iptables -L INPUT –line-numbers
 <span style="color:#75715e">#删除一条</span>
-iptables -D INPUT <span style="color:#ae81ff">3</span>
+iptables -D INPUT 3
 <span style="color:#75715e">#保存</span>
 service iptables save
 <span style="color:#75715e">#查看iptables状态</span>
 service iptables status
 <span style="color:#75715e">#iptables服务重启</span>
-service iptables restart</code></pre></div>
-<h1 id="mysql配置">mysql配置</h1>
+service iptables restart
+</code></pre></div><h1 id="mysql配置">mysql配置</h1>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>mysqld<span style="color:#f92672">]</span>
 datadir<span style="color:#f92672">=</span>/var/lib/mysql
 socket<span style="color:#f92672">=</span>/var/lib/mysql/mysql.sock
 <span style="color:#75715e"># Disabling symbolic-links is recommended to prevent assorted security risks</span>
-symbolic-links<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+symbolic-links<span style="color:#f92672">=</span>0
 pid-file<span style="color:#f92672">=</span>/var/run/mysqld/mysqld.pid
 log-bin<span style="color:#f92672">=</span>mysql-bin
 
 <span style="color:#f92672">[</span>mysqld_safe<span style="color:#f92672">]</span>
 log-error<span style="color:#f92672">=</span>/var/log/mysqld.log
-pid-file<span style="color:#f92672">=</span>/var/run/mysqld/mysqld.pid</code></pre></div>
-<h2 id="忘记密码">忘记密码：</h2>
+pid-file<span style="color:#f92672">=</span>/var/run/mysqld/mysqld.pid
+</code></pre></div><h2 id="忘记密码">忘记密码：</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">service mysqld stop
 mysqld_safe --user<span style="color:#f92672">=</span>root --skip-grant-tables
 mysql -u root
 use mysql
 update user set password<span style="color:#f92672">=</span>password<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;new_pass&#34;</span><span style="color:#f92672">)</span> where user<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;root&#34;</span>;
-flush privileges;</code></pre></div>
-<h2 id="为root添加远程连接的能力">为root添加远程连接的能力：</h2>
+flush privileges;
+</code></pre></div><h2 id="为root添加远程连接的能力">为root添加远程连接的能力：</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">GRANT ALL PRIVILEGES ON *.* TO root@<span style="color:#e6db74">&#34;%&#34;</span> IDENTIFIED BY <span style="color:#e6db74">&#34;root&#34;</span>;
 use mysql;
 update user set Password <span style="color:#f92672">=</span> password<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;xxx&#39;</span><span style="color:#f92672">)</span> where User<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;root&#39;</span>;
 flush privileges;
 <span style="color:#75715e">#修改 Mysql 配置文件 sudo vi /etc/mysql/my.cnf</span>
 <span style="color:#75715e">#注释#bind-address = 127.0.0.1</span>
-重启sudo /etc/init.d/mysql restart</code></pre></div>
-<h2 id="创建用户">创建用户</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">CREATE USER <span style="color:#e6db74">&#39;herogame&#39;</span>@<span style="color:#e6db74">&#39;localhost&#39;</span> IDENTIFIED BY <span style="color:#e6db74">&#39;xxx&#39;</span></code></pre></div>
-<h2 id="加到开机列表">加到开机列表:</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">chkconfig -add mysqld</code></pre></div>
-<h2 id="一条命令解决mysql-config-not-found">一条命令解决mysql_config not found:</h2>
+重启sudo /etc/init.d/mysql restart
+</code></pre></div><h2 id="创建用户">创建用户</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">CREATE USER <span style="color:#e6db74">&#39;herogame&#39;</span>@<span style="color:#e6db74">&#39;localhost&#39;</span> IDENTIFIED BY <span style="color:#e6db74">&#39;xxx&#39;</span>
+</code></pre></div><h2 id="加到开机列表">加到开机列表:</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">chkconfig -add mysqld
+</code></pre></div><h2 id="一条命令解决mysql_config-not-found">一条命令解决mysql_config not found:</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#遇到过几次pip安装mysql-python的时候出现如题的问题，在这里记录一下解决方法。</span>
 <span style="color:#75715e">#找不到mysql_config一般是由于通过lnmp.org或者其他方式安装mysql以后mysql_config是在/usr/local/mysql/bin/里面，这里面的文件不是在任意位置都可以访问的</span>
 <span style="color:#75715e">#解决方法：</span>
 ln -s /usr/local/mysql/bin/mysql_config /usr/local/bin/mysql_config
-<span style="color:#75715e">#将mysql_config链接到/usr/local/bin目录下</span></code></pre></div>
-<h1 id="jdk安装">jdk安装</h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">http://blog.csdn.net/sonnet123/article/details/9290561</code></pre></div>
-<h1 id="tomcat加固">Tomcat加固</h1>
-
+<span style="color:#75715e">#将mysql_config链接到/usr/local/bin目录下</span>
+</code></pre></div><h1 id="jdk安装">jdk安装</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">http://blog.csdn.net/sonnet123/article/details/9290561
+</code></pre></div><h1 id="tomcat加固">Tomcat加固</h1>
 <h2 id="tomcat帐号安全">Tomcat帐号安全</h2>
-
 <ul>
 <li>将<code>$CATALINA_HOME\conf\tomcat-users.xml</code>中文件的所有用户都注释掉</li>
 <li>删除除了需要部署上去的应用，其余位于<code>$CATALINA_HOME\webapps</code>文件夹中的应用</li>
 <li>禁止Tomcat显示目录列表,确保<code>$CATALINA_HOME\conf\web.xml</code>中<code>listings</code>的值为<code>false</code></li>
 <li>配置shutdown端口:<code>&lt;Serverport=&quot;未被占用的端口&quot; shutdown=&quot;较为复杂的字符串&quot;&gt;</code></li>
-
-<li><p>隐藏Tomcat版本<code>catalina.jar\org\apache\catalina\util\ServerInfo.properties</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">server.info=需要展现的信息如SmartCity
-server.number=SmartCity
-server.built=20140101</pre></div></li>
+<li>隐藏Tomcat版本<code>catalina.jar\org\apache\catalina\util\ServerInfo.properties</code></li>
 </ul>
-
-<h1 id="开机管理">开机管理</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">server.info=需要展现的信息如SmartCity
+server.number=SmartCity
+server.built=20140101
+</code></pre></div><h1 id="开机管理">开机管理</h1>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo apt-get install sysv-rc-conf
 <span style="color:#75715e">#直接加入启动程序，例如把 /etc/init.d/nginx 加入到系统自动 启动列表中：</span>
 sudo sysv-rc-conf nginx on   //开启
-sudo sysv-rc-conf nginx off  //关闭</code></pre></div>
-<h1 id="入侵日志分析">入侵日志分析</h1>
+sudo sysv-rc-conf nginx off  //关闭
+</code></pre></div><h1 id="入侵日志分析">入侵日志分析</h1>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#查看登录成功日志过滤自己的ip ,-v 是not</span>
-last |grep -v <span style="color:#ae81ff">113</span>.68.65.85
+last |grep -v 113.68.65.85
 <span style="color:#75715e">#查看登录日志,是否有暴力破解</span>
 tail -500 /var/log/secure |grep   <span style="color:#e6db74">&#34;Failed password&#34;</span>
 <span style="color:#75715e">#history日志,查看是不是自己的操作</span>
@@ -423,8 +407,8 @@ sudo netstat -tulpn
 sudo netstat -ntlp
 
 <span style="color:#75715e">#查看程序启动时间</span>
-ps -eo pid,lstart,etime,cmd |grep skynet</code></pre></div>
-<ul>
+ps -eo pid,lstart,etime,cmd |grep skynet
+</code></pre></div><ul>
 <li><a href="http://www.freebuf.com/articles/web/109001.html">http://www.freebuf.com/articles/web/109001.html</a></li>
 <li><a href="https://www.ibm.com/developerworks/cn/aix/library/au-sshlocks/">https://www.ibm.com/developerworks/cn/aix/library/au-sshlocks/</a></li>
 <li><a href="http://www.centoscn.com/CentOS/config/2015/0503/5347.html">http://www.centoscn.com/CentOS/config/2015/0503/5347.html</a></li>
@@ -437,7 +421,7 @@ ps -eo pid,lstart,etime,cmd |grep skynet</code></pre></div>
 
 <div class="post-tags">
      
-    <a href="http://farwmarth.com/tags/shell" rel="tag" title="shell">#shell#</a>
+    <a href="https://farwmarth.com/tags/shell" rel="tag" title="shell">#shell#</a>
     
 </div>
 
@@ -447,7 +431,7 @@ ps -eo pid,lstart,etime,cmd |grep skynet</code></pre></div>
      <div class="post-nav">
     <div class="post-nav-next post-nav-item">
     
-        <a href="http://farwmarth.com/post/hexo%E5%9B%BE%E7%89%87%E8%BF%81%E7%A7%BB%E8%87%B3%E4%B8%83%E7%89%9B/" rel="next" title="hexo图片迁移至七牛">
+        <a href="https://farwmarth.com/post/hexo%E5%9B%BE%E7%89%87%E8%BF%81%E7%A7%BB%E8%87%B3%E4%B8%83%E7%89%9B/" rel="next" title="hexo图片迁移至七牛">
         <i class="fa fa-chevron-left"></i> hexo图片迁移至七牛
         </a>
     
@@ -455,7 +439,7 @@ ps -eo pid,lstart,etime,cmd |grep skynet</code></pre></div>
 
     <div class="post-nav-prev post-nav-item">
     
-        <a href="http://farwmarth.com/post/%E5%9B%BD%E5%86%85%E6%BA%90/" rel="prev" title="国内源">
+        <a href="https://farwmarth.com/post/%E5%9B%BD%E5%86%85%E6%BA%90/" rel="prev" title="国内源">
         国内源 <i class="fa fa-chevron-right"></i>
         </a>
     
@@ -488,7 +472,7 @@ ps -eo pid,lstart,etime,cmd |grep skynet</code></pre></div>
     <section class="site-overview sidebar-panel  sidebar-panel-active ">
       <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image"
-        src="http://farwmarth.com/img/author.jpg"
+        src="https://farwmarth.com/img/author.jpg"
         alt="farwmarth" />
     <p class="site-author-name" itemprop="name">farwmarth</p>
     <p class="site-description motion-element" itemprop="description"> 
@@ -496,15 +480,15 @@ ps -eo pid,lstart,etime,cmd |grep skynet</code></pre></div>
 </div>
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
-      <a href="http://farwmarth.com/post/">
+      <a href="https://farwmarth.com/post/">
         <span class="site-state-item-count">100</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
     <div class="site-state-item site-state-categories">    
-        <a href="http://farwmarth.com/categories/">      
+        <a href="https://farwmarth.com/categories/">      
          
-        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-count">32</span>
         
         <span class="site-state-item-name">分类</span>
         
@@ -512,9 +496,9 @@ ps -eo pid,lstart,etime,cmd |grep skynet</code></pre></div>
     </div>
 
     <div class="site-state-item site-state-tags">
-        <a href="http://farwmarth.com/tags/">
+        <a href="https://farwmarth.com/tags/">
          
-        <span class="site-state-item-count">90</span>
+        <span class="site-state-item-count">91</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -549,12 +533,12 @@ ps -eo pid,lstart,etime,cmd |grep skynet</code></pre></div>
       <div class="footer-inner">
         <div class="copyright" >
   <span itemprop="copyrightYear">  &copy; 
-  2009 - 2019</span>
+  2009 - 2020</span>
   <span class="with-love"><i class="fa fa-heart"></i></span>
   <span class="author" itemprop="copyrightHolder">farwmarth</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.6</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.68.3</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
@@ -572,33 +556,33 @@ ps -eo pid,lstart,etime,cmd |grep skynet</code></pre></div>
   </div>
 
   
-<script type="text/javascript" src="http://tajs.qq.com/stats?sId=286131889" charset="UTF-8"></script> 
+
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
 </script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
-<script src="http://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
 
-<script src="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="https://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/utils.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/motion.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/affix.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/schemes/pisces.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/utils.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/motion.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/affix.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/schemes/pisces.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/scrollspy.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/post-details.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/toc.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/post-details.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/toc.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/bootstrap.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/bootstrap.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/search.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/search.js"></script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],

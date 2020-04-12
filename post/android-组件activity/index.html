@@ -12,13 +12,13 @@
     <meta property="og:image" content="/img/author.jpg"> 
     <meta name="title" content="android 组件Activity - farwmarth" />
     <meta name="description" content="game"> 
-    <link rel="shortcut icon" href="http://farwmarth.com/img/favicon.ico" />
-    <link rel="apple-touch-icon" href="http://farwmarth.com/img/apple-touch-icon.png" />
-    <link rel="apple-touch-icon-precomposed" href="http://farwmarth.com/img/apple-touch-icon.png" />
-    <link href="http://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="https://farwmarth.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://farwmarth.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://farwmarth.com/img/apple-touch-icon.png" />
+    <link href="https://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
@@ -37,7 +37,7 @@
       <div class="header-inner"> <div class="site-meta  custom-logo ">
 
   <div class="custom-logo-site-title">
-    <a href="http://farwmarth.com/"  class="brand" rel="start">
+    <a href="https://farwmarth.com/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">farwmarth</span>
       <span class="logo-line-after"><i></i></span>
@@ -59,31 +59,31 @@
       
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/" rel="section">
+          <a href="https://farwmarth.com/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/about/" rel="section">
+          <a href="https://farwmarth.com/about/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/post/" rel="section">
+          <a href="https://farwmarth.com/post/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/douban/" rel="section">
+          <a href="https://farwmarth.com/douban/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />豆瓣
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/music/" rel="section">
+          <a href="https://farwmarth.com/music/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-music"></i> <br />音乐
           </a>
         </li>
@@ -115,7 +115,7 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="http://farwmarth.com/post/android-%E7%BB%84%E4%BB%B6activity/" itemprop="url">
+        <a class="post-title-link" href="https://farwmarth.com/post/android-%E7%BB%84%E4%BB%B6activity/" itemprop="url">
         android 组件Activity
         </a>
       </h1>
@@ -139,7 +139,7 @@
   <span class="post-meta-item-text">分类：</span>
   
     <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-      <a href="http://farwmarth.com/categories/android" itemprop="url" rel="index">
+      <a href="https://farwmarth.com/categories/android" itemprop="url" rel="index">
         <span itemprop="name">android</span>
       </a>
       &nbsp; 
@@ -154,54 +154,50 @@
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">2625 字 ~6分钟</span>
+<span class="leancloud-visitors-count">2630 字 ~6分钟</span>
 </span>
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
-    <p>Android开发四大组件分别是：
-+ 活动（Activity)： 用于表现功能。
-+ 服务（Service)： 后台运行服务，不提供界面呈现。
-+ 广播接收器（BroadcastReceiver)：用于接收广播。
-+ 数据实体（Content Provider）： 支持在多个应用中存储和读取数据，相当于数据库</p>
-
-<h2 id="一-acvitivity">一 Acvitivity</h2>
-
-<p>Activity 是用户唯一可以看得到的东西。Activity主要负责的就是创建显示窗口，你可以在这些窗口里使用setContentView(View)来显示你自己的UI。activity展现在用户面前的经常是全屏窗口，你也可以将activity作为浮动窗口来使用（使用设置了windowIsFloating的主题），或者嵌入到其他的activity（使用ActivityGroup）中。
-**Activity的四种状态:
-+ <strong>Active/Runing</strong>: 一个新 Activity 启动入栈后，它在屏幕最前端，处于栈的最顶端，此时它处于可见并可和用户交互的激活状态。
-+ <strong>Paused</strong>: 当 Activity 被另一个透明或者 Dialog 样式的 Activity 覆盖时的状态。此时它依然与窗口管理器保持连接，系统继续维护其内部状态，所以它仍然可见，但它已经失去了焦点故不可与用户交互。
-+ <strong>Stoped</strong>: 当 Activity 被另外一个 Activity 覆盖、失去焦点并不可见时处于 Stoped 状态。
-+ <strong>Destroyed</strong>: Activity 被系统杀死回收或者没有被启动时处于 Killed 状态。
-<a href="http://farwmarth.bestnewbee.com/images/uploads/2013/04/201104291036314498.png">201104291036314498</a>
-官方给的生命周期图，意思差不多:
-<img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/activity_lifecycle.png" alt="activity_lifecycle" /></p>
-
-<p><strong>方法何时被调用:</strong></p>
-
+    <p>Android开发四大组件分别是：</p>
 <ul>
-<li><strong>onCreate ：</strong>当活动第一次启动的时候，触发该方法，<font color="#ff0000">可以在此时完成活动的初始化工作.</font>
+<li>活动（Activity)： 用于表现功能。</li>
+<li>服务（Service)： 后台运行服务，不提供界面呈现。</li>
+<li>广播接收器（BroadcastReceiver)：用于接收广播。</li>
+<li>数据实体（Content Provider）： 支持在多个应用中存储和读取数据，相当于数据库</li>
+</ul>
+<h2 id="一-acvitivity">一 Acvitivity</h2>
+<p>Activity 是用户唯一可以看得到的东西。Activity主要负责的就是创建显示窗口，你可以在这些窗口里使用setContentView(View)来显示你自己的UI。activity展现在用户面前的经常是全屏窗口，你也可以将activity作为浮动窗口来使用（使用设置了windowIsFloating的主题），或者嵌入到其他的activity（使用ActivityGroup）中。
+**Activity的四种状态:</p>
+<ul>
+<li><strong>Active/Runing</strong>: 一个新 Activity 启动入栈后，它在屏幕最前端，处于栈的最顶端，此时它处于可见并可和用户交互的激活状态。</li>
+<li><strong>Paused</strong>: 当 Activity 被另一个透明或者 Dialog 样式的 Activity 覆盖时的状态。此时它依然与窗口管理器保持连接，系统继续维护其内部状态，所以它仍然可见，但它已经失去了焦点故不可与用户交互。</li>
+<li><strong>Stoped</strong>: 当 Activity 被另外一个 Activity 覆盖、失去焦点并不可见时处于 Stoped 状态。</li>
+<li><strong>Destroyed</strong>: Activity 被系统杀死回收或者没有被启动时处于 Killed 状态。
+<a href="https://farwmarth.bestnewbee.com/images/uploads/2013/04/201104291036314498.png">201104291036314498</a>
+官方给的生命周期图，意思差不多:
+<img src="https://farwmarth.bestnewbee.com/images/uploads/2013/04/activity_lifecycle.png" alt="activity_lifecycle"></li>
+</ul>
+<p><strong>方法何时被调用:</strong></p>
+<ul>
+<li>**onCreate ：**当活动第一次启动的时候，触发该方法，<!-- raw HTML omitted -->可以在此时完成活动的初始化工作.<!-- raw HTML omitted -->
 onCreate 方法有一个参数，该参数可以为空（ null ），也可以是之前调用 onSaveInstanceState （）方法保存的状态信息。</li>
 <li><strong>onStart ：</strong> 在启动或从stoped状态重新启动时调用，所以初始化工作不应该放在这里，比如socket连接之类的。</li>
 <li><strong>onResume</strong> : 启动,paused到running状态，stoped到running状态.</li>
-<li><strong>onPause ：</strong>当一个正在前台运行的活动因为其他的活动需要前台运行而转入后台运行的时候，触发该方法。这时候需要<font color="#ff0000">将活动的状态持久化</font>，比如正在编辑的数据库记录等。</li>
-<li><strong>onStop ：</strong>当一个活动不再需要展示给用户的时候，触发该方法。如果内存紧张，系统会直接结束这个活动，而不会触发 onStop 方法。 所以保存状态信息是应该在onPause时做，而不是onStop时做。活动如果没有在前台运行，都将被停止或者Linux管理进程为了给新的活动预留足够的存储空间而随时结束这些活动。因此对于开发者来说，在设计应用程序的时候，必须时刻牢记这一原则。在一些情况下，onPause方法或许是活动触发的最后的方法，因此开发者需要在这个时候保存需要保存的信息。</li>
-<li><strong>onRestart ：</strong>stoped到running状态，触发该方法。</li>
-<li><strong>onDestroy ：</strong>当活动销毁的时候，触发该方法。和 onStop 方法一样，如果内存紧张，系统会直接结束这个活动而不会触发该方法。</li>
-<li><strong>onSaveInstanceState ：</strong>系统调用该方法，允许活动保存之前的状态，比如说在一串字符串中的光标所处的位置等。通常情况下，开发者不需要重写覆盖该方法，在默认的实现中，已经提供了自动保存活动所涉及到的用户界面组件的所有状态信息。</li>
+<li>**onPause ：**当一个正在前台运行的活动因为其他的活动需要前台运行而转入后台运行的时候，触发该方法。这时候需要<!-- raw HTML omitted -->将活动的状态持久化<!-- raw HTML omitted -->，比如正在编辑的数据库记录等。</li>
+<li>**onStop ：**当一个活动不再需要展示给用户的时候，触发该方法。如果内存紧张，系统会直接结束这个活动，而不会触发 onStop 方法。 所以保存状态信息是应该在onPause时做，而不是onStop时做。活动如果没有在前台运行，都将被停止或者Linux管理进程为了给新的活动预留足够的存储空间而随时结束这些活动。因此对于开发者来说，在设计应用程序的时候，必须时刻牢记这一原则。在一些情况下，onPause方法或许是活动触发的最后的方法，因此开发者需要在这个时候保存需要保存的信息。</li>
+<li>**onRestart ：**stoped到running状态，触发该方法。</li>
+<li>**onDestroy ：**当活动销毁的时候，触发该方法。和 onStop 方法一样，如果内存紧张，系统会直接结束这个活动而不会触发该方法。</li>
+<li>**onSaveInstanceState ：**系统调用该方法，允许活动保存之前的状态，比如说在一串字符串中的光标所处的位置等。通常情况下，开发者不需要重写覆盖该方法，在默认的实现中，已经提供了自动保存活动所涉及到的用户界面组件的所有状态信息。</li>
 </ul>
-
 <p><strong>Activity栈:</strong></p>
-
 <p>Android 是通过一种 Activity 栈的方式来管理 Activity 的，一个 Activity 的实例的状态决定它在栈中的位置。处于前台的 Activity 总是在栈的顶端，当前台的 Activity 因为异常或其它原因被销毁时，处于栈第二层的 Activity 将被激活，上浮到栈顶。当新的 Activity 启动入栈时，原 Activity 会被压入到栈的第二层。一个 Activity 在栈中的位置变化反映了它在不同状态间的转换。Activity 的状态与它在栈中的位置关系如下图所示：
-<img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/image002.jpg" alt="image002" /></p>
-
+<img src="https://farwmarth.bestnewbee.com/images/uploads/2013/04/image002.jpg" alt="image002"></p>
 <p>除了最顶层即处在 Active 状态的 Activity 外，其它的 Activity 都有可能在系统内存不足时被回收，一个 Activity 的实例越是处在栈的底层，它被系统回收的可能性越大。系统负责管理栈中 Activity 的实例，它根据 Activity 所处的状态来改变其在栈中的位置。</p>
-
 <p><strong>Activity 之间通信</strong></p>
-
 <ol>
-<li><p>** 使用Intent通信 **</p>
+<li>** 使用Intent通信 **</li>
+</ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// 发送
 </span><span style="color:#75715e"></span>Intent intent <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Intent<span style="color:#f92672">(</span>EX06<span style="color:#f92672">.</span><span style="color:#a6e22e">this</span><span style="color:#f92672">,</span> OtherActivity<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
 intent<span style="color:#f92672">.</span><span style="color:#a6e22e">putExtra</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;boolean_key&#34;</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
@@ -210,41 +206,40 @@ startActivity<span style="color:#f92672">(</span>intent<span style="color:#f9267
 <span style="color:#75715e">// 接收
 </span><span style="color:#75715e"></span>Intent intent <span style="color:#f92672">=</span> getIntent<span style="color:#f92672">();</span>
 intent<span style="color:#f92672">.</span><span style="color:#a6e22e">getBooleanExtra</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;boolean_key&#34;</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">);</span>
-intent<span style="color:#f92672">.</span><span style="color:#a6e22e">getStringExtra</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;string_key&#34;</span><span style="color:#f92672">);</span></code></pre></div>
-<ol>
+intent<span style="color:#f92672">.</span><span style="color:#a6e22e">getStringExtra</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;string_key&#34;</span><span style="color:#f92672">);</span>
+</code></pre></div><ol start="2">
 <li>使用 SharedPreferences
-SharedPreferences 使用 xml 格式为 Android 应用提供一种永久的数据存贮方式。对于一个 Android 应用，它存贮在文件系统的 /data/ data/your_app_package_name/shared_prefs/目录下，可以被处在同一个应用中的所有 Activity 访问。Android 提供了相关的 API 来处理这些数据而不需要程序员直接操作这些文件或者考虑数据同步问题。
-<code>java
-2:           SharedPreferences preferences = getSharedPreferences(&quot;name&quot;, MODE_PRIVATE); 
-3:           Editor editor = preferences.edit(); 
-4:           editor.putBoolean(&quot;boolean_key&quot;, true); 
-5:           editor.putString(&quot;string_key&quot;, &quot;string_value&quot;); 
-6:           editor.commit(); 
-8:           // 读取 SharedPreferences 
-9:           SharedPreferences preferences = getSharedPreferences(&quot;name&quot;, MODE_PRIVATE); 
-10:           preferences.getBoolean(&quot;boolean_key&quot;, false); 
-11:           preferences.getString(&quot;string_key&quot;, &quot;default_value&quot;); 
-</code></li>
-</ol></li>
-
-<li><p>其它方式
-Android 提供了包括 SharedPreferences 在内的很多种数据存贮方式，比如 SQLite，文件等，程序员可以通过这些 API 实现 Activity 之间的数据交换。如果必要，我们还可以使用 IPC 方式。</p></li>
+SharedPreferences 使用 xml 格式为 Android 应用提供一种永久的数据存贮方式。对于一个 Android 应用，它存贮在文件系统的 /data/ data/your_app_package_name/shared_prefs/目录下，可以被处在同一个应用中的所有 Activity 访问。Android 提供了相关的 API 来处理这些数据而不需要程序员直接操作这些文件或者考虑数据同步问题。</li>
 </ol>
-
-<p><strong>Activity启动模式</strong>：
-+ Application、task、Activity三者之间的关系:
-<img src="http://farwmarth.bestnewbee.com/images/uploads/2013/04/201104290925106332.png" alt="201104290925106332" /></p>
-
-<p>Android为了使我们能够打破默认的堆栈的先后出的模式，提供了两个种方式：一种是在AndroidManifest.xml定义Activity时指定它的加载模式，另一种是在用Intent开启一个Activity时，在Intent中加入标志。如果两种方式都用了，则后者的优先级更高
-1. standard
-“拿来主义”standard模式。哪里需要调用我我就去哪里，可以多次实例化，可以几个相同的Activity重叠。(系统默认)
-2. singleTop
-“拒绝堆叠”singleTop模式。可以多次实例化，但是不可以多个相同的Activity重叠，当堆栈的顶部为相同的Activity时，会调用onNewIntent函数。
-3. singleTask
-独立门户”singleTask模式。同一个应用中调用该Activity时，如果该Activity没有被实例化，会在本应用程序的Task内实例化，如果已经实例化，会将Task中其上的Activity销毁后，调用onNewIntent；其它应用程序调用该Activity时，如果该Activity没有被实例化，会创建新的Task并实例化后入栈，如果已经实例化，会销毁其上的Activity，并调用onNewIntent。一句话，singleTask就是“独立门户”，在自己的Task里，并且启动时不允许其他Activity凌驾于自己之上。
-4. singleInstance
-孤独寂寞”singleInstance模式。加载该Activity时如果没有实例化，他会创建新的Task后，实例化入栈，如果已经存在，直接调用onNewIntent，该Activity的Task中不允许启动其它的Activity，任何从该Activity启动的其他Activity都将被放到其他task中，先检查是否有本应用的task，没有的话就创建。</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"> 2<span style="color:#f92672">:</span>           SharedPreferences preferences <span style="color:#f92672">=</span> getSharedPreferences<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">,</span> MODE_PRIVATE<span style="color:#f92672">);</span> 
+ 3<span style="color:#f92672">:</span>           Editor editor <span style="color:#f92672">=</span> preferences<span style="color:#f92672">.</span><span style="color:#a6e22e">edit</span><span style="color:#f92672">();</span> 
+ 4<span style="color:#f92672">:</span>           editor<span style="color:#f92672">.</span><span style="color:#a6e22e">putBoolean</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;boolean_key&#34;</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">);</span> 
+ 5<span style="color:#f92672">:</span>           editor<span style="color:#f92672">.</span><span style="color:#a6e22e">putString</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;string_key&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;string_value&#34;</span><span style="color:#f92672">);</span> 
+ 6<span style="color:#f92672">:</span>           editor<span style="color:#f92672">.</span><span style="color:#a6e22e">commit</span><span style="color:#f92672">();</span> 
+ 8<span style="color:#f92672">:</span>           <span style="color:#75715e">// 读取 SharedPreferences 
+</span><span style="color:#75715e"></span> 9<span style="color:#f92672">:</span>           SharedPreferences preferences <span style="color:#f92672">=</span> getSharedPreferences<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">,</span> MODE_PRIVATE<span style="color:#f92672">);</span> 
+10:           preferences<span style="color:#f92672">.</span><span style="color:#a6e22e">getBoolean</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;boolean_key&#34;</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">);</span> 
+11:           preferences<span style="color:#f92672">.</span><span style="color:#a6e22e">getString</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;string_key&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;default_value&#34;</span><span style="color:#f92672">);</span> 
+</code></pre></div><ol start="3">
+<li>其它方式
+Android 提供了包括 SharedPreferences 在内的很多种数据存贮方式，比如 SQLite，文件等，程序员可以通过这些 API 实现 Activity 之间的数据交换。如果必要，我们还可以使用 IPC 方式。</li>
+</ol>
+<p><strong>Activity启动模式</strong>：</p>
+<ul>
+<li>Application、task、Activity三者之间的关系:
+<img src="https://farwmarth.bestnewbee.com/images/uploads/2013/04/201104290925106332.png" alt="201104290925106332"></li>
+</ul>
+<p>Android为了使我们能够打破默认的堆栈的先后出的模式，提供了两个种方式：一种是在AndroidManifest.xml定义Activity时指定它的加载模式，另一种是在用Intent开启一个Activity时，在Intent中加入标志。如果两种方式都用了，则后者的优先级更高</p>
+<ol>
+<li>standard
+“拿来主义”standard模式。哪里需要调用我我就去哪里，可以多次实例化，可以几个相同的Activity重叠。(系统默认)</li>
+<li>singleTop
+“拒绝堆叠”singleTop模式。可以多次实例化，但是不可以多个相同的Activity重叠，当堆栈的顶部为相同的Activity时，会调用onNewIntent函数。</li>
+<li>singleTask
+独立门户”singleTask模式。同一个应用中调用该Activity时，如果该Activity没有被实例化，会在本应用程序的Task内实例化，如果已经实例化，会将Task中其上的Activity销毁后，调用onNewIntent；其它应用程序调用该Activity时，如果该Activity没有被实例化，会创建新的Task并实例化后入栈，如果已经实例化，会销毁其上的Activity，并调用onNewIntent。一句话，singleTask就是“独立门户”，在自己的Task里，并且启动时不允许其他Activity凌驾于自己之上。</li>
+<li>singleInstance
+孤独寂寞”singleInstance模式。加载该Activity时如果没有实例化，他会创建新的Task后，实例化入栈，如果已经存在，直接调用onNewIntent，该Activity的Task中不允许启动其它的Activity，任何从该Activity启动的其他Activity都将被放到其他task中，先检查是否有本应用的task，没有的话就创建。</li>
+</ol>
 <p>在androidmainfest.xml中设置：android:launchMode=”standard”</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;activity</span>
              <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;com.example.studyandroidcode.MainActivity&#34;</span>
@@ -254,9 +249,8 @@ Android 提供了包括 SharedPreferences 在内的很多种数据存贮方式�
                  <span style="color:#f92672">&lt;action</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.action.MAIN&#34;</span> <span style="color:#f92672">/&gt;</span>
                  <span style="color:#f92672">&lt;category</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.category.LAUNCHER&#34;</span> <span style="color:#f92672">/&gt;</span>
              <span style="color:#f92672">&lt;/intent-filter&gt;</span>
-<span style="color:#f92672">&lt;/activity&gt;</span></code></pre></div>
-<p>参考</p>
-
+<span style="color:#f92672">&lt;/activity&gt;</span>
+</code></pre></div><p>参考</p>
 <p><a href="http://www.cnblogs.com/ghj1976/archive/2011/04/29/2032495.html">http://www.cnblogs.com/ghj1976/archive/2011/04/29/2032495.html</a>
 <a href="http://www.ibm.com/developerworks/cn/opensource/os-cn-android-actvt/">http://www.ibm.com/developerworks/cn/opensource/os-cn-android-actvt/</a>
 <a href="http://winuxxan.blog.51cto.com/2779763/504047">http://winuxxan.blog.51cto.com/2779763/504047</a>
@@ -268,7 +262,7 @@ Android 提供了包括 SharedPreferences 在内的很多种数据存贮方式�
 
 <div class="post-tags">
      
-    <a href="http://farwmarth.com/tags/android" rel="tag" title="android">#android#</a>
+    <a href="https://farwmarth.com/tags/android" rel="tag" title="android">#android#</a>
     
 </div>
 
@@ -278,7 +272,7 @@ Android 提供了包括 SharedPreferences 在内的很多种数据存贮方式�
      <div class="post-nav">
     <div class="post-nav-next post-nav-item">
     
-        <a href="http://farwmarth.com/post/android-%E5%8F%8D%E7%BC%96%E8%AF%91%E5%92%8C%E4%BB%A3%E7%A0%81%E8%A7%A3%E8%AF%BB/" rel="next" title="android 反编译和代码解读">
+        <a href="https://farwmarth.com/post/android-%E5%8F%8D%E7%BC%96%E8%AF%91%E5%92%8C%E4%BB%A3%E7%A0%81%E8%A7%A3%E8%AF%BB/" rel="next" title="android 反编译和代码解读">
         <i class="fa fa-chevron-left"></i> android 反编译和代码解读
         </a>
     
@@ -286,7 +280,7 @@ Android 提供了包括 SharedPreferences 在内的很多种数据存贮方式�
 
     <div class="post-nav-prev post-nav-item">
     
-        <a href="http://farwmarth.com/post/android%E6%A1%86%E6%9E%B6%E7%BB%93%E6%9E%84/" rel="prev" title="android　框架结构">
+        <a href="https://farwmarth.com/post/android%E6%A1%86%E6%9E%B6%E7%BB%93%E6%9E%84/" rel="prev" title="android　框架结构">
         android　框架结构 <i class="fa fa-chevron-right"></i>
         </a>
     
@@ -319,7 +313,7 @@ Android 提供了包括 SharedPreferences 在内的很多种数据存贮方式�
     <section class="site-overview sidebar-panel  sidebar-panel-active ">
       <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image"
-        src="http://farwmarth.com/img/author.jpg"
+        src="https://farwmarth.com/img/author.jpg"
         alt="farwmarth" />
     <p class="site-author-name" itemprop="name">farwmarth</p>
     <p class="site-description motion-element" itemprop="description"> 
@@ -327,15 +321,15 @@ Android 提供了包括 SharedPreferences 在内的很多种数据存贮方式�
 </div>
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
-      <a href="http://farwmarth.com/post/">
+      <a href="https://farwmarth.com/post/">
         <span class="site-state-item-count">100</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
     <div class="site-state-item site-state-categories">    
-        <a href="http://farwmarth.com/categories/">      
+        <a href="https://farwmarth.com/categories/">      
          
-        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-count">32</span>
         
         <span class="site-state-item-name">分类</span>
         
@@ -343,9 +337,9 @@ Android 提供了包括 SharedPreferences 在内的很多种数据存贮方式�
     </div>
 
     <div class="site-state-item site-state-tags">
-        <a href="http://farwmarth.com/tags/">
+        <a href="https://farwmarth.com/tags/">
          
-        <span class="site-state-item-count">90</span>
+        <span class="site-state-item-count">91</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -380,12 +374,12 @@ Android 提供了包括 SharedPreferences 在内的很多种数据存贮方式�
       <div class="footer-inner">
         <div class="copyright" >
   <span itemprop="copyrightYear">  &copy; 
-  2009 - 2019</span>
+  2009 - 2020</span>
   <span class="with-love"><i class="fa fa-heart"></i></span>
   <span class="author" itemprop="copyrightHolder">farwmarth</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.6</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.68.3</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
@@ -403,33 +397,33 @@ Android 提供了包括 SharedPreferences 在内的很多种数据存贮方式�
   </div>
 
   
-<script type="text/javascript" src="http://tajs.qq.com/stats?sId=286131889" charset="UTF-8"></script> 
+
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
 </script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
-<script src="http://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
 
-<script src="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="https://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/utils.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/motion.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/affix.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/schemes/pisces.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/utils.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/motion.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/affix.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/schemes/pisces.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/scrollspy.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/post-details.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/toc.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/post-details.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/toc.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/bootstrap.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/bootstrap.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/search.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/search.js"></script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],

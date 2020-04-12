@@ -1,27 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>微信开发 on farwmarth</title>
-    <link>http://farwmarth.com/tags/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91/</link>
+    <link>https://farwmarth.com/tags/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91/</link>
     <description>Recent content in 微信开发 on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     
-	<atom:link href="http://farwmarth.com/tags/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/tags/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>微信开发调试</title>
-      <link>http://farwmarth.com/post/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/</link>
+      <link>https://farwmarth.com/post/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/</guid>
+      <guid>https://farwmarth.com/post/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/</guid>
       <description>&lt;h2 id=&#34;接入文档&#34;&gt;接入文档&lt;/h2&gt;
-
 &lt;p&gt;&lt;a href=&#34;http://mp.weixin.qq.com/wiki/home/index.html&#34;&gt;http://mp.weixin.qq.com/wiki/home/index.html&lt;/a&gt;&lt;/p&gt;
-
 &lt;h2 id=&#34;申请免费公众号&#34;&gt;申请免费公众号&lt;/h2&gt;
-
 &lt;p&gt;无需公众号,普通微信既可申请测试公众号:
 &lt;a href=&#34;http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;amp;t=sandbox/index&#34;&gt;http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;amp;t=sandbox/index&lt;/a&gt;&lt;/p&gt;</description>
     </item>

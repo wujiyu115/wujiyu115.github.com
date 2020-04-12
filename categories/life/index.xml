@@ -1,34 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>life on farwmarth</title>
-    <link>http://farwmarth.com/categories/life/</link>
+    <link>https://farwmarth.com/categories/life/</link>
     <description>Recent content in life on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sun, 18 Dec 2016 12:20:39 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/categories/life/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/categories/life/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>给Iphone换个自定义的铃声</title>
-      <link>http://farwmarth.com/post/%E7%BB%99iphone%E6%8D%A2%E4%B8%AA%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E9%93%83%E5%A3%B0/</link>
+      <link>https://farwmarth.com/post/%E7%BB%99iphone%E6%8D%A2%E4%B8%AA%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E9%93%83%E5%A3%B0/</link>
       <pubDate>Sun, 18 Dec 2016 12:20:39 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E7%BB%99iphone%E6%8D%A2%E4%B8%AA%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E9%93%83%E5%A3%B0/</guid>
+      <guid>https://farwmarth.com/post/%E7%BB%99iphone%E6%8D%A2%E4%B8%AA%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E9%93%83%E5%A3%B0/</guid>
       <description>&lt;p&gt;&amp;ndash;&lt;/p&gt;
-
 &lt;h1 id=&#34;概述&#34;&gt;概述&lt;/h1&gt;
-
 &lt;p&gt;iPhone的铃声格式是m4r格式，普通的mp3无法直接设置为铃声,所以需要使用铃声制作工具来转换,一般电话铃声的最长时长设置为40s,闹钟的时长最长为30s&lt;/p&gt;
-
 &lt;h1 id=&#34;制作工具&#34;&gt;制作工具&lt;/h1&gt;
-
 &lt;h2 id=&#34;ringer制作铃声&#34;&gt;Ringer制作铃声&lt;/h2&gt;
-
 &lt;p&gt;Ringer是Mac上制作铃声的工具,操作非常简单,将下载的歌曲播放到Ringer的主界面&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;大音轨用于精确控制,双击大的音轨可以从点击处开始播放,设置头尾的Preview可以听整个铃声,下面的小音轨用来快速拖动预览声音&lt;/li&gt;
 &lt;li&gt;可以制作两种:铃声和立名声音,没发现太大的区别只是最大时长不一样&lt;/li&gt;
@@ -39,16 +33,14 @@
     
     <item>
       <title>一个游戏的生长过程</title>
-      <link>http://farwmarth.com/post/%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F%E7%9A%84%E7%94%9F%E9%95%BF%E8%BF%87%E7%A8%8B/</link>
+      <link>https://farwmarth.com/post/%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F%E7%9A%84%E7%94%9F%E9%95%BF%E8%BF%87%E7%A8%8B/</link>
       <pubDate>Tue, 23 Feb 2016 20:26:02 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F%E7%9A%84%E7%94%9F%E9%95%BF%E8%BF%87%E7%A8%8B/</guid>
+      <guid>https://farwmarth.com/post/%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F%E7%9A%84%E7%94%9F%E9%95%BF%E8%BF%87%E7%A8%8B/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;每次都是挖了一个巨大无比的坑,填了好久都填不完.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;h2 id=&#34;概念&#34;&gt;概念&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;IP&lt;/strong&gt; : (Intellectual Property),知识产权,在游戏圈可以理解为拥有知识产权的一方,授权游戏开发商使用其主题素材&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;SP&lt;/strong&gt; : (Service Provider)渠道商:相当于电影院(电影院线),电影院是直接面向观众的,各电影院线上映电影给观众看,渠道商则是上架游戏应用给用户下载玩.&lt;/li&gt;
@@ -61,16 +53,14 @@
     
     <item>
       <title>wordpress迁移到hexo</title>
-      <link>http://farwmarth.com/post/wordpress%E8%BF%81%E7%A7%BB%E5%88%B0hexo/</link>
+      <link>https://farwmarth.com/post/wordpress%E8%BF%81%E7%A7%BB%E5%88%B0hexo/</link>
       <pubDate>Wed, 13 Jan 2016 16:21:00 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/wordpress%E8%BF%81%E7%A7%BB%E5%88%B0hexo/</guid>
+      <guid>https://farwmarth.com/post/wordpress%E8%BF%81%E7%A7%BB%E5%88%B0hexo/</guid>
       <description>&lt;h2 id=&#34;引用&#34;&gt;引用&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;(&lt;a href=&#34;https://hexo.io/zh-cn/docs/setup&#34;&gt;官方帮助&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;依赖&#34;&gt;依赖&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#安装hexo&lt;/span&gt;
 npm install hexo  -g
@@ -89,70 +79,63 @@ npm install hexo-deployer-git --save
 &lt;span style=&#34;color:#75715e&#34;&gt;#feed&lt;/span&gt;
 npm install hexo-generator-feed@1.0.2 --save
 &lt;span style=&#34;color:#75715e&#34;&gt;#sitemap&lt;/span&gt;
-npm install hexo-generator-sitemap@1.0.1 --save&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+npm install hexo-generator-sitemap@1.0.1 --save
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
       <title>虚拟货币二三事</title>
-      <link>http://farwmarth.com/post/%E8%99%9A%E6%8B%9F%E8%B4%A7%E5%B8%81%E4%BA%8C%E4%B8%89%E4%BA%8B/</link>
+      <link>https://farwmarth.com/post/%E8%99%9A%E6%8B%9F%E8%B4%A7%E5%B8%81%E4%BA%8C%E4%B8%89%E4%BA%8B/</link>
       <pubDate>Fri, 28 Feb 2014 13:37:57 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E8%99%9A%E6%8B%9F%E8%B4%A7%E5%B8%81%E4%BA%8C%E4%B8%89%E4%BA%8B/</guid>
+      <guid>https://farwmarth.com/post/%E8%99%9A%E6%8B%9F%E8%B4%A7%E5%B8%81%E4%BA%8C%E4%B8%89%E4%BA%8B/</guid>
       <description>&lt;h3 id=&#34;比特币&#34;&gt;比特币&lt;/h3&gt;
-
 &lt;p&gt;最近比特币炒得比较火,最开始听说这种虚拟货币是从国外的极客网站上看到的,流传于极客之间的玩物.十一月初的时候还是对人民币汇率还是1000元的样子。不到一个月，等到媒体大肆报道的时候已经翻了六七倍。出于好奇和装b的心理于是查了下维基百科.原理如下 ：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>三月一夏</title>
-      <link>http://farwmarth.com/post/%E4%B8%89%E6%9C%88%E4%B8%80%E5%A4%8F/</link>
+      <link>https://farwmarth.com/post/%E4%B8%89%E6%9C%88%E4%B8%80%E5%A4%8F/</link>
       <pubDate>Tue, 16 Aug 2011 08:01:00 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E4%B8%89%E6%9C%88%E4%B8%80%E5%A4%8F/</guid>
+      <guid>https://farwmarth.com/post/%E4%B8%89%E6%9C%88%E4%B8%80%E5%A4%8F/</guid>
       <description>&lt;p&gt;老实说这个夏天 过得太漫长。&lt;/p&gt;
-
 &lt;p&gt;花一三个月的时间把所学忘得差不多，细想只剩一些基本思想 。想换个地方 。&lt;/p&gt;
-
 &lt;p&gt;草草地总结一下 二个月的工作，其实还学到了些许东西:&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>开始记录</title>
-      <link>http://farwmarth.com/post/%E5%BC%80%E5%A7%8B%E8%AE%B0%E5%BD%95/</link>
+      <link>https://farwmarth.com/post/%E5%BC%80%E5%A7%8B%E8%AE%B0%E5%BD%95/</link>
       <pubDate>Fri, 17 Jun 2011 10:25:00 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E5%BC%80%E5%A7%8B%E8%AE%B0%E5%BD%95/</guid>
+      <guid>https://farwmarth.com/post/%E5%BC%80%E5%A7%8B%E8%AE%B0%E5%BD%95/</guid>
       <description>&lt;p&gt;上班十来天了,觉得很有必要写一个这样的博客 ,记录一下所见所学所感.&lt;/p&gt;
-
 &lt;p&gt;刚开始找工作的时候感觉是挺容易的事,面试,通过,握手,然后就入职。但事实上并非是一蹴而就的,面试了各种不同的公司,每一轮都会暴露出新的薄弱环,刚开始是觉得没准备好,知识储备不够深厚,有些受挫感,但后来仔细想想其实客观原因的比重更大些,毕竟是刚毕业没有任何实战经验的黄毛小子,而不同公司的技术要求又不尽相同.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>恶补键盘知识</title>
-      <link>http://farwmarth.com/post/%E6%81%B6%E8%A1%A5%E9%94%AE%E7%9B%98%E7%9F%A5%E8%AF%86/</link>
+      <link>https://farwmarth.com/post/%E6%81%B6%E8%A1%A5%E9%94%AE%E7%9B%98%E7%9F%A5%E8%AF%86/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E6%81%B6%E8%A1%A5%E9%94%AE%E7%9B%98%E7%9F%A5%E8%AF%86/</guid>
+      <guid>https://farwmarth.com/post/%E6%81%B6%E8%A1%A5%E9%94%AE%E7%9B%98%E7%9F%A5%E8%AF%86/</guid>
       <description>&lt;h2 id=&#34;引用&#34;&gt;引用&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.pcpop.com/doc/0/836/836084_all.shtml&#34;&gt;http://www.pcpop.com/doc/0/836/836084_all.shtml&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;键盘类型&#34;&gt;键盘类型&lt;/h2&gt;
-
 &lt;h3 id=&#34;薄膜&#34;&gt;薄膜&lt;/h3&gt;
-
 &lt;h3 id=&#34;机械&#34;&gt;机械&lt;/h3&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;红轴
-&lt;img src=&#34;http://ww4.sinaimg.cn/large/4b5a1116gw1exo6kg6fl4j20dw05j3yv.jpg&#34; alt=&#34;红轴&#34; /&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;红轴，它的力度比较轻，与黑轴塑料部分相同，直上直下爽快自然，入门者可能会觉得它比较滑。
-这是一种备受争议的轴，由于力度太轻，导致个别用户手搭载键盘上误触，而且它的造价是所有轴里最高的。
-因此很多人认为他是失败品，在国外的销量并不理想。
-但是国内不少玩家给予好评，如果搭配得当使用者可感受到丝绸般顺滑，无论是游戏还是打字亦或其它应用都可以，只是价格略高&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;li&gt;红轴
+&lt;img src=&#34;https://farwmarth.bestnewbee.com/4b5a1116gw1exo6kg6fl4j20dw05j3yv.jpg&#34; alt=&#34;红轴&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt; 红轴，它的力度比较轻，与黑轴塑料部分相同，直上直下爽快自然，入门者可能会觉得它比较滑。
+ 这是一种备受争议的轴，由于力度太轻，导致个别用户手搭载键盘上误触，而且它的造价是所有轴里最高的。
+ 因此很多人认为他是失败品，在国外的销量并不理想。
+ 但是国内不少玩家给予好评，如果搭配得当使用者可感受到丝绸般顺滑，无论是游戏还是打字亦或其它应用都可以，只是价格略高
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
   </channel>

@@ -1,26 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>wordpress on farwmarth</title>
-    <link>http://farwmarth.com/categories/wordpress/</link>
+    <link>https://farwmarth.com/categories/wordpress/</link>
     <description>Recent content in wordpress on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Fri, 28 Dec 2012 19:07:00 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/categories/wordpress/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/categories/wordpress/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>初入wordpress</title>
-      <link>http://farwmarth.com/post/%E5%88%9D%E5%85%A5wordpress/</link>
+      <link>https://farwmarth.com/post/%E5%88%9D%E5%85%A5wordpress/</link>
       <pubDate>Fri, 28 Dec 2012 19:07:00 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E5%88%9D%E5%85%A5wordpress/</guid>
+      <guid>https://farwmarth.com/post/%E5%88%9D%E5%85%A5wordpress/</guid>
       <description>&lt;p&gt;刚开始玩网站，记录一下。多谢&lt;a href=&#34;http://www.litefeel.com&#34;&gt;litefeel&lt;/a&gt;的帮忙&lt;/p&gt;
-
 &lt;h2 id=&#34;申请域名&#34;&gt;申请域名&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;注册: &lt;code&gt;godaddy.com&lt;/code&gt; ,注册教程:&lt;a href=&#34;http://jingyan.baidu.com/article/414eccf63bb2ea6b421f0a47.html&#34; title=&#34;http://jingyan.baidu.com/article/414eccf63bb2ea6b421f0a47.html&#34;&gt;http://jingyan.baidu.com/article/414eccf63bb2ea6b421f0a47.html&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>

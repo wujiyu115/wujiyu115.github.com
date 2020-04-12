@@ -1,35 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>qiniu on farwmarth</title>
-    <link>http://farwmarth.com/tags/qiniu/</link>
+    <link>https://farwmarth.com/tags/qiniu/</link>
     <description>Recent content in qiniu on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sun, 12 Mar 2017 00:21:00 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/tags/qiniu/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/tags/qiniu/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>hexo图片迁移至七牛</title>
-      <link>http://farwmarth.com/post/hexo%E5%9B%BE%E7%89%87%E8%BF%81%E7%A7%BB%E8%87%B3%E4%B8%83%E7%89%9B/</link>
+      <link>https://farwmarth.com/post/hexo%E5%9B%BE%E7%89%87%E8%BF%81%E7%A7%BB%E8%87%B3%E4%B8%83%E7%89%9B/</link>
       <pubDate>Sun, 12 Mar 2017 00:21:00 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/hexo%E5%9B%BE%E7%89%87%E8%BF%81%E7%A7%BB%E8%87%B3%E4%B8%83%E7%89%9B/</guid>
-      <description>&lt;hr /&gt;
-
+      <guid>https://farwmarth.com/post/hexo%E5%9B%BE%E7%89%87%E8%BF%81%E7%A7%BB%E8%87%B3%E4%B8%83%E7%89%9B/</guid>
+      <description>&lt;hr&gt;
 &lt;p&gt;之前图片一直是直接到在page服务上的,最近发现图片越来越多,打算图片迁移到七牛上.&lt;/p&gt;
-
 &lt;p&gt;七牛可以cdn加速,每月有固定的免费流量,可以设置防盗链,可以自动压缩图片打水印。众多优点。对小博客来说真是有莫大的帮助。&lt;/p&gt;
-
 &lt;p&gt;七牛注册这些过程就略过不表了.前置工作&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;注册七牛账号并创建对象空间，充十块自定义域名&lt;/li&gt;
 &lt;li&gt;绑定&lt;a href=&#34;https://support.qiniu.com/hc/kb/article/68977&#34;&gt;加速域名&lt;/a&gt;，自定义域名必须为中国大陆已备案。推荐使用二级域名。&lt;/li&gt;
 &lt;li&gt;设置一下防盗链和图片瘦身
-&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2017/03/qiniu_steal.png&#34; alt=&#34;防盗链&#34; /&gt;&lt;/li&gt;
+&lt;img src=&#34;https://farwmarth.bestnewbee.com/images/uploads/2017/03/qiniu_steal.png&#34; alt=&#34;防盗链&#34;&gt;&lt;/li&gt;
 &lt;li&gt;获取AccessKey  SecretKey&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>

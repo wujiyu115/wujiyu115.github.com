@@ -12,13 +12,13 @@
     <meta property="og:image" content="/img/author.jpg"> 
     <meta name="title" content="域名解析的一些概念 - farwmarth" />
     <meta name="description" content="game"> 
-    <link rel="shortcut icon" href="http://farwmarth.com/img/favicon.ico" />
-    <link rel="apple-touch-icon" href="http://farwmarth.com/img/apple-touch-icon.png" />
-    <link rel="apple-touch-icon-precomposed" href="http://farwmarth.com/img/apple-touch-icon.png" />
-    <link href="http://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="https://farwmarth.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://farwmarth.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://farwmarth.com/img/apple-touch-icon.png" />
+    <link href="https://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
@@ -37,7 +37,7 @@
       <div class="header-inner"> <div class="site-meta  custom-logo ">
 
   <div class="custom-logo-site-title">
-    <a href="http://farwmarth.com/"  class="brand" rel="start">
+    <a href="https://farwmarth.com/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">farwmarth</span>
       <span class="logo-line-after"><i></i></span>
@@ -59,31 +59,31 @@
       
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/" rel="section">
+          <a href="https://farwmarth.com/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/about/" rel="section">
+          <a href="https://farwmarth.com/about/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/post/" rel="section">
+          <a href="https://farwmarth.com/post/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/douban/" rel="section">
+          <a href="https://farwmarth.com/douban/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />豆瓣
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/music/" rel="section">
+          <a href="https://farwmarth.com/music/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-music"></i> <br />音乐
           </a>
         </li>
@@ -115,7 +115,7 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="http://farwmarth.com/post/a%E8%AE%B0%E5%BD%95/" itemprop="url">
+        <a class="post-title-link" href="https://farwmarth.com/post/a%E8%AE%B0%E5%BD%95/" itemprop="url">
         域名解析的一些概念
         </a>
       </h1>
@@ -136,44 +136,47 @@
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">898 字 ~2分钟</span>
+<span class="leancloud-visitors-count">905 字 ~2分钟</span>
 </span>
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
-    <p>##概念
-+ A记录（IP指向）
+    <p>##概念</p>
+<ul>
+<li>
+<p>A记录（IP指向）
 用户可以在此设置子域名并指向到自己的目标主机地址上，从而实现通过域名找到服务器找到相应网页的功能。
 说明：指向的目标主机地址类型只能使用IP地址。</p>
-
-<ul>
-<li>CNAME（别名指向）</li>
+</li>
+<li>
+<p>CNAME（别名指向）</p>
+</li>
 </ul>
-
 <p>通常称别名指向。您可以为一个主机设置别名。相当于用子域名来代替ip地址，优点是如果ip地址变化，只需要改动子域名的解析，而不需要逐一改变ip地址解析。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">1. CNAME的目标主机地址只能使用主机名，不能使用IP地址；
+<pre><code>1. CNAME的目标主机地址只能使用主机名，不能使用IP地址；
 2. 主机名前不能有任何其他前缀，如：http://等是不被允许的；
-3. A记录优先于CNAME记录。即如果一个主机地址同时存在A记录和CNAME记录，则CNAME记录不生效。</pre></div>
+3. A记录优先于CNAME记录。即如果一个主机地址同时存在A记录和CNAME记录，则CNAME记录不生效。
+</code></pre>
 <ul>
 <li>MX记录</li>
 </ul>
-
 <p>邮件交换记录。用于将以该域名为结尾的电子邮件指向对应的邮件服务器以进行处理。如：用户所用的邮件是以域名mydomain.com为结尾的，则需要在管理界面中添加该域名的MX记录来处理所有以@mydomain.com结尾的邮件。
 说明：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">1. MX记录可以使用主机名或IP地址；
-2. MX记录可以通过设置优先级实现主辅服务器设置，&#34;优先级&#34;中的数字越小表示级别越高。也可以使用相同优先级达到负载均衡的目的；
-3. 如果在&#34;主机名&#34;中填入子域名则此MX记录只对该子域名生效。</pre></div>
+<pre><code>1. MX记录可以使用主机名或IP地址；
+2. MX记录可以通过设置优先级实现主辅服务器设置，&quot;优先级&quot;中的数字越小表示级别越高。也可以使用相同优先级达到负载均衡的目的；
+3. 如果在&quot;主机名&quot;中填入子域名则此MX记录只对该子域名生效。
+</code></pre>
 <ul>
 <li>NS记录（Name Server）</li>
 </ul>
-
 <p>是域名服务器记录。用来表明由哪台服务器对该域名进行解析。您注册域名时，总有默认的DNS服务器，每个注册的域名都是由一个DNS域名服务器来进行解析的，DNS服务器NS记录地址一般以以下的形式出现：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">ns1.domain.com
-ns2.domain.com</pre></div>
-<p>说明：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">1. &#34;优先级&#34;中的数字越小表示级别越高；
-2. &#34;IP地址/主机名&#34;中既可以填写IP地址，也可以填写像ns.mydomain.com这样的主机地址，但必须保证该主机地址有效。如，将 news.mydomain.com的NS记录指向到ns.mydomain.com，在设置NS记录的同时还需要设置ns.mydomain.com的 指向，否则NS记录将无法正常解析；
-3. NS记录优先于A记录。即，如果一个主机地址同时存在NS记录和A记录，则A记录不生效。这里的NS记录只对子域名生效。</pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">ns1.domain.com
+ns2.domain.com
+</code></pre></div><p>说明：</p>
+<pre><code>1. &quot;优先级&quot;中的数字越小表示级别越高；
+2. &quot;IP地址/主机名&quot;中既可以填写IP地址，也可以填写像ns.mydomain.com这样的主机地址，但必须保证该主机地址有效。如，将 news.mydomain.com的NS记录指向到ns.mydomain.com，在设置NS记录的同时还需要设置ns.mydomain.com的 指向，否则NS记录将无法正常解析；
+3. NS记录优先于A记录。即，如果一个主机地址同时存在NS记录和A记录，则A记录不生效。这里的NS记录只对子域名生效。
+</code></pre>
     </div>
     <footer class="post-footer">
      
@@ -181,7 +184,7 @@ ns2.domain.com</pre></div>
 
 <div class="post-tags">
      
-    <a href="http://farwmarth.com/tags/domain" rel="tag" title="domain">#domain#</a>
+    <a href="https://farwmarth.com/tags/domain" rel="tag" title="domain">#domain#</a>
     
 </div>
 
@@ -191,7 +194,7 @@ ns2.domain.com</pre></div>
      <div class="post-nav">
     <div class="post-nav-next post-nav-item">
     
-        <a href="http://farwmarth.com/post/%E5%9B%BD%E5%86%85%E6%BA%90/" rel="next" title="国内源">
+        <a href="https://farwmarth.com/post/%E5%9B%BD%E5%86%85%E6%BA%90/" rel="next" title="国内源">
         <i class="fa fa-chevron-left"></i> 国内源
         </a>
     
@@ -199,7 +202,7 @@ ns2.domain.com</pre></div>
 
     <div class="post-nav-prev post-nav-item">
     
-        <a href="http://farwmarth.com/post/%E5%8D%87%E7%BA%A7centos%E4%B8%8A%E7%9A%84python/" rel="prev" title="在CentOS 6.X 上升级 Python为 2.7">
+        <a href="https://farwmarth.com/post/%E5%8D%87%E7%BA%A7centos%E4%B8%8A%E7%9A%84python/" rel="prev" title="在CentOS 6.X 上升级 Python为 2.7">
         在CentOS 6.X 上升级 Python为 2.7 <i class="fa fa-chevron-right"></i>
         </a>
     
@@ -232,7 +235,7 @@ ns2.domain.com</pre></div>
     <section class="site-overview sidebar-panel  sidebar-panel-active ">
       <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image"
-        src="http://farwmarth.com/img/author.jpg"
+        src="https://farwmarth.com/img/author.jpg"
         alt="farwmarth" />
     <p class="site-author-name" itemprop="name">farwmarth</p>
     <p class="site-description motion-element" itemprop="description"> 
@@ -240,15 +243,15 @@ ns2.domain.com</pre></div>
 </div>
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
-      <a href="http://farwmarth.com/post/">
+      <a href="https://farwmarth.com/post/">
         <span class="site-state-item-count">100</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
     <div class="site-state-item site-state-categories">    
-        <a href="http://farwmarth.com/categories/">      
+        <a href="https://farwmarth.com/categories/">      
          
-        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-count">32</span>
         
         <span class="site-state-item-name">分类</span>
         
@@ -256,9 +259,9 @@ ns2.domain.com</pre></div>
     </div>
 
     <div class="site-state-item site-state-tags">
-        <a href="http://farwmarth.com/tags/">
+        <a href="https://farwmarth.com/tags/">
          
-        <span class="site-state-item-count">90</span>
+        <span class="site-state-item-count">91</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -293,12 +296,12 @@ ns2.domain.com</pre></div>
       <div class="footer-inner">
         <div class="copyright" >
   <span itemprop="copyrightYear">  &copy; 
-  2009 - 2019</span>
+  2009 - 2020</span>
   <span class="with-love"><i class="fa fa-heart"></i></span>
   <span class="author" itemprop="copyrightHolder">farwmarth</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.6</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.68.3</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
@@ -316,33 +319,33 @@ ns2.domain.com</pre></div>
   </div>
 
   
-<script type="text/javascript" src="http://tajs.qq.com/stats?sId=286131889" charset="UTF-8"></script> 
+
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
 </script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
-<script src="http://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
 
-<script src="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="https://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/utils.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/motion.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/affix.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/schemes/pisces.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/utils.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/motion.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/affix.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/schemes/pisces.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/scrollspy.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/post-details.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/toc.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/post-details.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/toc.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/bootstrap.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/bootstrap.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/search.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/search.js"></script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],

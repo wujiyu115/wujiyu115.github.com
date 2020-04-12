@@ -12,13 +12,13 @@
     <meta property="og:image" content="/img/author.jpg"> 
     <meta name="title" content="脚本自动化手册 - farwmarth" />
     <meta name="description" content="game"> 
-    <link rel="shortcut icon" href="http://farwmarth.com/img/favicon.ico" />
-    <link rel="apple-touch-icon" href="http://farwmarth.com/img/apple-touch-icon.png" />
-    <link rel="apple-touch-icon-precomposed" href="http://farwmarth.com/img/apple-touch-icon.png" />
-    <link href="http://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="https://farwmarth.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://farwmarth.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://farwmarth.com/img/apple-touch-icon.png" />
+    <link href="https://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
@@ -37,7 +37,7 @@
       <div class="header-inner"> <div class="site-meta  custom-logo ">
 
   <div class="custom-logo-site-title">
-    <a href="http://farwmarth.com/"  class="brand" rel="start">
+    <a href="https://farwmarth.com/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">farwmarth</span>
       <span class="logo-line-after"><i></i></span>
@@ -59,31 +59,31 @@
       
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/" rel="section">
+          <a href="https://farwmarth.com/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/about/" rel="section">
+          <a href="https://farwmarth.com/about/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/post/" rel="section">
+          <a href="https://farwmarth.com/post/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/douban/" rel="section">
+          <a href="https://farwmarth.com/douban/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />豆瓣
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/music/" rel="section">
+          <a href="https://farwmarth.com/music/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-music"></i> <br />音乐
           </a>
         </li>
@@ -115,7 +115,7 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="http://farwmarth.com/post/%E8%84%9A%E6%9C%AC%E8%87%AA%E5%8A%A8%E5%8C%96%E6%89%8B%E5%86%8C/" itemprop="url">
+        <a class="post-title-link" href="https://farwmarth.com/post/%E8%84%9A%E6%9C%AC%E8%87%AA%E5%8A%A8%E5%8C%96%E6%89%8B%E5%86%8C/" itemprop="url">
         脚本自动化手册
         </a>
       </h1>
@@ -136,57 +136,47 @@
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">1162 字 ~3分钟</span>
+<span class="leancloud-visitors-count">1150 字 ~3分钟</span>
 </span>
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
     <h2 id="同步文件">同步文件</h2>
-
-<h3 id="rsync-remote-synchronize">rsync(remote synchronize)</h3>
-
+<h3 id="rsyncremote-synchronize">rsync(remote synchronize)</h3>
 <p>实现远程同步功能的软件,它在同步文件的同时,可以保持原来文件的权限、时间、软硬链接等附加信息.</p>
-
 <h4 id="rsync认证方式">rsync认证方式</h4>
-
 <p>rsync有两种常用的认证方式，一种是<code>rsync-daemon</code>方式，另外一种是ssh方式。在平时使用过程，我们使用最多的是<code>rsync-daemon</code>方式</p>
-
 <h4 id="rsync服务器架设">rsync服务器架设</h4>
-
 <p>rsync的主要有以下三个配置文件<code>rsyncd.conf</code>(主配置文件)、<code>rsyncd.secrets</code>(密码文件)、<code>rsyncd.motd</code>(rysnc服务器信息)</p>
-
 <ul>
 <li>rsyncd.conf</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#从远程机器同步文件到本机</span>
 /usr/bin/rsync -rlptDvzHS --port<span style="color:#f92672">=</span><span style="color:#ae81ff">1111</span> --password-file<span style="color:#f92672">=</span>/etc/xx.password root@1.1.1.1::xx/bin/logic/   /data/xx/bin/logic/
 <span style="color:#75715e">#本机目录同步,--delete-excluded:目标目录中存在在源目录不存在删除,并且如果 --exclude指定的也会删除</span>
-rsync --delete-excluded -avzp --exclude<span style="color:#f92672">=</span>3rd  target/ des/</code></pre></div>
-<h3 id="scp-复制rsa密钥到远程主机">scp 复制rsa密钥到远程主机</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">scp  C:\Users\Administrator\.ssh\vps_Identity.pub user@example.com:/home/user/.ssh/vps_far.pub</pre></div>
-<h3 id="lrzsz-便携的ssh上传下载工具">lrzsz 便携的ssh上传下载工具</h3>
+rsync --delete-excluded -avzp --exclude<span style="color:#f92672">=</span>3rd  target/ des/
+
+</code></pre></div><h3 id="scp-复制rsa密钥到远程主机">scp 复制rsa密钥到远程主机</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">scp  C:\Users\Administrator\.ssh\vps_Identity.pub user@example.com:/home/user/.ssh/vps_far.pub
+</code></pre></div><h3 id="lrzsz-便携的ssh上传下载工具">lrzsz 便携的ssh上传下载工具</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">yum install lrzsz
 <span style="color:#75715e">#从服务器下载</span>
 sz download.txt
 <span style="color:#75715e">#从本机选择文件上传</span>
-rz</code></pre></div>
-<h2 id="压缩文件">压缩文件</h2>
-
+rz
+</code></pre></div><h2 id="压缩文件">压缩文件</h2>
 <h3 id="haozip">haozip</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&#34;D:\Program Files\HaoZip\HaoZipC.exe&#34; a -tzip crt.zip C:\Users\Administrator.PC-20150720QKHJ\AppData\Roaming\VanDyke\Config\*</pre></div>
-<h3 id="tar-压缩">tar 压缩</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">tar -zcvf $PackFile $Project &gt; /dev/null</pre></div>
-<h2 id="linux-切割文件">linux 切割文件</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&#34;D:\Program Files\HaoZip\HaoZipC.exe&#34; a -tzip crt.zip C:\Users\Administrator.PC-20150720QKHJ\AppData\Roaming\VanDyke\Config\*
+</code></pre></div><h3 id="tar-压缩">tar 压缩</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">tar -zcvf $PackFile $Project &gt; /dev/null
+</code></pre></div><h2 id="linux-切割文件">linux 切割文件</h2>
 <h3 id="split">split</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#按文件大小切割</span>
 split  -b 10m yybao_s1.out  yybao_s1_
 <span style="color:#75715e">#按文件行数切割</span>
-split -l <span style="color:#ae81ff">100</span> test.txt</code></pre></div>
-<h3 id="logrotate">logrotate</h3>
-
+split -l <span style="color:#ae81ff">100</span> test.txt
+</code></pre></div><h3 id="logrotate">logrotate</h3>
 <p>强制执行某个日志的切,如<code>log.config</code>是在<code>/etc/logrotate.d</code>下文件的文件名<code>logrotate -f  log.config</code></p>
-
 <h4 id="基本配置">基本配置</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">opt/clps_tomcat/logs/catalina.out <span style="color:#75715e">#要切割的日志</span>
 <span style="color:#f92672">{</span>
@@ -196,72 +186,61 @@ copytruncate <span style="color:#75715e">#复制日志后会清空在数据</spa
 nocompress   <span style="color:#75715e">##不压缩</span>
 rotate <span style="color:#ae81ff">15</span>   <span style="color:#75715e">##保留15次ratate日志</span>
 <span style="color:#75715e">#size=5MB # k,MB(M),GB(G)</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<h4 id="mac-下-logrotate-安装">mac 下 logrotate 安装</h4>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="mac-下-logrotate-安装">mac 下 logrotate 安装</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#执行</span>
 brew install logrotate
 <span style="color:#75715e">#.zshrc</span>
 export LOGROTATE_HOME<span style="color:#f92672">=</span>/usr/local/Cellar/logrotate/3.9.1/sbin
-export PATH<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>PATH<span style="color:#e6db74">}</span>:<span style="color:#e6db74">${</span>LOGROTATE_HOME<span style="color:#e6db74">}</span></code></pre></div>
-<h4 id="日志切割">日志切割</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">”/data/yxiii/bin/logs/*.out“
+export PATH<span style="color:#f92672">=</span><span style="color:#e6db74">${</span>PATH<span style="color:#e6db74">}</span>:<span style="color:#e6db74">${</span>LOGROTATE_HOME<span style="color:#e6db74">}</span>
+</code></pre></div><h4 id="日志切割">日志切割</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">”/data/yxiii/bin/logs/*.out“
 {
 size 10m
 dateext
 copytruncate
 nocompress
 rotate 20
-}</pre></div>
-<h2 id="linux-定时任务">linux  定时任务</h2>
-
+}
+</code></pre></div><h2 id="linux--定时任务">linux  定时任务</h2>
 <h3 id="at-命令">at 命令</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#明天四点执行shell.sh中的命令</span>
 at -f shell.sh <span style="color:#ae81ff">4</span> am tomorrow
-at -f /home/far/Develop/heros/code/server/trunk/bin/stop.sh  <span style="color:#ae81ff">4</span>:00 tomorrow
+at -f /home/far/Develop/heros/code/server/trunk/bin/stop.sh  4:00 tomorrow
 <span style="color:#75715e">#查看指定任务</span>
-at -c <span style="color:#ae81ff">8</span>
+at -c 8
 <span style="color:#75715e">#查看列表</span>
 atq
 <span style="color:#75715e">#删除指定任务</span>
-atrm <span style="color:#ae81ff">1</span></code></pre></div>
-<h3 id="crontab">crontab</h3>
-
+atrm 1
+</code></pre></div><h3 id="crontab">crontab</h3>
 <h4 id="crontab脚本目录">crontab脚本目录</h4>
-
 <ul>
 <li><code>/etc/crontab</code>: 这个文件负责安排由系统管理员制定的维护系统以及其他任务的crontab</li>
 <li><code>/etc/cron.d/</code>: 这个目录用来存放任何要执行的crontab文件或脚本</li>
 <li><code>/var/spool/cron/far</code>: 这个目录下存放的是每个用户（包括root）的crontab任务</li>
 </ul>
-
 <h4 id="crontab-服务查看">crontab 服务查看</h4>
-
 <ul>
 <li>启动服务: <code>/sbin/service crond start</code></li>
-<li>关闭服务:<code>/sbin/service crond stop</code></li>
+<li>关闭服务:<code>  /sbin/service crond stop</code></li>
 <li>重启服务: <code>/sbin/service crond restart</code></li>
 <li>重新载入配置: <code>/sbin/service crond reload</code></li>
 <li>查看服务状态: <code>/sbin/service crond status</code></li>
 </ul>
-
-<h4 id="crontab-选项">crontab  选项</h4>
-
+<h4 id="crontab--选项">crontab  选项</h4>
 <ul>
-<li><p>概要</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">crontab [ -u user ] file
-crontab [ -u user ] [ -i ] { -e | -l | -r }</pre></div></li>
-
-<li><p>-l:在控制台输出计划执行结果</p></li>
-
-<li><p>-r :移除指定的文件计划</p></li>
-
-<li><p>-e 编辑crontab默认配置文件</p></li>
-
-<li><p>-i : -r移除之前加上确认</p></li>
-
-<li><p>验证是否已删除 crontab 文件: <code>ls /var/spool/cron/crontabs</code></p></li>
+<li>概要</li>
 </ul>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">crontab [ -u user ] file
+crontab [ -u user ] [ -i ] { -e | -l | -r }
+</code></pre></div><ul>
+<li>-l:在控制台输出计划执行结果</li>
+<li>-r :移除指定的文件计划</li>
+<li>-e 编辑crontab默认配置文件</li>
+<li>-i : -r移除之前加上确认</li>
+<li>验证是否已删除 crontab 文件: <code>ls /var/spool/cron/crontabs</code></li>
+</ul>
 <h4 id="基本配置-1">基本配置</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">SHELL<span style="color:#f92672">=</span>/bin/bash
 PATH<span style="color:#f92672">=</span>/sbin:/bin:/usr/sbin:/usr/bin
@@ -277,17 +256,15 @@ HOME<span style="color:#f92672">=</span>/
 <span style="color:#75715e"># *  *  *  *  *  command to be executed</span>
 <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">8</span> <span style="color:#ae81ff">5</span> *  /Users/far/Develop/workdir/heros_codingnet/bin/stop.sh
 <span style="color:#ae81ff">43</span> <span style="color:#ae81ff">23</span> <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">5</span> *  /Users/far/Develop/workdir/heros_codingnet/bin/stop.sh
-<span style="color:#ae81ff">59</span> <span style="color:#ae81ff">23</span> <span style="color:#ae81ff">12</span> * * /bin/bash /root/stop_games.sh all</code></pre></div>
-<h2 id="实例">实例</h2>
-
+<span style="color:#ae81ff">59</span> <span style="color:#ae81ff">23</span> <span style="color:#ae81ff">12</span> * * /bin/bash /root/stop_games.sh all
+</code></pre></div><h2 id="实例">实例</h2>
 <h3 id="自动打包文件备份到指定目录">自动打包文件备份到指定目录</h3>
-
 <p>把<code>/data</code>下文件打包备份到<code>/data/backup</code>下以天为文件名,并清除七天以前的备份`
 增加计划任务</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">export EDITOR<span style="color:#f92672">=</span>vi
 crontab -e
-<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> * * * /data/bak.sh;</code></pre></div>
-<p>bak.sh文件内容如下:</p>
+<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> * * * /data/bak.sh;
+</code></pre></div><p>bak.sh文件内容如下:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>logs_dir<span style="color:#f92672">=</span>/data
 bak_dir<span style="color:#f92672">=</span>/data/backup
@@ -296,7 +273,8 @@ echo <span style="color:#e6db74">&#34;begining of tar&#34;</span>
 tar zcf $bak_dir/$bak_file.gz  $logs_dir/*.*
 echo <span style="color:#e6db74">&#34;clearing file.log&#34;</span>
 find $bak_dir -mtime +7 -exec rm -rf <span style="color:#f92672">{}</span> <span style="color:#ae81ff">\;</span>
-<span style="color:#75715e">#end</span></code></pre></div>
+<span style="color:#75715e">#end</span>
+</code></pre></div>
     </div>
     <footer class="post-footer">
      
@@ -304,7 +282,7 @@ find $bak_dir -mtime +7 -exec rm -rf <span style="color:#f92672">{}</span> <span
 
 <div class="post-tags">
      
-    <a href="http://farwmarth.com/tags/shell" rel="tag" title="shell">#shell#</a>
+    <a href="https://farwmarth.com/tags/shell" rel="tag" title="shell">#shell#</a>
     
 </div>
 
@@ -314,7 +292,7 @@ find $bak_dir -mtime +7 -exec rm -rf <span style="color:#f92672">{}</span> <span
      <div class="post-nav">
     <div class="post-nav-next post-nav-item">
     
-        <a href="http://farwmarth.com/post/vsftpd/" rel="next" title="vsftpd使用">
+        <a href="https://farwmarth.com/post/vsftpd/" rel="next" title="vsftpd使用">
         <i class="fa fa-chevron-left"></i> vsftpd使用
         </a>
     
@@ -322,7 +300,7 @@ find $bak_dir -mtime +7 -exec rm -rf <span style="color:#f92672">{}</span> <span
 
     <div class="post-nav-prev post-nav-item">
     
-        <a href="http://farwmarth.com/post/%E9%A9%BE%E8%80%83%E7%9F%A5%E8%AF%86%E7%82%B9/" rel="prev" title="驾考">
+        <a href="https://farwmarth.com/post/%E9%A9%BE%E8%80%83%E7%9F%A5%E8%AF%86%E7%82%B9/" rel="prev" title="驾考">
         驾考 <i class="fa fa-chevron-right"></i>
         </a>
     
@@ -355,7 +333,7 @@ find $bak_dir -mtime +7 -exec rm -rf <span style="color:#f92672">{}</span> <span
     <section class="site-overview sidebar-panel  sidebar-panel-active ">
       <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image"
-        src="http://farwmarth.com/img/author.jpg"
+        src="https://farwmarth.com/img/author.jpg"
         alt="farwmarth" />
     <p class="site-author-name" itemprop="name">farwmarth</p>
     <p class="site-description motion-element" itemprop="description"> 
@@ -363,15 +341,15 @@ find $bak_dir -mtime +7 -exec rm -rf <span style="color:#f92672">{}</span> <span
 </div>
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
-      <a href="http://farwmarth.com/post/">
+      <a href="https://farwmarth.com/post/">
         <span class="site-state-item-count">100</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
     <div class="site-state-item site-state-categories">    
-        <a href="http://farwmarth.com/categories/">      
+        <a href="https://farwmarth.com/categories/">      
          
-        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-count">32</span>
         
         <span class="site-state-item-name">分类</span>
         
@@ -379,9 +357,9 @@ find $bak_dir -mtime +7 -exec rm -rf <span style="color:#f92672">{}</span> <span
     </div>
 
     <div class="site-state-item site-state-tags">
-        <a href="http://farwmarth.com/tags/">
+        <a href="https://farwmarth.com/tags/">
          
-        <span class="site-state-item-count">90</span>
+        <span class="site-state-item-count">91</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -416,12 +394,12 @@ find $bak_dir -mtime +7 -exec rm -rf <span style="color:#f92672">{}</span> <span
       <div class="footer-inner">
         <div class="copyright" >
   <span itemprop="copyrightYear">  &copy; 
-  2009 - 2019</span>
+  2009 - 2020</span>
   <span class="with-love"><i class="fa fa-heart"></i></span>
   <span class="author" itemprop="copyrightHolder">farwmarth</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.6</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.68.3</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
@@ -439,33 +417,33 @@ find $bak_dir -mtime +7 -exec rm -rf <span style="color:#f92672">{}</span> <span
   </div>
 
   
-<script type="text/javascript" src="http://tajs.qq.com/stats?sId=286131889" charset="UTF-8"></script> 
+
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
 </script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
-<script src="http://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
 
-<script src="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="https://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/utils.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/motion.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/affix.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/schemes/pisces.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/utils.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/motion.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/affix.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/schemes/pisces.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/scrollspy.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/post-details.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/toc.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/post-details.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/toc.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/bootstrap.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/bootstrap.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/search.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/search.js"></script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],

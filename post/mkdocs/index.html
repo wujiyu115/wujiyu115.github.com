@@ -12,13 +12,13 @@
     <meta property="og:image" content="/img/author.jpg"> 
     <meta name="title" content="readthedocs切换到mkdocs - farwmarth" />
     <meta name="description" content="game"> 
-    <link rel="shortcut icon" href="http://farwmarth.com/img/favicon.ico" />
-    <link rel="apple-touch-icon" href="http://farwmarth.com/img/apple-touch-icon.png" />
-    <link rel="apple-touch-icon-precomposed" href="http://farwmarth.com/img/apple-touch-icon.png" />
-    <link href="http://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="https://farwmarth.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://farwmarth.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://farwmarth.com/img/apple-touch-icon.png" />
+    <link href="https://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
@@ -37,7 +37,7 @@
       <div class="header-inner"> <div class="site-meta  custom-logo ">
 
   <div class="custom-logo-site-title">
-    <a href="http://farwmarth.com/"  class="brand" rel="start">
+    <a href="https://farwmarth.com/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">farwmarth</span>
       <span class="logo-line-after"><i></i></span>
@@ -59,31 +59,31 @@
       
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/" rel="section">
+          <a href="https://farwmarth.com/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/about/" rel="section">
+          <a href="https://farwmarth.com/about/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/post/" rel="section">
+          <a href="https://farwmarth.com/post/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/douban/" rel="section">
+          <a href="https://farwmarth.com/douban/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />豆瓣
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/music/" rel="section">
+          <a href="https://farwmarth.com/music/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-music"></i> <br />音乐
           </a>
         </li>
@@ -115,7 +115,7 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="http://farwmarth.com/post/mkdocs/" itemprop="url">
+        <a class="post-title-link" href="https://farwmarth.com/post/mkdocs/" itemprop="url">
         readthedocs切换到mkdocs
         </a>
       </h1>
@@ -142,27 +142,23 @@
     </header>
     <div class="post-body" itemprop="articleBody">
     <p>之前把学习笔记用<code>sphinx</code>生成然后托管在<code>github</code>上,然后用<code>readthedocs</code>的<code>webhook</code>自动<code>build</code>文章数量渐多感觉排版拥挤.于是google了一下找了个替代品,那就就是这篇文章的主角<code>mkdocs</code></p>
-
 <h2 id="简介">简介</h2>
-
 <p><a href="https://github.com/mkdocs/mkdocs">mkdocs</a>是一个支持<code>markdown</code>语法的项目文档管理工具，结构很简单,一个<code>yml</code>配置文件管理文档结构和主题信息,<code>docs</code>目录则是项目文档.官方文档(<a href="http://www.mkdocs.org/">http://www.mkdocs.org/</a>)</p>
-
 <h3 id="新建工程">新建工程</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#安装mkdocs</span>
 pip install mkdocs
 <span style="color:#75715e">#新建工程目录</span>
 mkdocs new my-project
 <span style="color:#75715e">#切换到工程目录</span>
-cd my-project</code></pre></div>
-<p>工程目录如下:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">├── mkdocs.yml
+cd my-project
+</code></pre></div><p>工程目录如下:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">├── mkdocs.yml
 ├── docs
-│   ├── index.md</pre></div>
-<h3 id="启动">启动</h3>
+│   ├── index.md
+</code></pre></div><h3 id="启动">启动</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#启动服务器,默认端口是8000 Running at: http://127.0.0.1:8000/</span>
-mkdocs serve</code></pre></div>
-<p><img src="http://farwmarth.bestnewbee.com/images/first_mkdocs.png" alt="first_mkdocs" /></p>
-
+mkdocs serve
+</code></pre></div><p><img src="https://farwmarth.bestnewbee.com/images/first_mkdocs.png" alt="first_mkdocs"></p>
 <h3 id="所有命令">所有命令</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#生成html</span>
 mkdocs build
@@ -173,13 +169,12 @@ mkdocs gh-deploy -v
 <span style="color:#75715e">#markdown生成json文件</span>
 mkdocs json
 <span style="color:#75715e">#启动预览</span>
-mkdocs serve</code></pre></div>
-<h2 id="配置">配置</h2>
-
+mkdocs serve
+</code></pre></div><h2 id="配置">配置</h2>
 <p>我用的主题是<code>material</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pip install mkdocs-material</code></pre></div>
-<p>项目配置大概列了一,大致分为几部分：<code>项目信息</code>，<code>托管信息</code>，<code>版权信息</code>，<code>主题与文档目录</code>，<code>配色信息</code>,<code>额外插件</code>，还有就是<code>项目文档目录结构</code>有些配置与主题相关</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"># Project information
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pip install mkdocs-material
+</code></pre></div><p>项目配置大概列了一,大致分为几部分：<code>项目信息</code>，<code>托管信息</code>，<code>版权信息</code>，<code>主题与文档目录</code>，<code>配色信息</code>,<code>额外插件</code>，还有就是<code>项目文档目录结构</code>有些配置与主题相关</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># Project information
 site_name: farwmarth’s note
 site_author: &#39;farwmarth&#39;
 site_url: &#39;http://learndocs.farwmarth.com&#39;
@@ -220,13 +215,11 @@ pages:
     - &#39;编译过程&#39;: &#39;cplus/cplus4_complier.md&#39;
     - &#39;常量修饰符&#39;: &#39;cplus/cplus5_const.md&#39;
 - python:
-    - &#39;语言简介&#39;: &#39;python/py1_intro.md&#39;</pre></div>
-<h2 id="托管到github">托管到github</h2>
+    - &#39;语言简介&#39;: &#39;python/py1_intro.md&#39;
 
+</code></pre></div><h2 id="托管到github">托管到github</h2>
 <p>之前误认为<code>github</code>只能有一个<code>page</code>页,看了 <a href="https://help.github.com/articles/user-organization-and-project-pages/">官方</a>的介绍之后发现并非如此，有两种方式创建<code>page</code>页，一种是创建一个就<code>{username}.github.com</code>的库项目,另一种则是创建任意库项目可以在<code>setting</code>中<code>Launch automatic page generator</code>生成<code>gh-pages</code>分支，创建方式这里就不细说了,可以根据<a href="https://pages.github.com/">page官方</a>的引导去操作。</p>
-
 <p>这个表格是<code>username库项目</code>和<code>任意库项项目</code>对应的域名指向.</p>
-
 <table>
 <thead>
 <tr>
@@ -235,14 +228,12 @@ pages:
 <th>Location of the source files for building your Pages site</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>User Pages site</td>
 <td><code>username.github.io</code></td>
 <td><code>master</code></td>
 </tr>
-
 <tr>
 <td>Project Pages site owned by a <strong>user account</strong></td>
 <td>、</td>
@@ -250,16 +241,13 @@ pages:
 </tr>
 </tbody>
 </table>
-
 <p><code>username库项目</code>毫无疑问地址就是<code>username.github.io</code>,<code>任意库项项目</code>生成的工程页则是<code>username.github.io/projectname</code>.
 我现在的做法是在<code>username库项目</code>下的<code>CNAME</code>指向我的主域名<code>farwmarth.com</code>,<code>learndocs库项项目</code>的<code>CNAME</code>指向我的二级域名<code>learndocs.farwmarth.com</code>.</p>
-
 <p><code>dnspod</code>配置如下：</p>
-
-<p><img src="http://farwmarth.bestnewbee.com/images/mkdocscname.png" alt="mkdocscname" /></p>
-
+<p><img src="https://farwmarth.bestnewbee.com/images/mkdocscname.png" alt="mkdocscname"></p>
 <p>最后<code>learndocs库项项目</code>源文件托管到<code>master</code>分支,然后<code>mkdocs gh-deploy</code>把生成的<code>html</code>静态页面托管是<code>gh-pages</code>分支。注意<code>master</code>分支把生成的<code>site</code>目录忽略掉</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">echo <span style="color:#e6db74">&#34;site/&#34;</span> &gt;&gt; .gitignore</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">echo <span style="color:#e6db74">&#34;site/&#34;</span> &gt;&gt; .gitignore
+</code></pre></div>
     </div>
     <footer class="post-footer">
      
@@ -267,7 +255,7 @@ pages:
 
 <div class="post-tags">
      
-    <a href="http://farwmarth.com/tags/mkdocs" rel="tag" title="mkdocs">#mkdocs#</a>
+    <a href="https://farwmarth.com/tags/mkdocs" rel="tag" title="mkdocs">#mkdocs#</a>
     
 </div>
 
@@ -277,7 +265,7 @@ pages:
      <div class="post-nav">
     <div class="post-nav-next post-nav-item">
     
-        <a href="http://farwmarth.com/post/%E6%9D%83%E9%87%8D%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/" rel="next" title="权重随机算法">
+        <a href="https://farwmarth.com/post/%E6%9D%83%E9%87%8D%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/" rel="next" title="权重随机算法">
         <i class="fa fa-chevron-left"></i> 权重随机算法
         </a>
     
@@ -285,7 +273,7 @@ pages:
 
     <div class="post-nav-prev post-nav-item">
     
-        <a href="http://farwmarth.com/post/vsftpd/" rel="prev" title="vsftpd使用">
+        <a href="https://farwmarth.com/post/vsftpd/" rel="prev" title="vsftpd使用">
         vsftpd使用 <i class="fa fa-chevron-right"></i>
         </a>
     
@@ -318,7 +306,7 @@ pages:
     <section class="site-overview sidebar-panel  sidebar-panel-active ">
       <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image"
-        src="http://farwmarth.com/img/author.jpg"
+        src="https://farwmarth.com/img/author.jpg"
         alt="farwmarth" />
     <p class="site-author-name" itemprop="name">farwmarth</p>
     <p class="site-description motion-element" itemprop="description"> 
@@ -326,15 +314,15 @@ pages:
 </div>
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
-      <a href="http://farwmarth.com/post/">
+      <a href="https://farwmarth.com/post/">
         <span class="site-state-item-count">100</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
     <div class="site-state-item site-state-categories">    
-        <a href="http://farwmarth.com/categories/">      
+        <a href="https://farwmarth.com/categories/">      
          
-        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-count">32</span>
         
         <span class="site-state-item-name">分类</span>
         
@@ -342,9 +330,9 @@ pages:
     </div>
 
     <div class="site-state-item site-state-tags">
-        <a href="http://farwmarth.com/tags/">
+        <a href="https://farwmarth.com/tags/">
          
-        <span class="site-state-item-count">90</span>
+        <span class="site-state-item-count">91</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -379,12 +367,12 @@ pages:
       <div class="footer-inner">
         <div class="copyright" >
   <span itemprop="copyrightYear">  &copy; 
-  2009 - 2019</span>
+  2009 - 2020</span>
   <span class="with-love"><i class="fa fa-heart"></i></span>
   <span class="author" itemprop="copyrightHolder">farwmarth</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.6</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.68.3</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
@@ -402,33 +390,33 @@ pages:
   </div>
 
   
-<script type="text/javascript" src="http://tajs.qq.com/stats?sId=286131889" charset="UTF-8"></script> 
+
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
 </script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
-<script src="http://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
 
-<script src="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="https://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/utils.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/motion.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/affix.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/schemes/pisces.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/utils.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/motion.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/affix.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/schemes/pisces.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/scrollspy.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/post-details.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/toc.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/post-details.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/toc.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/bootstrap.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/bootstrap.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/search.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/search.js"></script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],

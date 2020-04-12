@@ -1,63 +1,54 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>soft on farwmarth</title>
-    <link>http://farwmarth.com/categories/soft/</link>
+    <link>https://farwmarth.com/categories/soft/</link>
     <description>Recent content in soft on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sun, 18 Dec 2016 23:20:39 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/categories/soft/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/categories/soft/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>国内源</title>
-      <link>http://farwmarth.com/post/%E5%9B%BD%E5%86%85%E6%BA%90/</link>
+      <link>https://farwmarth.com/post/%E5%9B%BD%E5%86%85%E6%BA%90/</link>
       <pubDate>Sun, 18 Dec 2016 23:20:39 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
+      <guid>https://farwmarth.com/post/%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
       <description>&lt;p&gt;&amp;ndash;&lt;/p&gt;
-
 &lt;p&gt;清华大学的源太全面了:
 &lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/&#34;&gt;https://mirrors.tuna.tsinghua.edu.cn/&lt;/a&gt;&lt;/p&gt;
-
 &lt;h1 id=&#34;pypi&#34;&gt;pypi&lt;/h1&gt;
-
 &lt;p&gt;镜像状态监控: &lt;a href=&#34;https://www.pypi-mirrors.org/&#34;&gt;https://www.pypi-mirrors.org/&lt;/a&gt;&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;豆瓣:&lt;a href=&#34;http://pypi.douban.com/&#34;&gt;http://pypi.douban.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;中国科学技术大学:&lt;a href=&#34;http://pypi.mirrors.ustc.edu.cn/&#34;&gt;http://pypi.mirrors.ustc.edu.cn/&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;阿里云:&lt;a href=&#34;http://mirrors.aliyun.com/pypi/simple&#34;&gt;http://mirrors.aliyun.com/pypi/simple&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;豆瓣:http://pypi.douban.com/&lt;/li&gt;
+&lt;li&gt;中国科学技术大学:http://pypi.mirrors.ustc.edu.cn/&lt;/li&gt;
+&lt;li&gt;阿里云:http://mirrors.aliyun.com/pypi/simple&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;临时使用:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;pip install -i https://&amp;lt;mirror&amp;gt;/simple &amp;lt;package&amp;gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;全局设置:
-添加到&lt;code&gt;~/.pip/pip.conf&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;[global]
-index-url = https://&amp;lt;mirror&amp;gt;/simple&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;pip install -i https://&amp;lt;mirror&amp;gt;/simple &amp;lt;package&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;全局设置: 
+添加到&lt;code&gt; ~/.pip/pip.conf&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;[global]
+index-url = https://&amp;lt;mirror&amp;gt;/simple
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
       <title>给Iphone换个自定义的铃声</title>
-      <link>http://farwmarth.com/post/%E7%BB%99iphone%E6%8D%A2%E4%B8%AA%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E9%93%83%E5%A3%B0/</link>
+      <link>https://farwmarth.com/post/%E7%BB%99iphone%E6%8D%A2%E4%B8%AA%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E9%93%83%E5%A3%B0/</link>
       <pubDate>Sun, 18 Dec 2016 12:20:39 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E7%BB%99iphone%E6%8D%A2%E4%B8%AA%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E9%93%83%E5%A3%B0/</guid>
+      <guid>https://farwmarth.com/post/%E7%BB%99iphone%E6%8D%A2%E4%B8%AA%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E9%93%83%E5%A3%B0/</guid>
       <description>&lt;p&gt;&amp;ndash;&lt;/p&gt;
-
 &lt;h1 id=&#34;概述&#34;&gt;概述&lt;/h1&gt;
-
 &lt;p&gt;iPhone的铃声格式是m4r格式，普通的mp3无法直接设置为铃声,所以需要使用铃声制作工具来转换,一般电话铃声的最长时长设置为40s,闹钟的时长最长为30s&lt;/p&gt;
-
 &lt;h1 id=&#34;制作工具&#34;&gt;制作工具&lt;/h1&gt;
-
 &lt;h2 id=&#34;ringer制作铃声&#34;&gt;Ringer制作铃声&lt;/h2&gt;
-
 &lt;p&gt;Ringer是Mac上制作铃声的工具,操作非常简单,将下载的歌曲播放到Ringer的主界面&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;大音轨用于精确控制,双击大的音轨可以从点击处开始播放,设置头尾的Preview可以听整个铃声,下面的小音轨用来快速拖动预览声音&lt;/li&gt;
 &lt;li&gt;可以制作两种:铃声和立名声音,没发现太大的区别只是最大时长不一样&lt;/li&gt;

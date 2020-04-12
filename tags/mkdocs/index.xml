@@ -1,26 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>mkdocs on farwmarth</title>
-    <link>http://farwmarth.com/tags/mkdocs/</link>
+    <link>https://farwmarth.com/tags/mkdocs/</link>
     <description>Recent content in mkdocs on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sun, 04 Sep 2016 12:04:15 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/tags/mkdocs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/tags/mkdocs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>readthedocs切换到mkdocs</title>
-      <link>http://farwmarth.com/post/mkdocs/</link>
+      <link>https://farwmarth.com/post/mkdocs/</link>
       <pubDate>Sun, 04 Sep 2016 12:04:15 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/mkdocs/</guid>
+      <guid>https://farwmarth.com/post/mkdocs/</guid>
       <description>&lt;p&gt;之前把学习笔记用&lt;code&gt;sphinx&lt;/code&gt;生成然后托管在&lt;code&gt;github&lt;/code&gt;上,然后用&lt;code&gt;readthedocs&lt;/code&gt;的&lt;code&gt;webhook&lt;/code&gt;自动&lt;code&gt;build&lt;/code&gt;文章数量渐多感觉排版拥挤.于是google了一下找了个替代品,那就就是这篇文章的主角&lt;code&gt;mkdocs&lt;/code&gt;&lt;/p&gt;
-
 &lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
-
 &lt;p&gt;&lt;a href=&#34;https://github.com/mkdocs/mkdocs&#34;&gt;mkdocs&lt;/a&gt;是一个支持&lt;code&gt;markdown&lt;/code&gt;语法的项目文档管理工具，结构很简单,一个&lt;code&gt;yml&lt;/code&gt;配置文件管理文档结构和主题信息,&lt;code&gt;docs&lt;/code&gt;目录则是项目文档.官方文档(&lt;a href=&#34;http://www.mkdocs.org/&#34;&gt;http://www.mkdocs.org/&lt;/a&gt;)&lt;/p&gt;</description>
     </item>
     

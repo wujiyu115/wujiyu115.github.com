@@ -1,31 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>广告 on farwmarth</title>
-    <link>http://farwmarth.com/tags/%E5%B9%BF%E5%91%8A/</link>
+    <link>https://farwmarth.com/tags/%E5%B9%BF%E5%91%8A/</link>
     <description>Recent content in 广告 on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Thu, 04 Dec 2014 15:18:21 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/tags/%E5%B9%BF%E5%91%8A/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/tags/%E5%B9%BF%E5%91%8A/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>广告拦截指南</title>
-      <link>http://farwmarth.com/post/%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E6%8C%87%E5%8D%97/</link>
+      <link>https://farwmarth.com/post/%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E6%8C%87%E5%8D%97/</link>
       <pubDate>Thu, 04 Dec 2014 15:18:21 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E6%8C%87%E5%8D%97/</guid>
-      <description>&lt;p&gt;&lt;span style=&#34;color: #ff0000;&#34;&gt;
-update:2016-09-14 20:13 更新pac,ADfree&lt;br /&gt;
-update:2014-12-04 10:42 更新插件&lt;br /&gt;
-&lt;/span&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;一-windows&#34;&gt;一 windows :&lt;/h2&gt;
-
+      <guid>https://farwmarth.com/post/%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E6%8C%87%E5%8D%97/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;一-windows-&#34;&gt;一 windows :&lt;/h2&gt;
 &lt;h3 id=&#34;1-chrome插件&#34;&gt;1. chrome插件:&lt;/h3&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.adtchrome.com/&#34; title=&#34;http://www.adtchrome.com/&#34;&gt;广告终结者&lt;/a&gt; (好像是抄袭的adblock )&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/%E8%A7%86%E9%A2%91%E5%B9%BF%E5%91%8A%E7%BB%88%E7%BB%93%E8%80%85/jlnekjcjlfbocaonidkndcobheipmmhj?utm_source=chrome-app-launcher-info-dialog&#34;&gt;视频广告终结者&lt;/a&gt;&lt;/li&gt;

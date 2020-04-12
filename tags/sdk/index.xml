@@ -1,28 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SDK on farwmarth</title>
-    <link>http://farwmarth.com/tags/sdk/</link>
+    <link>https://farwmarth.com/tags/sdk/</link>
     <description>Recent content in SDK on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Mon, 20 Oct 2014 17:01:00 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/tags/sdk/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/tags/sdk/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>游戏SDK接入的一些总结</title>
-      <link>http://farwmarth.com/post/%E6%B8%B8%E6%88%8Fsdk%E6%8E%A5%E5%85%A5%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93/</link>
+      <link>https://farwmarth.com/post/%E6%B8%B8%E6%88%8Fsdk%E6%8E%A5%E5%85%A5%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93/</link>
       <pubDate>Mon, 20 Oct 2014 17:01:00 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E6%B8%B8%E6%88%8Fsdk%E6%8E%A5%E5%85%A5%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93/</guid>
-      <description>&lt;p&gt;&lt;font color=&#34;red&#34;&gt; update: 2016-04-23     ysdk  &lt;/font&gt;&lt;/p&gt;
-
+      <guid>https://farwmarth.com/post/%E6%B8%B8%E6%88%8Fsdk%E6%8E%A5%E5%85%A5%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93/</guid>
+      <description>&lt;p&gt;&lt;!-- raw HTML omitted --&gt; update: 2016-04-23     ysdk  &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;h2 id=&#34;概念&#34;&gt;概念&lt;/h2&gt;
-
 &lt;p&gt;首先来澄清两个概念:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;CP&lt;/strong&gt;:Content Provider,中文翻译为内容提供商。通常指制作厂商&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;游戏sdk&lt;/strong&gt;: SDK是手游渠道提供的、集成了用户登录、充值通道、社区功能、社交分享功能、数据后台统计功能的一个功能模块&lt;/li&gt;

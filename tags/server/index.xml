@@ -1,27 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>server on farwmarth</title>
-    <link>http://farwmarth.com/tags/server/</link>
+    <link>https://farwmarth.com/tags/server/</link>
     <description>Recent content in server on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Mon, 28 Mar 2016 20:29:05 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/tags/server/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/tags/server/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>服务器的一次调优</title>
-      <link>http://farwmarth.com/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E4%B8%80%E6%AC%A1%E8%B0%83%E4%BC%98/</link>
+      <link>https://farwmarth.com/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E4%B8%80%E6%AC%A1%E8%B0%83%E4%BC%98/</link>
       <pubDate>Mon, 28 Mar 2016 20:29:05 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E4%B8%80%E6%AC%A1%E8%B0%83%E4%BC%98/</guid>
-      <description>&lt;p&gt;&lt;font color=&#34;red&#34;&gt;update 2016-5-12 10:32  优化结构&lt;/font&gt;
-&lt;font color=&#34;red&#34;&gt;update 2016-5-5 16:30  skynet调试&lt;/font&gt;&lt;/p&gt;
-
+      <guid>https://farwmarth.com/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E4%B8%80%E6%AC%A1%E8%B0%83%E4%BC%98/</guid>
+      <description>&lt;p&gt;&lt;!-- raw HTML omitted --&gt;update 2016-5-12 10:32  优化结构&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;update 2016-5-5 16:30  skynet调试&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;h2 id=&#34;历史遗留问题&#34;&gt;历史遗留问题&lt;/h2&gt;
-
 &lt;p&gt;这一项目的开发又接近尾声了,功能开发完毕,接下来就是运营方面的接入工作,还有就是服务器性能性的调优了.
 之前服务器一直存在两个比较严重的问题,一个是加载离线玩家.另外一个则是静态数据未共享,导致的服务器启动内存过高的问题.&lt;/p&gt;</description>
     </item>

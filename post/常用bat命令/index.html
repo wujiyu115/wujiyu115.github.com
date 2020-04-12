@@ -12,13 +12,13 @@
     <meta property="og:image" content="/img/author.jpg"> 
     <meta name="title" content="windows常用bat命令 - farwmarth" />
     <meta name="description" content="game"> 
-    <link rel="shortcut icon" href="http://farwmarth.com/img/favicon.ico" />
-    <link rel="apple-touch-icon" href="http://farwmarth.com/img/apple-touch-icon.png" />
-    <link rel="apple-touch-icon-precomposed" href="http://farwmarth.com/img/apple-touch-icon.png" />
-    <link href="http://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="https://farwmarth.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://farwmarth.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://farwmarth.com/img/apple-touch-icon.png" />
+    <link href="https://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
@@ -37,7 +37,7 @@
       <div class="header-inner"> <div class="site-meta  custom-logo ">
 
   <div class="custom-logo-site-title">
-    <a href="http://farwmarth.com/"  class="brand" rel="start">
+    <a href="https://farwmarth.com/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">farwmarth</span>
       <span class="logo-line-after"><i></i></span>
@@ -59,31 +59,31 @@
       
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/" rel="section">
+          <a href="https://farwmarth.com/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/about/" rel="section">
+          <a href="https://farwmarth.com/about/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/post/" rel="section">
+          <a href="https://farwmarth.com/post/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/douban/" rel="section">
+          <a href="https://farwmarth.com/douban/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />豆瓣
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/music/" rel="section">
+          <a href="https://farwmarth.com/music/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-music"></i> <br />音乐
           </a>
         </li>
@@ -115,7 +115,7 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="http://farwmarth.com/post/%E5%B8%B8%E7%94%A8bat%E5%91%BD%E4%BB%A4/" itemprop="url">
+        <a class="post-title-link" href="https://farwmarth.com/post/%E5%B8%B8%E7%94%A8bat%E5%91%BD%E4%BB%A4/" itemprop="url">
         windows常用bat命令
         </a>
       </h1>
@@ -139,7 +139,7 @@
   <span class="post-meta-item-text">分类：</span>
   
     <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-      <a href="http://farwmarth.com/categories/bat" itemprop="url" rel="index">
+      <a href="https://farwmarth.com/categories/bat" itemprop="url" rel="index">
         <span itemprop="name">bat</span>
       </a>
       &nbsp; 
@@ -160,67 +160,63 @@
     </header>
     <div class="post-body" itemprop="articleBody">
     <h2 id="完整脚本">完整脚本</h2>
-
 <h3 id="pandoc-rst-to-markdown">pandoc rst to markdown</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">set mddir<span style="color:#f92672">=</span>md
-<span style="color:#66d9ef">for</span> /f <span style="color:#e6db74">&#34;tokens=*&#34;</span> %%i in <span style="color:#f92672">(</span><span style="color:#e6db74">&#39;dir/s/b *.rst&#39;</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">do</span>  pandoc -s -t rst --toc %%i -o %mddir%/%%~ni.md</code></pre></div>
-<h3 id="快速删除大量文件">快速删除大量文件</h3>
+<span style="color:#66d9ef">for</span> /f <span style="color:#e6db74">&#34;tokens=*&#34;</span> %%i in <span style="color:#f92672">(</span><span style="color:#e6db74">&#39;dir/s/b *.rst&#39;</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">do</span>  pandoc -s -t rst --toc %%i -o %mddir%/%%~ni.md
+
+</code></pre></div><h3 id="快速删除大量文件">快速删除大量文件</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">del /f/s/q dirname&gt; nul
-rmdir /s/q dirname</code></pre></div>
-<h3 id="windows查看某个端口号被占用并结束此进程">windows查看某个端口号被占用并结束此进程</h3>
-
+rmdir /s/q dirname
+</code></pre></div><h3 id="windows查看某个端口号被占用并结束此进程">windows查看某个端口号被占用并结束此进程</h3>
 <h4 id="单条命令">单条命令:</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">FOR /F <span style="color:#e6db74">&#34;tokens=5 delims= &#34;</span> %P IN <span style="color:#f92672">(</span><span style="color:#e6db74">&#39;netstat -a -n -o ^|findstr :4000.*LISTENING&#39;</span><span style="color:#f92672">)</span> DO TaskKill.exe /PID %P /T /F</code></pre></div>
-<h4 id="分步过程">分步过程</h4>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">FOR /F <span style="color:#e6db74">&#34;tokens=5 delims= &#34;</span> %P IN <span style="color:#f92672">(</span><span style="color:#e6db74">&#39;netstat -a -n -o ^|findstr :4000.*LISTENING&#39;</span><span style="color:#f92672">)</span> DO TaskKill.exe /PID %P /T /F
+</code></pre></div><h4 id="分步过程">分步过程</h4>
 <ol>
 <li><code>netstat -ano |findstr 4000</code> :  //查看3306端口是否存在</li>
 <li><code>tasklist |findstr 3036</code>(PID号): //查看pid为3036的是什么程序在用</li>
 <li><code>taskkill /T /F /PID 3036</code> : 杀死pid为3036的所有进程包括子进程(/T参数)</li>
 </ol>
-
-<h3 id="右键添加打开ms-dos-bat">右键添加打开MS-DOS.bat</h3>
+<h3 id="右键添加打开ms-dosbat">右键添加打开MS-DOS.bat</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">@echo off
 reg add <span style="color:#e6db74">&#34;HKCR\*\shell\ms-dos&#34;</span> /ve /d ms-dos /f
 reg add <span style="color:#e6db74">&#34;HKCR\*\shell\ms-dos\command&#34;</span>  /ve /d <span style="color:#e6db74">&#34;cmd.exe /k cd %%1&#34;</span>  /f
 reg add <span style="color:#e6db74">&#34;HKCR\Folder\shell\ms-dos&#34;</span> /ve /d ms-dos /f
-reg add <span style="color:#e6db74">&#34;HKCR\Folder\shell\ms-dos\command&#34;</span> /ve /d <span style="color:#e6db74">&#34;cmd.exe /k cd %%1&#34;</span> /f</code></pre></div>
-<h3 id="批量改名">批量改名</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ren *.xml *.txt</code></pre></div>
-<h3 id="批量命令带过程">批量命令带过程</h3>
+reg add <span style="color:#e6db74">&#34;HKCR\Folder\shell\ms-dos\command&#34;</span> /ve /d <span style="color:#e6db74">&#34;cmd.exe /k cd %%1&#34;</span> /f
+</code></pre></div><h3 id="批量改名">批量改名</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ren *.xml *.txt
+</code></pre></div><h3 id="批量命令带过程">批量命令带过程</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">@echo off
-set num <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+set num <span style="color:#f92672">=</span> 0
 For /r  . %%i in <span style="color:#f92672">(</span>*.RAR<span style="color:#f92672">)</span> <span style="color:#66d9ef">do</span> <span style="color:#f92672">(</span>
-set /a num <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+set /a num <span style="color:#f92672">+=</span> 1
 echo %%i
 call echo 第 %%num%% 个文件处理成功
 ren %%i *.mp4<span style="color:#f92672">)</span>
 echo 共%num%个文件被处理成功
-pause&gt;nul</code></pre></div>
-<h3 id="清理svn目录中-svn">清理SVN目录中.SVN</h3>
+pause&gt;nul
+</code></pre></div><h3 id="清理svn目录中svn">清理SVN目录中.SVN</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">@echo On
 @Rem 删除SVN版本控制目录
 @PROMPT <span style="color:#f92672">[</span>Com<span style="color:#f92672">]</span>
 @for /r . %%a in <span style="color:#f92672">(</span>.<span style="color:#f92672">)</span> <span style="color:#66d9ef">do</span> @if exist <span style="color:#e6db74">&#34;%%a\.svn&#34;</span> rd /s /q <span style="color:#e6db74">&#34;%%a\.svn&#34;</span>
 @Rem <span style="color:#66d9ef">for</span> /r . %%a in <span style="color:#f92672">(</span>.<span style="color:#f92672">)</span> <span style="color:#66d9ef">do</span> @if exist <span style="color:#e6db74">&#34;%%a\.svn&#34;</span> @echo <span style="color:#e6db74">&#34;%%a\.svn&#34;</span>
 @echo Mission Completed.
-@pause</code></pre></div>
-<h3 id="显示自己的ip">显示自己的IP</h3>
+@pause
+</code></pre></div><h3 id="显示自己的ip">显示自己的IP</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">@echo off
 <span style="color:#66d9ef">for</span> /f <span style="color:#e6db74">&#34;tokens=15&#34;</span> %%i in <span style="color:#f92672">(</span><span style="color:#e6db74">&#39;ipconfig ^| find /i &#34;ip address&#34;&#39;</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">do</span> set ip<span style="color:#f92672">=</span>%%i
 echo %ip%
-pause</code></pre></div>
-<h3 id="删除-svn-注册表">删除 svn 注册表</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Windows Registry Editor Version <span style="color:#ae81ff">5</span>.00
+pause
+</code></pre></div><h3 id="删除-svn-注册表">删除 svn 注册表</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Windows Registry Editor Version 5.00
 <span style="color:#f92672">[</span>HKEY_LOCAL_MACHINE<span style="color:#ae81ff">\S</span>OFTWARE<span style="color:#ae81ff">\C</span>lasses<span style="color:#ae81ff">\F</span>older<span style="color:#ae81ff">\s</span>hell<span style="color:#ae81ff">\D</span>eleteSVN<span style="color:#f92672">]</span>
 @<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Delete SVN Folders&#34;</span>
 <span style="color:#f92672">[</span>HKEY_LOCAL_MACHINE<span style="color:#ae81ff">\S</span>OFTWARE<span style="color:#ae81ff">\C</span>lasses<span style="color:#ae81ff">\F</span>older<span style="color:#ae81ff">\s</span>hell<span style="color:#ae81ff">\D</span>eleteSVN<span style="color:#ae81ff">\c</span>ommand<span style="color:#f92672">]</span>
-@<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cmd.exe /c \&#34;TITLE Removing SVN Folders in %1 &amp;amp;&amp;amp; COLOR 9A &amp;amp;&amp;amp; FOR /r \&#34;%1\&#34; %%f IN (.svn) DO RD /s /q \&#34;%%f\&#34; \&#34;&#34;</span></code></pre></div>
-<h2 id="bat写法备忘">bat写法备忘</h2>
-
+@<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cmd.exe /c \&#34;TITLE Removing SVN Folders in %1 &amp;amp;&amp;amp; COLOR 9A &amp;amp;&amp;amp; FOR /r \&#34;%1\&#34; %%f IN (.svn) DO RD /s /q \&#34;%%f\&#34; \&#34;&#34;</span>
+</code></pre></div><h2 id="bat写法备忘">bat写法备忘</h2>
 <h3 id="删除自身">删除自身</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">del %0</code></pre></div>
-<h3 id="查找字符串位置">查找字符串位置</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">del %0
+</code></pre></div><h3 id="查找字符串位置">查找字符串位置</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Setlocal ENABLEDELAYEDEXPANSION
 
 set str1<span style="color:#f92672">=</span>This is a test string
@@ -228,15 +224,15 @@ set ch1<span style="color:#f92672">=</span>t
 set str<span style="color:#f92672">=</span>%str1%
 :next
 <span style="color:#66d9ef">if</span> not <span style="color:#e6db74">&#34;%str%&#34;</span><span style="color:#f92672">==</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">(</span>
-set /a num<span style="color:#f92672">+=</span><span style="color:#ae81ff">1</span>
+set /a num<span style="color:#f92672">+=</span>1
 <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#34;!str:~0,1!&#34;</span><span style="color:#f92672">==</span><span style="color:#e6db74">&#34;%ch1%&#34;</span> goto last
 set <span style="color:#e6db74">&#34;str=%str:~1%&#34;</span>
 goto next
 <span style="color:#f92672">)</span>
-set /a num<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+set /a num<span style="color:#f92672">=</span>0
 :last
-echo %num%</code></pre></div>
-<h3 id="bat-批处理-取年-月-日-时-分-秒-毫秒">bat 批处理－取年、月、日、时、分、秒、毫秒</h3>
+echo %num%
+</code></pre></div><h3 id="bat-批处理取年月日时分秒毫秒">bat 批处理－取年、月、日、时、分、秒、毫秒</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">取年份：echo %date:~0,4%
 取月份：echo %date:~5,2%
 取日期：echo %date:~8,2%
@@ -244,13 +240,12 @@ echo %num%</code></pre></div>
 取小时：echo %time:~0,2%
 取分钟：echo %time:~3,2%
 取秒：      echo %time:~6,2%
-取毫秒：echo %time:~9,2%</code></pre></div>
-<h3 id="余数运算符">余数运算符%</h3>
-
+取毫秒：echo %time:~9,2%
+</code></pre></div><h3 id="余数运算符">余数运算符%</h3>
 <p>在批处理程序中必须写成%%</p>
-
 <h3 id="去除字符串前面的零">去除字符串前面的零</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">set /a m<span style="color:#f92672">=</span>%m:*0<span style="color:#f92672">=</span>%</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">set /a m<span style="color:#f92672">=</span>%m:*0<span style="color:#f92672">=</span>%
+</code></pre></div>
     </div>
     <footer class="post-footer">
      
@@ -258,7 +253,7 @@ echo %num%</code></pre></div>
 
 <div class="post-tags">
      
-    <a href="http://farwmarth.com/tags/bat" rel="tag" title="bat">#bat#</a>
+    <a href="https://farwmarth.com/tags/bat" rel="tag" title="bat">#bat#</a>
     
 </div>
 
@@ -268,7 +263,7 @@ echo %num%</code></pre></div>
      <div class="post-nav">
     <div class="post-nav-next post-nav-item">
     
-        <a href="http://farwmarth.com/post/%E5%9B%9E%E5%BD%92/" rel="next" title="回归">
+        <a href="https://farwmarth.com/post/%E5%9B%9E%E5%BD%92/" rel="next" title="回归">
         <i class="fa fa-chevron-left"></i> 回归
         </a>
     
@@ -276,7 +271,7 @@ echo %num%</code></pre></div>
 
     <div class="post-nav-prev post-nav-item">
     
-        <a href="http://farwmarth.com/post/%E5%85%BB%E4%BA%86%E5%87%A0%E5%A4%A9%E5%96%B5/" rel="prev" title="养了几天喵">
+        <a href="https://farwmarth.com/post/%E5%85%BB%E4%BA%86%E5%87%A0%E5%A4%A9%E5%96%B5/" rel="prev" title="养了几天喵">
         养了几天喵 <i class="fa fa-chevron-right"></i>
         </a>
     
@@ -309,7 +304,7 @@ echo %num%</code></pre></div>
     <section class="site-overview sidebar-panel  sidebar-panel-active ">
       <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image"
-        src="http://farwmarth.com/img/author.jpg"
+        src="https://farwmarth.com/img/author.jpg"
         alt="farwmarth" />
     <p class="site-author-name" itemprop="name">farwmarth</p>
     <p class="site-description motion-element" itemprop="description"> 
@@ -317,15 +312,15 @@ echo %num%</code></pre></div>
 </div>
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
-      <a href="http://farwmarth.com/post/">
+      <a href="https://farwmarth.com/post/">
         <span class="site-state-item-count">100</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
     <div class="site-state-item site-state-categories">    
-        <a href="http://farwmarth.com/categories/">      
+        <a href="https://farwmarth.com/categories/">      
          
-        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-count">32</span>
         
         <span class="site-state-item-name">分类</span>
         
@@ -333,9 +328,9 @@ echo %num%</code></pre></div>
     </div>
 
     <div class="site-state-item site-state-tags">
-        <a href="http://farwmarth.com/tags/">
+        <a href="https://farwmarth.com/tags/">
          
-        <span class="site-state-item-count">90</span>
+        <span class="site-state-item-count">91</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -370,12 +365,12 @@ echo %num%</code></pre></div>
       <div class="footer-inner">
         <div class="copyright" >
   <span itemprop="copyrightYear">  &copy; 
-  2009 - 2019</span>
+  2009 - 2020</span>
   <span class="with-love"><i class="fa fa-heart"></i></span>
   <span class="author" itemprop="copyrightHolder">farwmarth</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.6</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.68.3</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
@@ -393,33 +388,33 @@ echo %num%</code></pre></div>
   </div>
 
   
-<script type="text/javascript" src="http://tajs.qq.com/stats?sId=286131889" charset="UTF-8"></script> 
+
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
 </script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
-<script src="http://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
 
-<script src="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="https://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/utils.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/motion.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/affix.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/schemes/pisces.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/utils.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/motion.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/affix.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/schemes/pisces.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/scrollspy.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/post-details.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/toc.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/post-details.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/toc.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/bootstrap.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/bootstrap.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/search.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/search.js"></script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],

@@ -1,30 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>教你瞎折腾 on farwmarth</title>
-    <link>http://farwmarth.com/tags/%E6%95%99%E4%BD%A0%E7%9E%8E%E6%8A%98%E8%85%BE/</link>
+    <link>https://farwmarth.com/tags/%E6%95%99%E4%BD%A0%E7%9E%8E%E6%8A%98%E8%85%BE/</link>
     <description>Recent content in 教你瞎折腾 on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Fri, 22 Jan 2016 17:41:51 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/tags/%E6%95%99%E4%BD%A0%E7%9E%8E%E6%8A%98%E8%85%BE/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/tags/%E6%95%99%E4%BD%A0%E7%9E%8E%E6%8A%98%E8%85%BE/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>谁点谁怀孕之代码解析</title>
-      <link>http://farwmarth.com/post/%E8%B0%81%E7%82%B9%E8%B0%81%E6%80%80%E5%AD%95%E4%B9%8B%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90/</link>
+      <link>https://farwmarth.com/post/%E8%B0%81%E7%82%B9%E8%B0%81%E6%80%80%E5%AD%95%E4%B9%8B%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90/</link>
       <pubDate>Fri, 22 Jan 2016 17:41:51 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E8%B0%81%E7%82%B9%E8%B0%81%E6%80%80%E5%AD%95%E4%B9%8B%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90/</guid>
+      <guid>https://farwmarth.com/post/%E8%B0%81%E7%82%B9%E8%B0%81%E6%80%80%E5%AD%95%E4%B9%8B%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90/</guid>
       <description>&lt;p&gt;最近又发现有新的崩溃代码了,打开页面,内存就会被榨干.回想之前也有过特殊字符使iphone白屏的情况.收集一下玩玩.&lt;/p&gt;
-
 &lt;h2 id=&#34;iphone调到1970年变砖&#34;&gt;iPhone调到1970年变砖&lt;/h2&gt;
-
 &lt;h4 id=&#34;触发bug条件与表现&#34;&gt;触发bug条件与表现&lt;/h4&gt;
-
 &lt;p&gt;满足以下条件，『时间回归』bug被触发：&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;系统版本：iOS 8.0 ~ iOS 9.3 beta 3&lt;/li&gt;
 &lt;li&gt;硬件设备：搭载64位处理器的设备（即处理器为A7~A9X的设备）&lt;/li&gt;

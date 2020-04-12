@@ -1,22 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>libgdx on farwmarth</title>
-    <link>http://farwmarth.com/categories/libgdx/</link>
+    <link>https://farwmarth.com/categories/libgdx/</link>
     <description>Recent content in libgdx on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Fri, 28 Feb 2014 13:42:06 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/categories/libgdx/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/categories/libgdx/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>libgdx字体渲染选择方案</title>
-      <link>http://farwmarth.com/post/libgdx%E5%AD%97%E4%BD%93%E6%B8%B2%E6%9F%93%E9%80%89%E6%8B%A9%E6%96%B9%E6%A1%88/</link>
+      <link>https://farwmarth.com/post/libgdx%E5%AD%97%E4%BD%93%E6%B8%B2%E6%9F%93%E9%80%89%E6%8B%A9%E6%96%B9%E6%A1%88/</link>
       <pubDate>Fri, 28 Feb 2014 13:42:06 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/libgdx%E5%AD%97%E4%BD%93%E6%B8%B2%E6%9F%93%E9%80%89%E6%8B%A9%E6%96%B9%E6%A1%88/</guid>
+      <guid>https://farwmarth.com/post/libgdx%E5%AD%97%E4%BD%93%E6%B8%B2%E6%9F%93%E9%80%89%E6%8B%A9%E6%96%B9%E6%A1%88/</guid>
       <description>&lt;p&gt;最近在优化一下游戏中内的字体渲染方案。
 找了下资料发现渲染方案就两种。一种是使用ttf，动态去生成纹理渲染.第二种是采用位图字体.两种方案各有利弊.第一种方案性能损耗比较大,在libgdx的FreeTypeFontGenerator中会每次都重新生成纹理。如果界面上Label数量增多,&lt;/p&gt;</description>
     </item>

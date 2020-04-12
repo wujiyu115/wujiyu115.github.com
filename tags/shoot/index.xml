@@ -1,31 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>shoot on farwmarth</title>
-    <link>http://farwmarth.com/tags/shoot/</link>
+    <link>https://farwmarth.com/tags/shoot/</link>
     <description>Recent content in shoot on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Mon, 16 Sep 2013 17:40:15 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/tags/shoot/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/tags/shoot/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>摄影笔记 摘录</title>
-      <link>http://farwmarth.com/post/%E6%91%84%E5%BD%B1%E7%AC%94%E8%AE%B0-%E6%91%98%E5%BD%95/</link>
+      <link>https://farwmarth.com/post/%E6%91%84%E5%BD%B1%E7%AC%94%E8%AE%B0-%E6%91%98%E5%BD%95/</link>
       <pubDate>Mon, 16 Sep 2013 17:40:15 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E6%91%84%E5%BD%B1%E7%AC%94%E8%AE%B0-%E6%91%98%E5%BD%95/</guid>
+      <guid>https://farwmarth.com/post/%E6%91%84%E5%BD%B1%E7%AC%94%E8%AE%B0-%E6%91%98%E5%BD%95/</guid>
       <description>&lt;h2 id=&#34;一-相机分类&#34;&gt;一 相机分类:&lt;/h2&gt;
-
 &lt;p&gt;&lt;strong&gt;一 按取景系统分 :&lt;/strong&gt;&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;平视旁轴取景相机 (人眼与ccd感光器会有视差)&lt;br /&gt;
-&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/09/image8.png&#34; alt=&#34;image&#34; /&gt;&lt;/li&gt;
-&lt;li&gt;单反(无视差)&lt;br /&gt;
-&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/09/image9.png&#34; alt=&#34;image&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;平视旁轴取景相机 (人眼与ccd感光器会有视差)&lt;br&gt;
+&lt;img src=&#34;https://farwmarth.bestnewbee.com/images/uploads/2013/09/image8.png&#34; alt=&#34;image&#34;&gt;&lt;/li&gt;
+&lt;li&gt;单反(无视差)&lt;br&gt;
+&lt;img src=&#34;https://farwmarth.bestnewbee.com/images/uploads/2013/09/image9.png&#34; alt=&#34;image&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     

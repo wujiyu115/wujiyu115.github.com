@@ -12,13 +12,13 @@
     <meta property="og:image" content="/img/author.jpg"> 
     <meta name="title" content="redis初探 - farwmarth" />
     <meta name="description" content="game"> 
-    <link rel="shortcut icon" href="http://farwmarth.com/img/favicon.ico" />
-    <link rel="apple-touch-icon" href="http://farwmarth.com/img/apple-touch-icon.png" />
-    <link rel="apple-touch-icon-precomposed" href="http://farwmarth.com/img/apple-touch-icon.png" />
-    <link href="http://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="https://farwmarth.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://farwmarth.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://farwmarth.com/img/apple-touch-icon.png" />
+    <link href="https://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
@@ -37,7 +37,7 @@
       <div class="header-inner"> <div class="site-meta  custom-logo ">
 
   <div class="custom-logo-site-title">
-    <a href="http://farwmarth.com/"  class="brand" rel="start">
+    <a href="https://farwmarth.com/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">farwmarth</span>
       <span class="logo-line-after"><i></i></span>
@@ -59,31 +59,31 @@
       
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/" rel="section">
+          <a href="https://farwmarth.com/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/about/" rel="section">
+          <a href="https://farwmarth.com/about/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/post/" rel="section">
+          <a href="https://farwmarth.com/post/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/douban/" rel="section">
+          <a href="https://farwmarth.com/douban/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />豆瓣
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/music/" rel="section">
+          <a href="https://farwmarth.com/music/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-music"></i> <br />音乐
           </a>
         </li>
@@ -115,7 +115,7 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="http://farwmarth.com/post/redis%E5%88%9D%E6%8E%A2/" itemprop="url">
+        <a class="post-title-link" href="https://farwmarth.com/post/redis%E5%88%9D%E6%8E%A2/" itemprop="url">
         redis初探
         </a>
       </h1>
@@ -136,13 +136,12 @@
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">12451 字 ~25分钟</span>
+<span class="leancloud-visitors-count">12420 字 ~25分钟</span>
 </span>
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
     <h2 id="安装">安装</h2>
-
 <p><a href="http://redis.io/">http://redis.io/</a></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#安装</span>
 brew install redis-server
@@ -156,21 +155,20 @@ redis-server --version
 redis-cli
 ping PONG
 <span style="color:#75715e">#关闭</span>
-redis-cli shutdown</code></pre></div>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">To have launchd start redis at login:
+redis-cli shutdown
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">To have launchd start redis at login:
   ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
 Then to load redis now:
   launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
 Or, if you don&#39;t want/need launchctl, you can just run:
-  redis-server /usr/local/etc/redis.conf</pre></div>
-<p>ubuntu 默认位置:
+  redis-server /usr/local/etc/redis.conf
+
+</code></pre></div><p>ubuntu 默认位置:
 <code>/etc/redis/redis.conf</code></p>
-
 <h2 id="配置详解">配置详解</h2>
-
 <p><a href="http://www.cnblogs.com/tmpt/p/redis_conf_detail_annotation.html">http://www.cnblogs.com/tmpt/p/redis_conf_detail_annotation.html</a>
 基于这篇修改</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"># redis version 3.0.7
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># redis version 3.0.7
 
 # 1k =&gt; 1000 bytes
 # 1kb =&gt; 1024 bytes
@@ -485,54 +483,48 @@ client-output-buffer-limit pubsub 32mb 8mb 60
 hz 10
 
 # 当child进程在rewrite AOF文件，如果这个选项是yes，那么这个file每32MB会写fsync()。这个是保证增量写硬盘而防止写硬盘时I/O突增。
-aof-rewrite-incremental-fsync yes</pre></div>
-<h2 id="参考手册">参考手册</h2>
+aof-rewrite-incremental-fsync yes
 
+</code></pre></div><h2 id="参考手册">参考手册</h2>
 <p><a href="http://redis.readthedocs.org/en/2.4/index.html">http://redis.readthedocs.org/en/2.4/index.html</a>
 <a href="http://redisdoc.com/">http://redisdoc.com/</a></p>
-
 <h3 id="key值">key值</h3>
-
 <p>key值用二进制是安全的,但是太长的key值太消耗内存，太短的key值不易阅读,”object-type:id:field”可以用这种形式来标识</p>
-
 <ul>
 <li>del <code>del mykey</code> 删除给定的一个或多个 key，不存在的 key 会被忽略，返回值：被删除 key 的数量</li>
-<li>dump    <code>dump mykey</code>序列化给定 key，返回被序列化的值，使用 restore 命令可以将这个值反序列化为 redis 键</li>
-<li>exists  <code>exists mykey</code>检查给定 key 是否存在,返回值1或者0</li>
-
-<li><p>expire  <code>expire mykey  60</code>为给定key设置有效时间,单位秒</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&gt; set key some-value
+<li>dump    <code>dump mykey </code>序列化给定 key，返回被序列化的值，使用 restore 命令可以将这个值反序列化为 redis 键</li>
+<li>exists  <code>exists mykey </code>检查给定 key 是否存在,返回值1或者0</li>
+<li>expire  <code>expire mykey  60</code>为给定key设置有效时间,单位秒</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&gt; set key some-value
 OK
 &gt; expire key 5
 (integer) 1
 &gt; get key (immediately)
 &#34;some-value&#34;
 &gt; get key (after some time)
-(nil)</pre></div></li>
-
-<li><p>expireat    <code>expire mykey  1355292000</code>  这个key将在2012.12.12过期.为给定key设置有效时间，接受时间戳timestamp</p></li>
-
-<li><p>keys    <code>keys *</code>查找所有符合给定模式 pattern 的 key;keys * 匹配数据库中所有 key；keys h?llo 匹配 hello，hallo等。keys h[ae]llo匹配hello和hallo</p></li>
-
-<li><p>migrate 将 key 原子性地从当前实例传送到目标实例的指定数据库上,一旦传送成功,  key 保证会出现在目标实例上,而当前实例上的 key 会被删除.执行的时候会阻塞进行迁移的两个实例.KEYS的速度非常快，但在一个大的数据库中使用它仍然可能造成性能问题，如果你需要从一个数据集中查找特定的key，你最好还是用集合(Set)</p></li>
-
-<li><p>move  <code>move song 1</code># 将song移动到数据库1.  将当前数据库的 key 移动到给定的数据库 db当中.因为两个数据库有相同的key，MOVE失败</p></li>
-
-<li><p>object  从内部察看给定 key 的 redis 对象<br />
-object命令有多个子命令：</p>
-
+(nil)
+</code></pre></div><ul>
+<li>expireat    <code>expire mykey  1355292000 </code>  这个key将在2012.12.12过期.为给定key设置有效时间，接受时间戳timestamp</li>
+<li>keys    <code>keys *</code>查找所有符合给定模式 pattern 的 key;keys * 匹配数据库中所有 key；keys h?llo 匹配 hello，hallo等。keys h[ae]llo匹配hello和hallo</li>
+<li>migrate 将 key 原子性地从当前实例传送到目标实例的指定数据库上,一旦传送成功,  key 保证会出现在目标实例上,而当前实例上的 key 会被删除.执行的时候会阻塞进行迁移的两个实例.KEYS的速度非常快，但在一个大的数据库中使用它仍然可能造成性能问题，如果你需要从一个数据集中查找特定的key，你最好还是用集合(Set)</li>
+<li>move  <code>move song 1  </code># 将song移动到数据库1.  将当前数据库的 key 移动到给定的数据库 db当中.因为两个数据库有相同的key，MOVE失败</li>
+<li>object  从内部察看给定 key 的 redis 对象<br>
+object命令有多个子命令：
 <ul>
-<li>object refcount <key>返回给定key引用所储存的值的次数。此命令主要用于除错。</li>
-<li>object encoding <key>返回给定key锁储存的值所使用的内部表示(representation)。</li>
-<li>object idletime <key>返回给定key自储存以来的空转时间(idle， 没有被读取也没有被写入)，以秒为单位。<br />
+<li>object refcount <!-- raw HTML omitted -->返回给定key引用所储存的值的次数。此命令主要用于除错。</li>
+<li>object encoding <!-- raw HTML omitted -->返回给定key锁储存的值所使用的内部表示(representation)。</li>
+<li>object idletime <!-- raw HTML omitted -->返回给定key自储存以来的空转时间(idle， 没有被读取也没有被写入)，以秒为单位。<br>
 对象可以以多种方式编码：</li>
 <li>字符串可以被编码为raw(一般字符串)或int(用字符串表示64位数字是为了节约空间)。</li>
 <li>列表可以被编码为ziplist或linkedlist。ziplist是为节约大小较小的列表空间而作的特殊表示。</li>
 <li>集合可以被编码为intset或者hashtable。intset是只储存数字的小集合的特殊表示。</li>
 <li>哈希表可以编码为zipmap或者hashtable。zipmap是小哈希表的特殊表示。</li>
-
-<li><p>有序集合可以被编码为ziplist或者skiplist格式。ziplist用于表示小的有序集合，而skiplist则用于表示任何大小的有序集合。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">redis&gt; set game &#34;cod&#34;  # 设置一个字符串
+<li>有序集合可以被编码为ziplist或者skiplist格式。ziplist用于表示小的有序集合，而skiplist则用于表示任何大小的有序集合。</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">redis&gt; set game &#34;cod&#34;  # 设置一个字符串
 ok
 redis&gt; object refcount game  # 只有一个引用
 (integer) 1
@@ -551,58 +543,42 @@ redis&gt; object encoding phone
 redis&gt; set age 20  # 短数字被编码为int
 ok
 redis&gt; object encoding age
-&#34;int&#34;</pre></div></li>
-</ul></li>
-
-<li><p>persist <code>persist mykey</code> 移除给定 key 的有效时间</p></li>
-
-<li><p>pexpire  <code>pexpire mykey 1000</code>以毫秒为单位设置 key 的有效时间 (Available since 2.6.0)</p></li>
-
-<li><p>pexpireat   <code>pexpireat mykey 1000</code>以毫秒为单位设置 key 的有效时间戳(timestamp)(Available since 2.6.0)</p></li>
-
-<li><p>pttl  <code>pttl mykey</code>  以毫秒为单位返回key的剩余有效时间(Available since 2.6.0)</p></li>
-
-<li><p>randomkey  <code>randomkey</code> 从当前数据库中随机返回(已使用的)一个key</p></li>
-
-<li><p>rename <code>rename mykey mykey1</code> 将key改名</p></li>
-
-<li><p>renamenx     <code>rename mykey newkey</code>当且仅当 newkey 不存在时,将 key 改名为 newkey</p></li>
-
-<li><p>restore  <code>restore mykey</code>反序列化给定的序列化值，并将它和给定的 key 关联</p></li>
-
-<li><p>scan    `` 增量迭代 Available since 2.8.0()</p></li>
-
-<li><p><strong>sort</strong>    <code>sor mylist</code>返回或保存给定列表、集合、有序集合 key 中经过排序的元素,默认会返回该列表值的递增(从小到大)排序结果</p></li>
-
-<li><p>ttl <code>ttl mykey</code>以秒为单位，返回给定 key 的剩余有效时间</p></li>
-
-<li><p>type    <code>type mykey</code> 返回 key 所储存的值的类型</p></li>
-
-<li><p>wait    <code>wait mykey</code> 堵塞等待写操作传输到指定数量的从节点(Available since 3.0.0)</p></li>
+&#34;int&#34;
+</code></pre></div><ul>
+<li>persist <code>persist mykey</code> 移除给定 key 的有效时间</li>
+<li>pexpire  <code>pexpire mykey 1000</code>以毫秒为单位设置 key 的有效时间 (Available since 2.6.0)</li>
+<li>pexpireat   <code>pexpireat mykey 1000</code>以毫秒为单位设置 key 的有效时间戳(timestamp)(Available since 2.6.0)</li>
+<li>pttl  <code>pttl mykey</code>  以毫秒为单位返回key的剩余有效时间(Available since 2.6.0)</li>
+<li>randomkey  <code>randomkey</code> 从当前数据库中随机返回(已使用的)一个key</li>
+<li>rename <code>rename mykey mykey1</code> 将key改名</li>
+<li>renamenx     <code>rename mykey newkey</code>当且仅当 newkey 不存在时,将 key 改名为 newkey</li>
+<li>restore  <code>restore mykey</code>反序列化给定的序列化值，并将它和给定的 key 关联</li>
+<li>scan    `` 增量迭代 Available since 2.8.0()</li>
+<li><strong>sort</strong>    <code>sor mylist</code>返回或保存给定列表、集合、有序集合 key 中经过排序的元素,默认会返回该列表值的递增(从小到大)排序结果</li>
+<li>ttl <code>ttl mykey</code>以秒为单位，返回给定 key 的剩余有效时间</li>
+<li>type    <code>type mykey</code> 返回 key 所储存的值的类型</li>
+<li>wait    <code>wait mykey</code> 堵塞等待写操作传输到指定数量的从节点(Available since 3.0.0)</li>
 </ul>
-
 <h3 id="strings">strings</h3>
-
 <p>就是个字符串</p>
-
 <ul>
 <li><strong>append</strong>  <code>append mykey 'hello'</code> 将值追加到指定key的值末尾，如果key不存在，则相当于增加操作。</li>
 <li>bitcount     <code>bitcount mykey</code> 计算给定字符串中，被设置为 1 的Bit位的数量。redis的setbit修改的是bit位置,而bitcount检查的是byte位置，两者相差有8的倍数</li>
 <li>bitop   对一个或多个保存二进制位的字符串 key 进行位元操作
-
 <ul>
 <li>BITOP AND destkey srckey1 srckey2 srckey3 &hellip; srckeyN  <code>bittop and newkey key1 key2</code></li>
 <li>BITOP OR destkey srckey1 srckey2 srckey3 &hellip; srckeyN <code>bittop or newkey key1 key2</code></li>
 <li>BITOP XOR destkey srckey1 srckey2 srckey3 &hellip; srckeyN <code>bittop xor newkey key1 key2</code></li>
-<li>BITOP NOT destkey srckey  <code>bittop not newkey key1</code></li>
-</ul></li>
+<li>BITOP NOT destkey srckey  <code>bittop not newkey key1 </code></li>
+</ul>
+</li>
 <li><strong>decr</strong>  <code>decr mykey</code>  将 key 中储存的数字值减一。Key不存在，则将值置0，key类型不正确返回一个错误。</li>
 <li>decrby  <code>decrby key  2</code> 将key所储存的值减去指定数量,可以为负数</li>
 <li><strong>get</strong> <code>get mykey</code>  返回key所关联的字符串值，如果Key储存的值不是字符串类型，返回一个错误。</li>
 <li>getbit  <code>getbit mykey</code> 对key所储存的字符串值，获取指定偏移量上的位,</li>
 <li><strong>getrange</strong>  <code>getrange mykey 0 -1</code>  返回key中字符串值的子字符串，字符串的截取范围由start和end两个偏移量决定</li>
 <li>getset <code>getset mykey 2</code> 将给定key的值设为value,并返回key的旧值.非字符串报错.和decr配合使用,主要是返回旧值,如果键不存在,那么返回nil</li>
-<li>incr   <code>incr mykey</code> 原子递增,可以把字符串值解释成一个数字递增，因为有原子性所有多个客户端操作不会出现竞争的问题</li>
+<li>incr   <code>incr mykey </code> 原子递增,可以把字符串值解释成一个数字递增，因为有原子性所有多个客户端操作不会出现竞争的问题</li>
 <li>incrby   <code>incr mykey  2</code>将key所储存的值加上指定增量</li>
 <li>incrbyfloat <code>incrbyfloat mykey  2.5</code>为key中所储存的值加上指定的浮点数增量</li>
 <li><strong>mget</strong>    <code>mget a b c</code>返回所有(一个或多个)给定key的值</li>
@@ -611,17 +587,14 @@ redis&gt; object encoding age
 <li>psetex  以毫秒为单位设置 key 的有效时间</li>
 <li><strong>set</strong>  <code>set mykey hello</code>将字符串值value关联到key ,不能超过512MB</li>
 <li>setbit  <code>setbit mykey 1 1</code> 两种状态0和1 ,每个字符有8bit对key所储存的字符串值，设置或清除指定偏移量上的位(bit)</li>
-<li>setex    <code>setex cache_user_id 60(时间秒) 10086(值)</code> 将值value关联到 key,并设置超时时间 相当于<code>set key value ;expire key seconds</code>两条命令,但这个操作是原子性的</li>
+<li>setex    <code>setex cache_user_id 60(时间秒) 10086(值)</code> 将值value关联到 key,并设置超时时间 相当于<code>set key value ;expire key seconds  </code>两条命令,但这个操作是原子性的</li>
 <li>setnx   <code>setnx mykey 1</code>「SET if Not eXists」,当key未被使用时，设置为指定值,返回值1设置 了0 未设置
 <a href="http://huoding.com/2015/09/14/463">http://huoding.com/2015/09/14/463</a></li>
 <li>setrange   <code>setrange mykey  1 &quot;me&quot;</code> 用value参数覆写(overwrite)给定key所储存的字符串值，从偏移量 offset 开始</li>
 <li>strlen   <code>strlen mykey</code>返回key所储存的字符串值的长度</li>
 </ul>
-
 <h3 id="list">list</h3>
-
 <p>基于Linked Lists实现,头尾部添加新元素的速度快，而在索引访问数据方面牺牲了部分性能。</p>
-
 <ul>
 <li>blpop    <code>blpop mylist</code>它是 lpop 命令的阻塞版本，当给定列表内没有任何元素可供弹出的时候，连接将被 blpop 命令阻塞，直到等待超时或发现可弹出元素为止</li>
 <li>brpop    <code>brpop mylist</code>与blpop同义，弹出位置不同</li>
@@ -635,12 +608,12 @@ redis&gt; object encoding age
 <li><strong>lrange</strong>   <code>lrange mylist 0 -1</code>返回列表 key 中指定区间内的元素，区间以偏移量 start 和 stop 指定</li>
 <li>lrem  <code>lrem mylist 2(count值) hello(value值)</code> 从头部查找移除两个hello, 根据参数 count 的值，移除列表中与参数 value 相等的元素
 count 的值可以是以下几种：
-
 <ul>
 <li>count &gt; 0 : 从表头开始向表尾搜索，移除与 value 相等的元素，数量为 count 。</li>
 <li>count &lt; 0 : 从表尾开始向表头搜索，移除与 value 相等的元素，数量为 count 的绝对值。</li>
 <li>count = 0 : 移除表中所有与 value 相等的值</li>
-</ul></li>
+</ul>
+</li>
 <li><strong>lset</strong> <code>lset mylist 1(下标) 2(值)</code>  将列表 key 下标为 index 的元素的值设置为 value</li>
 <li>ltrim   <code>ltrim mylist 0 2</code>对一个列表进行修剪(trim)，就是说，让列表只保留指定区间内的元素，不在指定区间之内的元素都将被删除</li>
 <li><strong>rpop</strong>    <code>rpop mylist</code>移除并返回列表 key 的尾元素</li>
@@ -648,41 +621,36 @@ count 的值可以是以下几种：
 <li><strong>rpush</strong>    <code>rpush mylist A B</code>将一个或多个值 value 插入到列表 key 的表尾</li>
 <li>rpushx   <code>rpushx mylist 1</code>将值 value 插入到列表 key 的表尾，当且仅当 key 存在并且是一个列表</li>
 </ul>
-
 <h3 id="hashes">hashes</h3>
-
 <p>哈希表,表示对象</p>
-
 <ul>
 <li><strong>hdel</strong>    <code>hdel user username</code>删除哈希表 key 中的一个或多个指定域，不存在的域将被忽略。</li>
-<li><strong>hexists</strong> <code>hexists user name</code>查看哈希表 key 中，给定域 field 是否存在</li>
+<li><strong>hexists</strong> <code> hexists user name</code>查看哈希表 key 中，给定域 field 是否存在</li>
 <li><strong>hget</strong>   <code>hget user username</code> 返回哈希表 key 中给定域 field 的值</li>
-<li>**hgetall ** <code>hgetall user</code>返回哈希表 key 中，所有的域和值</li>
+<li>**hgetall ** <code> hgetall user</code>返回哈希表 key 中，所有的域和值</li>
 <li>hincrby <code>hincrby user age 25</code>指定加10.为哈希表 key 中的域 field 的值加上指定增量</li>
 <li>hincrbyfloat  <code>hincrbyfloat user age  1.5</code>  为哈希表 key 中的域 field 加上指定的浮点数增量</li>
 <li><strong>hkeys</strong>   <code>hkeys user</code> 返回哈希表 key 中的所有域</li>
 <li><strong>hlen</strong>    <code>hlen user</code> 返回哈希表 key 中域的数量</li>
 <li><strong>hmget</strong>   <code>hmget user username birthyear no-such-field</code> 返回哈希表 key 中, 以数组方式返回</li>
-<li><strong>hmset</strong>   <code>hmset user username antirez age 25</code>同时将多个 field-value (域-值)对设置到哈希表 key 中</li>
+<li><strong>hmset</strong>   <code>hmset user username antirez age 25 </code>同时将多个 field-value (域-值)对设置到哈希表 key 中</li>
 <li><strong>hset</strong>     <code>hmset user username antirez</code> 将哈希表 key 中的域 field 的值设为 value</li>
 <li>hsetnx  <code>hsetnx user username me</code>当且仅当域 field 不存在时，将哈希表 key 中的域 field 的值设置为 value</li>
 <li><strong>hvals</strong>   <code>hvals user username age</code>返回哈希表 key 中所有域的值</li>
 <li>hscan   增量迭代</li>
 </ul>
-
 <h3 id="sets">sets</h3>
-
 <p>不重复的集合</p>
-
 <ul>
-<li><p><strong>sadd</strong>   <code>sadd myset 1 2</code> 将一个或多个 member 元素加入到集合 key 当中，已经存在于集合的 member 元素将被忽略</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">sadd myset 1 2
-sadd myset1 1 2 3 4</pre></div></li>
-
-<li><p><strong>scard</strong>   <code>scard myset</code>返回集合 key 的集合中元素的数量</p></li>
-
-<li><p>sdiff   返回一个集合的全部成员，该集合是所有给定集合之间的差集</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">127.0.0.1:6379&gt; smembers myset
+<li><strong>sadd</strong>   <code>sadd myset 1 2</code> 将一个或多个 member 元素加入到集合 key 当中，已经存在于集合的 member 元素将被忽略</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">sadd myset 1 2
+sadd myset1 1 2 3 4
+</code></pre></div><ul>
+<li><strong>scard</strong>   <code>scard myset </code>返回集合 key 的集合中元素的数量</li>
+<li>sdiff   返回一个集合的全部成员，该集合是所有给定集合之间的差集</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">127.0.0.1:6379&gt; smembers myset
 1) &#34;1&#34;
 2) &#34;2&#34;
 127.0.0.1:6379&gt; smembers myset1
@@ -694,27 +662,27 @@ sadd myset1 1 2 3 4</pre></div></li>
 (empty list or set)
 127.0.0.1:6379&gt; sdiff myset1 myset
 1) &#34;3&#34;
-2) &#34;4&#34;</pre></div></li>
-
-<li><p>sdiffstore  <code>sdiffstore destination key [key ...]</code>这个命令的作用和 sdiff 类似，但它将结果保存到新集合，而不是简单地返回结果集</p></li>
-
-<li><p>sinter <code>sinter myset myet1</code> 返回一个集合的全部成员，该集合是所有给定集合的交集</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">127.0.0.1:6379&gt; sinter myset myset1
+2) &#34;4&#34;
+</code></pre></div><ul>
+<li>sdiffstore  <code>sdiffstore destination key [key ...]</code>这个命令的作用和 sdiff 类似，但它将结果保存到新集合，而不是简单地返回结果集</li>
+<li>sinter <code>sinter myset myet1</code> 返回一个集合的全部成员，该集合是所有给定集合的交集</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">127.0.0.1:6379&gt; sinter myset myset1
 1) &#34;1&#34;
-2) &#34;2&#34;</pre></div></li>
-
-<li><p>sinterstore <code>sinterstore destination key [key ...]</code> 与sinter类似，不过可以指定保存到新集合</p></li>
-
-<li><p>sismember  <code>sismember myset 1</code> 判断 member 元素是否集合 key 的成员</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">127.0.0.1:6379&gt; sismember myset 1
+2) &#34;2&#34;
+</code></pre></div><ul>
+<li>sinterstore <code>sinterstore destination key [key ...]</code> 与sinter类似，不过可以指定保存到新集合</li>
+<li>sismember  <code>sismember myset 1 </code> 判断 member 元素是否集合 key 的成员</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">127.0.0.1:6379&gt; sismember myset 1
 (integer) 1
 127.0.0.1:6379&gt; sismember myset 3
-(integer) 0</pre></div></li>
-
-<li><p><strong>smembers</strong> <code>smembers myset</code>    返回集合 key 中的所有成员</p></li>
-
-<li><p>smove   <code>smove source destination member</code>将 member 元素从一个集合移动到另一个集合</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">127.0.0.1:6379&gt; smembers myset
+(integer) 0
+</code></pre></div><ul>
+<li><strong>smembers</strong> <code>smembers myset </code>    返回集合 key 中的所有成员</li>
+<li>smove   <code>smove source destination member</code>将 member 元素从一个集合移动到另一个集合</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">127.0.0.1:6379&gt; smembers myset
 1) &#34;1&#34;
 2) &#34;2&#34;
 127.0.0.1:6379&gt; smembers myset1
@@ -731,16 +699,14 @@ sadd myset1 1 2 3 4</pre></div></li>
 127.0.0.1:6379&gt; smembers myset1
 1) &#34;1&#34;
 2) &#34;2&#34;
-3) &#34;4&#34;</pre></div></li>
-
-<li><p>spop   <code>spop myset</code> 移除并返回集合中的一个随机元素</p></li>
-
-<li><p>srandmember <code>srandmember myset</code>仅仅返回随机元素，而不对集合进行任何改动，与spop的区别在于不移除</p></li>
-
-<li><p>srem    <code>srem myset 1 2</code> 移除集合 key 中的一个或多个 member 元素，不存在的 member 元素会被忽略</p></li>
-
-<li><p>sunion  <code>sunion myset myset1</code>返回一个集合的全部成员，该集合是所有给定集合的并集</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">127.0.0.1:6379&gt; smembers myset
+3) &#34;4&#34;
+</code></pre></div><ul>
+<li>spop   <code>spop myset</code> 移除并返回集合中的一个随机元素</li>
+<li>srandmember <code>srandmember myset</code>仅仅返回随机元素，而不对集合进行任何改动，与spop的区别在于不移除</li>
+<li>srem    <code>srem myset 1 2</code> 移除集合 key 中的一个或多个 member 元素，不存在的 member 元素会被忽略</li>
+<li>sunion  <code>sunion myset myset1 </code>返回一个集合的全部成员，该集合是所有给定集合的并集</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">127.0.0.1:6379&gt; smembers myset
 1) &#34;3&#34;
 127.0.0.1:6379&gt; smembers myset1
 1) &#34;1&#34;
@@ -750,31 +716,27 @@ sadd myset1 1 2 3 4</pre></div></li>
 1) &#34;1&#34;
 2) &#34;2&#34;
 3) &#34;3&#34;
-4) &#34;4&#34;</pre></div></li>
-
-<li><p>sunionstore 与sunion类似，不过可以指定保存到新集合</p></li>
-
-<li><p>sscan   增量迭代</p></li>
+4) &#34;4&#34;
+</code></pre></div><ul>
+<li>sunionstore 与sunion类似，不过可以指定保存到新集合</li>
+<li>sscan   增量迭代</li>
 </ul>
-
 <h3 id="sortedset-有序集合">sortedset (有序集合)</h3>
-
 <ul>
 <li>zadd   <code>zadd key score member [[score member] [score member] ...]</code> 将一个或多个 member 元素及其 score 值加入到有序集 key 当中</li>
 <li>zcard   <code>zcard key</code> 返回有序集 key 的基数</li>
-
-<li><p>zcount    <code>zcount key min max</code> 返回有序集 key 中,score 值在 min 和 max 之间(包括 score 值等于 min 或 max )的成员的数量</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">127.0.0.1:6379&gt; zadd zset 1 me
+<li>zcount    <code>zcount key min max</code> 返回有序集 key 中,score 值在 min 和 max 之间(包括 score 值等于 min 或 max )的成员的数量</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">127.0.0.1:6379&gt; zadd zset 1 me
 (integer) 1
 127.0.0.1:6379&gt; zcount zset 0 1
-(integer) 1</pre></div></li>
-
-<li><p>zincrby <code>zincrby key increment member</code>为有序集 key 的成员 member 的 score 值加上指定增量</p></li>
-
-<li><p>zrange <code>ZRANGE key start stop</code> 返回有序集 key 中，指定区间内的成员(小到大排列)</p></li>
-
-<li><p>zrangebyscore <code>zrangebyscore key min max</code>  返回有序集 key 中，所有 score 值介于 min 和 max 之间(包括等于 min 或 max )的成员</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">redis&gt; zadd salary 2500 jack                        # 测试数据
+(integer) 1
+</code></pre></div><ul>
+<li>zincrby <code>zincrby key increment member</code>为有序集 key 的成员 member 的 score 值加上指定增量</li>
+<li>zrange <code>ZRANGE key start stop</code> 返回有序集 key 中，指定区间内的成员(小到大排列)</li>
+<li>zrangebyscore <code>zrangebyscore key min max</code>  返回有序集 key 中，所有 score 值介于 min 和 max 之间(包括等于 min 或 max )的成员</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">redis&gt; zadd salary 2500 jack                        # 测试数据
 (integer) 0
 redis&gt; zadd salary 5000 tom
 (integer) 0
@@ -792,14 +754,13 @@ redis&gt; zrangebyscore salary -inf +inf withscores    # 显示整个有序集�
 3) &#34;tom&#34;
 4) &#34;5000&#34;
 5) &#34;peter&#34;
-6) &#34;12000&#34;</pre></div></li>
-
-<li><p>zrank <code>zrank key member</code>  返回有序集 key 中成员 member 的排名。其中有序集成员按 score 值递增(从小到大)顺序排列</p></li>
-
-<li><p>zrem  <code>zrem key member [member ...]</code>  移除有序集 key 中的一个或多个成员，不存在的成员将被忽略</p></li>
-
-<li><p>zremrangebyrank <code>zremrangebyrank key start stop</code>移除有序集 key 中，指定排名(rank)区间内的所有成员</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">redis&gt; zadd salary 2000 jack
+6) &#34;12000&#34;
+</code></pre></div><ul>
+<li>zrank <code>zrank key member</code>  返回有序集 key 中成员 member 的排名。其中有序集成员按 score 值递增(从小到大)顺序排列</li>
+<li>zrem  <code>zrem key member [member ...]</code>  移除有序集 key 中的一个或多个成员，不存在的成员将被忽略</li>
+<li>zremrangebyrank <code>zremrangebyrank key start stop</code>移除有序集 key 中，指定排名(rank)区间内的所有成员</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">redis&gt; zadd salary 2000 jack
 (integer) 1
 redis&gt; zadd salary 5000 tom
 (integer) 1
@@ -811,26 +772,18 @@ redis&gt; zremrangebyrank salary 0 1       # 移除排名 0 至 1 区间内的�
 
 redis&gt; zrange salary 0 -1 withscores    # 有序集只剩下一个成员
 1) &#34;tom&#34;
-2) &#34;5000&#34;</pre></div></li>
-
-<li><p>zremrangebyscore    移除有序集 key 中，所有 score 值介于 min 和 max 之间(包括等于 min 或 max )的成员</p></li>
-
-<li><p>zrevrange   返回有序集 key 中，指定区间内的成员，成员位置按score大到小排列
-zrevrangebyscore    返回有序集 key 中， score 值介于 max 和 min 之间(默认包括等于 max 或 min )的所有的成员。成员按 score 值递减(从大到小)+ 排列</p></li>
-
-<li><p>zrevrank    返回有序集 key 中成员 member 的排名。其中有序集成员按 score 值递减(从大到小)排序</p></li>
-
-<li><p>zscore  返回有序集 key 中，成员 member 的 score 值</p></li>
-
-<li><p>zunionstore 计算给定的一个或多个有序集的并集，其中给定 key 的数量必须以 numkeys 参数指定，并将该并集(结果集)储存到新集合</p></li>
-
-<li><p>zinterstore 计算给定的一个或多个有序集的交集，其中给定 key 的数量必须以 numkeys 参数指定，并将该交集(结果集)储存到新集合</p></li>
-
-<li><p>zscan   增量迭代</p></li>
+2) &#34;5000&#34;
+</code></pre></div><ul>
+<li>zremrangebyscore    移除有序集 key 中，所有 score 值介于 min 和 max 之间(包括等于 min 或 max )的成员</li>
+<li>zrevrange   返回有序集 key 中，指定区间内的成员，成员位置按score大到小排列
+zrevrangebyscore    返回有序集 key 中， score 值介于 max 和 min 之间(默认包括等于 max 或 min )的所有的成员。成员按 score 值递减(从大到小)+ 排列</li>
+<li>zrevrank    返回有序集 key 中成员 member 的排名。其中有序集成员按 score 值递减(从大到小)排序</li>
+<li>zscore  返回有序集 key 中，成员 member 的 score 值</li>
+<li>zunionstore 计算给定的一个或多个有序集的并集，其中给定 key 的数量必须以 numkeys 参数指定，并将该并集(结果集)储存到新集合</li>
+<li>zinterstore 计算给定的一个或多个有序集的交集，其中给定 key 的数量必须以 numkeys 参数指定，并将该交集(结果集)储存到新集合</li>
+<li>zscan   增量迭代</li>
 </ul>
-
-<h3 id="pub-sub">pub/sub</h3>
-
+<h3 id="pubsub">pub/sub</h3>
 <ul>
 <li>psubscribe  订阅一个或多个符合给定模式的频道</li>
 <li>publish 将信息 message 发送到指定的频道</li>
@@ -839,9 +792,7 @@ zrevrangebyscore    返回有序集 key 中， score 值介于 max 和 min 之�
 <li>subscribe   订阅给定的一个或多个频道的信息</li>
 <li>unsubscribe 指示客户端退订给定的频道</li>
 </ul>
-
 <h3 id="transaction">transaction</h3>
-
 <ul>
 <li>discard 取消事务，放弃执行事务块内的所有命令</li>
 <li>exec    执行所有事务块内的命令</li>
@@ -849,19 +800,17 @@ zrevrangebyscore    返回有序集 key 中， score 值介于 max 和 min 之�
 <li>unwatch 取消 watch 命令对所有 key 的监视</li>
 <li>watch   监视一个(或多个) key ，如果在事务执行之前这个(或这些) key 被其他命令所改动，那么事务将被打断</li>
 </ul>
-
 <h3 id="scripts">scripts</h3>
-
-<p>命令  说明
-+ eval    通过内置的 lua 解释器，可以使用 eval 命令对 lua 脚本进行求值
-+ evalsha 根据给定的 sha1 校验码，对缓存在服务器中的脚本进行求值
-+ script exists   给定一个或多个脚本的 sha1 校验和，返回一个包含 0 和 1 的列表，表示校验和所指定的脚本是否已经被保存在缓存当中
-+ script flush    清除所有 lua 脚本缓存
-script kill 停止当前正在运行的 lua + 脚本，当且仅当这个脚本没有执行过任何写操作时，这个命令才生效。这个命令主要用于终止运行时间过长的脚本
-+ script load 将脚本 script 添加到脚本缓存中，但并不立即执行这个脚本</p>
-
+<p>命令  说明</p>
+<ul>
+<li>eval    通过内置的 lua 解释器，可以使用 eval 命令对 lua 脚本进行求值</li>
+<li>evalsha 根据给定的 sha1 校验码，对缓存在服务器中的脚本进行求值</li>
+<li>script exists   给定一个或多个脚本的 sha1 校验和，返回一个包含 0 和 1 的列表，表示校验和所指定的脚本是否已经被保存在缓存当中</li>
+<li>script flush    清除所有 lua 脚本缓存
+script kill 停止当前正在运行的 lua + 脚本，当且仅当这个脚本没有执行过任何写操作时，这个命令才生效。这个命令主要用于终止运行时间过长的脚本</li>
+<li>script load 将脚本 script 添加到脚本缓存中，但并不立即执行这个脚本</li>
+</ul>
 <h3 id="connection">connection</h3>
-
 <ul>
 <li>auth    通过设置配置文件中 requirepass 项的值，可以使用密码来保护 redis 服务器</li>
 <li>echo    打印一个特定的信息 message ，测试时使用。</li>
@@ -869,9 +818,7 @@ script kill 停止当前正在运行的 lua + 脚本，当且仅当这个脚本�
 <li>quit    请求服务器关闭与当前客户端的连接</li>
 <li>select  切换到指定的数据库，数据库索引号 index 用数字值指定，以 0 作为起始索引值</li>
 </ul>
-
 <h3 id="server">server</h3>
-
 <ul>
 <li>bgrewriteaof    执行一个 aof文件 重写操作。重写会创建一个当前 aof 文件的体积优化版本。</li>
 <li>bgsave  在后台异步(asynchronously)保存当前数据库的数据到磁盘</li>
@@ -902,23 +849,19 @@ script kill 停止当前正在运行的 lua + 脚本，当且仅当这个脚本�
 <li>sync    用于复制功能的内部命令</li>
 <li>time    返回当前服务器时间</li>
 </ul>
-
-<p>三条通用规则
-+ 当添加元素到一个不存在的复合数据类型如list时，会自动创建这个列表,如lpush元素到一个不存在的列表会自动创建列表
-+ 如果删除一个空列表，会自动释放这个key
-+ 读写一个空列表总会返回相同的结果,如llen得到空列表长度为0,del空列表返回也是0</p>
-
+<p>三条通用规则</p>
+<ul>
+<li>当添加元素到一个不存在的复合数据类型如list时，会自动创建这个列表,如lpush元素到一个不存在的列表会自动创建列表</li>
+<li>如果删除一个空列表，会自动释放这个key</li>
+<li>读写一个空列表总会返回相同的结果,如llen得到空列表长度为0,del空列表返回也是0</li>
+</ul>
 <h2 id="高级属性">高级属性</h2>
-
 <h3 id="pipeline">pipeline</h3>
-
 <h2 id="桌面管理器">桌面管理器</h2>
-
 <p><a href="http://docs.redisdesktop.com/en/latest/install/">http://docs.redisdesktop.com/en/latest/install/</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">## 安装桌面管理项
-brew cask install rdm</pre></div>
-<p><img src="http://farwmarth.bestnewbee.com/images/rdm.png" alt=" rdm" /></p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">## 安装桌面管理项
+brew cask install rdm
+</code></pre></div><p><img src="https://farwmarth.bestnewbee.com/images/rdm.png" alt=" rdm"></p>
 <p>##TODO
 <a href="http://fengwan.blog.51cto.com/508652/1746731">http://fengwan.blog.51cto.com/508652/1746731</a>
 <a href="http://blog.csdn.net/dc_726/article/details/48552531">http://blog.csdn.net/dc_726/article/details/48552531</a>
@@ -930,7 +873,7 @@ brew cask install rdm</pre></div>
 
 <div class="post-tags">
      
-    <a href="http://farwmarth.com/tags/redis" rel="tag" title="redis">#redis#</a>
+    <a href="https://farwmarth.com/tags/redis" rel="tag" title="redis">#redis#</a>
     
 </div>
 
@@ -940,7 +883,7 @@ brew cask install rdm</pre></div>
      <div class="post-nav">
     <div class="post-nav-next post-nav-item">
     
-        <a href="http://farwmarth.com/post/lua%E6%95%B0%E6%8D%AE%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E9%80%89%E6%8B%A9/" rel="next" title="lua数据序列化的选择">
+        <a href="https://farwmarth.com/post/lua%E6%95%B0%E6%8D%AE%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E9%80%89%E6%8B%A9/" rel="next" title="lua数据序列化的选择">
         <i class="fa fa-chevron-left"></i> lua数据序列化的选择
         </a>
     
@@ -948,7 +891,7 @@ brew cask install rdm</pre></div>
 
     <div class="post-nav-prev post-nav-item">
     
-        <a href="http://farwmarth.com/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E4%B8%80%E6%AC%A1%E8%B0%83%E4%BC%98/" rel="prev" title="服务器的一次调优">
+        <a href="https://farwmarth.com/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E4%B8%80%E6%AC%A1%E8%B0%83%E4%BC%98/" rel="prev" title="服务器的一次调优">
         服务器的一次调优 <i class="fa fa-chevron-right"></i>
         </a>
     
@@ -981,7 +924,7 @@ brew cask install rdm</pre></div>
     <section class="site-overview sidebar-panel  sidebar-panel-active ">
       <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image"
-        src="http://farwmarth.com/img/author.jpg"
+        src="https://farwmarth.com/img/author.jpg"
         alt="farwmarth" />
     <p class="site-author-name" itemprop="name">farwmarth</p>
     <p class="site-description motion-element" itemprop="description"> 
@@ -989,15 +932,15 @@ brew cask install rdm</pre></div>
 </div>
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
-      <a href="http://farwmarth.com/post/">
+      <a href="https://farwmarth.com/post/">
         <span class="site-state-item-count">100</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
     <div class="site-state-item site-state-categories">    
-        <a href="http://farwmarth.com/categories/">      
+        <a href="https://farwmarth.com/categories/">      
          
-        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-count">32</span>
         
         <span class="site-state-item-name">分类</span>
         
@@ -1005,9 +948,9 @@ brew cask install rdm</pre></div>
     </div>
 
     <div class="site-state-item site-state-tags">
-        <a href="http://farwmarth.com/tags/">
+        <a href="https://farwmarth.com/tags/">
          
-        <span class="site-state-item-count">90</span>
+        <span class="site-state-item-count">91</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -1042,12 +985,12 @@ brew cask install rdm</pre></div>
       <div class="footer-inner">
         <div class="copyright" >
   <span itemprop="copyrightYear">  &copy; 
-  2009 - 2019</span>
+  2009 - 2020</span>
   <span class="with-love"><i class="fa fa-heart"></i></span>
   <span class="author" itemprop="copyrightHolder">farwmarth</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.6</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.68.3</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
@@ -1065,33 +1008,33 @@ brew cask install rdm</pre></div>
   </div>
 
   
-<script type="text/javascript" src="http://tajs.qq.com/stats?sId=286131889" charset="UTF-8"></script> 
+
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
 </script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
-<script src="http://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
 
-<script src="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="https://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/utils.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/motion.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/affix.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/schemes/pisces.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/utils.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/motion.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/affix.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/schemes/pisces.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/scrollspy.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/post-details.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/toc.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/post-details.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/toc.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/bootstrap.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/bootstrap.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/search.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/search.js"></script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],

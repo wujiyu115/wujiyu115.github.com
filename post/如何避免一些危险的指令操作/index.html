@@ -12,13 +12,13 @@
     <meta property="og:image" content="/img/author.jpg"> 
     <meta name="title" content="如何避免一些危险的指令操作 - farwmarth" />
     <meta name="description" content="game"> 
-    <link rel="shortcut icon" href="http://farwmarth.com/img/favicon.ico" />
-    <link rel="apple-touch-icon" href="http://farwmarth.com/img/apple-touch-icon.png" />
-    <link rel="apple-touch-icon-precomposed" href="http://farwmarth.com/img/apple-touch-icon.png" />
-    <link href="http://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="https://farwmarth.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://farwmarth.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://farwmarth.com/img/apple-touch-icon.png" />
+    <link href="https://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
@@ -37,7 +37,7 @@
       <div class="header-inner"> <div class="site-meta  custom-logo ">
 
   <div class="custom-logo-site-title">
-    <a href="http://farwmarth.com/"  class="brand" rel="start">
+    <a href="https://farwmarth.com/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">farwmarth</span>
       <span class="logo-line-after"><i></i></span>
@@ -59,31 +59,31 @@
       
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/" rel="section">
+          <a href="https://farwmarth.com/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/about/" rel="section">
+          <a href="https://farwmarth.com/about/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/post/" rel="section">
+          <a href="https://farwmarth.com/post/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/douban/" rel="section">
+          <a href="https://farwmarth.com/douban/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />豆瓣
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/music/" rel="section">
+          <a href="https://farwmarth.com/music/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-music"></i> <br />音乐
           </a>
         </li>
@@ -115,7 +115,7 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="http://farwmarth.com/post/%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E4%B8%80%E4%BA%9B%E5%8D%B1%E9%99%A9%E7%9A%84%E6%8C%87%E4%BB%A4%E6%93%8D%E4%BD%9C/" itemprop="url">
+        <a class="post-title-link" href="https://farwmarth.com/post/%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E4%B8%80%E4%BA%9B%E5%8D%B1%E9%99%A9%E7%9A%84%E6%8C%87%E4%BB%A4%E6%93%8D%E4%BD%9C/" itemprop="url">
         如何避免一些危险的指令操作
         </a>
       </h1>
@@ -142,61 +142,43 @@
     </header>
     <div class="post-body" itemprop="articleBody">
     <h1 id="git引发的事故">git引发的事故</h1>
-
 <p>上周服务器的一位同事一个不小心用了<code>git push -f</code>,抹掉了我们一上午的工作内容,还好抹掉的记录不是太多大概八九条.
 各自花了大概半小时恢复了数据</p>
-
 <h2 id="恢复过程">恢复过程</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#查看所有的本地操作数据</span>
 git reflog
 <span style="color:#75715e">#或者查看所有数据,找到被抹掉的commit</span>
 git log -g
 <span style="color:#75715e">#复制一个提交节点并在当前分支做一次完全一样的新提交。</span>
-git cherry-pick commit_id</code></pre></div>
-<p>可以看出强制提交这个命令的危险性,如何来禁止强制呢?</p>
-
+git cherry-pick commit_id
+</code></pre></div><p>可以看出强制提交这个命令的危险性,如何来禁止强制呢?</p>
 <h2 id="禁止强制推送">禁止强制推送</h2>
-
 <h3 id="本地禁止强制推送">本地禁止强制推送</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git config --global receive.denyNonFastForwards true
-git config --global receive.denyDeletes true</code></pre></div>
-<h3 id="hook方式">hook方式</h3>
-
+git config --global receive.denyDeletes true
+</code></pre></div><h3 id="hook方式">hook方式</h3>
 <p><a href="https://gist.github.com/stefansundin/d465f1e331fc5c632088">https://gist.github.com/stefansundin/d465f1e331fc5c632088</a></p>
-
 <h3 id="gitbucket-远程仓库禁止强制推送">gitbucket 远程仓库禁止强制推送</h3>
-
 <p>gitbucket提供了分支权限配置: <a href="https://confluence.atlassian.com/bitbucketserver/stash-3-10-release-notes-776640856.html">参考</a></p>
-
 <p><code>Rewriting history</code> 就是防止强制推送</p>
-
-<p><img src="https://confluence.atlassian.com/bitbucketserver/files/776640856/776640857/1/1433804733697/STASH310_branch_permissions.png" alt="" /></p>
-
+<p><img src="https://confluence.atlassian.com/bitbucketserver/files/776640856/776640857/1/1433804733697/STASH310_branch_permissions.png" alt=""></p>
 <h3 id="github配置">github配置</h3>
-
 <p><a href="https://help.github.com/articles/configuring-protected-branches/">https://help.github.com/articles/configuring-protected-branches/</a></p>
-
-<p><img src="http://farwmarth.bestnewbee.com/images/git_push_force.png" alt="" /></p>
-
+<p><img src="https://farwmarth.bestnewbee.com/images/git_push_force.png" alt=""></p>
 <h3 id="gitlab配置">gitlab配置</h3>
-
 <p><a href="https://about.gitlab.com/2014/11/26/keeping-your-code-protected/">https://about.gitlab.com/2014/11/26/keeping-your-code-protected/</a></p>
-
-<p><img src="https://about.gitlab.com/images/protected_branches.png" alt="" /></p>
-
-<h1 id="强制删除-rm-rf">强制删除<code>rm -rf</code></h1>
-
+<p><img src="https://about.gitlab.com/images/protected_branches.png" alt=""></p>
+<h1 id="强制删除rm--rf">强制删除<code>rm -rf</code></h1>
 <p>mac下可以用zsh这样的终端<code>rm -rf /</code>会有二次确认</p>
-
 <h3 id="trash-cli">trash-cli</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#https://github.com/andreafrancia/trash-cli</span>
-easy_install trash-cli</code></pre></div>
-<h3 id="rmtrash">rmtrash</h3>
+easy_install trash-cli
+</code></pre></div><h3 id="rmtrash">rmtrash</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">brew install rmtrash
 <span style="color:#75715e">#配置</span>
 alias rm<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rmtrash&#34;</span>
-alias rmdir<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rmdirtrash&#34;</span></code></pre></div>
-<h3 id="mv替代rm">mv替代rm</h3>
+alias rmdir<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rmdirtrash&#34;</span>
+</code></pre></div><h3 id="mv替代rm">mv替代rm</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">mkdir -p ~/.trash
 alias rm<span style="color:#f92672">=</span>trash  
 alias r<span style="color:#f92672">=</span>trash  
@@ -209,7 +191,8 @@ undelfile<span style="color:#f92672">()</span>
 trash<span style="color:#f92672">()</span>
 <span style="color:#f92672">{</span>  
   mv $@ ~/.trash/
-<span style="color:#f92672">}</span></code></pre></div>
+<span style="color:#f92672">}</span>
+</code></pre></div>
     </div>
     <footer class="post-footer">
      
@@ -217,7 +200,7 @@ trash<span style="color:#f92672">()</span>
 
 <div class="post-tags">
      
-    <a href="http://farwmarth.com/tags/hook" rel="tag" title="hook">#hook#</a>
+    <a href="https://farwmarth.com/tags/hook" rel="tag" title="hook">#hook#</a>
     
 </div>
 
@@ -227,7 +210,7 @@ trash<span style="color:#f92672">()</span>
      <div class="post-nav">
     <div class="post-nav-next post-nav-item">
     
-        <a href="http://farwmarth.com/post/%E7%BB%99iphone%E6%8D%A2%E4%B8%AA%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E9%93%83%E5%A3%B0/" rel="next" title="给Iphone换个自定义的铃声">
+        <a href="https://farwmarth.com/post/%E7%BB%99iphone%E6%8D%A2%E4%B8%AA%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E9%93%83%E5%A3%B0/" rel="next" title="给Iphone换个自定义的铃声">
         <i class="fa fa-chevron-left"></i> 给Iphone换个自定义的铃声
         </a>
     
@@ -235,7 +218,7 @@ trash<span style="color:#f92672">()</span>
 
     <div class="post-nav-prev post-nav-item">
     
-        <a href="http://farwmarth.com/post/%E6%9D%83%E9%87%8D%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/" rel="prev" title="权重随机算法">
+        <a href="https://farwmarth.com/post/%E6%9D%83%E9%87%8D%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/" rel="prev" title="权重随机算法">
         权重随机算法 <i class="fa fa-chevron-right"></i>
         </a>
     
@@ -268,7 +251,7 @@ trash<span style="color:#f92672">()</span>
     <section class="site-overview sidebar-panel  sidebar-panel-active ">
       <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image"
-        src="http://farwmarth.com/img/author.jpg"
+        src="https://farwmarth.com/img/author.jpg"
         alt="farwmarth" />
     <p class="site-author-name" itemprop="name">farwmarth</p>
     <p class="site-description motion-element" itemprop="description"> 
@@ -276,15 +259,15 @@ trash<span style="color:#f92672">()</span>
 </div>
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
-      <a href="http://farwmarth.com/post/">
+      <a href="https://farwmarth.com/post/">
         <span class="site-state-item-count">100</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
     <div class="site-state-item site-state-categories">    
-        <a href="http://farwmarth.com/categories/">      
+        <a href="https://farwmarth.com/categories/">      
          
-        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-count">32</span>
         
         <span class="site-state-item-name">分类</span>
         
@@ -292,9 +275,9 @@ trash<span style="color:#f92672">()</span>
     </div>
 
     <div class="site-state-item site-state-tags">
-        <a href="http://farwmarth.com/tags/">
+        <a href="https://farwmarth.com/tags/">
          
-        <span class="site-state-item-count">90</span>
+        <span class="site-state-item-count">91</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -329,12 +312,12 @@ trash<span style="color:#f92672">()</span>
       <div class="footer-inner">
         <div class="copyright" >
   <span itemprop="copyrightYear">  &copy; 
-  2009 - 2019</span>
+  2009 - 2020</span>
   <span class="with-love"><i class="fa fa-heart"></i></span>
   <span class="author" itemprop="copyrightHolder">farwmarth</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.6</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.68.3</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
@@ -352,33 +335,33 @@ trash<span style="color:#f92672">()</span>
   </div>
 
   
-<script type="text/javascript" src="http://tajs.qq.com/stats?sId=286131889" charset="UTF-8"></script> 
+
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
 </script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
-<script src="http://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
 
-<script src="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="https://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/utils.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/motion.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/affix.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/schemes/pisces.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/utils.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/motion.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/affix.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/schemes/pisces.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/scrollspy.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/post-details.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/toc.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/post-details.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/toc.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/bootstrap.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/bootstrap.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/search.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/search.js"></script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],

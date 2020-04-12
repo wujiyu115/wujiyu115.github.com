@@ -1,41 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>键盘 on farwmarth</title>
-    <link>http://farwmarth.com/tags/%E9%94%AE%E7%9B%98/</link>
+    <link>https://farwmarth.com/tags/%E9%94%AE%E7%9B%98/</link>
     <description>Recent content in 键盘 on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     
-	<atom:link href="http://farwmarth.com/tags/%E9%94%AE%E7%9B%98/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/tags/%E9%94%AE%E7%9B%98/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>恶补键盘知识</title>
-      <link>http://farwmarth.com/post/%E6%81%B6%E8%A1%A5%E9%94%AE%E7%9B%98%E7%9F%A5%E8%AF%86/</link>
+      <link>https://farwmarth.com/post/%E6%81%B6%E8%A1%A5%E9%94%AE%E7%9B%98%E7%9F%A5%E8%AF%86/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E6%81%B6%E8%A1%A5%E9%94%AE%E7%9B%98%E7%9F%A5%E8%AF%86/</guid>
+      <guid>https://farwmarth.com/post/%E6%81%B6%E8%A1%A5%E9%94%AE%E7%9B%98%E7%9F%A5%E8%AF%86/</guid>
       <description>&lt;h2 id=&#34;引用&#34;&gt;引用&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.pcpop.com/doc/0/836/836084_all.shtml&#34;&gt;http://www.pcpop.com/doc/0/836/836084_all.shtml&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;键盘类型&#34;&gt;键盘类型&lt;/h2&gt;
-
 &lt;h3 id=&#34;薄膜&#34;&gt;薄膜&lt;/h3&gt;
-
 &lt;h3 id=&#34;机械&#34;&gt;机械&lt;/h3&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;红轴
-&lt;img src=&#34;http://ww4.sinaimg.cn/large/4b5a1116gw1exo6kg6fl4j20dw05j3yv.jpg&#34; alt=&#34;红轴&#34; /&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;红轴，它的力度比较轻，与黑轴塑料部分相同，直上直下爽快自然，入门者可能会觉得它比较滑。
-这是一种备受争议的轴，由于力度太轻，导致个别用户手搭载键盘上误触，而且它的造价是所有轴里最高的。
-因此很多人认为他是失败品，在国外的销量并不理想。
-但是国内不少玩家给予好评，如果搭配得当使用者可感受到丝绸般顺滑，无论是游戏还是打字亦或其它应用都可以，只是价格略高&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;li&gt;红轴
+&lt;img src=&#34;https://farwmarth.bestnewbee.com/4b5a1116gw1exo6kg6fl4j20dw05j3yv.jpg&#34; alt=&#34;红轴&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt; 红轴，它的力度比较轻，与黑轴塑料部分相同，直上直下爽快自然，入门者可能会觉得它比较滑。
+ 这是一种备受争议的轴，由于力度太轻，导致个别用户手搭载键盘上误触，而且它的造价是所有轴里最高的。
+ 因此很多人认为他是失败品，在国外的销量并不理想。
+ 但是国内不少玩家给予好评，如果搭配得当使用者可感受到丝绸般顺滑，无论是游戏还是打字亦或其它应用都可以，只是价格略高
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
   </channel>

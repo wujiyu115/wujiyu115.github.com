@@ -1,22 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Drafts on farwmarth</title>
-    <link>http://farwmarth.com/drafts/</link>
+    <link>https://farwmarth.com/drafts/</link>
     <description>Recent content in Drafts on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sun, 09 Dec 2018 17:41:27 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/drafts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/drafts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>登录</title>
-      <link>http://farwmarth.com/drafts/game_login/</link>
+      <link>https://farwmarth.com/drafts/game_login/</link>
       <pubDate>Sun, 09 Dec 2018 17:41:27 +0000</pubDate>
       
-      <guid>http://farwmarth.com/drafts/game_login/</guid>
+      <guid>https://farwmarth.com/drafts/game_login/</guid>
       <description>DH密钥交换算法的作用是使通信双方可以在不安全的通道中建立一个相同的密钥，用于加密通信。 基本原理示例： 通信方A和通信方B约定一个初始数g，如</description>
     </item>
     

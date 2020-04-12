@@ -1,25 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>audio on farwmarth</title>
-    <link>http://farwmarth.com/categories/audio/</link>
+    <link>https://farwmarth.com/categories/audio/</link>
     <description>Recent content in audio on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     
-	<atom:link href="http://farwmarth.com/categories/audio/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/categories/audio/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>语音服务器的选型</title>
-      <link>http://farwmarth.com/post/%E8%AF%AD%E9%9F%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E5%9E%8B/</link>
+      <link>https://farwmarth.com/post/%E8%AF%AD%E9%9F%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E5%9E%8B/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E8%AF%AD%E9%9F%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E5%9E%8B/</guid>
+      <guid>https://farwmarth.com/post/%E8%AF%AD%E9%9F%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E5%9E%8B/</guid>
       <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
-
 &lt;p&gt;最近游戏要接入一下语音服务器,调查了一下融合的语音sdk
-腾讯云GVoice:&lt;a href=&#34;https://www.qcloud.com/document/product/556/7673&#34;&gt;https://www.qcloud.com/document/product/556/7673&lt;/a&gt;
+腾讯云GVoice:https://www.qcloud.com/document/product/556/7673
 好像只有这个比较靠谱,但是收费好像有点贵,还是决定基于原有的免费的百度语音识别造一个轮子&lt;/p&gt;</description>
     </item>
     

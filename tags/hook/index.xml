@@ -1,34 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hook on farwmarth</title>
-    <link>http://farwmarth.com/tags/hook/</link>
+    <link>https://farwmarth.com/tags/hook/</link>
     <description>Recent content in hook on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Tue, 29 Nov 2016 11:07:39 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/tags/hook/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/tags/hook/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>如何避免一些危险的指令操作</title>
-      <link>http://farwmarth.com/post/%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E4%B8%80%E4%BA%9B%E5%8D%B1%E9%99%A9%E7%9A%84%E6%8C%87%E4%BB%A4%E6%93%8D%E4%BD%9C/</link>
+      <link>https://farwmarth.com/post/%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E4%B8%80%E4%BA%9B%E5%8D%B1%E9%99%A9%E7%9A%84%E6%8C%87%E4%BB%A4%E6%93%8D%E4%BD%9C/</link>
       <pubDate>Tue, 29 Nov 2016 11:07:39 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E4%B8%80%E4%BA%9B%E5%8D%B1%E9%99%A9%E7%9A%84%E6%8C%87%E4%BB%A4%E6%93%8D%E4%BD%9C/</guid>
+      <guid>https://farwmarth.com/post/%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E4%B8%80%E4%BA%9B%E5%8D%B1%E9%99%A9%E7%9A%84%E6%8C%87%E4%BB%A4%E6%93%8D%E4%BD%9C/</guid>
       <description>&lt;h1 id=&#34;git引发的事故&#34;&gt;git引发的事故&lt;/h1&gt;
-
 &lt;p&gt;上周服务器的一位同事一个不小心用了&lt;code&gt;git push -f&lt;/code&gt;,抹掉了我们一上午的工作内容,还好抹掉的记录不是太多大概八九条.
 各自花了大概半小时恢复了数据&lt;/p&gt;
-
 &lt;h2 id=&#34;恢复过程&#34;&gt;恢复过程&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#查看所有的本地操作数据&lt;/span&gt;
 git reflog
 &lt;span style=&#34;color:#75715e&#34;&gt;#或者查看所有数据,找到被抹掉的commit&lt;/span&gt;
 git log -g
 &lt;span style=&#34;color:#75715e&#34;&gt;#复制一个提交节点并在当前分支做一次完全一样的新提交。&lt;/span&gt;
-git cherry-pick commit_id&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+git cherry-pick commit_id
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
   </channel>

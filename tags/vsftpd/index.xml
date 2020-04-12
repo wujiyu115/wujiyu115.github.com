@@ -1,33 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>vsftpd on farwmarth</title>
-    <link>http://farwmarth.com/tags/vsftpd/</link>
+    <link>https://farwmarth.com/tags/vsftpd/</link>
     <description>Recent content in vsftpd on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Tue, 17 May 2016 14:09:25 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/tags/vsftpd/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/tags/vsftpd/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>vsftpd使用</title>
-      <link>http://farwmarth.com/post/vsftpd/</link>
+      <link>https://farwmarth.com/post/vsftpd/</link>
       <pubDate>Tue, 17 May 2016 14:09:25 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/vsftpd/</guid>
+      <guid>https://farwmarth.com/post/vsftpd/</guid>
       <description>&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
-
 &lt;p&gt;vsftpd意思为“very secure FTP daemon(非常安全的FTP进程)”，是一个基于GPL发布的类UNIX类操作系统上运行的服务器的名字（是一种守护进程），可以运行在诸如Linux、BSD、Solaris、HP-UX以及Irix等系统上面。vsftpd支持很多其他传统的FTP服务器不支持的良好特性&lt;/p&gt;
-
 &lt;h3 id=&#34;命令&#34;&gt;命令&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#安装&lt;/span&gt;
 yum install vsftpd
 &lt;span style=&#34;color:#75715e&#34;&gt;#启动&lt;/span&gt;
 service vsftpd start
 &lt;span style=&#34;color:#75715e&#34;&gt;#重启&lt;/span&gt;
-service vsfptd restart&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+service vsfptd restart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
   </channel>

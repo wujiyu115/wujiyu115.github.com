@@ -1,24 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>startup on farwmarth</title>
-    <link>http://farwmarth.com/tags/startup/</link>
+    <link>https://farwmarth.com/tags/startup/</link>
     <description>Recent content in startup on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Thu, 25 Feb 2016 14:13:22 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/tags/startup/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/tags/startup/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>倒戈又如何</title>
-      <link>http://farwmarth.com/post/%E5%80%92%E6%88%88%E5%8F%88%E5%A6%82%E4%BD%95/</link>
+      <link>https://farwmarth.com/post/%E5%80%92%E6%88%88%E5%8F%88%E5%A6%82%E4%BD%95/</link>
       <pubDate>Thu, 25 Feb 2016 14:13:22 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E5%80%92%E6%88%88%E5%8F%88%E5%A6%82%E4%BD%95/</guid>
+      <guid>https://farwmarth.com/post/%E5%80%92%E6%88%88%E5%8F%88%E5%A6%82%E4%BD%95/</guid>
       <description>&lt;h2 id=&#34;倒戈&#34;&gt;倒戈&lt;/h2&gt;
-
 &lt;p&gt;七月底的时候，开发了一年的游戏最终还是倒戈了,技术团队以整队收编的方式到了现在这家公司.
 掰着脚趾头数一数,失败的项目快凑成一打了.
 反观这几年这些项目.只能说成功的游戏都是一个模样,赚得盆满钵满.失败的原因却各不相同.&lt;/p&gt;</description>

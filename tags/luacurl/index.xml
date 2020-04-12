@@ -1,24 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>luacurl on farwmarth</title>
-    <link>http://farwmarth.com/tags/luacurl/</link>
+    <link>https://farwmarth.com/tags/luacurl/</link>
     <description>Recent content in luacurl on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Thu, 02 Jul 2015 16:03:44 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/tags/luacurl/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/tags/luacurl/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>给skynet加上curl模块</title>
-      <link>http://farwmarth.com/post/%E7%BB%99skynet%E5%8A%A0%E4%B8%8Acurl%E6%A8%A1%E5%9D%97/</link>
+      <link>https://farwmarth.com/post/%E7%BB%99skynet%E5%8A%A0%E4%B8%8Acurl%E6%A8%A1%E5%9D%97/</link>
       <pubDate>Thu, 02 Jul 2015 16:03:44 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E7%BB%99skynet%E5%8A%A0%E4%B8%8Acurl%E6%A8%A1%E5%9D%97/</guid>
-      <description>&lt;p&gt;&amp;nbsp;&amp;nbsp;现在项目里用的是早期的skynet版本,一直不支持http的get,post. 充值与后台交互方式都是采用socket的方式。大部分需求都尽量避开这一块，最近策划又提了个需求,关服开服状态要反应到客户端。这个项目服务器列表是直接是一个静态文件放在web容器中.思路很简单,用jsp写个服务来修改服务器状态(这里应该做安全检验),各服务器开关服，或者服务器崩溃时将状态上报到web服务上. 关键就在这个skynet的http上.&lt;p&gt;&lt;/p&gt;
-&amp;nbsp;&amp;nbsp;尝试用skynet的socket来模拟http请求,一直处于阻塞状态。没有去细究. 然后从github找了个luacurl库 : &lt;a href=&#34;https://github.com/Lua-cURL/Lua-cURLv3&#34; title=&#34;https://github.com/Lua-cURL/Lua-cURLv3&#34;&gt;https://github.com/Lua-cURL/Lua-cURLv3&lt;/a&gt;&amp;nbsp; , 然后把依赖库&lt;a href=&#34;http://curl.haxx.se/download.html&#34; title=&#34;http://curl.haxx.se/download.html&#34;&gt;http://curl.haxx.se/download.html&lt;/a&gt; 也down下来.&lt;/p&gt;</description>
+      <guid>https://farwmarth.com/post/%E7%BB%99skynet%E5%8A%A0%E4%B8%8Acurl%E6%A8%A1%E5%9D%97/</guid>
+      <description>&lt;p&gt;  现在项目里用的是早期的skynet版本,一直不支持http的get,post. 充值与后台交互方式都是采用socket的方式。大部分需求都尽量避开这一块，最近策划又提了个需求,关服开服状态要反应到客户端。这个项目服务器列表是直接是一个静态文件放在web容器中.思路很简单,用jsp写个服务来修改服务器状态(这里应该做安全检验),各服务器开关服，或者服务器崩溃时将状态上报到web服务上. 关键就在这个skynet的http上.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
+  尝试用skynet的socket来模拟http请求,一直处于阻塞状态。没有去细究. 然后从github找了个luacurl库 : &lt;a href=&#34;https://github.com/Lua-cURL/Lua-cURLv3&#34; title=&#34;https://github.com/Lua-cURL/Lua-cURLv3&#34;&gt;https://github.com/Lua-cURL/Lua-cURLv3&lt;/a&gt;  , 然后把依赖库&lt;a href=&#34;http://curl.haxx.se/download.html&#34; title=&#34;http://curl.haxx.se/download.html&#34;&gt;http://curl.haxx.se/download.html&lt;/a&gt; 也down下来.&lt;/p&gt;</description>
     </item>
     
   </channel>

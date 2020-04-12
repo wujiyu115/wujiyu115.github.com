@@ -1,32 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>as3 on farwmarth</title>
-    <link>http://farwmarth.com/tags/as3/</link>
+    <link>https://farwmarth.com/tags/as3/</link>
     <description>Recent content in as3 on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Thu, 21 Jul 2011 10:30:00 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/tags/as3/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/tags/as3/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>as3一些常用数学公式</title>
-      <link>http://farwmarth.com/post/as3%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</link>
+      <link>https://farwmarth.com/post/as3%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</link>
       <pubDate>Thu, 21 Jul 2011 10:30:00 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/as3%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</guid>
+      <guid>https://farwmarth.com/post/as3%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</guid>
       <description>&lt;h3 id=&#34;基本三角函数的计算&#34;&gt;基本三角函数的计算：&lt;/h3&gt;
-
 &lt;ul&gt;
 &lt;li&gt;角的正弦值 = 对边 / 斜边&lt;/li&gt;
 &lt;li&gt;角的余弦值 = 邻边 / 斜边&lt;/li&gt;
 &lt;li&gt;角的正切值 = 对边 / 邻边&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h3 id=&#34;角度制与弧度制的相互转换&#34;&gt;角度制与弧度制的相互转换：&lt;/h3&gt;
-
 &lt;ul&gt;
 &lt;li&gt;弧度 = 角度 * Math.PI / 180&lt;/li&gt;
 &lt;li&gt;角度 = 弧度 * 180 / Math.PI&lt;/li&gt;

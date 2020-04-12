@@ -1,31 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>gtd on farwmarth</title>
-    <link>http://farwmarth.com/tags/gtd/</link>
+    <link>https://farwmarth.com/tags/gtd/</link>
     <description>Recent content in gtd on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 16 Jan 2013 12:53:26 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/tags/gtd/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/tags/gtd/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>GTD</title>
-      <link>http://farwmarth.com/post/gtd/</link>
+      <link>https://farwmarth.com/post/gtd/</link>
       <pubDate>Wed, 16 Jan 2013 12:53:26 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/gtd/</guid>
+      <guid>https://farwmarth.com/post/gtd/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;GTD流程图 : Getting Things Done的缩写&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;把所有事情都从你的脑袋里弄出来。在事情出现就做好相关行动的一系列决定，而不是在事情爆发的时候。以合适的类别组织好你的项目的各种提醒以及下一步行动。保持你的系统更新和完整，及时进行回顾，使你在任何时候都能信任你的系统和对任务的处理。”&lt;/p&gt;
-
 &lt;p&gt;GTD系统由五条核心原则组成：收集、处理、管理、执行、回顾&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/5584467049_4caa6bdff6.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://farwmarth.bestnewbee.com/images/5584467049_4caa6bdff6.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

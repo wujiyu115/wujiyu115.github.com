@@ -1,27 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>json on farwmarth</title>
-    <link>http://farwmarth.com/tags/json/</link>
+    <link>https://farwmarth.com/tags/json/</link>
     <description>Recent content in json on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 20 Apr 2016 19:10:39 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/tags/json/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/tags/json/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>lua数据序列化的选择</title>
-      <link>http://farwmarth.com/post/lua%E6%95%B0%E6%8D%AE%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E9%80%89%E6%8B%A9/</link>
+      <link>https://farwmarth.com/post/lua%E6%95%B0%E6%8D%AE%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E9%80%89%E6%8B%A9/</link>
       <pubDate>Wed, 20 Apr 2016 19:10:39 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/lua%E6%95%B0%E6%8D%AE%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
-      <description>&lt;p&gt;在寻找lua的json库时并没有找到太如意的方案.都是年久失修的库.
-+ DKJSON 2.1 &lt;a href=&#34;http://dkolf.de/src/dkjson-lua.fsl/home&#34;&gt;http://dkolf.de/src/dkjson-lua.fsl/home&lt;/a&gt;
-+ Lua YAJL 2.0 &lt;a href=&#34;https://github.com/brimworks/lua-yajl&#34;&gt;https://github.com/brimworks/lua-yajl&lt;/a&gt;
-+ Lua CSJON 2.0.0 &lt;a href=&#34;http://www.kyne.com.au/~mark/software/lua-cjson.php&#34;&gt;http://www.kyne.com.au/~mark/software/lua-cjson.php&lt;/a&gt;&lt;/p&gt;
-
+      <guid>https://farwmarth.com/post/lua%E6%95%B0%E6%8D%AE%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E9%80%89%E6%8B%A9/</guid>
+      <description>&lt;p&gt;在寻找lua的json库时并没有找到太如意的方案.都是年久失修的库.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DKJSON 2.1 &lt;a href=&#34;http://dkolf.de/src/dkjson-lua.fsl/home&#34;&gt;http://dkolf.de/src/dkjson-lua.fsl/home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lua YAJL 2.0 &lt;a href=&#34;https://github.com/brimworks/lua-yajl&#34;&gt;https://github.com/brimworks/lua-yajl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lua CSJON 2.0.0 &lt;a href=&#34;http://www.kyne.com.au/~mark/software/lua-cjson.php&#34;&gt;http://www.kyne.com.au/~mark/software/lua-cjson.php&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;a href=&#34;http://www.kyne.com.au/~mark/software/lua-json-performance.html&#34;&gt;http://www.kyne.com.au/~mark/software/lua-json-performance.html&lt;/a&gt;
 最高选择了把cjson整合到项目 中&lt;/p&gt;</description>
     </item>

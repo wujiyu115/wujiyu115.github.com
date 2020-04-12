@@ -1,292 +1,301 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on farwmarth</title>
-    <link>http://farwmarth.com/categories/</link>
+    <link>https://farwmarth.com/categories/</link>
     <description>Recent content in Categories on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 09 Dec 2018 17:41:27 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>技术</title>
+      <link>https://farwmarth.com/categories/%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://farwmarth.com/categories/%E6%8A%80%E6%9C%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>programm</title>
-      <link>http://farwmarth.com/categories/programm/</link>
+      <link>https://farwmarth.com/categories/programm/</link>
       <pubDate>Sun, 09 Dec 2018 17:41:27 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/programm/</guid>
+      <guid>https://farwmarth.com/categories/programm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hexo</title>
-      <link>http://farwmarth.com/categories/hexo/</link>
+      <link>https://farwmarth.com/categories/hexo/</link>
       <pubDate>Sun, 12 Mar 2017 23:21:00 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/hexo/</guid>
+      <guid>https://farwmarth.com/categories/hexo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>soft</title>
-      <link>http://farwmarth.com/categories/soft/</link>
+      <link>https://farwmarth.com/categories/soft/</link>
       <pubDate>Sun, 18 Dec 2016 23:20:39 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/soft/</guid>
+      <guid>https://farwmarth.com/categories/soft/</guid>
       <description></description>
     </item>
     
     <item>
       <title>life</title>
-      <link>http://farwmarth.com/categories/life/</link>
+      <link>https://farwmarth.com/categories/life/</link>
       <pubDate>Sun, 18 Dec 2016 12:20:39 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/life/</guid>
+      <guid>https://farwmarth.com/categories/life/</guid>
       <description></description>
     </item>
     
     <item>
       <title>c&#43;&#43;</title>
-      <link>http://farwmarth.com/categories/c&#43;&#43;/</link>
+      <link>https://farwmarth.com/categories/c&#43;&#43;/</link>
       <pubDate>Thu, 02 Jul 2015 16:03:44 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/c&#43;&#43;/</guid>
+      <guid>https://farwmarth.com/categories/c&#43;&#43;/</guid>
       <description></description>
     </item>
     
     <item>
       <title>一个人的喃喃自语</title>
-      <link>http://farwmarth.com/categories/%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%96%83%E5%96%83%E8%87%AA%E8%AF%AD/</link>
+      <link>https://farwmarth.com/categories/%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%96%83%E5%96%83%E8%87%AA%E8%AF%AD/</link>
       <pubDate>Tue, 21 Apr 2015 18:26:16 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%96%83%E5%96%83%E8%87%AA%E8%AF%AD/</guid>
+      <guid>https://farwmarth.com/categories/%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%96%83%E5%96%83%E8%87%AA%E8%AF%AD/</guid>
       <description></description>
     </item>
     
     <item>
       <title>movie</title>
-      <link>http://farwmarth.com/categories/movie/</link>
+      <link>https://farwmarth.com/categories/movie/</link>
       <pubDate>Mon, 29 Dec 2014 17:23:48 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/movie/</guid>
+      <guid>https://farwmarth.com/categories/movie/</guid>
       <description></description>
     </item>
     
     <item>
       <title>教你瞎折腾</title>
-      <link>http://farwmarth.com/categories/%E6%95%99%E4%BD%A0%E7%9E%8E%E6%8A%98%E8%85%BE/</link>
+      <link>https://farwmarth.com/categories/%E6%95%99%E4%BD%A0%E7%9E%8E%E6%8A%98%E8%85%BE/</link>
       <pubDate>Fri, 05 Dec 2014 14:21:40 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/%E6%95%99%E4%BD%A0%E7%9E%8E%E6%8A%98%E8%85%BE/</guid>
+      <guid>https://farwmarth.com/categories/%E6%95%99%E4%BD%A0%E7%9E%8E%E6%8A%98%E8%85%BE/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ubuntu</title>
-      <link>http://farwmarth.com/categories/ubuntu/</link>
+      <link>https://farwmarth.com/categories/ubuntu/</link>
       <pubDate>Thu, 27 Nov 2014 14:49:16 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/ubuntu/</guid>
+      <guid>https://farwmarth.com/categories/ubuntu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cocos2d-x</title>
-      <link>http://farwmarth.com/categories/cocos2d-x/</link>
+      <link>https://farwmarth.com/categories/cocos2d-x/</link>
       <pubDate>Mon, 20 Oct 2014 17:01:00 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/cocos2d-x/</guid>
+      <guid>https://farwmarth.com/categories/cocos2d-x/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tools</title>
-      <link>http://farwmarth.com/categories/tools/</link>
+      <link>https://farwmarth.com/categories/tools/</link>
       <pubDate>Thu, 09 Oct 2014 17:56:02 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/tools/</guid>
+      <guid>https://farwmarth.com/categories/tools/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ant</title>
-      <link>http://farwmarth.com/categories/ant/</link>
+      <link>https://farwmarth.com/categories/ant/</link>
       <pubDate>Mon, 29 Sep 2014 14:58:22 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/ant/</guid>
+      <guid>https://farwmarth.com/categories/ant/</guid>
       <description></description>
     </item>
     
     <item>
       <title>libgdx</title>
-      <link>http://farwmarth.com/categories/libgdx/</link>
+      <link>https://farwmarth.com/categories/libgdx/</link>
       <pubDate>Fri, 28 Feb 2014 13:42:06 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/libgdx/</guid>
+      <guid>https://farwmarth.com/categories/libgdx/</guid>
       <description></description>
     </item>
     
     <item>
       <title>瞎折腾</title>
-      <link>http://farwmarth.com/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/</link>
+      <link>https://farwmarth.com/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/</link>
       <pubDate>Fri, 28 Feb 2014 13:35:37 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/</guid>
+      <guid>https://farwmarth.com/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/</guid>
       <description></description>
     </item>
     
     <item>
       <title>bat</title>
-      <link>http://farwmarth.com/categories/bat/</link>
+      <link>https://farwmarth.com/categories/bat/</link>
       <pubDate>Mon, 14 Oct 2013 17:07:28 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/bat/</guid>
+      <guid>https://farwmarth.com/categories/bat/</guid>
       <description></description>
     </item>
     
     <item>
       <title>shoot</title>
-      <link>http://farwmarth.com/categories/shoot/</link>
+      <link>https://farwmarth.com/categories/shoot/</link>
       <pubDate>Mon, 16 Sep 2013 18:40:15 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/shoot/</guid>
+      <guid>https://farwmarth.com/categories/shoot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>破解</title>
-      <link>http://farwmarth.com/categories/%E7%A0%B4%E8%A7%A3/</link>
+      <link>https://farwmarth.com/categories/%E7%A0%B4%E8%A7%A3/</link>
       <pubDate>Fri, 23 Aug 2013 17:22:41 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/%E7%A0%B4%E8%A7%A3/</guid>
+      <guid>https://farwmarth.com/categories/%E7%A0%B4%E8%A7%A3/</guid>
       <description></description>
     </item>
     
     <item>
       <title>算法</title>
-      <link>http://farwmarth.com/categories/%E7%AE%97%E6%B3%95/</link>
+      <link>https://farwmarth.com/categories/%E7%AE%97%E6%B3%95/</link>
       <pubDate>Fri, 16 Aug 2013 15:54:49 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/%E7%AE%97%E6%B3%95/</guid>
+      <guid>https://farwmarth.com/categories/%E7%AE%97%E6%B3%95/</guid>
       <description></description>
     </item>
     
     <item>
       <title>android</title>
-      <link>http://farwmarth.com/categories/android/</link>
+      <link>https://farwmarth.com/categories/android/</link>
       <pubDate>Wed, 31 Jul 2013 17:09:51 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/android/</guid>
+      <guid>https://farwmarth.com/categories/android/</guid>
       <description></description>
     </item>
     
     <item>
       <title>java</title>
-      <link>http://farwmarth.com/categories/java/</link>
+      <link>https://farwmarth.com/categories/java/</link>
       <pubDate>Mon, 29 Jul 2013 22:54:49 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/java/</guid>
+      <guid>https://farwmarth.com/categories/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>svn</title>
-      <link>http://farwmarth.com/categories/svn/</link>
+      <link>https://farwmarth.com/categories/svn/</link>
       <pubDate>Fri, 24 May 2013 13:37:02 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/svn/</guid>
+      <guid>https://farwmarth.com/categories/svn/</guid>
       <description></description>
     </item>
     
     <item>
       <title>starling</title>
-      <link>http://farwmarth.com/categories/starling/</link>
+      <link>https://farwmarth.com/categories/starling/</link>
       <pubDate>Sun, 19 May 2013 16:31:02 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/starling/</guid>
+      <guid>https://farwmarth.com/categories/starling/</guid>
       <description></description>
     </item>
     
     <item>
       <title>base</title>
-      <link>http://farwmarth.com/categories/base/</link>
+      <link>https://farwmarth.com/categories/base/</link>
       <pubDate>Tue, 07 May 2013 21:23:04 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/base/</guid>
+      <guid>https://farwmarth.com/categories/base/</guid>
       <description></description>
     </item>
     
     <item>
       <title>centos</title>
-      <link>http://farwmarth.com/categories/centos/</link>
+      <link>https://farwmarth.com/categories/centos/</link>
       <pubDate>Fri, 29 Mar 2013 00:16:43 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/centos/</guid>
+      <guid>https://farwmarth.com/categories/centos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mind</title>
-      <link>http://farwmarth.com/categories/mind/</link>
+      <link>https://farwmarth.com/categories/mind/</link>
       <pubDate>Mon, 25 Mar 2013 00:12:09 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/mind/</guid>
+      <guid>https://farwmarth.com/categories/mind/</guid>
       <description></description>
     </item>
     
     <item>
       <title>actionscript</title>
-      <link>http://farwmarth.com/categories/actionscript/</link>
+      <link>https://farwmarth.com/categories/actionscript/</link>
       <pubDate>Fri, 18 Jan 2013 19:36:10 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/actionscript/</guid>
+      <guid>https://farwmarth.com/categories/actionscript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>wordpress</title>
-      <link>http://farwmarth.com/categories/wordpress/</link>
+      <link>https://farwmarth.com/categories/wordpress/</link>
       <pubDate>Fri, 28 Dec 2012 19:07:00 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/wordpress/</guid>
+      <guid>https://farwmarth.com/categories/wordpress/</guid>
       <description></description>
     </item>
     
     <item>
       <title>git</title>
-      <link>http://farwmarth.com/categories/git/</link>
+      <link>https://farwmarth.com/categories/git/</link>
       <pubDate>Wed, 18 Apr 2012 00:50:00 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/git/</guid>
+      <guid>https://farwmarth.com/categories/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>audio</title>
-      <link>http://farwmarth.com/categories/audio/</link>
+      <link>https://farwmarth.com/categories/audio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/audio/</guid>
+      <guid>https://farwmarth.com/categories/audio/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mac</title>
-      <link>http://farwmarth.com/categories/mac/</link>
+      <link>https://farwmarth.com/categories/mac/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/mac/</guid>
+      <guid>https://farwmarth.com/categories/mac/</guid>
       <description></description>
     </item>
     
     <item>
       <title>skill</title>
-      <link>http://farwmarth.com/categories/skill/</link>
+      <link>https://farwmarth.com/categories/skill/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://farwmarth.com/categories/skill/</guid>
+      <guid>https://farwmarth.com/categories/skill/</guid>
       <description></description>
     </item>
     

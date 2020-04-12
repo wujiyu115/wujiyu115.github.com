@@ -1,52 +1,47 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cocos2d-x on farwmarth</title>
-    <link>http://farwmarth.com/tags/cocos2d-x/</link>
+    <link>https://farwmarth.com/tags/cocos2d-x/</link>
     <description>Recent content in cocos2d-x on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Fri, 10 Oct 2014 10:34:30 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/tags/cocos2d-x/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/tags/cocos2d-x/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>代码加密,渠道打包过程</title>
-      <link>http://farwmarth.com/post/%E4%BB%A3%E7%A0%81%E5%8A%A0%E5%AF%86%E6%B8%A0%E9%81%93%E6%89%93%E5%8C%85%E8%BF%87%E7%A8%8B/</link>
+      <link>https://farwmarth.com/post/%E4%BB%A3%E7%A0%81%E5%8A%A0%E5%AF%86%E6%B8%A0%E9%81%93%E6%89%93%E5%8C%85%E8%BF%87%E7%A8%8B/</link>
       <pubDate>Fri, 10 Oct 2014 10:34:30 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E4%BB%A3%E7%A0%81%E5%8A%A0%E5%AF%86%E6%B8%A0%E9%81%93%E6%89%93%E5%8C%85%E8%BF%87%E7%A8%8B/</guid>
+      <guid>https://farwmarth.com/post/%E4%BB%A3%E7%A0%81%E5%8A%A0%E5%AF%86%E6%B8%A0%E9%81%93%E6%89%93%E5%8C%85%E8%BF%87%E7%A8%8B/</guid>
       <description>&lt;p&gt;前段时间就计划着把项目里用到的一些通用的东西整理出来，正好最近项目不是太忙，就整理一下。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>cocos2d-x 骨骼动画</title>
-      <link>http://farwmarth.com/post/cocos2d-x-%E9%AA%A8%E9%AA%BC%E5%8A%A8%E7%94%BB/</link>
+      <link>https://farwmarth.com/post/cocos2d-x-%E9%AA%A8%E9%AA%BC%E5%8A%A8%E7%94%BB/</link>
       <pubDate>Tue, 03 Sep 2013 20:35:02 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/cocos2d-x-%E9%AA%A8%E9%AA%BC%E5%8A%A8%E7%94%BB/</guid>
+      <guid>https://farwmarth.com/post/cocos2d-x-%E9%AA%A8%E9%AA%BC%E5%8A%A8%E7%94%BB/</guid>
       <description>&lt;h2 id=&#34;何谓骨骼动画&#34;&gt;何谓骨骼动画?&lt;/h2&gt;
-
 &lt;p&gt;骨骼动画包括两部分:蒙皮和系列相关联的骨头.在时间线上蒙皮会跟随骨骼的位置改变位置形成动画。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/09/image.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://farwmarth.bestnewbee.com/images/uploads/2013/09/image.png&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>cocos2d-x vs开发</title>
-      <link>http://farwmarth.com/post/cocos2d-x-vs%E5%BC%80%E5%8F%91/</link>
+      <link>https://farwmarth.com/post/cocos2d-x-vs%E5%BC%80%E5%8F%91/</link>
       <pubDate>Sat, 27 Jul 2013 21:01:30 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/cocos2d-x-vs%E5%BC%80%E5%8F%91/</guid>
-      <description>&lt;h2 id=&#34;一-vs环境配置&#34;&gt;一  &lt;strong&gt;vs环境配置&lt;/strong&gt;&lt;/h2&gt;
-
+      <guid>https://farwmarth.com/post/cocos2d-x-vs%E5%BC%80%E5%8F%91/</guid>
+      <description>&lt;h2 id=&#34;一--vs环境配置&#34;&gt;一  &lt;strong&gt;vs环境配置&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;android环境配置不累赘了:&lt;a href=&#34;http://farwmarth.com/?p=657&#34;&gt;http://farwmarth.com/?p=657&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;vs配置：下载cocos2d-x 2.1.4  , install-templates-msvc.&lt;br /&gt;
+&lt;p&gt;vs配置：下载cocos2d-x 2.1.4  , install-templates-msvc. &lt;br&gt;
 bat是安装vs模板的，安装的时候发现2.1.4里竟然没有msv目录，下了2.1.3将msv目录复制到2.1.4重新运行，模板就安装成功了&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/07/image2.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://farwmarth.bestnewbee.com/images/uploads/2013/07/image2.png&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

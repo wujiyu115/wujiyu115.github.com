@@ -1,41 +1,43 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>kindle on farwmarth</title>
-    <link>http://farwmarth.com/tags/kindle/</link>
+    <link>https://farwmarth.com/tags/kindle/</link>
     <description>Recent content in kindle on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 13 Jan 2016 17:32:42 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/tags/kindle/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/tags/kindle/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Kindle不完全指南</title>
-      <link>http://farwmarth.com/post/kindle%E4%B8%8D%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</link>
+      <link>https://farwmarth.com/post/kindle%E4%B8%8D%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</link>
       <pubDate>Wed, 13 Jan 2016 17:32:42 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/kindle%E4%B8%8D%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</guid>
+      <guid>https://farwmarth.com/post/kindle%E4%B8%8D%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</guid>
       <description>&lt;p&gt;资料整理来自(&lt;a href=&#34;http://kindlefere.com&#34;&gt;http://kindlefere.com&lt;/a&gt;)&lt;/p&gt;
-
 &lt;h2 id=&#34;1-推送&#34;&gt;1. 推送&lt;/h2&gt;
-
 &lt;h3 id=&#34;1-邮件推送&#34;&gt;1. 邮件推送&lt;/h3&gt;
-
 &lt;h4 id=&#34;1-基础知识&#34;&gt;1. 基础知识&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;1 美亚kindle管理:https://www.amazon.com/mn/dcw/myx.html/ref=kinw_myk_redirect#/home/settings/payment
-2 中亚kindle管理:https://www.amazon.cn/mn/dcw/myx.html/ref=kinw_myk_redirect#/home/settings/payment&lt;/pre&gt;&lt;/div&gt;
-&lt;h4 id=&#34;2-页面设置&#34;&gt;2. 页面设置&lt;/h4&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;1 美亚kindle管理:https://www.amazon.com/mn/dcw/myx.html/ref=kinw_myk_redirect#/home/settings/payment
+2 中亚kindle管理:https://www.amazon.cn/mn/dcw/myx.html/ref=kinw_myk_redirect#/home/settings/payment
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;2-页面设置&#34;&gt;2. 页面设置&lt;/h4&gt;
 &lt;ol&gt;
-&lt;li&gt;为 Kindle 设备绑定亚马逊账号
-点击 Kindle 屏幕右上角的三条横杆菜单图标，在弹出的菜单中点选设置，选取自己的Wifi热点将Kindle连接上WiFi,然后点击“注册”项填入第一步注册（或已有）的亚马逊帐号&lt;/li&gt;
-&lt;li&gt;获取接收推送的邮箱地址
-&lt;img src=&#34;http://ww1.sinaimg.cn/large/4b5a1116gw1exh613cdz4j20jg0g4gor.jpg&#34; alt=&#34;我的头像&#34; /&gt;&lt;/li&gt;
-&lt;li&gt;添加推送邮箱地址到已认可邮箱列表
+&lt;li&gt;
+&lt;p&gt;为 Kindle 设备绑定亚马逊账号
+点击 Kindle 屏幕右上角的三条横杆菜单图标，在弹出的菜单中点选设置，选取自己的Wifi热点将Kindle连接上WiFi,然后点击“注册”项填入第一步注册（或已有）的亚马逊帐号&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;获取接收推送的邮箱地址
+&lt;img src=&#34;https://farwmarth.bestnewbee.com/4b5a1116gw1exh613cdz4j20jg0g4gor.jpg&#34; alt=&#34;4b5a1116gw1exh613cdz4j20jg0g4go&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;添加推送邮箱地址到已认可邮箱列表
 需要在【设置】页面底部找到“已认可的发件人电子邮箱列表”这一项，点击“添加认可的电子邮箱”把第一步申请的邮箱地址（或已有邮箱地址）添加进去。
-&lt;img src=&#34;http://ww2.sinaimg.cn/large/4b5a1116gw1exh69h4fsxj20jg0akgnf.jpg&#34; alt=&#34;我的头像&#34; /&gt;&lt;/li&gt;
+&lt;img src=&#34;https://farwmarth.bestnewbee.com/4b5a1116gw1exh69h4fsxj20jg0akgnf.jpg&#34; alt=&#34;4b5a1116gw1exh69h4fsxj20jg0akgnf&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;</description>
     </item>
     

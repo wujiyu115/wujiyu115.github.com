@@ -1,39 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>programm on farwmarth</title>
-    <link>http://farwmarth.com/categories/programm/</link>
+    <link>https://farwmarth.com/categories/programm/</link>
     <description>Recent content in programm on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sun, 09 Dec 2018 17:41:27 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/categories/programm/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/categories/programm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>登录</title>
-      <link>http://farwmarth.com/drafts/game_login/</link>
+      <link>https://farwmarth.com/drafts/game_login/</link>
       <pubDate>Sun, 09 Dec 2018 17:41:27 +0000</pubDate>
       
-      <guid>http://farwmarth.com/drafts/game_login/</guid>
+      <guid>https://farwmarth.com/drafts/game_login/</guid>
       <description>DH密钥交换算法的作用是使通信双方可以在不安全的通道中建立一个相同的密钥，用于加密通信。 基本原理示例： 通信方A和通信方B约定一个初始数g，如</description>
     </item>
     
     <item>
       <title>Gradle 打包</title>
-      <link>http://farwmarth.com/post/gradle/</link>
+      <link>https://farwmarth.com/post/gradle/</link>
       <pubDate>Sun, 13 Mar 2016 20:26:02 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/gradle/</guid>
+      <guid>https://farwmarth.com/post/gradle/</guid>
       <description>&lt;h2 id=&#34;什么是gradle&#34;&gt;什么是Gradle？&lt;/h2&gt;
-
 &lt;p&gt;Gradle是一种依赖管理工具，基于Groovy语言，面向Java应用为主，它抛弃了基于XML的各种繁琐配置，取而代之的是一种基于Groovy的内部领域特定（DSL）语言&lt;/p&gt;
-
 &lt;h2 id=&#34;安装gradle&#34;&gt;安装Gradle&lt;/h2&gt;
-
 &lt;p&gt;Android Studio 默认下载目录,如果下载太慢可以手动从官网下载放到对应目录&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Mac&lt;/strong&gt;: /Users/&amp;lt;用户名&amp;gt;/.gradle/wrapper/dists** 目录&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Win&lt;/strong&gt;: C:\Documents and Settings&amp;lt;用户名&amp;gt;.gradle\wrapper\dists 目录&lt;/li&gt;
@@ -42,14 +38,14 @@
     
     <item>
       <title>mysql 备忘录</title>
-      <link>http://farwmarth.com/post/mysql%E5%A4%87%E5%BF%98/</link>
+      <link>https://farwmarth.com/post/mysql%E5%A4%87%E5%BF%98/</link>
       <pubDate>Thu, 25 Feb 2016 19:10:39 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/mysql%E5%A4%87%E5%BF%98/</guid>
+      <guid>https://farwmarth.com/post/mysql%E5%A4%87%E5%BF%98/</guid>
       <description>&lt;h2 id=&#34;基础&#34;&gt;基础&lt;/h2&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;安装 mysql&lt;/p&gt;
+&lt;li&gt;安装 mysql&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#server&lt;/span&gt;
 sudo apt-get install mysql-server
 &lt;span style=&#34;color:#75715e&#34;&gt;#server dev&lt;/span&gt;
@@ -57,27 +53,24 @@ sudo apt-get install libmysqld-dev
 &lt;span style=&#34;color:#75715e&#34;&gt;#client&lt;/span&gt;
 sudo apt-get install mysql-client
 &lt;span style=&#34;color:#75715e&#34;&gt;#client dev&lt;/span&gt;
-sudo apt-get install libmysqlclient-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+sudo apt-get install libmysqlclient-dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
       <title>markdown简明语法</title>
-      <link>http://farwmarth.com/post/markdown%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95/</link>
+      <link>https://farwmarth.com/post/markdown%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95/</link>
       <pubDate>Thu, 14 Jan 2016 14:55:10 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/markdown%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95/</guid>
+      <guid>https://farwmarth.com/post/markdown%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95/</guid>
       <description>&lt;h2 id=&#34;简明语法&#34;&gt;简明语法&lt;/h2&gt;
-
 &lt;h3 id=&#34;基本符号&#34;&gt;基本符号&lt;/h3&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;*,-,+&lt;/code&gt; 3个符号效果都一样，这3个符号被称为 Markdown符号&lt;/li&gt;
 &lt;li&gt;空白行表示另起一个段落&lt;/li&gt;
 &lt;li&gt;`是表示inline代码，tab是用来标记 代码段，分别对应html的code，pre标签&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h3 id=&#34;标题&#34;&gt;标题&lt;/h3&gt;
-
 &lt;ul&gt;
 &lt;li&gt;标题 &lt;code&gt;##&lt;/code&gt;生成h1-h6&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -85,55 +78,51 @@ sudo apt-get install libmysqlclient-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</de
     
     <item>
       <title>翻翻旧货</title>
-      <link>http://farwmarth.com/post/%E7%BF%BB%E7%BF%BB%E6%97%A7%E8%B4%A7/</link>
+      <link>https://farwmarth.com/post/%E7%BF%BB%E7%BF%BB%E6%97%A7%E8%B4%A7/</link>
       <pubDate>Thu, 23 Apr 2015 23:29:33 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E7%BF%BB%E7%BF%BB%E6%97%A7%E8%B4%A7/</guid>
+      <guid>https://farwmarth.com/post/%E7%BF%BB%E7%BF%BB%E6%97%A7%E8%B4%A7/</guid>
       <description>&lt;p&gt;这两个月代码产出量比以往都要高，可能是兴趣所致,总喜欢折腾一些工作外的想法.&lt;/p&gt;
-
 &lt;p&gt;二月份的时候断断续续花了一周的时间写了fei.py这个自动化注册的东西。也当是python的一次练手.&lt;/p&gt;
-
-&lt;p&gt;说来也巧,写这个东西起因是因为在博客上看到&amp;rdquo;轻松筹&amp;rdquo;发起了刷脸送parallels desktop 正版激活码的活动.其实就是在&amp;rdquo;轻松筹&amp;rdquo;上发起一个活动,让好友来支持,这样就可以得到一套正版的激活码.但是注册这个网站不是一般的邮箱注册,而是手机号注册.神奇的网路上一搜索，果然有专门提供一次性注册得到验证码的服务,筛选了一下就用了飞Q(&lt;a href=&#34;http://sms.xudan123.com/api.html&#34; title=&#34;http://sms.xudan123.com/api.html&#34;&gt;http://sms.xudan123.com/api.html&lt;/a&gt;)这个服务,代码分为三个部分,注册,创建支持项目,确认支持.期间也遇到不少问题,调用&amp;rdquo;轻松筹&amp;rdquo;短信接口太频繁被封ip,然后就写了个代理筛选的模块.需要BeautifulSoup模块的支持.&lt;/p&gt;</description>
+&lt;p&gt;说来也巧,写这个东西起因是因为在博客上看到&amp;quot;轻松筹&amp;quot;发起了刷脸送parallels desktop 正版激活码的活动.其实就是在&amp;quot;轻松筹&amp;quot;上发起一个活动,让好友来支持,这样就可以得到一套正版的激活码.但是注册这个网站不是一般的邮箱注册,而是手机号注册.神奇的网路上一搜索，果然有专门提供一次性注册得到验证码的服务,筛选了一下就用了飞Q(&lt;a href=&#34;http://sms.xudan123.com/api.html&#34; title=&#34;http://sms.xudan123.com/api.html&#34;&gt;http://sms.xudan123.com/api.html&lt;/a&gt;)这个服务,代码分为三个部分,注册,创建支持项目,确认支持.期间也遇到不少问题,调用&amp;quot;轻松筹&amp;quot;短信接口太频繁被封ip,然后就写了个代理筛选的模块.需要BeautifulSoup模块的支持.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>libgdx字体渲染选择方案</title>
-      <link>http://farwmarth.com/post/libgdx%E5%AD%97%E4%BD%93%E6%B8%B2%E6%9F%93%E9%80%89%E6%8B%A9%E6%96%B9%E6%A1%88/</link>
+      <link>https://farwmarth.com/post/libgdx%E5%AD%97%E4%BD%93%E6%B8%B2%E6%9F%93%E9%80%89%E6%8B%A9%E6%96%B9%E6%A1%88/</link>
       <pubDate>Fri, 28 Feb 2014 13:42:06 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/libgdx%E5%AD%97%E4%BD%93%E6%B8%B2%E6%9F%93%E9%80%89%E6%8B%A9%E6%96%B9%E6%A1%88/</guid>
+      <guid>https://farwmarth.com/post/libgdx%E5%AD%97%E4%BD%93%E6%B8%B2%E6%9F%93%E9%80%89%E6%8B%A9%E6%96%B9%E6%A1%88/</guid>
       <description>&lt;p&gt;最近在优化一下游戏中内的字体渲染方案。
 找了下资料发现渲染方案就两种。一种是使用ttf，动态去生成纹理渲染.第二种是采用位图字体.两种方案各有利弊.第一种方案性能损耗比较大,在libgdx的FreeTypeFontGenerator中会每次都重新生成纹理。如果界面上Label数量增多,&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>最近迷恋上小霸王游戏:小蜜蜂</title>
-      <link>http://farwmarth.com/post/%E6%9C%80%E8%BF%91%E8%BF%B7%E6%81%8B%E4%B8%8A%E5%B0%8F%E9%9C%B8%E7%8E%8B%E6%B8%B8%E6%88%8F%E5%B0%8F%E8%9C%9C%E8%9C%82/</link>
+      <link>https://farwmarth.com/post/%E6%9C%80%E8%BF%91%E8%BF%B7%E6%81%8B%E4%B8%8A%E5%B0%8F%E9%9C%B8%E7%8E%8B%E6%B8%B8%E6%88%8F%E5%B0%8F%E8%9C%9C%E8%9C%82/</link>
       <pubDate>Wed, 15 May 2013 20:53:35 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E6%9C%80%E8%BF%91%E8%BF%B7%E6%81%8B%E4%B8%8A%E5%B0%8F%E9%9C%B8%E7%8E%8B%E6%B8%B8%E6%88%8F%E5%B0%8F%E8%9C%9C%E8%9C%82/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://farwmarth.bestnewbee.com/images/uploads/2013/05/image8.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-
+      <guid>https://farwmarth.com/post/%E6%9C%80%E8%BF%91%E8%BF%B7%E6%81%8B%E4%B8%8A%E5%B0%8F%E9%9C%B8%E7%8E%8B%E6%B8%B8%E6%88%8F%E5%B0%8F%E8%9C%9C%E8%9C%82/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://farwmarth.bestnewbee.com/images/uploads/2013/05/image8.png&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;
 &lt;p&gt;这个东东是不是勾起了你童年的回忆..是的,80,90都是这么过来的.黑白电视机加小霸王学习机就是那个年代的无敌装备.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Another New Year 2013</title>
-      <link>http://farwmarth.com/post/another-new-year-2013/</link>
+      <link>https://farwmarth.com/post/another-new-year-2013/</link>
       <pubDate>Wed, 06 Mar 2013 15:56:00 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/another-new-year-2013/</guid>
-      <description>&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; 过年在家里的一个星期相对清静，不用整天对着屏幕，不用一坐就一整天，晚上10点就上床睡觉，睡觉前看看以前下的电影。本来还想着放假做点什么小游戏的，又夭折在日程表上，杀鸡宰鱼的事情占满了前几天。还是农村里过年气氛浓郁，团圆饭，一家人看看春晚烤烤火，打打牌，还有一个个人觉得很有意思的保留节目:除夕夜到认识或者不不认识的人家庭高声辞岁，一声呐喊算时辞旧迎新，给人们带来美好的祝愿。我记得小时候老是盼着过年，过年意味着 有新衣服穿，可以拿压岁钱，可以吃好吃的，更好玩的是可以在除夕夜里辞岁，要到很多糖果和零食，还有就是在除夕夜里可以”守岁”,可以通宵达旦地玩。&lt;/p&gt;</description>
+      <guid>https://farwmarth.com/post/another-new-year-2013/</guid>
+      <description>&lt;p&gt;    过年在家里的一个星期相对清静，不用整天对着屏幕，不用一坐就一整天，晚上10点就上床睡觉，睡觉前看看以前下的电影。本来还想着放假做点什么小游戏的，又夭折在日程表上，杀鸡宰鱼的事情占满了前几天。还是农村里过年气氛浓郁，团圆饭，一家人看看春晚烤烤火，打打牌，还有一个个人觉得很有意思的保留节目:除夕夜到认识或者不不认识的人家庭高声辞岁，一声呐喊算时辞旧迎新，给人们带来美好的祝愿。我记得小时候老是盼着过年，过年意味着 有新衣服穿，可以拿压岁钱，可以吃好吃的，更好玩的是可以在除夕夜里辞岁，要到很多糖果和零食，还有就是在除夕夜里可以”守岁”,可以通宵达旦地玩。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>进制及位运算</title>
-      <link>http://farwmarth.com/post/%E8%BF%9B%E5%88%B6%E5%8F%8A%E4%BD%8D%E8%BF%90%E7%AE%97/</link>
+      <link>https://farwmarth.com/post/%E8%BF%9B%E5%88%B6%E5%8F%8A%E4%BD%8D%E8%BF%90%E7%AE%97/</link>
       <pubDate>Sun, 17 Feb 2013 19:03:03 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E8%BF%9B%E5%88%B6%E5%8F%8A%E4%BD%8D%E8%BF%90%E7%AE%97/</guid>
+      <guid>https://farwmarth.com/post/%E8%BF%9B%E5%88%B6%E5%8F%8A%E4%BD%8D%E8%BF%90%E7%AE%97/</guid>
       <description>&lt;h2 id=&#34;单位&#34;&gt;单位&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;1TB=1024 GB = 1024 M = 1024 KB = 1024 BYTE(字节) = 8 BIT(二进制位)&lt;/li&gt;
 &lt;li&gt;ASCII码：一个英文字母（不分大小写）占一个字节的空间，一个中文汉字占两个字节的空间。一个二进制数字序列，在计算机中作为一个数字单元，一般为8位二进制数，换算为十进制。最小值0，最大值255。如一个ASCII码就是一个字节。&lt;/li&gt;
@@ -145,20 +134,17 @@ sudo apt-get install libmysqlclient-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</de
     
     <item>
       <title>as3一些常用数学公式</title>
-      <link>http://farwmarth.com/post/as3%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</link>
+      <link>https://farwmarth.com/post/as3%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</link>
       <pubDate>Thu, 21 Jul 2011 10:30:00 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/as3%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</guid>
+      <guid>https://farwmarth.com/post/as3%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</guid>
       <description>&lt;h3 id=&#34;基本三角函数的计算&#34;&gt;基本三角函数的计算：&lt;/h3&gt;
-
 &lt;ul&gt;
 &lt;li&gt;角的正弦值 = 对边 / 斜边&lt;/li&gt;
 &lt;li&gt;角的余弦值 = 邻边 / 斜边&lt;/li&gt;
 &lt;li&gt;角的正切值 = 对边 / 邻边&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h3 id=&#34;角度制与弧度制的相互转换&#34;&gt;角度制与弧度制的相互转换：&lt;/h3&gt;
-
 &lt;ul&gt;
 &lt;li&gt;弧度 = 角度 * Math.PI / 180&lt;/li&gt;
 &lt;li&gt;角度 = 弧度 * 180 / Math.PI&lt;/li&gt;
@@ -167,10 +153,10 @@ sudo apt-get install libmysqlclient-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</de
     
     <item>
       <title>NodeJs初探</title>
-      <link>http://farwmarth.com/post/node/</link>
+      <link>https://farwmarth.com/post/node/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/node/</guid>
+      <guid>https://farwmarth.com/post/node/</guid>
       <description>nodejs node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效 安装 mac node使用 #安装 brew install node #升级n</description>
     </item>
     

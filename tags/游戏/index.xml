@@ -1,28 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>游戏 on farwmarth</title>
-    <link>http://farwmarth.com/tags/%E6%B8%B8%E6%88%8F/</link>
+    <link>https://farwmarth.com/tags/%E6%B8%B8%E6%88%8F/</link>
     <description>Recent content in 游戏 on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Tue, 23 Feb 2016 20:26:02 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/tags/%E6%B8%B8%E6%88%8F/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/tags/%E6%B8%B8%E6%88%8F/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>一个游戏的生长过程</title>
-      <link>http://farwmarth.com/post/%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F%E7%9A%84%E7%94%9F%E9%95%BF%E8%BF%87%E7%A8%8B/</link>
+      <link>https://farwmarth.com/post/%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F%E7%9A%84%E7%94%9F%E9%95%BF%E8%BF%87%E7%A8%8B/</link>
       <pubDate>Tue, 23 Feb 2016 20:26:02 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F%E7%9A%84%E7%94%9F%E9%95%BF%E8%BF%87%E7%A8%8B/</guid>
+      <guid>https://farwmarth.com/post/%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F%E7%9A%84%E7%94%9F%E9%95%BF%E8%BF%87%E7%A8%8B/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;每次都是挖了一个巨大无比的坑,填了好久都填不完.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;h2 id=&#34;概念&#34;&gt;概念&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;IP&lt;/strong&gt; : (Intellectual Property),知识产权,在游戏圈可以理解为拥有知识产权的一方,授权游戏开发商使用其主题素材&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;SP&lt;/strong&gt; : (Service Provider)渠道商:相当于电影院(电影院线),电影院是直接面向观众的,各电影院线上映电影给观众看,渠道商则是上架游戏应用给用户下载玩.&lt;/li&gt;
@@ -35,14 +33,13 @@
     
     <item>
       <title>语音服务器的选型</title>
-      <link>http://farwmarth.com/post/%E8%AF%AD%E9%9F%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E5%9E%8B/</link>
+      <link>https://farwmarth.com/post/%E8%AF%AD%E9%9F%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E5%9E%8B/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/%E8%AF%AD%E9%9F%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E5%9E%8B/</guid>
+      <guid>https://farwmarth.com/post/%E8%AF%AD%E9%9F%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E5%9E%8B/</guid>
       <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
-
 &lt;p&gt;最近游戏要接入一下语音服务器,调查了一下融合的语音sdk
-腾讯云GVoice:&lt;a href=&#34;https://www.qcloud.com/document/product/556/7673&#34;&gt;https://www.qcloud.com/document/product/556/7673&lt;/a&gt;
+腾讯云GVoice:https://www.qcloud.com/document/product/556/7673
 好像只有这个比较靠谱,但是收费好像有点贵,还是决定基于原有的免费的百度语音识别造一个轮子&lt;/p&gt;</description>
     </item>
     

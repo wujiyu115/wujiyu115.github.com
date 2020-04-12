@@ -1,31 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>svn on farwmarth</title>
-    <link>http://farwmarth.com/tags/svn/</link>
+    <link>https://farwmarth.com/tags/svn/</link>
     <description>Recent content in svn on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Fri, 24 May 2013 13:37:02 +0000</lastBuildDate>
     
-	<atom:link href="http://farwmarth.com/tags/svn/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://farwmarth.com/tags/svn/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>svn 常用命令和服务器配置</title>
-      <link>http://farwmarth.com/post/-svn-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/</link>
+      <link>https://farwmarth.com/post/-svn-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Fri, 24 May 2013 13:37:02 +0000</pubDate>
       
-      <guid>http://farwmarth.com/post/-svn-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://farwmarth.com/post/-svn-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/</guid>
       <description>&lt;h2 id=&#34;subversion-与版本控制&#34;&gt;Subversion 与版本控制&lt;/h2&gt;
-
 &lt;p&gt;&lt;a href=&#34;http://svnbook.red-bean.com/nightly/en/index.html&#34;&gt;http://svnbook.red-bean.com/nightly/en/index.html&lt;/a&gt;
 &lt;a href=&#34;http://svnbook.red-bean.com/nightly/zh/svn-book.html&#34;&gt;http://svnbook.red-bean.com/nightly/zh/svn-book.html&lt;/a&gt;&lt;/p&gt;
-
 &lt;h2 id=&#34;svn-操作&#34;&gt;SVN 操作&lt;/h2&gt;
-
 &lt;h3 id=&#34;常用操作&#34;&gt;常用操作&lt;/h3&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;svn propset svn:ignore &#39;test&#39; .&lt;/code&gt;    添加到忽略目录&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;svn update&lt;/code&gt; 更新&lt;/li&gt;
@@ -35,14 +31,14 @@
 &lt;li&gt;&lt;code&gt;svn revert -R .&lt;/code&gt;  递归还原当前目录&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;svn commit -m &#39;&#39;&lt;/code&gt; 提交&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;svn add * --force&lt;/code&gt; 强制提交所有
-+&lt;code&gt;svn diff filename&lt;/code&gt;  比较文件&lt;/li&gt;
++&lt;code&gt; svn diff filename&lt;/code&gt;  比较文件&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;svn status&lt;/code&gt;  查看库文件状态&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;svn relocate svn switch --relocate   源地址  新地址&lt;/code&gt;     切换svn地址&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;svn info&lt;/code&gt;   查看目录信息&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;svn cleanup&lt;/code&gt;  清理文件&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;svn (del, remove, rm)&lt;/code&gt;  从svn中移除文件&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;svn export  -r&lt;/code&gt; 导出一个没有svn文件夹的目录&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;svn merge -r 28:25&lt;/code&gt;  从28到25回滚&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;svn merge -r 28:25 &lt;/code&gt;  从28到25回滚&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;svn resolved  filename&lt;/code&gt;  解决冲突&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;svn rm  filename&lt;/code&gt;   从svn中删除&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;svn rm   --keep-local  filename&lt;/code&gt;  从svn中删除并保留本地文件&lt;/li&gt;

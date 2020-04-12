@@ -12,13 +12,13 @@
     <meta property="og:image" content="/img/author.jpg"> 
     <meta name="title" content="xposed初探 - farwmarth" />
     <meta name="description" content="game"> 
-    <link rel="shortcut icon" href="http://farwmarth.com/img/favicon.ico" />
-    <link rel="apple-touch-icon" href="http://farwmarth.com/img/apple-touch-icon.png" />
-    <link rel="apple-touch-icon-precomposed" href="http://farwmarth.com/img/apple-touch-icon.png" />
-    <link href="http://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
-    <link href="http://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="https://farwmarth.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://farwmarth.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://farwmarth.com/img/apple-touch-icon.png" />
+    <link href="https://farwmarth.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://farwmarth.com/css/syntax.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
@@ -37,7 +37,7 @@
       <div class="header-inner"> <div class="site-meta  custom-logo ">
 
   <div class="custom-logo-site-title">
-    <a href="http://farwmarth.com/"  class="brand" rel="start">
+    <a href="https://farwmarth.com/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">farwmarth</span>
       <span class="logo-line-after"><i></i></span>
@@ -59,31 +59,31 @@
       
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/" rel="section">
+          <a href="https://farwmarth.com/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/about/" rel="section">
+          <a href="https://farwmarth.com/about/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/post/" rel="section">
+          <a href="https://farwmarth.com/post/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/douban/" rel="section">
+          <a href="https://farwmarth.com/douban/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />豆瓣
           </a>
         </li>
       
         <li class="menu-item ">
-          <a href="http://farwmarth.com/music/" rel="section">
+          <a href="https://farwmarth.com/music/" rel="section">
               <i class="menu-item-icon fa fa-fw fa-music"></i> <br />音乐
           </a>
         </li>
@@ -115,7 +115,7 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="http://farwmarth.com/post/xposed%E5%88%9D%E6%8E%A2/" itemprop="url">
+        <a class="post-title-link" href="https://farwmarth.com/post/xposed%E5%88%9D%E6%8E%A2/" itemprop="url">
         xposed初探
         </a>
       </h1>
@@ -136,46 +136,35 @@
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">4900 字 ~10分钟</span>
+<span class="leancloud-visitors-count">4890 字 ~10分钟</span>
 </span>
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
     <h2 id="xposed-概念">xposed 概念</h2>
-
 <p>用一句话概念其牛b之处就是:<code>可以hook到系统任意一个Java进程</code>
 官方wiki: <a href="https://github.com/rovo89/XposedBridge/wiki">https://github.com/rovo89/XposedBridge/wiki</a></p>
-
 <ul>
 <li><a href="https://github.com/rovo89/XposedInstaller">XposedInstaller</a>，Xposed安装器,管理,下载,禁用Xposed Module,需要root权限。</li>
 <li><a href="https://github.com/rovo89/Xposed">Xposed</a>，<code>zygote</code>的修改版.xposed实现的核心.这个zygote会替换系统原生的zygote。XposedInstaller会将它放到<code>/system/bin</code>目录下</li>
 <li><a href="https://github.com/rovo89/XposedBridge">XposedBridge</a>。java部分,编译出来是一个XposedBridge.jar包,写<code>hook</code>模块时使用.</li>
 <li><a href="https://github.com/rovo89/XposedTools">XposedTools</a>。帮助我们编译Xposed和XposedBridge。</li>
 </ul>
-
 <h2 id="xposed-原理">xposed 原理</h2>
-
 <h3 id="zygote-受精卵">zygote (受精卵)</h3>
-
 <p><a href="http://blog.csdn.net/luoshengyang/article/details/6768304">http://blog.csdn.net/luoshengyang/article/details/6768304</a>
 <a href="http://www.cnblogs.com/innost/archive/2011/01/26/1945769.html">http://www.cnblogs.com/innost/archive/2011/01/26/1945769.html</a>
 在Android系统中，所有的应用程序进程以及系统服务进程SystemServer都是由Zygote进程孕育（fork）出来的.
 Android系统是基于Linux内核的，而在Linux系统中，所有的进程都是init进程的子孙进程，也就是说，所有的进程都是直接或者间接地由init进程fork出来的。Zygote进程也不例外，它是在系统启动的过程，由init进程创建的。在系统启动脚本system/core/rootdir/init.rc文件中.zygote进程要执行的程序是/system/bin/app_process</p>
-
 <ol>
 <li>系统启动时init进程会创建Zygote进程，Zygote进程负责后续Android应用程序框架层的其它进程的创建和启动工作。</li>
 <li>Zygote进程会首先创建一个SystemServer进程，SystemServer进程负责启动系统的关键服务，如包管理服务PackageManagerService和应用程序组件管理服务ActivityManagerService。</li>
 <li>当我们需要启动一个Android应用程序时，ActivityManagerService会通过Socket进程间通信机制，通知Zygote进程为这个应用程序创建一个新的进程</li>
 </ol>
-
 <h3 id="xposed-工作原理">xposed 工作原理</h3>
-
 <p>安装xposed框架时会把一个修改过的<code>zygote</code>版本安装到<code>system/bin</code> 中,当android系统启动时修改过的<code>zygote</code>在创建java虚拟机后,会调用<code>XposedBridgeApi.jar</code> 中的方法 来装载<code>Xposed module</code> .当执行一个android程序中的某一个方法 时,因为被xposed的<code>hookMethodNative</code>劫持,实际执行的是我们hook后的java代码.</p>
-
 <h2 id="xposed-module">Xposed module</h2>
-
-<p>创建一个<code>Xposed module</code>和普通的anroid应用并没有什么 区别,不一样的是要在<code>AndroidManifest.xml</code> 加一些特殊的元数据<code>meta-data</code></p>
-
+<p>创建一个<code>Xposed module</code>和普通的anroid应用并没有什么 区别,不一样的是要在<code>AndroidManifest.xml</code> 加一些特殊的元数据<code> meta-data</code></p>
 <h3 id="添加元数据">添加元数据</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
  <span style="color:#f92672">&lt;manifest</span>  <span style="color:#a6e22e">xmlns:android=</span><span style="color:#e6db74">&#34;http://schemas.android.com/apk/res/android&#34;</span>
@@ -197,8 +186,8 @@ Android系统是基于Linux内核的，而在Linux系统中，所有的进程都
             <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;xposedminversion&#34;</span>
             <span style="color:#a6e22e">android:value=</span><span style="color:#e6db74">&#34;30&#34;</span> <span style="color:#f92672">/&gt;</span>
     <span style="color:#f92672">&lt;/application&gt;</span>
-<span style="color:#f92672">&lt;/manifest&gt;</span></code></pre></div>
-<h3 id="实现模块接口">实现模块接口</h3>
+<span style="color:#f92672">&lt;/manifest&gt;</span>
+</code></pre></div><h3 id="实现模块接口">实现模块接口</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> de.robv.android.xposed.mods.tutorial<span style="color:#f92672">;</span>
 
 <span style="color:#f92672">import</span> de.robv.android.xposed.IXposedHookLoadPackage<span style="color:#f92672">;</span>
@@ -209,13 +198,11 @@ Android系统是基于Linux内核的，而在Linux系统中，所有的进程都
     <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">handleLoadPackage</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> LoadPackageParam lpparam<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Throwable <span style="color:#f92672">{</span>
         XposedBridge<span style="color:#f92672">.</span><span style="color:#a6e22e">log</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Loaded app: &#34;</span> <span style="color:#f92672">+</span> lpparam<span style="color:#f92672">.</span><span style="color:#a6e22e">packageName</span><span style="color:#f92672">);</span>
     <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<p>log 定向到<code>/data/data/de.robv.android.xposed.installer/log/debug.log</code> .通过Xposed Installer可以读取 到查看程序log</p>
-
-<h3 id="asserts中xposed-init-入口点声明">asserts中xposed_init 入口点声明</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">de.robv.android.xposed.mods.tutorial.Tutorial</pre></div>
-<h3 id="hook-a-method">hook a method</h3>
-
+<span style="color:#f92672">}</span>
+</code></pre></div><p>log 定向到<code>/data/data/de.robv.android.xposed.installer/log/debug.log</code> .通过Xposed Installer可以读取 到查看程序log</p>
+<h3 id="asserts中xposed_init-入口点声明">asserts中xposed_init 入口点声明</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">de.robv.android.xposed.mods.tutorial.Tutorial
+</code></pre></div><h3 id="hook-a-method">hook a method</h3>
 <p><code>findAndHookMethod</code> 用于hook方法 ,在方法执行前后替换成我们的代码,官方教程是更改状态栏系统时钟的文字和颜色显示.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> de.robv.android.xposed.mods.tutorial<span style="color:#f92672">;</span>
 
@@ -244,41 +231,24 @@ Android系统是基于Linux内核的，而在Linux系统中，所有的进程都
             <span style="color:#f92672">}</span>
     <span style="color:#f92672">});</span>
     <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<h2 id="xposed-手册">Xposed 手册</h2>
-
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="xposed-手册">Xposed 手册</h2>
 <h3 id="xposedbridge类">XposedBridge类</h3>
-
 <h4 id="log">log</h4>
-
 <p><code>log</code>方法用来捕获异常和打印信息,输出到标准logcat和<code>/data/xposed/debug.log</code>文件</p>
-
-<h4 id="hookallmethods-hookallconstructors">hookAllMethods / hookAllConstructors</h4>
-
+<h4 id="hookallmethods--hookallconstructors">hookAllMethods / hookAllConstructors</h4>
 <p>hook一个类中指定名字所有的方法 或者是构造函数.要注意的是如果在一个方法调用前后去拿方法参数,可能在 一些ROM里这个方法已经被别的程序hook过了.</p>
-
 <h3 id="xposedhelpers类">XposedHelpers类</h3>
-
 <p>在eclipse中设置 Window =&gt; Preferences =&gt; Java =&gt; Editor =&gt; Content Assist =&gt; Favorites =&gt; New Type,输入：de.robv.android.xposed.XposedHelpers.这样eclipse在你开始输入“get…”时会自动提示这个类中的方法。</p>
-
-<h4 id="findmethod-findconstructor-findfield">findMethod / findConstructor / findField</h4>
-
+<h4 id="findmethod--findconstructor--findfield">findMethod / findConstructor / findField</h4>
 <p>这几个方法用来查找指定参数,名称的函数,构造器,和字段,而非反射方式：你可以用调用<code>findMethodBestMatch(Class&lt;?&gt; clazz, String methodName, Object... args)</code>,用来匹配相近的方法.</p>
-
-<h4 id="callmethod-callstaticmethod-newinstance">callMethod / callStaticMethod / newInstance</h4>
-
+<h4 id="callmethod--callstaticmethod--newinstance">callMethod / callStaticMethod / newInstance</h4>
 <p>利用上文提到的findXXX方法，可以用callxxx直接调用,或者用newInstance来构造 一个类实例。参数可以自动 匹配类型。如果你想明确的指定参数的类型，可以创建一个<code>Class&lt;?&gt;</code>数组，然后把它传递给callXXX/newInstance.你也可以参数数组都为null值，但是参数个数要匹配.</p>
-
-<h4 id="getxxxfield-setxxxfield-getstaticxxxfield-setstaticxxxfield">getXXXField / setXXXField / getStaticXXXField /setStaticXXXField</h4>
-
+<h4 id="getxxxfield--setxxxfield--getstaticxxxfield-setstaticxxxfield">getXXXField / setXXXField / getStaticXXXField /setStaticXXXField</h4>
 <p>有对象引用时这几个方法都可以使用不用区分静态非静态,如果你想获得/设置一个静态字段，又没有对象的引用，你可以使用<code>getStaticXXX</code>和<code>setStaticXXX</code>方法。</p>
-
-<h4 id="getadditionalxxxfield-setadditionalxxxfield">getAdditionalXXXField / setAdditionalXXXField</h4>
-
+<h4 id="getadditionalxxxfield--setadditionalxxxfield">getAdditionalXXXField / setAdditionalXXXField</h4>
 <p>这些方法让你将任何值与一个对象的实例或是整个类（像是一个静态字段）联系起来。这些值依照关键字-值对的方式存储。所以每个对象可以存储多个值。关键字可以是任何字符串，包括对象实际拥有的字段的名称。请注意你不能通过调用<code>getAdditionalInstanceField</code>获取你之前用<code>setAdditionalStaticField</code>存储的值。取而代之的是应该使用<code>getAdditionalStaticField</code>。它有一个变量来接受对象并自动查询它的类。</p>
-
 <h4 id="assetasbytearray">assetAsByteArray</h4>
-
 <p>这个方法以byte数组的形式返回资源。如果你想加载你模块的资源，你可以使用以下代码：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">XposedTweakbox</span> <span style="color:#66d9ef">implements</span> IXposedHookZygoteInit <span style="color:#f92672">{</span>
         <span style="color:#a6e22e">@Override</span>
@@ -286,51 +256,34 @@ Android系统是基于Linux内核的，而在Linux系统中，所有的进程都
             Resources tweakboxRes <span style="color:#f92672">=</span> XModuleResources<span style="color:#f92672">.</span><span style="color:#a6e22e">createInstance</span><span style="color:#f92672">(</span>startupParam<span style="color:#f92672">.</span><span style="color:#a6e22e">modulePath</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
             <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> crtPatch <span style="color:#f92672">=</span> assetAsByteArray<span style="color:#f92672">(</span>tweakboxRes<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;crtfix_samsung_d506192d5049a4042fb84c0265edfe42.bsdiff&#34;</span><span style="color:#f92672">);</span>
         <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<h4 id="getmd5sum">getMD5Sum</h4>
-
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="getmd5sum">getMD5Sum</h4>
 <p>返回文件系统中一个文件的MD5值。需要读取权限</p>
-
 <h4 id="getprocesspid">getProcessPid</h4>
-
 <p>按照进程的/proc/[pid]/cmdline的第一部分来寻找这个进程,并以字符串形式返回它的PID。</p>
-
 <h3 id="ixposedhookzygoteinit接口">IXposedHookZygoteInit接口</h3>
-
 <p>要实现<code>public void initZygote(StartupParam startupParam)</code>方法,每次zygote启动时调用<code>StartupParam</code>存放类的路径</p>
-
 <h3 id="ixposedhookloadpackage接口">IXposedHookLoadPackage接口</h3>
-
 <p>主要hook操作,要实现<code>public abstract void handleLoadPackage(LoadPackageParam lpparam)</code>.每次调用app的包时触发</p>
-
-<h2 id="ide中使用xposed-框架">IDE中使用Xposed  框架</h2>
-
-<p>所在的Xposed 模块都需要引用 Xposed 的jar,框架的公网发布地址是:<a href="https://bintray.com/rovo89/de.robv.android.xposed/api">https://bintray.com/rovo89/de.robv.android.xposed/api</a></p>
-
+<h2 id="ide中使用xposed--框架">IDE中使用Xposed  框架</h2>
+<p>所在的Xposed 模块都需要引用 Xposed 的jar,框架的公网发布地址是:https://bintray.com/rovo89/de.robv.android.xposed/api</p>
 <h3 id="android-studio">Android Studio</h3>
-
 <p>在<code>app/build.gradle</code>配置如下:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">repositories {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">repositories {
     jcenter();
 }
 
 dependencies {
     provided &#39;de.robv.android.xposed:api:82&#39;
-}</pre></div>
-<p>使用<code>provided</code>而不用<code>compile</code>的原因是在Android 4.x上会出现问题,使用<code>provided</code>只是维持引用,真正的代码在xposed框架安装时提供.</p>
-
+}
+</code></pre></div><p>使用<code>provided </code>而不用<code>compile</code>的原因是在Android 4.x上会出现问题,使用<code>provided</code>只是维持引用,真正的代码在xposed框架安装时提供.</p>
 <h3 id="eclipse">Eclipse</h3>
-
 <p>如果你使用的是eclipse时你可以从<a href="https://jcenter.bintray.com/de/robv/android/xposed/api/">https://jcenter.bintray.com/de/robv/android/xposed/api/</a>下载jar.
 我建议你放到<code>lib</code>目录下,手动添加到库路径,而不是放到<code>libs</code>目录中,因为<code>libs</code>目录中的类eclipse会自动编译API到apk中。</p>
-
-<h3 id="api-版本">API  版本</h3>
-
+<h3 id="api--版本">API  版本</h3>
 <p>一般情况 下api版本和xposed的版本是一样的, 也尽量保持向下兼容.
 api 的文档地址:<a href="http://api.xposed.info/">http://api.xposed.info/</a></p>
-
 <h2 id="替换资源">替换资源</h2>
-
 <h3 id="简单资源替换">简单资源替换</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Override</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">initZygote</span><span style="color:#f92672">(</span>IXposedHookZygoteInit<span style="color:#f92672">.</span><span style="color:#a6e22e">StartupParam</span> startupParam<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Throwable <span style="color:#f92672">{</span>
@@ -348,20 +301,17 @@ api 的文档地址:<a href="http://api.xposed.info/">http://api.xposed.info/</a
 </span><span style="color:#75715e"></span>    resparam<span style="color:#f92672">.</span><span style="color:#a6e22e">res</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setReplacement</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.android.systemui:string/quickpanel_bluetooth_text&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;WOO!&#34;</span><span style="color:#f92672">);</span>
     resparam<span style="color:#f92672">.</span><span style="color:#a6e22e">res</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setReplacement</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.android.systemui&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;string&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;quickpanel_gps_text&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;HOO!&#34;</span><span style="color:#f92672">);</span>
     resparam<span style="color:#f92672">.</span><span style="color:#a6e22e">res</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setReplacement</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.android.systemui&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;integer&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;config_maxLevelOfSignalStrengthIndicator&#34;</span><span style="color:#f92672">,</span> 6<span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<p>简单的替换数据类型支持:  <code>Boolean, Color, Integer, int[], String and String[]</code></p>
-
+<span style="color:#f92672">}</span>
+</code></pre></div><p>简单的替换数据类型支持:  <code>Boolean, Color, Integer, int[], String and String[]</code></p>
 <p>全局的资源替换在<code>initZygote</code>中调用<code>XResources.setSystemWideReplacement(...)</code>方法。对于特定app的资源,你需要根据包名判断之后在<code>hookInitPackageResources</code>中调用<code>res.setReplacement</code>。</p>
-
 <p>替换<code>Drawable</code>也大同小异,便要注意的是可能一个<code>Drawable</code>实例被多个<code>ImageView</code>引用,所以要包装一个要替换的<code>Drawable</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">resparam<span style="color:#f92672">.</span><span style="color:#a6e22e">res</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setReplacement</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.android.systemui&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;drawable&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;status_bar_background&#34;</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">new</span> XResources<span style="color:#f92672">.</span><span style="color:#a6e22e">DrawableLoader</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
     <span style="color:#a6e22e">@Override</span>
     <span style="color:#66d9ef">public</span> Drawable <span style="color:#a6e22e">newDrawable</span><span style="color:#f92672">(</span>XResources res<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> id<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Throwable <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ColorDrawable<span style="color:#f92672">(</span>Color<span style="color:#f92672">.</span><span style="color:#a6e22e">WHITE</span><span style="color:#f92672">);</span>
     <span style="color:#f92672">}</span>
-<span style="color:#f92672">});</span></code></pre></div>
-<h3 id="复杂的资源替换">复杂的资源替换</h3>
-
+<span style="color:#f92672">});</span>
+</code></pre></div><h3 id="复杂的资源替换">复杂的资源替换</h3>
 <p>像动画<code>Drawables</code>这种复杂的资源替换,必须引用到你模块中自带的资源.以替换电池图标为例,代码如下:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> de.robv.android.xposed.mods.coloredcirclebattery<span style="color:#f92672">;</span>
 
@@ -387,14 +337,11 @@ api 的文档地址:<a href="http://api.xposed.info/">http://api.xposed.info/</a
         resparam<span style="color:#f92672">.</span><span style="color:#a6e22e">res</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setReplacement</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.android.systemui&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;drawable&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;stat_sys_battery&#34;</span><span style="color:#f92672">,</span> modRes<span style="color:#f92672">.</span><span style="color:#a6e22e">fwd</span><span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">drawable</span><span style="color:#f92672">.</span><span style="color:#a6e22e">battery_icon</span><span style="color:#f92672">));</span>
         resparam<span style="color:#f92672">.</span><span style="color:#a6e22e">res</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setReplacement</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.android.systemui&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;drawable&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;stat_sys_battery_charge&#34;</span><span style="color:#f92672">,</span> modRes<span style="color:#f92672">.</span><span style="color:#a6e22e">fwd</span><span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">drawable</span><span style="color:#f92672">.</span><span style="color:#a6e22e">battery_icon_charge</span><span style="color:#f92672">));</span>
     <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<p>最简单的做法就是把<code>battery_icon.png</code>,<code>battery_icon_charge.png</code>放到<code>res/drawables</code>目录下，当然你也可以用xml定义一个<code>animation-list</code>.
+<span style="color:#f92672">}</span>
+</code></pre></div><p>最简单的做法就是把<code>battery_icon.png</code>,<code>battery_icon_charge.png</code>放到<code>res/drawables</code>目录下，当然你也可以用xml定义一个<code>animation-list</code>.
 要做资源适配的话,你可以自己准备几套不同分辨率的资源放到res对应的目录里.</p>
-
 <p>上面替换资源的做法对于常规的 app都是有效的.</p>
-
 <h3 id="修改布局">修改布局</h3>
-
 <p>虽然上面的全局修改资源的方案是可行的,但是多个模块同时修改时还是有竞争问题，而且这样替换资源对于ROM的稳定性不太好.所以我推荐另外一种方案.就是在布局完成后去<code>hook</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Override</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">handleInitPackageResources</span><span style="color:#f92672">(</span>InitPackageResourcesParam resparam<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Throwable <span style="color:#f92672">{</span>
@@ -409,11 +356,9 @@ api 的文档地址:<a href="http://api.xposed.info/">http://api.xposed.info/</a
             clock<span style="color:#f92672">.</span><span style="color:#a6e22e">setTextColor</span><span style="color:#f92672">(</span>Color<span style="color:#f92672">.</span><span style="color:#a6e22e">RED</span><span style="color:#f92672">);</span>
         <span style="color:#f92672">}</span>
     <span style="color:#f92672">});</span> 
-<span style="color:#f92672">}</span></code></pre></div>
-<p>每当<code>status_bar</code>布局被填充后,会回调方法<code>handleLayoutInflated</code>,从回传的<code>LayoutInflatedParam</code>对象中你可以得到<code>View</code>对象,然后就可以对其进行修改了.</p>
-
+<span style="color:#f92672">}</span>
+</code></pre></div><p>每当<code>status_bar</code>布局被填充后,会回调方法<code>handleLayoutInflated</code>,从回传的<code>LayoutInflatedParam</code>对象中你可以得到<code>View</code>对象,然后就可以对其进行修改了.</p>
 <h2 id="奇淫技巧">奇淫技巧</h2>
-
 <h3 id="xposed-接管系统所有广播包">Xposed 接管系统所有广播包</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">findAndHookMethod<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.android.server.firewall.IntentFirewall&#34;</span><span style="color:#f92672">,</span>
                 lpparam<span style="color:#f92672">.</span><span style="color:#a6e22e">classLoader</span><span style="color:#f92672">,</span>
@@ -441,8 +386,8 @@ api 的文档地址:<a href="http://api.xposed.info/">http://api.xposed.info/</a
                 <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>action<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;android.intent.action.SCREEN_ON&#34;</span><span style="color:#f92672">))</span>
                     XposedBridge<span style="color:#f92672">.</span><span style="color:#a6e22e">log</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;hook IntentFirewall.checkBroadcast : &#34;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;screen on&#34;</span><span style="color:#f92672">);</span>
             <span style="color:#f92672">}</span>
-        <span style="color:#f92672">});</span></code></pre></div>
-<h3 id="嵌套hook监控前台应用">嵌套hook监控前台应用</h3>
+        <span style="color:#f92672">});</span>
+</code></pre></div><h3 id="嵌套hook监控前台应用">嵌套hook监控前台应用</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">findAndHookMethod<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.android.server.net.NetworkPolicyManagerService&#34;</span><span style="color:#f92672">,</span>
                 lpparam<span style="color:#f92672">.</span><span style="color:#a6e22e">classLoader</span><span style="color:#f92672">,</span>
                 <span style="color:#e6db74">&#34;systemReady&#34;</span><span style="color:#f92672">,</span>
@@ -469,8 +414,8 @@ api 的文档地址:<a href="http://api.xposed.info/">http://api.xposed.info/</a
                     <span style="color:#f92672">}</span>
                 <span style="color:#f92672">});</span>
             <span style="color:#f92672">}</span>
-        <span style="color:#f92672">});</span></code></pre></div>
-<h3 id="xposed进程读取文件">xposed进程读取文件</h3>
+        <span style="color:#f92672">});</span>
+</code></pre></div><h3 id="xposed进程读取文件">xposed进程读取文件</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.example.idhyt.xposedExtend<span style="color:#f92672">;</span>
 
 <span style="color:#f92672">import</span> android.os.Environment<span style="color:#f92672">;</span>
@@ -679,20 +624,20 @@ api 的文档地址:<a href="http://api.xposed.info/">http://api.xposed.info/</a
     <span style="color:#66d9ef">public</span> JSONObject <span style="color:#a6e22e">getJsonFileContent</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> JSONException <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> JSONObject<span style="color:#f92672">(</span>getFileContent<span style="color:#f92672">());</span>
     <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<p>###判断xposed框架是否生效
-1. 首先我们生成一个配置文件setting.xml
-2. 定义一个函数</p>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>###判断xposed框架是否生效</p>
+<ol>
+<li>首先我们生成一个配置文件setting.xml</li>
+<li>定义一个函数</li>
+</ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setXposedStatus</span><span style="color:#f92672">(</span><span style="color:#66d9ef">boolean</span> bStatus<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getSharedPreferences</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;setting&#34;</span><span style="color:#f92672">,</span> Context<span style="color:#f92672">.</span><span style="color:#a6e22e">MODE_WORLD_READABLE</span><span style="color:#f92672">).</span><span style="color:#a6e22e">edit</span><span style="color:#f92672">().</span><span style="color:#a6e22e">putBoolean</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;xposed_enabled&#34;</span><span style="color:#f92672">,</span> bStatus<span style="color:#f92672">).</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">();</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<ol>
+<span style="color:#f92672">}</span>
+</code></pre></div><ol start="3">
 <li>应用每次启动时候调用函数setXposedStatus</li>
 <li>在xposed中hook函数setXposedStatus调用前，并将参数改为true</li>
 </ol>
-
 <p>这样我们要想知道xposed框架是否生效可用，读取setting.xml中xposed_enabled字段值即可。</p>
-
 <p><a href="http://www.infoq.com/cn/articles/android-in-depth-xposed">http://www.infoq.com/cn/articles/android-in-depth-xposed</a>
 <a href="http://blog.idhyt.com/2015/11/28/android-injection-xposed-usage/">http://blog.idhyt.com/2015/11/28/android-injection-xposed-usage/</a></p>
     </div>
@@ -702,7 +647,7 @@ api 的文档地址:<a href="http://api.xposed.info/">http://api.xposed.info/</a
 
 <div class="post-tags">
      
-    <a href="http://farwmarth.com/tags/xposed" rel="tag" title="xposed">#xposed#</a>
+    <a href="https://farwmarth.com/tags/xposed" rel="tag" title="xposed">#xposed#</a>
     
 </div>
 
@@ -712,7 +657,7 @@ api 的文档地址:<a href="http://api.xposed.info/">http://api.xposed.info/</a
      <div class="post-nav">
     <div class="post-nav-next post-nav-item">
     
-        <a href="http://farwmarth.com/post/%E9%A9%BE%E8%80%83%E7%9F%A5%E8%AF%86%E7%82%B9/" rel="next" title="驾考">
+        <a href="https://farwmarth.com/post/%E9%A9%BE%E8%80%83%E7%9F%A5%E8%AF%86%E7%82%B9/" rel="next" title="驾考">
         <i class="fa fa-chevron-left"></i> 驾考
         </a>
     
@@ -720,7 +665,7 @@ api 的文档地址:<a href="http://api.xposed.info/">http://api.xposed.info/</a
 
     <div class="post-nav-prev post-nav-item">
     
-        <a href="http://farwmarth.com/post/lua%E6%95%B0%E6%8D%AE%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E9%80%89%E6%8B%A9/" rel="prev" title="lua数据序列化的选择">
+        <a href="https://farwmarth.com/post/lua%E6%95%B0%E6%8D%AE%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E9%80%89%E6%8B%A9/" rel="prev" title="lua数据序列化的选择">
         lua数据序列化的选择 <i class="fa fa-chevron-right"></i>
         </a>
     
@@ -753,7 +698,7 @@ api 的文档地址:<a href="http://api.xposed.info/">http://api.xposed.info/</a
     <section class="site-overview sidebar-panel  sidebar-panel-active ">
       <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image"
-        src="http://farwmarth.com/img/author.jpg"
+        src="https://farwmarth.com/img/author.jpg"
         alt="farwmarth" />
     <p class="site-author-name" itemprop="name">farwmarth</p>
     <p class="site-description motion-element" itemprop="description"> 
@@ -761,15 +706,15 @@ api 的文档地址:<a href="http://api.xposed.info/">http://api.xposed.info/</a
 </div>
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
-      <a href="http://farwmarth.com/post/">
+      <a href="https://farwmarth.com/post/">
         <span class="site-state-item-count">100</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
     <div class="site-state-item site-state-categories">    
-        <a href="http://farwmarth.com/categories/">      
+        <a href="https://farwmarth.com/categories/">      
          
-        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-count">32</span>
         
         <span class="site-state-item-name">分类</span>
         
@@ -777,9 +722,9 @@ api 的文档地址:<a href="http://api.xposed.info/">http://api.xposed.info/</a
     </div>
 
     <div class="site-state-item site-state-tags">
-        <a href="http://farwmarth.com/tags/">
+        <a href="https://farwmarth.com/tags/">
          
-        <span class="site-state-item-count">90</span>
+        <span class="site-state-item-count">91</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
@@ -814,12 +759,12 @@ api 的文档地址:<a href="http://api.xposed.info/">http://api.xposed.info/</a
       <div class="footer-inner">
         <div class="copyright" >
   <span itemprop="copyrightYear">  &copy; 
-  2009 - 2019</span>
+  2009 - 2020</span>
   <span class="with-love"><i class="fa fa-heart"></i></span>
   <span class="author" itemprop="copyrightHolder">farwmarth</span>
 </div>
 <div class="powered-by">
-  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.6</a>
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.68.3</a>
 </div>
 <div class="theme-info">
   Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
@@ -837,33 +782,33 @@ api 的文档地址:<a href="http://api.xposed.info/">http://api.xposed.info/</a
   </div>
 
   
-<script type="text/javascript" src="http://tajs.qq.com/stats?sId=286131889" charset="UTF-8"></script> 
+
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
 </script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
-<script src="http://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://farwmarth.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
 
-<script src="http://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="https://farwmarth.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/utils.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/motion.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/affix.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/schemes/pisces.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/utils.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/motion.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/affix.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/schemes/pisces.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/scrollspy.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/post-details.js"></script>
-<script type="text/javascript" src="http://farwmarth.com/js/toc.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/post-details.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/toc.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/bootstrap.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/bootstrap.js"></script>
 
-<script type="text/javascript" src="http://farwmarth.com/js/search.js"></script>
+<script type="text/javascript" src="https://farwmarth.com/js/search.js"></script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
