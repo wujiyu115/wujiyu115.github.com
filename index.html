@@ -118,6 +118,65 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://farwmarth.com/post/covid/" itemprop="url">
+        病毒印象
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2020-04-20">
+    2020-04-20
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://farwmarth.com/categories/life" itemprop="url" rel="index">
+        <span itemprop="name">life</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">3318 字 ~7分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    遥远的非典 非典那会印象里还在上小学, 因为在乡下,人口密度不大加上信息传递比较闭塞，没有太多恐慌的情绪, 学习里也没有停课.印象最深的大概是喝中
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="https://farwmarth.com/post/covid/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
         <a class="post-title-link" href="https://farwmarth.com/post/https/" itemprop="url">
         全站https
         </a>
@@ -157,12 +216,12 @@
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">332 字 ~1分钟</span>
+<span class="leancloud-visitors-count">345 字 ~1分钟</span>
 </span>
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
-    <p>现在网站没再折腾,<code>hugo</code>生成,图片放在<code>七牛云</code>上,部署在<code>coding.net</code>.今天搞了一下把全部加上了https</p>
+    <p>很早的时候把网站用<code>hugo</code>替换<code>hugo</code>来生成静态网页, 图片放在<code>七牛云</code>上,静态网站托管在<code>coding.net</code>. 今天顺手把全站加上了<code>https</code></p>
 <h1 id="codingnet">coding.net</h1>
 <p><a href="https://help.coding.net/docs/devops/cd/static-website.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E8%AE%BE%E7%BD%AE">coding静态网站https设置</a></p>
 <blockquote>
@@ -553,57 +612,6 @@ index-url = https://&lt;mirror&gt;/simple
     <footer class="post-footer"><div class="post-eof"></div></footer>
   </article>
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://farwmarth.com/post/%E5%8D%87%E7%BA%A7centos%E4%B8%8A%E7%9A%84python/" itemprop="url">
-        在CentOS 6.X 上升级 Python为 2.7
-        </a>
-      </h1>
-      <div class="post-meta">
-      <span class="post-time">
-<span class="post-meta-item-icon">
-    <i class="fa fa-calendar-o"></i>
-</span>
-<span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-12-18">
-    2016-12-18
-</time>
-</span> 
-      
-       <span>
-&nbsp; | &nbsp;
-<span class="post-meta-item-icon">
-    <i class="fa fa-eye"></i>
-</span>
-<span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">402 字 ~1分钟</span>
-</span>
-      </div>
-    </header>
-    <div class="post-body" itemprop="articleBody">
-    <pre><code>CentOS 6.X 自带的python版本是 2.6 , 但是2.6已经被不被官方支持了，今天写后台程序放到阿里云上运行发现2.6的一些api和2.7不一样了。于是想升级下python
-</code></pre>
-<h2 id="安装依赖包">安装依赖包</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">yum install -y zlib-devel bzip2-devel openssl-devel xz-libs wget
-</code></pre></div><h2 id="源码编译">源码编译</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">wget http://www.python.org/ftp/python/2.7.8/Python-2.7.8.tar.xz
-# 可以使用国内的源
-wget http://mirrors.sohu.com/python/2.7.8/Python-2.7.8.tar.xz
-xz -d Python-2.7.8.tar.xz
-tar -xvf Python-2.7.8.tar
-</code></pre></div>
-    </div>
-    
-    <div class="post-more-link text-center">
-    <a class="btn" href="https://farwmarth.com/post/%E5%8D%87%E7%BA%A7centos%E4%B8%8A%E7%9A%84python/" rel="contents">
-      阅读全文 &raquo;
-    </a>
-    </div>
-    
-    <footer class="post-footer"><div class="post-eof"></div></footer>
-  </article>
-
 </section>
 
 
@@ -715,7 +723,7 @@ tar -xvf Python-2.7.8.tar
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://farwmarth.com/post/">
-        <span class="site-state-item-count">100</span>
+        <span class="site-state-item-count">101</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -732,7 +740,7 @@ tar -xvf Python-2.7.8.tar
     <div class="site-state-item site-state-tags">
         <a href="https://farwmarth.com/tags/">
          
-        <span class="site-state-item-count">91</span>
+        <span class="site-state-item-count">92</span>
         
         <span class="site-state-item-name">标签</span>
         </a>

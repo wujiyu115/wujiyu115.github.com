@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>covid on farwmarth</title>
+    <link>https://farwmarth.com/tags/covid/</link>
+    <description>Recent content in covid on farwmarth</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 20 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://farwmarth.com/tags/covid/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>病毒印象</title>
+      <link>https://farwmarth.com/post/covid/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://farwmarth.com/post/covid/</guid>
+      <description>遥远的非典 非典那会印象里还在上小学, 因为在乡下,人口密度不大加上信息传递比较闭塞，没有太多恐慌的情绪, 学习里也没有停课.印象最深的大概是喝中</description>
+    </item>
+    
+  </channel>
+</rss>

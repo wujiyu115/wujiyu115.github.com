@@ -6,10 +6,19 @@
     <description>Recent content in Categories on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 12 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://farwmarth.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>life</title>
+      <link>https://farwmarth.com/categories/life/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://farwmarth.com/categories/life/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>技术</title>
@@ -44,15 +53,6 @@
       <pubDate>Sun, 18 Dec 2016 23:20:39 +0000</pubDate>
       
       <guid>https://farwmarth.com/categories/soft/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>life</title>
-      <link>https://farwmarth.com/categories/life/</link>
-      <pubDate>Sun, 18 Dec 2016 12:20:39 +0000</pubDate>
-      
-      <guid>https://farwmarth.com/categories/life/</guid>
       <description></description>
     </item>
     

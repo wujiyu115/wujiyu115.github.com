@@ -118,6 +118,57 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://farwmarth.com/post/%E5%8D%87%E7%BA%A7centos%E4%B8%8A%E7%9A%84python/" itemprop="url">
+        在CentOS 6.X 上升级 Python为 2.7
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-12-18">
+    2016-12-18
+</time>
+</span> 
+      
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">402 字 ~1分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <pre><code>CentOS 6.X 自带的python版本是 2.6 , 但是2.6已经被不被官方支持了，今天写后台程序放到阿里云上运行发现2.6的一些api和2.7不一样了。于是想升级下python
+</code></pre>
+<h2 id="安装依赖包">安装依赖包</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">yum install -y zlib-devel bzip2-devel openssl-devel xz-libs wget
+</code></pre></div><h2 id="源码编译">源码编译</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">wget http://www.python.org/ftp/python/2.7.8/Python-2.7.8.tar.xz
+# 可以使用国内的源
+wget http://mirrors.sohu.com/python/2.7.8/Python-2.7.8.tar.xz
+xz -d Python-2.7.8.tar.xz
+tar -xvf Python-2.7.8.tar
+</code></pre></div>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="https://farwmarth.com/post/%E5%8D%87%E7%BA%A7centos%E4%B8%8A%E7%9A%84python/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
         <a class="post-title-link" href="https://farwmarth.com/post/%E7%BB%99iphone%E6%8D%A2%E4%B8%AA%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E9%93%83%E5%A3%B0/" itemprop="url">
         给Iphone换个自定义的铃声
         </a>
@@ -470,55 +521,6 @@ service vsfptd restart
     <footer class="post-footer"><div class="post-eof"></div></footer>
   </article>
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://farwmarth.com/post/xposed%E5%88%9D%E6%8E%A2/" itemprop="url">
-        xposed初探
-        </a>
-      </h1>
-      <div class="post-meta">
-      <span class="post-time">
-<span class="post-meta-item-icon">
-    <i class="fa fa-calendar-o"></i>
-</span>
-<span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-04-22">
-    2016-04-22
-</time>
-</span> 
-      
-       <span>
-&nbsp; | &nbsp;
-<span class="post-meta-item-icon">
-    <i class="fa fa-eye"></i>
-</span>
-<span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">4890 字 ~10分钟</span>
-</span>
-      </div>
-    </header>
-    <div class="post-body" itemprop="articleBody">
-    <h2 id="xposed-概念">xposed 概念</h2>
-<p>用一句话概念其牛b之处就是:<code>可以hook到系统任意一个Java进程</code>
-官方wiki: <a href="https://github.com/rovo89/XposedBridge/wiki">https://github.com/rovo89/XposedBridge/wiki</a></p>
-<ul>
-<li><a href="https://github.com/rovo89/XposedInstaller">XposedInstaller</a>，Xposed安装器,管理,下载,禁用Xposed Module,需要root权限。</li>
-<li><a href="https://github.com/rovo89/Xposed">Xposed</a>，<code>zygote</code>的修改版.xposed实现的核心.这个zygote会替换系统原生的zygote。XposedInstaller会将它放到<code>/system/bin</code>目录下</li>
-<li><a href="https://github.com/rovo89/XposedBridge">XposedBridge</a>。java部分,编译出来是一个XposedBridge.jar包,写<code>hook</code>模块时使用.</li>
-<li><a href="https://github.com/rovo89/XposedTools">XposedTools</a>。帮助我们编译Xposed和XposedBridge。</li>
-</ul>
-    </div>
-    
-    <div class="post-more-link text-center">
-    <a class="btn" href="https://farwmarth.com/post/xposed%E5%88%9D%E6%8E%A2/" rel="contents">
-      阅读全文 &raquo;
-    </a>
-    </div>
-    
-    <footer class="post-footer"><div class="post-eof"></div></footer>
-  </article>
-
 </section>
 
 
@@ -630,7 +632,7 @@ service vsfptd restart
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://farwmarth.com/post/">
-        <span class="site-state-item-count">100</span>
+        <span class="site-state-item-count">101</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -647,7 +649,7 @@ service vsfptd restart
     <div class="site-state-item site-state-tags">
         <a href="https://farwmarth.com/tags/">
          
-        <span class="site-state-item-count">91</span>
+        <span class="site-state-item-count">92</span>
         
         <span class="site-state-item-name">标签</span>
         </a>

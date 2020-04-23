@@ -6,10 +6,19 @@
     <description>Recent content in Tags on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 12 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://farwmarth.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>covid</title>
+      <link>https://farwmarth.com/tags/covid/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://farwmarth.com/tags/covid/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>软件开发</title>

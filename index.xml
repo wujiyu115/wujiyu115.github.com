@@ -12,12 +12,21 @@
     
     
     <item>
+      <title>病毒印象</title>
+      <link>https://farwmarth.com/post/covid/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://farwmarth.com/post/covid/</guid>
+      <description>遥远的非典 非典那会印象里还在上小学, 因为在乡下,人口密度不大加上信息传递比较闭塞，没有太多恐慌的情绪, 学习里也没有停课.印象最深的大概是喝中</description>
+    </item>
+    
+    <item>
       <title>全站https</title>
       <link>https://farwmarth.com/post/https/</link>
       <pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://farwmarth.com/post/https/</guid>
-      <description>&lt;p&gt;现在网站没再折腾,&lt;code&gt;hugo&lt;/code&gt;生成,图片放在&lt;code&gt;七牛云&lt;/code&gt;上,部署在&lt;code&gt;coding.net&lt;/code&gt;.今天搞了一下把全部加上了https&lt;/p&gt;
+      <description>&lt;p&gt;很早的时候把网站用&lt;code&gt;hugo&lt;/code&gt;替换&lt;code&gt;hugo&lt;/code&gt;来生成静态网页, 图片放在&lt;code&gt;七牛云&lt;/code&gt;上,静态网站托管在&lt;code&gt;coding.net&lt;/code&gt;. 今天顺手把全站加上了&lt;code&gt;https&lt;/code&gt;&lt;/p&gt;
 &lt;h1 id=&#34;codingnet&#34;&gt;coding.net&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://help.coding.net/docs/devops/cd/static-website.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E8%AE%BE%E7%BD%AE&#34;&gt;coding静态网站https设置&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;

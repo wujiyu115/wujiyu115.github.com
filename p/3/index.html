@@ -118,6 +118,55 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://farwmarth.com/post/xposed%E5%88%9D%E6%8E%A2/" itemprop="url">
+        xposed初探
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-04-22">
+    2016-04-22
+</time>
+</span> 
+      
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">4890 字 ~10分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <h2 id="xposed-概念">xposed 概念</h2>
+<p>用一句话概念其牛b之处就是:<code>可以hook到系统任意一个Java进程</code>
+官方wiki: <a href="https://github.com/rovo89/XposedBridge/wiki">https://github.com/rovo89/XposedBridge/wiki</a></p>
+<ul>
+<li><a href="https://github.com/rovo89/XposedInstaller">XposedInstaller</a>，Xposed安装器,管理,下载,禁用Xposed Module,需要root权限。</li>
+<li><a href="https://github.com/rovo89/Xposed">Xposed</a>，<code>zygote</code>的修改版.xposed实现的核心.这个zygote会替换系统原生的zygote。XposedInstaller会将它放到<code>/system/bin</code>目录下</li>
+<li><a href="https://github.com/rovo89/XposedBridge">XposedBridge</a>。java部分,编译出来是一个XposedBridge.jar包,写<code>hook</code>模块时使用.</li>
+<li><a href="https://github.com/rovo89/XposedTools">XposedTools</a>。帮助我们编译Xposed和XposedBridge。</li>
+</ul>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="https://farwmarth.com/post/xposed%E5%88%9D%E6%8E%A2/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
         <a class="post-title-link" href="https://farwmarth.com/post/lua%E6%95%B0%E6%8D%AE%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E9%80%89%E6%8B%A9/" itemprop="url">
         lua数据序列化的选择
         </a>
@@ -515,52 +564,6 @@ sudo apt-get install libmysqlclient-dev
     <footer class="post-footer"><div class="post-eof"></div></footer>
   </article>
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://farwmarth.com/post/kids/" itemprop="url">
-        kids
-        </a>
-      </h1>
-      <div class="post-meta">
-      <span class="post-time">
-<span class="post-meta-item-icon">
-    <i class="fa fa-calendar-o"></i>
-</span>
-<span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-02-11">
-    2016-02-11
-</time>
-</span> 
-      
-       <span>
-&nbsp; | &nbsp;
-<span class="post-meta-item-icon">
-    <i class="fa fa-eye"></i>
-</span>
-<span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">1521 字 ~4分钟</span>
-</span>
-      </div>
-    </header>
-    <div class="post-body" itemprop="articleBody">
-    <p>一直以来对于小孩子处于一种敬而远之的状态。即使自己也是从熊孩子进化过来。今天就来说说各种小孩子的故事吧。</p>
-<h2 id="我的熊孩子时代">我的熊孩子时代</h2>
-<p>掏鸟蛋,捕鱼,偷板栗,瓜果,这些应该是农村里我们那个时候经常干的事情了,特别是偷别人家瓜果的时候,那种兴奋和紧张感现在想起来还觉得可笑。
-怎么说偷这个东西呢，从行为上来讲肯定是不对的,但是作为一个孩子,如果自家又没有这个东西,难免会极度地艳羡.
-印象比较深的是有一年夏天，和邻居的小伙伴去偷别人家的西瓜。
-放学路过的时候已经踩过点,谁家的瓜地里瓜特别多,个头特大。夏天正午的时候太阳酷热无比，大人们一般在睡午觉，我和小伙伴两个人蹑手蹑脚地走在小山窝的水稻田小路上，走几步四周张望，生怕有个大人突然出现把我们逮个正着。确认视野内没有人之后我们开始行动了，我负责放哨，邻居比我年纪稍长的小伙伴负责摘瓜，偷瓜的过程没有多少考究，他花了两三秒钏选好了一个合适的瓜，考虑到瓜太大太显眼，而且又不好搬运，就挑了一个篮球大小的。摘好递给了我，看着手中的瓜心里正扑通扑通直跳，刚松一口气正准备提着战果离开的离开的时候，发现山窝里有一个人影拿着锄头出现了。我和小伙伴对看了一眼，慌忙地把瓜往水渠里一扔，卯足了劲撒腿就跑，回头看了一眼。只见那个人影也开始加速，骂骂咧咧的声音随即而来，我们被吓坏了，这如果被逮到了送家长晚上又没有好果子吃了，紧迫之下我们俩开始往山上跑，因为穿着短衣短裤跑的速度又快，松枝和杂草很快在脚上画上红色的印子。可是我们顾不了那么多，沿着山脉一直跑，根本不敢停下来。跑累之后，终于没有听见骂声了。坐在山顶上歇息，回想着刚才的事情还是心有悸然。我想，那次应该是长这么大以来跑得最快的一次了。</p>
-    </div>
-    
-    <div class="post-more-link text-center">
-    <a class="btn" href="https://farwmarth.com/post/kids/" rel="contents">
-      阅读全文 &raquo;
-    </a>
-    </div>
-    
-    <footer class="post-footer"><div class="post-eof"></div></footer>
-  </article>
-
 </section>
 
 
@@ -672,7 +675,7 @@ sudo apt-get install libmysqlclient-dev
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://farwmarth.com/post/">
-        <span class="site-state-item-count">100</span>
+        <span class="site-state-item-count">101</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -689,7 +692,7 @@ sudo apt-get install libmysqlclient-dev
     <div class="site-state-item site-state-tags">
         <a href="https://farwmarth.com/tags/">
          
-        <span class="site-state-item-count">91</span>
+        <span class="site-state-item-count">92</span>
         
         <span class="site-state-item-name">标签</span>
         </a>
