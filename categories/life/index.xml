@@ -6,10 +6,21 @@
     <description>Recent content in life on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 20 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://farwmarth.com/categories/life/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>写博平台变迁</title>
+      <link>https://farwmarth.com/post/writer/</link>
+      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://farwmarth.com/post/writer/</guid>
+      <description>&lt;p&gt;最近给自己立了个flag.今年每个月至少要写一篇博客, 主要觉得只接受讯息没有输出整个人容易陷入闭塞, 这一篇就记录一下这几年写博客的变化.&lt;/p&gt;
+&lt;h2 id=&#34;博客平台&#34;&gt;博客平台&lt;/h2&gt;
+&lt;p&gt;翻了一下以前的博客。已存的最早的一篇是2011年, 距离现在也快十年了.那会还在&lt;code&gt;cnblogs&lt;/code&gt;上写博客,注册账号在后台就可以写,简单易博,没有花里胡哨的东西. &lt;code&gt;cnblogs&lt;/code&gt;是一个程序员博客社区,也提供一些定制化的模块。譬如可以在侧边栏挂一些实用性的挂件, 像访客计数, qqshow, 日历等等。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>病毒印象</title>
@@ -17,7 +28,8 @@
       <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://farwmarth.com/post/covid/</guid>
-      <description>遥远的非典 非典那会印象里还在上小学, 因为在乡下,人口密度不大加上信息传递比较闭塞，没有太多恐慌的情绪, 学习里也没有停课.印象最深的大概是喝中</description>
+      <description>&lt;h2 id=&#34;遥远的非典&#34;&gt;遥远的非典&lt;/h2&gt;
+&lt;p&gt;非典那会印象里还在上小学, 因为在乡下,人口密度不大加上信息传递比较闭塞，没有太多恐慌的情绪, 学习里也没有停课.印象最深的大概是喝中草药了,学习每天中午熬制一大锅草药。吃完饭后组织大家排成长队, 每人一碗, 中药不仅苦而且味道又大, 都得捏着鼻子地才能灌下去的.鸡贼的同学选择边喝边倒掉.感觉每天喝药都是煎熬.回到家,邻里也是点燃艾草叶挂在门头，问家里老人说是有杀菌的作用, 小时候也不知道有何科学依据。只是觉得到处烟雾缭绕,场景相当魔幻.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -58,6 +70,30 @@
 &lt;li&gt;&lt;strong&gt;渠道&lt;/strong&gt; : 是直接面对用户的,用户可从渠道下载游戏玩.渠道的核心竞争力(仅针对手游)是用户数量和质量&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;代理商&lt;/strong&gt; : 发行商的一种,属于分包发行商,从总包手中取得某个地区的发行权,并在该区域内制定销售策略并组织销售.&lt;/li&gt;
 &lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>恶补键盘知识</title>
+      <link>https://farwmarth.com/post/%E6%81%B6%E8%A1%A5%E9%94%AE%E7%9B%98%E7%9F%A5%E8%AF%86/</link>
+      <pubDate>Sat, 16 Jan 2016 11:31:49 +0000</pubDate>
+      
+      <guid>https://farwmarth.com/post/%E6%81%B6%E8%A1%A5%E9%94%AE%E7%9B%98%E7%9F%A5%E8%AF%86/</guid>
+      <description>&lt;h2 id=&#34;引用&#34;&gt;引用&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.pcpop.com/doc/0/836/836084_all.shtml&#34;&gt;http://www.pcpop.com/doc/0/836/836084_all.shtml&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;键盘类型&#34;&gt;键盘类型&lt;/h2&gt;
+&lt;h3 id=&#34;薄膜&#34;&gt;薄膜&lt;/h3&gt;
+&lt;h3 id=&#34;机械&#34;&gt;机械&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;红轴
+&lt;img src=&#34;https://farwmarth.bestnewbee.com/4b5a1116gw1exo6kg6fl4j20dw05j3yv.jpg&#34; alt=&#34;红轴&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt; 红轴，它的力度比较轻，与黑轴塑料部分相同，直上直下爽快自然，入门者可能会觉得它比较滑。
+ 这是一种备受争议的轴，由于力度太轻，导致个别用户手搭载键盘上误触，而且它的造价是所有轴里最高的。
+ 因此很多人认为他是失败品，在国外的销量并不理想。
+ 但是国内不少玩家给予好评，如果搭配得当使用者可感受到丝绸般顺滑，无论是游戏还是打字亦或其它应用都可以，只是价格略高
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -121,30 +157,6 @@ npm install hexo-generator-sitemap@1.0.1 --save
       <guid>https://farwmarth.com/post/%E5%BC%80%E5%A7%8B%E8%AE%B0%E5%BD%95/</guid>
       <description>&lt;p&gt;上班十来天了,觉得很有必要写一个这样的博客 ,记录一下所见所学所感.&lt;/p&gt;
 &lt;p&gt;刚开始找工作的时候感觉是挺容易的事,面试,通过,握手,然后就入职。但事实上并非是一蹴而就的,面试了各种不同的公司,每一轮都会暴露出新的薄弱环,刚开始是觉得没准备好,知识储备不够深厚,有些受挫感,但后来仔细想想其实客观原因的比重更大些,毕竟是刚毕业没有任何实战经验的黄毛小子,而不同公司的技术要求又不尽相同.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>恶补键盘知识</title>
-      <link>https://farwmarth.com/post/%E6%81%B6%E8%A1%A5%E9%94%AE%E7%9B%98%E7%9F%A5%E8%AF%86/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://farwmarth.com/post/%E6%81%B6%E8%A1%A5%E9%94%AE%E7%9B%98%E7%9F%A5%E8%AF%86/</guid>
-      <description>&lt;h2 id=&#34;引用&#34;&gt;引用&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.pcpop.com/doc/0/836/836084_all.shtml&#34;&gt;http://www.pcpop.com/doc/0/836/836084_all.shtml&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;键盘类型&#34;&gt;键盘类型&lt;/h2&gt;
-&lt;h3 id=&#34;薄膜&#34;&gt;薄膜&lt;/h3&gt;
-&lt;h3 id=&#34;机械&#34;&gt;机械&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;红轴
-&lt;img src=&#34;https://farwmarth.bestnewbee.com/4b5a1116gw1exo6kg6fl4j20dw05j3yv.jpg&#34; alt=&#34;红轴&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt; 红轴，它的力度比较轻，与黑轴塑料部分相同，直上直下爽快自然，入门者可能会觉得它比较滑。
- 这是一种备受争议的轴，由于力度太轻，导致个别用户手搭载键盘上误触，而且它的造价是所有轴里最高的。
- 因此很多人认为他是失败品，在国外的销量并不理想。
- 但是国内不少玩家给予好评，如果搭配得当使用者可感受到丝绸般顺滑，无论是游戏还是打字亦或其它应用都可以，只是价格略高
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
   </channel>

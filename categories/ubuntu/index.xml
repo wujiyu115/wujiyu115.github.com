@@ -6,10 +6,27 @@
     <description>Recent content in ubuntu on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 27 Nov 2014 14:49:16 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Jan 2017 20:13:42 +0000</lastBuildDate>
     
 	<atom:link href="https://farwmarth.com/categories/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ubuntu,centos 备忘</title>
+      <link>https://farwmarth.com/post/ubuntu%E5%A4%87%E5%BF%98/</link>
+      <pubDate>Tue, 03 Jan 2017 20:13:42 +0000</pubDate>
+      
+      <guid>https://farwmarth.com/post/ubuntu%E5%A4%87%E5%BF%98/</guid>
+      <description>&lt;h2 id=&#34;安装常用软件&#34;&gt;安装常用软件:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;subversion&lt;/code&gt;  svn 版本命令行&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lua5.2&lt;/code&gt;  lua版本&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ssh&lt;/code&gt;    ssh 连接&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nautilus-open-terminal&lt;/code&gt;   终端&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fcitx-table-wbpy&lt;/code&gt;  五笔&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;avant-window-navigator&lt;/code&gt; 启动器位置&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>ubuntu 终端终结者</title>
@@ -24,23 +41,6 @@
 xscreensaver-4.18-5.rhel4.11
 **screen-4.0.2-5**
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>ubuntu,centos 备忘</title>
-      <link>https://farwmarth.com/post/ubuntu%E5%A4%87%E5%BF%98/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://farwmarth.com/post/ubuntu%E5%A4%87%E5%BF%98/</guid>
-      <description>&lt;h2 id=&#34;安装常用软件&#34;&gt;安装常用软件:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;subversion&lt;/code&gt;  svn 版本命令行&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;lua5.2&lt;/code&gt;  lua版本&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ssh&lt;/code&gt;    ssh 连接&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;nautilus-open-terminal&lt;/code&gt;   终端&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;fcitx-table-wbpy&lt;/code&gt;  五笔&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;avant-window-navigator&lt;/code&gt; 启动器位置&lt;/li&gt;
-&lt;/ul&gt;</description>
     </item>
     
   </channel>

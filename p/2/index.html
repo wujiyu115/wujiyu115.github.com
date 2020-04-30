@@ -118,6 +118,313 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://farwmarth.com/post/ttyd/" itemprop="url">
+        将内网终端分享给其他人使用
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-01-05">
+    2017-01-05
+</time>
+</span> 
+      
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">897 字 ~2分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <hr>
+<p>起因是某人要学习下<code>linux</code>,但是不想用虚拟机装linux,在网上也找了几个在线的<code>shell</code>练习网站,感觉不是很满意,于是想把自己内网主机上的终端share一下,github搜索了一下还真有这样的项目.</p>
+<h2 id="ttyd">ttyd</h2>
+<p><code>ttyd</code>是一个把自己的终端通过web方式共享给其他人操作的工具</p>
+<p><a href="https://github.com/tsl0922/ttyd">https://github.com/tsl0922/ttyd</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo ttyd login
+<span style="color:#75715e">#默认端口是7681 用login方式要输入账号密码</span>
+<span style="color:#75715e">#http://localhost:7681</span>
+</code></pre></div>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="https://farwmarth.com/post/ttyd/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://farwmarth.com/post/%E5%88%9D%E7%BA%A7%E8%BF%90%E7%BB%B4%E6%8C%87%E5%8D%97/" itemprop="url">
+        初级运维指南
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-01-04">
+    2017-01-04
+</time>
+</span> 
+      
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">2414 字 ~5分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <h1 id="加固">加固</h1>
+<ul>
+<li>CentOS 7防火墙换用Friewalld</li>
+</ul>
+<h1 id="ssh配置">SSH配置</h1>
+<h2 id="安装ssh">安装ssh</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#安装</span>
+yum install ssh
+<span style="color:#75715e">#启动</span>
+service sshd start
+<span style="color:#75715e">#设置开机启动</span>
+chkconfig ssd on
+<span style="color:#75715e">#重启</span>
+service sshd restart
+<span style="color:#75715e">#重启网络</span>
+service network restart
+<span style="color:#75715e">#centos7</span>
+systemctl restart  sshd.service
+</code></pre></div>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="https://farwmarth.com/post/%E5%88%9D%E7%BA%A7%E8%BF%90%E7%BB%B4%E6%8C%87%E5%8D%97/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://farwmarth.com/post/ubuntu%E5%A4%87%E5%BF%98/" itemprop="url">
+        ubuntu,centos 备忘
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2017-01-03">
+    2017-01-03
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://farwmarth.com/categories/ubuntu" itemprop="url" rel="index">
+        <span itemprop="name">ubuntu</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">728 字 ~2分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <h2 id="安装常用软件">安装常用软件:</h2>
+<ul>
+<li><code>subversion</code>  svn 版本命令行</li>
+<li><code>lua5.2</code>  lua版本</li>
+<li><code>ssh</code>    ssh 连接</li>
+<li><code>nautilus-open-terminal</code>   终端</li>
+<li><code>fcitx-table-wbpy</code>  五笔</li>
+<li><code>avant-window-navigator</code> 启动器位置</li>
+</ul>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="https://farwmarth.com/post/ubuntu%E5%A4%87%E5%BF%98/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://farwmarth.com/post/%E5%9B%BD%E5%86%85%E6%BA%90/" itemprop="url">
+        国内源
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-12-18">
+    2016-12-18
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://farwmarth.com/categories/soft" itemprop="url" rel="index">
+        <span itemprop="name">soft</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">551 字 ~2分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>&ndash;</p>
+<p>清华大学的源太全面了:
+<a href="https://mirrors.tuna.tsinghua.edu.cn/">https://mirrors.tuna.tsinghua.edu.cn/</a></p>
+<h1 id="pypi">pypi</h1>
+<p>镜像状态监控: <a href="https://www.pypi-mirrors.org/">https://www.pypi-mirrors.org/</a></p>
+<ul>
+<li>豆瓣:http://pypi.douban.com/</li>
+<li>中国科学技术大学:http://pypi.mirrors.ustc.edu.cn/</li>
+<li>阿里云:http://mirrors.aliyun.com/pypi/simple</li>
+</ul>
+<p>临时使用:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">pip install -i https://&lt;mirror&gt;/simple &lt;package&gt;
+
+</code></pre></div><p>全局设置: 
+添加到<code> ~/.pip/pip.conf</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">[global]
+index-url = https://&lt;mirror&gt;/simple
+</code></pre></div>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="https://farwmarth.com/post/%E5%9B%BD%E5%86%85%E6%BA%90/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://farwmarth.com/post/a%E8%AE%B0%E5%BD%95/" itemprop="url">
+        域名解析的一些概念
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-12-18">
+    2016-12-18
+</time>
+</span> 
+      
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">905 字 ~2分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>##概念</p>
+<ul>
+<li>
+<p>A记录（IP指向）
+用户可以在此设置子域名并指向到自己的目标主机地址上，从而实现通过域名找到服务器找到相应网页的功能。
+说明：指向的目标主机地址类型只能使用IP地址。</p>
+</li>
+<li>
+<p>CNAME（别名指向）</p>
+</li>
+</ul>
+<p>通常称别名指向。您可以为一个主机设置别名。相当于用子域名来代替ip地址，优点是如果ip地址变化，只需要改动子域名的解析，而不需要逐一改变ip地址解析。</p>
+<pre><code>1. CNAME的目标主机地址只能使用主机名，不能使用IP地址；
+2. 主机名前不能有任何其他前缀，如：http://等是不被允许的；
+3. A记录优先于CNAME记录。即如果一个主机地址同时存在A记录和CNAME记录，则CNAME记录不生效。
+</code></pre>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="https://farwmarth.com/post/a%E8%AE%B0%E5%BD%95/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
         <a class="post-title-link" href="https://farwmarth.com/post/%E5%8D%87%E7%BA%A7centos%E4%B8%8A%E7%9A%84python/" itemprop="url">
         在CentOS 6.X 上升级 Python为 2.7
         </a>
@@ -294,233 +601,6 @@ git cherry-pick commit_id
     <footer class="post-footer"><div class="post-eof"></div></footer>
   </article>
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://farwmarth.com/post/%E6%9D%83%E9%87%8D%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/" itemprop="url">
-        权重随机算法
-        </a>
-      </h1>
-      <div class="post-meta">
-      <span class="post-time">
-<span class="post-meta-item-icon">
-    <i class="fa fa-calendar-o"></i>
-</span>
-<span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-10-10">
-    2016-10-10
-</time>
-</span> 
-      
-       <span>
-&nbsp; | &nbsp;
-<span class="post-meta-item-icon">
-    <i class="fa fa-eye"></i>
-</span>
-<span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">1073 字 ~3分钟</span>
-</span>
-      </div>
-    </header>
-    <div class="post-body" itemprop="articleBody">
-    <p>带权随机算法在游戏开发中应用广泛,最近在做商店随机商品又遇到这种问题,重新思考并总结了一下带权随机的做法.</p>
-<p>带权随机其实很好理解
-比如我们希望抽到A的抽到的比重是10,B的比重是5,C的比重是1,如下图
-<img src="https://farwmarth.bestnewbee.com/images/044TM313-0.jpg" alt="044TM313"></p>
-    </div>
-    
-    <div class="post-more-link text-center">
-    <a class="btn" href="https://farwmarth.com/post/%E6%9D%83%E9%87%8D%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/" rel="contents">
-      阅读全文 &raquo;
-    </a>
-    </div>
-    
-    <footer class="post-footer"><div class="post-eof"></div></footer>
-  </article>
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://farwmarth.com/post/mkdocs/" itemprop="url">
-        readthedocs切换到mkdocs
-        </a>
-      </h1>
-      <div class="post-meta">
-      <span class="post-time">
-<span class="post-meta-item-icon">
-    <i class="fa fa-calendar-o"></i>
-</span>
-<span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-09-04">
-    2016-09-04
-</time>
-</span> 
-      
-       <span>
-&nbsp; | &nbsp;
-<span class="post-meta-item-icon">
-    <i class="fa fa-eye"></i>
-</span>
-<span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">1185 字 ~3分钟</span>
-</span>
-      </div>
-    </header>
-    <div class="post-body" itemprop="articleBody">
-    <p>之前把学习笔记用<code>sphinx</code>生成然后托管在<code>github</code>上,然后用<code>readthedocs</code>的<code>webhook</code>自动<code>build</code>文章数量渐多感觉排版拥挤.于是google了一下找了个替代品,那就就是这篇文章的主角<code>mkdocs</code></p>
-<h2 id="简介">简介</h2>
-<p><a href="https://github.com/mkdocs/mkdocs">mkdocs</a>是一个支持<code>markdown</code>语法的项目文档管理工具，结构很简单,一个<code>yml</code>配置文件管理文档结构和主题信息,<code>docs</code>目录则是项目文档.官方文档(<a href="http://www.mkdocs.org/">http://www.mkdocs.org/</a>)</p>
-    </div>
-    
-    <div class="post-more-link text-center">
-    <a class="btn" href="https://farwmarth.com/post/mkdocs/" rel="contents">
-      阅读全文 &raquo;
-    </a>
-    </div>
-    
-    <footer class="post-footer"><div class="post-eof"></div></footer>
-  </article>
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://farwmarth.com/post/vsftpd/" itemprop="url">
-        vsftpd使用
-        </a>
-      </h1>
-      <div class="post-meta">
-      <span class="post-time">
-<span class="post-meta-item-icon">
-    <i class="fa fa-calendar-o"></i>
-</span>
-<span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-05-17">
-    2016-05-17
-</time>
-</span> 
-      
-       <span>
-&nbsp; | &nbsp;
-<span class="post-meta-item-icon">
-    <i class="fa fa-eye"></i>
-</span>
-<span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">3357 字 ~7分钟</span>
-</span>
-      </div>
-    </header>
-    <div class="post-body" itemprop="articleBody">
-    <h2 id="安装">安装</h2>
-<p>vsftpd意思为“very secure FTP daemon(非常安全的FTP进程)”，是一个基于GPL发布的类UNIX类操作系统上运行的服务器的名字（是一种守护进程），可以运行在诸如Linux、BSD、Solaris、HP-UX以及Irix等系统上面。vsftpd支持很多其他传统的FTP服务器不支持的良好特性</p>
-<h3 id="命令">命令</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#安装</span>
-yum install vsftpd
-<span style="color:#75715e">#启动</span>
-service vsftpd start
-<span style="color:#75715e">#重启</span>
-service vsfptd restart
-</code></pre></div>
-    </div>
-    
-    <div class="post-more-link text-center">
-    <a class="btn" href="https://farwmarth.com/post/vsftpd/" rel="contents">
-      阅读全文 &raquo;
-    </a>
-    </div>
-    
-    <footer class="post-footer"><div class="post-eof"></div></footer>
-  </article>
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://farwmarth.com/post/%E8%84%9A%E6%9C%AC%E8%87%AA%E5%8A%A8%E5%8C%96%E6%89%8B%E5%86%8C/" itemprop="url">
-        脚本自动化手册
-        </a>
-      </h1>
-      <div class="post-meta">
-      <span class="post-time">
-<span class="post-meta-item-icon">
-    <i class="fa fa-calendar-o"></i>
-</span>
-<span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-05-12">
-    2016-05-12
-</time>
-</span> 
-      
-       <span>
-&nbsp; | &nbsp;
-<span class="post-meta-item-icon">
-    <i class="fa fa-eye"></i>
-</span>
-<span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">1150 字 ~3分钟</span>
-</span>
-      </div>
-    </header>
-    <div class="post-body" itemprop="articleBody">
-    <h2 id="同步文件">同步文件</h2>
-<h3 id="rsyncremote-synchronize">rsync(remote synchronize)</h3>
-<p>实现远程同步功能的软件,它在同步文件的同时,可以保持原来文件的权限、时间、软硬链接等附加信息.</p>
-<h4 id="rsync认证方式">rsync认证方式</h4>
-<p>rsync有两种常用的认证方式，一种是<code>rsync-daemon</code>方式，另外一种是ssh方式。在平时使用过程，我们使用最多的是<code>rsync-daemon</code>方式</p>
-<h4 id="rsync服务器架设">rsync服务器架设</h4>
-<p>rsync的主要有以下三个配置文件<code>rsyncd.conf</code>(主配置文件)、<code>rsyncd.secrets</code>(密码文件)、<code>rsyncd.motd</code>(rysnc服务器信息)</p>
-    </div>
-    
-    <div class="post-more-link text-center">
-    <a class="btn" href="https://farwmarth.com/post/%E8%84%9A%E6%9C%AC%E8%87%AA%E5%8A%A8%E5%8C%96%E6%89%8B%E5%86%8C/" rel="contents">
-      阅读全文 &raquo;
-    </a>
-    </div>
-    
-    <footer class="post-footer"><div class="post-eof"></div></footer>
-  </article>
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://farwmarth.com/post/%E9%A9%BE%E8%80%83%E7%9F%A5%E8%AF%86%E7%82%B9/" itemprop="url">
-        驾考
-        </a>
-      </h1>
-      <div class="post-meta">
-      <span class="post-time">
-<span class="post-meta-item-icon">
-    <i class="fa fa-calendar-o"></i>
-</span>
-<span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-05-11">
-    2016-05-11
-</time>
-</span> 
-      
-       <span>
-&nbsp; | &nbsp;
-<span class="post-meta-item-icon">
-    <i class="fa fa-eye"></i>
-</span>
-<span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">5338 字 ~11分钟</span>
-</span>
-      </div>
-    </header>
-    <div class="post-body" itemprop="articleBody">
-    <h2 id="报考">报考</h2>
-<p>驾照这个事情其实被搁置了很久,一来人太懒,再者觉得边上班还要请假练车是件比较让人头痛的事情,年初的时候被催着把这报名的事情给完成了,报名之前听说广州报个名,拿到证一年多是家常便饭,主要是排队时间太长了.</p>
-<p>报考前也逛了一下附近的驾校,知乎上,贴吧上一些帖子也琢磨了下,一般驾校分快慢班,快班的意思就是广州练车可能就到湖南去考试,快班自然价格要贵一些，包括了长途的交通费用，还有一个就是手动档和自动档,一般都学习手动档,学费便宜一些,另外可以驾驶自动档的车型。</p>
-    </div>
-    
-    <div class="post-more-link text-center">
-    <a class="btn" href="https://farwmarth.com/post/%E9%A9%BE%E8%80%83%E7%9F%A5%E8%AF%86%E7%82%B9/" rel="contents">
-      阅读全文 &raquo;
-    </a>
-    </div>
-    
-    <footer class="post-footer"><div class="post-eof"></div></footer>
-  </article>
-
 </section>
 
 
@@ -632,7 +712,7 @@ service vsfptd restart
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://farwmarth.com/post/">
-        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-count">102</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -649,7 +729,7 @@ service vsfptd restart
     <div class="site-state-item site-state-tags">
         <a href="https://farwmarth.com/tags/">
          
-        <span class="site-state-item-count">92</span>
+        <span class="site-state-item-count">93</span>
         
         <span class="site-state-item-name">标签</span>
         </a>

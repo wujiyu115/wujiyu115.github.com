@@ -118,8 +118,8 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://farwmarth.com/post/xposed%E5%88%9D%E6%8E%A2/" itemprop="url">
-        xposed初探
+        <a class="post-title-link" href="https://farwmarth.com/post/%E6%9D%83%E9%87%8D%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/" itemprop="url">
+        权重随机算法
         </a>
       </h1>
       <div class="post-meta">
@@ -128,8 +128,8 @@
     <i class="fa fa-calendar-o"></i>
 </span>
 <span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-04-22">
-    2016-04-22
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-10-10">
+    2016-10-10
 </time>
 </span> 
       
@@ -139,24 +139,19 @@
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">4890 字 ~10分钟</span>
+<span class="leancloud-visitors-count">1073 字 ~3分钟</span>
 </span>
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
-    <h2 id="xposed-概念">xposed 概念</h2>
-<p>用一句话概念其牛b之处就是:<code>可以hook到系统任意一个Java进程</code>
-官方wiki: <a href="https://github.com/rovo89/XposedBridge/wiki">https://github.com/rovo89/XposedBridge/wiki</a></p>
-<ul>
-<li><a href="https://github.com/rovo89/XposedInstaller">XposedInstaller</a>，Xposed安装器,管理,下载,禁用Xposed Module,需要root权限。</li>
-<li><a href="https://github.com/rovo89/Xposed">Xposed</a>，<code>zygote</code>的修改版.xposed实现的核心.这个zygote会替换系统原生的zygote。XposedInstaller会将它放到<code>/system/bin</code>目录下</li>
-<li><a href="https://github.com/rovo89/XposedBridge">XposedBridge</a>。java部分,编译出来是一个XposedBridge.jar包,写<code>hook</code>模块时使用.</li>
-<li><a href="https://github.com/rovo89/XposedTools">XposedTools</a>。帮助我们编译Xposed和XposedBridge。</li>
-</ul>
+    <p>带权随机算法在游戏开发中应用广泛,最近在做商店随机商品又遇到这种问题,重新思考并总结了一下带权随机的做法.</p>
+<p>带权随机其实很好理解
+比如我们希望抽到A的抽到的比重是10,B的比重是5,C的比重是1,如下图
+<img src="https://farwmarth.bestnewbee.com/images/044TM313-0.jpg" alt="044TM313"></p>
     </div>
     
     <div class="post-more-link text-center">
-    <a class="btn" href="https://farwmarth.com/post/xposed%E5%88%9D%E6%8E%A2/" rel="contents">
+    <a class="btn" href="https://farwmarth.com/post/%E6%9D%83%E9%87%8D%E9%9A%8F%E6%9C%BA%E7%AE%97%E6%B3%95/" rel="contents">
       阅读全文 &raquo;
     </a>
     </div>
@@ -167,8 +162,8 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://farwmarth.com/post/lua%E6%95%B0%E6%8D%AE%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E9%80%89%E6%8B%A9/" itemprop="url">
-        lua数据序列化的选择
+        <a class="post-title-link" href="https://farwmarth.com/post/mkdocs/" itemprop="url">
+        readthedocs切换到mkdocs
         </a>
       </h1>
       <div class="post-meta">
@@ -177,8 +172,8 @@
     <i class="fa fa-calendar-o"></i>
 </span>
 <span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-04-20">
-    2016-04-20
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-09-04">
+    2016-09-04
 </time>
 </span> 
       
@@ -188,23 +183,18 @@
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">1497 字 ~3分钟</span>
+<span class="leancloud-visitors-count">1185 字 ~3分钟</span>
 </span>
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
-    <p>在寻找lua的json库时并没有找到太如意的方案.都是年久失修的库.</p>
-<ul>
-<li>DKJSON 2.1 <a href="http://dkolf.de/src/dkjson-lua.fsl/home">http://dkolf.de/src/dkjson-lua.fsl/home</a></li>
-<li>Lua YAJL 2.0 <a href="https://github.com/brimworks/lua-yajl">https://github.com/brimworks/lua-yajl</a></li>
-<li>Lua CSJON 2.0.0 <a href="http://www.kyne.com.au/~mark/software/lua-cjson.php">http://www.kyne.com.au/~mark/software/lua-cjson.php</a></li>
-</ul>
-<p><a href="http://www.kyne.com.au/~mark/software/lua-json-performance.html">http://www.kyne.com.au/~mark/software/lua-json-performance.html</a>
-最高选择了把cjson整合到项目 中</p>
+    <p>之前把学习笔记用<code>sphinx</code>生成然后托管在<code>github</code>上,然后用<code>readthedocs</code>的<code>webhook</code>自动<code>build</code>文章数量渐多感觉排版拥挤.于是google了一下找了个替代品,那就就是这篇文章的主角<code>mkdocs</code></p>
+<h2 id="简介">简介</h2>
+<p><a href="https://github.com/mkdocs/mkdocs">mkdocs</a>是一个支持<code>markdown</code>语法的项目文档管理工具，结构很简单,一个<code>yml</code>配置文件管理文档结构和主题信息,<code>docs</code>目录则是项目文档.官方文档(<a href="http://www.mkdocs.org/">http://www.mkdocs.org/</a>)</p>
     </div>
     
     <div class="post-more-link text-center">
-    <a class="btn" href="https://farwmarth.com/post/lua%E6%95%B0%E6%8D%AE%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E9%80%89%E6%8B%A9/" rel="contents">
+    <a class="btn" href="https://farwmarth.com/post/mkdocs/" rel="contents">
       阅读全文 &raquo;
     </a>
     </div>
@@ -215,8 +205,8 @@
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://farwmarth.com/post/redis%E5%88%9D%E6%8E%A2/" itemprop="url">
-        redis初探
+        <a class="post-title-link" href="https://farwmarth.com/post/node/" itemprop="url">
+        NodeJs初探
         </a>
       </h1>
       <div class="post-meta">
@@ -225,8 +215,67 @@
     <i class="fa fa-calendar-o"></i>
 </span>
 <span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-04-10">
-    2016-04-10
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-08-12">
+    2016-08-12
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://farwmarth.com/categories/programm" itemprop="url" rel="index">
+        <span itemprop="name">programm</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">667 字 ~2分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    nodejs node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效 安装 mac node使用 #安装 brew install node #升级n
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="https://farwmarth.com/post/node/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://farwmarth.com/post/readthedocs/" itemprop="url">
+        read-the-docs托管学习笔记
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-06-24">
+    2016-06-24
 </time>
 </span> 
       
@@ -236,31 +285,71 @@
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">12420 字 ~25分钟</span>
+<span class="leancloud-visitors-count">749 字 ~2分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <h2 id="sphinx">Sphinx</h2>
+<p><a href="http://sphinx-doc.org/">Sphinx</a>是一个基于Python的文档生成项目,采用了<strong>reStructuredText</strong>作为文档写作语言 ,不过也可以通过模块支持其他格式.
+(Sphinx标记结构)[http://www.pythondoc.com/sphinx/markup/]</p>
+<h3 id="sphinx安装">Sphinx安装</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">pip install sphinx sphinx-autobuild
+</code></pre></div>
+    </div>
+    
+    <div class="post-more-link text-center">
+    <a class="btn" href="https://farwmarth.com/post/readthedocs/" rel="contents">
+      阅读全文 &raquo;
+    </a>
+    </div>
+    
+    <footer class="post-footer"><div class="post-eof"></div></footer>
+  </article>
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://farwmarth.com/post/vsftpd/" itemprop="url">
+        vsftpd使用
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-05-17">
+    2016-05-17
+</time>
+</span> 
+      
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">3357 字 ~7分钟</span>
 </span>
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
     <h2 id="安装">安装</h2>
-<p><a href="http://redis.io/">http://redis.io/</a></p>
+<p>vsftpd意思为“very secure FTP daemon(非常安全的FTP进程)”，是一个基于GPL发布的类UNIX类操作系统上运行的服务器的名字（是一种守护进程），可以运行在诸如Linux、BSD、Solaris、HP-UX以及Irix等系统上面。vsftpd支持很多其他传统的FTP服务器不支持的良好特性</p>
+<h3 id="命令">命令</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#安装</span>
-brew install redis-server
+yum install vsftpd
 <span style="color:#75715e">#启动</span>
-redis-server
-<span style="color:#75715e">#附带config</span>
-redis-server /path/to/redis.conf
-<span style="color:#75715e">#检查版本</span>
-redis-server --version
-<span style="color:#75715e">#检查是否成功</span>
-redis-cli
-ping PONG
-<span style="color:#75715e">#关闭</span>
-redis-cli shutdown
+service vsftpd start
+<span style="color:#75715e">#重启</span>
+service vsfptd restart
 </code></pre></div>
     </div>
     
     <div class="post-more-link text-center">
-    <a class="btn" href="https://farwmarth.com/post/redis%E5%88%9D%E6%8E%A2/" rel="contents">
+    <a class="btn" href="https://farwmarth.com/post/vsftpd/" rel="contents">
       阅读全文 &raquo;
     </a>
     </div>
@@ -271,8 +360,8 @@ redis-cli shutdown
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://farwmarth.com/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E4%B8%80%E6%AC%A1%E8%B0%83%E4%BC%98/" itemprop="url">
-        服务器的一次调优
+        <a class="post-title-link" href="https://farwmarth.com/post/%E8%84%9A%E6%9C%AC%E8%87%AA%E5%8A%A8%E5%8C%96%E6%89%8B%E5%86%8C/" itemprop="url">
+        脚本自动化手册
         </a>
       </h1>
       <div class="post-meta">
@@ -281,8 +370,8 @@ redis-cli shutdown
     <i class="fa fa-calendar-o"></i>
 </span>
 <span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-03-28">
-    2016-03-28
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-05-12">
+    2016-05-12
 </time>
 </span> 
       
@@ -292,20 +381,22 @@ redis-cli shutdown
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">4931 字 ~10分钟</span>
+<span class="leancloud-visitors-count">1150 字 ~3分钟</span>
 </span>
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
-    <p><!-- raw HTML omitted -->update 2016-5-12 10:32  优化结构<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->update 2016-5-5 16:30  skynet调试<!-- raw HTML omitted --></p>
-<h2 id="历史遗留问题">历史遗留问题</h2>
-<p>这一项目的开发又接近尾声了,功能开发完毕,接下来就是运营方面的接入工作,还有就是服务器性能性的调优了.
-之前服务器一直存在两个比较严重的问题,一个是加载离线玩家.另外一个则是静态数据未共享,导致的服务器启动内存过高的问题.</p>
+    <h2 id="同步文件">同步文件</h2>
+<h3 id="rsyncremote-synchronize">rsync(remote synchronize)</h3>
+<p>实现远程同步功能的软件,它在同步文件的同时,可以保持原来文件的权限、时间、软硬链接等附加信息.</p>
+<h4 id="rsync认证方式">rsync认证方式</h4>
+<p>rsync有两种常用的认证方式，一种是<code>rsync-daemon</code>方式，另外一种是ssh方式。在平时使用过程，我们使用最多的是<code>rsync-daemon</code>方式</p>
+<h4 id="rsync服务器架设">rsync服务器架设</h4>
+<p>rsync的主要有以下三个配置文件<code>rsyncd.conf</code>(主配置文件)、<code>rsyncd.secrets</code>(密码文件)、<code>rsyncd.motd</code>(rysnc服务器信息)</p>
     </div>
     
     <div class="post-more-link text-center">
-    <a class="btn" href="https://farwmarth.com/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E4%B8%80%E6%AC%A1%E8%B0%83%E4%BC%98/" rel="contents">
+    <a class="btn" href="https://farwmarth.com/post/%E8%84%9A%E6%9C%AC%E8%87%AA%E5%8A%A8%E5%8C%96%E6%89%8B%E5%86%8C/" rel="contents">
       阅读全文 &raquo;
     </a>
     </div>
@@ -316,8 +407,8 @@ redis-cli shutdown
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://farwmarth.com/post/gradle/" itemprop="url">
-        Gradle 打包
+        <a class="post-title-link" href="https://farwmarth.com/post/%E9%A9%BE%E8%80%83%E7%9F%A5%E8%AF%86%E7%82%B9/" itemprop="url">
+        驾考
         </a>
       </h1>
       <div class="post-meta">
@@ -326,52 +417,29 @@ redis-cli shutdown
     <i class="fa fa-calendar-o"></i>
 </span>
 <span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-03-13">
-    2016-03-13
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-05-11">
+    2016-05-11
 </time>
 </span> 
       
-
-  <span class="post-category" >
-  &nbsp; | &nbsp;
-  <span class="post-meta-item-icon">
-    <i class="fa fa-folder-o"></i>
-  </span>
-  <span class="post-meta-item-text">分类：</span>
-  
-    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-      <a href="https://farwmarth.com/categories/programm" itemprop="url" rel="index">
-        <span itemprop="name">programm</span>
-      </a>
-      &nbsp; 
-    </span>
-  
-</span>
-
-
        <span>
 &nbsp; | &nbsp;
 <span class="post-meta-item-icon">
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">914 字 ~2分钟</span>
+<span class="leancloud-visitors-count">5338 字 ~11分钟</span>
 </span>
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
-    <h2 id="什么是gradle">什么是Gradle？</h2>
-<p>Gradle是一种依赖管理工具，基于Groovy语言，面向Java应用为主，它抛弃了基于XML的各种繁琐配置，取而代之的是一种基于Groovy的内部领域特定（DSL）语言</p>
-<h2 id="安装gradle">安装Gradle</h2>
-<p>Android Studio 默认下载目录,如果下载太慢可以手动从官网下载放到对应目录</p>
-<ul>
-<li><strong>Mac</strong>: /Users/&lt;用户名&gt;/.gradle/wrapper/dists** 目录</li>
-<li><strong>Win</strong>: C:\Documents and Settings&lt;用户名&gt;.gradle\wrapper\dists 目录</li>
-</ul>
+    <h2 id="报考">报考</h2>
+<p>驾照这个事情其实被搁置了很久,一来人太懒,再者觉得边上班还要请假练车是件比较让人头痛的事情,年初的时候被催着把这报名的事情给完成了,报名之前听说广州报个名,拿到证一年多是家常便饭,主要是排队时间太长了.</p>
+<p>报考前也逛了一下附近的驾校,知乎上,贴吧上一些帖子也琢磨了下,一般驾校分快慢班,快班的意思就是广州练车可能就到湖南去考试,快班自然价格要贵一些，包括了长途的交通费用，还有一个就是手动档和自动档,一般都学习手动档,学费便宜一些,另外可以驾驶自动档的车型。</p>
     </div>
     
     <div class="post-more-link text-center">
-    <a class="btn" href="https://farwmarth.com/post/gradle/" rel="contents">
+    <a class="btn" href="https://farwmarth.com/post/%E9%A9%BE%E8%80%83%E7%9F%A5%E8%AF%86%E7%82%B9/" rel="contents">
       阅读全文 &raquo;
     </a>
     </div>
@@ -382,8 +450,8 @@ redis-cli shutdown
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://farwmarth.com/post/mysql%E5%A4%87%E5%BF%98/" itemprop="url">
-        mysql 备忘录
+        <a class="post-title-link" href="https://farwmarth.com/post/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/" itemprop="url">
+        微信开发调试
         </a>
       </h1>
       <div class="post-meta">
@@ -392,79 +460,8 @@ redis-cli shutdown
     <i class="fa fa-calendar-o"></i>
 </span>
 <span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-02-25">
-    2016-02-25
-</time>
-</span> 
-      
-
-  <span class="post-category" >
-  &nbsp; | &nbsp;
-  <span class="post-meta-item-icon">
-    <i class="fa fa-folder-o"></i>
-  </span>
-  <span class="post-meta-item-text">分类：</span>
-  
-    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-      <a href="https://farwmarth.com/categories/programm" itemprop="url" rel="index">
-        <span itemprop="name">programm</span>
-      </a>
-      &nbsp; 
-    </span>
-  
-</span>
-
-
-       <span>
-&nbsp; | &nbsp;
-<span class="post-meta-item-icon">
-    <i class="fa fa-eye"></i>
-</span>
-<span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">1472 字 ~3分钟</span>
-</span>
-      </div>
-    </header>
-    <div class="post-body" itemprop="articleBody">
-    <h2 id="基础">基础</h2>
-<ul>
-<li>安装 mysql</li>
-</ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#server</span>
-sudo apt-get install mysql-server
-<span style="color:#75715e">#server dev</span>
-sudo apt-get install libmysqld-dev
-<span style="color:#75715e">#client</span>
-sudo apt-get install mysql-client
-<span style="color:#75715e">#client dev</span>
-sudo apt-get install libmysqlclient-dev
-</code></pre></div>
-    </div>
-    
-    <div class="post-more-link text-center">
-    <a class="btn" href="https://farwmarth.com/post/mysql%E5%A4%87%E5%BF%98/" rel="contents">
-      阅读全文 &raquo;
-    </a>
-    </div>
-    
-    <footer class="post-footer"><div class="post-eof"></div></footer>
-  </article>
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://farwmarth.com/post/%E5%80%92%E6%88%88%E5%8F%88%E5%A6%82%E4%BD%95/" itemprop="url">
-        倒戈又如何
-        </a>
-      </h1>
-      <div class="post-meta">
-      <span class="post-time">
-<span class="post-meta-item-icon">
-    <i class="fa fa-calendar-o"></i>
-</span>
-<span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-02-25">
-    2016-02-25
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-05-04">
+    2016-05-04
 </time>
 </span> 
       
@@ -474,89 +471,20 @@ sudo apt-get install libmysqlclient-dev
     <i class="fa fa-eye"></i>
 </span>
 <span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">2207 字 ~5分钟</span>
+<span class="leancloud-visitors-count">308 字 ~1分钟</span>
 </span>
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
-    <h2 id="倒戈">倒戈</h2>
-<p>七月底的时候，开发了一年的游戏最终还是倒戈了,技术团队以整队收编的方式到了现在这家公司.
-掰着脚趾头数一数,失败的项目快凑成一打了.
-反观这几年这些项目.只能说成功的游戏都是一个模样,赚得盆满钵满.失败的原因却各不相同.</p>
+    <h2 id="接入文档">接入文档</h2>
+<p><a href="http://mp.weixin.qq.com/wiki/home/index.html">http://mp.weixin.qq.com/wiki/home/index.html</a></p>
+<h2 id="申请免费公众号">申请免费公众号</h2>
+<p>无需公众号,普通微信既可申请测试公众号:
+<a href="http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;t=sandbox/index">http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;t=sandbox/index</a></p>
     </div>
     
     <div class="post-more-link text-center">
-    <a class="btn" href="https://farwmarth.com/post/%E5%80%92%E6%88%88%E5%8F%88%E5%A6%82%E4%BD%95/" rel="contents">
-      阅读全文 &raquo;
-    </a>
-    </div>
-    
-    <footer class="post-footer"><div class="post-eof"></div></footer>
-  </article>
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link" href="https://farwmarth.com/post/%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F%E7%9A%84%E7%94%9F%E9%95%BF%E8%BF%87%E7%A8%8B/" itemprop="url">
-        一个游戏的生长过程
-        </a>
-      </h1>
-      <div class="post-meta">
-      <span class="post-time">
-<span class="post-meta-item-icon">
-    <i class="fa fa-calendar-o"></i>
-</span>
-<span class="post-meta-item-text">时间：</span>
-<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-02-23">
-    2016-02-23
-</time>
-</span> 
-      
-
-  <span class="post-category" >
-  &nbsp; | &nbsp;
-  <span class="post-meta-item-icon">
-    <i class="fa fa-folder-o"></i>
-  </span>
-  <span class="post-meta-item-text">分类：</span>
-  
-    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-      <a href="https://farwmarth.com/categories/life" itemprop="url" rel="index">
-        <span itemprop="name">life</span>
-      </a>
-      &nbsp; 
-    </span>
-  
-</span>
-
-
-       <span>
-&nbsp; | &nbsp;
-<span class="post-meta-item-icon">
-    <i class="fa fa-eye"></i>
-</span>
-<span class="post-meta-item-text">阅读：</span>
-<span class="leancloud-visitors-count">5933 字 ~12分钟</span>
-</span>
-      </div>
-    </header>
-    <div class="post-body" itemprop="articleBody">
-    <blockquote>
-<p>每次都是挖了一个巨大无比的坑,填了好久都填不完.</p>
-</blockquote>
-<h2 id="概念">概念</h2>
-<ul>
-<li><strong>IP</strong> : (Intellectual Property),知识产权,在游戏圈可以理解为拥有知识产权的一方,授权游戏开发商使用其主题素材</li>
-<li><strong>SP</strong> : (Service Provider)渠道商:相当于电影院(电影院线),电影院是直接面向观众的,各电影院线上映电影给观众看,渠道商则是上架游戏应用给用户下载玩.</li>
-<li><strong>CP</strong> : (Content Provider)游戏开发商: 相当于电影制片方,聘请导演、演员、剧组人员进行电影的拍摄和制作,同理,游戏开发商聘请策划,程序,美术,开发团队进行游戏的开发和制作.开发商的核心竞争力,就是产品本身,产品做的越牛逼,开发商就越牛逼.</li>
-<li><strong>游戏运营商(发行商)</strong> : 相当于电影发行公司,进行电影的发行、销售、经营、推广,其实这个跟牌照也有关,因为在我朝面向群众的文化制品是管制品,不是什么阿猫阿狗拍个电影都能进电影院给观众传递不正确价值观的,于是就有牌照(电影发行经营许可证),制片方制作的电影必须通过有牌照的电影发行公司发行.同理在端游上也有牌照(文网文),端游审查、备案都需要通过拥有牌照的游戏发行商,而手游相对而言没有端游审查严格,手游发行商更多的作用是做市场营销、上线运营、渠道对接的工作,这些职能不是所有游戏开发商或开发团队都具备的.运营(发行)商的核心竞争力,是钱,是推广实力以及渠道关系.榜上有名的那些游戏,除了腾讯系以外.</li>
-<li><strong>渠道</strong> : 是直接面对用户的,用户可从渠道下载游戏玩.渠道的核心竞争力(仅针对手游)是用户数量和质量</li>
-<li><strong>代理商</strong> : 发行商的一种,属于分包发行商,从总包手中取得某个地区的发行权,并在该区域内制定销售策略并组织销售.</li>
-</ul>
-    </div>
-    
-    <div class="post-more-link text-center">
-    <a class="btn" href="https://farwmarth.com/post/%E4%B8%80%E4%B8%AA%E6%B8%B8%E6%88%8F%E7%9A%84%E7%94%9F%E9%95%BF%E8%BF%87%E7%A8%8B/" rel="contents">
+    <a class="btn" href="https://farwmarth.com/post/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/" rel="contents">
       阅读全文 &raquo;
     </a>
     </div>
@@ -675,7 +603,7 @@ sudo apt-get install libmysqlclient-dev
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="https://farwmarth.com/post/">
-        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-count">102</span>
         <span class="site-state-item-name">日志</span>
       </a>
     </div>
@@ -692,7 +620,7 @@ sudo apt-get install libmysqlclient-dev
     <div class="site-state-item site-state-tags">
         <a href="https://farwmarth.com/tags/">
          
-        <span class="site-state-item-count">92</span>
+        <span class="site-state-item-count">93</span>
         
         <span class="site-state-item-name">标签</span>
         </a>

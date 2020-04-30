@@ -6,10 +6,22 @@
     <description>Recent content in 游戏 on farwmarth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 23 Feb 2016 20:26:02 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Jan 2017 15:13:02 +0000</lastBuildDate>
     
 	<atom:link href="https://farwmarth.com/tags/%E6%B8%B8%E6%88%8F/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>语音服务器的选型</title>
+      <link>https://farwmarth.com/post/%E8%AF%AD%E9%9F%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E5%9E%8B/</link>
+      <pubDate>Fri, 06 Jan 2017 15:13:02 +0000</pubDate>
+      
+      <guid>https://farwmarth.com/post/%E8%AF%AD%E9%9F%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E5%9E%8B/</guid>
+      <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
+&lt;p&gt;最近游戏要接入一下语音服务器,调查了一下融合的语音sdk
+腾讯云GVoice:https://www.qcloud.com/document/product/556/7673
+好像只有这个比较靠谱,但是收费好像有点贵,还是决定基于原有的免费的百度语音识别造一个轮子&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>一个游戏的生长过程</title>
@@ -29,18 +41,6 @@
 &lt;li&gt;&lt;strong&gt;渠道&lt;/strong&gt; : 是直接面对用户的,用户可从渠道下载游戏玩.渠道的核心竞争力(仅针对手游)是用户数量和质量&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;代理商&lt;/strong&gt; : 发行商的一种,属于分包发行商,从总包手中取得某个地区的发行权,并在该区域内制定销售策略并组织销售.&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>语音服务器的选型</title>
-      <link>https://farwmarth.com/post/%E8%AF%AD%E9%9F%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E5%9E%8B/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://farwmarth.com/post/%E8%AF%AD%E9%9F%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E5%9E%8B/</guid>
-      <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
-&lt;p&gt;最近游戏要接入一下语音服务器,调查了一下融合的语音sdk
-腾讯云GVoice:https://www.qcloud.com/document/product/556/7673
-好像只有这个比较靠谱,但是收费好像有点贵,还是决定基于原有的免费的百度语音识别造一个轮子&lt;/p&gt;</description>
     </item>
     
   </channel>

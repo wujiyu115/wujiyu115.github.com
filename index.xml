@@ -12,12 +12,24 @@
     
     
     <item>
+      <title>写博平台变迁</title>
+      <link>https://farwmarth.com/post/writer/</link>
+      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://farwmarth.com/post/writer/</guid>
+      <description>&lt;p&gt;最近给自己立了个flag.今年每个月至少要写一篇博客, 主要觉得只接受讯息没有输出整个人容易陷入闭塞, 这一篇就记录一下这几年写博客的变化.&lt;/p&gt;
+&lt;h2 id=&#34;博客平台&#34;&gt;博客平台&lt;/h2&gt;
+&lt;p&gt;翻了一下以前的博客。已存的最早的一篇是2011年, 距离现在也快十年了.那会还在&lt;code&gt;cnblogs&lt;/code&gt;上写博客,注册账号在后台就可以写,简单易博,没有花里胡哨的东西. &lt;code&gt;cnblogs&lt;/code&gt;是一个程序员博客社区,也提供一些定制化的模块。譬如可以在侧边栏挂一些实用性的挂件, 像访客计数, qqshow, 日历等等。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>病毒印象</title>
       <link>https://farwmarth.com/post/covid/</link>
       <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://farwmarth.com/post/covid/</guid>
-      <description>遥远的非典 非典那会印象里还在上小学, 因为在乡下,人口密度不大加上信息传递比较闭塞，没有太多恐慌的情绪, 学习里也没有停课.印象最深的大概是喝中</description>
+      <description>&lt;h2 id=&#34;遥远的非典&#34;&gt;遥远的非典&lt;/h2&gt;
+&lt;p&gt;非典那会印象里还在上小学, 因为在乡下,人口密度不大加上信息传递比较闭塞，没有太多恐慌的情绪, 学习里也没有停课.印象最深的大概是喝中草药了,学习每天中午熬制一大锅草药。吃完饭后组织大家排成长队, 每人一碗, 中药不仅苦而且味道又大, 都得捏着鼻子地才能灌下去的.鸡贼的同学选择边喝边倒掉.感觉每天喝药都是煎熬.回到家,邻里也是点燃艾草叶挂在门头，问家里老人说是有杀菌的作用, 小时候也不知道有何科学依据。只是觉得到处烟雾缭绕,场景相当魔幻.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -26,7 +38,7 @@
       <pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://farwmarth.com/post/https/</guid>
-      <description>&lt;p&gt;很早的时候把网站用&lt;code&gt;hugo&lt;/code&gt;替换&lt;code&gt;hugo&lt;/code&gt;来生成静态网页, 图片放在&lt;code&gt;七牛云&lt;/code&gt;上,静态网站托管在&lt;code&gt;coding.net&lt;/code&gt;. 今天顺手把全站加上了&lt;code&gt;https&lt;/code&gt;&lt;/p&gt;
+      <description>&lt;p&gt;很早的时候把网站用&lt;code&gt;hugo&lt;/code&gt;替换&lt;code&gt;hexo来生成静态网页, 图片放在&lt;/code&gt;七牛云&lt;code&gt;上,静态网站托管在&lt;/code&gt;coding.net&lt;code&gt;. 今天顺手把全站加上了&lt;/code&gt;https`&lt;/p&gt;
 &lt;h1 id=&#34;codingnet&#34;&gt;coding.net&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://help.coding.net/docs/devops/cd/static-website.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E8%AE%BE%E7%BD%AE&#34;&gt;coding静态网站https设置&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -95,6 +107,67 @@
     </item>
     
     <item>
+      <title>给shadowsocks插上tcptun,bbr这对翅膀</title>
+      <link>https://farwmarth.com/post/vultr/</link>
+      <pubDate>Fri, 10 Mar 2017 12:10:39 +0000</pubDate>
+      
+      <guid>https://farwmarth.com/post/vultr/</guid>
+      <description>&lt;p&gt;最近&lt;a href=&#34;https://www.vultr.com/&#34;&gt;vultr&lt;/a&gt; 搞活动充五刀送五刀.之前用的服务商速度有点不给力.想着撸个ss玩玩,晚上折腾到一点多, 易票联的&lt;code&gt;全球付&lt;/code&gt;卡在vultr一直刷不了.又不想用&lt;code&gt;paypal&lt;/code&gt;绑银行卡.试着把&lt;code&gt;全球付&lt;/code&gt;的卡绑到&lt;code&gt;paypal&lt;/code&gt;上。然后用&lt;code&gt;paypal&lt;/code&gt;一刷居然成功了.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;vultr&lt;/code&gt;比&lt;code&gt;linode&lt;/code&gt;同等配置价格更便宜.&lt;code&gt;500G&lt;/code&gt;的流量绝对够用了.知乎上看了一下好像日本的线路速度比较快.自己也测试了一下.然后开了个实例准备试用几个月看效果如何.&lt;/p&gt;
+&lt;h2 id=&#34;速度测试&#34;&gt;速度测试&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;国内线路测试vps速度ping
+&lt;a href=&#34;http://ping.chinaz.com/45.76.185.184&#34;&gt;http://ping.chinaz.com/45.76.185.184&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;speedtest测试带宽&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;wget https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py
+python speedtest.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;shadowsocks安装&#34;&gt;Shadowsocks安装&lt;/h1&gt;
+&lt;h2 id=&#34;安装shadowsocks-go&#34;&gt;安装Shadowsocks-go&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#安装&lt;/span&gt;
+wget --no-check-certificate -O shadowsocks-go.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-go.sh
+chmod +x shadowsocks-go.sh
+./shadowsocks-go.sh 2&amp;gt;&amp;amp;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | tee shadowsocks-go.log
+
+&lt;span style=&#34;color:#75715e&#34;&gt;#默认配置文件在&lt;/span&gt;
+/etc/shadowsocks/config.json
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>语音服务器的选型</title>
+      <link>https://farwmarth.com/post/%E8%AF%AD%E9%9F%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E5%9E%8B/</link>
+      <pubDate>Fri, 06 Jan 2017 15:13:02 +0000</pubDate>
+      
+      <guid>https://farwmarth.com/post/%E8%AF%AD%E9%9F%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E5%9E%8B/</guid>
+      <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
+&lt;p&gt;最近游戏要接入一下语音服务器,调查了一下融合的语音sdk
+腾讯云GVoice:https://www.qcloud.com/document/product/556/7673
+好像只有这个比较靠谱,但是收费好像有点贵,还是决定基于原有的免费的百度语音识别造一个轮子&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>将内网终端分享给其他人使用</title>
+      <link>https://farwmarth.com/post/ttyd/</link>
+      <pubDate>Thu, 05 Jan 2017 11:54:39 +0000</pubDate>
+      
+      <guid>https://farwmarth.com/post/ttyd/</guid>
+      <description>&lt;hr&gt;
+&lt;p&gt;起因是某人要学习下&lt;code&gt;linux&lt;/code&gt;,但是不想用虚拟机装linux,在网上也找了几个在线的&lt;code&gt;shell&lt;/code&gt;练习网站,感觉不是很满意,于是想把自己内网主机上的终端share一下,github搜索了一下还真有这样的项目.&lt;/p&gt;
+&lt;h2 id=&#34;ttyd&#34;&gt;ttyd&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;ttyd&lt;/code&gt;是一个把自己的终端通过web方式共享给其他人操作的工具&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/tsl0922/ttyd&#34;&gt;https://github.com/tsl0922/ttyd&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo ttyd login
+&lt;span style=&#34;color:#75715e&#34;&gt;#默认端口是7681 用login方式要输入账号密码&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;#http://localhost:7681&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
       <title>初级运维指南</title>
       <link>https://farwmarth.com/post/%E5%88%9D%E7%BA%A7%E8%BF%90%E7%BB%B4%E6%8C%87%E5%8D%97/</link>
       <pubDate>Wed, 04 Jan 2017 09:42:39 +0000</pubDate>
@@ -119,6 +192,23 @@ service network restart
 &lt;span style=&#34;color:#75715e&#34;&gt;#centos7&lt;/span&gt;
 systemctl restart  sshd.service
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>ubuntu,centos 备忘</title>
+      <link>https://farwmarth.com/post/ubuntu%E5%A4%87%E5%BF%98/</link>
+      <pubDate>Tue, 03 Jan 2017 20:13:42 +0000</pubDate>
+      
+      <guid>https://farwmarth.com/post/ubuntu%E5%A4%87%E5%BF%98/</guid>
+      <description>&lt;h2 id=&#34;安装常用软件&#34;&gt;安装常用软件:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;subversion&lt;/code&gt;  svn 版本命令行&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lua5.2&lt;/code&gt;  lua版本&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ssh&lt;/code&gt;    ssh 连接&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nautilus-open-terminal&lt;/code&gt;   终端&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fcitx-table-wbpy&lt;/code&gt;  五笔&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;avant-window-navigator&lt;/code&gt; 启动器位置&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -253,6 +343,29 @@ git cherry-pick commit_id
     </item>
     
     <item>
+      <title>NodeJs初探</title>
+      <link>https://farwmarth.com/post/node/</link>
+      <pubDate>Fri, 12 Aug 2016 19:10:39 +0000</pubDate>
+      
+      <guid>https://farwmarth.com/post/node/</guid>
+      <description>nodejs node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效 安装 mac node使用 #安装 brew install node #升级n</description>
+    </item>
+    
+    <item>
+      <title>read-the-docs托管学习笔记</title>
+      <link>https://farwmarth.com/post/readthedocs/</link>
+      <pubDate>Fri, 24 Jun 2016 15:38:39 +0000</pubDate>
+      
+      <guid>https://farwmarth.com/post/readthedocs/</guid>
+      <description>&lt;h2 id=&#34;sphinx&#34;&gt;Sphinx&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;http://sphinx-doc.org/&#34;&gt;Sphinx&lt;/a&gt;是一个基于Python的文档生成项目,采用了&lt;strong&gt;reStructuredText&lt;/strong&gt;作为文档写作语言 ,不过也可以通过模块支持其他格式.
+(Sphinx标记结构)[http://www.pythondoc.com/sphinx/markup/]&lt;/p&gt;
+&lt;h3 id=&#34;sphinx安装&#34;&gt;Sphinx安装&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;pip install sphinx sphinx-autobuild
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
       <title>vsftpd使用</title>
       <link>https://farwmarth.com/post/vsftpd/</link>
       <pubDate>Tue, 17 May 2016 14:09:25 +0000</pubDate>
@@ -297,6 +410,19 @@ service vsfptd restart
     </item>
     
     <item>
+      <title>微信开发调试</title>
+      <link>https://farwmarth.com/post/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/</link>
+      <pubDate>Wed, 04 May 2016 19:10:39 +0000</pubDate>
+      
+      <guid>https://farwmarth.com/post/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/</guid>
+      <description>&lt;h2 id=&#34;接入文档&#34;&gt;接入文档&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;http://mp.weixin.qq.com/wiki/home/index.html&#34;&gt;http://mp.weixin.qq.com/wiki/home/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;申请免费公众号&#34;&gt;申请免费公众号&lt;/h2&gt;
+&lt;p&gt;无需公众号,普通微信既可申请测试公众号:
+&lt;a href=&#34;http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;amp;t=sandbox/index&#34;&gt;http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;amp;t=sandbox/index&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>xposed初探</title>
       <link>https://farwmarth.com/post/xposed%E5%88%9D%E6%8E%A2/</link>
       <pubDate>Fri, 22 Apr 2016 19:10:39 +0000</pubDate>
@@ -311,6 +437,22 @@ service vsfptd restart
 &lt;li&gt;&lt;a href=&#34;https://github.com/rovo89/XposedBridge&#34;&gt;XposedBridge&lt;/a&gt;。java部分,编译出来是一个XposedBridge.jar包,写&lt;code&gt;hook&lt;/code&gt;模块时使用.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/rovo89/XposedTools&#34;&gt;XposedTools&lt;/a&gt;。帮助我们编译Xposed和XposedBridge。&lt;/li&gt;
 &lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>reStructuredText简明语法</title>
+      <link>https://farwmarth.com/post/restructuredtext%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Thu, 21 Apr 2016 11:54:39 +0000</pubDate>
+      
+      <guid>https://farwmarth.com/post/restructuredtext%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95/</guid>
+      <description>&lt;h1 id=&#34;pandoc&#34;&gt;pandoc&lt;/h1&gt;
+&lt;p&gt;pandoc 转换rst 为markdown&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;pandoc  rest.rst  -f rst -t markdown -s -o rest.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;摘录&#34;&gt;摘录&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/xunxuny/zh-sphinx-doc/blob/master/rest.rst&#34;&gt;https://github.com/xunxuny/zh-sphinx-doc/blob/master/rest.rst&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;本章节介绍 reStructuredText (reST)
+的概念和语法，为文档生成者提供足够的信息. reST
+被认为是简单，实用的标记语言，因此学习它不会花太多时间.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -480,6 +622,51 @@ sudo apt-get install libmysqlclient-dev
 &lt;li&gt;进入『设置』-『通用』-『时间与日期』，关闭『自动设置』，并将时间修改为1970年1月1日，分秒任意.&lt;/li&gt;
 &lt;li&gt;修改时间后，需要重启设备。&lt;/li&gt;
 &lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>恶补键盘知识</title>
+      <link>https://farwmarth.com/post/%E6%81%B6%E8%A1%A5%E9%94%AE%E7%9B%98%E7%9F%A5%E8%AF%86/</link>
+      <pubDate>Sat, 16 Jan 2016 11:31:49 +0000</pubDate>
+      
+      <guid>https://farwmarth.com/post/%E6%81%B6%E8%A1%A5%E9%94%AE%E7%9B%98%E7%9F%A5%E8%AF%86/</guid>
+      <description>&lt;h2 id=&#34;引用&#34;&gt;引用&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.pcpop.com/doc/0/836/836084_all.shtml&#34;&gt;http://www.pcpop.com/doc/0/836/836084_all.shtml&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;键盘类型&#34;&gt;键盘类型&lt;/h2&gt;
+&lt;h3 id=&#34;薄膜&#34;&gt;薄膜&lt;/h3&gt;
+&lt;h3 id=&#34;机械&#34;&gt;机械&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;红轴
+&lt;img src=&#34;https://farwmarth.bestnewbee.com/4b5a1116gw1exo6kg6fl4j20dw05j3yv.jpg&#34; alt=&#34;红轴&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt; 红轴，它的力度比较轻，与黑轴塑料部分相同，直上直下爽快自然，入门者可能会觉得它比较滑。
+ 这是一种备受争议的轴，由于力度太轻，导致个别用户手搭载键盘上误触，而且它的造价是所有轴里最高的。
+ 因此很多人认为他是失败品，在国外的销量并不理想。
+ 但是国内不少玩家给予好评，如果搭配得当使用者可感受到丝绸般顺滑，无论是游戏还是打字亦或其它应用都可以，只是价格略高
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>我的mac配置</title>
+      <link>https://farwmarth.com/post/%E6%88%91%E7%9A%84mac%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sat, 16 Jan 2016 09:54:49 +0000</pubDate>
+      
+      <guid>https://farwmarth.com/post/%E6%88%91%E7%9A%84mac%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;h2 id=&#34;mysql记录&#34;&gt;mysql记录&lt;/h2&gt;
+&lt;h3 id=&#34;brew-安装mysql&#34;&gt;brew 安装mysql&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;brew install mysql
+初始化mysql
+sudo mysql_install_db  --verbose --user=`whoami`  --basedir=&amp;#34;\$(brew --prefix mysql)&amp;#34;  --datadir=/usr/local/var/mysql --tmpdir=/tmp --explicit_defaults_for_timestamp
+或者
+mysql_install_db --basedir=/usr/local/Cellar/mysql/5.6.10
+开启mysql
+mysql.server start
+mysql.server stop
+初始化超级管理员
+mysqladmin -u root password
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -1384,181 +1571,6 @@ mac下连接: &lt;code&gt;adb connect 192.168.56.101&lt;/code&gt;&lt;/li&gt;
       
       <guid>https://farwmarth.com/instagram/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>NodeJs初探</title>
-      <link>https://farwmarth.com/post/node/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://farwmarth.com/post/node/</guid>
-      <description>nodejs node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效 安装 mac node使用 #安装 brew install node #升级n</description>
-    </item>
-    
-    <item>
-      <title>read-the-docs托管学习笔记</title>
-      <link>https://farwmarth.com/post/readthedocs/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://farwmarth.com/post/readthedocs/</guid>
-      <description>&lt;h2 id=&#34;sphinx&#34;&gt;Sphinx&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;http://sphinx-doc.org/&#34;&gt;Sphinx&lt;/a&gt;是一个基于Python的文档生成项目,采用了&lt;strong&gt;reStructuredText&lt;/strong&gt;作为文档写作语言 ,不过也可以通过模块支持其他格式.
-(Sphinx标记结构)[http://www.pythondoc.com/sphinx/markup/]&lt;/p&gt;
-&lt;h3 id=&#34;sphinx安装&#34;&gt;Sphinx安装&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;pip install sphinx sphinx-autobuild
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>reStructuredText简明语法</title>
-      <link>https://farwmarth.com/post/restructuredtext%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://farwmarth.com/post/restructuredtext%E7%AE%80%E6%98%8E%E8%AF%AD%E6%B3%95/</guid>
-      <description>&lt;h1 id=&#34;pandoc&#34;&gt;pandoc&lt;/h1&gt;
-&lt;p&gt;pandoc 转换rst 为markdown&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;pandoc  rest.rst  -f rst -t markdown -s -o rest.md
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;摘录&#34;&gt;摘录&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/xunxuny/zh-sphinx-doc/blob/master/rest.rst&#34;&gt;https://github.com/xunxuny/zh-sphinx-doc/blob/master/rest.rst&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;本章节介绍 reStructuredText (reST)
-的概念和语法，为文档生成者提供足够的信息. reST
-被认为是简单，实用的标记语言，因此学习它不会花太多时间.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>ubuntu,centos 备忘</title>
-      <link>https://farwmarth.com/post/ubuntu%E5%A4%87%E5%BF%98/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://farwmarth.com/post/ubuntu%E5%A4%87%E5%BF%98/</guid>
-      <description>&lt;h2 id=&#34;安装常用软件&#34;&gt;安装常用软件:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;subversion&lt;/code&gt;  svn 版本命令行&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;lua5.2&lt;/code&gt;  lua版本&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ssh&lt;/code&gt;    ssh 连接&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;nautilus-open-terminal&lt;/code&gt;   终端&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;fcitx-table-wbpy&lt;/code&gt;  五笔&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;avant-window-navigator&lt;/code&gt; 启动器位置&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>将内网终端分享给其他人使用</title>
-      <link>https://farwmarth.com/post/ttyd/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://farwmarth.com/post/ttyd/</guid>
-      <description>&lt;hr&gt;
-&lt;p&gt;起因是某人要学习下&lt;code&gt;linux&lt;/code&gt;,但是不想用虚拟机装linux,在网上也找了几个在线的&lt;code&gt;shell&lt;/code&gt;练习网站,感觉不是很满意,于是想把自己内网主机上的终端share一下,github搜索了一下还真有这样的项目.&lt;/p&gt;
-&lt;h2 id=&#34;ttyd&#34;&gt;ttyd&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;ttyd&lt;/code&gt;是一个把自己的终端通过web方式共享给其他人操作的工具&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/tsl0922/ttyd&#34;&gt;https://github.com/tsl0922/ttyd&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo ttyd login
-&lt;span style=&#34;color:#75715e&#34;&gt;#默认端口是7681 用login方式要输入账号密码&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;#http://localhost:7681&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>微信开发调试</title>
-      <link>https://farwmarth.com/post/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://farwmarth.com/post/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95/</guid>
-      <description>&lt;h2 id=&#34;接入文档&#34;&gt;接入文档&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;http://mp.weixin.qq.com/wiki/home/index.html&#34;&gt;http://mp.weixin.qq.com/wiki/home/index.html&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;申请免费公众号&#34;&gt;申请免费公众号&lt;/h2&gt;
-&lt;p&gt;无需公众号,普通微信既可申请测试公众号:
-&lt;a href=&#34;http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;amp;t=sandbox/index&#34;&gt;http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;amp;t=sandbox/index&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>恶补键盘知识</title>
-      <link>https://farwmarth.com/post/%E6%81%B6%E8%A1%A5%E9%94%AE%E7%9B%98%E7%9F%A5%E8%AF%86/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://farwmarth.com/post/%E6%81%B6%E8%A1%A5%E9%94%AE%E7%9B%98%E7%9F%A5%E8%AF%86/</guid>
-      <description>&lt;h2 id=&#34;引用&#34;&gt;引用&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.pcpop.com/doc/0/836/836084_all.shtml&#34;&gt;http://www.pcpop.com/doc/0/836/836084_all.shtml&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;键盘类型&#34;&gt;键盘类型&lt;/h2&gt;
-&lt;h3 id=&#34;薄膜&#34;&gt;薄膜&lt;/h3&gt;
-&lt;h3 id=&#34;机械&#34;&gt;机械&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;红轴
-&lt;img src=&#34;https://farwmarth.bestnewbee.com/4b5a1116gw1exo6kg6fl4j20dw05j3yv.jpg&#34; alt=&#34;红轴&#34;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt; 红轴，它的力度比较轻，与黑轴塑料部分相同，直上直下爽快自然，入门者可能会觉得它比较滑。
- 这是一种备受争议的轴，由于力度太轻，导致个别用户手搭载键盘上误触，而且它的造价是所有轴里最高的。
- 因此很多人认为他是失败品，在国外的销量并不理想。
- 但是国内不少玩家给予好评，如果搭配得当使用者可感受到丝绸般顺滑，无论是游戏还是打字亦或其它应用都可以，只是价格略高
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>我的mac配置</title>
-      <link>https://farwmarth.com/post/%E6%88%91%E7%9A%84mac%E9%85%8D%E7%BD%AE/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://farwmarth.com/post/%E6%88%91%E7%9A%84mac%E9%85%8D%E7%BD%AE/</guid>
-      <description>&lt;h2 id=&#34;mysql记录&#34;&gt;mysql记录&lt;/h2&gt;
-&lt;h3 id=&#34;brew-安装mysql&#34;&gt;brew 安装mysql&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;brew install mysql
-初始化mysql
-sudo mysql_install_db  --verbose --user=`whoami`  --basedir=&amp;#34;\$(brew --prefix mysql)&amp;#34;  --datadir=/usr/local/var/mysql --tmpdir=/tmp --explicit_defaults_for_timestamp
-或者
-mysql_install_db --basedir=/usr/local/Cellar/mysql/5.6.10
-开启mysql
-mysql.server start
-mysql.server stop
-初始化超级管理员
-mysqladmin -u root password
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>给shadowsocks插上tcptun,bbr这对翅膀</title>
-      <link>https://farwmarth.com/post/vultr/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://farwmarth.com/post/vultr/</guid>
-      <description>&lt;p&gt;最近&lt;a href=&#34;https://www.vultr.com/&#34;&gt;vultr&lt;/a&gt; 搞活动充五刀送五刀.之前用的服务商速度有点不给力.想着撸个ss玩玩,晚上折腾到一点多, 易票联的&lt;code&gt;全球付&lt;/code&gt;卡在vultr一直刷不了.又不想用&lt;code&gt;paypal&lt;/code&gt;绑银行卡.试着把&lt;code&gt;全球付&lt;/code&gt;的卡绑到&lt;code&gt;paypal&lt;/code&gt;上。然后用&lt;code&gt;paypal&lt;/code&gt;一刷居然成功了.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;vultr&lt;/code&gt;比&lt;code&gt;linode&lt;/code&gt;同等配置价格更便宜.&lt;code&gt;500G&lt;/code&gt;的流量绝对够用了.知乎上看了一下好像日本的线路速度比较快.自己也测试了一下.然后开了个实例准备试用几个月看效果如何.&lt;/p&gt;
-&lt;h2 id=&#34;速度测试&#34;&gt;速度测试&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;国内线路测试vps速度ping
-&lt;a href=&#34;http://ping.chinaz.com/45.76.185.184&#34;&gt;http://ping.chinaz.com/45.76.185.184&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;speedtest测试带宽&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;wget https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py
-python speedtest.py
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;shadowsocks安装&#34;&gt;Shadowsocks安装&lt;/h1&gt;
-&lt;h2 id=&#34;安装shadowsocks-go&#34;&gt;安装Shadowsocks-go&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#安装&lt;/span&gt;
-wget --no-check-certificate -O shadowsocks-go.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-go.sh
-chmod +x shadowsocks-go.sh
-./shadowsocks-go.sh 2&amp;gt;&amp;amp;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | tee shadowsocks-go.log
-
-&lt;span style=&#34;color:#75715e&#34;&gt;#默认配置文件在&lt;/span&gt;
-/etc/shadowsocks/config.json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>语音服务器的选型</title>
-      <link>https://farwmarth.com/post/%E8%AF%AD%E9%9F%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E5%9E%8B/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://farwmarth.com/post/%E8%AF%AD%E9%9F%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E5%9E%8B/</guid>
-      <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
-&lt;p&gt;最近游戏要接入一下语音服务器,调查了一下融合的语音sdk
-腾讯云GVoice:https://www.qcloud.com/document/product/556/7673
-好像只有这个比较靠谱,但是收费好像有点贵,还是决定基于原有的免费的百度语音识别造一个轮子&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>NodeJs初探</title>
+      <link>https://farwmarth.com/post/node/</link>
+      <pubDate>Fri, 12 Aug 2016 19:10:39 +0000</pubDate>
+      
+      <guid>https://farwmarth.com/post/node/</guid>
+      <description>nodejs node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效 安装 mac node使用 #安装 brew install node #升级n</description>
+    </item>
+    
+    <item>
       <title>Gradle 打包</title>
       <link>https://farwmarth.com/post/gradle/</link>
       <pubDate>Sun, 13 Mar 2016 20:26:02 +0000</pubDate>
@@ -149,15 +158,6 @@ sudo apt-get install libmysqlclient-dev
 &lt;li&gt;弧度 = 角度 * Math.PI / 180&lt;/li&gt;
 &lt;li&gt;角度 = 弧度 * 180 / Math.PI&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>NodeJs初探</title>
-      <link>https://farwmarth.com/post/node/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://farwmarth.com/post/node/</guid>
-      <description>nodejs node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效 安装 mac node使用 #安装 brew install node #升级n</description>
     </item>
     
   </channel>
